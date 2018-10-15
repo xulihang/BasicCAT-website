@@ -1,0 +1,21 @@
+# Site settings
+title: "BasicCAT"
+description: "A CAT tool written in Basic"
+baseurl: "" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
+url: ""
+author: "xulihang"
+
+# Build settings
+kramdown:
+  input: GFM
+permalink: pretty
+
+# Third-party services
+# just leave empty to disable it
+google_analytics:
+disqus_shortname: 
+
+plugins:
+  - jekyll-sitemap
+
+exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
