@@ -2,7 +2,7 @@
    {% assign home=site.data.zh.text.home %}
    {% assign about=site.data.zh.text.about %}
    {% assign rss=site.data.zh.text.rss %}
-   {% assign homelink='/zh' %}
+   {% assign homelink='/zh/' %}
   {% else %}
    {% assign home=site.data.text.home %}
    {% assign about=site.data.text.about %}
@@ -12,5 +12,5 @@
 
 <p class="site-nav">
 <a href="{{ homelink | prepend: site.baseurl | prepend: site.url }}">{{home}}</a> / 
-<a href="{{ homelink | append: '/about' | prepend: site.baseurl | prepend: site.url }}">{{about}}</a> / <a href="{{ homelink | append: '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
+<a href="{{ homelink | append: 'about' | prepend: site.baseurl | prepend: site.url }}">{{about}}</a> / <a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
 </p>
