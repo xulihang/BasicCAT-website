@@ -1,1 +1,7 @@
-<p class="site-intro">Hello, this is TextLog - another minimalist Jekyll theme by Heiswayi Nrird. TextLog provides distraction-free and content-focused layout. This section is here for any brief introduction. You may edit this section in <code>includes\intro.html</code>. If you use this theme as a personal blog, maybe this section works best for you bio...</p>
+  {% if page.url contains '/zh/' %}
+   {% assign intro=site.data.zh.text.intro %}
+  {% else %}
+   {% assign intro=site.data.text.intro %}
+  {% endif %}
+
+<p class="site-intro">{{ intro }}</p>

@@ -1,1 +1,16 @@
-<p class="site-nav"><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a> / <a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">RSS</a></p>
+  {% if page.url contains '/zh/' %}
+   {% assign home=site.data.zh.text.home %}
+   {% assign about=site.data.zh.text.about %}
+   {% assign rss=site.data.zh.text.rss %}
+   {% assign homelink='/zh' %}
+  {% else %}
+   {% assign home=site.data.text.home %}
+   {% assign about=site.data.text.about %}
+   {% assign rss=site.data.text.rss %}
+   {% assign homelink='/' %}
+  {% endif %}
+
+<p class="site-nav">
+<a href="{{ homelink | prepend: site.baseurl | prepend: site.url }}">{{home}}</a> / 
+<a href="{{ homelink | append: '/about' | prepend: site.baseurl | prepend: site.url }}">{{about}}</a> / <a href="{{ homelink | append: '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
+</p>
