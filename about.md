@@ -3,4 +3,4 @@ layout: page
 title: About
 ---
 
-This is the site of BasicCAT.
+BasicCAT is an open source computer-aided translation tool. 
