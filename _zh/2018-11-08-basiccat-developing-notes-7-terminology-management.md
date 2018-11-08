@@ -2,7 +2,7 @@
 date: 2018-11-08 11:31:50+08:00
 layout: post
 title: BasicCAT开发笔记（七）：术语管理
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 

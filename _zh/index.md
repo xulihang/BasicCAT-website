@@ -10,8 +10,9 @@ permalink: /zh/
 	</section>
 	<section>
 		<ul class="post-list">
+            
             {% assign posts=site.zh | where:"layout", "post" %}
-			{% for post in posts  %}
+			{% for post in posts reversed  %}
 			<li>
 				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
 			</li>

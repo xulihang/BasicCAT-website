@@ -2,11 +2,11 @@
 date: 2018-11-08 13:37:50+08:00
 layout: post
 title: BasicCAT开发笔记（九）：交互式机器翻译
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
-关于什么是交互式机器翻译，我在[此文](/use-machine-translation-to-help-human-translation/)已经做了较为详细的阐释，下面主要是讲讲BasicCAT中的交互式机器翻译是怎么做的。
+关于什么是交互式机器翻译，我在[此文](https://blog.xulihang.me/use-machine-translation-to-help-human-translation/)已经做了较为详细的阐释，下面主要是讲讲BasicCAT中的交互式机器翻译是怎么做的。
 
 BasicCAT采用的是黑箱式的方法，将原文分为多个片段，用机器翻译进行翻译，然后翻译时通过输入的字符匹配对应的片段。Windows下汉语输入时会显示拼音，所以目标语是汉语时，要排除输入非汉字的情况。而英文输入时，进行分词，匹配最后一个单词的内容。
 

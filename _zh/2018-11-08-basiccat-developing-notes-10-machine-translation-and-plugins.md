@@ -2,7 +2,7 @@
 date: 2018-11-08 14:43:50+08:00
 layout: post
 title: BasicCAT开发笔记（十）：机器翻译与插件的编写
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 

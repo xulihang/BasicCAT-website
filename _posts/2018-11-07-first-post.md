@@ -2,7 +2,7 @@
 date: 2018-11-07 14:50:17+08:00
 layout: post
 title: First Post
-categories: intro
+categories: releasenote
 tags: 
 ---
 

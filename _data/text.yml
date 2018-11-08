@@ -3,3 +3,7 @@ description: "A CAT tool written in Basic"
 intro: "A CAT tool written in Basic"
 about: About
 rss: RSS
+blog: Blog
+releasenote: Release Note
+previous: previous
+next: next

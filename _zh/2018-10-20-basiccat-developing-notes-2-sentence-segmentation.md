@@ -2,7 +2,7 @@
 date: 2018-10-20 11:05:50+08:00
 layout: post
 title: BasicCAT开发笔记（二）：句段分割
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
@@ -117,7 +117,7 @@ See you soon!!!
 
 <https://github.com/xulihang/BasicCAT/blob/master/BasicCAT/Files/segmentation_en.conf>
 
-更新：这样的方法还是显得比较粗糙，句段分割还是应该使用srx格式文件存储规则，并用它提供的算法。使用SRX进行分割的方法[见此](/basiccat-developing-notes-6-srx-implementation/)。
+更新：这样的方法还是显得比较粗糙，句段分割还是应该使用srx格式文件存储规则，并用它提供的算法。使用SRX进行分割的方法[见此](/zh/basiccat-developing-notes-6-srx-implementation/)。
 
 
 

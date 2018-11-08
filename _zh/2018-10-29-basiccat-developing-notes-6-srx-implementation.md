@@ -2,11 +2,11 @@
 date: 2018-10-29 16:30:50+08:00
 layout: post
 title: BasicCAT开发笔记（六）：SRX的算法实现
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
-[前文](/TMX-TBX-SRX-Three-Lisa-oscar-standards/)介绍了Lisa的三大翻译标准，我发现分割句段还是应该使用SRX提供的方法。毕竟它是一个标准，可以直接利用前人做好的规则文件，与其它CAT软件也可以进行分割规则的交换。
+[前文](https://blog.xulihang.me/TMX-TBX-SRX-Three-Lisa-oscar-standards/)介绍了Lisa的三大翻译标准，我发现分割句段还是应该使用SRX提供的方法。毕竟它是一个标准，可以直接利用前人做好的规则文件，与其它CAT软件也可以进行分割规则的交换。
 
 SRX提供的伪代码看起来很简单，但实现起来我感到有点难度。主要是它需要检查分割点前后的内容，这可以用正则的lookahead和lookbehind来实现，但遍历文本时后面有多少长度的文本要作为afterbreak检测的对象则不能确定。
 

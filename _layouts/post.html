@@ -35,8 +35,20 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-  <hr>
 
+<span>
+  {% if page.url contains '/zh/' %}
+   {% assign previous=site.data.zh.text.previous %}
+   {% assign next=site.data.zh.text.next %}
+  {% else %}
+   {% assign previous=site.data.text.previous %}
+   {% assign next=site.data.text.next %}
+  {% endif %}
+	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >{{previous}}</a>
+	&nbsp;&nbsp;&nbsp;
+	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >{{next}}</a>
+</span>
+  <hr>
   {% include comments.html %}
 
 </article>

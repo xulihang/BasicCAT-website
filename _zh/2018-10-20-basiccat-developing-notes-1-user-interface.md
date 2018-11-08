@@ -2,7 +2,7 @@
 date: 2018-10-20 10:11:50+08:00
 layout: post
 title: BasicCAT开发笔记（一）：用户界面
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 

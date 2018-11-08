@@ -2,15 +2,15 @@
 date: 2018-11-08 12:47:50+08:00
 layout: post
 title: BasicCAT开发笔记（八）：idml格式文件的支持
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
 idml是翻译书籍、手册的出版物必须要面对的格式。对这一格式具体的分析可以见我写的系列文章：
 
-* [IDML格式分析](/dissection-of-idml/)
-* [翻译InDesign文件](/translate-indesign-files/)
-* [导出IDML格式的InDesign文件为文字](/idml-to-text/)
+* [IDML格式分析](https://blog.xulihang.me/dissection-of-idml/)
+* [翻译InDesign文件](https://blog.xulihang.me/translate-indesign-files/)
+* [导出IDML格式的InDesign文件为文字](https://blog.xulihang.me/idml-to-text/)
 
 我们接下来要做的是做到对样式的保留。idml的样式分为本地样式和全局样式，本地样式定义在story文件里，而全局样式定义在resources/styles.xml文件里。
 

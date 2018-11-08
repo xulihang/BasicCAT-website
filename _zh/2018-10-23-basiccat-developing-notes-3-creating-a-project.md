@@ -2,7 +2,7 @@
 date: 2018-10-23 08:53:50+08:00
 layout: post
 title: BasicCAT开发笔记（三）：项目创建
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 

@@ -2,13 +2,13 @@
 date: 2018-10-28 15:48:50+08:00
 layout: post
 title: BasicCAT开发笔记（五）：搜索与替换
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
 CAT软件也应该是一个好用的文本编辑器，搜索与替换功能必不可少。试用过的软件里，觉得OmegaT的搜索功能设计很符合我的要求，实现起来也不算困难。
 
-![](/album/basiccat/omegat_search_and_replace.jpg)
+![](https://blog.xulihang.me/album/basiccat/omegat_search_and_replace.jpg)
 
 需要搜索的结果进行高亮显示，并显示替换后的结果（这个OmegaT没有），另外还要支持正则表达式。结果以列表的形式呈现，在项目上右键还可以调出右键菜单，选择跳转到该片段。
 
@@ -38,7 +38,7 @@ CAT软件也应该是一个好用的文本编辑器，搜索与替换功能必�
 
 最终的界面如下。
 
-![](/album/basiccat/search_and_replace.jpg)
+![](https://blog.xulihang.me/album/basiccat/search_and_replace.jpg)
 
 相关文件：
 

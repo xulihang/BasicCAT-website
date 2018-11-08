@@ -2,7 +2,7 @@
 date: 2018-10-23 09:37:50+08:00
 layout: post
 title: BasicCAT开发笔记（四）：翻译记忆
-categories: 技术随笔
+categories: blog
 tags: CAT
 ---
 
