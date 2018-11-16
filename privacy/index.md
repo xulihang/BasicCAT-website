@@ -1,9 +1,9 @@
 ---
-title: Privacy
+title: Privacy Policy
 layout: page
 ---
 
-<h1>Privacy Policy</h1>
+
 
 
 <p>Effective date: November 16, 2018</p>
