@@ -1,18 +1,7 @@
 ---
-layout: default
-permalink: /zh/
+title: Blogs
+layout: page
 ---
-
-
-
-<div class="home">
-	<section class="site-header">
-		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
-		{% include nav.html %}
-		{% include intro.html %}
-	</section>
-</div>
-
 
 BasicCAT是一款开源的计算机辅助翻译软件，旨在为译员提供简单实用的翻译工具。取名BasicCAT，一是因为它简单易用，二是因为它使用Basic语言编写，普通人花上一段时间学习后也能掌握，从而在BasicCAT源代码的基础上修改出适合自己需要的软件。
 
@@ -38,6 +27,3 @@ BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 更多内容请见[说明文档](https://docs.basiccat.org)
 
 ![](/album/main.png)
-
-
-
