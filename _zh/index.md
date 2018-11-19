@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "首页"
 permalink: /zh/
 ---
 
@@ -7,7 +8,7 @@ permalink: /zh/
 
 <div class="home">
 	<section class="site-header">
-		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">BasicCAT</a></h1>
 		{% include nav.html %}
 		{% include intro.html %}
 	</section>
