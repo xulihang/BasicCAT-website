@@ -4,19 +4,25 @@
    {% assign rss=site.data.zh.text.rss %}
    {% assign blog=site.data.zh.text.blog %}
    {% assign releasenote=site.data.zh.text.releasenote %}
+   {% assign document=site.data.zh.text.document %}
+   {% assign download=site.data.zh.text.download %}
    {% assign homelink='/zh/' %}
   {% else %}
    {% assign home=site.data.text.home %}
    {% assign about=site.data.text.about %}
    {% assign rss=site.data.text.rss %}
-     {% assign blog=site.data.text.blog %}
+   {% assign blog=site.data.text.blog %}
    {% assign releasenote=site.data.text.releasenote %}
+   {% assign document=site.data.text.document %}
+   {% assign download=site.data.text.download %}
    {% assign homelink='/' %}
   {% endif %}
 
 <p class="site-nav">
 <a href="{{ homelink | prepend: site.baseurl | prepend: site.url }}">{{home}}</a> / 
-<a href="{{ homelink | append: 'about' | prepend: site.baseurl | prepend: site.url }}">{{about}}</a> / 
+<!--<a href="{{ homelink | append: 'about' | prepend: site.baseurl | prepend: site.url }}">{{about}}</a> / -->
+<a href="https://docs.basiccat.org/">{{document}}</a> /
+<a href="{{ homelink | append: 'download' | prepend: site.baseurl | prepend: site.url }}">{{download}}</a> /
 <a href="{{ homelink | append: 'releasenote' | prepend: site.baseurl | prepend: site.url }}">{{releasenote}}</a> /
 <a href="{{ homelink | append: 'blog' | prepend: site.baseurl | prepend: site.url }}">{{blog}}</a> /
 <a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>

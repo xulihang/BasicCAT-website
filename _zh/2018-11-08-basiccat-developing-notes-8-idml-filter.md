@@ -3,7 +3,7 @@ date: 2018-11-08 12:47:50+08:00
 layout: post
 title: BasicCAT开发笔记（八）：idml格式文件的支持
 categories: blog
-tags: CAT
+tags: note
 ---
 
 idml是翻译书籍、手册的出版物必须要面对的格式。对这一格式具体的分析可以见我写的系列文章：

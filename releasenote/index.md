@@ -1,5 +1,5 @@
 ---
-title: Blogs
+title: Release Notes
 layout: page
 ---
 

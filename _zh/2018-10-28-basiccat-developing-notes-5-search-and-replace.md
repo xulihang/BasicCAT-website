@@ -3,7 +3,7 @@ date: 2018-10-28 15:48:50+08:00
 layout: post
 title: BasicCAT开发笔记（五）：搜索与替换
 categories: blog
-tags: CAT
+tags: note
 ---
 
 CAT软件也应该是一个好用的文本编辑器，搜索与替换功能必不可少。试用过的软件里，觉得OmegaT的搜索功能设计很符合我的要求，实现起来也不算困难。

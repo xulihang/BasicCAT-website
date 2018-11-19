@@ -3,7 +3,7 @@ date: 2018-10-20 10:11:50+08:00
 layout: post
 title: BasicCAT开发笔记（一）：用户界面
 categories: blog
-tags: CAT
+tags: note
 ---
 
 编写CAT软件，首先要考虑一个界面的设计，然后进行功能上的实现。

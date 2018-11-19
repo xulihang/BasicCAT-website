@@ -3,7 +3,7 @@ date: 2018-11-08 11:31:50+08:00
 layout: post
 title: BasicCAT开发笔记（七）：术语管理
 categories: blog
-tags: CAT
+tags: note
 ---
 
 作为普通译者，术语管理的功能其实很简单，主要就是便于整理词语，统一译文，加快输入效率。

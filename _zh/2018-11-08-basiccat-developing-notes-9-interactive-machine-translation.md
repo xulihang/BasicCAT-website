@@ -3,7 +3,7 @@ date: 2018-11-08 13:37:50+08:00
 layout: post
 title: BasicCAT开发笔记（九）：交互式机器翻译
 categories: blog
-tags: CAT
+tags: note
 ---
 
 关于什么是交互式机器翻译，我在[此文](https://blog.xulihang.me/use-machine-translation-to-help-human-translation/)已经做了较为详细的阐释，下面主要是讲讲BasicCAT中的交互式机器翻译是怎么做的。

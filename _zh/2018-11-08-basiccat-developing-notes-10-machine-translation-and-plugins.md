@@ -3,7 +3,7 @@ date: 2018-11-08 14:43:50+08:00
 layout: post
 title: BasicCAT开发笔记（十）：机器翻译与插件的编写
 categories: blog
-tags: CAT
+tags: note
 ---
 
 机器翻译功能的添加是比较简单的一件事情，切换到新的片段时，调用机器翻译API即可。

@@ -3,7 +3,7 @@ date: 2018-10-20 11:05:50+08:00
 layout: post
 title: BasicCAT开发笔记（二）：句段分割
 categories: blog
-tags: CAT
+tags: note
 ---
 
 句段分割是要把成段的原文以句为单位进行分割。

@@ -3,7 +3,7 @@ date: 2018-10-23 09:37:50+08:00
 layout: post
 title: BasicCAT开发笔记（四）：翻译记忆
 categories: blog
-tags: CAT
+tags: note
 ---
 
 翻译记忆是CAT软件的核心功能，而怎样快速地进行模糊匹配是需要解决的一大算法问题。

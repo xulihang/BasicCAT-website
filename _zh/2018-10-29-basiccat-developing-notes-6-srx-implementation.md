@@ -3,7 +3,7 @@ date: 2018-10-29 16:30:50+08:00
 layout: post
 title: BasicCAT开发笔记（六）：SRX的算法实现
 categories: blog
-tags: CAT
+tags: note
 ---
 
 [前文](https://blog.xulihang.me/TMX-TBX-SRX-Three-Lisa-oscar-standards/)介绍了Lisa的三大翻译标准，我发现分割句段还是应该使用SRX提供的方法。毕竟它是一个标准，可以直接利用前人做好的规则文件，与其它CAT软件也可以进行分割规则的交换。
