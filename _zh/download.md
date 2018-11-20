@@ -8,6 +8,6 @@ permalink: /zh/download/
 
 ### v1.0-beta
 
-* Windows：[32位](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta/BasicCAT_windows_jre_x86_bundled.exe) / [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta/BasicCAT_windows_jre_x64_bundled.exe)
-* macOS： [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta/BasicCAT_mac.dmg)
-* Linux and other： [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta/BasicCAT_crossplatforms.zip)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta2/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta2/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta2/BasicCAT_mac.dmg)
+* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.0-beta2/BasicCAT-crossplatforms.zip)
