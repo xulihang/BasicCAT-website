@@ -6,7 +6,7 @@ layout: page
 <section>
     <ul class="post-list">
         {% assign posts=site.posts | where: "categories", "releasenote" %}
-        {% for post in posts reversed %}
+        {% for post in posts %}
         <li>
             <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
         </li>
