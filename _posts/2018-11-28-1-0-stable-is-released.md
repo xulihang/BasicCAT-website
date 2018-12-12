@@ -15,6 +15,6 @@ Changes:
 * Fix Autocomplete replacing all the prefix matched in the suggestions problem.
 * Only modified segments will show when importing docx back.
 * Files not supported can not be added to project.
-* New algorithm for importing XLIFF which will improve efficienct sigficantly
+* New algorithm for importing XLIFF which will improve efficienct significantly
 * Support Adding Folders
 
