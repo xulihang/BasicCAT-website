@@ -5,7 +5,7 @@ layout: page
 
 Please choose your download based on platform.
 
-### v1.2 beta2
+### v1.2 beta3
 
 * Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta3/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta3/BasicCAT-windows-x64.exe)
 * macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta3/BasicCAT_mac.dmg)
