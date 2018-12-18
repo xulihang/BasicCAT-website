@@ -21,9 +21,9 @@ Please choose your download based on platform.
 
 For now, there are two kinds of plugins: filter plugin and machine translation plugin.
 
-You can download them [here](https://github.com/xulihang/BasicCAT/tree/master/plugins/compiled)
+You can download them [here](https://github.com/xulihang/BasicCAT/releases/download/plugins/all_plugins.zip).
 
-Remember to download both jar and xml files and put them in the plugins folder.
+Remember to put jar and xml files the plugins folder.
 
 Currently available plugins:
 

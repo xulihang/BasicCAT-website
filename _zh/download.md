@@ -21,9 +21,9 @@ permalink: /zh/download/
 
 目前BasicCAT有两种插件：过滤器插件和机器翻译插件。
 
-可以在[此](https://github.com/xulihang/BasicCAT/tree/master/plugins/compiled)下载插件。
+可以点[此](https://github.com/xulihang/BasicCAT/releases/download/plugins/all_plugins.zip)下载全部插件。
 
-记得下载jar和xml文件，并把它们放入plugins文件夹里。
+记得把解压得到的jar和xml文件放入plugins文件夹里。
 
 目前提供的插件：
 
