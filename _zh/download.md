@@ -16,3 +16,25 @@ permalink: /zh/download/
 ### 翻译记忆与术语共享用服务器程序
 
 *  [CloudKVS_Server.jar](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta2/CloudKVS_Server.jar)
+
+### 插件
+
+目前BasicCAT有两种插件：过滤器插件和机器翻译插件。
+
+可以在[此](https://github.com/xulihang/BasicCAT/tree/master/plugins/compiled)下载插件。
+
+记得下载jar和xml文件，并把它们放入plugins文件夹里。
+
+目前提供的插件：
+
+机器翻译：
+
+* 腾讯
+* 搜狗
+* 搜狗深智
+* 小牛
+
+过滤器：
+
+* Gettext PO
+
