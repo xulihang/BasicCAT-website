@@ -5,6 +5,8 @@ layout: page
 
 Please choose your download based on platform.
 
+v1.2-beta5 is released. See its [release note](http://www.basiccat.org/releasenote/).
+
 ### v1.2-beta4
 
 * Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT-windows-x64.exe)

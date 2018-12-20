@@ -4,6 +4,9 @@ layout: page
 permalink: /zh/download/
 ---
 
+v1.2-beta5已经发布。查看[发布说明](http://www.basiccat.org/releasenote/)。
+
+
 请根据您的操作系统选择对应的安装包。
 
 ### v1.2-beta4
