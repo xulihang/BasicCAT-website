@@ -5,13 +5,11 @@ layout: page
 
 Please choose your download based on platform.
 
-v1.2-beta5 is released. See its [release note](http://www.basiccat.org/releasenote/).
+### v1.3-beta
 
-### v1.2-beta4
-
-* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT_mac.dmg)
-* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta4/BasicCAT-crossplatforms.zip)
+* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.3-beta/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.3-beta/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.3-beta/BasicCAT_mac.dmg)
+* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.3-beta/BasicCAT-crossplatforms.zip)
 
 
 ### TM and Term sharing Server
