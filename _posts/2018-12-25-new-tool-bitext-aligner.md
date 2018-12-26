@@ -8,11 +8,11 @@ tags:
 
 As in most cases, translators only give the translated document to the client, the source text and the target text are not aligned in sentence level. So I made this aligner.
 
-It is simple to use, just like BasicCAT. Use Enter to splite segments and Delete to merge segments.
+It is simple to use, just like BasicCAT. Use Enter to split segments and Delete to merge segments.
 
 How does it work:
 
-It first split the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
+It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
 [Aligner Download](https://github.com/xulihang/Aligner/releases/download/v1.0/Aligner.zip)
 
