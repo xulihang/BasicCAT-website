@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="nav.html" source-language="en-US" target-language="zh-CN" datatype="html">
+<body>
+<trans-unit id="tu1">
+<source xml:lang="en-US">{% if page.url contains '/zh/' %} {% assign home=site.data.zh.text.home %} {% assign about=site.data.zh.text.about %} {% assign rss=site.data.zh.text.rss %} {% assign doclang='zh_CN/latest/' %} {% assign blog=site.data.zh.text.blog %} {% assign releasenote=site.data.zh.text.releasenote %} {% assign document=site.data.zh.text.document %} {% assign download=site.data.zh.text.download %} {% assign homelink='/zh/' %} {% else %} {% assign home=site.data.text.home %} {% assign about=site.data.text.about %} {% assign rss=site.data.text.rss %} {% assign doclang='en/latest/' %} {% assign blog=site.data.text.blog %} {% assign releasenote=site.data.text.releasenote %} {% assign document=site.data.text.document %} {% assign download=site.data.text.download %} {% assign homelink='/' %} {% endif %}</source>
+<target xml:lang="zh-CN">{% if page.url contains '/zh/' %} {% assign home=site.data.zh.text.home %} {% assign about=site.data.zh.text.about %} {% assign rss=site.data.zh.text.rss %} {% assign doclang='zh_CN/latest/' %} {% assign blog=site.data.zh.text.blog %} {% assign releasenote=site.data.zh.text.releasenote %} {% assign document=site.data.zh.text.document %} {% assign download=site.data.zh.text.download %} {% assign homelink='/zh/' %} {% else %} {% assign home=site.data.text.home %} {% assign about=site.data.text.about %} {% assign rss=site.data.text.rss %} {% assign doclang='en/latest/' %} {% assign blog=site.data.text.blog %} {% assign releasenote=site.data.text.releasenote %} {% assign document=site.data.text.document %} {% assign download=site.data.text.download %} {% assign homelink='/' %} {% endif %}</target>
+</trans-unit>
+<trans-unit id="tu2" restype="x-paragraph">
+<source xml:lang="en-US"><g id="1">{{home}}</g> / <x id="2"/> <g id="3">{{document}}</g> / <g id="4">{{download}}</g> / <g id="5">{{releasenote}}</g> / <g id="6">{{blog}}</g> / <g id="7">{{rss}}</g></source>
+<target xml:lang="zh-CN"><g id="1">{{home}}</g> / <x id="2"/> <g id="3">{{document}}</g> / <g id="4">{{download}}</g> / <g id="5">{{releasenote}}</g> / <g id="6">{{blog}}</g> / <g id="7">{{rss}}</g></target>
+</trans-unit>
+</body>
+</file>
+</xliff>

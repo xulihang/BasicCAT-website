@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   {% if page.url contains '/zh/' %}
+   {% assign sitetitle=site.title_zh %}
+  {% else %}
+   {% assign sitetitle=site.title %}
+  {% endif %}
+
+  <title>{% if page.title %}{{ " - " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
+  
+  {% if page.url contains '/zh/' %}
+   {% assign description=site.data.zh.text.description %}
+  {% else %}
+   {% assign description=site.data.text.description %}
+  {% endif %}
+  
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9b7088974f73c2a43a35ec43ea3ba98";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
