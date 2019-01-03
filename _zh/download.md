@@ -34,7 +34,7 @@ permalink: /zh/download/
 * 搜狗深智
 * 小牛
 * IBM Watson
-* 亚马逊 (需要单独下载: [链接](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip)))
+* 亚马逊 (需要单独下载: [链接](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 
 过滤器：
 

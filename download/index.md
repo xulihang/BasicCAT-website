@@ -23,7 +23,7 @@ For now, there are two kinds of plugins: filter plugin and machine translation p
 
 You can download them [here](https://github.com/xulihang/BasicCAT/releases/download/plugins/all_plugins.zip).
 
-Remember to put jar and xml files the plugins folder.
+Remember to put jar and xml files in the plugins folder.
 
 Currently available plugins:
 
@@ -34,7 +34,7 @@ Machine Translation:
 * Sogou-DeepIntelligence
 * Niutrans
 * IBM Watson
-* Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip)))
+* Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 
 
 Filter:
