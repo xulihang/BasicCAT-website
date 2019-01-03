@@ -12,6 +12,8 @@ permalink: /zh/download/
 * macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT_mac.dmg)
 * Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT-crossplatforms.zip)
 
+也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ))
+
 
 ### 翻译记忆与术语共享用服务器程序
 

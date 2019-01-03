@@ -11,6 +11,8 @@ Please choose your download based on platform.
 * macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT_mac.dmg)
 * Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT-crossplatforms.zip)
 
+Also available in Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
+
 
 ### TM and Term sharing Server
 
