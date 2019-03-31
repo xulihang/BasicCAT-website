@@ -5,11 +5,11 @@ layout: page
 
 Please choose your download based on platform.
 
-### v1.5-beta
+### v1.6-beta
 
-* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT_mac.dmg)
-* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.5-beta/BasicCAT-crossplatforms.zip)
+* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.6-beta/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.6-beta/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.6-beta/BasicCAT_mac.dmg)
+* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.6-beta/BasicCAT-crossplatforms.zip)
 
 Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
