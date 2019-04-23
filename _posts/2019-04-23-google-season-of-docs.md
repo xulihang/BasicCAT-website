@@ -28,8 +28,8 @@ Repository: <https://github.com/xulihang/BasicCAT>
 
 ## Reference materials:
 
-Previous documentation: <http://docs.basiccat.org/en/latest/>
-The ultimate CAT tool jargon buster: <https://jealousmarkup.xyz/texts/cat-tool-glossary/>
+* Previous documentation: <http://docs.basiccat.org/en/latest/>
+* The ultimate CAT tool jargon buster: <https://jealousmarkup.xyz/texts/cat-tool-glossary/>
 
 
 
