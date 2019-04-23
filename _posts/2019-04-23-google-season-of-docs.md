@@ -24,11 +24,12 @@ Repository: <https://github.com/xulihang/BasicCAT>
 ## Project ideas
 
 * Refactor the project's existing documentation to provide an improved user experience or a more accessible information architecture.
-* Write a conceptual overview of or introduction to BasicCAT. What is computer-aided translation and what is BasicCAT. What technical terms can be provided to better understand the tool?
+* Write a conceptual overview of or introduction to BasicCAT. What is computer-aided translation and what is BasicCAT. What technical terms can be provided and explained to better understand the tool?
 
 ## Reference materials:
 
-Previous documentation: <https://docs.basiccat.org>
+Previous documentation: <http://docs.basiccat.org/en/latest/>
+The ultimate CAT tool jargon buster: <https://jealousmarkup.xyz/texts/cat-tool-glossary/>
 
 
 
