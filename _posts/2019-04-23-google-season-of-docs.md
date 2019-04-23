@@ -17,7 +17,7 @@ BasicCAT is applying to become an organization in Google Season of Docs to mento
 
 Organization name: BasicCAT
 
-Organization description: We build computer-aided tools.
+Organization description: We build computer-aided translation tools.
 
 Repository: <https://github.com/xulihang/BasicCAT>
 
