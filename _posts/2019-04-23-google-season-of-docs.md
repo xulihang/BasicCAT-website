@@ -23,7 +23,7 @@ Repository: <https://github.com/xulihang/BasicCAT>
 
 ## Project ideas
 
-Current, there are two.
+Currently, there are two.
 
 ### 1. Documentation Refactoring
     
