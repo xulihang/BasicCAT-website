@@ -6,7 +6,7 @@ categories: releasenote
 tags: 
 ---
 
-![](https://developers.google.com/season-of-docs/images/logo/SeasonofDocs_Logo_SecondaryGrey_300ppi.png)
+![](http://aws.xulihang.me/SeasonofDocs_Logo_SecondaryGrey_300ppi.png)
 
 Season of Docs ([g.co/seasonofdocs](https://g.co/seasonofdocs)) is Google's annual program that fosters collaboration between open source projects and technical writers.
 
