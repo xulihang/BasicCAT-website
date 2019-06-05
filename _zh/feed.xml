@@ -13,7 +13,7 @@ permalink: /zh/feed.xml
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% assign posts=site.zh | where:"layout", "post" %}
-    {% for post in posts limit:10 reversed %}
+    {% for post in posts reversed limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
