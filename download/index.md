@@ -43,3 +43,7 @@ Filter:
 
 * Gettext PO
 
+### Other Translation Tools
+
+Useful tools developed to solve translation tasks: [Tools](/tools/)
+
