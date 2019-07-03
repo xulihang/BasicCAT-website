@@ -14,6 +14,17 @@ How does it work:
 
 It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
+* v1.2
+
+    New Functions:
+    
+    * Read Bilingual files (one paragraph if source text and one paragraph of target text)
+    * Support docx files
+    * Allow text editing
+    
+    [Download](https://github.com/xulihang/Aligner/releases/download/v1.2/Aligner.zip)
+
+
 * v1.1
 
     New Functions:
