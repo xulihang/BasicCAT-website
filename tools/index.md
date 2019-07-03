@@ -22,7 +22,7 @@ Here are a list of translation tools I developed:
 	
 2. Aligner
 
-	This tool align source text and target text from individual files or one single bilingual files.
+	This tool aligns source text and target text from individual files or one single bilingual file.
 
 	Detailed intro: [New Tool! Bitext Aligner](/new-tool-bitext-aligner/)
 	
