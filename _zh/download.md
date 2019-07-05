@@ -42,3 +42,7 @@ permalink: /zh/download/
 
 * Gettext PO
 
+### 其它工具
+
+用于解决翻译任务而开发的一些小工具：[工具](/zh/tools/)
+
