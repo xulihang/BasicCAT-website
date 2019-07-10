@@ -33,6 +33,10 @@ Here are a list of translation tools I developed:
 
 	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
 	
+4. Image Transcriber
+
+	This tool aids people to OCR images. It can furthur generate PSD files with text layers.
+	
 	
 PS: You need Java Runtime Environment 8 to run these tools.
 

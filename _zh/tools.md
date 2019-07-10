@@ -30,7 +30,12 @@ layout: page
 
 	可以从PSD文件提取文本，并将翻译好的文本回填。需要电脑安装Photoshop完整版，目前只支持Windows系统。
 
-	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
+	[下载](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
+	
+4. Image Transcriber
+
+	辅助图片OCR工具。可以进一步生成含有文字图层的PSD文件（需要电脑安装Photoshop）。
+		
 
 
 注：要运行这些工具，请先安装Java Runtime Environment 8。
