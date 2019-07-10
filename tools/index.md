@@ -26,8 +26,6 @@ Here are a list of translation tools I developed:
 
 	Detailed intro: [New Tool! Bitext Aligner](/new-tool-bitext-aligner/)
 	
-	
-PS: You need Java Runtime Environment 8 to run these tools.
 
 3. PSD Localization
 
