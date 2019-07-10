@@ -26,7 +26,11 @@ layout: page
 
 	详细介绍：[新工具！双语句对齐软件Aligner](/new-tool-bitext-aligner/)
 	
-	
+3. PSD Localization
+
+	可以从PSD文件提取文本，并将翻译好的文本回填。需要电脑安装Photoshop完整版，目前只支持Windows系统。
+
+	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
 
 
 注：要运行这些工具，请先安装Java Runtime Environment 8。

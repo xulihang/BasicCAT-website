@@ -29,3 +29,12 @@ Here are a list of translation tools I developed:
 	
 PS: You need Java Runtime Environment 8 to run these tools.
 
+3. PSD Localization
+
+	This tool extracts text from psd files and refills translation. Need Photoshop installed. Currently, only windows is supported.
+
+	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
+	
+	
+PS: You need Java Runtime Environment 8 to run these tools.
+
