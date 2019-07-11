@@ -53,7 +53,7 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 
 	![](/album/image-localization/imagetranscriber.jpg)
 	
-2. Select the PSD folder
+2. Generate editable PSD files
 
     Click on File - Generate editable PSD files to export PSD, which can be further refilled with translation with the PSD Localization tool. Mask layers will be generated according to the positions and sizes of the boxes, covering the original text. Text layer will then be created above them. The color of mask layers can be set. The default is white. 
 	
