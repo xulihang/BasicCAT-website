@@ -37,6 +37,8 @@ Here are a list of translation tools I developed:
 
 	This tool aids people to OCR images. It can furthur generate PSD files with text layers.
 	
+	[Download](https://github.com/xulihang/ImageTranscriber/releases/download/v1.0/ImageTranscriber.zip)
+	
 	
 PS: You need Java Runtime Environment 8 to run these tools.
 

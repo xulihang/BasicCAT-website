@@ -35,7 +35,9 @@ layout: page
 4. Image Transcriber
 
 	辅助图片OCR工具。可以进一步生成含有文字图层的PSD文件（需要电脑安装Photoshop）。
+	
+	工具使用tesseract和百度API进行OCR，需要把tesseract放在根目录的tesseract-ocr文件夹，把百度API的id和secret存为根目录的baidu文件，并以换行分隔。
 		
-
+	[下载](https://github.com/xulihang/ImageTranscriber/releases/download/v1.0/ImageTranscriber.zip)
 
 注：要运行这些工具，请先安装Java Runtime Environment 8。
