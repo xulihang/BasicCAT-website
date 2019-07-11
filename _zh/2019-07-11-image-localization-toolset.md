@@ -47,12 +47,15 @@ tags:
 1.识别区域文字
 
 	打开ImageTranscriber，新建项目，导入漫画文件夹。如果漫画文件为psd，可以使用SaveAsJPG.exe批量转换psd为jpg。
-在打开的图片上方双击，会显示一个红色的方框。将方框对准所需识别的文字区域，选择一个OCR引擎进行识别。点住方框左上角移动是移动方框，右下角是调整大小。
+	
+	在打开的图片上方双击，会显示一个红色的方框。将方框对准所需识别的文字区域，选择一个OCR引擎进行识别。点住方框左上角移动是移动方框，右下角是调整大小。
+	
 	![](/album/image-localization/imagetranscriber.jpg)
 	
 2.生成可编辑的PSD文件
 
 	点击文件-生成可编辑的PSD文件导出PSD，可以进一步用PSD Localization工具进行翻译的回填。生成PSD时，会根据框的位置和大小生成一个遮盖层，遮住原来的文字，并在上面加上一个文字图层。遮盖层的颜色可以进一步进行设置，默认为白色。
+	
 	![](/album/image-localization/imagetranscriber-menu.jpg)
 	
 
