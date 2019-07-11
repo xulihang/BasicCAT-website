@@ -45,10 +45,13 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 
 
 1. Extract text of regions
+
     Open Image Transcriber, create a new project, and import the image folder. If the image file is psd, you can use SaveAsJPG.exe to batch convert PSD to JPG.
 Double-click the image. A red box will appear. Move and resize the box to fit the required area. Choose an OCR engine to extract text. Hold your mouse on the upper left corner of the box and drag it to move the box, and the lower right corner to adjust the size.
 	![](/album/image-localization/imagetranscriber.jpg)
+	
 2. Select the PSD folder
+
     Click on File - Generate editable PSD files to export PSD, which can be further refilled with translation with the PSD Localization tool. Mask layers will be generated according to the positions and sizes of the boxes, covering the original text. Text layer will then be created above them. The color of mask layers can be set. The default is white. 
 	![](/album/image-localization/imagetranscriber-menu.jpg)
 
