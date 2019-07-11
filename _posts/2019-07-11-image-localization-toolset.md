@@ -49,7 +49,7 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 
     Open Image Transcriber, create a new project, and import the image folder. If the image file is psd, you can use SaveAsJPG.exe to batch convert PSD to JPG.
 	
-	Double-click the image. A red box will appear. Move and resize the box to fit the required area. Choose an OCR engine to extract text. Hold your mouse on the upper left corner of the box and drag it to move the box, and the lower right corner to adjust the size.
+	Double-click the image and a red box will appear. Move and resize the box to fit the required area. Choose an OCR engine to extract text. Hold your mouse on the upper left corner of the box and drag it to move the box, and the lower right corner to adjust the size.
 
 	![](/album/image-localization/imagetranscriber.jpg)
 	
