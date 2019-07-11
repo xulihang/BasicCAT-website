@@ -37,6 +37,8 @@ Here are a list of translation tools I developed:
 
 	This tool aids people to OCR images. It can furthur generate PSD files with text layers.
 	
+	It uses tesseract and baidu as the OCR engines. Put tesseact in the tesseract-ocr dir and store baidu api's client id and secret (separated by newline) in a file named baidu in the root. 	
+	
 	[Download](https://github.com/xulihang/ImageTranscriber/releases/download/v1.0/ImageTranscriber.zip)
 	
 	

@@ -56,8 +56,6 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 2. Generate editable PSD files
 
     Click on File - Generate editable PSD files to export PSD, which can be further refilled with translation with the PSD Localization tool. Mask layers will be generated according to the positions and sizes of the boxes, covering the original text. Text layer will then be created above them. The color of mask layers can be set. The default is white.
-
-	It uses tesseract and baidu as the OCR engines. Put tesseact in the tesseract-ocr dir and store baidu api's client id and secret (separated by newline) in a file named baidu in the root. 	
 	
 	![](/album/image-localization/imagetranscriber-menu.jpg)
 
