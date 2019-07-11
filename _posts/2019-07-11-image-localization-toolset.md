@@ -1,17 +1,18 @@
 ---
-date: 2019-07-11 16:46:17+08:00
+date: 2019-07-11 18:10:17+08:00
 layout: post
 title: Image Localization Toolset
 categories: releasenote
 tags: 
 ---
 
+
 There are two tools:
 
 1. PSD Localization which extracts text from psd files and refills translation. Need Photoshop installed. Currently, only windows is supported.
 2. Image Transcriber which aids people to transcribe images. It can furthur generate PSD files with text layers.
 
-Guides£º
+Guidesï¼š
 
 ## PSD Localization
 
