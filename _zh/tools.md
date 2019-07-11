@@ -24,7 +24,7 @@ layout: page
 
 	可以从原文件及目标文件，或者一段原文一段译文的双语文件进行对齐操作。
 
-	详细介绍：[新工具！双语句对齐软件Aligner](/new-tool-bitext-aligner/)
+	详细介绍：[新工具！双语句对齐软件Aligner](/zh/new-tool-bitext-aligner/)
 	
 3. PSD Localization
 
