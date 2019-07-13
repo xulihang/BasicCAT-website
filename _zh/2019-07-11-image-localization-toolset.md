@@ -45,7 +45,9 @@ tags:
 
 
 1. 识别区域文字
-	打开ImageTranscriber，新建项目，导入图片文件夹。如果图片文件为psd，可以使用SaveAsJPG.exe批量转换psd为jpg。
+	
+    打开ImageTranscriber，新建项目，导入图片文件夹。如果图片文件为psd，可以使用SaveAsJPG.exe批量转换psd为jpg。
+
 	在打开的图片上方双击，会显示一个红色的方框。将方框对准所需识别的文字区域，选择一个OCR引擎进行识别。点住方框左上角移动是移动方框，右下角是调整大小。
 	
 	![](/album/image-localization/imagetranscriber.jpg)
