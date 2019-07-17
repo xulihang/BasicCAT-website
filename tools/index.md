@@ -39,7 +39,7 @@ Here are a list of translation tools I developed:
 	
 	It uses tesseract and baidu as the OCR engines. Put tesseact in the tesseract-ocr dir and store baidu api's client id and secret (separated by newline) in a file named baidu in the root. 	
 	
-	[Download](https://github.com/xulihang/ImageTranscriber/releases/download/v1.0/ImageTranscriber.zip)
+	[Download](https://github.com/xulihang/ImageTranscriber/releases/download/v1.1/ImageTranscriber.zip)
 	
 	
 PS: You need Java Runtime Environment 8 to run these tools.
