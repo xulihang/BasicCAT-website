@@ -40,7 +40,15 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 2. Select the xlsx file generated before with its target column filled.
 3. Click refill to open Photoshop and replace source with target.
 
+### OCR Verification
 
+New feature: Every layer will be exported to JPG and get OCRed. The results will be saved to the xlsx file. This can be used to infer whether a layer contains text. It can also complete text (non-text layers' layer name may not include the complete text).
+
+![](/album/image-localization/ocr-verification.JPG)
+
+The table with OCR result:
+
+![](/album/image-localization/ocr-verification-table.JPG)
 
 ## Image Transcriber
 

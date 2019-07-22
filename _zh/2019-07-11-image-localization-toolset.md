@@ -19,8 +19,8 @@ tags:
 
 ![](/album/image-localization/psd_export.jpg)
 
-1.选择PSD文件夹
-2.点击导出可以在PSD文件夹下生成一个xlsx表格文件
+1. 选择PSD文件夹
+2. 点击导出可以在PSD文件夹下生成一个xlsx表格文件
 
 有5列内容，分别是文件名、图层名、文本、译文和备注。
 
@@ -35,10 +35,20 @@ tags:
 
 ![](/album/image-localization/psd_refill.jpg)
 
-1.选择PSD文件夹
-2.选择之前生成的xlsx文件，其中译文一列已经填充好。
-3.点击回填会打开Photoshop进行回填。
+1. 选择PSD文件夹
+2. 选择之前生成的xlsx文件，其中译文一列已经填充好。
+3. 点击回填会打开Photoshop进行回填。
 
+
+### OCR验证
+
+新增功能，将每个图层导出为图片，用OCR识别文字，并保存结果到表格中。可以用于快速甄别不包含文字的图层，同时也能补全文本内容（非文字图层，图层名并不包含所有文本）。
+
+![](/album/image-localization/ocr-verification.JPG)
+
+添加OCR结果后的表格：
+
+![](/album/image-localization/ocr-verification-table.JPG)
 
 
 ## Image Transcriber
