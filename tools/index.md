@@ -31,7 +31,7 @@ Here are a list of translation tools I developed:
 
 	This tool extracts text from psd files and refills translation. Need Photoshop installed. Currently, only windows is supported.
 
-	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.0/PSDLocalization.zip)
+	[Download](https://github.com/xulihang/Translation-Tools/releases/download/v1.1/PSDLocalization.zip)
 	
 4. Image Transcriber
 
