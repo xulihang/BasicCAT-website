@@ -69,3 +69,11 @@ The table with OCR result:
 
 
 [Download at the tools page](https://www.basiccat.org/tools/)
+
+## Note
+
+### Font Size Setting
+
+When generating PSD from JPG or modifying non-text layers, it is neccessary to manually set the font size and the latter also need text layer's width and height to be set.
+
+The tools provide a interface to set up these. You can manually modify the config.ini file under image folders.
