@@ -6,11 +6,11 @@ permalink: /zh/download/
 
 请根据您的操作系统选择对应的安装包。
 
-### v1.6.3
+### v1.6.4
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.3/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.3/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.6.3/BasicCAT_mac.dmg)
-* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.6.3/BasicCAT-crossplatforms.zip)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.4/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.4/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.6.4/BasicCAT_mac.dmg)
+* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.6.4/BasicCAT-crossplatforms.zip)
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -36,6 +36,7 @@ permalink: /zh/download/
 * 搜狗深智
 * 小牛
 * IBM Watson
+* 云译
 * 亚马逊 (需要单独下载: [链接](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 
 过滤器：
