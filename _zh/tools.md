@@ -38,6 +38,6 @@ layout: page
 	
 	工具使用tesseract和百度API进行OCR，需要把tesseract放在根目录的tesseract-ocr文件夹，把百度API的id和secret存为根目录的baidu文件，并以换行分隔。
 		
-	[下载（暂不提供）](https://github.com/xulihang/ImageTranscriber/releases/download/v1.1/ImageTranscriber.zip)
+	[下载](https://github.com/xulihang/ImageTrans/releases/download/v1.1/ImageTranscriber.zip)
 
 注：要运行这些工具，请先安装Java Runtime Environment 8。
