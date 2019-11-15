@@ -8,6 +8,16 @@ tags:
 
 鉴于一般译者提交的都是成品文档，花了半天时间写了个双语段落和句对齐工具Aligner，原理是先把双语文本按段落分割并人工对齐，然后利用SRX分割规则对每个段落进行句段分割。如果段落的原文和译文句子数量有差异，就补充上空白片段，供后期人工调整。只需使用DELETE键和ENTER键，即可进行切分与合并操作。
 
+* v1.3
+
+    新功能：
+    
+    * 读取ass双语字幕文件
+    * 更快的TMX导出速度
+    
+    [下载](https://github.com/xulihang/Aligner/releases/download/v1.3/Aligner.zip)
+
+
 
 * v1.2
 
