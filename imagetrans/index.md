@@ -17,13 +17,13 @@ Documentation: <https://imagetrans.readthedocs.io/>
 
 ## Video Tutorials
 
-1. Getting Started
+### Getting Started
 
-	<iframe src="//player.bilibili.com/player.html?aid=89725886&cid=153246062&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=89725886&cid=153246062&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-2. Text Areas Detection and Translation Reinjection
+### Text Areas Detection and Translation Reinjection
 
-	<iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
+<iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 	
 ## Examples of Translated Comics
 
