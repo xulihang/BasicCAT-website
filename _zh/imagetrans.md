@@ -32,7 +32,7 @@ ImageTrans也是一款计算机辅助翻译（CAT）工具，支持语料检索�
 	
 ## 漫画翻译结果示例
 
-Come to me , Love —— 美国黄金时代漫画杂志《Boy Love是Girls》第41期
+Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第41期
 
 浏览页面：<http://comics.xulihang.me/viewer.html?project=come_to_me_love.itp>
 
