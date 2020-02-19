@@ -6,6 +6,7 @@ categories: releasenote
 tags: 
 ---
 
+Note: This toolset is no longer supported. Please check out [ImageTrans](/imagetrans/).
 
 There are two tools:
 

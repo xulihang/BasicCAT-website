@@ -6,6 +6,8 @@ categories: releasenote
 tags: 
 ---
 
+注意：这套工具已经不再更新了。请使用[ImageTrans](/imagetrans/)。
+
 主要有两个工具：
 
 1. PSD Localization 可以从PSD文件提取文本，并将翻译好的文本回填。
