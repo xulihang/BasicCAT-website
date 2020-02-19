@@ -24,6 +24,8 @@ Documentation: <https://imagetrans.readthedocs.io/>
 ### Text Areas Detection and Translation Reinjection
 
 <iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
+
+<iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153668149&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 	
 ## Examples of Translated Comics
 
