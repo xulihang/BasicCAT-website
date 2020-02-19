@@ -10,6 +10,14 @@
     height:500px;
 }
 
+@media screen and (max-device-width: 600px){
+    .post iframe{
+        width:100%;
+        height:250px;
+    }
+}
+
+
 .underlined {
     flex: 1;
     text-decoration: none;
