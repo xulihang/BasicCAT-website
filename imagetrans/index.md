@@ -11,7 +11,7 @@ ImageTrans has a high interoperability that it can export text to Word and Excel
 
 ImageTrans is also a computer-aided translation (CAT) tool, which supports corpus concordance, translation memory, terminology management and machine translation. It has a sound effects words search engine designed for comics.
 
-ImageTrans is cross-platform (Windows/Mac/Linux)) as BasicCAT does.
+ImageTrans is cross-platform (Windows/Mac/Linux) as BasicCAT does.
 
 Documentation: <https://imagetrans.readthedocs.io/>
 
