@@ -43,5 +43,9 @@ Text Searching Page: <http://comics.xulihang.me/search.html>
 
 ## Get a Copy	
 
-Please email to [admin@basiccat.org](mailto:admin@basiccat.org), tell us who you are and what you are gonna do with ImageTrans to get a copy.
+Visit [here](https://basiccat.onfastspring.com/imagetrans) to purchase ImageTrans. You will get a download link and an email.
+
+Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
+
+If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a copy. Please tell us who you are and what you are gonna do with ImageTrans.
 
