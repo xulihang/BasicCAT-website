@@ -6,11 +6,11 @@ permalink: /zh/download/
 
 请根据您的操作系统选择对应的安装包。
 
-### v1.6.8
+### BasicCAT v1.6.9
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.8/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.8/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.6.8/BasicCAT_mac.dmg)
-* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.6.8/BasicCAT-crossplatforms.zip)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.9/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.6.9/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.6.9/BasicCAT_mac.dmg)
+* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.6.9/BasicCAT-crossplatforms.zip)
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -23,7 +23,7 @@ permalink: /zh/download/
 
 目前BasicCAT有两种插件：过滤器插件和机器翻译插件。
 
-可以点[此](https://github.com/xulihang/BasicCAT/releases/download/plugins/all_plugins.zip)下载全部插件。
+可以点[此](https://github.com/xulihang/BasicCAT/releases/download/plugins/all_plugins.zip)下载全部插件。BasicCAT安装包已经包含了最新插件，一般无需单独下载。
 
 记得把解压得到的jar和xml文件放入plugins文件夹里。
 
