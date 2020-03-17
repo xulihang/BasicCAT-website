@@ -1,17 +1,17 @@
 ---
-title: ImageTrans - Computer-aided Image Translation Tool
+title: ImageTrans - Computer-aided Image and Comic Translation Tool
 layout: page
 ---
 
 ## Intro
 
-ImageTrans is a computer-aided image transcription and translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics, including manga and manhua. The original text can be automatically erased and the translation be reinjected.
+ImageTrans is a computer-aided image and comic translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics, including manga and manhua. The original text can be automatically erased and the translation be reinjected.
 
 ImageTrans has a high interoperability that it can export text to Word and Excel files and use scripts to interact with image editors like Photoshop.
 
 ImageTrans is also a computer-aided translation (CAT) tool, which supports corpus concordance, translation memory, terminology management and machine translation. It has a sound effects words search engine designed for comics.
 
-ImageTrans is cross-platform (Windows/Mac/Linux) as BasicCAT does.
+ImageTrans is cross-platform (Windows/Mac/Linux) as same as BasicCAT.
 
 Documentation: <https://imagetrans.readthedocs.io/>
 
