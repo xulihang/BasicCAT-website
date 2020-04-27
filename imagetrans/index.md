@@ -50,3 +50,5 @@ Please follow the [installation instruction](https://imagetrans.readthedocs.io/e
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
 
 New: [7 days trial](https://basiccat.onfastspring.com/imagetrans-trial)
+
+{% include comments.html %}

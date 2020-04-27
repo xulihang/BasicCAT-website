@@ -52,3 +52,5 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 新：[7天试用](https://basiccat.onfastspring.com/imagetrans-trial)
 
+{% include comments.html %}
+
