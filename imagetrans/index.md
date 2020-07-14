@@ -47,9 +47,9 @@ Visit [here](https://basiccat.onfastspring.com/) to purchase ImageTrans. You wil
 
 There are three version:
 
-* ImageTrans for personal use [link](https://basiccat.onfastspring.com/imagetrans)
-* ImageTrans for commercial purpose [link](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
-* ImageTrans 7 days trial [link](https://basiccat.onfastspring.com/imagetrans-trial)
+* ImageTrans for personal use [(link)](https://basiccat.onfastspring.com/imagetrans)
+* ImageTrans for commercial purpose [(link)](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
+* ImageTrans 7 days trial [(link)](https://basiccat.onfastspring.com/imagetrans-trial)
 
 Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
 

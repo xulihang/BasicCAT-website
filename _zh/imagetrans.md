@@ -48,9 +48,9 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 有三个版本可以购买：
 
-* 个人用途版 [链接](https://basiccat.onfastspring.com/imagetrans)
-* 商业用途版 [链接](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
-* 七天试用版 [链接](https://basiccat.onfastspring.com/imagetrans-trial)
+* 个人用途版 [（链接）](https://basiccat.onfastspring.com/imagetrans)
+* 商业用途版 [（链接）](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
+* 七天试用版 [（链接）](https://basiccat.onfastspring.com/imagetrans-trial)
 
 请按照[安装说明](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2)进行操作。
 
