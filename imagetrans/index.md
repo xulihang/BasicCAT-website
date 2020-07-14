@@ -43,12 +43,17 @@ Text Searching Page: <http://comics.xulihang.me/search.html>
 
 ## Get a Copy	
 
-Visit [here](https://basiccat.onfastspring.com/imagetrans) to purchase ImageTrans. You will get a download link and an email.
+Visit [here](https://basiccat.onfastspring.com/) to purchase ImageTrans. You will get a download link and an email.
+
+There are three version:
+
+* ImageTrans for personal use [link](https://basiccat.onfastspring.com/imagetrans)
+* ImageTrans for commercial purpose [link](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
+* ImageTrans 7 days trial [link](https://basiccat.onfastspring.com/imagetrans-trial)
 
 Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
 
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
 
-New: [7 days trial](https://basiccat.onfastspring.com/imagetrans-trial)
 
 {% include comments.html %}

@@ -44,13 +44,17 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 获取ImageTrans
 
-访问[此处](https://basiccat.onfastspring.com/imagetrans)购买ImageTrans，你会得到下载链接和一封邮件。
+访问[此处](https://basiccat.onfastspring.com/)购买ImageTrans，你会得到下载链接和一封邮件。
+
+有三个版本可以购买：
+
+* 个人用途版 [链接](https://basiccat.onfastspring.com/imagetrans)
+* 商业用途版 [链接](https://basiccat.onfastspring.com/imagetrans-commercial-purpose)
+* 七天试用版 [链接](https://basiccat.onfastspring.com/imagetrans-trial)
 
 请按照[安装说明](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2)进行操作。
 
 来自高校的师生可以用教育网邮箱发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)，说明相关信息，打算用ImageTrans做什么任务，能够得到优惠。
-
-新：[7天试用](https://basiccat.onfastspring.com/imagetrans-trial)
 
 {% include comments.html %}
 
