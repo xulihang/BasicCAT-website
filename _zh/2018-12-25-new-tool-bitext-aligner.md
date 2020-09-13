@@ -12,7 +12,7 @@ tags:
 
     更新：
     
-    * 更新文字分割算法
+    * 更新文本分割算法
 	* 使用[Bleualign](https://github.com/rsennrich/Bleualign/)进行自动对齐
 
 	[下载](https://github.com/xulihang/Aligner/releases/download/v1.4.0/Aligner.zip)
