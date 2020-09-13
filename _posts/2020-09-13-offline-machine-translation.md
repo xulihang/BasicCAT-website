@@ -16,7 +16,8 @@ How to use:
 
 1. Follow the guide to install fiskmo: <https://github.com/Helsinki-NLP/fiskmo-trados>
 2. Install fiskmo plugins for BasicCAT
-3. Setup its params and enable it. The url param should be <http://localhost:8500/MTRestService/Translate>
+3. Run FiskmoMTEngine.exe with administrator privileges
+4. Setup its params and enable it. The url param should be <http://localhost:8500/MTRestService/Translate>
 
 
 
