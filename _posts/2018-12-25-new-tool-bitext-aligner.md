@@ -14,6 +14,20 @@ How does it work:
 
 It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
+* v1.4.0
+
+    Changes:
+    
+    * Updated text segmentation method
+	* Automatic alignment with [Bleualign](https://github.com/rsennrich/Bleualign/)
+
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.4.0/Aligner.zip)
+	
+	How to use Bleualign:
+	
+	1. Ensure that you have Python installed.
+	2. Export the source text to txt and translate the txt file with machine translation.
+	3. "Edit"->"Bleualign"->"Align". Align after choosing the translated txt file.
 
 * v1.3.1
 

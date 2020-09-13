@@ -8,6 +8,21 @@ tags:
 
 鉴于一般译者提交的都是成品文档，花了半天时间写了个双语段落和句对齐工具Aligner，原理是先把双语文本按段落分割并人工对齐，然后利用SRX分割规则对每个段落进行句段分割。如果段落的原文和译文句子数量有差异，就补充上空白片段，供后期人工调整。只需使用DELETE键和ENTER键，即可进行切分与合并操作。
 
+* v1.4.0
+
+    更新：
+    
+    * 更新文字分割算法
+	* 使用[Bleualign](https://github.com/rsennrich/Bleualign/)进行自动对齐
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.4.0/Aligner.zip)
+	
+	如何使用Bleualign:
+	
+	1. 确保Python已经安装
+	2. 将源文本导出到txt文件并使用机器翻译翻译它
+	3. 菜单栏“Edit”->“Bleualign”->“Align”，选择翻译好的文件后执行对齐操作
+
 * v1.3.1
 
 	变更: 去除空行。
