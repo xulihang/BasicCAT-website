@@ -22,7 +22,7 @@ tags:
     更新：
     
     * 更新文本分割算法
-	* 使用[Bleualign](https://github.com/rsennrich/Bleualign/)进行自动对齐
+	* 使用[Bleualign](https://github.com/rsennrich/Bleualign/)进行自动对齐，可以较好地对齐语料
 
 	[下载](https://github.com/xulihang/Aligner/releases/download/v1.4.0/Aligner.zip)
 	
