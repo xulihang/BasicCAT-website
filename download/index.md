@@ -9,7 +9,7 @@ Please choose your download based on platform.
 
 * Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.8.8/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.8.8/BasicCAT-windows-x64.exe)
 * macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.8.8/BasicCAT_mac.dmg)
-* Linux and other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.8.8/BasicCAT-crossplatforms.zip)
+* Linux and the other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.8.8/BasicCAT-crossplatforms.zip)
 
 Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -38,7 +38,7 @@ Machine Translation:
 * IBM Watson
 * Cloudtranslation (only url param need to setup. Visit its [homepage](https://cloudtranslation.com/static/api_en.html) to learn more)
 * Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
-* Fiskmo（offline machine translation，[introduction](/offline-machine-translation)）
+* Fiskmo (offline machine translation，[introduction](/offline-machine-translation))
 
 
 Filter:
