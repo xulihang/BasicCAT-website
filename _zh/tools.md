@@ -38,6 +38,12 @@ layout: page
 	
 	工具使用tesseract和百度API进行OCR，需要把tesseract放在根目录的tesseract-ocr文件夹，把百度API的id和secret存为根目录的baidu文件，并以换行分隔。
 		
-	[下载](https://github.com/xulihang/ImageTrans/releases/download/v1.1/ImageTranscriber.zip)
+	已停止开发，请使用[ImageTrans](https://www.basiccat.org/zh/imagetrans/)。
 
+5. FileDiff
+
+	这个工具能显示文件新旧版本的差别，支持各种文件格式。如果你修改了翻译好的文档，想在CAT中修改对应的文本，就可以使用这个工具来显示差异。
+	
+	[源代码](https://github.com/xulihang/FileDiff)	
+	
 注：要运行这些工具，请先安装Java Runtime Environment 8。
