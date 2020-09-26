@@ -14,9 +14,16 @@ How does it work:
 
 It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
+Use Cases:
+
+1. Build paralel corpus
+2. Reimport sentence-level translation to CAT tools from translated files.
+3. Create bilingual files from separate source files and target files.
+
+
 * v1.5.1
 
-    Change:
+    Changes:
     
     * Support reading TMX, XLIFF files and BasicCAT work files
 	* Read from Clipboard
