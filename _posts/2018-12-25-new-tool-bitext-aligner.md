@@ -21,6 +21,8 @@ Use Cases:
 3. Create bilingual files from separate source files and target files.
 
 
+Releases:
+
 * v1.5.1
 
     Changes:
