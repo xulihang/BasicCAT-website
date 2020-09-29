@@ -55,5 +55,32 @@ Please follow the [installation instruction](https://imagetrans.readthedocs.io/e
 
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
 
+## Releases
+
+### v1.1.2
+
+New option to convert vertically aligned Japanese text to horizontally aligned for better OCR results.
+
+### v1.1.1
+
+* Add Batch Translation
+* Add text areas detection based on scene text detection
+* Save paths for choosing files and folders
+
+### v1.1.0
+
+* Add external inpainter (experimental)
+* Add localization support. ImageTrans can now be displayed in two languages: English and Chinese.
+
+### v1.0.1
+
+* More settings
+* RichText support
+* XLIFF import and export
+
+### v1.0.0
+
+Released.
+
 
 {% include comments.html %}
