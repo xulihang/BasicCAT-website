@@ -55,7 +55,15 @@ Please follow the [installation instruction](https://imagetrans.readthedocs.io/e
 
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
 
-## Releases
+## Releases Notes
+
+### v1.1.3
+
+* New plugin: OCR plugin. Code is open source: [github](https://github.com/xulihang/ImageTrans_plugins). PaddleOCR is supported.
+* New ocr engine: ABBYY (use ABBYY FineReader's command line interface, windows only)
+* New tool: Screen Reader. It can be used as a screenshot tool and screen captures can got OCRed immediately. Captures can also be appended to ImageTrans's projects.
+* A Toolbar is added to provide more operations like text box splitting, merging and selecting.
+* MouseCursors are set correctly for different scenarios.
 
 ### v1.1.2
 
