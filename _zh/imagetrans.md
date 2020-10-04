@@ -61,7 +61,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 ### v1.1.3
 
 * 新的插件类型：OCR插件。代码开源：[github](https://github.com/xulihang/ImageTrans_plugins)。支持调用PaddleOCR离线OCR。
-* 新的OCR插件：ABBYY（使用ABBYY FineReader的命令行接口，只支持Windows）
+* 新的OCR引擎：ABBYY（使用ABBYY FineReader的命令行接口，只支持Windows）
 * 新工具：屏幕阅读器。它能用作一个截图工具，截图能调用ImageTrans的OCR引擎进行文字识别，也能直接添加进ImageTrans的项目里。
 * 添加工具栏，能提供更多操作，例如文字区域的分割、合并和选择。
 * 鼠标的形状会根据提供的操作做出正确的改变。
