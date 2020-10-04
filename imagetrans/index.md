@@ -57,6 +57,13 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Releases Notes
 
+### v1.1.4
+
+* Toolbar has a new tool: Font
+* New project and import pictures actions now share a same saved path.
+* Better color picking
+
+
 ### v1.1.3
 
 * New plugin: OCR plugin. Code is open source: [github](https://github.com/xulihang/ImageTrans_plugins). PaddleOCR is supported.

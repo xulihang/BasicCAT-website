@@ -58,6 +58,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.1.4
+
+* 工具栏新工具：字体设置
+* 对于新建项目和导入图片操作，曾经选择的路径会得到共享
+* 更好的颜色选择
+
 ### v1.1.3
 
 * 新的插件类型：OCR插件。代码开源：[github](https://github.com/xulihang/ImageTrans_plugins)。支持调用PaddleOCR离线OCR。
