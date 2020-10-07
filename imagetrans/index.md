@@ -60,6 +60,7 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 ### v1.1.5
 
 * Vertical text engine for CJK (Chinese, Japanese and Korean)
+* AutoCorrect (useful for solving the full-width punctuations input problem on macOS)
 * Bugfixes
 
 ### v1.1.4
