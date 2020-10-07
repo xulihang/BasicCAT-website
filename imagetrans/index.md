@@ -57,6 +57,11 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Releases Notes
 
+### v1.1.5
+
+* Vertical text engine for CJK (Chinese, Japanese and Korean)
+* Bugfixes
+
 ### v1.1.4
 
 * Toolbar has a new tool: Font
