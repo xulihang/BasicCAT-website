@@ -57,6 +57,11 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Releases Notes
 
+### v1.1.6
+
+* Save text mask in png format, making cover text mode supports areas which have a black ground
+* New action: Duplicate text area
+
 ### v1.1.5
 
 * Vertical text engine for CJK (Chinese, Japanese and Korean)
