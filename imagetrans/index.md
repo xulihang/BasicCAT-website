@@ -57,6 +57,11 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Releases Notes
 
+### v1.1.7
+
+* Maskeditor can now regenerate mask of selected area and scale images
+* The default text mask color is reset to red
+
 ### v1.1.6
 
 * Save text mask in png format, making cover text mode supports areas which have a black ground
