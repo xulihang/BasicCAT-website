@@ -61,6 +61,8 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 * Maskeditor can now regenerate mask of selected area and scale images
 * The default text mask color is reset to red
+* Add non-text image editor
+* Bugfixes
 
 ### v1.1.6
 
