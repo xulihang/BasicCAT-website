@@ -60,6 +60,7 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 ### v1.1.7
 
 * Maskeditor can now regenerate mask of selected area and scale images
+* Text Remover can remove text in selected area
 * The default text mask color is reset to red
 * Add non-text image editor
 * Bugfixes
