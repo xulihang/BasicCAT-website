@@ -5,7 +5,7 @@ layout: page
 
 ## Intro
 
-ImageTrans is a computer-aided image and comic translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics, including manga and manhua. The original text can be automatically erased and the translation be reinjected.
+ImageTrans is a computer-aided image and comic translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics (also webtoon, manga, manhwa and manhua). The original text can be automatically erased and the translation be reinjected.
 
 ImageTrans has a high interoperability that it can export text to Word and Excel files and use scripts to interact with image editors like Photoshop.
 
