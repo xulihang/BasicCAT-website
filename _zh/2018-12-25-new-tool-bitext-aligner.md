@@ -14,6 +14,11 @@ tags:
 2. 从翻译好的文件导回文本到CAT软件中
 3. 从分离的源文件和目标文件建立双语对照文件
 
+视频演示：	
+
+<iframe src="//player.bilibili.com/player.html?aid=754731761&bvid=BV12k4y1k7QC&cid=239243954&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
+
+
 版本记录：
 
 * v1.5.1
@@ -93,3 +98,4 @@ tags:
     第一次发布。
     
     [下载](https://github.com/xulihang/Aligner/releases/download/v1.0/Aligner.zip)
+	

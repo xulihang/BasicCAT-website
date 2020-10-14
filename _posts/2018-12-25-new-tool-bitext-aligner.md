@@ -20,6 +20,9 @@ Use Cases:
 2. Reimport sentence-level translation to CAT tools from translated files.
 3. Create bilingual files from separate source files and target files.
 
+Getting Started:
+
+<iframe src="//player.bilibili.com/player.html?aid=754731761&bvid=BV12k4y1k7QC&cid=239243954&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 
 Releases:
 
