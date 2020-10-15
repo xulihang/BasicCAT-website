@@ -14,7 +14,9 @@ ImageTrans也是一款计算机辅助翻译（CAT）工具，支持语料检索�
 
 和BasicCAT一样，ImageTrans是跨平台(Windows/Mac/Linux)的。
 
-软件文档： <https://imagetrans.readthedocs.io/>
+软件文档： <https://imagetrans.readthedocs.io/zh_CN/latest/>
+
+ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
 ## 视频教程
 

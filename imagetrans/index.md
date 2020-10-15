@@ -15,6 +15,8 @@ ImageTrans is cross-platform (Windows/Mac/Linux) as same as BasicCAT.
 
 Documentation: <https://imagetrans.readthedocs.io/>
 
+ImageTrans is the result of the thesis for my master's degree: [Design and Implementation of a Computer-Aided Comics Translation Tool](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool).
+
 ## Video Tutorials
 
 ### Getting Started
