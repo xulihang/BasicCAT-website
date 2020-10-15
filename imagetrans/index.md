@@ -116,5 +116,9 @@ New option to convert vertically aligned Japanese text to horizontally aligned f
 
 Released.
 
+## Relevant tools
+
+[WebP-Converter](https://github.com/xulihang/WebP-Converter). Convert JPG/BMP/PNG to WebP and vice versa.
+
 
 {% include comments.html %}
