@@ -59,6 +59,14 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Releases Notes
 
+### v1.1.8
+
+* Generate mask and text-removed images accroding to order and show progress
+* Inpainting is now asynchorous
+* Validate geometry before generating text mask
+* Fix a resized mask not matching with resized image problem
+* Add text area action menu to imagescrollpane
+
 ### v1.1.7
 
 * Maskeditor can now regenerate mask of selected area and scale images
