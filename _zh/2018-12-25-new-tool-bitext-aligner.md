@@ -21,6 +21,19 @@ tags:
 
 版本记录：
 
+* v1.5.2
+
+    更新：
+    
+    * 字数统计功能
+	* 删除特定片段功能（片段范围、重复片段、空白片段、指定文本）
+	* 前往下一个空白片段功能
+	* 清洗标签功能
+	* 导出XLSX功能
+	* 其它Bug修复
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.2/Aligner.zip)
+
 * v1.5.1
 
     更新：

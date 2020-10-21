@@ -26,6 +26,19 @@ Getting Started:
 
 Releases:
 
+* v1.5.2
+
+    Changes:
+    
+    * Word count
+	* Segments Remover (remove segments based on range, whether is empty or duplicated and specific text list)
+	* Go to the next empty segment
+	* Clean tags menu
+	* Export to XLSX
+	* Other bugfixes
+
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.2/Aligner.zip)
+
 * v1.5.1
 
     Changes:
@@ -34,7 +47,7 @@ Releases:
 	* Read from Clipboard
 	* TMX export now supports tags
 
-	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.1/Aligner.zip)
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.1/Aligner.zip)
 
 * v1.5.0
 
