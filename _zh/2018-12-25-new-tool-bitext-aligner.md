@@ -21,6 +21,20 @@ tags:
 
 版本记录：
 
+* v1.5.3
+
+    更新：
+    
+	* 导出为XLIFF
+	* Bleualign结果如果删除了部分片段，会用红色边框表示出来
+	* Bleualign结果如果不准确（通过计算单个片段的译文字数和原文字数之比与全篇的译文字数和原文字数之比得出），会用黄色边框表示出来
+    * 给跳转到空白片段与问题片段的操作添加快捷键
+	* 新的片段操作，通过右键菜单调出（在编辑器的空白部分右键）
+	
+	![](/album/aligner_listview_context_menu.jpg)
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.3/Aligner.zip)
+
 * v1.5.2
 
     更新：

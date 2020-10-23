@@ -26,6 +26,21 @@ Getting Started:
 
 Releases:
 
+* v1.5.3
+
+    Changes:
+    
+	* Export to XLIFF
+	* Bleualign results which deleted some segments will show with a red border
+	* Inaccurate bleualign results (by comparing target word count and source word count ratios of the whole text and the segment) will show with a yellow border
+    * Add keyboard shortcuts for "go to the next empty segment" and "go to the next segment with issues"
+	* New segment operations via context menu (right click on the empty area of the editor to call the menu)
+	
+	![](/album/aligner_listview_context_menu.jpg)
+
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.3/Aligner.zip)
+
+
 * v1.5.2
 
     Changes:
