@@ -26,7 +26,9 @@ Getting Started:
 
 <iframe src="//player.bilibili.com/player.html?aid=754731761&bvid=BV12k4y1k7QC&cid=239243954&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 
-Running Environment: Java 8，Python 3 (needed by bleualign)
+Running Environment: Java 8, Python 3 (needed by bleualign. Download from Baidu: [Python3.zip]())
+
+Environment Download For Windows (unzip to Aligner's root): [jre8u192.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2Fjre&parentPath=%2F), [Python3.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2FAligner)
 
 Releases:
 
