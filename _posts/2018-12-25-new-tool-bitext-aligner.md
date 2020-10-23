@@ -14,6 +14,8 @@ How does it work:
 
 It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
+More about text alignment: [Parallel Text Alignment](http://blog.xulihang.me/parallel-text-alignment/)
+
 Use Cases:
 
 1. Build paralel corpus
