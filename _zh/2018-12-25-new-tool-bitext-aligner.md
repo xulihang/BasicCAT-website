@@ -26,6 +26,17 @@ Windows版运行环境下载（解压到Aligner的根目录）：[jre8u192.zip](
 
 版本记录：
 
+* v1.5.4
+
+    更新：
+    
+	* 支持从BasicCAT工作文件分别读取原文和译文
+	* 右键菜单添加空白片段功能
+	* 选择一个SRX文件后更新已读取的规则
+    * 其它Bug修复
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.4/Aligner.zip)
+
 * v1.5.3
 
     更新：

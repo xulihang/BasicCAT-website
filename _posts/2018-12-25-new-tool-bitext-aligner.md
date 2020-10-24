@@ -32,6 +32,17 @@ Environment Download For Windows (unzip to Aligner's root): [jre8u192.zip](https
 
 Releases:
 
+* v1.5.4
+
+    Changes:
+    
+	* Separate BasicCAT workfile reading
+	* Append blank cells context menu
+	* Update segmentation rules after a new srx file is chosen
+    * Other bugfixes
+
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.4/Aligner.zip)
+
 * v1.5.3
 
     Changes:
