@@ -104,6 +104,6 @@ layout: page
 <h2>Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact us:</p>
 <ul>
-        <li>By email: support@basiccat.org</li>
+        <li>By email: admin@basiccat.org</li>
           
         </ul>
