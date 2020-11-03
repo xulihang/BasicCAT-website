@@ -41,6 +41,7 @@ permalink: /zh/download/
 * 云译（只需设置url参数，详见[官方说明](https://cloudtranslation.com/static/api_zh-cn.html)）
 * 亚马逊 (需要单独下载: [链接](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 * Fiskmo（离线机器引擎，[说明](/zh/offline-machine-translation)）
+* 网页机器翻译（从网页抽取机器翻译，不需要API，[详细介绍](https://www.basiccat.org/zh/new-plugin-machine-translation-via-web/)）
 
 过滤器：
 

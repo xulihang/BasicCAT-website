@@ -41,6 +41,7 @@ Machine Translation:
 * Cloudtranslation (only url param need to setup. Visit its [homepage](https://cloudtranslation.com/static/api_en.html) to learn more)
 * Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 * Fiskmo (offline machine translation，[introduction](/offline-machine-translation))
+* Web (extract translation from online webpages, api-free. [Details](https://www.basiccat.org/new-plugin-machine-translation-via-web/))
 
 
 Filter:
