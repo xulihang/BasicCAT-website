@@ -25,7 +25,7 @@ Usage:
 3. If you want to change languages, you need to manually edit the language codes in the params text area.
 4. The default MT service is Google Translate. You can change it to other services by editing the template url and params. 
 
-The URL template uses `sourceLang`, `targetLang` and `text` as placeholders.
+The URL template uses `{sourceLang}`, `{targetLang}` and `{text}` as placeholders.
 
 The params follows this format:
 

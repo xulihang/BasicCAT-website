@@ -1,7 +1,7 @@
 ---
 date: 2020-11-03 09:47:17+08:00
 layout: post
-title: 新插件：网页版机器翻译
+title: "新插件：网页版机器翻译"
 categories: releasenote
 tags:
 ---
@@ -25,7 +25,7 @@ tags:
 3. 如果要更改语言，需要在参数编辑区域里手动编辑语言代码。
 4. 默认的机器翻译是谷歌。可以通过编辑URL模板和参数使用其他机器翻译。
 
-URL模板使用`sourceLang`，`targetLang`和`text`作为占位符。
+URL模板使用`{sourceLang}`，`{targetLang}`和`{text}`作为占位符。
 
 参数遵循以下格式:
 
