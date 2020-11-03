@@ -1,5 +1,5 @@
 ---
-date: 2020-11-03 09:47:17+08:00
+date: 2020-11-02 09:47:17+08:00
 layout: post
 title: "New Plugin: Machine Translation via Web"
 categories: releasenote

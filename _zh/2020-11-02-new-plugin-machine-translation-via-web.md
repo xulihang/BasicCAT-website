@@ -1,5 +1,5 @@
 ---
-date: 2020-11-03 09:47:17+08:00
+date: 2020-11-02 09:47:17+08:00
 layout: post
 title: "新插件：网页版机器翻译"
 categories: releasenote
