@@ -36,6 +36,8 @@ Machine Translation:
 * Sogou-DeepIntelligence
 * Niutrans
 * IBM Watson
+* Colorful Clouds
+* Naver Papago
 * Cloudtranslation (only url param need to setup. Visit its [homepage](https://cloudtranslation.com/static/api_en.html) to learn more)
 * Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
 * Fiskmo (offline machine translation，[introduction](/offline-machine-translation))
