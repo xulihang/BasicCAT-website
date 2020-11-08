@@ -60,7 +60,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 软件支持
 
-见[支持][](/zh/support/)。
+见[支持](/zh/support/)。
 
 ## 版本发布记录
 
