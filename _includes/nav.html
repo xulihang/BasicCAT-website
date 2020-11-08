@@ -8,6 +8,7 @@
    {% assign document=site.data.zh.text.document %}
    {% assign download=site.data.zh.text.download %}
    {% assign donation=site.data.zh.text.donation %}
+   {% assign support=site.data.zh.text.support %}
    {% assign homelink='/zh/' %}
   {% else %}
    {% assign home=site.data.text.home %}
@@ -19,6 +20,7 @@
    {% assign document=site.data.text.document %}
    {% assign download=site.data.text.download %}
    {% assign donation=site.data.text.donation %}
+   {% assign support=site.data.text.support %}
    {% assign homelink='/' %}
   {% endif %}
 
@@ -30,6 +32,7 @@
 <a href="{{ homelink | append: 'releasenote' | prepend: site.baseurl | prepend: site.url }}">{{releasenote}}</a> /
 <a href="{{ homelink | append: 'blog' | prepend: site.baseurl | prepend: site.url }}">{{blog}}</a> /
 <a href="{{ homelink | append: 'imagetrans' | prepend: site.baseurl | prepend: site.url }}">ImageTrans</a> /
+<a href="{{ homelink | append: 'support' | prepend: site.baseurl | prepend: site.url }}">{{support}}</a> /
 <a href="{{ homelink | append: 'donation' | prepend: site.baseurl | prepend: site.url }}">{{donation}}</a> /
 <a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
 </p>
