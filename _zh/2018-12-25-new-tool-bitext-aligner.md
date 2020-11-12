@@ -10,21 +10,43 @@ tags:
 
 关于对齐原理的介绍：[平行文本对齐](http://blog.xulihang.me/parallel-text-alignment/)
 
-具体用途：
+### 具体用途
 
 1. 构建句对齐平行语料
 2. 从翻译好的文件导回文本到CAT软件中
 3. 从分离的源文件和目标文件建立双语对照文件
 
-视频演示：	
+### 视频演示
 
 <iframe src="//player.bilibili.com/player.html?aid=754731761&bvid=BV12k4y1k7QC&cid=239243954&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 
-运行所需环境：Java 8，Python 3 （Bleualign功能需要）
+### 推荐的对齐操作步骤
+
+导入文本 -> 用LF Aligner进行段落对齐后手动修正 -> 将段落切分为句子 -> 用LF Aligner或者bleualign自动对齐句子后手动修正
+
+注意：
+
+1. 不同格式的文件转换为纯文本可以使用Apache Tika或者BasicCAT（基于Okapi Tikal）。
+2. 句子分割规则会对结果有较大的影响，请确保你使用了合适的句子分割规则。
+
+
+### 运行所需环境
+
+Java 8，Python 3 （Bleualign功能需要），LF Aligner
 
 Windows版运行环境下载（解压到Aligner的根目录）：[jre8u192.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2Fjre&parentPath=%2F)，[Python3.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2FAligner)
 
-版本记录：
+### 版本记录
+
+* v1.5.5
+
+    更新：
+    
+	* 集成[LF Aligner](https://sourceforge.net/projects/aligner/)
+	* 删除重复片段操作同时检查原文和译文
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.5/Aligner.zip)
+
 
 * v1.5.4
 
