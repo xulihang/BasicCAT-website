@@ -14,15 +14,18 @@ It is simple to use, just like BasicCAT. Use Enter to split segments and Delete 
 
 It first splits the text into paragraphs and users have to align in paragraph level first. Then, paragraphs can be broken into sentences. If the numbers of sentences of the source text and the target text differ, empty textarea will be created as a placeholder.
 
+In addition, automatic alignment tools [LF Aligner](https://sourceforge.net/projects/aligner/) and [Bleualign](https://github.com/rsennrich/Bleualign/) are integrated.
+
 More about text alignment: [Parallel Text Alignment](http://blog.xulihang.me/parallel-text-alignment/)
 
-### Use Cases
+
+### Use cases
 
 1. Build paralel corpus
 2. Reimport sentence-level translation to CAT tools from translated files.
 3. Create bilingual files from separate source files and target files.
 
-### Getting Started
+### Getting started
 
 <iframe src="//player.bilibili.com/player.html?aid=754731761&bvid=BV12k4y1k7QC&cid=239243954&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 
@@ -35,7 +38,7 @@ Note:
 1. Text of files of different formats can be extracted using Apache Tika or BasicCAT (based on Okapi Tikal)
 2. Segmentation rules can influence the results significantly. Make sure you have the right rules.
 
-### Running Environment
+### Running environment
 
 Java 8, Python 3 (needed by bleualign), LF Aligner
 
