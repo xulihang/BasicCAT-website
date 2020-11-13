@@ -44,7 +44,16 @@ Java 8, Python 3 (needed by bleualign), LF Aligner
 
 Environment Download For Windows (unzip to Aligner's root): [jre8u192.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2Fjre&parentPath=%2F), [Python3.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2FAligner)
 
+Crossplatform LF Aligner (unzip to Aligner's root): [LFAligner.zip](https://github.com/xulihang/Aligner/releases/download/v1.5.6/LFAligner.zip)
+
 ### Releases
+
+* v1.5.6
+
+    Changes: Add support of Linux and macOS for LF Aligner
+
+	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.6/Aligner.zip)
+
 
 * v1.5.5
 

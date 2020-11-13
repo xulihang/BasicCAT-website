@@ -38,7 +38,15 @@ Java 8，Python 3 （Bleualign功能需要），LF Aligner
 
 Windows版运行环境下载（解压到Aligner的根目录）：[jre8u192.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2Fjre&parentPath=%2F)，[Python3.zip](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ#list/path=%2FBasicCAT%2FAligner)
 
+跨平台的LF Aligner（解压到Aligner的根目录）：[LFAligner.zip](https://github.com/xulihang/Aligner/releases/download/v1.5.6/LFAligner.zip)
+
 ### 版本记录
+
+* v1.5.6
+
+    更新：支持在Linux和macOS上运行LF Aligner
+
+	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.6/Aligner.zip)
 
 * v1.5.5
 
