@@ -12,6 +12,8 @@ permalink: /zh/download/
 * macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.9.5_beta/BasicCAT_mac.dmg)
 * Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.9.5_beta/BasicCAT-crossplatforms.zip)
 
+可选镜像（国内下载速度更快）：[Releases](https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT/releases/)
+
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
 
