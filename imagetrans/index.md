@@ -100,7 +100,7 @@ See [support](/support/).
 ### v1.1.3
 
 * New plugin: OCR plugin. Code is open source: [github](https://github.com/xulihang/ImageTrans_plugins). PaddleOCR is supported.
-* New ocr engine: ABBYY (use ABBYY FineReader's command line interface, windows only)
+* New ocr engine: ABBYY (use ABBYY FineReader's [command line interface](https://stackoverflow.com/questions/16385443/abbyy-finereader-exe-looking-for-cmd-commands-to-use-in-other-programms), windows only)
 * New tool: Screen Reader. It can be used as a screenshot tool and screen captures can get OCRed immediately. Captures can also be appended to ImageTrans's projects.
 * A Toolbar is added to provide more operations like text box splitting, merging and selecting.
 * MouseCursors are set correctly for different scenarios.
