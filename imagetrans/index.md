@@ -63,6 +63,14 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.1.9
+
+* Update OpenCV to 4.5.0
+* Support getting text area confidence in offline mode and show progress
+* New OCR plugin: WinRT OCR. It uses the built-in OCR API of Windows Runtime on Windows 10. It requires installation of relevant languages on the system
+* Some machine translaiton plugins of BasicCAT are packaged
+* UI improvements
+
 ### v1.1.8
 
 * Generate mask and text-removed images accroding to order and show progress
