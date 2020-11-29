@@ -16,6 +16,7 @@ permalink: /zh/download/
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
+历史版本：[Releases](https://github.com/xulihang/BasicCAT/releases/)
 
 ### 翻译记忆与术语共享用服务器程序
 

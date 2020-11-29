@@ -13,6 +13,7 @@ Please choose your download based on platform.
 
 Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
+History releases: [Releases](https://github.com/xulihang/BasicCAT/releases/)
 
 ### TM and Term sharing Server
 
