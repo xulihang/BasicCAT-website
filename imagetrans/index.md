@@ -49,6 +49,8 @@ Text Searching Page: <http://comics.xulihang.me/search.html>
 2. Complete the payment with Paypal or Alipay.
 3. You will get a download link and an email.
 
+Or self purchase on FastSpring: [link](https://basiccat.onfastspring.com/).
+
 Pricing:
 
 * ImageTrans for personal use: $10
