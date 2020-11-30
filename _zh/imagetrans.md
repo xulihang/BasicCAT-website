@@ -48,7 +48,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 1. 发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)申请购买。
 2. 使用支付宝或者PayPal完成支付。
-3. 得到下载链接和邮件
+3. 得到下载链接和邮件。
 
 定价：
 
