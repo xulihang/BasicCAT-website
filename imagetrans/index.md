@@ -66,6 +66,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.1.10
+
+* Add machine translation for screen reader
+* Remove some third-party libraries
+
 ### v1.1.9
 
 * Update OpenCV to 4.5.0
