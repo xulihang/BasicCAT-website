@@ -67,6 +67,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.1.11
+
+* 新的OCR插件：[easyOCR](https://www.jaided.ai/easyocr)，腾讯文字识别
+* OCR语言列表仅显示所选引擎支持的语言
+* 拓展区域时将原区域保存为目标文本区域
+* 修正TabPane的本地化方法
+
 ### v1.1.10
 
 * 屏幕阅读器添加机器翻译

@@ -66,6 +66,13 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.1.11
+
+* New OCR plugin: [easyOCR](https://www.jaided.ai/easyocr), tencent
+* OCR languages list only shows languages OCR engines support
+* Save the geometry to target geometry before expanding
+* Fix the localization of TabPane
+
 ### v1.1.10
 
 * Add machine translation for screen reader
