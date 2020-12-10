@@ -66,6 +66,19 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.0
+
+* If right2left, append text of the latter one first
+* Add mask generator and inpaint plugins support. The first plugin of this kind is [Sickzil-Machine](https://github.com/xulihang/SickZil-Machine)
+* Add Tesseract's text lines detection
+* Add operations like single-image pretranslation and one-click translation (see the imageviewer's contextmenu)
+* Replace scene text detection with OCR for Batch Translation (or one-click translation)
+* Add mininum font size setting
+* Add automatic textarea resize option
+* Use checkbox instead of button to view translated pictures
+* Search and Replace supports replacing source text
+* Other minor improvements
+
 ### v1.1.11
 
 * New OCR plugin: [easyOCR](https://www.jaided.ai/easyocr), tencent
