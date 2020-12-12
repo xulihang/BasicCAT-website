@@ -66,6 +66,13 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.1
+
+* Multiple-box dragging 
+* Multiple-box alignment
+* Add background color, stroke and rotation to global font style
+* Add paste image context menu item
+
 ### v1.2.0
 
 * If right2left, append text of the latter one first
