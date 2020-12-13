@@ -66,6 +66,10 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.2
+
+Add Silent Translator to support bulk transaltion, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
+
 ### v1.2.1
 
 * Multiple-box dragging 
@@ -175,7 +179,7 @@ Released.
 
 ## Relevant tools
 
-[WebP-Converter](https://github.com/xulihang/WebP-Converter). Convert JPG/BMP/PNG to WebP and vice versa.
-
+* [WebP-Converter](https://github.com/xulihang/WebP-Converter). Convert JPG/BMP/PNG to WebP and vice versa.
+* [WebImageHelper](https://github.com/xulihang/WebImageHelper). Download all the images from websites or download the image under the mouse cursor based on screen positions. This can be used to translate images in web. Images can be replaced with their target version.
 
 {% include comments.html %}
