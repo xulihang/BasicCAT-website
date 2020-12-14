@@ -24,12 +24,6 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 <iframe src="//player.bilibili.com/player.html?aid=89725886&cid=153246062&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-### 自动翻译服务器
-
-<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
-您的浏览器不支持 video 标签。
-</video>
-
 ### 文字区域检测
 
 <iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
@@ -41,6 +35,12 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 ### 语料检索与拟声词检索
 
 <iframe src="//player.bilibili.com/player.html?aid=90795736&cid=155049012&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### 自动翻译服务器
+
+<video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+您的浏览器不支持 video 标签。
+</video>
 	
 ## 漫画翻译结果示例
 

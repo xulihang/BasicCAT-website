@@ -23,12 +23,6 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DQarSxT9OPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Automatic Translation Server
-
-<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
-您的浏览器不支持 video 标签。
-</video>
-
 ### Text Areas Detection
 
 <iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
@@ -40,6 +34,12 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 ### Corpus and Sound Effects Words Search
 
 <iframe src="//player.bilibili.com/player.html?aid=90795736&cid=155049012&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
+
+### Automatic Translation Server
+
+<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+您的浏览器不支持 video 标签。
+</video>
 	
 ## Examples of Translated Comics
 
