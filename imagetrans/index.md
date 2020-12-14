@@ -40,6 +40,10 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 <video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
 您的浏览器不支持 video 标签。
 </video>
+
+For now, the online version does not support running multiple instances. The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
+
+[Link to the server](http://www.xulihang.me:51045/upload.html)
 	
 ## Examples of Translated Comics
 

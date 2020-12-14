@@ -41,6 +41,10 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 <video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
 您的浏览器不支持 video 标签。
 </video>
+
+目前在线版不允许多个任务同时进行，机器翻译和OCR的语言参数需要手动设置，默认方向为中到英。
+
+[服务器链接](http://www.xulihang.me:51045/upload.html)
 	
 ## 漫画翻译结果示例
 
