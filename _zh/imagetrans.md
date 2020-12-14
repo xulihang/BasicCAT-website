@@ -18,11 +18,17 @@ ImageTrans也是一款计算机辅助翻译（CAT）工具，支持语料检索�
 
 ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
-## 视频教程
+## 视频教程与演示
 
 ### 入门
 
 <iframe src="//player.bilibili.com/player.html?aid=89725886&cid=153246062&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### 自动翻译服务器
+
+<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+您的浏览器不支持 video 标签。
+</video>
 
 ### 文字区域检测
 

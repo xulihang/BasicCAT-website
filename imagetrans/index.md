@@ -17,11 +17,17 @@ Documentation: <https://imagetrans.readthedocs.io/>
 
 ImageTrans is the result of the thesis for my master's degree: [Design and Implementation of a Computer-Aided Comics Translation Tool](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool).
 
-## Video Tutorials
+## Video Tutorials and Demos
 
 ### Getting Started
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DQarSxT9OPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Automatic Translation Server
+
+<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+您的浏览器不支持 video 标签。
+</video>
 
 ### Text Areas Detection
 
