@@ -43,6 +43,8 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 For now, the online version does not support running multiple instances. The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
 
+Please note that the automatic translation result may not be satisfying which needs fine-tuning by human. Fine-tuning support is one of the characteristics of ImageTrans.
+
 [Link to the server](http://www.xulihang.me:51045/upload.html)
 	
 ## Examples of Translated Comics
@@ -78,7 +80,10 @@ See [support](/support/).
 
 ### v1.2.2
 
-Add Silent Translator to support bulk transaltion, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
+* Add Silent Translator to support bulk transaltion, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
+* New OCR plugin: sogou deep intelligence ocr
+* Save recent projects path
+* Ask if merge boxes if OCR is chosen for Batch translation
 
 ### v1.2.1
 

@@ -44,6 +44,8 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 目前在线版不允许多个任务同时进行，机器翻译和OCR的语言参数需要手动设置，默认方向为中到英。
 
+注意自动翻译的效果并不一定让人满意，需要进行人工精调，支持精调是ImageTrans的一大特点。
+
 [服务器链接](http://www.xulihang.me:51045/upload.html)
 	
 ## 漫画翻译结果示例
@@ -79,7 +81,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ### v1.2.2
 
-添加静默翻译器，可以批量翻译图片，支持从命令行调用或者以[服务器](https://github.com/xulihang/ImageTrans_Server)形式运行
+* 添加静默翻译器，可以批量翻译图片，支持从命令行调用或者以[服务器](https://github.com/xulihang/ImageTrans_Server)形式运行
+* 新的OCR插件：搜狗深智OCR
+* 保存最近打开的项目路径
+* 一键翻译功能如果使用OCR，会提示是否进行区域合并
 
 
 ### v1.2.1
