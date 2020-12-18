@@ -78,6 +78,14 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.3
+
+* Add Translate after OCR option
+* When viewing transated version in non-precise text-removal mode, the text box will be transparent to to reveal the source text
+* Batch Translation can call balloon detection and scene text detection
+* Silent Translator supports font setting
+* Add a context menu item to download images from links and add them to the project
+
 ### v1.2.2
 
 * Add Silent Translator to support bulk transaltion, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
