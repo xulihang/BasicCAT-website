@@ -89,7 +89,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ### v1.2.4
 
-添加对ImageTrans Chrome扩展程序（插件）的支持。访问[此处](https://github.com/xulihang/ImageTrans_chrome_extension)了解使用说明。
+* 添加对ImageTrans Chrome扩展程序（插件）的支持。访问[此处](https://github.com/xulihang/ImageTrans_chrome_extension)了解使用说明。
+* 导入图片时不导入文字掩模、去文字图和导出的成品图
+* 修复v1.2.2的最近项目记录功能导致无法正常新建项目的问题
+* 其它优化
 
 ### v1.2.3
 

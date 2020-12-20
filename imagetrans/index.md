@@ -88,7 +88,10 @@ See [support](/support/).
 
 ### v1.2.4
 
-Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instruction.
+* Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instruction.
+* Mask, text-removed and exported images will not no longer be imported
+* Fix the incorrect behavior of creating new projects which was caused by the recent projects feature introduced in v1.2.2
+* Other improvements
 
 ### v1.2.3
 
