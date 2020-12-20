@@ -36,6 +36,14 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 <iframe src="//player.bilibili.com/player.html?aid=90795736&cid=155049012&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+### Chrome图片翻译插件
+
+<video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans_chrome_extension.mp4" controls="controls">
+您的浏览器不支持 video 标签。
+</video>
+
+支持利用[Chrome插件](https://github.com/xulihang/ImageTrans_chrome_extension)直接翻译网页中的图片。
+
 ### 自动翻译服务器
 
 <video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">

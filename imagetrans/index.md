@@ -35,10 +35,18 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 <iframe src="//player.bilibili.com/player.html?aid=90795736&cid=155049012&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
 
+### Chrome Image Translator Extension
+
+<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans_chrome_extension.mp4" controls="controls">
+Your browser does not support video element.
+</video>
+
+Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chrome_extension), images in webpage can be translated directly.
+
 ### Automatic Translation Server
 
 <video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
-您的浏览器不支持 video 标签。
+Your browser does not support video element.
 </video>
 
 For now, the online version does not support running multiple instances. The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
