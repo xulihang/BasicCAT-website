@@ -86,6 +86,10 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.4
+
+Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instruction.
+
 ### v1.2.3
 
 * Add Translate after OCR option

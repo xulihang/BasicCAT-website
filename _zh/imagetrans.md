@@ -87,6 +87,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.2.4
+
+添加对ImageTrans Chrome扩展程序（插件）的支持。访问[此处](https://github.com/xulihang/ImageTrans_chrome_extension)了解使用说明。
+
 ### v1.2.3
 
 * 添加OCR后翻译的选项
