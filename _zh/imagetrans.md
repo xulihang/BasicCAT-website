@@ -87,6 +87,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.2.5
+
+* 修复一个译文文字区域位置被原文区域位置覆盖的问题
+* 掩膜编辑器支持画笔模式
+* 字体设置支持设置字母大写
+
+
 ### v1.2.4
 
 * 添加对ImageTrans Chrome扩展程序（插件）的支持。访问[此处](https://github.com/xulihang/ImageTrans_chrome_extension)了解使用说明。

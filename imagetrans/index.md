@@ -86,6 +86,12 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.5
+
+* Fix a target geometry setting problem
+* Mask Editor can use cursor to draw circle or clear circle
+* Add Capital Letter font setting
+
 ### v1.2.4
 
 * Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instruction.
