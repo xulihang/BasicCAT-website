@@ -91,6 +91,9 @@ See [support](/support/).
 * Fix a target geometry setting problem
 * Mask Editor can use cursor to draw circle or clear circle
 * Add Capital Letter font setting
+* Add minimum width/height overlapped percent setting for text localization
+* Fix a overlapped box not added problem
+* The Photoshop script supports styles like bold, italic, capitalization and rotation.
 
 ### v1.2.4
 
