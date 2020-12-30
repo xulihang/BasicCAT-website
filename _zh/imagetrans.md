@@ -85,6 +85,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 见[支持](/zh/support/)。
 
+## 相关帖子
+
+[设计一个日语漫画辅助阅读器](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
+
+
 ## 版本发布记录
 
 ### v1.2.6

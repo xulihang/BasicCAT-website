@@ -84,6 +84,10 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 See [support](/support/).
 
+## Relevant Posts
+
+[Design a good raw Japanese manga reader](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
+
 ## Releases Notes
 
 ### v1.2.6
