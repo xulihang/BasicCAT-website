@@ -80,6 +80,8 @@ Pricing:
 * ImageTrans for personal use: $10
 * ImageTrans for commercial purpose: $200
 
+Free update within half a year.
+
 Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
 
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
