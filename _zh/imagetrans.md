@@ -98,6 +98,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.2.7
+
+* 支持同时运行多个tesseract实例以加快OCR速度
+* 保留验证记录7天
+
 ### v1.2.6
 
 * 从链接下载的WebP格式图片会被转换为JPG格式（使用OpenCV） 

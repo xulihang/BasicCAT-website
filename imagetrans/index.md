@@ -98,6 +98,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.7
+
+* Supports running multiple tesseract instances to increase OCR speed
+* Save verification for 7 days
+
 ### v1.2.6
 
 * Convert WebP format images to JPG ones for images downloaded with links (using OpenCV) 
