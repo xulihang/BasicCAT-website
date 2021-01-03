@@ -43,9 +43,7 @@ The above operations can be done in a fully automated way: <https://www.youtube.
 
 ### Chrome Image Translator Extension
 
-<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans_chrome_extension.mp4" controls="controls">
-Your browser does not support video element.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R7pv02jwL_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chrome_extension), images in webpage can be translated directly.
 
@@ -102,6 +100,9 @@ See [support](/support/).
 
 * Supports running multiple tesseract instances to increase OCR speed
 * Save verification for 7 days
+* Sogou OCR supports right to left text order
+* Add Baidu OCR accurate
+* Fix Find and Replace problems caused by incorrect box jumping behavior and UI localization
 
 ### v1.2.6
 

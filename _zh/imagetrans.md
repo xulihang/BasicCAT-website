@@ -28,6 +28,8 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 <iframe src="//player.bilibili.com/player.html?aid=373454146&bvid=BV1Uo4y1Z7Wo&cid=273691942&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+除了手动分步翻译，亦能支持一键自动翻译，[演示地址](https://www.bilibili.com/video/BV1Uo4y1Z7Wo?p=2)。
+
 ### 文字区域检测
 
 <iframe src="//player.bilibili.com/player.html?aid=89974961&cid=153667812&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>	
@@ -42,9 +44,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### Chrome图片翻译插件
 
-<video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans_chrome_extension.mp4" controls="controls">
-您的浏览器不支持 video 标签。
-</video>
+<iframe src="//player.bilibili.com/player.html?aid=458404487&bvid=BV1E5411p73K&cid=276586632&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 支持利用[Chrome插件](https://github.com/xulihang/ImageTrans_chrome_extension)直接翻译网页中的图片。
 
@@ -102,6 +102,9 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 * 支持同时运行多个tesseract实例以加快OCR速度
 * 保留验证记录7天
+* 搜狗OCR支持从右至左阅读的顺序
+* 添加精确版百度OCR
+* 修复搜索与替换存在的问题（错误的片段跳转行为和本地化导致的失败替换）
 
 ### v1.2.6
 
