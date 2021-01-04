@@ -27,7 +27,7 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uq8grmA22W8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The above operations can be done in a fully automated way: <https://www.youtube.com/watch?v=gidM4F7pBgY>. But the translation quality can only be guaranteed with human intervention. 
+The above operations can be done in a fully automated way: <https://www.youtube.com/watch?v=QVTjmW4B-LQ>. But the translation quality can only be guaranteed with human intervention. 
 
 ### Text Areas Detection
 
