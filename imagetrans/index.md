@@ -96,6 +96,13 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.8
+
+* Add Undo Manager
+* Use TextFlow as the default Text Renderer. Text will not no longer be truncated
+* Text size and layout will be the same after percent switching
+* Other improvements
+
 ### v1.2.7
 
 * Supports running multiple tesseract instances to increase OCR speed
