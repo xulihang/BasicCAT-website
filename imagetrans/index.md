@@ -101,7 +101,7 @@ See [support](/support/).
 * Flip boxes before sorting them if the reading order is right to left
 * Add inpaint radius setting in TextRemover
 * Add Theme. Currently, there are dark and green themes available.
-* Use my personal keys by default for machine translation services like Baidu, Niutrans and Tencent and OCR services like OCRSPACE, Azure, Baidu and Tencent.
+* Use my personal keys by default for machine translation services like Baidu, Niutrans and Tencent and OCR services like OCRSPACE, Azure and Baidu.
 
 ### v1.2.8
 
