@@ -96,6 +96,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.10
+
+* New OCR plugin: ABBYY Cloud
+* Support spellchecking of OCR results using LanguageTool 
+
 ### v1.2.9
 
 * Flip boxes before sorting them if the reading order is right to left
