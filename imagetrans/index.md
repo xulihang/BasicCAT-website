@@ -25,7 +25,7 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 ### Translation of Japanese Manga
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uq8grmA22W8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S_6FF-5zTns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The above operations can be done in a fully automated way: <https://www.youtube.com/watch?v=QVTjmW4B-LQ>. But the translation quality can only be guaranteed with human intervention. 
 
