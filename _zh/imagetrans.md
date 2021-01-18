@@ -26,9 +26,9 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 处理日语漫画
 
-<iframe src="//player.bilibili.com/player.html?aid=373454146&bvid=BV1Uo4y1Z7Wo&cid=273691942&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=373454146&bvid=BV1Uo4y1Z7Wo&cid=283625204&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-除了手动分步翻译，亦能支持一键自动翻译，[演示地址](https://www.bilibili.com/video/BV1Uo4y1Z7Wo?p=2)。
+除了手动分步翻译，亦能支持一键自动翻译，[演示地址](https://www.bilibili.com/video/BV1Uo4y1Z7Wo?p=4)。
 
 ### 文字区域检测
 
