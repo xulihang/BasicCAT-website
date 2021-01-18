@@ -96,6 +96,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.2.11
+
+* Fix a target geometry not correctly saved problem
+* Fix a file path problem of Photoshop scripts
+
 ### v1.2.10
 
 * New OCR plugin: ABBYY Cloud

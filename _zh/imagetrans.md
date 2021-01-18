@@ -98,6 +98,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.2.11
+
+* 修复译文区域位置没有正确保存的问题
+* 修复Photoshop脚本文件保存路径的问题
+
 ### v1.2.10
 
 * 新的OCR插件：ABBYY Cloud
