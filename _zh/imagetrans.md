@@ -50,9 +50,11 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 自动翻译服务器
 
-<video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+<video src="https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server_fastmode.mp4" controls="controls">
 您的浏览器不支持 video 标签。
 </video>
+
+服务器允许用户通过网页在线调用ImageTrans，并能根据不同的图片调整处理参数。上述视频为快速翻译模式，翻译一张图所需时间不到10秒。
 
 目前在线版不允许多个任务同时进行，机器翻译和OCR的语言参数需要手动设置，默认方向为中到英。
 

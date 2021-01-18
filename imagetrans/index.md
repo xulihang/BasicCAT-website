@@ -49,9 +49,11 @@ Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chr
 
 ### Automatic Translation Server
 
-<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server.mp4" controls="controls">
+<video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/imagetrans_server_fastmode.mp4" controls="controls">
 Your browser does not support video element.
 </video>
+
+The server allows users using ImageTrans through the web. Params can be adjusted to adapt to different images. The video above uses a fast mode, which normally takes less than 10 seconds to translate an image.
 
 For now, the online version does not support running multiple instances. The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
 
