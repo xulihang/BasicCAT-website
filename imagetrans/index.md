@@ -100,6 +100,7 @@ See [support](/support/).
 
 * Fix a target geometry not correctly saved problem
 * Fix a file path problem of Photoshop scripts
+* MaskEditor can generate textmask using selected color. Mask can now be set to translucent.
 
 ### v1.2.10
 
