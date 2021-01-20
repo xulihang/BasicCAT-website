@@ -118,7 +118,7 @@ SickZil-Machine方法：
 
 ![](/album/imagetrans-text-removal/complex_background_mask_text_removed.jpg)
 
-这时可以手动修改掩膜并选择和合适的修复方法。
+这时可以手动修改掩膜并选择合适的修复方法。
 
 可以先试着用带描边的译文进行遮盖，重点处理没有被较好地遮盖的地方。
 
