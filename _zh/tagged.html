@@ -33,7 +33,7 @@ permalink: /zh/tagged/
 		{% for tag in tags %}
 		<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
 		<ul class="post-list">
-			{% for post in site.posts %}
+			{% for post in site.zh %}
 	    {% if post.tags contains tag %}
 			<li>
 				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
