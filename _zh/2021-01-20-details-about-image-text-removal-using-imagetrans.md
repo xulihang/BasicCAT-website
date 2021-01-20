@@ -50,52 +50,52 @@ ImageTrans默认采用二值化和轮廓检测生成文字掩膜法，以及Tele
 
 原图：
 
-![](/ablum/imagetrans-text-removal/gradual_color_background.jpg)
+![](/album/imagetrans-text-removal/gradual_color_background.jpg)
 
 二值化方法：
 
-![](/ablum/imagetrans-text-removal/gradual_color_background_mask_binary.png)
+![](/album/imagetrans-text-removal/gradual_color_background_mask_binary.png)
 
 SickZil-Machine方法：
 
-![](/ablum/imagetrans-text-removal/gradual_color_background_mask_sickzil_machine.png)
+![](/album/imagetrans-text-removal/gradual_color_background_mask_sickzil_machine.png)
 
 下面是使用默认的图像修复法，基于Sickzil-Machine生成的掩膜处理该张图片的结果。
 
-![](/ablum/imagetrans-text-removal/gradual_color_background-text-removed_telea.jpg)
+![](/album/imagetrans-text-removal/gradual_color_background-text-removed_telea.jpg)
 
 使用Sickzil-Machine还原背景，也不是很理想。
 
-![](/ablum/imagetrans-text-removal/gradual_color_background-text-removed_sickzil.jpg)
+![](/album/imagetrans-text-removal/gradual_color_background-text-removed_sickzil.jpg)
 
 改换为PatchMatch，可以发现该方法对于背景还原较好，适用于背景是渐变色或者由网点填充的图像。但该方法处理会耗费较长时间。
 
-![](/ablum/imagetrans-text-removal/gradual_color_background-text-removed_patchmatch.jpg)
+![](/album/imagetrans-text-removal/gradual_color_background-text-removed_patchmatch.jpg)
 
 
 ### 一些特别情况
 
 #### 带阴影或者描边的文字
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg)
 
 默认生成的结果：
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg-mask_dilation_2.png)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg-mask_dilation_2.png)
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg-text-removed.jpg)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg-text-removed.jpg)
 
 这时需要将掩膜膨胀大小设大一点，或者手动编辑掩膜，让掩膜完全覆盖文字。
 
 掩膜膨胀大小设置为10，并改用PatchMatch方法。
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg-mask_dilation_10.png)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg-mask_dilation_10.png)
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg-text-removed_inpaint.jpg)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg-text-removed_inpaint.jpg)
 
 #### 文字和边缘相连的手写文本
 
-![](/ablum/imagetrans-text-removal/big_font_with_background.jpg)
+![](/album/imagetrans-text-removal/big_font_with_background.jpg)
 
 默认的二值化文字掩膜生成法会去除外层轮廓，所以文字与边缘相连的话会无法生成。换用Sickzil-Machine也无法正确生成，应该是没有类似的训练数据支撑。
 
@@ -107,16 +107,16 @@ SickZil-Machine方法：
 
 修改后的掩膜和Sickzil-Machine修复的结果：
 
-![](/ablum/imagetrans-text-removal/handwritten_text_mask_and_text_removed.jpg)
+![](/album/imagetrans-text-removal/handwritten_text_mask_and_text_removed.jpg)
 
 
 #### 背景复杂的图像
 
-![](/ablum/imagetrans-text-removal/complex_background.jpg)
+![](/album/imagetrans-text-removal/complex_background.jpg)
 
 图像上的文字，通常还带有描边。下面是默认的掩膜和去除结果。
 
-![](/ablum/imagetrans-text-removal/complex_background_mask_text_removed.jpg)
+![](/album/imagetrans-text-removal/complex_background_mask_text_removed.jpg)
 
 这时可以手动修改掩膜并选择和合适的修复方法。
 
@@ -124,11 +124,11 @@ SickZil-Machine方法：
 
 下面是掩膜和去除结果，这里采用Sickzil-Machine生成掩膜并还原背景。处理日漫时，Sickzil-Machine能较好地生成掩膜并还原线条：
 
-![](/ablum/imagetrans-text-removal/complex_background_mask_text_removed_edited.jpg)
+![](/album/imagetrans-text-removal/complex_background_mask_text_removed_edited.jpg)
 
 翻译好的图片：
 
-![](/ablum/imagetrans-text-removal/complex_background_translated.png)
+![](/album/imagetrans-text-removal/complex_background_translated.png)
 
 
 
