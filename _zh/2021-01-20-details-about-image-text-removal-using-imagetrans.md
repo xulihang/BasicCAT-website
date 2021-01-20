@@ -95,7 +95,7 @@ SickZil-Machine方法：
 
 #### 文字和边缘相连的手写文本
 
-![](/album/imagetrans-text-removal/big_font_with_background.jpg)
+![](/album/imagetrans-text-removal/handwritten_text.jpg)
 
 默认的二值化文字掩膜生成法会去除外层轮廓，所以文字与边缘相连的话会无法生成。换用Sickzil-Machine也无法正确生成，应该是没有类似的训练数据支撑。
 
