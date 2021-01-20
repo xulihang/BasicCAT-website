@@ -4,8 +4,6 @@ layout: page
 permalink: /zh/blog/
 ---
 
-### 开发笔记
-
 <ul class="post-list">
         {% assign posts=site.zh | where: "layout", "post" | where: "categories", "blog" | where: "tags", "note" %}
         {% for post in posts reversed %}
