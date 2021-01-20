@@ -33,7 +33,7 @@ permalink: /zh/tagged/
 		{% for tag in tags %}
 		<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
 		<ul class="post-list">
-		{% assign posts=site.zh | where: "layout", "post" | where: "categories", "releasenote" %}
+		{% assign posts=site.zh | where: "layout", "post" | where: "categories", "blog" %}
 		{% for post in posts reversed %}
 	    {% if post.tags contains tag %}
 			<li>
