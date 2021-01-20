@@ -122,7 +122,7 @@ SickZil-Machine方法：
 
 可以先试着用带描边的译文进行遮盖，重点处理没有被较好地遮盖的地方。
 
-下面是去除结果：
+下面是掩膜和去除结果，这里采用Sickzil-Machine生成掩膜并还原背景。处理日漫时，Sickzil-Machine能较好地生成掩膜并还原线条：
 
 ![](/ablum/imagetrans-text-removal/complex_background_mask_text_removed_edited.jpg)
 
