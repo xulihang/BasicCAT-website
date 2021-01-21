@@ -94,7 +94,8 @@ See [support](/support/).
 
 ## Relevant Posts
 
-[Design a good raw Japanese manga reader](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
+* [Blog posts on this site](https://www.basiccat.org/tagged/#imagetrans)
+* [Design a good raw Japanese manga reader](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
 
 ## Releases Notes
 
@@ -104,6 +105,7 @@ See [support](/support/).
 * Fix a file path problem of Photoshop scripts
 * MaskEditor can generate textmask using selected color. Mask can now be set to translucent.
 * Support batch machine translation with ColorfulClouds which will significant improve machine translation speed
+* It is now possible to set machine translation interval to avoid failed requests due to too many requests in a short period of time (QPS set by MT services) 
 
 ### v1.2.10
 

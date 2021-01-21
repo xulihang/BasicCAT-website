@@ -95,7 +95,8 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 相关帖子
 
-[设计一个日语漫画辅助阅读器](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
+* [本站博客](https://www.basiccat.org/zh/tagged/#imagetrans)
+* [设计一个日语漫画辅助阅读器](http://blog.xulihang.me/design-a-good-raw-Japanese-manga-reader/)
 
 
 ## 版本发布记录
@@ -106,6 +107,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * 修复Photoshop脚本文件保存路径的问题
 * 掩膜编辑器支持用指定颜色生成掩膜，并能半透明显示掩膜
 * 支持调用彩云小译同时请求多个句子的翻译，可以大大提高机器翻译速度
+* 机器翻译预翻译支持设置请求间隔以避免单位时间内请求次数过多导致无法获取翻译（机器翻译服务提供商通常会设置QPS）
 
 ### v1.2.10
 

@@ -12,3 +12,5 @@ permalink: /zh/blog/
         </li>
         {% endfor %}
 </ul>
+
+更新版的BasicCAT开发笔记请见我的[个人网站](https://blog.xulihang.me/tags/#CAT)。
