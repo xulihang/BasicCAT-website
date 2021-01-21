@@ -1,7 +1,7 @@
 ---
 date: 2021-01-20 14:53:50+08:00
 layout: post
-title: ImageTransÍ¼Æ¬ÎÄ×ÖÄ¨³ıÏê½â
+title: Details about Image Text Removal using Imagetrans
 categories: blog
 tags: imagetrans
 ---
