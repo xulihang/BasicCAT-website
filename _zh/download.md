@@ -6,11 +6,11 @@ permalink: /zh/download/
 
 请根据您的操作系统选择对应的安装包。
 
-### BasicCAT v1.9.8
+### BasicCAT v1.9.8 Update
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8/BasicCAT_mac.dmg)
-* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8/BasicCAT-crossplatforms.zip)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8_update/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8_update/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8_update/BasicCAT_mac.dmg)
+* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.9.8_update/BasicCAT-crossplatforms.zip)
 
 可选镜像（国内下载速度更快）：[Releases](https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT/releases/)
 
