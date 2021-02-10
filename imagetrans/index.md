@@ -99,6 +99,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.3.0 (2021/02/10)
+
+* Custom workflow. Batch operations can be customized
+* Suppports importing PDF. PDF files will be rendered to images. Text will be extracted if possible
+
 ### v1.2.11
 
 * Fix a target geometry not correctly saved problem
