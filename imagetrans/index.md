@@ -59,7 +59,7 @@ For now, the online version does not support running multiple instances. The lan
 
 Please note that the automatic translation result may not be satisfying which needs fine-tuning by human. Fine-tuning support is one of the characteristics of ImageTrans.
 
-[Link to the server](http://www.xulihang.me:51045/upload.html)
+[Link to the server](http://www.xulihang.me:51045/index.html)
 	
 ## Examples of Translated Comics
 

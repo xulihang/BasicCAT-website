@@ -60,7 +60,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 注意自动翻译的效果并不一定让人满意，需要进行人工精调，支持精调是ImageTrans的一大特点。
 
-[服务器链接](http://www.xulihang.me:51045/upload.html)
+[服务器链接](http://www.xulihang.me:51045/index.html)
 	
 ## 漫画翻译结果示例
 
