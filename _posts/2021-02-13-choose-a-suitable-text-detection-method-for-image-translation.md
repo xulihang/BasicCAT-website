@@ -45,7 +45,7 @@ ImageTrans provides four text detection methods: detection provided by OCR servi
 
    Generally speaking, text detection of OCR services is relatively accurate. It can detect inclined text and text on complex background. It can also give the text recognition result at the same time. At present, I think the best OCR is Sogou OCR. It gives a fine-grained result, which is convenient to correctly merge text lines into paragraphs later. The text recognition result is also very accurate.
 
-   ![](/album/text-detecion/sogou_xu.jpg)
+   ![](/album/text-detection/sogou_xu.jpg)
 
 
 2. Heuristic
@@ -84,7 +84,9 @@ ImageTrans provides four text detection methods: detection provided by OCR servi
 
    ![](/album/text-detection/slanted.jpg)
 
-   For images such as comics, further optimization can be done. For instance, if there is a contour separating text in different bubbles, connected components will not be merged.When the image has a unified text color and background color, the heuristic method can have a good result.
+   For images such as comics, further optimization can be done. For instance, if there is a contour separating text in different bubbles, connected components will not be merged. 
+   
+   When the image has a unified text color and background color, the heuristic method can have a good result.
 
    This method is an unsupervised method, which does not need training data. But it requires users to set suitable parameters according to different pictures.
 

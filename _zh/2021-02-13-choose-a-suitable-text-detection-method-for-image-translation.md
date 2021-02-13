@@ -45,7 +45,7 @@ ImageTrans提供了四种文字区域检测方法：OCR服务提供的检测、�
 
 	总的来说，OCR服务的文字检测功能是较为准确的，能检测倾斜的文本、复杂背景上的文本，并且能同时给出文字识别的结果。目前效果最好的OCR是搜狗OCR，它给出的结果粒度较细，便于后期合并出正确的段落，文字识别结果也很准确。
 
-	![](/album/text-detecion/sogou_xu.jpg)
+	![](/album/text-detection/sogou_xu.jpg)
 
 
 2. 启发式
