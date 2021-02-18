@@ -79,7 +79,7 @@ Or self purchase on FastSpring: [link](https://basiccat.onfastspring.com/).
 
 Pricing:
 
-* ImageTrans for personal use: $10.99
+* ImageTrans for personal use: $11
 * ImageTrans for commercial purpose: $200
 
 Free update within half a year.
