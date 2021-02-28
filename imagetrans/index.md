@@ -182,7 +182,7 @@ See [support](/support/).
 
 ### v1.2.2
 
-* Add Silent Translator to support bulk transaltion, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
+* Add Silent Translator to support bulk translation, which can be called through command line or run as a [server](https://github.com/xulihang/ImageTrans_Server)
 * New OCR plugin: sogou deep intelligence ocr
 * Save recent projects path
 * Ask if merge boxes if OCR is chosen for Batch translation
@@ -201,7 +201,7 @@ See [support](/support/).
 * Add Tesseract's text lines detection
 * Add operations like single-image pretranslation and one-click translation (see the imageviewer's contextmenu)
 * Replace scene text detection with OCR for Batch Translation (or one-click translation)
-* Add mininum font size setting
+* Add minimum font size setting
 * Add automatic textarea resize option
 * Use checkbox instead of button to view translated pictures
 * Search and Replace supports replacing source text
@@ -229,8 +229,8 @@ See [support](/support/).
 
 ### v1.1.8
 
-* Generate mask and text-removed images accroding to order and show progress
-* Inpainting is now asynchorous
+* Generate mask and text-removed images according to order and show progress
+* Inpainting is now asynchronous
 * Validate geometry before generating text mask
 * Fix a resized mask not matching with resized image problem
 * Add text area action menu to imagescrollpane
