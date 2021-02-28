@@ -99,6 +99,15 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.3.1 (2021/02/28)
+
+* New OCR plugin: Naver's Clova OCR.
+* Support merging and deleting areas with box selection
+* Add an option to auto OCR after box creation
+* Add shortcuts to manipulate text areas (move and OCR)
+* Offline balloon (bubble) detection which is based on OpenCV's Dnn. Models trained with [DarkNet](https://zhuanlan.zhihu.com/p/346021510) or [TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API) are supported
+* The text editor can display source text and target text in a vertical mode.
+
 ### v1.3.0 (2021/02/10)
 
 * Custom workflow. Batch operations can be customized

@@ -101,6 +101,16 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.3.1 (2021/02/28)
+
+* 新的OCR插件：Naver的Clova OCR。
+* 支持以框选模式快速合并或者删除区域
+* 添加框选后OCR的选项
+* 添加操作文字区域的快捷键（移动和OCR）
+* 离线气泡检测，基于OpenCV的Dnn模块，可以调用[DarkNet](https://zhuanlan.zhihu.com/p/346021510)或者[TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API)生成的模型
+* 文字编辑器支持上下显示原文和译文
+
+
 ### v1.3.0 (2021/02/10)
 
 * 添加自定义工作流功能，可以自己定义批处理流程
