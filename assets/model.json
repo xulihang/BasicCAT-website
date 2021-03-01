@@ -1,0 +1,9 @@
+{
+	"isDarkNet":true,
+	"swapRB":false,
+	"crop":false,
+	"mean":[0,0,0],
+	"scalefactor":"1/255",
+	"width":640,
+	"height":960
+}

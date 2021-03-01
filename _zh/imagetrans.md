@@ -107,7 +107,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * 支持以框选模式快速合并或者删除区域
 * 添加框选后OCR的选项
 * 添加操作文字区域的快捷键（移动和OCR）
-* 离线气泡检测，基于OpenCV的Dnn模块，可以调用[DarkNet](https://zhuanlan.zhihu.com/p/346021510)或者[TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API)生成的模型
+* 离线气泡检测，基于OpenCV的Dnn模块，可以调用[DarkNet](https://zhuanlan.zhihu.com/p/346021510)或者[TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API)生成的模型。需要在软件根目录放置模型文件、模型配置文件和model.json（[示例](/assets/model.json)）。
 * 文字编辑器支持上下显示原文和译文
 
 
