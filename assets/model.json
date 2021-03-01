@@ -1,9 +1,11 @@
 {
-	"isDarkNet":true,
-	"swapRB":false,
+	"isDarkNet":false,
+	"swapRB":true,
 	"crop":false,
-	"mean":[0,0,0],
-	"scalefactor":"1/255",
-	"width":640,
-	"height":960
+	"mean":[127.5,127.5,127.5],
+	"scalefactor":"1/127.5",
+	"width":320,
+	"height":320,
+	"model":"model.pb",
+	"modelcfg":"model.pbtxt"
 }
