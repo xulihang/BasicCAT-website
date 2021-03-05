@@ -105,7 +105,7 @@ See [support](/support/).
 * Support merging and deleting areas with box selection
 * Add an option to auto OCR after box creation
 * Add shortcuts to manipulate text areas (move and OCR)
-* Offline balloon (bubble) detection which is based on OpenCV's Dnn. Models trained with [DarkNet](https://zhuanlan.zhihu.com/p/346021510) or [TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API) are supported. Model weights and model config files need to put under the root of ImageTrans align with a model.json file ([exmple](/assets/model.json)) 
+* Offline balloon (bubble) detection which is based on OpenCV's Dnn. Models trained with [DarkNet](https://zhuanlan.zhihu.com/p/346021510) or [TensorFlow Object Detection API](https://github.com/opencv/opencv/wiki/TensorFlow-Object-Detection-API) are supported. Model weights and model config files need to be put under the root of ImageTrans along with a model.json file ([example](/assets/model.json)) 
 * The text editor can display source text and target text in a vertical mode.
 
 ### v1.3.0 (2021/02/10)
