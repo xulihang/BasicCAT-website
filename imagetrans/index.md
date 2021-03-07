@@ -99,6 +99,14 @@ See [support](/support/).
 
 ## Releases Notes
 
+
+### v1.3.2 (2021/03/07)
+
+* Scale images too small before OCR
+* Localize missed layouts
+* New OCR plugin: CRAFT+CRNN. This is based on the new [ImageTrans_OCR project](https://github.com/xulihang/ImageTrans_OCR). It is planed to be a hub of offline OCR engines which have a good customizability, accuracy and speed.
+
+
 ### v1.3.1 (2021/02/28)
 
 * New OCR plugin: Naver's Clova OCR.

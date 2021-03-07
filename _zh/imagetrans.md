@@ -101,6 +101,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 版本发布记录
 
+### v1.3.2 (2021/03/07)
+
+* OCR某个文字区域时，如果图像过小，则进行放大
+* 本地化之前遗漏的布局
+* 新的OCR插件：CRAFT+CRNN。它基于新的[ImageTrans_OCR项目](https://github.com/xulihang/ImageTrans_OCR)。这个项目计划是做成一个聚合目前具有可定制性、识别速度和准确率都不错的离线OCR的服务。
+
 ### v1.3.1 (2021/02/28)
 
 * 新的OCR插件：Naver的Clova OCR。
