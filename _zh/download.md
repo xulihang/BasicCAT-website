@@ -18,6 +18,12 @@ permalink: /zh/download/
 
 历史版本：[Releases](https://github.com/xulihang/BasicCAT/releases/)
 
+macOS用户注意事项：从macOS Catalina开始，文件会有一个叫`com.apple.quarantine`的新的属性。打开BasicCAT时会显示应用已损坏。需要用以下命令去除这一属性才能正常运行程序。
+
+```
+sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
+```
+
 ### 翻译记忆与术语共享用服务器程序
 
 *  [CloudKVS_Server.jar](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta2/CloudKVS_Server.jar)
