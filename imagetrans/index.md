@@ -1,5 +1,5 @@
 ---
-title: ImageTrans - Computer-aided Image and Comic Translation Tool
+title: ImageTrans - Computer-Aided Image and Comic Translation Tool
 layout: page
 ---
 

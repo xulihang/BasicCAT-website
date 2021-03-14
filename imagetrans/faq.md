@@ -57,7 +57,7 @@ ImageTrans FAQ
 
 9. Can the software be used offline?
 
-    The software can be used offline. However, the first operation requires networking to verify whether the purchase is made. The record will be kept for 7 days.
+    The software can be used offline. However, it requires networking to verify whether the purchase is made when it is first run. The record will be kept for 7 days.
 
     The software can translate pictures offline, and support offline OCR and machine translation.
 
