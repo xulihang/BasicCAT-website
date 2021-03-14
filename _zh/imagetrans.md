@@ -91,7 +91,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 常见问题
 
-见[FAQ](/zh/faq/)
+见[FAQ](/zh/imagetrans/faq/)
 
 ## 软件支持
 

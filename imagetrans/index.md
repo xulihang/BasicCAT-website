@@ -90,7 +90,7 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Frequently Asked Questions
 
-See [FAQ](/faq/)
+See [FAQ](/imagetrans/faq/)
 
 ## Support
 
