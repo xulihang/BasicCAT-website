@@ -89,6 +89,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 来自高校的师生可以用教育网邮箱发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)，说明相关信息，打算用ImageTrans做什么任务，能够得到优惠。
 
+## 常见问题
+
+见[FAQ](/zh/faq/)
+
 ## 软件支持
 
 见[支持](/zh/support/)。

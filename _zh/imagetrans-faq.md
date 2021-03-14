@@ -1,7 +1,7 @@
 ---
 title: FAQ - ImageTrans
 layout: page
-permalink: /zh/imagetrans/faq.html
+permalink: /zh/imagetrans/faq
 ---
 
 ImageTrans 常见问题整理
