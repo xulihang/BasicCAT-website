@@ -15,6 +15,12 @@ Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bn
 
 History releases: [Releases](https://github.com/xulihang/BasicCAT/releases/)
 
+Note for macOS users: Since macOS Catalina, a new file attribute `com.apple.quarantine` is added. A prompt window will appear saying the app is damaged when opening it. You need to run the following command:
+
+```
+sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
+```
+
 ### TM and Term sharing Server
 
 *  [CloudKVS_Server.jar](https://github.com/xulihang/BasicCAT/releases/download/v1.2-beta2/CloudKVS_Server.jar)
