@@ -55,12 +55,16 @@ Your browser does not support video element.
 
 The server allows users using ImageTrans through the web. Params can be adjusted to adapt to different images. The video above uses a fast mode, which normally takes less than 10 seconds to translate an image.
 
-For now, the online version does not support running multiple instances. The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
+There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5 times per day limit. Version 2 does not rely on ImageTrans and users can use their own API keys. There is no requests limit.
+
+* [Server (Version 1)](http://www.xulihang.me:51045/imagetrans.html)
+* [Server (Version 2)](http://www.xulihang.me:51045/index.html)
+	
+The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
 
 Please note that the automatic translation result may not be satisfying which needs fine-tuning by human. Fine-tuning support is one of the characteristics of ImageTrans.
 
-[Link to the server](http://www.xulihang.me:51045/index.html)
-	
+
 ## Examples of Translated Comics
 
 Come to me , Love —— From issue 41, Boy Loves Girls (Golden age comics).
