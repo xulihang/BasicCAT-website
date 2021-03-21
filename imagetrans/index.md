@@ -55,7 +55,7 @@ Your browser does not support video element.
 
 The server allows users using ImageTrans through the web. Params can be adjusted to adapt to different images. The video above uses a fast mode, which normally takes less than 10 seconds to translate an image.
 
-There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5 times per day limit. Version 2 does not rely on ImageTrans and users can use their own API keys. There is no requests limit.
+There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5 times per day limit. Version 2 does not rely on ImageTrans and has limited functions, but users can use their own API keys and there is also no requests limit.
 
 * [Server (Version 1)](http://www.xulihang.me:51045/imagetrans.html)
 * [Server (Version 2)](http://www.xulihang.me:51045/index.html)
