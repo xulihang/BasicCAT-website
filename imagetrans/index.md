@@ -107,6 +107,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.3.3 (2021/03/23)
+
+* Update [ImageTrans_OCR](https://github.com/xulihang/ImageTrans_OCR). Added ChineseOCR. It now supports a free combination of different text detection and text recognition methods. The plugin is updated as well.
+* Fix a index over items size problem during bulk OCR. [Related issue](https://github.com/xulihang/ImageTrans-docs/issues/6)
+* Add OCR interval setting
 
 ### v1.3.2 (2021/03/07)
 
