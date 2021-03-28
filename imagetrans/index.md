@@ -109,7 +109,7 @@ See [support](/support/).
 
 ### v1.3.4 (2021/03/27)
 
-* Resolved issues on GitHub: [#16](https://github.com/xulihang/ImageTrans-docs/issues/16)、[#19](https://github.com/xulihang/ImageTrans-docs/issues/19)、[#22](https://github.com/xulihang/ImageTrans-docs/issues/22)、[#23](https://github.com/xulihang/ImageTrans-docs/issues/23)
+* Resolved issues on GitHub: [#16](https://github.com/xulihang/ImageTrans-docs/issues/16), [#19](https://github.com/xulihang/ImageTrans-docs/issues/19), [#22](https://github.com/xulihang/ImageTrans-docs/issues/22), [#23](https://github.com/xulihang/ImageTrans-docs/issues/23)
 
 ### v1.3.3 (2021/03/23)
 
