@@ -107,6 +107,15 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.3.5 (2021/03/30)
+
+* Improve the batch machine translation function. Baidu now supports batch translation.
+* Add an Auto Params options to heuristic text localization (experimental).
+* Improve global font styles manipulation. It is possible to move them up and down and import styles from other projects.
+* Users will be asked to select language upon project creation
+* Unify the font color picker
+* Improve the undo manager
+
 ### v1.3.4 (2021/03/27)
 
 * Resolved issues on GitHub: [#16](https://github.com/xulihang/ImageTrans-docs/issues/16), [#19](https://github.com/xulihang/ImageTrans-docs/issues/19), [#22](https://github.com/xulihang/ImageTrans-docs/issues/22), [#23](https://github.com/xulihang/ImageTrans-docs/issues/23)
