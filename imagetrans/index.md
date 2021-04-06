@@ -7,7 +7,7 @@ layout: page
 
 ImageTrans is a computer-aided image and comic translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics (also webtoon, manga, manhwa and manhua). The original text can be automatically erased and the translation be reinjected.
 
-ImageTrans has a high interoperability that it can export text to Word and Excel files and use scripts to interact with image editors like Photoshop.
+ImageTrans has high interoperability that it can export text to Word and Excel files and use scripts to interact with image editors like Photoshop.
 
 ImageTrans is also a computer-aided translation (CAT) tool, which supports corpus concordance, translation memory, terminology management and machine translation. It has a sound effects words search engine designed for comics. All of these are designed to help translators complete their jobs with quality and efficiency.
 
@@ -45,7 +45,7 @@ The above operations can be done in a fully automated way: <https://www.youtube.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R7pv02jwL_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chrome_extension), images in webpage can be translated directly.
+Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chrome_extension), images in a webpage can be translated directly.
 
 ### Automatic Translation Server
 
@@ -53,9 +53,9 @@ Using ImageTrans's [Chrome Extension](https://github.com/xulihang/ImageTrans_chr
 Your browser does not support video element.
 </video>
 
-The server allows users using ImageTrans through the web. Params can be adjusted to adapt to different images. The video above uses a fast mode, which normally takes less than 10 seconds to translate an image.
+The server allows users to use ImageTrans through the web. Params can be adjusted to adapt to different images. The video above uses a fast mode, which normally takes less than 10 seconds to translate an image.
 
-There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5 times per day limit. Version 2 does not rely on ImageTrans and has limited functions, but users can use their own API keys and there is also no requests limit.
+There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5-time-per-day limit. Version 2 does not rely on ImageTrans and has limited functions, but users can use their own API keys and there is also no requests limit.
 
 * [Server (Version 1)](http://www.xulihang.me:51045/imagetrans.html)
 * [Server (Version 2)](http://www.xulihang.me:51045/index.html)
@@ -67,7 +67,7 @@ Please note that the automatic translation result may not be satisfying which ne
 
 ## Examples of Translated Comics
 
-Come to me , Love —— From issue 41, Boy Loves Girls (Golden age comics).
+Come to me, Love —— From issue 41, Boy Loves Girls (Golden age comics).
 
 Browsing Page: <http://comics.xulihang.me/viewer.html?project=come_to_me_love.itp>
 
@@ -115,7 +115,7 @@ See [support](/support/).
 ### v1.3.5 (2021/03/30)
 
 * Improve the batch machine translation function. Baidu now supports batch translation.
-* Add an Auto Params options to heuristic text localization (experimental).
+* Add an Auto Params option to heuristic text localization (experimental).
 * Improve global font styles manipulation. It is possible to move them up and down and import styles from other projects.
 * Users will be asked to select language upon project creation
 * Unify the font color picker
@@ -128,14 +128,14 @@ See [support](/support/).
 ### v1.3.3 (2021/03/23)
 
 * Update [ImageTrans_OCR](https://github.com/xulihang/ImageTrans_OCR). Added [ChineseOCR](https://github.com/ouyanghuiyu/chineseocr_lite). It now supports a free combination of different text detection and text recognition methods. The plugin is updated as well.
-* Fix a index over items size problem during bulk OCR. [Related issue](https://github.com/xulihang/ImageTrans-docs/issues/6)
+* Fix an index over items size problem during bulk OCR. [Related issue](https://github.com/xulihang/ImageTrans-docs/issues/6)
 * Add OCR interval setting
 
 ### v1.3.2 (2021/03/07)
 
 * Scale images too small before OCR
 * Localize missed layouts
-* New OCR plugin: CRAFT+CRNN. This is based on the new [ImageTrans_OCR project](https://github.com/xulihang/ImageTrans_OCR). It is planed to be a hub of offline OCR engines which have a good customizability, accuracy and speed.
+* New OCR plugin: CRAFT+CRNN. This is based on the new [ImageTrans_OCR project](https://github.com/xulihang/ImageTrans_OCR). It is planned to be a hub of offline OCR engines which have good customizability, accuracy and speed.
 
 
 ### v1.3.1 (2021/02/28)
@@ -154,7 +154,7 @@ See [support](/support/).
 
 ### v1.2.11
 
-* Fix a target geometry not correctly saved problem
+* Fix a target geometry not being correctly saved problem
 * Fix a file path problem of Photoshop scripts
 * MaskEditor can generate textmask using selected color. Mask can now be set to translucent.
 * Support batch machine translation with ColorfulClouds which will significant improve machine translation speed
@@ -175,7 +175,7 @@ See [support](/support/).
 ### v1.2.8
 
 * Add Undo Manager
-* Use TextFlow as the default Text Renderer. Text will not no longer be truncated
+* Use TextFlow as the default Text Renderer. Text will no longer be truncated
 * Text size and layout will be the same after percent switching
 * Other improvements
 
@@ -183,7 +183,7 @@ See [support](/support/).
 
 * Supports running multiple tesseract instances to increase OCR speed
 * Save verification for 7 days
-* Sogou OCR supports right to left text order
+* Sogou OCR supports right-to-left text order
 * Add Baidu OCR accurate
 * Fix Find and Replace problems caused by incorrect box jumping behavior and UI localization
 
@@ -198,23 +198,23 @@ See [support](/support/).
 ### v1.2.5
 
 * Fix a target geometry setting problem
-* Mask Editor can use cursor to draw circle or clear circle
+* Mask Editor can use the cursor to draw a circle or clear a circle
 * Add Capital Letter font setting
 * Add minimum width/height overlapped percent setting for text localization
-* Fix a overlapped box not added problem
+* Fix an overlapped box not being added problem
 * The Photoshop script supports styles like bold, italic, capitalization and rotation.
 
 ### v1.2.4
 
-* Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instruction.
-* Mask, text-removed and exported images will not no longer be imported
+* Add Chrome Extension support. Visit [here](https://github.com/xulihang/ImageTrans_chrome_extension) to see detailed instructions.
+* Mask, text-removed and exported images will no longer be imported
 * Fix the incorrect behavior of creating new projects which was caused by the recent projects feature introduced in v1.2.2
 * Other improvements
 
 ### v1.2.3
 
 * Add Translate after OCR option
-* When viewing transated version in non-precise text-removal mode, the text box will be transparent to to reveal the source text
+* When viewing translated version in non-precise text-removal mode, the text box will be transparent to reveal the source text
 * Batch Translation can call balloon detection and scene text detection
 * Silent Translator supports font setting
 * Add a context menu item to download images from links and add them to the project
@@ -263,7 +263,7 @@ See [support](/support/).
 * Update OpenCV to 4.5.0
 * Support getting text area confidence in offline mode and show progress
 * New OCR plugin: WinRT OCR. It uses the built-in OCR API of Windows Runtime on Windows 10. It requires installation of relevant languages on the system
-* Some machine translaiton plugins of BasicCAT are packaged
+* Some machine translation plugins of BasicCAT are packaged
 * UI improvements
 
 ### v1.1.8
@@ -271,13 +271,13 @@ See [support](/support/).
 * Generate mask and text-removed images according to order and show progress
 * Inpainting is now asynchronous
 * Validate geometry before generating text mask
-* Fix a resized mask not matching with resized image problem
+* Fix a resized mask not matching with the resized image problem
 * Add text area action menu to imagescrollpane
 
 ### v1.1.7
 
 * Maskeditor can now regenerate mask of selected area and scale images
-* Text Remover can remove text in selected area
+* Text Remover can remove text in the selected area
 * The default text mask color is reset to red
 * Add text-removed image editor
 * Bugfixes
@@ -296,7 +296,7 @@ See [support](/support/).
 ### v1.1.4
 
 * Toolbar has a new tool: Font
-* New project and import pictures actions now share a same saved path.
+* New project and import pictures actions now share the same saved path.
 * Better color picking
 
 
