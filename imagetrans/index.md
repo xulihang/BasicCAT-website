@@ -107,6 +107,11 @@ See [support](/support/).
 
 ## Releases Notes
 
+### v1.3.5 Update (2021/04/06)
+
+* Language Pair Selector will not appear opening a previous project
+* Use the current image's name as the Image Combobox's tooltip
+
 ### v1.3.5 (2021/03/30)
 
 * Improve the batch machine translation function. Baidu now supports batch translation.
