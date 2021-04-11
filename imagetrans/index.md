@@ -15,15 +15,15 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 ### Accurate text area detection
 
-    ![](/album/imagetrans-features/localization.jpg)
+![](/album/imagetrans-features/localization.jpg)
 
-    It can use natural scene text detection, object detection and a heuristic method to detect text.
+It can use natural scene text detection, object detection and a heuristic method to detect text.
 	
 ### Accurate text recognition
 
 * Support multiple OCRs
 
-   It supports online OCR services such as Google, Baidu, Sogou and Youdao, and offline OCR engines such as Tesseract, PaddleOCR and Windows 10's built-in OCR engine. See [FAQ](https://www.basiccat.org/zh/imagetrans/faq/) for the usage and the list of supported OCRs.
+   It supports online OCR services such as Google, Baidu, Sogou and Youdao, and offline OCR engines such as Tesseract, PaddleOCR and Windows 10's built-in OCR engine. See [FAQ](/imagetrans/faq/) for the usage and the list of supported OCRs.
 
    In addition, you can also call other OCR services by writing plug-ins.
 

@@ -16,9 +16,10 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 准确定位文字区域
 
-	![](/album/imagetrans-features/localization.jpg)
-	
-	支持使用自然场景文字检测法、目标检测法和启发式等多种定位方法。
+![](/album/imagetrans-features/localization.jpg)
+
+支持使用自然场景文字检测法、目标检测法和启发式等多种定位方法。
+
 
 ### 准确识别文字
 
