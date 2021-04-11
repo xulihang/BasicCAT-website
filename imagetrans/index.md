@@ -84,7 +84,7 @@ It can use natural scene text detection, object detection and a heuristic method
 
 ### Translation assist
 
-It can call a variety of machine translation engines. It also supports translation memory and term management and other common functions of computer-aided translation software
+It can call a variety of machine translation engines. It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.
 
 ### Precise text removal and reinjection
 
