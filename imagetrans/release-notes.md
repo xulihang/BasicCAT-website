@@ -3,8 +3,6 @@ title: Release Notes - ImageTrans
 layout: page
 ---
 
-## Releases Notes
-
 ### v1.3.5 Update (2021/04/06)
 
 * Language Pair Selector will not appear opening a previous project

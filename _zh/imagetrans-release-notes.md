@@ -4,8 +4,6 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
-## 版本发布记录
-
 ### v1.3.5 Update (2021/04/06)
 
 * 打开过去的项目时语言选择器不会再跳出来
