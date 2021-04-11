@@ -9,6 +9,8 @@ ImageTrans is a computer-aided image and comic translation tool. It can automati
 
 ![](/album/imagetrans.jpg)
 
+ImageTrans can be used not only as an image translator, but also an image reader, a image transcriber and a deep learning annotator.
+
 ImageTrans is the result of the thesis for my master's degree: [Design and Implementation of a Computer-Aided Comics Translation Tool](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool).[](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)
 
 ## Features

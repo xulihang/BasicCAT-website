@@ -10,6 +10,8 @@ ImageTrans是一款计算机辅助图片文字转录与翻译工具，能够使�
 
 ![](/album/imagetrans_zh.jpg)
 
+ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图片阅读器、文字转录器和深度学习标注器使用。
+
 ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
 ## 软件特色
@@ -148,6 +150,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 * [WebP-Converter](https://github.com/xulihang/WebP-Converter)，转换JPG/BMP/PNG格式的图片到WebP或者将WebP转换为JPG。
 * [WebImageHelper](https://github.com/xulihang/WebImageHelper)，下载网页中所有图片或者根据屏幕坐标，下载位于鼠标下方的图片。该工具可以用于翻译网页中的图片，能将翻译好的图片替换网页中的图片。
+
 
 {% include comments.html %}
 
