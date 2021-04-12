@@ -85,7 +85,24 @@ ImageTrans FAQ
 
     At present, ImageTrans can be displayed in English or Chinese.
 
+14. Why are text lines not merged?
 
+   The reasons are manifold.
+
+   1. The default growth height or width is too small. You need to increase the value (generally the height of the text line).
+   2. There is a separation line between text areas, which affects the merging. There are many ways to deal with it:
+
+      * Reduce the pixel to expand
+      * Merge manually
+      * Uncheck Infer Separation
+
+   Example:
+
+   ![](/album/unmerged.jpg)
+
+   Merged:
+
+   ![](/album/merged.jpg)
 
 
 {% include comments.html %}
