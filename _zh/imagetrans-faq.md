@@ -64,7 +64,7 @@ ImageTrans 常见问题整理
 
     离线版OCR：tesseract、Windows 10自带OCR、ImageTrans_OCR、PaddleOCR、EasyOCR
 
-    离线版机器翻译：OPUS-CAT
+    离线版机器翻译：OPUS-CAT、eztrans
     
     在线的OCR和机器翻译，尤其是机器翻译，往往效果更好，支持的语种也更全面，但也存在需要联网、对请求有限制等问题。
 

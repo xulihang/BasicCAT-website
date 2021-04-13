@@ -63,7 +63,7 @@ ImageTrans FAQ
 
     Offline OCR: Tesseract, Windows 10's built-in OCR, ImageTrans_ OCR、PaddleOCR、EasyOCR
 
-    Off line machine translation: OPUS-CAT
+    Offline machine translation: OPUS-CAT, eztrans
 
     Online OCR and machine translation, especially machine translation, ofter produce better results and support more languages, but there are also problems such as the need for networking and restrictions on requests.
 
