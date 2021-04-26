@@ -4,6 +4,11 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
+### v1.3.5 Update2 (2021/04/26)
+
+* 没有打开项目就执行导入图片操作时会给出温馨提示
+* 添加JPEG扩展名的支持
+
 ### v1.3.5 Update (2021/04/06)
 
 * 打开过去的项目时语言选择器不会再跳出来

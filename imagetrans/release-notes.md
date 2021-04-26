@@ -3,6 +3,11 @@ title: Release Notes - ImageTrans
 layout: page
 ---
 
+### v1.3.5 Update (2021/04/26)
+
+* Display a warnning when users import pictures without opening a project
+* Add JPEG extension
+
 ### v1.3.5 Update (2021/04/06)
 
 * Language Pair Selector will not appear opening a previous project
