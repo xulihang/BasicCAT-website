@@ -3,6 +3,11 @@ title: Release Notes - ImageTrans
 layout: page
 ---
 
+### v1.3.7 (2021/05/04)
+
+* Save the previous state of ToolBar [#issue47](https://github.com/xulihang/ImageTrans-docs/issues/47)
+* Fix an exported data containing no translation problem [#issue45](https://github.com/xulihang/ImageTrans-docs/issues/45)
+
 ### v1.3.6 (2021/05/02)
 
 * The two context menu items: Delete and invert confidence, now support handling multiple text areas

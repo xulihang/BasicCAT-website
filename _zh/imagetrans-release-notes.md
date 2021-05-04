@@ -4,6 +4,11 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
+### v1.3.7 (2021/05/04)
+
+* 工具栏切换时保留状态（[#issue47](https://github.com/xulihang/ImageTrans-docs/issues/47)）
+* 修复一个导出数据时没有包含译文的问题（[#issue45](https://github.com/xulihang/ImageTrans-docs/issues/45)）
+
 ### v1.3.6 (2021/05/02)
 
 * 右键删除和反转置信度支持操作所有选中的文字区域
