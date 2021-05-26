@@ -8,7 +8,19 @@ sitemap:
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.blogs %}
+  {% for post in site.zh %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}.html</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for post in site.posts %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}.html</loc>
     {% if post.lastmod == null %}
@@ -39,7 +51,7 @@ sitemap:
     {% if page.sitemap.priority %}
       <priority>{{ page.sitemap.priority }}</priority>
     {% else %}
-      <priority>0.3</priority>
+      <priority>0.8</priority>
     {% endif %}
   </url>
   {% endunless %}
