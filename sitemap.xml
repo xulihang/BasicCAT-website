@@ -21,5 +21,15 @@ layout: null
                 <priority>0.80</priority>
             </url>
         {%- endfor -%}
+		
+		{% assign posts=site.zh %}
+        {% for post in posts reversed %}
+            <url>
+                <loc>{{ site.url }}{{ post.url }}</loc>
+                <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url>
+        {% endfor %}
     </urlset>    
 {%- endif -%}
