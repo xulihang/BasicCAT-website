@@ -15,7 +15,7 @@ permalink: /:title/
 # just leave empty to disable it
 google_analytics:
 disqus_shortname: 
-
+sitemap: true
 plugins:
   - jekyll-sitemap
 
