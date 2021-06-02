@@ -1,0 +1,59 @@
+---
+layout: null
+sitemap:
+  lastmod: 2021-05-06
+  priority: 0.7
+  changefreq: 'weekly'
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.zh %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for page in site.pages %}
+  {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+    {% if page.sitemap.lastmod %}
+      <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+    {% elsif page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    {% if page.sitemap.changefreq %}
+      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if page.sitemap.priority %}
+      <priority>{{ page.sitemap.priority }}</priority>
+    {% else %}
+      <priority>0.8</priority>
+    {% endif %}
+  </url>
+  {% endunless %}
+  {% endfor %}
+</urlset>

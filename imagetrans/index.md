@@ -145,6 +145,18 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Release Notes
 
+### v1.3.7 (2021/05/04)
+
+* Save the previous state of ToolBar [#issue47](https://github.com/xulihang/ImageTrans-docs/issues/47)
+* Fix an exported data containing no translation problem [#issue45](https://github.com/xulihang/ImageTrans-docs/issues/45)
+
+### v1.3.6 (2021/05/02)
+
+* The two context menu items: Delete and invert confidence, now support handling multiple text areas
+* When the Control key is pressed, it is possible to select multiple text areas by clicking them
+* Add `Clear text` menu item (clear source, target or source+target)
+* Other improvements
+
 ### v1.3.5 Update2 (2021/04/26)
 
 * Display a warning when users import pictures without opening a project

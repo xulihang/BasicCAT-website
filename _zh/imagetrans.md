@@ -148,6 +148,18 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.3.7 (2021/05/04)
+
+* 工具栏切换时保留状态（[#issue47](https://github.com/xulihang/ImageTrans-docs/issues/47)）
+* 修复一个导出数据时没有包含译文的问题（[#issue45](https://github.com/xulihang/ImageTrans-docs/issues/45)）
+
+### v1.3.6 (2021/05/02)
+
+* 右键删除和反转置信度支持操作所有选中的文字区域
+* 按下Control键时能以单击方式进行选择多个文字区域
+* 文字区域右键添加去除原文和译文的功能
+* 其它优化
+
 ### v1.3.5 Update2 (2021/04/26)
 
 * 没有打开项目就执行导入图片操作时会给出温馨提示
