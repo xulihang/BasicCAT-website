@@ -149,10 +149,10 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 * Add "Save as" menu item
 * Add "Navigation" menu
-* Add Translated Images Manager. Images marked as translated will be skipped during batch operation
+* Add Translated Images Manager. Images marked as translated will be skipped during batch operation ([#issue59](https://github.com/xulihang/ImageTrans-docs/issues/59))
 * The Text Editor is dockable
 * Use Spinner to adjust the display percentage
-* Close the current project automatically when opening a new project
+* Close the current project automatically when opening a new project ([#issue39](https://github.com/xulihang/ImageTrans-docs/issues/39))
 
 ### v1.3.7 (2021/05/04)
 
