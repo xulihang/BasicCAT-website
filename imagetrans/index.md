@@ -145,6 +145,15 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Release Notes
 
+### v1.4.0 (2021/06/14)
+
+* Add "Save as" menu item
+* Add "Navigation" menu
+* Add Translated Images Manager. Images marked as translated will be skipped during batch operation
+* The Text Editor is dockable
+* Use Spinner to adjust the display percentage
+* Close the current project automatically when opening a new project
+
 ### v1.3.7 (2021/05/04)
 
 * Save the previous state of ToolBar [#issue47](https://github.com/xulihang/ImageTrans-docs/issues/47)
