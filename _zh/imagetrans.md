@@ -120,11 +120,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 获取ImageTrans
 
-1. 发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)申请购买。
-2. 使用支付宝或者PayPal完成支付。
-3. 得到下载链接和邮件。
-
-或者前往FastSpring支付平台自主购买：[链接](https://basiccat.onfastspring.com/)。
+请前往FastSpring支付平台自主购买：[链接](https://basiccat.onfastspring.com/)。
 
 定价：
 
@@ -136,6 +132,8 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 请按照[安装说明](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2)进行操作。
 
 来自高校的师生可以用教育网邮箱发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)，说明相关信息，打算用ImageTrans做什么任务，能够得到优惠。
+
+如果无法购买，也请[邮件联系我](mailto:admin@basiccat.org)。
 
 ## 更多内容
 
