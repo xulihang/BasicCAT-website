@@ -152,6 +152,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * 添加删除文字区域的快捷键（[#issue71](https://github.com/xulihang/ImageTrans-docs/issues/71)）
 * 没有保存文字掩膜时，如果没有增删或者调整文字区域，则不重新生成去文字的图像
 * 默认的语言列表添加了越南语、印地语和印度尼西亚语（之前版本需要手动输入语言代码）（ [#issue61](https://github.com/xulihang/ImageTrans-docs/issues/61)）
+* 竖版文本默认从右侧开始排列
 * 其它优化
 
 ### v1.4.0 (2021/06/14)

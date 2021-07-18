@@ -149,6 +149,7 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 * Add a shortcut to remove selected areas [#issue71](https://github.com/xulihang/ImageTrans-docs/issues/71)
 * If the text mask is not saved as a file and there is no new, deleted or adjusted text areas, the program will not regenerate text-removed images
 * Add Hindi, Vietnamese and Indonesian to the default languages list (In the previous versions, we have to input the language codes manually) [#issue61](https://github.com/xulihang/ImageTrans-docs/issues/61)
+* Vertical text will start from the right by default
 * Other improvements
 
 ### v1.4.0 (2021/06/14)
