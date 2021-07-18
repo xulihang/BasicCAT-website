@@ -145,6 +145,14 @@ If you are from academic institutions, you can email to [admin@basiccat.org](mai
 
 ## Release Notes
 
+### v1.4.1 (2021/07/18)
+
+* Add a vertical align option [#issue72](https://github.com/xulihang/ImageTrans-docs/issues/72)
+* Add a shortcut to remove selected areas [#issue71](https://github.com/xulihang/ImageTrans-docs/issues/71)
+* If the text mask is not saved as a file and there is no new, deleted or adjusted text areas, the program will not regenerate text-removed images
+* Add Hindi, Vietnamese and Indonesian to the default languages list (In the previous versions, we have to input the language codes manually) [#issue61](https://github.com/xulihang/ImageTrans-docs/issues/61)
+* Other improvements
+
 ### v1.4.0 (2021/06/14)
 
 * Add "Save as" menu item
