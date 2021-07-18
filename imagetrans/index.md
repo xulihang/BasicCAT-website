@@ -118,11 +118,7 @@ Text Searching Page: <http://comics.xulihang.me/search.html>
 
 ## Get a Copy
 
-1. Mail to [admin@basiccat.org](mailto:admin@basiccat.org) to apply for purchasing ImageTrans.
-2. Complete the payment with Paypal or Alipay.
-3. You will get a download link and an email.
-
-Or self purchase on FastSpring: [link](https://basiccat.onfastspring.com/).
+ImageTrans is available for purchase on FastSpring: [link](https://basiccat.onfastspring.com/).
 
 Pricing:
 
@@ -134,6 +130,8 @@ Free update within half a year.
 Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
 
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
+
+If you cannot complete the payment, please [contact me](mailto:admin@basiccat.org).
 
 ## More
 
