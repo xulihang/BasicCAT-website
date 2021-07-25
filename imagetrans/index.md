@@ -143,13 +143,20 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.2 (2021/07/25)
+
+* Fix a problem that the program fails to export a target image which has a high resolution (width or height > 8000 pixels
+* AutoFontSize is available for vertically arranged text areas
+* Change the text areas adjusting behavior of vertically arranged text areas to meet the change made in 1.4.1 which aligns the text to the right: move the mouse to the left of the text area to resize and the right to adjust positions
+* Other improvements
+
 ### v1.4.1 (2021/07/18)
 
 * Add a vertical align option [#issue72](https://github.com/xulihang/ImageTrans-docs/issues/72)
 * Add a shortcut to remove selected areas [#issue71](https://github.com/xulihang/ImageTrans-docs/issues/71)
 * If the text mask is not saved as a file and there is no new, deleted or adjusted text areas, the program will not regenerate text-removed images
 * Add Hindi, Vietnamese and Indonesian to the default languages list (In the previous versions, we have to input the language codes manually) [#issue61](https://github.com/xulihang/ImageTrans-docs/issues/61)
-* Vertical text will start from the right by default
+* Vertically arranged text will start from the right by default
 * Other improvements
 
 ### v1.4.0 (2021/06/14)
