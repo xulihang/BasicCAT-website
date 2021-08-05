@@ -152,7 +152,7 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ### v1.4.2 (2021/07/25)
 
-* Fix a problem that the program fails to export a target image which has a high resolution (width or height > 8000 pixels
+* Fix a problem that the program fails to export a target image which has a high resolution (width or height > 8000 pixels)
 * AutoFontSize is available for vertically arranged text areas
 * Change the text areas adjusting behavior of vertically arranged text areas to meet the change made in 1.4.1 which aligns the text to the right: move the mouse to the left of the text area to resize and the right to adjust positions
 * Other improvements
