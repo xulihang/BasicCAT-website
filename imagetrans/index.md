@@ -143,6 +143,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.3 (2021/08/05)
+
+* Fix a problem that when the toolbar is switched to font settings, it does not load the font settings of the current text area
+* Fix a problem that the vertical center button is not updated when a new text area is selected
+* Improve the vertical center effect
+* Other improvements
+
 ### v1.4.2 (2021/07/25)
 
 * Fix a problem that the program fails to export a target image which has a high resolution (width or height > 8000 pixels
