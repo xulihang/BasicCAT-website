@@ -143,6 +143,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.4 (2021/08/07)
+
+* Fix a high resolution target image export problem that the width and height of rotated text areas are not correct
+* Fix a vertical text's problem that after a text area too small is expanded, the position of the inner text is not adjusted
+* New menu item: open project folder
+
 ### v1.4.3 (2021/08/05)
 
 * Fix a problem that when the toolbar is switched to font settings, it does not load the font settings of the current text area
