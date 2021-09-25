@@ -143,6 +143,14 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.5 (2021/09/25)
+
+* Add a silent translation helper
+* Add a new furigana stripping method based on projection
+* Update OpenCV to 4.5.3. The built-in high-level text detection and recognition are supported with the [plugin](https://github.com/xulihang/ImageTrans-docs/issues/85).
+* Add a new Japanese OCR plugin：[読取革命(Yomikaku)](https://github.com/xulihang/ImageTrans-docs/issues/83).
+* Other bug fixes
+
 ### v1.4.4 (2021/08/07)
 
 * Fix a high resolution target image export problem that the width and height of rotated text areas are not correct

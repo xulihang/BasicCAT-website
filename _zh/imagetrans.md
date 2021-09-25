@@ -146,6 +146,14 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.4.5 (2021/09/25)
+
+* 新增静默翻译助手
+* 新增基于投影的振假名去除方法
+* 更新OpenCV至4.5.3，支持OpenCV自带的文字检测与识别功能（[插件地址](https://github.com/xulihang/ImageTrans-docs/issues/85)）。
+* 新增日文OCR插件：[读取革命](https://github.com/xulihang/ImageTrans-docs/issues/83)。
+* 其它Bug修复
+
 ### v1.4.4 (2021/08/07)
 
 * 修复生成高分辨率译文图片时旋转的文字宽高不正确的问题
