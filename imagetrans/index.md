@@ -143,6 +143,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.6 (2021/10/06)
+
+* New Tesseract line mode. ImageTrans will extract text lines and use Tesseract to recognize them directly, which can greatly improve the accuracy. ([issue87](https://github.com/xulihang/ImageTrans-docs/issues/87))
+* Add an auto capital option
+* Add an auto machine translate options to the screen reader
+* Other bug fixes
+
 ### v1.4.5 (2021/09/25)
 
 * Add a silent translation helper
