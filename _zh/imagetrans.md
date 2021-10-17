@@ -146,6 +146,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.4.7 (2021/10/17)
+
+* 使用线程运行启发式文字检测以避免程序不响应的问题
+* 统一屏幕阅读器与主程序的OCR操作行为
+* 默认显示比例调整为100%
+
 ### v1.4.6 (2021/10/06)
 
 * 新增Tesseract文字行识别模式。由ImageTrans定位文字行后再用Tesseract识别每个文字行，可以大大提高准确率 （[issue87](https://github.com/xulihang/ImageTrans-docs/issues/87)）
