@@ -146,6 +146,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.4.8 (2021/10/30)
+
+* 统一文本框在100%与其它显示比例下的表现 [issue 94](https://github.com/xulihang/ImageTrans-docs/issues/94)
+* 新的OCR插件：Google Drive OCR [issue 91](https://github.com/xulihang/ImageTrans-docs/issues/91)
+* 修正了一个谷歌OCR没有正确获取文字的问题
+
 ### v1.4.7 (2021/10/17)
 
 * 使用线程运行启发式文字检测以避免程序不响应的问题

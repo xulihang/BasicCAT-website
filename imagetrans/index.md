@@ -143,10 +143,16 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.4.8 (2021/10/30)
+
+* Unify the behavior of the text box in 100% and other display percentages [issue 94](https://github.com/xulihang/ImageTrans-docs/issues/94)
+* New OCR plugin: Google Drive OCR [issue 91](https://github.com/xulihang/ImageTrans-docs/issues/91)
+* Fix a Google OCR not getting text problem
+
 ### v1.4.7 (2021/10/17)
 
 * Use thread to avoid the program not responding problem during heuristic text area detection
-* Unify the OCR bahavior of the screen reader with the main program
+* Unify the OCR behavior of the screen reader with the main program
 * The default display percentage is changed to 100% 
 
 ### v1.4.6 (2021/10/06)
