@@ -6,13 +6,11 @@ permalink: /zh/download/
 
 请根据您的操作系统选择对应的安装包。
 
-### BasicCAT v1.10.3
+### BasicCAT v1.10.4
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.3/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.3/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.3/BasicCAT_mac.dmg)
-* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.3/BasicCAT-crossplatforms.zip)
-
-可选镜像（国内下载速度更快）：[Releases](https://github.wuyanzheshui.workers.dev/xulihang/BasicCAT/releases/)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT_mac.dmg)
+* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-crossplatforms.zip)
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -44,6 +42,7 @@ sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
 * 搜狗
 * 搜狗深智
 * 小牛
+* 谷歌
 * IBM Watson
 * 彩云小译
 * Naver Papago
