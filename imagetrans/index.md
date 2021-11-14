@@ -143,6 +143,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.0 (2021/11/14)
+
+* Support manual fonts installing [issue 100](https://github.com/xulihang/ImageTrans-docs/issues/100)
+* Add a compatibility input helper based on Swing JTextArea to serve as a workaround for inputing Tibetan in JavaFX's TextArea [issue 99](https://github.com/xulihang/ImageTrans-docs/issues/99)
+* New project setting: Text Editor's font
+* Other bug fixes
+
 ### v1.4.8 (2021/10/30)
 
 * Unify the behavior of the text box in 100% and other display percentages [issue 94](https://github.com/xulihang/ImageTrans-docs/issues/94)

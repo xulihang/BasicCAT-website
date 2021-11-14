@@ -146,6 +146,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.5.0 (2021/11/14)
+
+* 支持手动加载字体文件 [issue 100](https://github.com/xulihang/ImageTrans-docs/issues/100)
+* 新增基于Swing JTextArea的兼容输入助手，用于暂时解决JavaFX的藏语输入问题 [issue 99](https://github.com/xulihang/ImageTrans-docs/issues/99)
+* 新增项目设置：编辑区域字体
+* 其它Bug修复
+
 ### v1.4.8 (2021/10/30)
 
 * 统一文本框在100%与其它显示比例下的表现 [issue 94](https://github.com/xulihang/ImageTrans-docs/issues/94)
