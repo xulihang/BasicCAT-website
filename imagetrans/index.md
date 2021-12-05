@@ -143,6 +143,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.1 (2021/12/05)
+
+* Improve the ScreenReader's behavior [issue 110](https://github.com/xulihang/ImageTrans-docs/issues/110)
+* Improve the bahavior of textboxes under type setting mode
+
 ### v1.5.0 (2021/11/14)
 
 * Support manual fonts installing [issue 100](https://github.com/xulihang/ImageTrans-docs/issues/100)
