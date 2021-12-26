@@ -143,6 +143,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.2 (2021/12/26)
+
+* Add Text to speech (TTS)
+* Delete key can now be used to delete text areas
+* Timeout setting for heuristic text detection
+* Other bug fixes
+
 ### v1.5.1 (2021/12/05)
 
 * Improve the ScreenReader's behavior [issue 110](https://github.com/xulihang/ImageTrans-docs/issues/110)

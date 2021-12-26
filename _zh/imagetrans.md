@@ -146,6 +146,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.5.2 (2021/12/26)
+
+* 添加文字转语音（TTS）功能
+* 可以直接用删除键删除文字区域
+* 启发式文字检测支持设置超时时间
+* 其它Bug修复
+
 ### v1.5.1 (2021/12/05)
 
 * 完善屏幕阅读器的行为 [issue 110](https://github.com/xulihang/ImageTrans-docs/issues/110)
