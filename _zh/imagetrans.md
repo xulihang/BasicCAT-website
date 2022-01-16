@@ -146,6 +146,15 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.5.3 (2022/01/16)
+
+* 更新OpenCV至4.5.5以支持Scaled-Yolo V4 [#issue129](https://github.com/xulihang/ImageTrans-docs/issues/129)
+* 支持导出文字区域并导回每张图片的OCR结果 [#issue124](https://github.com/xulihang/ImageTrans-docs/issues/124)
+* 纯色覆盖的文字抹除模式可以设置背景为圆角矩形 [#issue123](https://github.com/xulihang/ImageTrans-docs/issues/123)
+* 修复了垂直居中文字在不同比例下的行为不一致问题 [#issue122](https://github.com/xulihang/ImageTrans-docs/issues/122)
+* 自动更正功能也能用于机器翻译 [#issue133](https://github.com/xulihang/ImageTrans-docs/issues/133)
+* 其它界面和性能优化
+
 ### v1.5.2 (2021/12/26)
 
 * 添加文字转语音（TTS）功能

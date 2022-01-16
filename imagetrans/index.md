@@ -143,6 +143,15 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.3 (2022/01/16)
+
+* Update OpenCV to 4.5.5 to support Scaled-Yolo V4 [#issue129](https://github.com/xulihang/ImageTrans-docs/issues/129)
+* Support export text areas to images and import their OCR results [#issue124](https://github.com/xulihang/ImageTrans-docs/issues/124)
+* The pure color background used in the non-precise text removing mode can be set as rounded [#issue123](https://github.com/xulihang/ImageTrans-docs/issues/123)
+* Fix an inconsistency problem of vertical alignment [#issue122](https://github.com/xulihang/ImageTrans-docs/issues/122)
+* AutoCorrect can be used for machine translation [#issue133](https://github.com/xulihang/ImageTrans-docs/issues/133)
+* Other improvements on UI and performance
+
 ### v1.5.2 (2021/12/26)
 
 * Add Text to speech (TTS)
