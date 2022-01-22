@@ -143,6 +143,10 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.4 (2022/01/22)
+
+Fix a localization problem of the Preferences form [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+
 ### v1.5.3 (2022/01/16)
 
 * Update OpenCV to 4.5.5 to support Scaled-Yolo V4 [#issue129](https://github.com/xulihang/ImageTrans-docs/issues/129)

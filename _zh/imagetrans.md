@@ -146,6 +146,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.5.4 (2022/01/22)
+
+修复了一个偏好设置页面的本地化问题 [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+
 ### v1.5.3 (2022/01/16)
 
 * 更新OpenCV至4.5.5以支持Scaled-Yolo V4 [#issue129](https://github.com/xulihang/ImageTrans-docs/issues/129)
