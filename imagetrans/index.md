@@ -145,7 +145,8 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ### v1.5.4 (2022/01/22)
 
-Fix a localization problem of the Preferences form [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+* Fix a localization problem of the Preferences form [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+* Add an option to resize image before balloon detection (scaled to 1024px by default) [#issue137](https://github.com/xulihang/ImageTrans-docs/issues/137)
 
 ### v1.5.3 (2022/01/16)
 

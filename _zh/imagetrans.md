@@ -148,7 +148,8 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ### v1.5.4 (2022/01/22)
 
-修复了一个偏好设置页面的本地化问题 [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+* 修复了一个偏好设置页面的本地化问题 [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
+* 添加了一个气泡检测前缩放图片的选项（默认缩放至1024像素） [#issue137](https://github.com/xulihang/ImageTrans-docs/issues/137)
 
 ### v1.5.3 (2022/01/16)
 
