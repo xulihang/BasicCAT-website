@@ -143,6 +143,16 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.5.5 (2022/01/31)
+
+* Balloon detection supports comics which has a high height/width ratio (e.g. webtoon) [#issue138](https://github.com/xulihang/ImageTrans-docs/issues/138)
+* Auto Font Size supports setting a maximum size [#issue146](https://github.com/xulihang/ImageTrans-docs/issues/146)
+* ScreenReader can now monitor the clipboard [#issue145](https://github.com/xulihang/ImageTrans-docs/issues/145)
+* Silent translator: the file path of the source image file will be saved [#issue144](https://github.com/xulihang/ImageTrans-docs/issues/144)
+* New machine translation plugin: DeepL [#issue15](https://github.com/xulihang/ImageTrans-docs/issues/15)
+* The expanding operation will check the image size to avoid expanding too much
+* Move the scroll position to top after switching image
+
 ### v1.5.4 (2022/01/22)
 
 * Fix a localization problem of the Preferences form [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)

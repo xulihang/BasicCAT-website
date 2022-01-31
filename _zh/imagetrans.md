@@ -146,6 +146,16 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.5.5 (2022/01/31)
+
+* 气泡检测支持长幅条漫 [#issue138](https://github.com/xulihang/ImageTrans-docs/issues/138)
+* 自动字体大小调整支持设置最大字体大小 [#issue146](https://github.com/xulihang/ImageTrans-docs/issues/146)
+* 屏幕阅读器新增监听剪贴板功能 [#issue145](https://github.com/xulihang/ImageTrans-docs/issues/145)
+* 静默翻译器的翻译结果会保存原文件路径信息 [#issue144](https://github.com/xulihang/ImageTrans-docs/issues/144)
+* 新的机器翻译插件：DeepL [#issue15](https://github.com/xulihang/ImageTrans-docs/issues/15)
+* 拓展区域操作会检测图片尺寸，避免超出图片范围
+* 切换图片时移动滚动条至上方
+
 ### v1.5.4 (2022/01/22)
 
 * 修复了一个偏好设置页面的本地化问题 [#issue141](https://github.com/xulihang/ImageTrans-docs/issues/141)
