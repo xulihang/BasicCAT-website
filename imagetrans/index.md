@@ -146,6 +146,7 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 ### v1.6.0 (2022/02/06)
 
 * Add panel detection for comics. It can be used for sorting text areas and reading on a mobile device by panels [#issue147](https://github.com/xulihang/ImageTrans-docs/issues/147)
+* Add a context menu item to show the machine translation of the combined text of selected text areas. It is mainly designed to translate sentences splitted into different text areas [#issue118](https://github.com/xulihang/ImageTrans-docs/issues/118)
 * Other performance improvements and bug fixes
 
 ### v1.5.5 (2022/01/31)

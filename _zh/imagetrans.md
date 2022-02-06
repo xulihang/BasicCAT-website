@@ -149,6 +149,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 ### v1.6.0 (2022/02/06)
 
 * 新增漫画分镜检测功能，可以用于文字区域排序和移动端按分镜阅读 [#issue147](https://github.com/xulihang/ImageTrans-docs/issues/147)
+* 新增查看机器翻译的右键菜单，可以查看多个文字区域的文本拼接后的翻译结果，主要用于一句话被拆分到不同气泡的情况 [#issue118](https://github.com/xulihang/ImageTrans-docs/issues/118)
 * 其它性能优化与Bug修复
 
 ### v1.5.5 (2022/01/31)
