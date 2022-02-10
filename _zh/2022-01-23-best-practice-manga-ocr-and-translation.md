@@ -12,11 +12,12 @@ tags: imagetrans
 
 目前，最佳的处理日漫的是使用自训练的气泡检测模型定位文字区域，之后用基于日漫训练的OCR模型识别文字，准确识别文字后再使用基于漫画翻译语料训练的机器翻译进行翻译，最后再进行排版工作。
 
-ImageTrans支持调用下列模型以完成日漫翻译工作，可以较好地处理上面提到的问题：
+ImageTrans支持调用下列模型与操作以完成日漫翻译工作，可以较好地处理上面提到的问题：
 
 1. Scaled Yolo v4日漫气泡检测模型，[地址](https://github.com/xulihang/ImageTrans-docs/issues/135)
 2. 基于Transformer的端到端日漫OCR，[地址](https://github.com/xulihang/ImageTrans-docs/issues/140)
 3. 基于Transformer的日漫机器翻译，[地址](https://github.com/xulihang/ImageTrans-docs/issues/108) （只支持日译英，其它语言对可以用通用的在线机器翻译服务）
+4. 在分镜检测的基础上对文字区域进行排序，机器翻译可以更好地利用上下文信息，[地址](https://github.com/xulihang/ImageTrans-docs/issues/147)。
 
 具体操作方法请参考上面地址中的说明。
 

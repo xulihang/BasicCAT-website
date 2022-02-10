@@ -12,11 +12,12 @@ Comics in different languages often need different processing methods. Let's tak
 
 At present, the best way to deal with manga translation is to use a custom-trained balloon detection model to locate the text area, then use a custom-trained OCR model to accurately recognize the text. After the text is extracted, use a machine translation engine trained on manga translation corpus to translate the text, and finally, do the typesetting.
 
-ImageTrans can use the following models to complete Japanese manga translation, which can handle the problems mentioned above quite well:
+ImageTrans can use the following models and methods to complete Japanese manga translation, which can handle the problems mentioned above quite well:
 
 1. Scaled Yolo V4 manga balloon detection model, [link](https://github.com/xulihang/ImageTrans-docs/issues/135)
 2. manga OCR based on transformer, [link](https://github.com/xulihang/ImageTrans-docs/issues/140)
 3. manga machine translation based on transformer, [link](https://github.com/xulihang/ImageTrans-docs/issues/108) (only Japanese to English translation is supported. Use other online machine translation services for other languages)
+4. Sort text areas based on detected panels so that machine translation can have a better context, [link](https://github.com/xulihang/ImageTrans-docs/issues/147)
 
 You can learn about how to use them in ImageTrans by checking out the links above.
 
