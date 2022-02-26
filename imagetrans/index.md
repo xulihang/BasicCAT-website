@@ -143,6 +143,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.6.1 (2022/02/26)
+
+* Text areas can now be rotated by dragging the mouse. The image of the text area will be rotated before OCR to improve the recognition rate [#issue157](https://github.com/xulihang/ImageTrans-docs/issues/157)
+* Add progress info to batch panel detection and color detection [#issue153](https://github.com/xulihang/ImageTrans-docs/issues/153)
+* Add the rate setting to TTS. It can read both source text and target text [#issue152](https://github.com/xulihang/ImageTrans-docs/issues/152)
+* Fix a text index problem for the AU3 Photoshop script [#issue160](https://github.com/xulihang/ImageTrans-docs/issues/160)
+
 ### v1.6.0 (2022/02/06)
 
 * Add panel detection for comics. It can be used for sorting text areas and reading on a mobile device by panels [#issue147](https://github.com/xulihang/ImageTrans-docs/issues/147)

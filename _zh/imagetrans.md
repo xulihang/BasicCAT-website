@@ -146,6 +146,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.6.1 (2022/02/26)
+
+* 支持使用鼠标拖动旋转文本框。旋转角度可以用于矫正文字图像，从而提高识别率 [#issue157](https://github.com/xulihang/ImageTrans-docs/issues/157)
+* 补充分镜和颜色检测的批处理进度条 [#issue153](https://github.com/xulihang/ImageTrans-docs/issues/153)
+* TTS语音转文字添加语速设置，并支持同时朗读原文和译文 [#issue152](https://github.com/xulihang/ImageTrans-docs/issues/152)
+* 修复了AU3 Photoshop脚本的文字索引问题 [#issue160](https://github.com/xulihang/ImageTrans-docs/issues/160)
+
 ### v1.6.0 (2022/02/06)
 
 * 新增漫画分镜检测功能，可以用于文字区域排序和移动端按分镜阅读 [#issue147](https://github.com/xulihang/ImageTrans-docs/issues/147)
