@@ -110,6 +110,12 @@ Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also
 
 ## Examples of Translated Comics
 
+Example 1:
+
+Silver polish: <http://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
+
+Example 2 (old):
+
 Come to me, Love —— From issue 41, Boy Loves Girls (Golden age comics).
 
 Browsing Page: <http://comics.xulihang.me/viewer.html?project=come_to_me_love.itp>
