@@ -143,6 +143,16 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.6.2 (2022/03/27)
+
+* Webpage export. The webpage supports panel mode and text to speech
+* Server can now be used as an HTTP server to host the exported webpage in a LAN
+* Vertical text engine: supports line space setting, improves the speed and display of punctuations
+* Add full-page text boxes creation
+* The output folder's name can be now customized [#issue170](https://github.com/xulihang/ImageTrans-docs/issues/170#issuecomment-1058741066)
+* A completion sound effect can be played after the custom workflow is done [#issue171](https://github.com/xulihang/ImageTrans-docs/issues/171)
+* The font size in the tool bar can be input directly  [#issue176](https://github.com/xulihang/ImageTrans-docs/issues/176)
+
 ### v1.6.1 (2022/02/26)
 
 * Text areas can now be rotated by dragging the mouse. The image of the text area will be rotated before OCR to improve the recognition rate [#issue157](https://github.com/xulihang/ImageTrans-docs/issues/157)

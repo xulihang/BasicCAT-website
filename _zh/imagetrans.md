@@ -146,6 +146,16 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.6.2 (2022/03/27)
+
+* 添加导出为网页的功能（支持按分镜阅读、语音朗读）
+* 服务器现可用作HTTP服务器以在局域网内浏览导出的网页
+* 竖排文字引擎：支持行距设置，优化速度和标点的显示
+* 新增添加全图文本框操作
+* 输出文件夹名可设置 [#issue170](https://github.com/xulihang/ImageTrans-docs/issues/170#issuecomment-1058741066)
+* 自定义工作流操作完成后可以播放提示音 [#issue171](https://github.com/xulihang/ImageTrans-docs/issues/171)
+* 字体工具栏的字号现可直接输入 [#issue176](https://github.com/xulihang/ImageTrans-docs/issues/176)
+
 ### v1.6.1 (2022/02/26)
 
 * 支持使用鼠标拖动旋转文本框。旋转角度可以用于矫正文字图像，从而提高识别率 [#issue157](https://github.com/xulihang/ImageTrans-docs/issues/157)
