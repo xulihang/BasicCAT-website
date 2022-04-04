@@ -44,9 +44,6 @@ permalink: /zh/imagetrans/video/
 
 当前有两个服务器版本，版本1依赖于本地的ImageTrans，效果较好，每天只能翻译5次。版本2不依赖于本地的ImageTrans，功能有限，但可以使用自己的API密钥，没有请求次数的限制。
 
-* [服务器链接（版本1）](http://www.xulihang.me:51045/imagetrans.html)
-* [服务器链接（版本2）](http://www.xulihang.me:51045/index.html)
-
 机器翻译和OCR的语言参数需要手动设置，默认方向为中到英。
 
 注意自动翻译的效果并不一定让人满意，需要进行人工精调，支持精调是ImageTrans的一大特点。

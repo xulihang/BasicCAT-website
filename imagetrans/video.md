@@ -43,9 +43,6 @@ The server allows users to use ImageTrans through the web. Params can be adjuste
 
 There are two online versions at present. Version 1 relies on ImageTrans. It has a better result but there is a 5-time-per-day limit. Version 2 does not rely on ImageTrans and has limited functions, but users can use their own API keys and there is also no requests limit.
 
-* [Server (Version 1)](http://www.xulihang.me:51045/imagetrans.html)
-* [Server (Version 2)](http://www.xulihang.me:51045/index.html)
-	
 The language parameters of machine translation and OCR need to be set manually. The default language pair is Chinese to English. 
 
 Please note that the automatic translation result may not be satisfying which needs fine-tuning by human. Fine-tuning support is one of the characteristics of ImageTrans.
