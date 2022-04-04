@@ -126,7 +126,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 获取ImageTrans
 
-请前往FastSpring支付平台自主购买：[链接](https://basiccat.onfastspring.com/)。
+请前往支付平台自主购买：[面包多](https://mianbaoduo.com/o/bread/YpmUmJhs)<sup>新</sup>、[FastSpring](https://basiccat.onfastspring.com/)。
 
 定价：
 
@@ -151,6 +151,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * [帮助完善软件](/zh/imagetrans/how-to-contribute/)
 
 ## 发布日志
+
+### v1.6.3 (2022/04/04)
+
+* 添加对面包多支付方式的支持
+* 新增免费版DeepL（[说明](https://github.com/xulihang/ImageTrans_plugins/tree/master/deeplfreeMT)）
 
 ### v1.6.2 (2022/03/27)
 

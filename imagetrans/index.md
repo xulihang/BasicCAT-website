@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.6.3 (2022/04/04)
+
+* Add a new payment platform: Mianbaoduo
+* Add free DeepL ([https://github.com/xulihang/ImageTrans_plugins/tree/master/deeplfreeMT](learn more))
+
 ### v1.6.2 (2022/03/27)
 
 * Webpage export. The webpage supports panel mode and text to speech
