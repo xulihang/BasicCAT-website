@@ -154,6 +154,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.6.4 (2022/04/17)
+
+* 修复macOS下打开项目文件夹操作无效和旋转鼠标手势过大的问题
+* 字体样式设置操作支持多选，并能立即生效 [#issue185](https://github.com/xulihang/ImageTrans-docs/issues/185)
+* 优化竖排文字引擎的字母和标点显示 [#issue186](https://github.com/xulihang/ImageTrans-docs/issues/186)
+* 修复竖排文字引擎字号过大时文字被裁剪的问题
+
 ### v1.6.3 (2022/04/04)
 
 * 添加对面包多支付方式的支持

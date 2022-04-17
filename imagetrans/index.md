@@ -149,6 +149,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.6.4 (2022/04/17)
+
+* Fix the "open project folder" action and the excessively large rotation mouse cursor for macOS
+* Font style selection can be applied to multiple selected text areas and make effect immediately [#issue185](https://github.com/xulihang/ImageTrans-docs/issues/185)
+* Optimize the display of characters and punctuations for the vertical text engine [#issue186](https://github.com/xulihang/ImageTrans-docs/issues/186)
+* Fix a vertical text engine's problem that the text is cut if the font size is large
+
 ### v1.6.3 (2022/04/04)
 
 * Add a new payment platform: Mianbaoduo
