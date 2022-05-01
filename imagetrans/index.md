@@ -149,6 +149,14 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.6.5 (2022/05/01)
+
+* For cases like translating Japanese manga to English, where the original text is vertically arranged while the target text is horizontal, add an option to adjust the text area's position and size to fit horizontal display [#issue190](https://github.com/xulihang/ImageTrans-docs/issues/190#issuecomment-1107365256)
+* Add Speak buttons under text editing areas (can be hidden) [#issue191](https://github.com/xulihang/ImageTrans-docs/issues/191)
+* Add options to set the default mask generator and image inpainter [#issue192](https://github.com/xulihang/ImageTrans-docs/issues/192#issuecomment-1114153046)
+* Call mask generator and image inpainter to process text areas instead of the whole image to improve speed
+* Other minor improvements
+
 ### v1.6.4 (2022/04/17)
 
 * Fix the "open project folder" action and the excessively large rotation mouse cursor for macOS
