@@ -149,6 +149,15 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.0 (2022/05/22)
+
+* Add a manager for original images without text and pure-text images [#issue199](https://github.com/xulihang/ImageTrans-docs/issues/199)
+* AutoCorrect can be enabled for OCR [#issue199](https://github.com/xulihang/ImageTrans-docs/issues/199#issuecomment-1126957556)
+* Fix a problem of importing XLIFF [#issue207](https://github.com/xulihang/ImageTrans-docs/issues/207)
+* Translation can be imported from a tab-delimitted txt file [#issue207](https://github.com/xulihang/ImageTrans-docs/issues/207)
+* The background of a font style can be set to transparent [#issue208](https://github.com/xulihang/ImageTrans-docs/issues/208)
+* Other bugfixes and improvements [#issue203](https://github.com/xulihang/ImageTrans-docs/issues/203)
+
 ### v1.6.5 (2022/05/01)
 
 * For cases like translating Japanese manga to English, where the original text is vertically arranged while the target text is horizontal, add an option to adjust the text area's position and size to fit horizontal display [#issue190](https://github.com/xulihang/ImageTrans-docs/issues/190#issuecomment-1107365256)
