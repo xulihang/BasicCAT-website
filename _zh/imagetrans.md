@@ -10,7 +10,7 @@ ImageTrans是一款计算机辅助图片文字转录与翻译工具，能够使�
 
 ![](/album/imagetrans_zh.jpg)
 
-ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图片阅读器、文字转录器和深度学习标注器使用。
+ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图片阅读器、文字转录器、截图OCR翻译器和深度学习标注器使用。
 
 ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
@@ -153,6 +153,14 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * [帮助完善软件](/zh/imagetrans/how-to-contribute/)
 
 ## 发布日志
+
+### v1.7.1 (2022/05/29)
+
+* 字体修改UX优化 [#issue212](https://github.com/xulihang/ImageTrans-docs/issues/212)
+* 快捷键优化 [#issue205](https://github.com/xulihang/ImageTrans-docs/issues/205#issuecomment-1135449173)
+* 新增右键刷新功能，可以用于查看翻译模式下过快切换图片报错的问题 [#issue211](https://github.com/xulihang/ImageTrans-docs/issues/211)
+* 新的图像修复插件：Lama Inpainting [#issue216](https://github.com/xulihang/ImageTrans-docs/issues/216)
+
 
 ### v1.7.0 (2022/05/22)
 

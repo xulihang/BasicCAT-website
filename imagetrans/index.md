@@ -9,7 +9,7 @@ ImageTrans is a computer-aided image and comic translation tool. It can automati
 
 ![](/album/imagetrans.jpg)
 
-ImageTrans can be used not only as an image translator, but also an image reader, an image transcriber and a deep learning annotator.
+ImageTrans can be used not only as an image translator, but also an image reader, an image transcriber, a screenshot OCR and translator, and a deep learning annotator.
 
 ImageTrans is the result of the thesis for my master's degree: [Design and Implementation of a Computer-Aided Comics Translation Tool](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool).[](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)
 
@@ -148,6 +148,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 * [Blog](/tagged/#imagetrans)
 
 ## Release Notes
+
+### v1.7.1 (2022/05/29)
+
+* Font settings' UX optimization [#issue212](https://github.com/xulihang/ImageTrans-docs/issues/212)
+* Shortcut's optimization [#issue205](https://github.com/xulihang/ImageTrans-docs/issues/205#issuecomment-1135449173)
+* Add refresh to the context menu. It can help solve the problem caused by switching images too fast under translation mode [#issue211](https://github.com/xulihang/ImageTrans-docs/issues/211)
+* New image inpainting plugin：Lama Inpainting [#issue216](https://github.com/xulihang/ImageTrans-docs/issues/216)
 
 ### v1.7.0 (2022/05/22)
 
