@@ -149,6 +149,10 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.2 (2022/06/03)
+
+New preferences setting: temp folder for HTTP. It is to solve the "Access is Denied" problem some users encountered [#issue218](https://github.com/xulihang/ImageTrans-docs/issues/218)
+
 ### v1.7.1 (2022/05/29)
 
 * Font settings' UX optimization [#issue212](https://github.com/xulihang/ImageTrans-docs/issues/212)

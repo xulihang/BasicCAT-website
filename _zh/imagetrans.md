@@ -154,6 +154,10 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.7.2 (2022/06/03)
+
+新的偏好设置：临时网络请求文件夹，用于解决部分用户遇到的“拒绝访问”问题 [#issue218](https://github.com/xulihang/ImageTrans-docs/issues/218)
+
 ### v1.7.1 (2022/05/29)
 
 * 字体修改UX优化 [#issue212](https://github.com/xulihang/ImageTrans-docs/issues/212)
