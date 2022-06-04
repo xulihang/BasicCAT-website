@@ -4,7 +4,7 @@ layout: page
 permalink: /zh/imagetrans/faq/
 ---
 
-ImageTrans 常见问题整理
+ImageTrans 常见问题整理，更多问题可在[这里](https://github.com/xulihang/ImageTrans-docs/issues)搜索。
 
 1. 软件支持哪些语言？
 
@@ -18,11 +18,11 @@ ImageTrans 常见问题整理
 
 2. 是否支持竖排日语？
 
-    搜狗、有道、百度精确版、谷歌、tesseract和Windows 10自带OCR都能识别竖排日语。ImageTrans还提供竖排图像转横排的功能，让只支持识别横排日语的OCR引擎也能识别竖排日语。
+    有道、百度、谷歌、mangaOCR、tesseract和Windows 10自带OCR都能识别竖排日语。ImageTrans还提供竖排图像转横排的功能，让只支持识别横排日语的OCR引擎也能识别竖排日语。
 
 3. 个人用途版和商业用途版有什么区别？
 
-    目前两者在功能上并没有区别。商业用途版主要针对用于商业翻译工作的公司。
+    目前两者在功能上并没有区别。商业用途版主要针对用于商业翻译工作的公司，购买后可以用于50台设备。
 
 4. 这个价格是每个月的费用还是一次性买断的费用？
 
@@ -48,11 +48,11 @@ ImageTrans 常见问题整理
 
     下面是目前支持的在线服务的列表
 
-    OCR：百度、搜狗、有道、腾讯、谷歌、微软Azure、OCRSPACE、ABBYY Cloud、Clova
+    OCR：百度、有道、腾讯、谷歌、微软Azure、OCRSPACE、ABBYY Cloud、Clova
 
     机器翻译：百度、有道、腾讯、小牛、谷歌、微软、彩云小译、云译、Papago
 
-    ImageTrans默认包含了百度、Azure、OCRSPACE等OCR服务的密钥，以及百度、腾讯、小牛和谷歌等机器翻译服务的密钥。
+    ImageTrans默认包含了百度、Azure、OCRSPACE等OCR服务的密钥，以及百度、腾讯、小牛等机器翻译服务的密钥。
 
     另外也支持离线的OCR和机器翻译，见下一个问题。
 
@@ -62,9 +62,9 @@ ImageTrans 常见问题整理
     
     软件可以离线翻译图片，并支持离线版OCR和机器翻译。
 
-    离线版OCR：tesseract、Windows 10自带OCR、ImageTrans_OCR、PaddleOCR、EasyOCR
+    离线版OCR：tesseract、mangaOCR、Windows 10自带OCR、PaddleOCR、EasyOCR
 
-    离线版机器翻译：OPUS-CAT、eztrans
+    离线版机器翻译：OPUS-CAT、eztrans、Sugoi
     
     在线的OCR和机器翻译，尤其是机器翻译，往往效果更好，支持的语种也更全面，但也存在需要联网、对请求有限制等问题。
 
@@ -74,19 +74,15 @@ ImageTrans 常见问题整理
 
     如果是OCR没有结果，也可能是OCR引擎没有识别出文字。
 
-11. 为什么显示翻译版本时，文字非常小？
-
-    ImageTrans能够根据文本框面积自动计算适合的文字显示大小，但对于部分字体，这一功能会失效。这时需要添加字体样式，换用支持的字体或者手动调整文字大小。
-
-12. 为什么文字没有完全抹除？
+11. 为什么文字没有完全抹除？
 
     文本框需要完全覆盖文字，并且离文字边缘存在一定间距。如果文字背景复杂，往往还需要手动处理。
 
-13. 软件有英文界面吗？
+12. 软件有英文界面吗？
 
     软件目前支持英文和中文两种界面语言。
 	
-14. 为什么文字行没有被合并？
+13. 为什么文字行没有被合并？
 
 	有多种原因。
 
