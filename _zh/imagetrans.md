@@ -154,6 +154,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.7.3 (2022/07/03)
+
+* 掩膜画笔编辑模式支持调整半径
+* 修复没有检测分镜时导出网页失败的问题
+* 更新JS版Photoshop脚本以支持PSB格式文件
+
 ### v1.7.2 (2022/06/03)
 
 新的偏好设置：临时网络请求文件夹，用于解决部分用户遇到的“拒绝访问”问题 [#issue218](https://github.com/xulihang/ImageTrans-docs/issues/218)

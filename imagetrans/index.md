@@ -149,6 +149,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.3 (2022/07/03)
+
+* It is now possible to adjust the radius of the mask editor's pen mode
+* Fix a bug that when there is no panels detected, exporting to a web page will fail
+* Update the JS Photoshop script file to support PSB files
+
 ### v1.7.2 (2022/06/03)
 
 New preferences setting: temp folder for HTTP. It is to solve the "Access is Denied" problem some users encountered [#issue218](https://github.com/xulihang/ImageTrans-docs/issues/218)
