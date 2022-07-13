@@ -8,15 +8,10 @@ permalink: /zh/donation/
 
 支付方式：
 
-
-1. FastSpring
-
-	<https://basiccat.onfastspring.com/donation>
-	
-2. 支付宝
+1. 支付宝
 
 	![](/album/alipay.jpg)
 	
-3. Paypal
+2. Paypal
 
 	<https://paypal.me/xulihang>

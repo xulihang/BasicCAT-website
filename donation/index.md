@@ -7,15 +7,10 @@ Consider supporting me for developing BasicCAT and other translation tools by ma
 
 Paying method:
 
-
-1. FastSpring
-
-	<https://basiccat.onfastspring.com/donation>
-	
-2. Alipay
+1. Alipay
 
 	![](/album/alipay.jpg)
 	
-3. Paypal
+2. Paypal
 
 	<https://paypal.me/xulihang>
