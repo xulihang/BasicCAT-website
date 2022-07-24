@@ -152,6 +152,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.7.4 (2022/07/24)
+
+* 竖排引擎支持从左到右排列文字 [#issue242](https://github.com/xulihang/ImageTrans-docs/issues/242)
+* 新的偏好设置：是否自动保存OCR结果到剪贴板 [#issue169](https://github.com/xulihang/ImageTrans-docs/issues/169)
+
 ### v1.7.3 (2022/07/03)
 
 * 掩膜画笔编辑模式支持调整半径

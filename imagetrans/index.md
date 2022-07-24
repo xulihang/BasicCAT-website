@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.4 (2022/07/24)
+
+* New text direction option: align text vertically from left to right [#issue242](https://github.com/xulihang/ImageTrans-docs/issues/242)
+* New preference setting: save OCR results to clipboard [#issue169](https://github.com/xulihang/ImageTrans-docs/issues/169)
+
 ### v1.7.3 (2022/07/03)
 
 * It is now possible to adjust the radius of the mask editor's pen mode
