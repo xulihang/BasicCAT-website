@@ -114,7 +114,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 示例1：
 
-银器抛光剂：<http://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
+银器抛光剂：<https://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
 
 示例2（旧版）：
 

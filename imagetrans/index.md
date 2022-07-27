@@ -112,7 +112,7 @@ Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also
 
 Example 1:
 
-Silver polish: <http://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
+Silver polish: <https://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
 
 Example 2 (old):
 
