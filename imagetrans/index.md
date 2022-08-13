@@ -149,6 +149,10 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.5 (2022/08/13)
+
+Line spacing setting is enabled for horizontal text [#issue244](https://github.com/xulihang/ImageTrans-docs/issues/244)
+
 ### v1.7.4 (2022/07/24)
 
 * New text direction option: align text vertically from left to right [#issue242](https://github.com/xulihang/ImageTrans-docs/issues/242)
