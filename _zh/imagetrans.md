@@ -154,6 +154,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.7.7 (2022/08/27)
+
+* 使用透视变换更准确地获取旋转区域图像
+* 其它bug修复 [#issue246](https://github.com/xulihang/ImageTrans-docs/issues/246) [#issue248](https://github.com/xulihang/ImageTrans-docs/issues/248)
+
 ### v1.7.6 (2022/08/20)
 
 自动沿用项目之前使用的OCR引擎和语言 [#issue245](https://github.com/xulihang/ImageTrans-docs/issues/245)

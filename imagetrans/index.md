@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.7 (2022/08/27)
+
+* Use perspective transformation to get the corrected image of a rotated text area.
+* Other bugfixes [#issue246](https://github.com/xulihang/ImageTrans-docs/issues/246) [#issue248](https://github.com/xulihang/ImageTrans-docs/issues/248)
+
 ### v1.7.6 (2022/08/20)
 
 The OCR engine and language used last time will be set as the project's default. [#issue245](https://github.com/xulihang/ImageTrans-docs/issues/245)
