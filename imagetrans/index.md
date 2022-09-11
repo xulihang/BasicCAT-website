@@ -149,6 +149,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.8 (2022/09/11)
+
+* Fix a problem that if the image's width is too large, the mask editor fails to save the mask image [#issue266](https://github.com/xulihang/ImageTrans-docs/issues/266)
+* Improve the settings of font styles [#issue256](https://github.com/xulihang/ImageTrans-docs/issues/256)
+* Improve the drawing mode of mask editor [#issue261](https://github.com/xulihang/ImageTrans-docs/issues/261)
+* New font style option: kerning (only valid for vertical text) [#issue224](https://github.com/xulihang/ImageTrans-docs/issues/224)
+
 ### v1.7.7 (2022/08/27)
 
 * Use perspective transformation to get the corrected image of a rotated text area.
