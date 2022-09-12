@@ -149,6 +149,10 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.9 (2022/09/12)
+
+Improve the behavior of the vertical text engine using different fonts [#issue271](https://github.com/xulihang/ImageTrans-docs/issues/271)
+
 ### v1.7.8 (2022/09/11)
 
 * Fix a problem that if the image's width is too large, the mask editor fails to save the mask image [#issue266](https://github.com/xulihang/ImageTrans-docs/issues/266)
