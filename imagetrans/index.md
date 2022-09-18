@@ -149,6 +149,10 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.11 (2022/09/18)
+
+Fix a data exporting bug which was introduced in v1.7.8 [#issue279](https://github.com/xulihang/ImageTrans-docs/issues/279)
+
 ### v1.7.10 (2022/09/18)
 
 * Shortcuts on macOS use the Command key instead of the Control key by default [#issue277](https://github.com/xulihang/ImageTrans-docs/issues/277)
