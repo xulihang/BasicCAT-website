@@ -154,6 +154,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.7.10 (2022/09/18)
+
+* macOS上的快捷键优先使用Command键 [#issue277](https://github.com/xulihang/ImageTrans-docs/issues/277)
+* 优化掩膜编辑器的可用性 [#issue261](https://github.com/xulihang/ImageTrans-docs/issues/261)
+* 项目设置中添加竖排文字引擎的自定义设置 [#issue271](https://github.com/xulihang/ImageTrans-docs/issues/271#issuecomment-1246208024)
+
 ### v1.7.9 (2022/09/12)
 
 改善竖排引擎在不同字体下的表现 [#issue271](https://github.com/xulihang/ImageTrans-docs/issues/271)

@@ -149,6 +149,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.7.10 (2022/09/18)
+
+* Shortcuts on macOS use the Command key instead of the Control key by default [#issue277](https://github.com/xulihang/ImageTrans-docs/issues/277)
+* Improve the usablity of the mask editor [#issue261](https://github.com/xulihang/ImageTrans-docs/issues/261)
+* Add vertical text engine customization settings in project settings [#issue271](https://github.com/xulihang/ImageTrans-docs/issues/271#issuecomment-1246208024)
+
+
 ### v1.7.9 (2022/09/12)
 
 Improve the behavior of the vertical text engine using different fonts [#issue271](https://github.com/xulihang/ImageTrans-docs/issues/271)
