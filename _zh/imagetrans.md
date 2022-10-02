@@ -154,6 +154,14 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.8.0 (2022/10/02)
+
+* 支持导出图片为PNG [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)
+* 如果图片格式为PNG，去除文字图和成品图的格式也使用PNG。其它格式则默认使用JPG [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)
+* 项目设置里新增默认文本框大小的设置 [#issue290](https://github.com/xulihang/ImageTrans-docs/issues/290)
+* 支持用快捷键调整多个文字区域的位置 [#issue285](https://github.com/xulihang/ImageTrans-docs/issues/285)
+
+
 ### v1.7.11 (2022/09/18)
 
 修复了一个v1.7.8引入的数据导出的bug [#issue279](https://github.com/xulihang/ImageTrans-docs/issues/279)

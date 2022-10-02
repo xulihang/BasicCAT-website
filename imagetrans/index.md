@@ -149,6 +149,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.0 (2022/10/02)
+
+* Add an option to export to PNG [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)
+* If the image's format is PNG, use PNG for the text-removed image and the output image. JPEG will be used for other formats [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)
+* Add a project setting to set the default text box size [#issue290](https://github.com/xulihang/ImageTrans-docs/issues/290)
+* It is possible to adjust multiple textboxes' positions using shortcuts [#issue285](https://github.com/xulihang/ImageTrans-docs/issues/285)
+
 ### v1.7.11 (2022/09/18)
 
 Fix a data exporting bug which was introduced in v1.7.8 [#issue279](https://github.com/xulihang/ImageTrans-docs/issues/279)
