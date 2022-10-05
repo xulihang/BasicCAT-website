@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.1 (2022/10/05)
+
+* Fix a problem that if the channel number of a png image is not 4, the inpainting will fail
+* Fix the logic of the overlay mask checkbox
+
 ### v1.8.0 (2022/10/02)
 
 * Add an option to export to PNG [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)

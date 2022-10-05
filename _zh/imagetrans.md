@@ -154,6 +154,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.8.1 (2022/10/05)
+
+* 修复通道数不为4的png图像去除文字失败的问题
+* 修复“添加覆盖图层”多选框的逻辑
+
 ### v1.8.0 (2022/10/02)
 
 * 支持导出图片为PNG [#issue295](https://github.com/xulihang/ImageTrans-docs/issues/295)
