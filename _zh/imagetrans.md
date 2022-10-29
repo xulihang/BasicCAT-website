@@ -154,6 +154,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.8.2 (2022/10/29)
+
+* 排版模式下，拖拽文本框时隐藏文本框的边框（可以在偏好设置里取消隐藏） [#issue314](https://github.com/xulihang/ImageTrans-docs/issues/314)
+* 新的项目设置选项：读取子文件夹（默认开启） [#issue304](https://github.com/xulihang/ImageTrans-docs/issues/304)
+
+
 ### v1.8.1 (2022/10/05)
 
 * 修复通道数不为4的png图像去除文字失败的问题

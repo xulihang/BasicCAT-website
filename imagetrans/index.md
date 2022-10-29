@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.2 (2022/10/29)
+
+* In typesetting mode, hide the borders of text boxes when they are being moved (You can disable this feature in Preferences) [#issue314](https://github.com/xulihang/ImageTrans-docs/issues/314)
+* New project setting: read subfolders (enabled by default) [#issue304](https://github.com/xulihang/ImageTrans-docs/issues/304)
+
 ### v1.8.1 (2022/10/05)
 
 * Fix a problem that if the channel number of a png image is not 4, the inpainting will fail
