@@ -8,7 +8,7 @@
    {% assign sitetitle=site.title %}
   {% endif %}
 
-  <title>{% if page.title %}{{ " - " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
+  <title>{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
   
   {% if page.url contains '/zh/' %}
    {% assign description=site.data.zh.text.description %}
