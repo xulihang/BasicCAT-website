@@ -100,7 +100,7 @@ The software can use tools and algorithms like Sickzil-Machine, binarization, Pa
 
 ### Cross-platform
 
-Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also run as a server.
+Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also run as a server for online usage.
 
 ### Others
 

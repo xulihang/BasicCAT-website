@@ -102,7 +102,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 跨平台
 
-和BasicCAT一样，ImageTrans是跨平台的（Windows、macOS、Linux）。此外亦能以服务器的形式运行。
+和BasicCAT一样，ImageTrans是跨平台的（Windows、macOS、Linux）。此外亦能以服务器的形式在线运行。
 
 ### 其它功能
 
