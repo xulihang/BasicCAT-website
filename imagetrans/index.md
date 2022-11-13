@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.3 (2022/11/13)
+
+* New feature: set the font style based on the text color detected [#issue322](https://github.com/xulihang/ImageTrans-docs/issues/322)
+* ScreenReader: Display the screenshot in 100% ratio
+
 ### v1.8.2 (2022/10/29)
 
 * In typesetting mode, hide the borders of text boxes when they are being moved (You can disable this feature in Preferences) [#issue314](https://github.com/xulihang/ImageTrans-docs/issues/314)
