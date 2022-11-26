@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.4 (2022/11/26)
+
+* The shortcut keys can be customized [#issue323](https://github.com/xulihang/ImageTrans-docs/issues/323)
+* UI improvements
+
 ### v1.8.3 (2022/11/13)
 
 * New feature: set the font style based on the text color detected [#issue322](https://github.com/xulihang/ImageTrans-docs/issues/322)
