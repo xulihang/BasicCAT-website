@@ -632,7 +632,7 @@ New option to convert vertically aligned Japanese text to horizontally aligned f
 * RichText support
 * XLIFF import and export
 
-### v1.0.0
+### v1.0.0 (2020/03/13)
 
 Released.
 
