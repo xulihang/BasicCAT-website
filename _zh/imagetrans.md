@@ -14,6 +14,8 @@ ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图�
 
 ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
+[获取ImageTrans](#获取imagetrans)
+
 ## 软件特色
 
 ### 准确定位文字区域
