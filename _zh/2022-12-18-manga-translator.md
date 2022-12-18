@@ -17,6 +17,19 @@ ImageTrans是通用的图片翻译软件，稍加设置我们可以用它来翻�
 7. 点击查看翻译，可以看到原文被抹除并用译文回填的成品图。
 8. 如果需要竖直排版，可以在项目设置-字体样式里添加一个默认的字体样式，并设置方向为竖向。
 
+## 翻译示例
+
+原图：
+
+![日语原图](/album/manga-translator/japanese.jpg)
+
+翻译的版本：
+
+![中文翻译版本](/album/manga-translator/chinese.jpg)
+
+图片来源：<https://github.com/mantra-inc/open-mantra-dataset>
+
+
 ## 视频教程
 
 [使用ImageTrans翻译日语漫画](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)

@@ -19,6 +19,18 @@ Here are the steps to translate manga images.
 7. Check the "Translated" checkbox and you can see the translated image with the original text removed and the translation injected.
 8. (Optional) Since the Japanese is in vertical layout, to improve the English typesetting, you can enable the option to convert vertically aligned text areas for horizontal text in the project.
 
+## Example
+
+Original:
+
+![Japanese manga](/album/manga-translator/japanese.jpg)
+
+Translated:
+
+![English translation](/album/manga-translator/english.jpg)
+
+Image source: <https://github.com/mantra-inc/open-mantra-dataset>
+
 ## Video Tutorial
 
 * [Japanese to English](https://www.youtube.com/watch?v=S_6FF-5zTns)
