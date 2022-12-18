@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+{% if page.url contains '/zh/' %}
+  {% assign lang='zh-CN'}
+{% else %}
+  {% assign lang='en'}
+{% endif %}
+<html lang="{{lang}}">
   {% include head.html %}
   <body>
       {% if page.url contains '/zh/' %}
