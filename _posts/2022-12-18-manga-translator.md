@@ -22,6 +22,7 @@ Here are the steps to translate manga Images.
 
 * [Japanese to English](https://www.youtube.com/watch?v=S_6FF-5zTns)
 * [Japanese to Chinese](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
+* [Automated](https://www.youtube.com/watch?v=gidM4F7pBgY)
 
 ## Related
 
