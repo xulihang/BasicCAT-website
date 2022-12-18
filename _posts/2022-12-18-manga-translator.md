@@ -8,7 +8,7 @@ tags: imagetrans
 
 ImageTrans is an image translation software which supports all kinds of images. We can use it as a manga translator, as well. 
 
-Here are the steps to translate manga Images.
+Here are the steps to translate manga images.
 
 1. Put all the images in a folder.
 2. Open Imagetrans and create a new project. You can configure the language pair of the project, like Japanese to English.
