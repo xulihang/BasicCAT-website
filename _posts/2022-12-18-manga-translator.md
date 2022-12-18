@@ -1,0 +1,29 @@
+---
+date: 2022-12-18 18:45:50+08:00
+layout: post
+title: How to Translate manga with ImageTrans
+categories: blog
+tags: imagetrans
+---
+
+ImageTrans is an image translation tool which supports all kinds of images. We can use it as a manga translator, as well. 
+
+Here are the steps to translate manga Images.
+
+1. Put all the images in a folder.
+2. Open Imagetrans and create a new project. You can configure the language pair of the project like Japanese to English.
+3. Import the images in the folder.
+4. Use balloon detection or heuristic text detection to detect all the text areas.
+5. Select a Japanese OCR, like mangaOCR, to extract the text of all the text areas.
+6. Select a machine translation engine, like Baidu or Google, to translate all the text areas.
+7. Check the "Translated" checkbox and you can see the translated image with the original text removed and the translation injected.
+
+## Video Tutorial
+
+* [Japanese to English](https://www.youtube.com/watch?v=S_6FF-5zTns)
+* [Japanese to Chinese](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
+
+## Related
+
+[The Best Way to Translate manga at present](https://www.basiccat.org/best-practice-manga-ocr-and-translation/)
+
