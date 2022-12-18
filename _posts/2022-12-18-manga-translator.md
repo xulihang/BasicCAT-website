@@ -17,6 +17,7 @@ Here are the steps to translate manga images.
 5. Select a Japanese OCR, like mangaOCR, to extract the text of all the text areas.
 6. Select a machine translation engine, like Baidu or Google, to translate all the text areas.
 7. Check the "Translated" checkbox and you can see the translated image with the original text removed and the translation injected.
+8. (Optional) Since the Japanese is in vertical layout, to improve the English typesetting, you can enable the option to convert vertically aligned text areas for horizontal text in the project.
 
 ## Video Tutorial
 
