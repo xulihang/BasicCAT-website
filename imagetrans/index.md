@@ -149,6 +149,15 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.8.5 (2023/01/08)
+
+* New OCR plugin：macOS's built-in OCR [#issue341](https://github.com/xulihang/ImageTrans-docs/issues/341)
+* Support pasting an image with its path
+* Use `file` to detect whether an image's format is WebP [#issue338](https://github.com/xulihang/ImageTrans-docs/issues/338)
+* Fix a bug of pasting an image with data URL
+* Fix a bug that the grayscale text mask is passed instead of the original text mask when using third-party inpainters as the default
+* Add an option to disable AutoCorrect when inputting [#issue334](https://github.com/xulihang/ImageTrans-docs/issues/334)
+
 ### v1.8.4 (2022/11/26)
 
 * The shortcut keys can be customized [#issue323](https://github.com/xulihang/ImageTrans-docs/issues/323)
@@ -324,7 +333,7 @@ New preferences setting: temp folder for HTTP. It is to solve the "Access is Den
 ### v1.5.0 (2021/11/14)
 
 * Support manual fonts installing [issue 100](https://github.com/xulihang/ImageTrans-docs/issues/100)
-* Add a compatibility input helper based on Swing JTextArea to serve as a workaround for inputing Tibetan in JavaFX's TextArea [issue 99](https://github.com/xulihang/ImageTrans-docs/issues/99)
+* Add a compatibility input helper based on Swing JTextArea to serve as a workaround for inputting Tibetan in JavaFX's TextArea [issue 99](https://github.com/xulihang/ImageTrans-docs/issues/99)
 * New project setting: Text Editor's font
 * Other bug fixes
 
