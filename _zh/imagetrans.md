@@ -161,7 +161,7 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 * 通过file命令检测图片是否为WebP格式 [#issue338](https://github.com/xulihang/ImageTrans-docs/issues/338)
 * 修复data URL链接图片加载失败的问题
 * 修复第三方图像修复方法设置为默认方法时传了文字掩膜的灰度图而不是原图的问题
-* 添加是否在键入时自动更正的选项 [#issue334](https://github.com/xulihang/ImageTrans-docs/issues/334)
+* 添加是否在键入时自动更正的选项
 
 
 ### v1.8.4 (2022/11/26)
