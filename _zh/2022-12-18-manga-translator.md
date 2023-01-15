@@ -32,7 +32,8 @@ ImageTrans是通用的图片翻译软件，稍加设置我们可以用它来翻�
 
 ## 视频教程
 
-[使用ImageTrans翻译日语漫画](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
+* [使用ImageTrans翻译日语漫画](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
+* [气泡检测+mangaOCR演示](https://github.com/xulihang/ImageTrans-docs/issues/348#issuecomment-1383091204)
 
 ## 相关链接
 
