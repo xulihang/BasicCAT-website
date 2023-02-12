@@ -149,6 +149,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.0 (2023/02/12)
+
+* Rich text support (based on BBCode) [#issue194](https://github.com/xulihang/ImageTrans-docs/issues/194#issuecomment-1426964710)
+* Fix issues related to network requests, pressing Control to select multiple text boxes and text area's confidence
+
 ### v1.8.5 (2023/01/08)
 
 * New OCR plugin：macOS's built-in OCR [#issue341](https://github.com/xulihang/ImageTrans-docs/issues/341)
