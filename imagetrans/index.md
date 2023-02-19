@@ -149,6 +149,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.1 (2023/02/19)
+
+* Fix a bug that the BBCode is not ignored when measuring the height of the text
+* Fix a bug that the BBCode is not effective when the text is set to capital
+* Change the default JRE to Liberica JRE 11
+
 ### v1.9.0 (2023/02/12)
 
 * Rich text support (based on BBCode) [#issue194](https://github.com/xulihang/ImageTrans-docs/issues/194#issuecomment-1426964710)

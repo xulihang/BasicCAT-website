@@ -154,6 +154,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.1 (2023/02/19)
+
+* 修复计算横排文字高度时没有忽略BBCode的问题
+* 修复文字样式设置为大写时BBCode失效的问题
+* 默认的JRE改用Liberica JRE 11
+
 ### v1.9.0 (2023/02/12)
 
 * 支持富文本（基于BBCode） [#issue194](https://github.com/xulihang/ImageTrans-docs/issues/194#issuecomment-1426964710)
