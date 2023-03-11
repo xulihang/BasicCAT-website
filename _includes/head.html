@@ -10,13 +10,11 @@
 
   <title>{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
   
-  {% if page.url contains '/zh/' %}
-   {% assign description=site.data.zh.text.description %}
-  {% else %}
-   {% assign description=site.data.text.description %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
   {% endif %}
   
-  <meta name="description" content="{{ description }}">
+  
   {% include google_analytics.html %}
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
