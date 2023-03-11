@@ -149,6 +149,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.2 (2023/03/05)
+
+* Fix a problem that the target text is not joined after merging text areas
+* Add a project setting to generate the text mask and text-removed images by text areas
+* Save scene text detection's text mask if provided [#issue370](https://github.com/xulihang/ImageTrans-docs/issues/370)
+
 ### v1.9.1 (2023/02/19)
 
 * Fix a bug that the BBCode is not ignored when measuring the height of the text
