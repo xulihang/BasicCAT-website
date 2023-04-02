@@ -154,6 +154,15 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.3 (2023/04/02)
+
+* 支持导出为PDF [#issue366](https://github.com/xulihang/ImageTrans-docs/issues/366)
+* 新的机器翻译插件：[ChatGPT](https://github.com/xulihang/ImageTrans-docs/issues/375)、[Yandex](https://github.com/xulihang/ImageTrans-docs/issues/386)
+* 新增富文本代码编辑器 [#issue390](https://github.com/xulihang/ImageTrans-docs/issues/390)
+* 富文本支持仿粗体、仿斜体、字体名称和字体大小的设置 [#issue389](https://github.com/xulihang/ImageTrans-docs/issues/389)
+* 新的竖排文字引擎设置：字符替换 [#issue388](https://github.com/xulihang/ImageTrans-docs/issues/388)
+* 选中多个文本框时不执行单个文本框的相关操作
+
 ### v1.9.2 (2023/03/05)
 
 * 修复合并区域时译文没有被合并的问题

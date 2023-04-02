@@ -149,6 +149,15 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.3 (2023/04/02)
+
+* New export option: PDF [#issue366](https://github.com/xulihang/ImageTrans-docs/issues/366)
+* New machine translation plugins: [ChatGPT](https://github.com/xulihang/ImageTrans-docs/issues/375), [Yandex](https://github.com/xulihang/ImageTrans-docs/issues/386)
+* Add rich text editor [#issue390](https://github.com/xulihang/ImageTrans-docs/issues/390)
+* Add support for faux bold, faux italic, font name and font size for rich text [#issue389](https://github.com/xulihang/ImageTrans-docs/issues/389)
+* New setting for vertical text engine: characters replacing [#issue388](https://github.com/xulihang/ImageTrans-docs/issues/388)
+* When multiple textareas are selected, some operations of one textarea are skipped.
+
 ### v1.9.2 (2023/03/05)
 
 * Fix a problem that the target text is not joined after merging text areas
