@@ -151,6 +151,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.4 (2023/04/05)
+
+* Fix a problem that faux italic does not have a correct height for perspective transform when line space is bigger than 0
+* It is now possible to adjust the stroke width for faux bold and the obliquity for faux italic
+
 ### v1.9.3 (2023/04/02)
 
 * New export option: PDF [#issue366](https://github.com/xulihang/ImageTrans-docs/issues/366)

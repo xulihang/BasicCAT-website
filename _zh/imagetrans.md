@@ -156,6 +156,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.4 (2023/04/05)
+
+* 修复了仿斜体在设置了行距时透视变换高度不对的问题
+* 仿粗体和仿斜体可以设置加粗和倾斜的程度
+
 ### v1.9.3 (2023/04/02)
 
 * 支持导出为PDF [#issue366](https://github.com/xulihang/ImageTrans-docs/issues/366)
