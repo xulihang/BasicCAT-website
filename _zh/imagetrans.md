@@ -156,6 +156,14 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.5 (2023/05/01)
+
+* 更新JavaScript版Photoshop脚本以支持富文本
+* 预翻译支持调用翻译记忆进行完全匹配
+* 新的右键菜单项目：清除译文位置 [#issue393](https://github.com/xulihang/ImageTrans-docs/issues/393)
+* 将主题设置应用于所有窗口
+* 字体样式设置的可用性优化
+
 ### v1.9.4 (2023/04/05)
 
 * 修复了仿斜体在设置了行距时透视变换高度不对的问题

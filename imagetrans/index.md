@@ -151,6 +151,14 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.5 (2023/05/01)
+
+* Update the Photoshop script in JavaScript to support rich text
+* Pretranslation can use translation memory for exact matching
+* New context menu item: Clear target position [#issue393](https://github.com/xulihang/ImageTrans-docs/issues/393)
+* Apply the theme for all forms
+* Usability optimization of font settings
+
 ### v1.9.4 (2023/04/05)
 
 * Fix a problem that faux italic does not have a correct height for perspective transform when line space is bigger than 0
