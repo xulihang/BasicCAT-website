@@ -40,7 +40,7 @@ Translate the following into {langcode}: {source}
 You can define your own prompt  in your preferences, such as the following Chinese version:
 
 ```
-翻译下述内容至中文：{source}
+缈昏瘧涓嬭堪鍐呭鑷充腑鏂囷細{source}
 ```
 
 ## Limitation
