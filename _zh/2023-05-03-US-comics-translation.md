@@ -56,4 +56,4 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
    ![翻译版](/album/us-comics/bold-italic-transaltion-example.jpg)
    
    
-7. 翻译完成后导出成品图。
+7. 翻译完成后导出成品图。如果需要使用Photoshop生成翻译版图片，可以使用脚本生成PSD文件。

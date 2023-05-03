@@ -56,4 +56,4 @@ Translated version:
    ![Target](/album/us-comics/bold-italic-transaltion-example.jpg)
 
 
-7. Generate the translated image after translation.
+7. Generate the translated image after translation. You can generate a Photoshop's PSD file if you need to use Photoshop to render the translated image.
