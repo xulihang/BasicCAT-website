@@ -38,7 +38,7 @@ Translated version:
 
    Hint:
 
-   We will encounter a lot of names in American comic translation, such as Janet, whose machine translation in Chinese is ¡°ÕäÄİÌØ¡±. If we want to translate to ¡°Õ²ÄáÌØ¡±, we can add an auto-correct rule that replaces ¡°ÕäÄİ¡± with ¡°Õ²Äá¡±.
+   We will encounter a lot of names in American comic translation, such as Janet, whose machine translation in Chinese is â€œçå¦®ç‰¹â€. If we want to translate to â€œè©¹å°¼ç‰¹â€, we can add an auto-correct rule that replaces â€œçå¦®â€ with â€œè©¹å°¼â€.
 
 
 6. Complete the lettering during the translation process, and adjust the content and line breaks of the translation according to the bubble size.
