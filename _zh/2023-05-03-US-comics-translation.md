@@ -6,12 +6,6 @@ categories: blog
 tags: imagetrans
 ---
 
-<style>
-img {
-  max-height: 480px;
-}
-</style>
-
 ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了很多功能设计。本文会以《复仇者》漫画的一张图片为例来演示如何用ImageTrans翻译美漫。
 
 所选图片来自《复仇者解散》系列，故事一开始轻松愉快的场景。
