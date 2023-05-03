@@ -1,7 +1,7 @@
 ---
 date: 2023-05-03 08:37:50+08:00
 layout: post
-title: "How to Use ImageTrans to Translate U.S. Comics"
+title: "How to Use ImageTrans to Translate American Comics"
 categories: blog
 tags: imagetrans
 ---
