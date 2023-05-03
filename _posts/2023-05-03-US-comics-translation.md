@@ -42,4 +42,17 @@ Translated version:
 
 
 6. Complete the lettering during the translation process, and adjust the content and line breaks of the translation according to the bubble size.
+
+   Hint:
+   American comics often use bold and italic for emphasis. In ImageTrans, we can use BBCode to add rich text effects to text. Because Chinese fonts usually do not support italic, we use faux italic here to achieve the effect. Following is an example:
+
+   Source:
+
+   ![Source](/album/us-comics/bold-italic-example.jpg)
+
+   Target:
+
+   ![Target](/album/us-comics/bold-italic-transaltion-example.jpg)
+
+
 7. Generate the translated image after translation.
