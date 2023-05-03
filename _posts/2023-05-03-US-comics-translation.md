@@ -1,7 +1,7 @@
 ---
 date: 2023-05-03 08:37:50+08:00
 layout: post
-title: How to Use ImageTrans to Translate U.S. Comics
+title: "How to Use ImageTrans to Translate U.S. Comics"
 categories: blog
 tags: imagetrans
 ---
@@ -44,6 +44,7 @@ Translated version:
 6. Complete the lettering during the translation process, and adjust the content and line breaks of the translation according to the bubble size.
 
    Hint:
+   
    American comics often use bold and italic for emphasis. In ImageTrans, we can use BBCode to add rich text effects to text. Because Chinese fonts usually do not support italic, we use faux italic here to achieve the effect. Following is an example:
 
    Source:
