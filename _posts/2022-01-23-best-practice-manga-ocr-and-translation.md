@@ -21,7 +21,7 @@ ImageTrans can use the following models and methods to complete Japanese manga t
 
 You can learn about how to use them in ImageTrans by checking out the links above.
 
-
+You can also find instructions in ImageTrans' [docs](https://imagetrans.readthedocs.io/en/latest/) and its [plugins repo](https://github.com/xulihang/ImageTrans_plugins).
 
 
 
