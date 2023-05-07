@@ -151,6 +151,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.6 (2023/05/07)
+
+* Fix a multi-line matching problem for Find and Replace's regular expression mode [#issue402](https://github.com/xulihang/ImageTrans-docs/issues/402)
+* New export option: TMX (translation memory exchange file)
+* Update the ChatGPT plugin to support third-party services [#issue401](https://github.com/xulihang/ImageTrans-docs/issues/401)
+
 ### v1.9.5 (2023/05/01)
 
 * Update the Photoshop script in JavaScript to support rich text
