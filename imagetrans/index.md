@@ -151,6 +151,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.7 (2023/05/13)
+
+* Fix a bug that the text is cleared after resetting the target position with the autosaving of source text and target text enabled [#issue408](https://github.com/xulihang/ImageTrans-docs/issues/408)
+* Add a context menu item to delete terms
+
 ### v1.9.6 (2023/05/07)
 
 * Fix a multi-line matching problem for Find and Replace's regular expression mode [#issue402](https://github.com/xulihang/ImageTrans-docs/issues/402)

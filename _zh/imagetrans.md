@@ -156,6 +156,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.7 (2023/05/13)
+
+* 修复开启自动保存原文译文时清除译文位置会清空文本的问题 [#issue408](https://github.com/xulihang/ImageTrans-docs/issues/408)
+* 术语列表添加右键删除功能
+
 ### v1.9.6 (2023/05/07)
 
 * 修复查找与替换多行文本的正则匹配问题 [#issue402](https://github.com/xulihang/ImageTrans-docs/issues/402)
