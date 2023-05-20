@@ -6,11 +6,11 @@ permalink: /zh/download/
 
 请根据您的操作系统选择对应的安装包。
 
-### BasicCAT v1.10.4
+### BasicCAT v1.10.5
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT_mac.dmg)
-* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-crossplatforms.zip)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT_mac.dmg)
+* Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-crossplatforms.zip)
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -38,9 +38,8 @@ sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
 
 机器翻译：
 
+* ChatGPT
 * 腾讯
-* 搜狗
-* 搜狗深智
 * 小牛
 * 谷歌
 * IBM Watson
@@ -48,7 +47,7 @@ sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
 * Naver Papago
 * 云译（只需设置url参数，详见[官方说明](https://cloudtranslation.com/static/api_zh-cn.html)）
 * 亚马逊 (需要单独下载: [链接](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
-* Fiskmo（离线机器引擎，[说明](/zh/offline-machine-translation)）
+* OpusCAT（离线机器引擎，[说明](/zh/offline-machine-translation)）
 * 网页机器翻译（从网页抽取机器翻译，不需要API，[详细介绍](https://www.basiccat.org/zh/new-plugin-machine-translation-via-web/)）
 
 过滤器：

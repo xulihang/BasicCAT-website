@@ -5,11 +5,11 @@ layout: page
 
 Please choose your download based on platform.
 
-### BasicCAT v1.10.4
+### BasicCAT v1.10.5
 
-* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT_mac.dmg)
-* Linux and the other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.4/BasicCAT-crossplatforms.zip)
+* Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-windows-x64.exe)
+* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT_mac.dmg)
+* Linux and the other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.5/BasicCAT-crossplatforms.zip)
 
 Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
 
@@ -38,9 +38,8 @@ Currently available plugins:
 
 Machine Translation:
 
+* ChatGPT
 * Tencent 
-* Sogou
-* Sogou-DeepIntelligence
 * Niutrans
 * Google
 * IBM Watson
@@ -48,7 +47,7 @@ Machine Translation:
 * Naver Papago
 * Cloudtranslation (only url param need to setup. Visit its [homepage](https://cloudtranslation.com/static/api_en.html) to learn more)
 * Amazon (need separate download: [link](https://github.com/xulihang/BasicCAT/releases/download/plugins/amazon.zip))
-* Fiskmo (offline machine translation，[introduction](/offline-machine-translation))
+* OpusCAT (offline machine translation，[introduction](/offline-machine-translation))
 * Web (extract translation from online webpages, api-free. [Details](https://www.basiccat.org/new-plugin-machine-translation-via-web/))
 
 
