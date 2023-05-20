@@ -19,5 +19,5 @@ Fiskmo是marian nmt的一个Windows客户端。它的翻译预测速度和质量
 3. 管理员权限运行FiskmoMTEngine.exe
 4. 设置参数并启用。其中url参数应该是<http://localhost:8500/MTRestService/Translate>
 
-
+注：Fiskmo已经更名为OpusCAT
 

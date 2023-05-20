@@ -19,5 +19,5 @@ How to use:
 3. Run FiskmoMTEngine.exe with administrator privileges
 4. Setup its params and enable it. The url param should be <http://localhost:8500/MTRestService/Translate>
 
-
+Note: Fiskmo has been renamed to OpusCAT
 
