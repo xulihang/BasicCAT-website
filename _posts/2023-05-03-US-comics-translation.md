@@ -44,7 +44,7 @@ Translated version:
 6. Complete the lettering during the translation process, and adjust the content and line breaks of the translation according to the bubble size.
 
    Hint:
-   
+
    American comics often use bold and italic for emphasis. In ImageTrans, we can use BBCode to add rich text effects to text. Because Chinese fonts usually do not support italic, we use faux italic here to achieve the effect. Following is an example:
 
    Source:
@@ -56,4 +56,6 @@ Translated version:
    ![Target](/album/us-comics/bold-italic-transaltion-example.jpg)
 
 
-7. Generate the translated image after translation. You can generate a Photoshop's PSD file if you need to use Photoshop to render the translated image.
+7. Generate the translated image after translation. If you need to use Photoshop to generate translated images, you can use scripts to generate PSD files.
+
+Video Tutorials:<https://www.bilibili.com/video/BV18L411a749/>
