@@ -58,4 +58,4 @@ Translated version:
 
 7. Generate the translated image after translation. If you need to use Photoshop to generate translated images, you can use scripts to generate PSD files.
 
-Video Tutorials:<https://www.bilibili.com/video/BV18L411a749/>
+Video Tutorials: <https://www.bilibili.com/video/BV18L411a749/>
