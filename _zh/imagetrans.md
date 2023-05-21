@@ -156,6 +156,13 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v1.9.8 (2023/05/21)
+
+* 更新ChatGPT插件以支持按图批量翻译 [#issue404](https://github.com/xulihang/ImageTrans-docs/issues/404)
+* 从TXT导回翻译时允许译文为空
+* 从TXT导回翻译时如果出错，提示哪行内容有错 [#issue412](https://github.com/xulihang/ImageTrans-docs/issues/412)
+* 新的掩膜生成插件：内嵌矩形 [#issue413](https://github.com/xulihang/ImageTrans-docs/issues/413)
+
 ### v1.9.7 (2023/05/13)
 
 * 修复开启自动保存原文译文时清除译文位置会清空文本的问题 [#issue408](https://github.com/xulihang/ImageTrans-docs/issues/408)

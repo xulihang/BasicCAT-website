@@ -151,6 +151,13 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v1.9.8 (2023/05/21)
+
+* Update the ChatGPT plugin to support batch translation by images [#issue404](https://github.com/xulihang/ImageTrans-docs/issues/404)
+* The target text can be empty when importing from TXT files
+* If an error occurs importing from TXT files, prompt which line is wrong [#issue412](https://github.com/xulihang/ImageTrans-docs/issues/412)
+* New mask generator plugin: InsetRect [#issue413](https://github.com/xulihang/ImageTrans-docs/issues/413)
+
 ### v1.9.7 (2023/05/13)
 
 * Fix a bug that the text is cleared after resetting the target position with the autosaving of source text and target text enabled [#issue408](https://github.com/xulihang/ImageTrans-docs/issues/408)
