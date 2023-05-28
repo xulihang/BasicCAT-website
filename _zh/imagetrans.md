@@ -128,9 +128,9 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 获取ImageTrans
 
-请前往FastSpring平台自主购买：[链接](https://basiccat.onfastspring.com/)。
+请前往面包多自主购买：[链接](https://mbd.pub/o/bread/YpmUmJhs)。
 
-或者使用面包多：[链接](https://mbd.pub/o/bread/YpmUmJhs)。
+海外用户请使用FastSpring：[链接](https://basiccat.onfastspring.com/)。
 
 定价：
 
