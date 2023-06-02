@@ -68,3 +68,7 @@ Translate the following into {langcode}: {source}
 * Papago
 * Opus-CAT（离线，免费）
 * Sugoi Translator（离线，免费）
+
+## 相关issue
+
+[ChatGPT用Clash代理访问](https://github.com/xulihang/ImageTrans-docs/issues/421)
