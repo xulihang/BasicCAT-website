@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-ImageTrans is an image translation software which supports all kinds of images. We can use it as a manga translator, as well. 
+[ImageTrans](https://www.basiccat.org/imagetrans/) is an image translation software which supports all kinds of images. We can use it as a manga translator, as well. 
 
 Here are the steps to translate manga images.
 

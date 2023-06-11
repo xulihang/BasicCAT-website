@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-ImageTrans是通用的图片翻译软件，稍加设置我们可以用它来翻译日语漫画到中文。下面是一个简单的操作步骤。
+[ImageTrans](https://www.basiccat.org/zh/imagetrans)是通用的图片翻译软件，稍加设置我们可以用它来翻译日语漫画到中文。下面是一个简单的操作步骤。
 
 1. 将待翻译的图片放入一个文件夹。
 2. 打开ImageTrans，新建一个项目，选择语言对：日语到中文。
