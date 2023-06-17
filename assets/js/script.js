@@ -110,7 +110,7 @@ function saveToIndexedDB(){
 function downloadAndSaveToIndexedDB(filename){
   return new Promise(function (resolve, reject) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', '/'+filename);
+    xhr.open('GET', '/'+filename.replace(".tmx",".txt"));
     xhr.onreadystatechange = async function(){
       if(xhr.readyState === 4){
         await tmxStore.setItem(filename,xhr.responseText);
