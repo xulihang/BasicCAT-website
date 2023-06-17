@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translation Memory Concordance | BasicCAT</title>
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sax"></script>
+  <script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="home">
+      <h2>Translation Memory Concordance</h2>
+      <div>TMX files:</div>
+      <div>
+        <ul class="files-list"></ul>
+      </div>
+      <div>Add file:<div>
+          <div><input type="file" id="file" accept=".tmx" /></div><button class="add-button">Add</button></div>      
+      </div>
+    </div>
+    <div class="search" style="display:none;">
+      <h2>Translation Memory Concordance</h2>
+      <div>
+        <div class="search-controls"><input type="text" class="keywords"/> <label> Fields: <select class="field-select"><option value="0">All</option></select> </label> <button class="search-button">Search</button><span class="status"></span></div>
+        <div class="search-results"></div>
+      </div>
+    </div>
+    <div class="viewer" style="display:none;">
+    </div>
+    <div class="footer"><button class="back-button">Return</button> <button class="delete-button">Delete this file</button><div>@xulihang 2023</div>
+    </div>
+  </div>
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

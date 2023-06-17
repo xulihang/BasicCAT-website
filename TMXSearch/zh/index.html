@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翻译记忆检索器 | BasicCAT</title>
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sax"></script>
+  <script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="home">
+      <h2>翻译记忆在线检索器</h2>
+      <div>翻译记忆文件：</div>
+      <div>
+        <ul class="files-list"></ul>
+      </div>
+      <div>
+        添加文件：
+        <div>
+          <div>
+              <input type="file" id="file" accept=".tmx" />
+          </div>
+          <button class="add-button">添加</button>
+        </div>      
+      </div>
+    </div>
+    <div class="search" style="display:none;">
+      <h2>翻译记忆在线检索器</h2>
+      <div>
+        <div class="search-controls">
+          <input type="text" class="keywords"/>
+          <label>
+            检索范围：
+            <select class="field-select">
+              <option value="0">所有</option>
+            </select>
+          </label>
+          <button class="search-button">搜索</button><span class="status"></span>
+        </div>
+        <div class="search-results"></div>
+      </div>
+    </div>
+    <div class="viewer" style="display:none;">
+    </div>
+    <div class="footer">
+      <button class="back-button">返回</button>
+      <button class="delete-button">删除该文件</button>
+      <div>@xulihang 2023</div>
+    </div>
+  </div>
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

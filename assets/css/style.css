@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 2em;
+}
+
+.status {
+  margin-left: 1em;
+}
+
+.hightlighted {
+  color: red;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
