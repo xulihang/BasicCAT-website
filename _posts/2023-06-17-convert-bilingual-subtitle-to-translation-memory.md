@@ -44,7 +44,9 @@ We can extract the source text and target text from it, make the file name and t
     </tuv>
     <tuv xml:lang="zh">
         <seg>他不过是我的同事</seg>
-    </tuv></tu>```
+    </tuv>
+</tu>
+```
 
 Detailed steps in Aligner:
 
