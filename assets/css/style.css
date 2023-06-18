@@ -14,3 +14,10 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+@media screen and (max-device-width: 600px){
+  .keywords {
+    width: 100%;
+  }
+}
+
