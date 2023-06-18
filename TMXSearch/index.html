@@ -18,13 +18,26 @@
         <ul class="files-list"></ul>
       </div>
       <div>Add file:<div>
-          <div><input type="file" id="file" accept=".tmx" /></div><button class="add-button">Add</button></div>      
+        <div><input type="file" id="file" accept=".tmx" /></div>
+          <button class="add-button">Add</button>
+        </div>      
       </div>
     </div>
     <div class="search" style="display:none;">
       <h2>Translation Memory Concordance</h2>
       <div>
-        <div class="search-controls"><input type="text" class="keywords"/> <label> Fields: <select class="field-select"><option value="0">All</option></select> </label> <button class="search-button">Search</button><span class="status"></span></div>
+        <div class="search-controls">
+          <div class="search-bar">
+            <input type="text" class="keywords"/> 
+            <button class="search-button">Search</button>
+          </div>
+          <label> Fields: 
+            <select class="field-select">
+              <option value="0">All</option>
+            </select> 
+          </label>
+          <span class="status"></span>
+        </div>
         <div class="search-results"></div>
       </div>
     </div>

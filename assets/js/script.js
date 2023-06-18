@@ -395,6 +395,7 @@ function search(){
       container.appendChild(item);
     }
   }
+  updateStatus(localize("找到{0}个结果：",[count])); 
   const newURL = window.location.origin + window.location.pathname + "?filename=" + encodeURIComponent(currentFileName) + "&keywords=" + encodeURIComponent(keywords);
   updateHistory(newURL);
 }
@@ -515,18 +516,27 @@ async function deleteCurrentFile(){
   }
 }
 
-function localize(str){
+function localize(str,params){
+  let result = str;
   if (window.location.pathname.indexOf("/zh") === -1) {
     let translations = {
       "下载XML中……":"Downloading XML...",
       "解析XML中……":"Parsing XML...",
       "建立索引中……":"Indexing...",
-      "删除中……":"Deleting..."
+      "删除中……":"Deleting...",
+      "找到{0}个结果：":"Found {0} results:",
     }
     if (str in translations) {
-      return translations[str];
+      let translation = translations[str];
+      result = translation;
     }
   }
-  return str;
+  if (params) {
+    for (let index = 0; index < params.length; index++) {
+      const param = params[index];
+      result = result.replace("{"+index+"}",param);
+    }
+  }
+  return result;
 }
 

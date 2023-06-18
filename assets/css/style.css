@@ -15,9 +15,16 @@
   padding-right: 10px;
 }
 
+.search-bar {
+  display: flex;
+}
+
 @media screen and (max-device-width: 600px){
-  .keywords {
+  .search-bar {
     width: 100%;
+  }
+  .keywords {
+    flex-grow: 1;
   }
 }
 

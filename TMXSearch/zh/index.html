@@ -31,14 +31,17 @@
       <h2>翻译记忆在线检索器</h2>
       <div>
         <div class="search-controls">
-          <input type="text" class="keywords"/>
+          <div class="search-bar">
+            <input type="text" class="keywords"/> 
+            <button class="search-button">搜索</button>
+          </div>
           <label>
             检索范围：
             <select class="field-select">
               <option value="0">所有</option>
             </select>
           </label>
-          <button class="search-button">搜索</button><span class="status"></span>
+          <span class="status"></span>
         </div>
         <div class="search-results"></div>
       </div>
