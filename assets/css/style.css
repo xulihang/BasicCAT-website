@@ -19,6 +19,34 @@
   display: flex;
 }
 
+.cover-img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 250px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.product {
+  padding: 10px;
+  margin-top: 10px;
+  background: #F5F5F5;
+  max-width: 30%;
+}
+
+@media screen and (max-device-width: 600px){
+  .product {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-device-width: 600px){
   .search-bar {
     width: 100%;
