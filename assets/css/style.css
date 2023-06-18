@@ -42,6 +42,7 @@
 
 .page-content {
   max-width: 100%;
+  margin: 0;
 }
 
 @media screen and (max-device-width: 600px){
