@@ -45,6 +45,8 @@ BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 
 如果需要翻译漫画/图片，请使用[ImageTrans](/zh/imagetrans/)
 
+更多产品请见[产品列表](/zh/products/)。
+
 ![](/album/main.png)
 
 
