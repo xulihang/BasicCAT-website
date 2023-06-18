@@ -41,13 +41,13 @@ BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 * 支持翻译记忆标准TMX、术语管理标准TBX和句段分割标准SRX
 * 使用Git进行版本控制
 
-更多内容请见[说明文档](https://docs.basiccat.org/zh_CN/latest/)
+更多内容请见[说明文档](https://docs.basiccat.org/zh_CN/latest/)。
 
-如果需要翻译漫画/图片，请使用[ImageTrans](/zh/imagetrans/)
+如果需要翻译漫画/图片，请使用[ImageTrans](/zh/imagetrans/)。
 
 更多产品请见[产品列表](/zh/products/)。
 
-![](/album/main.png)
+![截图](/album/main.png)
 
 
 
