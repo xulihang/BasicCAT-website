@@ -2,8 +2,8 @@ let tmxStore = localforage.createInstance({
   name: "tmx"
 });
 
-let indexStore = localforage.createInstance({
-  name: "index"
+let tuStore = localforage.createInstance({
+  name: "tu"
 });
 
 let currentFileName = "";
@@ -207,11 +207,24 @@ async function createIndexIfNeeded(name){
       xml = await tmxStore.getItem(name);
     }
     updateStatus(localize("解析XML中……"));
-    await sleep(100);
-    tuList = await parseXML(xml,name);
+    tuList = await tuStore.getItem(name);
+    if (!tuList) {
+      await sleep(100);
+      tuList = await parseXML(xml,name);
+      await tuStore.setItem(name,tuList);
+    }
     updateStatus(localize("建立索引中……"));
     await sleep(100);
     createIndex();
+    const saved = await localforage.getItem(name);
+    if (saved) {
+      await loadIndex(name);
+    }else{
+      addDocuments();
+      await saveIndex(name);
+      console.log("saved");
+      await localforage.setItem(name, "saved");
+    }
     updateStatus("");
     currentFileName = name;
   }
@@ -294,9 +307,40 @@ function createIndex(){
           index: createIndexConfiguration(keys)
       }
     });
-    for (let index = 0; index < tuList.length; index++) {
-      const tu = tuList[index];
-      documentIndex.add(index,tu);
+  }
+}
+
+function addDocuments(){
+  for (let index = 0; index < tuList.length; index++) {
+    const tu = tuList[index];
+    documentIndex.add(index,tu);
+  }
+}
+
+async function saveIndex(name){
+  return new Promise(async function(resolve){
+    let count = 0;
+    let numberOfKeyToExport = Object.keys(documentIndex.index).length*3 + 3;
+    documentIndex.export(async function(key, data){ 
+      // you need to store both the key and the data!
+      // e.g. use the key for the filename and save your data
+      console.log("save"+key);
+      await localforage.setItem(name+"-"+key, data);
+      count = count + 1;
+      if (count === numberOfKeyToExport) {
+        resolve();
+      }
+    });
+  });
+}
+
+async function loadIndex(name){
+  const keys = await localforage.keys();
+  for (let index = 0; index < keys.length; index++) {
+    const key = keys[index];
+    if (key != name && key.split("-")[0] === name) {
+      const content = await localforage.getItem(key);
+      documentIndex.import(key.split("-")[1],content);
     }
   }
 }
@@ -424,10 +468,16 @@ function viewSegmentsNearBy(id){
     const tu = tuList[index];
     const item = document.createElement("div");
     const title = document.createElement("h3");
-    title.innerText = count;
     if (index === id) {
       title.id = "matched";
     }
+    const link = document.createElement("a");
+    link.innerText = count;
+    link.href = "javascript:void(0);"
+    link.addEventListener("click",function(){
+      viewSegmentsNearBy(index);
+    })
+    title.appendChild(link);
     const content = document.createElement("p");
     content.innerHTML = getContent(tu);
     item.appendChild(title);
@@ -446,7 +496,18 @@ function updateHistory(newURL){
 
 async function deleteCurrentFile(){
   if (currentFileName) {
+    updateStatus(localize("删除中……"));
     await tmxStore.removeItem(currentFileName);
+    await tuStore.removeItem(currentFileName);
+    const keys = await localforage.keys();
+    for (let index = 0; index < keys.length; index++) {
+      const key = keys[index];
+      if (key.split("-")[0] === currentFileName) {
+        await localforage.removeItem(key);
+      }
+    }
+    currentFileName = "";
+    updateStatus("");
     const newURL = window.location.origin + window.location.pathname;
     updateHistory(newURL);
     loadFilesList();
@@ -459,7 +520,8 @@ function localize(str){
     let translations = {
       "下载XML中……":"Downloading XML...",
       "解析XML中……":"Parsing XML...",
-      "建立索引中……":"Indexing..."
+      "建立索引中……":"Indexing...",
+      "删除中……":"Deleting..."
     }
     if (str in translations) {
       return translations[str];
