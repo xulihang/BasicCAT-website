@@ -40,6 +40,10 @@
   max-width: 30%;
 }
 
+.page-content {
+  max-width: 100%;
+}
+
 @media screen and (max-device-width: 600px){
   .product {
     width: 100%;
