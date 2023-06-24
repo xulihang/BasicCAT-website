@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片翻译项目管理器 | BasicCAT</title>
+</head>
+<body>
+  <div class="container">
+    <h2>图片翻译项目管理器 </h2>
+    <div>
+      选择项目文件：
+      <div>
+          <input type="file" id="file" accept=".itp,.txt" />
+      </div>
+      选择图片文件：
+      <div>
+          <input type="file" id="imageFiles" multiple="true" accept=".jpg,.jpeg,.png,.bmp" />
+      </div>
+    </div>
+    <div>
+      导出格式：
+      <select class="format-select">
+        <option value="ImageTrans">ImageTrans</option>
+        <option value="LabelPlus">LabelPlus</option>
+      </select>
+      <button onclick="exportProject();" class="export-button">导出</button>
+    </div>
+  </div>
+  <script>
+    // list of images. An image example: {filename:"",boxes:[]}
+    // A box example: {geometry:{X:0,Y:0,width:0,height:0},targetGeometry:{X:0,Y:0,width:0,height:0},text:"",target:""}
+    let imageFiles = [];
+    function readProjectFile(){
+      return new Promise(function (resolve, reject) {
+        let files = document.getElementById('file').files;
+        if (files.length == 0) {
+          reject();
+          return;
+        }
+        let file = files[0];
+        let fileReader = new FileReader();
+        fileReader.onload = async function(e){
+          try {
+            if (files[0].name.indexOf(".itp") != -1) {
+              parseImageTransProject(e.target.result);
+            }else{
+              await parseLabelPlusProject(e.target.result);
+            }
+            resolve(e.target.result)
+          } catch (error) {
+            reject(error);
+          }
+        };
+        fileReader.onerror = function () {
+          console.warn('oops, something went wrong.');
+          reject();
+        };
+        fileReader.readAsText(file);
+      });
+    }
+
+    function parseImageTransProject(str){
+      imageFiles = [];
+      let project = JSON.parse(str);
+      images = project["images"];
+      for (const imageName in images) {
+        let image = images[imageName];
+        image["filename"] = imageName;
+        imageFiles.push(image);
+      }
+    }
+
+    async function parseLabelPlusProject(str){
+      imageFiles = [];
+      let lines = str.split("\n");
+      console.log(lines);
+      let image = {};
+
+      for (let index = 0; index < lines.length; index++) {
+        const line = lines[index].trim();
+        if (line.indexOf(">>>>>>>>[") != -1) { //new file
+          if ("filename" in image) { //add previous file
+            boxIndex = 0;
+            imageFiles.push(image);
+          }
+          image = {};
+          image.filename = line.replace(">>>>>>>>[","").replace("]<<<<<<<<","");
+          console.log(image.filename);
+          image.boxes = [];
+        }else if (line.indexOf("----------------[") != -1) { //new text box
+          let box = {};
+          let coordinates = line.substring(line.indexOf("]----------------")+"]----------------".length,line.length);
+          coordinates = JSON.parse(coordinates);
+          let imageEle = await readImage(image.filename);
+          let X = coordinates[0] * imageEle.naturalWidth;
+          let Y = coordinates[1] * imageEle.naturalHeight;
+          box.geometry = {X:X,Y:Y,width:10,height:10};
+          box.text = lines[index+1].trim();
+          image.boxes.push(box);
+        }
+        if (index === lines.length - 1) {
+          if ("filename" in image) { //add the last file
+            imageFiles.push(image);
+          }
+        }
+      }
+    }
+
+
+
+    async function exportProject(){
+      try {
+        await readProjectFile();
+        let outputType = document.getElementsByClassName("format-select")[0].selectedOptions[0].value;
+        let content = "";
+        let extension = ".txt";
+        if (outputType === "ImageTrans") {
+          content = getImageTransProjectContent();
+          extension = ".itp";
+        }else{
+          content = await getLabelPlusProjectContent();
+        }
+        download(content,extension);
+      } catch (error) {
+        alert(error);
+      }
+    }
+    
+    function download(content,extension){
+      const link = document.createElement('a')
+      link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
+      link.download = "out"+extension;
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+
+    function getImageTransProjectContent(){
+      let project = {};
+      project["dirPath"] = "./";
+      let images = {};
+      console.log(imageFiles);
+      project.images = images;
+      for (let index = 0; index < imageFiles.length; index++) {
+        const image = JSON.parse(JSON.stringify(imageFiles[index]));
+        images[image.filename] = image;
+        delete image["filename"];
+      }
+      return JSON.stringify(project);
+    }
+
+    async function getLabelPlusProjectContent(){
+      let project = "";
+      let meta = `1,0
+-
+框内
+框外
+-
+Default Comment
+You can edit me
+
+`
+      project = project + meta;
+      for (let index = 0; index < imageFiles.length; index++) {
+        let image = imageFiles[index];
+        project = project + ">>>>>>>>[" + image.filename + "]<<<<<<<<" + "\n";
+        let boxIndex = 0;
+        let imageEle = await readImage(image.filename);
+        for (const box of image.boxes) {
+          boxIndex = boxIndex + 1;
+          project = project + "----------------";
+          project = project + "[" + boxIndex + "]";
+          project = project + "----------------";
+          let geometry = box["targetGeometry"] ?? box["geometry"];
+          let xPercent = geometry.X / imageEle.naturalWidth;
+          let yPercent = geometry.Y / imageEle.naturalHeight;
+          project = project + "["+ [xPercent,yPercent,1].join(",") +"]" + "\n";
+          project = project + (box["target"] ?? "") + "\n";
+        }
+      }
+      return project;
+    }
+
+    function readImage(filename){
+      return new Promise(async function (resolve, reject) {
+        let imageFile = getImageFileByName(filename);
+        console.log(imageFile);
+        if (imageFile) {
+          let dataURL = await readAsDataURL(imageFile);
+          let image = new Image();
+          image.onload = function(){
+            resolve(image);
+          }
+          image.src = dataURL;
+        }else{
+          reject("Image file not exists.");
+        }
+      })
+    }
+
+    function getImageFileByName(filename){
+      let files = document.getElementById('imageFiles').files;
+      for (let index = 0; index < files.length; index++) {
+        
+        const imageFile = files[index];
+        if (imageFile.name === filename) {
+          return imageFile;
+        }
+      }
+      return undefined;
+    }
+
+    function readAsDataURL(file){
+      return new Promise(function (resolve, reject) {
+        let fileReader = new FileReader();
+        fileReader.onload = async function(e){
+          try {
+            resolve(e.target.result)
+          } catch (error) {
+            reject(error);
+          }
+        };
+        fileReader.onerror = function () {
+          console.warn('oops, something went wrong.');
+          reject();
+        };
+        fileReader.readAsDataURL(file);
+      });
+    }
+  </script>
+</body>
+</html>
