@@ -151,6 +151,18 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v2.0.0 (2023/07/02)
+
+* Update the ChatGPT plugin to support specifying the model [#issue430](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* Add support of rotated text areas for text-removing by covering (imprecision mode)
+* The unit of mask generation for rotated text areas is now the bounding box
+* When the toolbar is switched to "sort", we can double-click a text area to set its order [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* New project setting: sort criteria. We can sort the text areas by the distance to the origin or the vertical coordinate [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* Whether the overlapped existing area has a smaller area is not considered when checking whether two areas overlap [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
+* Translated images manager can perform a quick selection with conditions [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
+* Automatically Put text areas outside within the image [#issue452](https://github.com/xulihang/ImageTrans-docs/issues/452)
+* Fix a bug that the text mask generated during scene text detection is scaled
+
 ### v1.9.8 (2023/05/21)
 
 * Update the ChatGPT plugin to support batch translation by images [#issue404](https://github.com/xulihang/ImageTrans-docs/issues/404)

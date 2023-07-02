@@ -156,6 +156,18 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v2.0.0 (2023/07/02)
+
+* 更新ChatGPT插件以支持设置模型 [#issue430](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* 非精确模式支持覆盖旋转的文字
+* 旋转的区域的文字掩膜生成单位更新为其对应的外包矩形
+* 切换到排序工具栏时，双击文字区域可以手动设定它的序号 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* 项目设置新增新的排序依据设置，可以选择根据到原点距离还是纵坐标排序 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* 重叠区域的判定不再考虑面积大小 [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
+* 已翻译图片管理器可以根据条件进行快速选择 [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
+* 自动将超出图片边界的文字区域放回图片内 [#issue452](https://github.com/xulihang/ImageTrans-docs/issues/452)
+* 修复自然场景文字检测生成的掩膜被缩放的问题
+
 ### v1.9.8 (2023/05/21)
 
 * 更新ChatGPT插件以支持按图批量翻译 [#issue404](https://github.com/xulihang/ImageTrans-docs/issues/404)
