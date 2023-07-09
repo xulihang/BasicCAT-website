@@ -160,6 +160,8 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 * 新增在文字区域列表选择区域后跳转到对应图像的选项 [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)
 * 搜索与替换新增大小写转换选项
+* 导出成品图前自动应用所需设置 [#issue461](https://github.com/xulihang/ImageTrans-docs/issues/461)
+* 调整文字区域时可以通过按住SHIFT来维持比例 [#issue462](https://github.com/xulihang/ImageTrans-docs/issues/462)
 * 新的用于调整覆盖图层透明度和对齐原文译文位置的原图相关工具栏 [#issue458](https://github.com/xulihang/ImageTrans-docs/issues/458)
 * 修复PS脚本不能处理描边的问题 [b079d40](https://github.com/xulihang/ImageTrans_PhotoshopScripts/commit/b079d40ffdf8188de0c05eeaa64f742b28e2eb00)
 * 修复手动调整译文位置和大小或者切换显示比率时的漂移问题 [#issue459](https://github.com/xulihang/ImageTrans-docs/issues/459)
