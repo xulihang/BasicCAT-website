@@ -151,6 +151,16 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v2.1.0 (2023/07/09)
+
+* Add an option to jump to the selected text area in the image [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)
+* Add a case conversion option to Find and Replace
+* A new toolbar to adjust the opacity of the overlays and align the positions of the source and the target [#issue458](https://github.com/xulihang/ImageTrans-docs/issues/458)
+* Fix the PS script's handling of stroke [b079d40](https://github.com/xulihang/ImageTrans_PhotoshopScripts/commit/b079d40ffdf8188de0c05eeaa64f742b28e2eb00)
+* Fix the problem of shifting of text areas when switching the display percentage or manually adjusting their size or position [#issue459](https://github.com/xulihang/ImageTrans-docs/issues/459)
+* Fix a shortcut conflict for deleting [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)
+* Fix a invalid center align problem for vertical text engine when editing the target text [#issue458](https://github.com/xulihang/ImageTrans-docs/issues/458)
+
 ### v2.0.0 (2023/07/02)
 
 * Update the ChatGPT plugin to support specifying the model [#issue430](https://github.com/xulihang/ImageTrans-docs/issues/430)
