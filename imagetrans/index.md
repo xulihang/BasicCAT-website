@@ -159,7 +159,7 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 * Fix the PS script's handling of stroke [b079d40](https://github.com/xulihang/ImageTrans_PhotoshopScripts/commit/b079d40ffdf8188de0c05eeaa64f742b28e2eb00)
 * Fix the problem of shifting of text areas when switching the display percentage or manually adjusting their size or position [#issue459](https://github.com/xulihang/ImageTrans-docs/issues/459)
 * Fix a shortcut conflict for deleting [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)
-* Fix a invalid center align problem for vertical text engine when editing the target text [#issue458](https://github.com/xulihang/ImageTrans-docs/issues/458)
+* Fix an invalid center align problem for vertical text engine when editing the target text [#issue458](https://github.com/xulihang/ImageTrans-docs/issues/458)
 
 ### v2.0.0 (2023/07/02)
 
