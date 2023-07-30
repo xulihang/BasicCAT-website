@@ -156,6 +156,14 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v2.2.0 (2023/07/30)
+
+* 新增百度图片翻译插件 [#issue470](https://github.com/xulihang/ImageTrans-docs/issues/470)
+* OCR插件支持设置文本框的译文、字体颜色等信息
+* 全图OCR前缩放过大图像和分割过长图像
+* 掩膜编辑器的颜色自动沿用之前的选项 [#issue467](https://github.com/xulihang/ImageTrans-docs/issues/467)
+* 修复取消自动换行无效的问题
+
 ### v2.1.0 (2023/07/09)
 
 * 新增在文字区域列表选择区域后跳转到对应图像的选项 [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)

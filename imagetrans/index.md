@@ -151,6 +151,14 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v2.2.0 (2023/07/30)
+
+* New image translation plugin: Baidu Fanyi [#issue470](https://github.com/xulihang/ImageTrans-docs/issues/470)
+* OCR plugins can set things like the target text and the text color of a text box
+* Scale large images and divide long images before full-page OCR
+* Mask editor: save the previously used color [#issue467](https://github.com/xulihang/ImageTrans-docs/issues/467)
+* Fix a problem that disabling text wrapping is not effective
+
 ### v2.1.0 (2023/07/09)
 
 * Add an option to jump to the selected text area in the image [#issue455](https://github.com/xulihang/ImageTrans-docs/issues/455)
