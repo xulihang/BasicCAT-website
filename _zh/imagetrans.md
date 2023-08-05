@@ -156,6 +156,12 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v2.2.1 (2023/08/05)
+
+* 优化掩膜编辑器：掩膜默认半透明 [#issue472](https://github.com/xulihang/ImageTrans-docs/issues/472)
+* 竖排引擎支持设置零间距字符 [#issue473](https://github.com/xulihang/ImageTrans-docs/issues/473)
+* Bug修复
+
 ### v2.2.0 (2023/07/30)
 
 * 新增百度图片翻译插件 [#issue470](https://github.com/xulihang/ImageTrans-docs/issues/470)

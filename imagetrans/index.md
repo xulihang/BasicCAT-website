@@ -151,6 +151,12 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v2.2.1 (2023/08/05)
+
+* Mask Editor: display the mask translucently by default [#issue472](https://github.com/xulihang/ImageTrans-docs/issues/472)
+* Vertical text engine: add zero-wordspace characters setting [#issue473](https://github.com/xulihang/ImageTrans-docs/issues/473)
+* Bugfixes
+
 ### v2.2.0 (2023/07/30)
 
 * New image translation plugin: Baidu Fanyi [#issue470](https://github.com/xulihang/ImageTrans-docs/issues/470)
