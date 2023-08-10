@@ -156,6 +156,11 @@ Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第4
 
 ## 发布日志
 
+### v2.2.2 (2023/08/10)
+
+* 修复横排文字引擎行距大于1时文字被裁剪的问题
+* 添加文本框对齐的菜单项 [#issue479](https://github.com/xulihang/ImageTrans-docs/issues/479)
+
 ### v2.2.1 (2023/08/05)
 
 * 优化掩膜编辑器：掩膜默认半透明 [#issue472](https://github.com/xulihang/ImageTrans-docs/issues/472)

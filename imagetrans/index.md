@@ -151,6 +151,11 @@ If you cannot complete the payment, please [contact me](mailto:admin@basiccat.or
 
 ## Release Notes
 
+### v2.2.2 (2023/08/10)
+
+* Fix a bug that the text is cut when the line space is over 1.0 using the horizontal text engine
+* Add menu items to align text boxes [#issue479](https://github.com/xulihang/ImageTrans-docs/issues/479)
+
 ### v2.2.1 (2023/08/05)
 
 * Mask Editor: display the mask translucently by default [#issue472](https://github.com/xulihang/ImageTrans-docs/issues/472)
