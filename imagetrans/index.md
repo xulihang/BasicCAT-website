@@ -48,7 +48,7 @@ It can use natural scene text detection, object detection and a heuristic method
 
 It can call a variety of machine translation engines. It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.
 
-Here is a screenshot showing the results of different machine engines of a Japanese sentence. We can compare the results and choose the best one. ChatGPT provides the best translation for this sentence.
+Here is a screenshot showing the results of different machine translation engines of a Japanese sentence. We can compare the results and choose the best one. ChatGPT provides the best translation for this sentence.
 
 ![Japanese machine translation](/album/imagetrans-machine-translation/ja2en.jpg)
 
