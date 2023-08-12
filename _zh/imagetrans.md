@@ -68,19 +68,9 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 * 自动检测背景颜色和文字颜色
 * 完善的批处理功能
 
-## 漫画翻译结果示例
+## 翻译示例
 
-示例1：
-
-银器抛光剂：<https://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
-
-示例2（旧版）：
-
-Come to me , Love —— 美国黄金时代漫画杂志《Boy Loves Girls》第41期
-
-浏览页面：<http://comics.xulihang.me/viewer.html?project=come_to_me_love.itp>
-
-文本检索页面：<http://comics.xulihang.me/search.html>
+[访问这里](/zh/gallery/)来浏览使用ImageTrans翻译的图片。
 
 ## 获取ImageTrans
 

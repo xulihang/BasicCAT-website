@@ -66,19 +66,9 @@ Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also
 * Automatic detection of background color and text color
 * Batch processing
 
-## Examples of Translated Comics
+## Examples of Translated Images
 
-Example 1:
-
-Silver polish: <https://blog.xulihang.me/Comics-Viewer/viewer.html?uniquename=silverpolish>
-
-Example 2 (old):
-
-Come to me, Love —— From issue 41, Boy Loves Girls (Golden age comics).
-
-Browsing Page: <http://comics.xulihang.me/viewer.html?project=come_to_me_love.itp>
-
-Text Searching Page: <http://comics.xulihang.me/search.html>
+Visit [Gallery](/gallery/) to check out images translated using ImageTrans.
 
 ## Get a Copy
 
