@@ -1,0 +1,259 @@
+{
+    "settings": {
+        "otsu_enabled": false,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 0,
+        "sourceLang": "en",
+        "maskRadius": 0,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": false,
+        "invert": false,
+        "resize_before_OCR": true,
+        "inferSeparation": true,
+        "balloon_divide_ratio": 4,
+        "minimumHSpan": "10",
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "output_folder": "out",
+        "pdf_dpi": 300,
+        "resize_before_OCR_width": 2500,
+        "expand_for_balloon": true,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "blur": false,
+        "installedFont": [],
+        "timeout": "60",
+        "fontStyles": [
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "Microsoft YaHei",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "bgcolor": "255,255,255",
+                "size": 18,
+                "name": "正文",
+                "fontcolor": "0,0,0",
+                "alignment": 1,
+                "wrap": true,
+                "direction": 0
+            }
+        ],
+        "right2left": false,
+        "autoFontSize": false,
+        "invertBasedOnColor": false,
+        "imgQuality": 90,
+        "expanding_pix": 5,
+        "autoThreshold": false,
+        "targetLang": "zh",
+        "overlapped_height_percent": 70,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "minFontSize": 15,
+        "furiganaStipperMethod": 0,
+        "auto_params": true,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 2,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "02.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 646,
+                        "width": 190,
+                        "Y": 34,
+                        "height": 66
+                    },
+                    "suitableSize": 16,
+                    "probability": 0.8632809519767761,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 620,
+                        "width": 264,
+                        "Y": 35,
+                        "height": 45
+                    },
+                    "text": "﻿I'M SELLING OSOGOOD SILVER POLISH!",
+                    "target": "我是真棒牌银器抛光剂的销售员！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 766,
+                        "width": 86,
+                        "Y": 110,
+                        "height": 28
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9873635172843933,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 759,
+                        "width": 86,
+                        "Y": 107,
+                        "height": 28
+                    },
+                    "text": "﻿GRUNT!",
+                    "target": "嗯哼！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 220,
+                        "width": 241,
+                        "Y": 358,
+                        "height": 115
+                    },
+                    "suitableSize": 26,
+                    "probability": 0.933412492275238,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 121,
+                        "width": 363,
+                        "Y": 351,
+                        "height": 134
+                    },
+                    "text": "﻿THIS WONDERFUL POLISH WILL MAKE YOUR OLD SILVER LOOK LIKE NEW! AND IT'S ONLY FIFTY CENTS A QUART!",
+                    "target": "这种神奇的抛光剂能使您的旧银器看起来像新的！而且只要五十美分一夸脱！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 514,
+                        "width": 305,
+                        "Y": 360,
+                        "height": 88
+                    },
+                    "suitableSize": 22,
+                    "probability": 0.9528242945671082,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 524,
+                        "width": 305,
+                        "Y": 351,
+                        "height": 88
+                    },
+                    "text": "﻿MY SILVERWARE IS HOME! HOW'LL I KNOW YOUR POLISH IS AS GOOD AS YOU SAY?",
+                    "target": "我的银器在家里！我怎么知道你的抛光剂和你说的一样好？"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 817,
+                        "width": 103,
+                        "Y": 388,
+                        "height": 24
+                    },
+                    "suitableSize": 15,
+                    "probability": 0.9874112010002136,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 831,
+                        "width": 76,
+                        "Y": 387,
+                        "height": 29
+                    },
+                    "text": "﻿EASY",
+                    "target": "这个简单！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 194,
+                        "width": 308,
+                        "Y": 690,
+                        "height": 85
+                    },
+                    "suitableSize": 20,
+                    "probability": 0.9596549868583679,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 172,
+                        "width": 339,
+                        "Y": 685,
+                        "height": 83
+                    },
+                    "text": "﻿YOU MUST HAVE SOME SILVER COINS HANDY! I'LL GLADLY POLISH THEM TO SHOW YOU HOW IT WORKS!",
+                    "target": "您身边肯定有一些银币！我很\n愿意给您抛光它们，以展示它的效果！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 648,
+                        "width": 114,
+                        "Y": 693,
+                        "height": 45
+                    },
+                    "suitableSize": 22,
+                    "probability": 0.9911632537841797,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 655,
+                        "width": 96,
+                        "Y": 689,
+                        "height": 43
+                    },
+                    "text": "﻿IT'S A DEAL!",
+                    "target": "一言为定！"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 283,
+                        "width": 281,
+                        "Y": 1001,
+                        "height": 66
+                    },
+                    "suitableSize": 20,
+                    "probability": 0.9398453831672668,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 303,
+                        "width": 281,
+                        "Y": 1006,
+                        "height": 66
+                    },
+                    "text": "﻿WELL, DON'T JUST STAND THERE! GET TO WORK!\/",
+                    "target": "好了，不要只是站在那里！\n开始工作吧！"
+                }
+            ],
+            "text-removed": true
+        }
+    },
+    "terms": {},
+    "dirPath": "F:\\imagetrans_projects\\scrooge",
+    "previousOCR": {
+        "engineName": "google_drive",
+        "lang": "Auto detect"
+    }
+}

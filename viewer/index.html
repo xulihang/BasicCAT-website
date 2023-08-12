@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImageTrans Online</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <script type="module">
+    import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/image-cropper-component@1.5.0/dist/esm/loader.js';
+    defineCustomElements();
+  </script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .viewer {
+      flex-basis: 70%;
+      overflow: hidden;
+    }
+
+    .imageview {
+      height: calc(100% - 30px);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      overflow: auto;
+    }
+
+    .boxes {
+      flex-basis: 30%;
+      height: calc(100% - 30px);
+      overflow-y: auto;
+    }
+    
+    .box {
+      padding: 8px;
+    }
+
+    h5 {
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    @media screen and (max-device-width: 600px){
+      .container {
+        height: auto;
+        flex-wrap: wrap;
+      }
+      .viewer {
+        flex-basis: 100%;
+      }
+      .boxes {
+        flex-basis: 100%;
+      }
+      .imageview {
+        height: 90vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="viewer">
+      <div class="imageview">
+        <image-cropper hidefooter></image-cropper>
+      </div>
+      <div class="actions">
+        <button onclick="prevImage();">Previous</button>
+        <button onclick="nextImage();">Next</button>
+        <input type="checkbox" id="translationModeCheckbox" checked onchange="onTranslationModeChange();"/>
+        <label for="translationModeCheckbox">
+          Translated
+        </label>
+        <span id="status" style="margin-left:2rem;"></span>
+      </div>
+    </div>
+    <div class="boxes">
+    </div>
+  </div>
+  <script>
+    let project;
+    let projectPath;
+    let currentIndex = 0;
+    window.onload = function(){
+      downloadProject();
+    }
+
+    function downloadProject(){
+      projectPath = getUrlParam("project");
+      if (!projectPath) {
+        return;
+      }
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', projectPath);
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+          loadProject(xhr.responseText);
+        }
+      }
+      xhr.onerror = function(){
+        console.log("error");
+      }
+      xhr.send();
+    }
+
+    function loadProject(str){
+      project = JSON.parse(str);
+      currentIndex = 0;
+      loadImage(currentIndex);
+    }
+
+    function useWebPExtension(filename){
+      filename = filename.replace(".jpg",".webp");
+      filename = filename.replace(".jpeg",".webp");
+      filename = filename.replace(".bmp",".webp");
+      filename = filename.replace(".png",".webp");
+      return filename;
+    }
+
+    function loadImage(index) {
+      let imageNames = Object.keys(project.images);
+      let imageName = imageNames[index];
+      let webpName = useWebPExtension(imageName)
+      let isTranslation = document.getElementById("translationModeCheckbox").checked;
+      let path;
+      if (isTranslation === true) {
+        path = getParent(projectPath)+"/out/"+webpName;
+      }else{
+        path = getParent(projectPath)+"/"+webpName;
+      }
+      let img = document.createElement("img");
+      img.onload = function(){
+        updateStatus("");
+        let cropper = document.querySelector("image-cropper");
+        cropper.img = img;
+        cropper.shadowRoot.childNodes[0].style.background = "white";
+        loadBoxes(imageName);
+      }
+      updateStatus("Loading image...");
+      img.src = path;
+    }
+
+    /*
+    e.g. /project/1.itp => /project
+    */
+    function getParent(path){
+      let lastIndex;
+      lastIndex = path.lastIndexOf("/");
+      if (lastIndex === -1){
+        lastIndex = path.lastIndexOf("\\");
+      }
+      if (lastIndex != -1) {
+        return path.substring(0,lastIndex);
+      }
+      return path;
+    }
+
+    function getUrlParam(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+    }
+
+    function onTranslationModeChange(e){
+      loadImage(currentIndex);
+    }
+
+    function prevImage(){
+      if (currentIndex === 0) {
+        alert("This is the first image");
+      }else{
+        currentIndex = currentIndex - 1;
+        loadImage(currentIndex);
+      }
+    }
+
+    function nextImage(){
+      let imageNames = Object.keys(project.images);
+      if (currentIndex === imageNames.length - 1) {
+        alert("This is the last image");
+      }else{
+        currentIndex = currentIndex + 1;
+        loadImage(currentIndex);
+      }
+    }
+
+    function buildBox(box,index){
+      let boxContainer = document.createElement("div");
+      boxContainer.className = "box";
+      let indexTitle = document.createElement("h5");
+      indexTitle.innerText = index;
+      let text =  document.createElement("div");
+      text.innerText = "Source: "+box.text + "\n" + "Target: "+box.target;
+      boxContainer.appendChild(indexTitle);
+      boxContainer.appendChild(text);
+      return boxContainer;
+    }
+
+    function loadBoxes(imageName){
+      let boxesContainer = document.getElementsByClassName("boxes")[0];
+      boxesContainer.innerHTML = "";
+      console.log(project.images);
+      console.log(imageName);
+      let image = project.images[imageName];
+      for (let index = 0; index < image.boxes.length; index++) {
+        const box = image.boxes[index];
+        let boxContainer = buildBox(box,(index+1));
+        boxesContainer.appendChild(boxContainer);
+      }
+    }
+
+    function updateStatus(status){
+      document.getElementById("status").innerText = status;
+    }
+  </script>
+</body>
+</html>

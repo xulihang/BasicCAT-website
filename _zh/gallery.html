@@ -1,0 +1,23 @@
+---
+title: ImageTrans翻译示例
+layout: page
+permalink: /zh/gallery
+---
+<link href="/assets/css/style.css" rel="stylesheet">
+<div class="products">
+  {% for product in site.data.zh.gallery %}
+  <div class="product">
+    <div class="info">
+      <div class="cover">
+        <img class="cover-img" src="{{ product.cover-src }}" alt="{{ product.cover-alt }}"/>
+      </div>
+      <div class="title">
+        <h3><a href="{{ product.href }}">{{ product.title }}</a></h3>
+      </div>
+      <div class="description">
+       {{ product.description }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
