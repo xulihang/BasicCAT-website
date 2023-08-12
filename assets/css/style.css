@@ -28,7 +28,6 @@
 .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -38,6 +37,8 @@
   margin-top: 10px;
   background: #F5F5F5;
   max-width: 30%;
+  margin: 5px;
+  flex-basis: 30%;
 }
 
 .page-content {
