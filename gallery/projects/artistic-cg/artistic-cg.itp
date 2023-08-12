@@ -1,0 +1,197 @@
+{
+    "settings": {
+        "otsu_enabled": true,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 0,
+        "sourceLang": "ja",
+        "maskRadius": 0,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": false,
+        "invert": false,
+        "resize_before_OCR": true,
+        "inferSeparation": false,
+        "balloon_divide_ratio": 4,
+        "minimumHSpan": "10",
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "output_folder": "out",
+        "pdf_dpi": 300,
+        "resize_before_OCR_width": 2500,
+        "expand_for_balloon": true,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "blur": false,
+        "timeout": "60",
+        "fontStyles": [
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "shadowRadius": 2,
+                "bgcolor": "255,255,255",
+                "size": 35,
+                "name": "蓝色竖排",
+                "fontcolor": "150,232,255",
+                "alignment": 0,
+                "wrap": true,
+                "shadowColor": "0,0,0,1",
+                "direction": 1
+            },
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "shadowRadius": 2,
+                "bgcolor": "255,255,255",
+                "size": 35,
+                "name": "白色竖排",
+                "fontcolor": "255,254,255",
+                "alignment": 0,
+                "wrap": true,
+                "shadowColor": "0,0,0,1",
+                "direction": 1
+            }
+        ],
+        "right2left": true,
+        "autoFontSize": false,
+        "invertBasedOnColor": false,
+        "imgQuality": 90,
+        "expanding_pix": 5,
+        "autoThreshold": true,
+        "targetLang": "zh",
+        "overlapped_height_percent": 70,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "minFontSize": 15,
+        "furiganaStipperMethod": 0,
+        "auto_params": true,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 15,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "003_0101.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 199,
+                        "width": 149,
+                        "Y": 182,
+                        "height": 709
+                    },
+                    "suitableSize": 43,
+                    "fontstyle": "蓝色竖排",
+                    "wrappedText": "﹃说不定是个历史悠久的神社，\n神主就这么放着不管吗?真可惜。﹄",
+                    "geometry": {
+                        "X": 263,
+                        "width": 89,
+                        "Y": 182,
+                        "height": 709
+                    },
+                    "text": "「由緒ある神社だったのかもしれない、に、神主が放置してるのか？勿体ないなあ」",
+                    "target": "『说不定是个历史悠久的神社，\n神主就这么放着不管吗?真可惜。』"
+                },
+                {
+                    "suitableSize": 42,
+                    "fontstyle": "白色竖排",
+                    "wrappedText": "茂密的植被。鸟居的朱红色已经剥落，\n根部被杂草挡住看不见。这样的鸟居不止一座。\n树木之间有好几座鸟居向里延伸。\n很容易想象它已经失修了。",
+                    "geometry": {
+                        "X": 394,
+                        "width": 222,
+                        "Y": 181,
+                        "height": 857
+                    },
+                    "text": "鬱蒼と生い茂る草木。鳥居の朱色は剥げ、根本は雑草で見えない。そんな鳥居は一つだけではない。樹木の間から鳥居が何個も奥に続いている。すでに手入れはされていないのは容易に想像できた.",
+                    "target": "茂密的植被。鸟居的朱红色已经剥落，\n根部被杂草挡住看不见。这样的鸟居不止一座。树木之间有好几座鸟居向里延伸。\n很容易想象它已经失修了。"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 628,
+                        "width": 66,
+                        "Y": 183,
+                        "height": 676
+                    },
+                    "suitableSize": 22,
+                    "fontstyle": "蓝色竖排",
+                    "wrappedText": "男人﹃这是座相当古老的鸟居啊。﹄",
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 656,
+                        "width": 46,
+                        "Y": 183,
+                        "height": 603
+                    },
+                    "text": "男「これはかなり古い鳥居だなあ」",
+                    "target": "男人『这是座相当古老的鸟居啊。』"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 711,
+                        "width": 164,
+                        "Y": 182,
+                        "height": 747
+                    },
+                    "suitableSize": 43,
+                    "fontstyle": "白色竖排",
+                    "wrappedText": "在城外遇到那个腐朽的鸟居，\n是在找饭店的时候。\n我今天中午刚搬到这个小镇。",
+                    "geometry": {
+                        "X": 744,
+                        "width": 133,
+                        "Y": 182,
+                        "height": 747
+                    },
+                    "text": "町の外れでその朽ちた鳥居に出遭ったのは飯屋を探していたときだ'。この町には今日の昼に引う越してきたばかり。",
+                    "target": "在城外遇到那个腐朽的鸟居，\n是在找饭店的时候。\n我今天中午刚搬到这个小镇。"
+                }
+            ]
+        }
+    },
+    "terms": {},
+    "dirPath": "F:\\imagetrans_projects\\atistic-CG",
+    "previousOCR": {
+        "engineName": "WinRT",
+        "lang": "日语"
+    }
+}

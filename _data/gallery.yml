@@ -4,3 +4,9 @@
     description: The first comic story of Uncle Scrooge 1952 issue 01.
     cover-src: /gallery/projects/scrooge/out/02.webp
     cover-alt: Scrooge
+-
+    title: Artistic CG
+    href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
+    description: An example of artistic CG. There are no balloons and the text is directly above the background with stroke. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Image source.</a>
+    cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
+    cover-alt: Artistic CG
