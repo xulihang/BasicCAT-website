@@ -29,67 +29,27 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 * 支持调用多种OCR
 
-    支持谷歌、百度、搜狗、有道等在线OCR服务与Tesseract、PaddleOCR、Windows 10自带OCR等离线OCR引擎。具体的支持情况和使用方法见[FAQ](https://www.basiccat.org/zh/imagetrans/faq/)。
-	
-	此外也可以通过编写插件来调用其它OCR服务。
+    支持谷歌、百度、有道等在线OCR服务与mangaOCR、Tesseract、PaddleOCR、系统自带OCR等离线OCR引擎。具体的支持情况和使用方法见[FAQ](https://www.basiccat.org/zh/imagetrans/faq/)。
+   
+   此外也可以通过编写插件来调用其它OCR服务。
 
 * 支持主要语言
 
-	使用的OCR支持世界上所有主要语言。
+   使用的OCR支持世界上所有主要语言。
 
 * 支持使用多种图像处理方法来改善结果
 
-	* 去除背景
-	
-	    ![](/album/imagetrans-features/image.jpg)
-	
-		↓
-	
-	    ![](/album/imagetrans-features/pure_text.jpg)
-	 
-	* 去除日语振假名
-	
-	    去除前：
-		
-		```		
-		搜狗OCR：えーっとはいばん灰原さんのせき席は…
-		```
-		
-		去除后：
-		
-		![](/album/imagetrans-features/no_furigana.jpg)
-		
-		```
-		搜狗OCR：えーっと灰原さんの席は…
-		```
-	
-	* 日语竖排转横排
-	
-	    基于CRNN训练的OCR多数只能识别横排文字，使用这些OCR模型时需要将竖排图像转横排
-		
-		![](/album/imagetrans-features/vertical.jpg)
-		
-		```
-		百度OCR：強んな勉とら!文事なかす原るん日で灰すみ今
-		```
-	
-		↓
-	
-	    ![](/album/imagetrans-features/horizontal.jpg)
-		
-		```
-		百度OCR：今日からみんなと勉強する事になった灰原哀さんです!
-		```
+   * 去除背景
+   * 去除日语振假名
+   * 文字竖排转横排
 
 * 支持去除换行、空格等文本后处理
 * 支持使用拼写检查完善结果
 
-	![](/album/imagetrans-features/spell_check.jpg)
-
 ### 辅助翻译功能
 
 支持调用多种机器翻译引擎，支持翻译记忆、语料检索、术语管理等常见的计算机辅助翻译软件的功能，并针对漫画设计了拟声词检索系统。
-	
+   
 ### 准确抹除文字并回填译文
 
 软件能调用Sickzil-Machine、二值化、PatchMatch等工具和算法生成文字掩膜、去除文字，并根据文字区域的位置和面积回填译文，自动调整译文字体大小。以上操作均支持手动调整。

@@ -22,12 +22,12 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 ![](/album/imagetrans-features/localization.jpg)
 
 It can use natural scene text detection, object detection and a heuristic method to detect text.
-	
+   
 ### Accurate text recognition
 
 * Support multiple OCRs
 
-   It supports online OCR services such as Google, Baidu, Sogou and Youdao, and offline OCR engines such as Tesseract, PaddleOCR and Windows 10's built-in OCR engine. See [FAQ](/imagetrans/faq/) for the usage and the list of supported OCRs.
+   It supports online OCR services such as Google, Baidu and Youdao, and offline OCR engines such as mangaOCR, Tesseract, PaddleOCR and the system's built-in OCR engine. See [FAQ](/imagetrans/faq/) for the usage and the list of supported OCRs.
 
    In addition, you can also call other OCR services by writing plug-ins.
 
@@ -38,46 +38,8 @@ It can use natural scene text detection, object detection and a heuristic method
 * Employ a variety of image processing methods to improve the results
 
    * Remove background
-
-      ![](/album/imagetrans-features/image.jpg)
-
-      ↓
-
-      ![](/album/imagetrans-features/pure_text.jpg)
-
    * Strip Japanese furigana
-
-      Before:
-
-      ```
-      Sogou OCR: えーっとはいばん灰原さんのせき席は…
-	  ```
-
-      After:
-
-      ![](/album/imagetrans-features/no_furigana.jpg)
-
-      ```
-      Sogou OCR: えーっと灰原さんの席は…
-	  ```
-
    * Convert vertically aligned images to horizontally aligned
-
-      Most of the OCR models based on CRNN can only recognize text horizontally aligned, so it is necessary to convert vertical images to horizontal images when using these OCR models
-
-      ![](/album/imagetrans-features/vertical.jpg)
-
-      ```
-      Baidu OCR: 強んな勉とら!文事なかす原るん日で灰すみ今
-	  ```
-
-      ↓
-
-      ![](/album/imagetrans-features/horizontal.jpg)
-
-      ```
-      Baidu OCR: 今日からみんなと勉強する事になった灰原哀さんです!
-	  ```
 
 * Post-processing of the text: remove line breaks, spaces
 * Use spellcheck to improve the result
