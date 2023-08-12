@@ -26,12 +26,17 @@
       align-items: center;
       height: 30px;
       overflow: auto;
+      padding-left:5px;
+      padding-right:5px;
+    }
+
+    .side-pane {
+      flex-basis: 30%;
     }
 
     .boxes {
-      flex-basis: 30%;
-      height: calc(100% - 30px);
       overflow-y: auto;
+      height: calc(100% - 30px)
     }
     
     .box {
@@ -55,7 +60,7 @@
       .viewer {
         flex-basis: 100%;
       }
-      .boxes {
+      .side-pane {
         flex-basis: 100%;
       }
       .imageview {
@@ -80,7 +85,12 @@
         <span id="status" style="margin-left:2rem;"></span>
       </div>
     </div>
-    <div class="boxes">
+    <div class="side-pane">
+      <div class="boxes">
+      </div>
+      <div class="actions" style="justify-content: end;">
+        <a target="_blank" id="downloadAnchor">Download Project</a>
+      </div>
     </div>
   </div>
   <script>
@@ -92,6 +102,11 @@
       if (document.documentElement.clientWidth < 600) { //for mobile devices
         document.getElementsByClassName("imageview")[0].style.height = document.documentElement.clientHeight - 30 + "px";
       }
+      updateDownloadAnchor();
+    }
+
+    function updateDownloadAnchor(){
+      document.getElementById("downloadAnchor").href = projectPath;
     }
 
     function downloadProject(){
