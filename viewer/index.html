@@ -59,7 +59,7 @@
         flex-basis: 100%;
       }
       .imageview {
-        height: calc(100vh - 30px);
+        height: calc(80vh - 30px);
       }
     }
   </style>
@@ -89,6 +89,9 @@
     let currentIndex = 0;
     window.onload = function(){
       downloadProject();
+      if (document.documentElement.clientWidth < 600) { //for mobile devices
+        document.getElementsByClassName("imageview")[0].style.height = document.documentElement.clientHeight - 30 + "px";
+      }
     }
 
     function downloadProject(){
