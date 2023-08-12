@@ -44,8 +44,6 @@ It can use natural scene text detection, object detection and a heuristic method
 * Post-processing of the text: remove line breaks, spaces
 * Use spellcheck to improve the result
 
-   ![](/album/imagetrans-features/spell_check.jpg)
-
 ### Translation assist
 
 It can call a variety of machine translation engines. It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.

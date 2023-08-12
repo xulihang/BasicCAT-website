@@ -609,11 +609,5 @@ permalink: /zh/imagetrans/release-notes/
 
 软件发布。
 
-## 相关工具
-
-* [WebP-Converter](https://github.com/xulihang/WebP-Converter)，转换JPG/BMP/PNG格式的图片到WebP或者将WebP转换为JPG。
-* [WebImageHelper](https://github.com/xulihang/WebImageHelper)，下载网页中所有图片或者根据屏幕坐标，下载位于鼠标下方的图片。该工具可以用于翻译网页中的图片，能将翻译好的图片替换网页中的图片。
-
-
 {% include comments.html %}
 
