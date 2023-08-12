@@ -46,6 +46,13 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 * 支持去除换行、空格等文本后处理
 * 支持使用拼写检查完善结果
 
+示例：
+
+|  图片   | OCR结果  | 引擎 |
+|  ----  | ----  | ---- |
+| ![日文图片](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace |
+| ![英文图片](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google |
+
 ### 辅助翻译功能
 
 支持调用多种机器翻译引擎，支持翻译记忆、语料检索、术语管理等常见的计算机辅助翻译软件的功能，并针对漫画设计了拟声词检索系统。

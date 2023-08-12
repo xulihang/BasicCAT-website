@@ -44,6 +44,13 @@ It can use natural scene text detection, object detection and a heuristic method
 * Post-processing of the text: remove line breaks, spaces
 * Use spellcheck to improve the result
 
+Examples:
+
+|  Image   | OCR Result  | Engine |
+|  ----  | ----  | ---- |
+| ![Japanese image](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace |
+| ![English image](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google |
+
 ### Translation assist
 
 It can call a variety of machine translation engines. It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.
