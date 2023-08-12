@@ -25,24 +25,9 @@ It can use natural scene text detection, object detection and a heuristic method
    
 ### Accurate text recognition
 
-* Support multiple OCRs
-
-   It supports online OCR services such as Google, Baidu and Youdao, and offline OCR engines such as mangaOCR, Tesseract, PaddleOCR and the system's built-in OCR engine. See [FAQ](/imagetrans/faq/) for the usage and the list of supported OCRs.
-
-   In addition, you can also call other OCR services by writing plug-ins.
-
-* Support major languages
-
-   The OCRs used support all the major languages in the world.
-
-* Employ a variety of image processing methods to improve the results
-
-   * Remove background
-   * Strip Japanese furigana
-   * Convert vertically aligned images to horizontally aligned
-
-* Post-processing of the text: remove line breaks, spaces
-* Use spellcheck to improve the result
+* Support multiple OCR engines with custom plugins support
+* Support major languages in the world
+* Employ image preprocessing, text replacing and spell checking to improve the results
 
 Examples:
 
@@ -53,11 +38,11 @@ Examples:
 
 ### Translation assist
 
-It can call a variety of machine translation engines. It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.
-
-Here is a screenshot showing the results of different machine translation engines of a Japanese sentence. We can compare the results and choose the best one. ChatGPT provides the best translation for this sentence.
+It can call a variety of machine translation engines. Here is a screenshot showing the results of different machine translation engines of a Japanese sentence. We can compare the results and choose the best one. ChatGPT provides the best translation for this sentence.
 
 ![Japanese machine translation](/album/imagetrans-machine-translation/ja2en.jpg)
+
+It also supports translation memory, corpus concordance, term management and other common functions of computer-aided translation software. It has a sound effects words search engine designed for translating comics.
 
 ### Precise text removal and reinjection
 
