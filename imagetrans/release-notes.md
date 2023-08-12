@@ -105,7 +105,7 @@ layout: page
 
 ## v1.8.5 (2023/01/08)
 
-* New OCR plugin：macOS's built-in OCR [#issue341](https://github.com/xulihang/ImageTrans-docs/issues/341)
+* New OCR plugin: macOS's built-in OCR [#issue341](https://github.com/xulihang/ImageTrans-docs/issues/341)
 * Support pasting an image with its path
 * Use `file` to detect whether an image's format is WebP [#issue338](https://github.com/xulihang/ImageTrans-docs/issues/338)
 * Fix a bug of pasting an image with data URL
