@@ -40,8 +40,8 @@ permalink: /zh/imagetrans/release-notes/
 * 更新ChatGPT插件以支持设置模型 [#issue430](https://github.com/xulihang/ImageTrans-docs/issues/430)
 * 非精确模式支持覆盖旋转的文字
 * 旋转的区域的文字掩膜生成单位更新为其对应的外包矩形
-* 切换到排序工具栏时，双击文字区域可以手动设定它的序号 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
-* 项目设置新增新的排序依据设置，可以选择根据到原点距离还是纵坐标排序 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/430)
+* 切换到排序工具栏时，双击文字区域可以手动设定它的序号 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/445)
+* 项目设置新增新的排序依据设置，可以选择根据到原点距离还是纵坐标排序 [#issue445](https://github.com/xulihang/ImageTrans-docs/issues/445)
 * 重叠区域的判定不再考虑面积大小 [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
 * 已翻译图片管理器可以根据条件进行快速选择 [#issue447](https://github.com/xulihang/ImageTrans-docs/issues/447#issuecomment-1616323053)
 * 自动将超出图片边界的文字区域放回图片内 [#issue452](https://github.com/xulihang/ImageTrans-docs/issues/452)
