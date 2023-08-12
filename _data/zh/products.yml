@@ -1,0 +1,24 @@
+-
+    title: BasicCAT
+    href: /zh
+    description: BasiCAT是一款开源免费的计算机辅助翻译软件，可以用于翻译文档、网页、表格、幻灯片等内容，支持翻译记忆、机器翻译、术语管理等功能。
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /zh/imagetrans
+    description: ImageTrans是一款计算机辅助图片翻译软件，可以用于翻译漫画、海报、详情页等图片。
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner是一款双语对齐软件，可以从文档、表格、字幕等文件提取文本并自动按句子对齐，并支持手动调整。支持导出数据为翻译记忆，供其它软件调用。
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /zh/TMXSearch/
+    description: TMXSearch是一个在线应用，可以用于检索TMX格式的翻译记忆文件。
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
