@@ -1,0 +1,24 @@
+-
+    title: BasicCAT
+    href: /
+    description: BasicCAT is a free and open source computer-aided translation tool. We can use it to translate documents, web pages, tables, slides and so on with features like translation memory, machine translation and terminology management.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /imagetrans
+    description: ImageTrans is a computer-aided image translation tool. We can use it to translate comics, manga, posters, etc.
+    cover-src: /album/imagetrans.jpg
+    cover-alt: ImageTrans
+-
+    title: Aligner
+    href: /new-tool-bitext-aligner/
+    description: Aligner is a bi-text alignment tool. It can extract text from documents, tables, subtitles and align the text in sentence level automatically with manual adjustment support. It can export the bi-text to translation memory files for other tools to use.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /TMXSearch/
+    description: TMXSearch is an online application for translation memory concordance.
+    cover-src: /album/tmxsearch.jpg
+    cover-alt: TMXSearch
