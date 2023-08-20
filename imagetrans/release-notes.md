@@ -3,6 +3,12 @@ title: Release Notes of ImageTrans
 layout: page
 ---
 
+## v2.3.0 (2023/08/20)
+
+* Fix a bug that vertical alignment is not effective with auto font size enabled
+* Fix the events conflicts under drag mode
+* New feature: embedded web browser [#issue483](https://github.com/xulihang/ImageTrans-docs/issues/483)
+
 ## v2.2.2 (2023/08/10)
 
 * Fix a bug that the text is cut when the line space is over 1.0 using the horizontal text engine

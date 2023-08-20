@@ -4,6 +4,12 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
+## v2.3.0 (2023/08/20)
+
+* 修复启用自动文字大小时垂直居中失效的问题
+* 修复拖拽模式时的事件冲突问题
+* 新功能：内嵌Web浏览器 [#issue483](https://github.com/xulihang/ImageTrans-docs/issues/483)
+
 ## v2.2.2 (2023/08/10)
 
 * 修复横排文字引擎行距大于1时文字被裁剪的问题
