@@ -56,11 +56,22 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 * 支持利用脚本将结果保存为Photoshop的PSD格式文件
 * 支持将数据导出到Excel、Word、XLIFF等文件或者从这些文件导回翻译
+* ImageTrans的项目可以和[LabelPlus](https://github.com/xulihang/ImageTrans-docs/issues/439)这样的工具的项目互相转换
 * 支持使用Chrome插件翻译网页中的图片
 
 ### 跨平台
 
-和BasicCAT一样，ImageTrans是跨平台的（Windows、macOS、Linux）。此外亦能以服务器的形式在线运行。
+ImageTrans是跨平台的，支持以下操作系统：
+
+* Windows 7+
+* macOS 10.11+
+* Linux
+
+此外亦能以服务器的形式在线运行。
+
+### 低硬件要求
+
+ImageTrans对设备的硬件的要求不高，软件自身的体积也不大，包含Java运行环境后的大小约为150MB，可以在较旧的或者低端的设备上运行。但如果需要完成涉及深度学习的任务，比如气泡检测，最好在Intel酷睿以上级别的CPU上运行。
 
 ### 其它功能
 

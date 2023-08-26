@@ -54,11 +54,22 @@ The software can use tools and algorithms like Sickzil-Machine, binarization, Pa
 
 * It can use scripts to save the results as Photoshop's PSD files.
 * It can export the data to Excel, Word, XLIFF files, or import data from these files
+* The projects of ImageTrans can be converted to projects of other tools like [LabelPlus](https://github.com/xulihang/ImageTrans-docs/issues/439) and vice versa
 * With the Chrome Extension, it is possible to translate pictures on web pages directly
 
 ### Cross-platform
 
-Like BasicCAT, ImageTrans is cross-platform (Windows, MacOS, Linux). It can also run as a server for online usage.
+ImageTrans is cross-platform, supporting the following operating systems:
+
+* Windows 7+
+* macOS 10.11+
+* Linux
+
+It can also run as a server for online usage.
+
+### Low requirements
+
+ImageTrans has low requirements of the hardware and its size is only about 150MB including a Java runtime. Your old or low-end devices can run it without a problem. But for things involving deep learning, like ballon detection, you'd better run it on a device with at least an Intel Core CPU.
 
 ### Others
 
