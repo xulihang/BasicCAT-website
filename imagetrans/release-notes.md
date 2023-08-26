@@ -12,6 +12,7 @@ layout: page
 ## v2.4.0 (2023/08/26)
 
 * Fix a problem that the text-removed image is generated twice when exporting
+* Fix a problem that when switching an image, the vertical position of the scroll pane is changed before displaying the new image
 * Apply stroke to the text instead of the parent pane of the text [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
 * Add an option to apply the font style to all selected areas in the font toolbar [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
 * Add note field to term entries
