@@ -3,6 +3,12 @@ title: Release Notes of ImageTrans
 layout: page
 ---
 
+<style>
+.post-content h2 {
+  font-size: 1.5rem;
+}
+</style>
+
 ## v2.4.0 (2023/08/26)
 
 * Fix a problem that the text-removed image is generated twice when exporting

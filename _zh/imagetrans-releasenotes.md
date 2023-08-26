@@ -4,6 +4,12 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
+<style>
+.post-content h2 {
+  font-size: 1.5rem;
+}
+</style>
+
 ## v2.4.0 (2023/08/26)
 
 * 修复导出图片时重复生成去文字图的问题
