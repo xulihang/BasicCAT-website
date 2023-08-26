@@ -4,6 +4,14 @@ layout: page
 permalink: /zh/imagetrans/release-notes/
 ---
 
+## v2.4.0 (2023/08/26)
+
+* 修复导出图片时重复生成去文字图的问题
+* 运用文字描边在文字而不是文字的父Pane [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* 字体工具栏新增应用于所有的选项 [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* 术语支持添加备注
+* 新增术语管理器
+
 ## v2.3.0 (2023/08/20)
 
 * 修复启用自动文字大小时垂直居中失效的问题

@@ -3,6 +3,14 @@ title: Release Notes of ImageTrans
 layout: page
 ---
 
+## v2.4.0 (2023/08/26)
+
+* Fix a problem that the text-removed image is generated twice when exporting
+* Apply stroke to the text instead of the parent pane of the text [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* Add an option to apply the font style to all selected areas in the font toolbar [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* Add note field to term entries
+* Add Term Manager
+
 ## v2.3.0 (2023/08/20)
 
 * Fix a bug that vertical alignment is not effective with auto font size enabled
