@@ -14,7 +14,9 @@ layout: page
 * Fix a problem that the text-removed image is generated twice when exporting
 * Fix a problem that when switching an image, the vertical position of the scroll pane is changed before displaying the new image
 * Apply stroke to the text instead of the parent pane of the text [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
-* Add an option to apply the font style to all selected areas in the font toolbar [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* Add an option to apply the font style to all selected boxes in the font toolbar [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1692600202)
+* Changes made in the font settings window can be applied to all selected boxes [#issue432](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1694525969)
+* We can now zoom the image using the scroll wheel in drag mode with control pressed
 * Add note field to term entries
 * Add Term Manager
 
