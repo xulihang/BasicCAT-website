@@ -1,5 +1,5 @@
 ---
-date: 2023-08-27 08:37:50+08:00
+date: 2023-08-27 15:35:50+08:00
 layout: post
 title: 如何通过看漫画来学日语
 categories: blog
