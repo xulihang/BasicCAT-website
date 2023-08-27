@@ -6,11 +6,11 @@ categories: blog
 tags: imagetrans
 ---
 
-Comics is an art form combining graphics and text to tell attracting stories. Manga is the most influential type of comics in recent decades. Have you thought about learning Japanese by reading Manga?
+Comics is an art form combining graphics and text to tell attractive stories. Manga is the most influential type of comics in recent decades. Have you thought about learning Japanese by reading Manga?
 
-It is recommended to start learning by following textbooks. After having a grasp of the pronounciation, vocabulary and syntax, we can get on with Manga with the help of tools. After all, reading your favourite Manga has more fun than textbooks.
+It is recommended to start learning by following textbooks. After having a grasp of pronunciation, vocabulary and syntax, we can get on with Manga with the help of tools. After all, reading your favorite Manga is more fun than textbooks.
 
-ImageTrans is a computer-aided comics translation tool. It can extract the text of Manga, analyse the syntax of the sentences and give the machine translation results. It also support functions like TTS and term management. We can use it as a language learning tool to learn Japanese.
+ImageTrans is a computer-aided comics translation tool. It can extract the text of Manga, analyse the syntax of the sentences and give the machine translation results. It also supports functions like TTS and term management. We can use it as a language learning tool to learn Japanese.
 
 In the next part, we are going to illustrate how to use it to learn Japanese by reading a Manga image from Ranma 1/2.
 
@@ -44,15 +44,15 @@ Here is the table of the translation results.
 
 ## Text-to-Speech
 
-Since we may have wathced a lot animes, our listening is better trained. We can use the text-to-speech function to help us understand the sentence.
+Since we may have watched a lot of animes, our listening skill is better trained. We can use the text-to-speech function to help us understand the sentence.
 
 <video src="/album/imagetrans-language-learning/tts.mp4" controls="controls">
 您的浏览器不支持 video 标签。
 </video>
 
-## Morphological Analysis and Marking of Pronounciation
+## Morphological Analysis and Marking of Pronunciation
 
-ImageTrans can perform morphological analysis for the sentences to get the segmented words and their details like pronounciation. Although some Mangas have furiganas, they may not look clear on a screen. We can use this function to learn about the pronounciation.
+ImageTrans can perform morphological analysis for the sentences to get the segmented words and their details like pronunciation. Although some Mangas have furiganas, they may not look clear on a screen. We can use this function to learn about the pronunciation.
 
 ![Analysis](/album/imagetrans-language-learning/zh/kuromoji.jpg)
 
