@@ -31,11 +31,11 @@ It can use natural scene text detection, object detection and a heuristic method
 
 Examples:
 
-|  Image   | OCR Result  | Engine | Language |
+|  Image   | OCR Result  | Engine and Language |
 |  ----  | ----  | ---- |
-| ![Japanese image](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace | Japanese |
-| ![Korean image](/album/imagetrans-ocr/korean.jpg)  | 이야.<br/>오랜만이다. | Baidu | Korean |
-| ![English image](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google | English |
+| ![Japanese image](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace<br/>Japanese |
+| ![Korean image](/album/imagetrans-ocr/korean.jpg)  | 이야.<br/>오랜만이다. | Baidu<br/>Korean |
+| ![English image](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google<br/>English |
 
 ### Translation assist
 

@@ -33,11 +33,11 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 示例：
 
-|  图片   | OCR结果  | 引擎 | 语言 |
+|  图片   | OCR结果  | 引擎和语言 |
 |  ----  | ----  | ---- |
-| ![日文图片](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace | 日语 |
-| ![韩文图片](/album/imagetrans-ocr/korean.jpg)  | 이야.<br/>오랜만이다. | 百度 | 韩语 |
-| ![英文图片](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google | 英语 |
+| ![日文图片](/album/imagetrans-ocr/japanese.jpg)  | ようこそ<br/>亡霊<br/>葬儀屋さん | OCRSpace<br/>日语 |
+| ![韩文图片](/album/imagetrans-ocr/korean.jpg)  | 이야.<br/>오랜만이다. | 百度<br/>韩语 |
+| ![英文图片](/album/imagetrans-ocr/english-calvin-and-hobbes.jpg)  | I RIGGED A TUNA FISH SANDWICH YESTERDAY, SO I'M SURE TO HAVE A TIGER BY NOW! | Google<br/>英语 |
 
 ### 辅助翻译功能
 
