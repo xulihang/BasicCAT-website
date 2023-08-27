@@ -37,5 +37,6 @@ tags: imagetrans
 
 ## 相关链接
 
-[目前最佳的日漫翻译方法](https://www.basiccat.org/zh/best-practice-manga-ocr-and-translation/)
+* [如何通过看漫画来学日语](https://www.basiccat.org/zh/how-to-learn-japanese-by-reading-manga/)
+* [目前最佳的日漫翻译方法](https://www.basiccat.org/zh/best-practice-manga-ocr-and-translation/)
 

@@ -40,5 +40,6 @@ Image source: <https://github.com/mantra-inc/open-mantra-dataset>
 
 ## Related
 
-[The Best Way to Translate manga at present](https://www.basiccat.org/best-practice-manga-ocr-and-translation/)
+* [How to Learn Japanese by Reading Manga](https://www.basiccat.org/how-to-learn-japanese-by-reading-manga/)
+* [The Best Way to Translate manga at present](https://www.basiccat.org/best-practice-manga-ocr-and-translation/)
 
