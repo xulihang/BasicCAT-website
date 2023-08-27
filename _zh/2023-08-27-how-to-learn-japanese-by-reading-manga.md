@@ -44,7 +44,7 @@ tags: imagetrans
 
 因为我们可能看动漫比较多，听力会比较好。听一遍日语发音能帮助我们分析句子的结构。这里我们可以用系统自带的TTS引擎朗读原文。
 
-<video src="/album/imagetrans-language-learning/tts.mp4" controls="controls">
+<video src="/album/imagetrans-language-learning/tts.mp4" controls="controls" style="max-width:100%;">
 您的浏览器不支持 video 标签。
 </video>
 

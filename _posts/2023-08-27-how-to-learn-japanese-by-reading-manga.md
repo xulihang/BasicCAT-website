@@ -46,7 +46,7 @@ Here is the table of the translation results.
 
 Since we may have watched a lot of animes, our listening skill is better trained. We can use the text-to-speech function to help us understand the sentence.
 
-<video src="/album/imagetrans-language-learning/tts.mp4" controls="controls">
+<video src="/album/imagetrans-language-learning/tts.mp4" controls="controls" style="max-width:100%;">
 您的浏览器不支持 video 标签。
 </video>
 
