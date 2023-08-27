@@ -10,7 +10,7 @@ Comics is an art form combining graphics and text to tell attractive stories. Ma
 
 It is recommended to start learning by following textbooks. After having a grasp of pronunciation, vocabulary and syntax, we can get on with Manga with the help of tools. After all, reading your favorite Manga is more fun than textbooks.
 
-ImageTrans is a computer-aided comics translation tool. It can extract the text of Manga, analyse the syntax of the sentences and give the machine translation results. It also supports functions like TTS and term management. We can use it as a language learning tool to learn Japanese.
+[ImageTrans](https://www.basiccat.org/imagetrans/) is a computer-aided comics translation tool. It can extract the text of Manga, analyse the syntax of the sentences and give the machine translation results. It also supports functions like TTS and term management. We can use it as a language learning tool to learn Japanese.
 
 In the next part, we are going to illustrate how to use it to learn Japanese by reading a Manga image from Ranma 1/2.
 
