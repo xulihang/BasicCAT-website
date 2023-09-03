@@ -82,6 +82,8 @@ ImageTrans对设备的硬件的要求不高，软件自身的体积也不大，�
 
 ## 翻译示例
 
+ImageTrans可以自由组合不同的文字定位、文字识别和机器翻译方法来处理各种图片。
+
 [访问这里](/zh/gallery/)来浏览使用ImageTrans翻译的图片。
 
 ## 获取ImageTrans

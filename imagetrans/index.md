@@ -80,6 +80,8 @@ ImageTrans has low requirements of the hardware and its size is only about 150MB
 
 ## Examples of Translated Images
 
+ImageTrans can use different combinations of text detection, text recognition and machine translation to work with all kinds of images.
+
 Visit [Gallery](/gallery/) to check out images translated using ImageTrans.
 
 ## Get a Copy
