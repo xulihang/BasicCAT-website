@@ -1,0 +1,434 @@
+{
+    "settings": {
+        "otsu_enabled": true,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 0,
+        "sourceLang": "zh",
+        "maskRadius": 0,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": false,
+        "invert": false,
+        "resize_before_OCR": true,
+        "inferSeparation": true,
+        "output_with_bitmapcreator": false,
+        "balloon_divide_ratio": 4,
+        "minimumHSpan": "10",
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "output_folder": "out",
+        "pdf_dpi": 300,
+        "resize_before_OCR_width": 2500,
+        "expand_for_balloon": true,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "installedFont": [],
+        "blur": false,
+        "timeout": "60",
+        "fontStyles": [
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "System",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "bgcolor": "255,255,255",
+                "size": 6,
+                "name": "正文",
+                "fontcolor": "0,0,0",
+                "alignment": 1,
+                "wrap": true,
+                "direction": 0
+            },
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "System",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "shadowRadius": 2,
+                "bgcolor": "255,255,255",
+                "size": 6,
+                "name": "白色描边",
+                "fontcolor": "0,0,0",
+                "alignment": 0,
+                "wrap": true,
+                "shadowColor": "255,255,255,1",
+                "direction": 0
+            }
+        ],
+        "right2left": false,
+        "autoFontSize": true,
+        "invertBasedOnColor": false,
+        "imgQuality": 90,
+        "expanding_pix": 5,
+        "autoThreshold": true,
+        "targetLang": "en",
+        "overlapped_height_percent": 70,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "minFontSize": 15,
+        "furiganaStipperMethod": 0,
+        "auto_params": true,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 2,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "SQ.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 76,
+                        "width": 54,
+                        "Y": 233,
+                        "height": 40
+                    },
+                    "suitableSize": 20,
+                    "fontstyle": "白色描边",
+                    "probability": 0.9955818057060242,
+                    "adjusted": true,
+                    "degree": 349,
+                    "geometry": {
+                        "X": 71,
+                        "width": 48,
+                        "Y": 228,
+                        "height": 46
+                    },
+                    "text": "戳",
+                    "target": "Poke"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 194,
+                        "width": 60,
+                        "Y": 342,
+                        "height": 40
+                    },
+                    "suitableSize": 20,
+                    "fontstyle": "白色描边",
+                    "probability": 0.9069204926490784,
+                    "adjusted": true,
+                    "degree": 345,
+                    "geometry": {
+                        "X": 201,
+                        "width": 42,
+                        "Y": 345,
+                        "height": 40
+                    },
+                    "text": "戳",
+                    "target": "Poke"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 40,
+                        "width": 122,
+                        "Y": 535,
+                        "height": 59
+                    },
+                    "suitableSize": 15,
+                    "probability": 0.9766145348548889,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 39,
+                        "width": 118,
+                        "Y": 530,
+                        "height": 66
+                    },
+                    "text": "喂，你吃早饭了吗?",
+                    "target": "Hey, did you have breakfast?"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 159,
+                        "width": 57,
+                        "Y": 575,
+                        "height": 18
+                    },
+                    "suitableSize": 14,
+                    "fontstyle": "白色描边",
+                    "probability": 0.8378960490226746,
+                    "adjusted": true,
+                    "degree": 345,
+                    "geometry": {
+                        "X": 156,
+                        "width": 43,
+                        "Y": 572,
+                        "height": 31
+                    },
+                    "text": "小声",
+                    "target": "Whisper"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 537,
+                        "width": 80,
+                        "Y": 533,
+                        "height": 35
+                    },
+                    "suitableSize": 18,
+                    "probability": 0.8105190396308899,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 544,
+                        "width": 70,
+                        "Y": 531,
+                        "height": 34
+                    },
+                    "text": "没有。",
+                    "target": "No."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 56,
+                        "width": 155,
+                        "Y": 844,
+                        "height": 90
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9398813247680664,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 60,
+                        "width": 147,
+                        "Y": 840,
+                        "height": 94
+                    },
+                    "text": "一会早读下课我们去便利店买吃的。",
+                    "target": "Let's go to the convenience store to buy some food after morning reading."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 225,
+                        "width": 73,
+                        "Y": 919,
+                        "height": 39
+                    },
+                    "suitableSize": 20,
+                    "probability": 0.9901893734931946,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 233,
+                        "width": 68,
+                        "Y": 920,
+                        "height": 33
+                    },
+                    "text": "好啊。",
+                    "target": "Yes."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 37,
+                        "width": 137,
+                        "Y": 1034,
+                        "height": 56
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9886330962181091,
+                    "geometry": {
+                        "X": 32,
+                        "width": 147,
+                        "Y": 1029,
+                        "height": 66
+                    },
+                    "text": "谁晚到，谁请喝牛奶~",
+                    "target": "Whoever arrives late should buy the other some milk."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 461,
+                        "width": 153,
+                        "Y": 1036,
+                        "height": 56
+                    },
+                    "suitableSize": 16,
+                    "probability": 0.980089545249939,
+                    "geometry": {
+                        "X": 456,
+                        "width": 163,
+                        "Y": 1031,
+                        "height": 66
+                    },
+                    "text": "…才不要！你是田径队的！",
+                    "target": "... No way! You're on the track team!"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 509,
+                        "width": 106,
+                        "Y": 1147,
+                        "height": 35
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9963395595550537,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 512,
+                        "width": 100,
+                        "Y": 1148,
+                        "height": 32
+                    },
+                    "localStyle": {
+                        "kerning": 5,
+                        "capital": false,
+                        "suitableSize": 14,
+                        "b4jfont": "System",
+                        "line-height": 0.9999999962747097,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "255,255,255",
+                        "size": 14,
+                        "name": "正文",
+                        "fontcolor": "0,0,0",
+                        "alignment": 1,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "发现有坑",
+                    "target": "Trickery\ndetected"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 465,
+                        "width": 109,
+                        "Y": 1328,
+                        "height": 56
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9954546689987183,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 465,
+                        "width": 119,
+                        "Y": 1325,
+                        "height": 66
+                    },
+                    "text": "我让你先跑30秒",
+                    "target": "I'll let you run first for 30 seconds."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 488,
+                        "width": 135,
+                        "Y": 1895,
+                        "height": 22
+                    },
+                    "suitableSize": 14,
+                    "probability": 0.9014973640441895,
+                    "geometry": {
+                        "X": 483,
+                        "width": 145,
+                        "Y": 1890,
+                        "height": 32
+                    },
+                    "text": "说不定能赢…",
+                    "target": "Maybe I can win..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 438,
+                        "width": 77,
+                        "Y": 2024,
+                        "height": 32
+                    },
+                    "suitableSize": 15,
+                    "probability": 0.7389867305755615,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 457,
+                        "width": 41,
+                        "Y": 2017,
+                        "height": 34
+                    },
+                    "text": "好！",
+                    "target": "It's a deal."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 557,
+                        "width": 65,
+                        "Y": 577,
+                        "height": 38
+                    },
+                    "suitableSize": 15,
+                    "fontstyle": "白色描边",
+                    "adjusted": true,
+                    "degree": 350,
+                    "geometry": {
+                        "X": 561,
+                        "width": 51,
+                        "Y": 573,
+                        "height": 32
+                    },
+                    "text": "小声",
+                    "target": "Whisper"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 541,
+                        "width": 75,
+                        "Y": 1586,
+                        "height": 49
+                    },
+                    "suitableSize": 16,
+                    "fontstyle": "白色描边",
+                    "adjusted": true,
+                    "degree": 9,
+                    "geometry": {
+                        "X": 547,
+                        "width": 44,
+                        "Y": 1554,
+                        "height": 114
+                    },
+                    "text": "若有所思",
+                    "target": "thinking..."
+                }
+            ]
+        }
+    },
+    "terms": {},
+    "dirPath": "F:\\imagetrans_projects\\SQ",
+    "previousOCR": {
+        "engineName": "baidu",
+        "lang": "Chinese"
+    }
+}

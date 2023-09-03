@@ -17,6 +17,12 @@
     cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
     cover-alt: 日漫
 -
+    title: 条漫
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp
+    description: 条漫，中译英示例。图片来自<a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>。
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
     title: 信息图
     href: /viewer/?project=/gallery/projects/infographic/infographics.itp
     description: 一篇SEMRush<a href="https://www.semrush.com/blog/seo-copywriting/">博客</a>中使用的信息图。

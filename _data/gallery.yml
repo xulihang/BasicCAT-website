@@ -17,6 +17,12 @@
     cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
     cover-alt: Manga
 -
+    title: Webtoon
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp
+    description: A long-strip webtoon in Chinese translated into English. The image is taken from <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>.
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
     title: Infographic
     href: /viewer/?project=/gallery/projects/infographic/infographics.itp
     description: An example of infographics used in a <a href="https://www.semrush.com/blog/seo-copywriting/">blog</a> on semrush.
