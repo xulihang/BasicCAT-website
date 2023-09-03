@@ -217,6 +217,26 @@
                 },
                 {
                     "targetGeometry": {
+                        "X": 557,
+                        "width": 65,
+                        "Y": 577,
+                        "height": 38
+                    },
+                    "suitableSize": 15,
+                    "fontstyle": "白色描边",
+                    "adjusted": true,
+                    "degree": 350,
+                    "geometry": {
+                        "X": 561,
+                        "width": 51,
+                        "Y": 573,
+                        "height": 32
+                    },
+                    "text": "小声",
+                    "target": "Whisper"
+                },
+                {
+                    "targetGeometry": {
                         "X": 56,
                         "width": 155,
                         "Y": 844,
@@ -347,6 +367,26 @@
                 },
                 {
                     "targetGeometry": {
+                        "X": 541,
+                        "width": 75,
+                        "Y": 1586,
+                        "height": 49
+                    },
+                    "suitableSize": 16,
+                    "fontstyle": "白色描边",
+                    "adjusted": true,
+                    "degree": 9,
+                    "geometry": {
+                        "X": 547,
+                        "width": 44,
+                        "Y": 1554,
+                        "height": 114
+                    },
+                    "text": "若有所思",
+                    "target": "thinking..."
+                },
+                {
+                    "targetGeometry": {
                         "X": 488,
                         "width": 135,
                         "Y": 1895,
@@ -365,12 +405,12 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 438,
+                        "X": 437,
                         "width": 77,
-                        "Y": 2024,
+                        "Y": 2025,
                         "height": 32
                     },
-                    "suitableSize": 15,
+                    "suitableSize": 16,
                     "probability": 0.7389867305755615,
                     "adjusted": true,
                     "geometry": {
@@ -380,47 +420,7 @@
                         "height": 34
                     },
                     "text": "好！",
-                    "target": "It's a deal."
-                },
-                {
-                    "targetGeometry": {
-                        "X": 557,
-                        "width": 65,
-                        "Y": 577,
-                        "height": 38
-                    },
-                    "suitableSize": 15,
-                    "fontstyle": "白色描边",
-                    "adjusted": true,
-                    "degree": 350,
-                    "geometry": {
-                        "X": 561,
-                        "width": 51,
-                        "Y": 573,
-                        "height": 32
-                    },
-                    "text": "小声",
-                    "target": "Whisper"
-                },
-                {
-                    "targetGeometry": {
-                        "X": 541,
-                        "width": 75,
-                        "Y": 1586,
-                        "height": 49
-                    },
-                    "suitableSize": 16,
-                    "fontstyle": "白色描边",
-                    "adjusted": true,
-                    "degree": 9,
-                    "geometry": {
-                        "X": 547,
-                        "width": 44,
-                        "Y": 1554,
-                        "height": 114
-                    },
-                    "text": "若有所思",
-                    "target": "thinking..."
+                    "target": "Okay!"
                 }
             ]
         }
