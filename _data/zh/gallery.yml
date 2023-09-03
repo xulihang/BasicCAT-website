@@ -7,19 +7,19 @@
 -
     title: 日文CG
     href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
-    description: 日文CG的例子。没有气泡，文字直接放在背景上，会带有描边。<a href="https://github.com/xulihang/ImageTrans-docs/issues/199">图源</a>
+    description: CG图，日译中。没有气泡，文字直接放在背景上，会带有描边。<a href="https://github.com/xulihang/ImageTrans-docs/issues/199">图源</a>
     cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
     cover-alt: Artistic CG
 -
     title: 日漫
     href: /viewer/?project=/gallery/projects/manga/ranma.itp
-    description: 日英漫画翻译示例。图片来自乱马1/2第一卷。
+    description: 格漫，日译英。图片来自乱马1/2第一卷。
     cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
     cover-alt: 日漫
 -
     title: 条漫
     href: /viewer/?project=/gallery/projects/webtoon/SQ.itp
-    description: 条漫，中译英示例。图片来自<a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>。
+    description: 条漫，中译英。图片来自<a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>。
     cover-src: /gallery/projects/webtoon/out/SQ.webp
     cover-alt: Webtoon
 -
@@ -28,3 +28,9 @@
     description: 一篇SEMRush<a href="https://www.semrush.com/blog/seo-copywriting/">博客</a>中使用的信息图。
     cover-src: /gallery/projects/infographic/out/capture001.webp
     cover-alt: Infographic
+-
+    title: 四格漫画
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: 四格漫画，英译中。图片来自<a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>。
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: 四格漫画

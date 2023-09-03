@@ -7,7 +7,7 @@
 -
     title: Artist CG
     href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
-    description: An example of artist CG. There are no balloons and the text is directly above the background with stroke. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Image source.</a>
+    description: An example of artist CG translated from Japanese to Chinese. There are no balloons and the text is directly above the background with stroke. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Image source.</a>
     cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
     cover-alt: Artist CG
 -
@@ -28,3 +28,9 @@
     description: An example of infographics used in a <a href="https://www.semrush.com/blog/seo-copywriting/">blog</a> on semrush.
     cover-src: /gallery/projects/infographic/out/capture001.webp
     cover-alt: Infographic
+-
+    title: Comic Strip
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: A comic strip in English translated to Chinese. The image is by <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>.
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: Comic Strip
