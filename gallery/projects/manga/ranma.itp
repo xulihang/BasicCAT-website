@@ -1,0 +1,332 @@
+{
+    "settings": {
+        "otsu_enabled": false,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 1,
+        "sourceLang": "ja",
+        "maskRadius": 0,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": false,
+        "invert": false,
+        "resize_before_OCR": true,
+        "inferSeparation": true,
+        "output_with_bitmapcreator": false,
+        "balloon_divide_ratio": 4,
+        "minimumHSpan": "10",
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "output_folder": "out",
+        "pdf_dpi": 300,
+        "resize_before_OCR_width": 2500,
+        "expand_for_balloon": true,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "blur": false,
+        "installedFont": [],
+        "timeout": "60",
+        "fontStyles": [
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "Wild Words",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "bgcolor": "255,255,255",
+                "size": 6,
+                "name": "横向",
+                "fontcolor": "0,0,0",
+                "alignment": 1,
+                "wrap": true,
+                "direction": 0
+            }
+        ],
+        "right2left": true,
+        "TTS": {
+            "sourceVoice": "Microsoft Haruka Desktop",
+            "rate": "-2",
+            "targetVoice": "Microsoft Huihui Desktop"
+        },
+        "autoFontSize": true,
+        "invertBasedOnColor": false,
+        "imgQuality": 90,
+        "expanding_pix": 10,
+        "autoThreshold": false,
+        "targetLang": "en",
+        "overlapped_height_percent": 70,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "minFontSize": 15,
+        "furiganaStipperMethod": 0,
+        "auto_params": true,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 2,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "mai_Ranma1_012.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 1051,
+                        "width": 155,
+                        "Y": 224,
+                        "height": 62
+                    },
+                    "suitableSize": 40,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 1087,
+                        "width": 101,
+                        "Y": 143,
+                        "height": 210
+                    },
+                    "text": "破っ!!",
+                    "target": "yack..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 707,
+                        "width": 74,
+                        "Y": 219,
+                        "height": 67
+                    },
+                    "suitableSize": 25,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 714,
+                        "width": 49,
+                        "Y": 186,
+                        "height": 109
+                    },
+                    "text": "あー、",
+                    "target": "Gasp..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 539,
+                        "width": 104,
+                        "Y": 188,
+                        "height": 67
+                    },
+                    "suitableSize": 31,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 536,
+                        "width": 101,
+                        "Y": 162,
+                        "height": 99
+                    },
+                    "text": "調子いい.",
+                    "target": "Good."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 328,
+                        "width": 114,
+                        "Y": 191,
+                        "height": 151
+                    },
+                    "suitableSize": 25,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 342,
+                        "width": 85,
+                        "Y": 164,
+                        "height": 194
+                    },
+                    "text": "まーた\nあかねはー.",
+                    "target": "Akane, you are training again..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 45,
+                        "width": 150,
+                        "Y": 247,
+                        "height": 167
+                    },
+                    "suitableSize": 31,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 39,
+                        "width": 158,
+                        "Y": 215,
+                        "height": 241
+                    },
+                    "text": "んなことばっかやってるからまともにモテないのよ.",
+                    "target": "It won't help you with boys."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 1016,
+                        "width": 108,
+                        "Y": 1149,
+                        "height": 111
+                    },
+                    "suitableSize": 20,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 1017,
+                        "width": 93,
+                        "Y": 1124,
+                        "height": 154
+                    },
+                    "text": "よけーなお世話よ.",
+                    "target": "It is none of your business."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 316,
+                        "width": 174,
+                        "Y": 1131,
+                        "height": 134
+                    },
+                    "suitableSize": 28,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 308,
+                        "width": 180,
+                        "Y": 1075,
+                        "height": 245
+                    },
+                    "text": "あたしはおねーちゃんと違って男なんか、",
+                    "target": "I am different from you..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 163,
+                        "width": 111,
+                        "Y": 1222,
+                        "height": 115
+                    },
+                    "suitableSize": 31,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 166,
+                        "width": 119,
+                        "Y": 1164,
+                        "height": 192
+                    },
+                    "text": "大っ嫌いなの.",
+                    "target": "I hate boys."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 1092,
+                        "width": 84,
+                        "Y": 1562,
+                        "height": 44
+                    },
+                    "suitableSize": 20,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 1112,
+                        "width": 51,
+                        "Y": 1514,
+                        "height": 126
+                    },
+                    "text": "ふーん、",
+                    "target": "If so..."
+                },
+                {
+                    "targetGeometry": {
+                        "X": 896,
+                        "width": 138,
+                        "Y": 1550,
+                        "height": 105
+                    },
+                    "suitableSize": 22,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 889,
+                        "width": 184,
+                        "Y": 1499,
+                        "height": 200
+                    },
+                    "text": "じゃーこの話あんたにゃ関係ないか。",
+                    "target": "It has nothing to do with you."
+                }
+            ],
+            "text-removed": true,
+            "panels": [
+                {
+                    "X": 35,
+                    "width": 1159,
+                    "Y": 0,
+                    "height": 1054
+                },
+                {
+                    "X": 28,
+                    "width": 1156,
+                    "Y": 1060,
+                    "height": 421
+                },
+                {
+                    "X": 38,
+                    "width": 1148,
+                    "Y": 1496,
+                    "height": 387
+                }
+            ]
+        }
+    },
+    "terms": {
+        "調子": [
+            {
+                "note": "",
+                "target": "状态"
+            }
+        ],
+        "世話": [
+            {
+                "note": "",
+                "target": "关照"
+            }
+        ],
+        "モテない": [
+            {
+                "note": "",
+                "target": "不受欢迎"
+            }
+        ]
+    },
+    "dirPath": "E:\\BaiduNetdiskDownload\\ranma\\1\\waifu2x_output",
+    "previousOCR": {
+        "engineName": "manga-ocr",
+        "lang": "日语"
+    }
+}

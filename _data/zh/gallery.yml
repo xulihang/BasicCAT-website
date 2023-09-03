@@ -1,15 +1,21 @@
 -
-    title: 美国漫画
+    title: 美漫
     href: /viewer/?project=/gallery/projects/scrooge/scrooge.itp
     description: 1952年《史高治叔叔》杂志第一期的第一个故事
     cover-src: /gallery/projects/scrooge/out/02.webp
-    cover-alt: 美国漫画
+    cover-alt: 美漫
 -
     title: 日文CG
     href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
     description: 日文CG的例子。没有气泡，文字直接放在背景上，会带有描边。<a href="https://github.com/xulihang/ImageTrans-docs/issues/199">图源</a>
     cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
     cover-alt: Artistic CG
+-
+    title: 日漫
+    href: /viewer/?project=/gallery/projects/manga/ranma.itp
+    description: 日英漫画翻译示例。图片来自乱马1/2第一卷。
+    cover-src: /gallery/projects/infographic/out/mai_Ranma1_012.webp
+    cover-alt: 日漫
 -
     title: 信息图
     href: /viewer/?project=/gallery/projects/infographic/infographics.itp
