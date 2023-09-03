@@ -1,0 +1,529 @@
+{
+    "settings": {
+        "otsu_enabled": true,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 0,
+        "sourceLang": "en",
+        "maskRadius": 0,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": true,
+        "invert": false,
+        "resize_before_OCR": true,
+        "inferSeparation": true,
+        "output_with_bitmapcreator": false,
+        "balloon_divide_ratio": 4,
+        "minimumHSpan": "10",
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "output_folder": "out",
+        "pdf_dpi": 300,
+        "resize_before_OCR_width": 2500,
+        "expand_for_balloon": true,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "blur": false,
+        "installedFont": [],
+        "timeout": "60",
+        "fontStyles": [
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "System",
+                "line-height": 1.25,
+                "bold": false,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "bgcolor": "255,255,255",
+                "size": 6,
+                "name": "text",
+                "fontcolor": "0,0,0",
+                "alignment": 0,
+                "wrap": true,
+                "direction": 0
+            },
+            {
+                "kerning": 5,
+                "capital": false,
+                "b4jfont": "System",
+                "line-height": 1.25,
+                "bold": true,
+                "vertical-center": false,
+                "fontname": "ArialMT",
+                "italic": false,
+                "bgcolor": "0,0,0",
+                "size": 6,
+                "name": "title",
+                "fontcolor": "255,255,255",
+                "alignment": 0,
+                "wrap": true,
+                "direction": 0
+            }
+        ],
+        "right2left": false,
+        "autoFontSize": true,
+        "invertBasedOnColor": false,
+        "imgQuality": 90,
+        "expanding_pix": 5,
+        "autoThreshold": true,
+        "targetLang": "zh",
+        "overlapped_height_percent": 70,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "minFontSize": 20,
+        "furiganaStipperMethod": 0,
+        "auto_params": true,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 2,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "capture001.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 65,
+                        "width": 482,
+                        "Y": 167,
+                        "height": 98
+                    },
+                    "suitableSize": 51,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 65,
+                        "width": 930,
+                        "Y": 167,
+                        "height": 67
+                    },
+                    "text": "10 Tips to Improve Your Content",
+                    "target": "改进内容的10个技巧"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 82,
+                        "width": 261,
+                        "Y": 377,
+                        "height": 30
+                    },
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 77,
+                        "width": 261,
+                        "Y": 375,
+                        "height": 30
+                    },
+                    "text": "Find the Right Keywords:",
+                    "target": "找到正确的关键字："
+                },
+                {
+                    "suitableSize": 22,
+                    "geometry": {
+                        "X": 62,
+                        "width": 292,
+                        "Y": 422,
+                        "height": 119
+                    },
+                    "text": "Use tools like the Keyword Magic Tool to perform keyword research before you begin writing a piece",
+                    "target": "在开始写一篇文章之前，使用像Keyword Magic Tool这样的工具来进行关键词研究"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 451,
+                        "width": 289,
+                        "Y": 375,
+                        "height": 30
+                    },
+                    "text": "Find Questions People Ask:",
+                    "target": "查看人们问的问题："
+                },
+                {
+                    "suitableSize": 25,
+                    "geometry": {
+                        "X": 431,
+                        "width": 294,
+                        "Y": 422,
+                        "height": 114
+                    },
+                    "text": "Leverage SERP features like the People Also Ask (PAA) box to find out what your users actually want to know",
+                    "target": "利用人们也爱问(PAA)这样的SERP功能，找出您的用户真正想知道的内容"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 864,
+                        "width": 215,
+                        "Y": 376,
+                        "height": 29
+                    },
+                    "text": "Identify and Satisfy",
+                    "target": "确定并满足"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 864,
+                        "width": 151,
+                        "Y": 419,
+                        "height": 27
+                    },
+                    "text": "Search Intent:",
+                    "target": "搜索意图："
+                },
+                {
+                    "suitableSize": 26,
+                    "geometry": {
+                        "X": 849,
+                        "width": 272,
+                        "Y": 466,
+                        "height": 86
+                    },
+                    "text": "Identify search intent for your keywords and create appropriate content",
+                    "target": "确定您的关键字的搜索意图并创建适当的内容"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 863,
+                        "width": 223,
+                        "Y": 666,
+                        "height": 31
+                    },
+                    "text": "Review Competitors",
+                    "target": "查看竞争对手的"
+                },
+                {
+                    "suitableSize": 18,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 865,
+                        "width": 93,
+                        "Y": 713,
+                        "height": 22
+                    },
+                    "text": "Articles:",
+                    "target": "文章："
+                },
+                {
+                    "targetGeometry": {
+                        "X": 847,
+                        "width": 255,
+                        "Y": 755,
+                        "height": 99
+                    },
+                    "suitableSize": 22,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 847,
+                        "width": 236,
+                        "Y": 755,
+                        "height": 88
+                    },
+                    "text": "Use Keyword Gap tool to see what's working for your competitors",
+                    "target": "使用Keyword Gap Tool来了解竞争对手用了哪些关键词"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 864,
+                        "width": 247,
+                        "Y": 956,
+                        "height": 29
+                    },
+                    "text": "Create Linkable Assets:",
+                    "target": "创建可链接的资源："
+                },
+                {
+                    "targetGeometry": {
+                        "X": 847,
+                        "width": 263,
+                        "Y": 1002,
+                        "height": 98
+                    },
+                    "suitableSize": 22,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 847,
+                        "width": 291,
+                        "Y": 1002,
+                        "height": 125
+                    },
+                    "text": "Create original research, case studies, and in-depth guides that are engaging and shareable",
+                    "target": "创建具有吸引力且值得分享的原创研究、案例研究和深入指南"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 864,
+                        "width": 268,
+                        "Y": 1261,
+                        "height": 32
+                    },
+                    "text": "Optimize Headers, Titles,",
+                    "target": "优化页眉、标题、"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 862,
+                        "width": 246,
+                        "Y": 1304,
+                        "height": 29
+                    },
+                    "text": "and Meta Descriptions:",
+                    "target": "和Meta描述："
+                },
+                {
+                    "suitableSize": 22,
+                    "geometry": {
+                        "X": 847,
+                        "width": 301,
+                        "Y": 1351,
+                        "height": 121
+                    },
+                    "text": "Don't just optimize for keywords. Keep your reader at the center with skim-able and user-friendly content",
+                    "target": "不要只针对关键字进行优化。以读者为中心，提供可以快速浏览的、良好的阅读体验"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 446,
+                        "width": 195,
+                        "Y": 1261,
+                        "height": 29
+                    },
+                    "text": "Create Organized,",
+                    "target": "创建有组织的、"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 446,
+                        "width": 244,
+                        "Y": 1305,
+                        "height": 28
+                    },
+                    "text": "Easy-to-Read Content:",
+                    "target": "易于阅读的内容："
+                },
+                {
+                    "suitableSize": 22,
+                    "geometry": {
+                        "X": 430,
+                        "width": 311,
+                        "Y": 1351,
+                        "height": 119
+                    },
+                    "text": "Users want answers quickly, meaning they should be able to skim your content easily to find what they need",
+                    "target": "用户希望迅速得到答案，这意味着他们应该能够快速地浏览您的内容以找到他们需要的东西"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 75,
+                        "width": 171,
+                        "Y": 1261,
+                        "height": 28
+                    },
+                    "text": "Include Visuals:",
+                    "target": "添加视觉元素："
+                },
+                {
+                    "suitableSize": 25,
+                    "geometry": {
+                        "X": 62,
+                        "width": 293,
+                        "Y": 1307,
+                        "height": 145
+                    },
+                    "text": "Keep your readers engaged and encourage social media shares by creating visuals for your content (like this infographic!)",
+                    "target": "通过为您的内容创建视觉元素来保持您的读者的参与度并鼓励社交媒体分享(就像这张信息图！)"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 78,
+                        "width": 158,
+                        "Y": 1016,
+                        "height": 30
+                    },
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 74,
+                        "width": 158,
+                        "Y": 1014,
+                        "height": 30
+                    },
+                    "text": "Include CTAs:",
+                    "target": "添加CTA："
+                },
+                {
+                    "suitableSize": 24,
+                    "geometry": {
+                        "X": 62,
+                        "width": 282,
+                        "Y": 1061,
+                        "height": 86
+                    },
+                    "text": "Calls to action provide logical next steps for users who land on your page",
+                    "target": "CTA为登陆您的页面的用户提供合理的后续步骤"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 78,
+                        "width": 140,
+                        "Y": 666,
+                        "height": 29
+                    },
+                    "text": "Keep Linking",
+                    "target": "注意"
+                },
+                {
+                    "suitableSize": 19,
+                    "fontstyle": "title",
+                    "geometry": {
+                        "X": 77,
+                        "width": 191,
+                        "Y": 709,
+                        "height": 27
+                    },
+                    "text": "Structure in Mind:",
+                    "target": "链接结构："
+                },
+                {
+                    "suitableSize": 24,
+                    "geometry": {
+                        "X": 62,
+                        "width": 360,
+                        "Y": 756,
+                        "height": 141
+                    },
+                    "text": "Both users and Google Bot will benefit from strong internal linking structure, meaning you can help users and improve on-page SEO elements at the same time",
+                    "target": "用户和Google Bot都将受益于强大的内部链接结构，这意味着您可以同时帮助用户和改进页面上的SEO元素"
+                }
+            ],
+            "text-removed": true,
+            "panels": [
+                {
+                    "X": 40,
+                    "width": 1045,
+                    "Y": 145,
+                    "height": 128
+                },
+                {
+                    "X": 37,
+                    "width": 338,
+                    "Y": 280,
+                    "height": 281
+                },
+                {
+                    "X": 400,
+                    "width": 351,
+                    "Y": 284,
+                    "height": 277
+                },
+                {
+                    "X": 828,
+                    "width": 335,
+                    "Y": 280,
+                    "height": 275
+                },
+                {
+                    "X": 828,
+                    "width": 321,
+                    "Y": 562,
+                    "height": 301
+                },
+                {
+                    "X": 828,
+                    "width": 327,
+                    "Y": 868,
+                    "height": 262
+                },
+                {
+                    "X": 828,
+                    "width": 335,
+                    "Y": 1160,
+                    "height": 317
+                },
+                {
+                    "X": 395,
+                    "width": 374,
+                    "Y": 1164,
+                    "height": 314
+                },
+                {
+                    "X": 41,
+                    "width": 338,
+                    "Y": 1160,
+                    "height": 314
+                },
+                {
+                    "X": 41,
+                    "width": 335,
+                    "Y": 895,
+                    "height": 260
+                },
+                {
+                    "X": 37,
+                    "width": 382,
+                    "Y": 565,
+                    "height": 332
+                }
+            ]
+        }
+    },
+    "terms": {},
+    "dirPath": "F:\\imagetrans_projects\\semrush",
+    "previousOCR": {
+        "engineName": "baidu",
+        "lang": "English"
+    }
+}

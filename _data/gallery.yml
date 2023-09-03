@@ -10,3 +10,9 @@
     description: An example of artist CG. There are no balloons and the text is directly above the background with stroke. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Image source.</a>
     cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
     cover-alt: Artist CG
+-
+    title: Infographic
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: An example of infographics used in a <a href="https://www.semrush.com/blog/seo-copywriting/">blog</a> on semrush.
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: Infographic

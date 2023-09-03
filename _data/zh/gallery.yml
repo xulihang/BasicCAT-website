@@ -10,3 +10,9 @@
     description: 日文CG的例子。没有气泡，文字直接放在背景上，会带有描边。<a href="https://github.com/xulihang/ImageTrans-docs/issues/199">图源</a>
     cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
     cover-alt: Artistic CG
+-
+    title: 信息图
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: 一篇SEMRush<a href="https://www.semrush.com/blog/seo-copywriting/">博客</a>中使用的信息图。
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: Infographic
