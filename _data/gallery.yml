@@ -14,7 +14,7 @@
     title: Manga
     href: /viewer/?project=/gallery/projects/manga/ranma.itp
     description: An example of manga translated from Japanese to English. The image is from volumn 1 of Ranma 1/2.
-    cover-src: /gallery/projects/infographic/out/mai_Ranma1_012.webp
+    cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
     cover-alt: Manga
 -
     title: Infographic
