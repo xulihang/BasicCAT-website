@@ -74,6 +74,7 @@ ImageTrans has low requirements of the hardware and its size is only about 150MB
 
 ### Others
 
+* Can work offline on a local device
 * Global font style
 * Automatic detection of background color and text color
 * Batch processing
