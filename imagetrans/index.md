@@ -94,7 +94,7 @@ Pricing:
 * ImageTrans for personal use: $19
 * ImageTrans for commercial purpose: $299
 
-Free update within half a year.
+One-time purchase. Free upgrades within half a year.
 
 Please follow the [installation instruction](https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2).
 
