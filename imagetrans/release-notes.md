@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v2.4.1 (2023/09/16)
+
+* New project setting to specify the default output image format
+* New menu item to clear the styles of text
+* New preference to use the system's menu for macOS
+* Add the ARM version for Mac
+* Fix a ratio problem for the large image output mode
+* Other bugfixes
+
 ## v2.4.0 (2023/08/26)
 
 * Fix a problem that the text-removed image is generated twice when exporting
