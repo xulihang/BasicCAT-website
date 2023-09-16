@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v2.5.0 (2023/09/16)
+
+Center alignment support for vertical text engine
+
 ## v2.4.1 (2023/09/16)
 
 * New project setting to specify the default output image format
