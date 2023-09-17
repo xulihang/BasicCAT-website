@@ -16,11 +16,11 @@ If we run the web app at home, we can only access it on the local area network. 
 
    1. Open the window form of the server via the menu.
 
-      ![Server](/album/web-app/zh/menu-server.jpg)
+      ![Server](/album/web-app/menu-server.jpg)
 
    2. Click Start Server and connect. Here, you can set the machine translation, text detection, and boxes merging methods. Here we use ChatGPT for translation and the balloon detection model for text detection.
 
-      ![Server form](/album/web-app/zh/server-form.jpg)
+      ![Server form](/album/web-app/server-form.jpg)
 
 
 3. After starting the server, we can access <https://local.basiccat.org:51043/> to use ImageTrans running on our computer. On this page, we can upload an image to translate.
