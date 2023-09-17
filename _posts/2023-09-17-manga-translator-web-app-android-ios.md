@@ -1,7 +1,7 @@
 ---
 date: 2023-09-17 15:54:50+08:00
 layout: post
-title: 可用于安卓和iOS的漫画翻译网页应用
+title: Manga Translator Web App for Android and iOS
 categories: blog
 tags: imagetrans
 ---
