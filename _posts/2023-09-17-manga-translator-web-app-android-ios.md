@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-[ImageTrans](https://www.basiccat.org/zh/imagetrans) is an image translation software, which can be used to translate images like manga and posters. It can run as a web app so that we can use it in browsers. Android and iOS devices can then use it to translate images.
+[ImageTrans](https://www.basiccat.org/imagetrans) is an image translation software, which can be used to translate images like manga and posters. It can run as a web app so that we can use it in browsers. Android and iOS devices can then use it to translate images.
 
 If we run the web app at home, we can only access it on the local area network. In order to use it on the internet, we can use ngrok. In this article, we are going to describe how to do this in detail.
 
