@@ -44,7 +44,7 @@ tags: imagetrans
       
       ngrok会提供一个类似`https://3751-101-71-39-138.ngrok-free.app`的网址，我们可以通过这个链接来访问ImageTrans的网页应用。
       
-5. 使用手机访问进行翻译。
+5. 使用手机访问，翻译一张日漫图片：
 
    <video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans-web-demo-ja2zh.mp4" controls="controls" style="max-width:100%;">
    您的浏览器不支持 video 标签。
