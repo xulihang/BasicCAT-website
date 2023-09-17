@@ -43,6 +43,14 @@ You can define your own prompt  in your preferences, such as the following Chine
 翻译下述内容至中文：{source}
 ```
 
+## Batch Translation
+
+The ChatGPT plugin will send all the sentences in one image to ChatGPT by defalut. You can customize the prompt in the Preferences as well. 
+
+You can disable this behavior in Preferences.
+
+In addition, you can export the source text, use a third-party tool to do the translation and then import the translation back.
+
 ## Limitation
 
 The limitation of the plugin is that it does not allow for continuous conversations like the web version to improve the translation.
