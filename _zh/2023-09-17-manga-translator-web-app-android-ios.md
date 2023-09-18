@@ -46,7 +46,7 @@ tags: imagetrans
       
 5. 使用手机访问，翻译一张日漫图片：
 
-   <video src="https://github.com/xulihang/BasicCAT-website/releases/download/attachments/ImageTrans-web-demo-ja2zh.mp4" controls="controls" style="max-width:100%;">
+   <video src="/album/web-app/ImageTrans-web-demo-ja2zh.mp4" controls="controls" style="max-width:100%;">
    您的浏览器不支持 video 标签。
    </video>
 
