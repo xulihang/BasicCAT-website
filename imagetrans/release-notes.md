@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.5.1 (2023/09/24)
+
+* New settings for vertical text engine: first characters to move up [#issue490](https://github.com/xulihang/ImageTrans-docs/issues/490)
+* In the manager of translated images, we can set it to hide translated images in the editing interface [#issue488](https://github.com/xulihang/ImageTrans-docs/issues/488)
+
 ## v2.5.0 (2023/09/16)
 
 Center alignment support for vertical text engine

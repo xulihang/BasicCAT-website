@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.1 (2023/09/24)
+
+* 新的竖排文字引擎设置：需上提首字符 [#issue490](https://github.com/xulihang/ImageTrans-docs/issues/490)
+* 已翻译图片管理器可以设置已翻译图片不在编辑界面显示 [#issue488](https://github.com/xulihang/ImageTrans-docs/issues/488)
+
 ## v2.5.0 (2023/09/16)
 
 竖排文字引擎支持水平居中
