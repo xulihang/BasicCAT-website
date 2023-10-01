@@ -7,25 +7,31 @@
 <html lang="{{lang}}">
   {% include head.html %}
   <body>
-      {% if page.url contains '/zh/' %}
-        {% assign enurl=page.url | replace:'/zh/','/' %}
-        {% assign zhurl=page.url %}
-      {% else %}
-        {% assign enurl=page.url %}
-        {% assign zhurl=page.url | prepend:'/zh' %}
+    {% if page.url contains '/zh/' %}
+      {% assign enurl=page.url | replace:'/zh/','/' %}
+      {% assign zhurl=page.url %}
+    {% else %}
+      {% assign enurl=page.url %}
+      {% assign zhurl=page.url | prepend:'/zh' %}
+    {% endif %}
+    {% assign enpage = site.pages | where: "url", enurl | first %}
+    {% assign zhpage = site.pages | where:"url", zhurl | first %}
+      {% if enpage == nil %}
+        {% assign enpage = site.documents | where: "url", enurl | first %}
       {% endif %}
-	{% assign enpage = site.pages | find: "url", enurl %}
-	{% assign zhpage = site.pages | find: "url", zhurl %}
-	{% if enpage != nil and zhpage != nil %}
-	<div class="language-chooser">
+      {% if zhpage == nil %}
+        {% assign zhpage = site.documents | where: "url", zhurl | first %}
+      {% endif %}
+    {% if enpage != nil and zhpage != nil %}
+    <div class="language-chooser">
       <a href="{{enurl}}">English</a>
       <a href="{{zhurl}}">中文</a>
     </div>
-	{% endif %}
+    {% endif %}
     <div class="page-content">
       {{ content }}
       <div class="copyright">
-        <p><a href="http://creativecommons.org/licenses/by-sa/3.0/cn/">&copy;</a> {{ site.time | date: '%Y' }} <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"><strong>BasicCAT</strong></a> ― Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/textlog">Textlog theme</a></p>
+      <p><a href="http://creativecommons.org/licenses/by-sa/3.0/cn/">&copy;</a> {{ site.time | date: '%Y' }} <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"><strong>BasicCAT</strong></a> ― Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/textlog">Textlog theme</a></p>
       </div>
     </div>
     {% include google_analytics.html %}
