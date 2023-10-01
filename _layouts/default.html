@@ -14,10 +14,14 @@
         {% assign enurl=page.url %}
         {% assign zhurl=page.url | prepend:'/zh' %}
       {% endif %}
-    <div class="language-chooser">
+	{% assign enpage = site.pages | find: "url", enurl %}
+	{% assign zhpage = site.pages | find: "url", zhurl %}
+	{% if enpage and zhpage %}
+	<div class="language-chooser">
       <a href="{{enurl}}">English</a>
       <a href="{{zhurl}}">中文</a>
     </div>
+	{% endif %}
     <div class="page-content">
       {{ content }}
       <div class="copyright">
