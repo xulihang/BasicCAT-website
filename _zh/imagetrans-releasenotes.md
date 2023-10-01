@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.2 (2023/10/01)
+
+* 提升掩膜编辑器的性能，支持超大图片的加载 [#issue494](https://github.com/xulihang/ImageTrans-docs/issues/494)
+* 去空格等文字后处理会被应用于全图OCR操作
+
 ## v2.5.1 (2023/09/24)
 
 * 新的竖排文字引擎设置：需上提首字符 [#issue490](https://github.com/xulihang/ImageTrans-docs/issues/490)

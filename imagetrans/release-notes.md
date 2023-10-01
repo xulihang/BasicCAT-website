@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.5.2 (2023/10/01)
+
+* Improve the performance of the Mask Editor. It can now load very large images. [#issue494](https://github.com/xulihang/ImageTrans-docs/issues/494)
+* Post-processing of text like space removing is applied for whole-image OCR
+
 ## v2.5.1 (2023/09/24)
 
 * New settings for vertical text engine: first characters to move up [#issue490](https://github.com/xulihang/ImageTrans-docs/issues/490)
