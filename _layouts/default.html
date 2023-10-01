@@ -16,7 +16,7 @@
       {% endif %}
 	{% assign enpage = site.pages | find: "url", enurl %}
 	{% assign zhpage = site.pages | find: "url", zhurl %}
-	{% if enpage and zhpage %}
+	{% if enpage != nil and zhpage != nil %}
 	<div class="language-chooser">
       <a href="{{enurl}}">English</a>
       <a href="{{zhurl}}">中文</a>
