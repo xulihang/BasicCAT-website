@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanzi2Pinyin</title>
+    <script src="https://unpkg.com/pinyin-pro"></script>
+    <style>
+      body{
+        font-size: 35px;
+      }
+      .controls {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .controls button {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="result">Loading...</div>
+      <div class="controls">
+        <button onclick="fontSizeUp()">+</button>
+        <button onclick="fontSizeDown()">-</button>
+      </div>
+    </div>
+    <script>
+      var currentSize = 35;
+
+      window.onload = function(){
+        if (getCookie("fontsize")) {
+          currentSize = getCookie("fontsize");
+          document.getElementById("result").style.fontSize = currentSize + "px";
+        }
+        var text = getURLParameter("text");
+        if (text) {
+          convertAndDisplay(text);
+        }
+      }
+
+      function fontSizeUp(){
+        currentSize = currentSize + 5;
+        document.getElementById("result").style.fontSize = currentSize + "px";
+        document.cookie="fontsize="+currentSize;
+      }
+
+      function fontSizeDown(){
+        currentSize = Math.max(10,currentSize - 5);
+        document.getElementById("result").style.fontSize = currentSize + "px";
+        document.cookie="fontsize="+currentSize;
+      }
+
+      function convertAndDisplay(text){
+        var html = pinyinPro.html(text);
+        console.log(html);
+        document.getElementById("result").innerHTML = html;
+      }
+
+      function getURLParameter(key) {
+        let paramString = window.location.href.split('?')[1];
+        let queryString = new URLSearchParams(paramString);
+        for(let pair of queryString.entries()) {
+          if (pair[0] === key) {
+            return pair[1];
+          }
+        }
+        return undefined;
+      }
+
+      function getCookie(cname)
+      {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) 
+        {
+          var c = ca[i].trim();
+          if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+      }
+    </script>
+  </body>
+</html>
