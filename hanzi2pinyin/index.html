@@ -42,6 +42,14 @@
         }
       }
 
+      function supportJSInterop(){
+        return true;
+      }
+
+      function updateSource(source) {
+        convertAndDisplay(source);
+      }
+
       function fontSizeUp(){
         currentSize = currentSize + 5;
         document.getElementById("result").style.fontSize = currentSize + "px";
