@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v2.5.3 (2023/10/09)
+
+* Fix a position problem of the rotated text using large image output mode [#issue499](https://github.com/xulihang/ImageTrans-docs/issues/499)
+* Enable multiple selection in Find and Replace [#issue498](https://github.com/xulihang/ImageTrans-docs/issues/498)
+* The embedded web browser can use JavaScript interop to perform a lookup without refreshing the page [#issue500](https://github.com/xulihang/ImageTrans-docs/issues/500)
+
 ## v2.5.2 (2023/10/01)
 
 * Improve the performance of the Mask Editor. It can now load very large images. [#issue494](https://github.com/xulihang/ImageTrans-docs/issues/494)

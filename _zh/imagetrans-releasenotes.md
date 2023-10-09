@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.3 (2023/10/09)
+
+* 修复旋转的文字在大图模式导出的图片中存在偏移的问题 [#issue499](https://github.com/xulihang/ImageTrans-docs/issues/499)
+* 查找与替换支持多选 [#issue498](https://github.com/xulihang/ImageTrans-docs/issues/498)
+* 内嵌浏览器支持JavaScript互操作以实现不刷新页面进行查询操作 [#issue500](https://github.com/xulihang/ImageTrans-docs/issues/500)
+
 ## v2.5.2 (2023/10/01)
 
 * 提升掩膜编辑器的性能，支持超大图片的加载 [#issue494](https://github.com/xulihang/ImageTrans-docs/issues/494)
