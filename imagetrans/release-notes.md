@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.5.4 (2023/11/12)
+
+* Add a project setting to generate text mask during scene text detection
+* Spellcheck supports checking the target text [#issue514](https://github.com/xulihang/ImageTrans-docs/issues/514)
+* Add a project setting to preset the options for batch operations [#issue515](https://github.com/xulihang/ImageTrans-docs/issues/515)
+* Use ellipsis for long project paths [#issue509](https://github.com/xulihang/ImageTrans-docs/issues/509)
+
 ## v2.5.3 (2023/10/09)
 
 * Fix a position problem of the rotated text using large image output mode [#issue499](https://github.com/xulihang/ImageTrans-docs/issues/499)

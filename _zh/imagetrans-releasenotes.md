@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.4 (2023/11/12)
+
+* 添加自然场景文字检测时生成文字掩膜的设置选项
+* 拼写检查支持检查译文 [#issue514](https://github.com/xulihang/ImageTrans-docs/issues/514)
+* 批量操作支持预先设置 [#issue515](https://github.com/xulihang/ImageTrans-docs/issues/515)
+* 缩略显示最近项目的路径 [#issue509](https://github.com/xulihang/ImageTrans-docs/issues/509)
+
 ## v2.5.3 (2023/10/09)
 
 * 修复旋转的文字在大图模式导出的图片中存在偏移的问题 [#issue499](https://github.com/xulihang/ImageTrans-docs/issues/499)
