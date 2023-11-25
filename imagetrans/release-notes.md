@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.5.5 (2023/11/25)
+
+* Add menu items: "Sort" and "Fill in MT/TM"
+* Text mask can be generated during OCR
+
 ## v2.5.4 (2023/11/12)
 
 * Add a project setting to generate text mask during scene text detection
