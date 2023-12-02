@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v2.5.6 (2023/12/02)
+
+* Add Regular Expression support for AutoCorrect  [#issue520](https://github.com/xulihang/ImageTrans-docs/issues/520)
+* Fix the lag of dragging text areas in high DPI scale levels [#issue524](https://github.com/xulihang/ImageTrans-docs/issues/524)
+* Add a context menu item to clear the images of the project for the image combo box [#issue516](https://github.com/xulihang/ImageTrans-docs/issues/516)
+
 ## v2.5.5 (2023/11/25)
 
 * Add menu items: "Sort" and "Fill in MT/TM"

@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.6 (2023/12/02)
+
+* 自动更正支持使用正则表达式 [#issue520](https://github.com/xulihang/ImageTrans-docs/issues/520)
+* 修复高DPI缩放比例下文本框拖拽偏移的问题 [#issue524](https://github.com/xulihang/ImageTrans-docs/issues/524)
+* 右键图片列表可以调出清空图片的菜单 [#issue516](https://github.com/xulihang/ImageTrans-docs/issues/516)
+
 ## v2.5.5 (2023/11/25)
 
 * 新增“排序”和“填入机器翻译/翻译记忆”的菜单项
