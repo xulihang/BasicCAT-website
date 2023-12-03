@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v2.5.7 (2023/12/03)
+
+* Fix a problem that the text mask generated during OCR of large images is resized
+* Mask Editor: add a button to remove text mask outside text areas
+* New custom workflow items: remove text areas without source text for all pictures and remove text mask outside text areas for all pictures
+
 ## v2.5.6 (2023/12/02)
 
 * Add Regular Expression support for AutoCorrect  [#issue520](https://github.com/xulihang/ImageTrans-docs/issues/520)

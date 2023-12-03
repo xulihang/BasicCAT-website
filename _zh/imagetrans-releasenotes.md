@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.5.7 (2023/12/03)
+
+* 修复OCR大图时生成的掩膜被缩小的问题
+* 掩膜编辑器新增去除文字区域外掩膜的操作
+* 新的自定义工作流项目：去除所有图片的无原文区域、去除所有图片的框外掩膜
+
 ## v2.5.6 (2023/12/02)
 
 * 自动更正支持使用正则表达式 [#issue520](https://github.com/xulihang/ImageTrans-docs/issues/520)
