@@ -25,7 +25,7 @@ It can use natural scene text detection, object detection and a heuristic method
    
 ### Accurate text recognition
 
-* Support multiple OCR engines with custom plugins support
+* Support multiple OCR engines with [custom plugins](https://github.com/xulihang/ImageTrans_plugins) support
 * Support major languages in the world
 * Employ image preprocessing, text replacing and spell checking to improve the results
 
