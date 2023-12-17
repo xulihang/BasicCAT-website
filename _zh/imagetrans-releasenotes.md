@@ -10,6 +10,16 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.6.0 (2023/12/17)
+
+* 改善对长条文字区域分类效果 [#issue536](https://github.com/xulihang/ImageTrans-docs/issues/536)
+* 添加欢迎页面
+* 添加状态栏用于显示图片数量和当前图片序号 [#issue535](https://github.com/xulihang/ImageTrans-docs/issues/535)
+* 添加根据横坐标排序的选项 [#issue533](https://github.com/xulihang/ImageTrans-docs/issues/533)
+* 添加调整字号的菜单项 [#issue529](https://github.com/xulihang/ImageTrans-docs/issues/529)
+* 记忆百分比等界面的状态 [#issue528](https://github.com/xulihang/ImageTrans-docs/issues/528)
+
+
 ## v2.5.7 (2023/12/03)
 
 * 修复OCR大图时生成的掩膜被缩小的问题

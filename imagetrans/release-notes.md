@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v2.6.0 (2023/12/17)
+
+* Improve the classification of long text areas [#issue536](https://github.com/xulihang/ImageTrans-docs/issues/536)
+* Add a welcome form
+* Add a status bar to show the number of images and the current index [#issue535](https://github.com/xulihang/ImageTrans-docs/issues/535)
+* Add an option to sort based on horizontal ordinate [#issue533](https://github.com/xulihang/ImageTrans-docs/issues/533)
+* Add menu items to adjust the font size [#issue529](https://github.com/xulihang/ImageTrans-docs/issues/529)
+* Remember the status of the UI like the display percentage [#issue528](https://github.com/xulihang/ImageTrans-docs/issues/528)
+
+
 ## v2.5.7 (2023/12/03)
 
 * Fix a problem that the text mask generated during OCR of large images is resized
