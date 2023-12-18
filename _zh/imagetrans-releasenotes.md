@@ -18,7 +18,7 @@ permalink: /zh/imagetrans/release-notes/
 * 添加根据横坐标排序的选项 [#issue533](https://github.com/xulihang/ImageTrans-docs/issues/533)
 * 添加调整字号的菜单项 [#issue529](https://github.com/xulihang/ImageTrans-docs/issues/529)
 * 记忆百分比等界面的状态 [#issue528](https://github.com/xulihang/ImageTrans-docs/issues/528)
-
+* 修复垂直居中的文字区域在大图导出模式下可能存在位置偏移的问题
 
 ## v2.5.7 (2023/12/03)
 

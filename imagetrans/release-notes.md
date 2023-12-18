@@ -17,7 +17,7 @@ layout: page
 * Add an option to sort based on horizontal ordinate [#issue533](https://github.com/xulihang/ImageTrans-docs/issues/533)
 * Add menu items to adjust the font size [#issue529](https://github.com/xulihang/ImageTrans-docs/issues/529)
 * Remember the status of the UI like the display percentage [#issue528](https://github.com/xulihang/ImageTrans-docs/issues/528)
-
+* Fix a problem that text areas aligned in vertical center might be shifted in large image output mode
 
 ## v2.5.7 (2023/12/03)
 
