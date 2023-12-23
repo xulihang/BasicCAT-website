@@ -92,5 +92,9 @@ Enable OAuth so that we can login our gmail account.
 You can learn more about Google Drive OCR [here](https://github.com/xulihang/ImageTrans_plugins/tree/master/googledriveOCR).
 
 
+## Gemini
 
+The latest AI LLM model by Google, Gemini, can also be used for machine translation.
+
+Check out this [issue](https://github.com/xulihang/ImageTrans-docs/issues/538) to learn about how to use it.
 
