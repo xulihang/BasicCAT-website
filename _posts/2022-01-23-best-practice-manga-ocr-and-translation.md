@@ -15,8 +15,8 @@ At present, the best way to deal with manga translation is to use a custom-train
 ImageTrans can use the following models and methods to complete Japanese manga translation, which can handle the problems mentioned above quite well:
 
 1. Scaled Yolo V4 manga balloon detection model, [link](https://github.com/xulihang/ImageTrans-docs/issues/135)
-2. manga OCR based on transformer, [link](https://github.com/xulihang/ImageTrans-docs/issues/140)
-3. manga machine translation based on transformer, [link](https://github.com/xulihang/ImageTrans-docs/issues/108) (only Japanese to English translation is supported. Use other online machine translation services for other languages)
+2. Manga OCR based on transformer, [link](https://github.com/xulihang/ImageTrans-docs/issues/140)
+3. Machine translation using large language models like [ChatGPT](https://www.basiccat.org/ChatGPT-image-translator/) and Gemini.
 4. Sort text areas based on detected panels so that machine translation can have a better context, [link](https://github.com/xulihang/ImageTrans-docs/issues/147)
 
 You can learn about how to use them in ImageTrans by checking out the links above.

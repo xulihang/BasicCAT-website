@@ -16,7 +16,7 @@ ImageTrans支持调用下列模型与操作以完成日漫翻译工作，可以�
 
 1. Scaled Yolo v4日漫气泡检测模型，[地址](https://github.com/xulihang/ImageTrans-docs/issues/135)
 2. 基于Transformer的端到端日漫OCR，[地址](https://github.com/xulihang/ImageTrans-docs/issues/140)
-3. 基于Transformer的日漫机器翻译，[地址](https://github.com/xulihang/ImageTrans-docs/issues/108) （只支持日译英，其它语言对可以用通用的在线机器翻译服务）
+3. 使用大语言模型进行翻译，比如[ChatGPT](https://www.basiccat.org/zh/ChatGPT-image-translator/)和Gemini。
 4. 在分镜检测的基础上对文字区域进行排序，机器翻译可以更好地利用上下文信息，[地址](https://github.com/xulihang/ImageTrans-docs/issues/147)。
 
 具体操作方法请参考上面地址中的说明。
