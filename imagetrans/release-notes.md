@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.7.0 (2023/12/24)
+
+* Add text rotation detection [#issue543](https://github.com/xulihang/ImageTrans-docs/issues/543)
+* Add Localization Manager to use your own translation for the program [#issue544](https://github.com/xulihang/ImageTrans-docs/issues/544)
+* Add a new preference to disable the behavior of using the source text when no target text exists viewing the translated result [#issue541](https://github.com/xulihang/ImageTrans-docs/issues/541)
+* Fix a problem that text outside the image will cause a shifted image output
+* Other UX improvements
+
 ## v2.6.0 (2023/12/17)
 
 * Improve the classification of long text areas [#issue536](https://github.com/xulihang/ImageTrans-docs/issues/536)

@@ -10,9 +10,17 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.7.0 (2023/12/24)
+
+* 新增检测文字旋转角度的功能 [#issue543](https://github.com/xulihang/ImageTrans-docs/issues/543)
+* 新增本地化管理器，可以自己翻译软件的界面 [#issue544](https://github.com/xulihang/ImageTrans-docs/issues/544)
+* 新增偏好设置，用于禁用查看翻译时，如果没有译文则使用原文的行为 [#issue541](https://github.com/xulihang/ImageTrans-docs/issues/541)
+* 修复默认输出模式下图片外的文字造成的位移问题
+* 其它可用性优化
+
 ## v2.6.0 (2023/12/17)
 
-* 改善对长条文字区域分类效果 [#issue536](https://github.com/xulihang/ImageTrans-docs/issues/536)
+* 改善对长条文字区域的分类效果 [#issue536](https://github.com/xulihang/ImageTrans-docs/issues/536)
 * 添加欢迎页面
 * 添加状态栏用于显示图片数量和当前图片序号 [#issue535](https://github.com/xulihang/ImageTrans-docs/issues/535)
 * 添加根据横坐标排序的选项 [#issue533](https://github.com/xulihang/ImageTrans-docs/issues/533)
