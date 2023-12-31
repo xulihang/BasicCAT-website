@@ -19,7 +19,7 @@ Translated version:
 ![Chinese version](/album/us-comics/avengers-translated.jpg)
 
 
-## Detailed Procedures:
+## Detailed Procedures
 
 1. Detect all text areas using the heuristic text area detection method. If there is a misidentified area, remove it manually.
 2. Generate the text mask and remove text. There are two ways to remove text: one is to cover it with the background color, and the other is to use an image inpainting method to restore the background. Here, because the text is mostly in the bubbles and the edges of the text and the bubble are relatively close, we can choose the covering method. Generate a mask like the following one, and then we can get an image with text removed.
