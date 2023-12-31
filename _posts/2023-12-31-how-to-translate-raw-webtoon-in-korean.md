@@ -1,7 +1,7 @@
 ---
 date: 2023-12-31 16:36:50+08:00
 layout: post
-title: How to Translate Webtoon from Korean to English with ImagTrans
+title: How to Translate Webtoon from Korean to English with ImageTrans
 categories: blog
 tags: imagetrans
 ---
