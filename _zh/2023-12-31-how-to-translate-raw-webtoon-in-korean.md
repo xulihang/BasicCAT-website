@@ -28,3 +28,8 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 6. 在查看翻译模式下，勾选左下角的排版模式，可以调整文字区域的大小和位置。
 7. 翻译完成后可以使用软件导出成品图。如果需要使用Photoshop生成翻译版图片，可以使用脚本生成PSD文件。
 
+
+相关配置教程：
+
+* [如何在ImageTrans中使用有道云服务](https://www.basiccat.org/zh/how-to-use-youdao-in-imagetrans/)
+* [在ImageTrans中用ChatGPT来辅助翻译](https://www.basiccat.org/zh/ChatGPT-image-translator/)
