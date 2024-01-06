@@ -53,6 +53,10 @@ ChatGPT插件默认会将一张图的所有句子一次性给ChatGPT翻译。对
 
 此外，也可以将原文导出为供翻译的文档，用第三方工具翻译后再导回软件。
 
+## 使用术语改善翻译
+
+在项目中定义术语后，如果翻译的句子包含术语条目，ImageTrans也会发送给ChatGPT以改善翻译。例如定义Jenny的翻译为詹妮而不是珍妮。详见[这条issue](https://github.com/xulihang/ImageTrans-docs/issues/546#issuecomment-1873325038)。
+
 ## 局限
 
 该插件的局限性在于不像网页版那样可以进行连续对话，以完善翻译。
