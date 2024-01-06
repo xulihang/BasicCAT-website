@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.7.1 (2024/01/01)
+
+* LLM models like ChatGPT and Gemini can use terms to improve the translation results [#issue546](https://github.com/xulihang/ImageTrans-docs/issues/546)
+* Search and replace: add a new option to search in the current file and enable double clicking to jump to the selected item
+* Display the search results in the order of file names in search and replace [#issue545](https://github.com/xulihang/ImageTrans-docs/issues/545)
+
+
 ## v2.7.0 (2023/12/24)
 
 * Add text rotation detection [#issue543](https://github.com/xulihang/ImageTrans-docs/issues/543)

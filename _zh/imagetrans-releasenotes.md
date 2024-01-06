@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.7.1 (2024/01/01)
+
+* ChatGPT和Gemini等大语言模型可以使用术语改善翻译结果 [#issue546](https://github.com/xulihang/ImageTrans-docs/issues/546)
+* 搜索与替换支持双击跳转并新增在当前文件搜索的选项 [#issue545](https://github.com/xulihang/ImageTrans-docs/issues/545)
+* 搜索与替换按文件名顺序显示结果 [#issue545](https://github.com/xulihang/ImageTrans-docs/issues/545)
+
 ## v2.7.0 (2023/12/24)
 
 * 新增检测文字旋转角度的功能 [#issue543](https://github.com/xulihang/ImageTrans-docs/issues/543)
