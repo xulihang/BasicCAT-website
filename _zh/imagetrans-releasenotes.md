@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.0 (2024/01/14)
+
+* 屏幕阅读器支持纠正文字顺序 [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/553)
+* 屏幕阅读器可以定时识别固定的区域，并能够检测区域内的图像是否发生变动。固定区域窗口的透明度可调整 [#issue521](https://github.com/xulihang/ImageTrans-docs/issues/521)
+* 新增文字合并的项目设置，可以根据结尾的标点符号进行文字合并，有文字的区域合并时不检测分隔 [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/552)
+* 搜索与替换的结果里显示文件名
+* 修复使用工具栏合并区域时没有保存样式等额外信息的问题
+
 ## v2.7.1 (2024/01/01)
 
 * ChatGPT和Gemini等大语言模型可以使用术语改善翻译结果 [#issue546](https://github.com/xulihang/ImageTrans-docs/issues/546)

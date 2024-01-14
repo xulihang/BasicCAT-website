@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.8.0 (2024/01/14)
+
+* Add a "Correct text order" option for Screen Reader [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/553)
+* Screen Reader can read a fixed area at intervals. It can also detect whether that area's content has changed. The alpha of the fixed area window can be adjusted [#issue521](https://github.com/xulihang/ImageTrans-docs/issues/521)
+* New "Text merging" project settings. We can now merge text based on the end-of-sentence punctuations. Meanwhile, separation checking can be skipped if the text area has text [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/552)
+* Display file name in the results of Find and Replace
+* Fix a problem that extra settings of text areas are not kept using the toolbar to merge
+
 ## v2.7.1 (2024/01/01)
 
 * LLM models like ChatGPT and Gemini can use terms to improve the translation results [#issue546](https://github.com/xulihang/ImageTrans-docs/issues/546)
