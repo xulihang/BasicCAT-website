@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.8.1 (2024/01/15)
+
+* Fix the incorrect text order using the toolbar to merge areas
+* Fix the merging based on punctuations in right to left reading order
+* Fix the problem that the window is not hidden when capturing a screenshot
+* Decide whether to add spaces between two merged boxes based on whether the language has spaces
+
 ## v2.8.0 (2024/01/14)
 
 * Add a "Correct text order" option for Screen Reader [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/553)

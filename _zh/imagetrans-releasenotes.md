@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.1 (2024/01/15)
+
+* 修复使用工具栏合并区域时文字顺序不对的问题
+* 修复从右到左阅读顺序时根据标点符号合并的行为
+* 修复屏幕阅读器截图时没有隐藏窗口的问题
+* 合并区域时，根据语言是否有空格决定是不是要添加空格
+
 ## v2.8.0 (2024/01/14)
 
 * 屏幕阅读器支持纠正文字顺序 [#issue553](https://github.com/xulihang/ImageTrans-docs/issues/553)
