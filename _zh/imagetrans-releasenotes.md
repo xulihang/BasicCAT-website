@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.2 (2024/01/21)
+
+* 屏幕阅读器支持全局快捷键 [#issue237](https://github.com/xulihang/ImageTrans-docs/issues/237)
+* 屏幕阅读器的布局可调整
+* 导回翻译时也可以同时修改原文 [#issue557](https://github.com/xulihang/ImageTrans-docs/issues/557)
+* 新增PDF导入模式：图像提取模式
+
 ## v2.8.1 (2024/01/15)
 
 * 修复使用工具栏合并区域时文字顺序不对的问题

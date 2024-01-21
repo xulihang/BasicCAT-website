@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.8.2 (2024/01/21)
+
+* Add global shortcut support for Screen Reader [#issue237](https://github.com/xulihang/ImageTrans-docs/issues/237)
+* Screen Reader's layout is now adjustable
+* Add an option to import source text as well when importing translation [#issue557](https://github.com/xulihang/ImageTrans-docs/issues/557)
+* New PDF import mode: extraction mode
+
 ## v2.8.1 (2024/01/15)
 
 * Fix the incorrect text order using the toolbar to merge areas
