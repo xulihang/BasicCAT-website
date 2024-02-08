@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.3 (2024/02/08)
+
+* 支持在工具栏的字体列表中预览字体 [#issue567](https://github.com/xulihang/ImageTrans-docs/issues/567)
+* 导出成品图和掩膜时会跳过已翻译图片 [#issue548](https://github.com/xulihang/ImageTrans-docs/issues/548)
+* 已翻译图片管理器可以快速选中导出过的图片
+* 修复自动调整字体大小会覆盖全局样式中的粗体斜体设置的问题 [#issue565](https://github.com/xulihang/ImageTrans-docs/issues/565)
+* 其它Bug修复
+
 ## v2.8.2 (2024/01/21)
 
 * 屏幕阅读器支持全局快捷键 [#issue237](https://github.com/xulihang/ImageTrans-docs/issues/237)

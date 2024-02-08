@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.8.3 (2024/02/08)
+
+* Font preview in the toolbar's font combox box [#issue567](https://github.com/xulihang/ImageTrans-docs/issues/567)
+* Translated images will be skipped when exporting the final result and mask images [#issue548](https://github.com/xulihang/ImageTrans-docs/issues/548)
+* Translated images manager can select exported images
+* Fix a problem that Auto Font Size will reset the bold and italic settings of a global font style [#issue565](https://github.com/xulihang/ImageTrans-docs/issues/565)
+* Other bugfixes
+
 ## v2.8.2 (2024/01/21)
 
 * Add global shortcut support for Screen Reader [#issue237](https://github.com/xulihang/ImageTrans-docs/issues/237)
