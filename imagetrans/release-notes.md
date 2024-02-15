@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v2.8.4 (2024/02/15)
+
+Optimize the text order when merging text areas [#issue576](https://github.com/xulihang/ImageTrans-docs/issues/576)
+
 ## v2.8.3 (2024/02/08)
 
 * Font preview in the toolbar's font combox box [#issue567](https://github.com/xulihang/ImageTrans-docs/issues/567)

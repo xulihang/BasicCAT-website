@@ -10,6 +10,10 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.4 (2024/02/15)
+
+优化合并文字区域时对文字的排序 [#issue576](https://github.com/xulihang/ImageTrans-docs/issues/576)
+
 ## v2.8.3 (2024/02/08)
 
 * 支持在工具栏的字体列表中预览字体 [#issue567](https://github.com/xulihang/ImageTrans-docs/issues/567)
