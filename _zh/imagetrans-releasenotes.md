@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.5 (2024/02/25)
+
+* 支持使用原文图像导出PDF、支持导出可检索文本的PDF [#issue580](https://github.com/xulihang/ImageTrans-docs/issues/580)
+* 支持从掩膜生成文字区域 [#issue577](https://github.com/xulihang/ImageTrans-docs/issues/577)
+
 ## v2.8.4 (2024/02/15)
 
 优化合并文字区域时对文字的排序 [#issue576](https://github.com/xulihang/ImageTrans-docs/issues/576)

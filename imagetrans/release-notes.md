@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.8.5 (2024/02/25)
+
+* New PDF export options: "add searchable text overlay" and "use source images" [#issue580](https://github.com/xulihang/ImageTrans-docs/issues/580)
+* New operation to generate text areas from mask images [#issue577](https://github.com/xulihang/ImageTrans-docs/issues/577)
+
 ## v2.8.4 (2024/02/15)
 
 Optimize the text order when merging text areas [#issue576](https://github.com/xulihang/ImageTrans-docs/issues/576)
