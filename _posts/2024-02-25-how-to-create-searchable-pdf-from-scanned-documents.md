@@ -15,11 +15,11 @@ Here are the steps to do this:
 1. Import images to ImageTrans.
 2. Recognize text lines in images. If there are errors or omissions, we can adjust them manually.
 
-   ![Home](/album/searchablePDF/home-zh.jpg)
+   ![Home](/album/searchablePDF/home-en.jpg)
    
 3. Export the images as a PDF. Use the original images and add a searchable text layer with the source text.
 
-   ![export options](/album/searchablePDF/export-zh.jpg)
+   ![export options](/album/searchablePDF/export-en.jpg)
 
 4. Use a PDF viewer to open the PDF, search some keywords, and we can see that the keywords can be searched and highlighted.
 
