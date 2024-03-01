@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.6 (2024/03/01)
+
+* 修复不勾选“自动去除换行”时文字行合并结果里的换行被去除的问题
+* 屏幕阅读器合并文字时的高度宽度设为对应尺寸的一半
+
 ## v2.8.5 (2024/02/25)
 
 * 支持使用原文图像导出PDF、支持导出可检索文本的PDF [#issue580](https://github.com/xulihang/ImageTrans-docs/issues/580)

@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.8.6 (2024/03/01)
+
+* Fix the problem that line breaks are removed when merging text areas with "Auto Remove Line Breaks" unchecked
+* Set the horizontal span and vertical span for text merging in Screen Reader to width/2 or height/2
+
 ## v2.8.5 (2024/02/25)
 
 * New PDF export options: "add searchable text overlay" and "use source images" [#issue580](https://github.com/xulihang/ImageTrans-docs/issues/580)
