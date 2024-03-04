@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.8.7 (2024/03/04)
+
+* Fix a text area merging problem due to incorrect sorting
+* Fix the multi-line problem for baidu machine translation
+
 ## v2.8.6 (2024/03/01)
 
 * Fix the problem that line breaks are removed when merging text areas with "Auto Remove Line Breaks" unchecked
