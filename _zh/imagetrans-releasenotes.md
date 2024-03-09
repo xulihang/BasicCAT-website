@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.8.8 (2024/03/09)
+
+* 支持根据段落位置合并文字 [#issue586](https://github.com/xulihang/ImageTrans-docs/issues/586)
+* 长图的在线OCR和气泡检测添加处理间隔
+
 ## v2.8.7 (2024/03/04)
 
 * 修复文字区域因排序导致合并不成功的问题

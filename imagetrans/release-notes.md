@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.8.8 (2024/03/09)
+
+* Merge text based on paragraph position [#issue586](https://github.com/xulihang/ImageTrans-docs/issues/586)
+* Add interval for long-image OCR and ballon detection
+
 ## v2.8.7 (2024/03/04)
 
 * Fix a text area merging problem due to incorrect sorting
