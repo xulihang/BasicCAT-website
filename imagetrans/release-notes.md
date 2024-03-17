@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.9.0 (2024/03/17)
+
+* Add a project setting to export translated images flipped horizontally [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)
+* The rich text function for vertical text engine now supports setting font sizes
+* Vertical text engine can handle empty lines correctly
+* Fix the line spacing for vertical text engine
+* Fix a problem for rich text code editor that the font list is reset when the editor is toggled  [#issue587](https://github.com/xulihang/ImageTrans-docs/issues/587)
+
 ## v2.8.8 (2024/03/09)
 
 * Merge text based on paragraph position [#issue586](https://github.com/xulihang/ImageTrans-docs/issues/586)

@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.9.0 (2024/03/17)
+
+* 添加水平翻转成品图的项目设置 [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)
+* 竖排文字引擎的富文本功能支持设置字体大小
+* 竖排文字引擎支持空行
+* 修复竖排文字引擎的行距行为
+* 修复切换富文本代码编辑器时会重置字体列表的问题 [#issue587](https://github.com/xulihang/ImageTrans-docs/issues/587)
+
 ## v2.8.8 (2024/03/09)
 
 * 支持根据段落位置合并文字 [#issue586](https://github.com/xulihang/ImageTrans-docs/issues/586)
