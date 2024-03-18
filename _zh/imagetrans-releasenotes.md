@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.9.1 (2024/03/17)
+
+* 添加透明信息去除器，可以生成没有透明度的JPG图片以解决大部分OCR和图像处理方法无法正确处理透明度的问题 [#issue593](https://github.com/xulihang/ImageTrans-docs/issues/593)
+* 如果存在纯文字图，优先在各种图像处理方法中使用它。而它原先只被用于文字区域的OCR
+* 新的精确文字抹除方式：透明文字。支持结合掩膜和周边像素还原背景。主要用于去除透明背景上的文字 [#issue302](https://github.com/xulihang/ImageTrans-docs/issues/302)
+* 修复透明图片内容上鼠标事件不响应的问题
+
+
 ## v2.9.0 (2024/03/17)
 
 * 添加水平翻转成品图的项目设置 [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)

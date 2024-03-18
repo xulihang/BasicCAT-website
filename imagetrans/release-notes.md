@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.9.1 (2024/03/17)
+
+* Add Transparency Remover. It can generate JPG files without the alpha channel, which can solve the problem that most OCR and image processing methods cannot handle transparent images correctly [#issue593](https://github.com/xulihang/ImageTrans-docs/issues/593)
+* If pure-text images exist, use it first in all kinds of image processing. They were only used for OCRing text areas before this update
+* New precise text removal mode: transparent text. It can restore the background based on nearby pixels and the text mask. It is mainly designed to remove text on transparent background  [#issue302](https://github.com/xulihang/ImageTrans-docs/issues/302)
+* Fix a problem that the mouse events are not triggered above transparent image content
+
 ## v2.9.0 (2024/03/17)
 
 * Add a project setting to export translated images flipped horizontally [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)
