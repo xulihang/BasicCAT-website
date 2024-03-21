@@ -22,7 +22,7 @@ ImageTrans FAQ. Search more issues [here](https://github.com/xulihang/ImageTrans
 
 3. What's the difference between the personal purpose and commercial purpose versions?
 
-    At present, there is no functional difference between the two. The commercial version is set for companies that use it for commercial translation, which can be used on 50 devices.
+    At present, there is no functional difference between the two. The commercial version is set for companies that use it for commercial translation, which can be used on 5 devices.
 
 4. Is the price for a monthly fee or a life-time fee?
 
