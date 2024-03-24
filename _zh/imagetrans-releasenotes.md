@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.9.2 (2024/03/24)
+
+* 右键菜单新增“复制文本”
+* 屏幕阅读器支持添加带文字位置信息的结果到项目中
+* 横排文字的仿斜体支持设置Y坐标和高度的偏移值
+* 修复2.9.1引入的批量处理时处理的图片对应错误的问题 [#issue598](https://github.com/xulihang/ImageTrans-docs/issues/598)
+* 修复启用自动保存时，新建文字区域会重置当前选中区域文本的问题 [#issue598](https://github.com/xulihang/ImageTrans-docs/issues/598)
+
+
 ## v2.9.1 (2024/03/17)
 
 * 添加透明信息去除器，可以生成没有透明度的JPG图片以解决大部分OCR和图像处理方法无法正确处理透明度的问题 [#issue593](https://github.com/xulihang/ImageTrans-docs/issues/593)
@@ -20,6 +29,8 @@ permalink: /zh/imagetrans/release-notes/
 
 ## v2.9.0 (2024/03/17)
 
+* 默认启用自动保存
+* 默认的对齐方式改为左对齐
 * 添加水平翻转成品图的项目设置 [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)
 * 竖排文字引擎的富文本功能支持设置字体大小
 * 竖排文字引擎支持空行

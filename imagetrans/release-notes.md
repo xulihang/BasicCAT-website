@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.9.2 (2024/03/24)
+
+* Add "Copy text" to context menu
+* ScreenReader can now append OCR results with text location into the project
+* Add Y diff and height diff parameters for Faux Italic in horizontal text engine
+* Fix a bug introduced in 2.9.1 that wrong image files are used in batch processing [#issue598](https://github.com/xulihang/ImageTrans-docs/issues/598)
+* Fix a bug that appending a new text area will reset the text of the current selected text area with AutoSave enabled [#issue598](https://github.com/xulihang/ImageTrans-docs/issues/598)
+
 ## v2.9.1 (2024/03/17)
 
 * Add Transparency Remover. It can generate JPG files without the alpha channel, which can solve the problem that most OCR and image processing methods cannot handle transparent images correctly [#issue593](https://github.com/xulihang/ImageTrans-docs/issues/593)
@@ -18,6 +26,8 @@ layout: page
 
 ## v2.9.0 (2024/03/17)
 
+* Enable AutoSave by default
+* The default text alignment is set to left align
 * Add a project setting to export translated images flipped horizontally [#discussion592](https://github.com/xulihang/ImageTrans-docs/discussions/592)
 * The rich text function for vertical text engine now supports setting font sizes
 * Vertical text engine can handle empty lines correctly
