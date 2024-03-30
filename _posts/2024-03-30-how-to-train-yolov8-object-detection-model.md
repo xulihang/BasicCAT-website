@@ -1,0 +1,78 @@
+---
+date: 2024-03-30 19:55:50+08:00
+layout: post
+title: How to Train a YOLOv8 Object Detection Model
+categories: blog
+tags: imagetrans
+---
+
+YOLOv8 is the latest YOLO object detection model. The inference and training in YOLOv8 are very easy to get started.
+
+ImageTrans v2.10.0 added support for YOLOv8 model. It can use Java to call OpenCV's DNN module for object detection. An object detection annotation data manager is also provided so that we can export an ImageTrans project to a YOLO format training dataset or import the dataset to an ImageTrans project, which makes it easy to train our own model according to the needs.
+
+Here are the detailed steps to do this:
+
+1. Open an ImageTrans project and use automatic or manual methods to complete the annotations of the objects (mainly text areas) in images.
+2. Open Object Detection Annotation Data Manager through menu->tools.
+3. Export the data to a directory. The data will be stored in YOLO format according to the following structure.
+
+   ```
+   ├─images
+   │  ├─train
+   │  │      image1.jpg
+   │  │      image2.jpg
+   │  │
+   │  └─val
+   │         image3.jpg
+   │         image4.jpg
+   │
+   ├─labels
+   │  │
+   │  ├─train
+   │  │      image1.txt
+   │  │      image2.txt
+   │  │
+   │  └─val
+   │         image3.txt
+   │         image4.txt
+   │
+   ├─balloon.yaml
+   ```
+
+4. Install Python and follow YOLOv8's [documentation](https://docs.ultralytics.com/) to install YOLO.
+5. Create a new `train.py` file in the directory of the exported data and execute it using Python to start training the model:
+
+   ```py
+   from ultralytics import YOLO
+   model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
+   # Train the model
+   results = model.train(data='balloon.yaml', epochs=100, imgsz=640)
+   ```
+
+   Execute the above code through the command line:
+
+   ```bash
+   python train.py
+   ```
+
+   Usually, training 100 epochs with 20 images can achieve a good result. The training can be done with a CPU.
+
+6. After the training is completed, we can find the trained model file in `runs\detect\train\weights`. Here, we use the following code to convert `best.pt` to the onnx format supported by ImageTrans:
+
+   ```py
+   from ultralytics import YOLO
+   model = YOLO('best.pt')
+   success = model.export(format='onnx')
+   ```
+
+   Save the above code as `convert.py` and execute it from the command line:
+
+   ```bash
+   python convert.py
+   ```
+
+7. Copy the converted `best.onnx` to the directory of ImageTrans, rename it `model.onnx`, and enable offline balloon detection in ImageTrans's preferences. Afterwards, the YOLOv8 object detection model can be called in ImageTrans through balloon detection.
+
+
+
+
