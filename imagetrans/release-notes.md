@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v2.10.0 (2024/03/30)
+
+* Update OpenCV to 4.9.0
+* Add support for Yolo v8 object detection (put the onnx model named as `model.onnx` to the root of the program to use it)
+* Add Object Detection Annotation Data Manager to export and import annotated data in Yolo's format
+
 ## v2.9.2 (2024/03/24)
 
 * Add "Copy text" to context menu
