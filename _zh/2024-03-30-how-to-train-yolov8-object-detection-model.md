@@ -71,8 +71,49 @@ ImageTrans在2.10.0中加入了对YOLOv8模型的支持，可以利用Java调用
    python convert.py
    ```
    
-7. 将转换得到的`best.onnx`复制到ImageTrans的目录，重命名为`model.onnx`，并在ImageTrans的偏好设置里启用离线气泡检测。之后，便可以在ImageTrans中通过气泡检测调用YOLOv8目标检测模型了。
+7. 将转换得到的`best.onnx`复制到ImageTrans的目录或者项目的图片目录，重命名为`model.onnx`，并在ImageTrans的偏好设置里启用离线气泡检测。之后，便可以在ImageTrans中通过气泡检测调用YOLOv8目标检测模型了。
 
 
+## 对长图的支持
+
+有时候，我们需要处理的图片比较长。这时可以将图片裁剪为多份，用于训练和检测。
+
+例子：
+
+![条漫](/gallery/projects/webtoon/out/SQ.webp)
+
+我们可以指定宽度、高度和子图片彼此重叠的比例对图片进行裁剪。
+
+启用方法：
+
+1. 对于目标检测标注数据管理器，我们可以直接在其界面中进行设置。
+2. 对于使用训练好的模型用于检测，我们可以建一份配置文件，命名为`model.json`，和模型放在一起，用于指定相关参数。
 
 
+   对于条漫，我们可以使用以下配置文件，将图片裁剪为若干份宽度高度均为图片宽度的子图，高度的重叠比例是20%：
+
+   ```json
+   {
+      "width":640,
+      "height":640,
+      "model":"model.onnx",
+      "ratio":1,
+      "width_overlap":"0",
+      "height_overlap":"20"
+   }
+   ```
+   
+   对于很大的图片，也可以使用以下配置文件，使用滑动窗口，以固定的宽度高度去裁剪图片：
+
+   ```json
+   {
+      "width":640,
+      "height":640,
+      "ratio":1,
+      "model":"model.onnx",
+      "slidingWindow":{
+         "width":1600,
+         "height":1600
+      }
+   }
+   ```

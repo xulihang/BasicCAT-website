@@ -71,8 +71,49 @@ Here are the detailed steps to do this:
    python convert.py
    ```
 
-7. Copy the converted `best.onnx` to the directory of ImageTrans, rename it `model.onnx`, and enable offline balloon detection in ImageTrans's preferences. Afterwards, the YOLOv8 object detection model can be called in ImageTrans through balloon detection.
+7. Copy the converted `best.onnx` to the directory of ImageTrans or the image folder of an ImageTrans project, rename it `model.onnx`, and enable offline balloon detection in ImageTrans’s preferences. Afterwards, the YOLOv8 object detection model can be called in ImageTrans through balloon detection.
 
 
+## Support for Long Images
+
+Sometimes, the images we need to process are very long. We can crop the images into smaller ones for training and detection.
+
+Example:
+
+![webtoon](/gallery/projects/webtoon/out/SQ.webp)
+
+We can crop images by specifying the width, height, and proportions of sub-images that overlap each other.
+
+How to enable:
+
+1. For the object detection annotation data manager, we can set it up directly in its interface.
+2. For using the trained model for detection, we can create a configuration file named `model.json` along with the model, to specify the relevant parameters.
 
 
+   For long-strip comics (webtoon), we can use the following config file to crop the image into several sub-images using the width of the image as the width and height for the cropped image with a 20% overlap ratio of the height:
+
+   ```json
+   {
+      "width":640,
+      "height":640,
+      "model":"model.onnx",
+      "ratio":1,
+      "width_overlap":"0",
+      "height_overlap":"20"
+   }
+   ```
+
+   For large images, we can use the following config file which uses sliding window to crop the image at a fixed width and height:
+
+   ```json
+   {
+      "width":640,
+      "height":640,
+      "ratio":1,
+      "model":"model.onnx",
+      "slidingWindow":{
+         "width":1600,
+         "height":1600
+      }
+   }
+   ```
