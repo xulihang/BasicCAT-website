@@ -73,6 +73,7 @@ Here are the detailed steps to do this:
 
 7. Copy the converted `best.onnx` to the directory of ImageTrans or the image folder of an ImageTrans project, rename it `model.onnx`, and enable offline balloon detection in ImageTrans’s preferences. Afterwards, the YOLOv8 object detection model can be called in ImageTrans through balloon detection.
 
+You can find sample datasets and trained models [here](https://github.com/xulihang/balloon-dataset/).
 
 ## Support for Long Images
 

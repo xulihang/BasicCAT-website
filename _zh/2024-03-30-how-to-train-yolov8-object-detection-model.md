@@ -73,6 +73,7 @@ ImageTrans在2.10.0中加入了对YOLOv8模型的支持，可以利用Java调用
    
 7. 将转换得到的`best.onnx`复制到ImageTrans的目录或者项目的图片目录，重命名为`model.onnx`，并在ImageTrans的偏好设置里启用离线气泡检测。之后，便可以在ImageTrans中通过气泡检测调用YOLOv8目标检测模型了。
 
+可以在[此处](https://github.com/xulihang/balloon-dataset/)找到数据集和模型示例。
 
 ## 对长图的支持
 
