@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v2.10.1 (2024/04/04)
+
+* Allow detecting balloons and exporting annotation data using sliding window
+* Use the balloon detection model placed in the image folder of a project in priority
+
 ## v2.10.0 (2024/03/30)
 
 * Update OpenCV to 4.9.0
