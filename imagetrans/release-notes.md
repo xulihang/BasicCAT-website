@@ -12,7 +12,7 @@ layout: page
 ## v2.10.2 (2024/04/13)
 
 * Support setting the width and height of an ONNX balloon detection model
-* Support setting the index of the panel through double clickng to 
+* Support setting the index of the panel through double clickng
 * Add "Merge" to the context menu for text areas
 * Add two new sorting criteria: first horizontal and then vertical, first vertical and then horizontal
 
