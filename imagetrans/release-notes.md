@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+
+## v2.10.3 (2024/04/15)
+
+* Fix a problem that auto saving is not enabled if a project is opened as a recent project
+* Fix a problem that the interval of auto saving is not effective immediately after the preference is applied
+* Fix a problem that the saving status of a project is not reset when switching projects
+* Backup files of the current project will be created upon application exit
+
 ## v2.10.2 (2024/04/13)
 
 * Support setting the width and height of an ONNX balloon detection model
