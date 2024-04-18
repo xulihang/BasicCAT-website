@@ -39,6 +39,7 @@ sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
 机器翻译：
 
 * ChatGPT
+* Gemini
 * 腾讯
 * 小牛
 * 谷歌
