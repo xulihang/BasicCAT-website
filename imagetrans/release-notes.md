@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.11.0 (2024/04/21)
+
+* New menu item to create text areas based on template [#issue626](https://github.com/xulihang/ImageTrans-docs/issues/626)
+* The selection of text areas will not be reset after applying typesettings using the typesetting dialog  [#issue623](https://github.com/xulihang/ImageTrans-docs/issues/623)
+* Add duplicate to the menu bar [#issue622](https://github.com/xulihang/ImageTrans-docs/issues/622)
+* Machine translation plugins can return multiple candidates in the translation assist tab [#issue619](https://github.com/xulihang/ImageTrans-docs/issues/619)
+
 
 ## v2.10.3 (2024/04/15)
 

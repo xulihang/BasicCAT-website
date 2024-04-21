@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.11.0 (2024/04/21)
+
+* 支持基于模板生成文字区域 [#issue626](https://github.com/xulihang/ImageTrans-docs/issues/626)
+* 通过字体设置窗口设置字体后，不会取消选中状态 [#issue623](https://github.com/xulihang/ImageTrans-docs/issues/623)
+* 添加创建副本的菜单项 [#issue622](https://github.com/xulihang/ImageTrans-docs/issues/622)
+* 机器翻译插件支持返回多条候选结果在辅助翻译选项卡 [#issue619](https://github.com/xulihang/ImageTrans-docs/issues/619)
+
+
 ## v2.10.3 (2024/04/15)
 
 * 修复通过最近项目打开时自动保存没有生效的问题
