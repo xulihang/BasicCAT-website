@@ -39,6 +39,7 @@ Currently available plugins:
 Machine Translation:
 
 * ChatGPT
+* Gemini
 * Tencent 
 * Niutrans
 * Google
