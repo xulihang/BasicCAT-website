@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.11.1 (2024/04/26)
+
+* 修复切换到另一个文字区域时，辅助翻译里显示的结果可能包含上一个区域的结果的问题 [#633](https://github.com/xulihang/ImageTrans-docs/issues/633)
+* 修复查找与替换搜索连续重复字符出错的问题 [#631](https://github.com/xulihang/ImageTrans-docs/issues/631)
+* 滑动建框支持多个方向 [#629](https://github.com/xulihang/ImageTrans-docs/issues/629)
+* 并发获取用于辅助翻译的机器翻译结果 [#628](https://github.com/xulihang/ImageTrans-docs/issues/628)
+* 修复安装字体后，字体列表没有及时更新的问题
+
+
 ## v2.11.0 (2024/04/21)
 
 * 支持基于模板生成文字区域 [#issue626](https://github.com/xulihang/ImageTrans-docs/issues/626)

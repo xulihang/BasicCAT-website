@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v2.11.1 (2024/04/26)
+
+* Fix a problem that the machine translation results of the previous text area are displayed after switching to another text area [#633](https://github.com/xulihang/ImageTrans-docs/issues/633)
+* Fix a problem in find and replace searching repeated characters [#631](https://github.com/xulihang/ImageTrans-docs/issues/631)
+* Quick box creation can be used in all directions [#629](https://github.com/xulihang/ImageTrans-docs/issues/629)
+* Concurrently get the machine translation results in the translation assist tab [#628](https://github.com/xulihang/ImageTrans-docs/issues/628)
+* Fix a problem that the font list is not updated promptly after font installation
+
 ## v2.11.0 (2024/04/21)
 
 * New menu item to create text areas based on template [#issue626](https://github.com/xulihang/ImageTrans-docs/issues/626)
