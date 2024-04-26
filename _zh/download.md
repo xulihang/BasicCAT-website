@@ -40,6 +40,7 @@ sudo xattr -rd com.apple.quarantine /Applications/BasicCAT.app
 
 * ChatGPT
 * Gemini
+* DeepL
 * 腾讯
 * 小牛
 * 谷歌

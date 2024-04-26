@@ -40,6 +40,7 @@ Machine Translation:
 
 * ChatGPT
 * Gemini
+* DeepL
 * Tencent 
 * Niutrans
 * Google
