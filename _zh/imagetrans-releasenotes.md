@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.11.2 (2024/05/02)
+
+* 修复导出的docx文件中，如果译文为空，译文列宽度为0的问题 [#issue639](https://github.com/xulihang/ImageTrans-docs/issues/639)
+* 支持用CSS自定义文本框的样式 [#issue636](https://github.com/xulihang/ImageTrans-docs/issues/636)
+* 修复因为使用双精度导致水平居中或垂直居中的文字可能显示模糊的问题
+
+
 ## v2.11.1 (2024/04/26)
 
 * 修复切换到另一个文字区域时，辅助翻译里显示的结果可能包含上一个区域的结果的问题 [#633](https://github.com/xulihang/ImageTrans-docs/issues/633)

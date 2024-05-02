@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v2.11.2 (2024/05/02)
+
+* Fix a problem that in the exported docx file, if the target text is empty, the width of the target text column is zero [#issue639](https://github.com/xulihang/ImageTrans-docs/issues/639)
+* Allow styling the text box using CSS [#issue636](https://github.com/xulihang/ImageTrans-docs/issues/636)
+* Fix a text display problem using vertical center alignment or horizontal center alignment caused by using double for positioning
+
 ## v2.11.1 (2024/04/26)
 
 * Fix a problem that the machine translation results of the previous text area are displayed after switching to another text area [#633](https://github.com/xulihang/ImageTrans-docs/issues/633)
