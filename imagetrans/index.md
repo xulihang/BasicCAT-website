@@ -66,7 +66,7 @@ ImageTrans is cross-platform, supporting the following operating systems:
 * macOS 10.11+
 * Linux
 
-It can also run as a server for online usage.
+It can also run as a server for online usage. Mobile devices can use it to scan and translate images like raw manga.
 
 ### Low requirements
 
