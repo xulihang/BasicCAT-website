@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v2.12.0 (2024/05/11)
+
+* New project setting: do not break words
+* New preference: select the first text area after image switching [#issue642](https://github.com/xulihang/ImageTrans-docs/issues/642)
+* Use pseudo classes to improve the CSS usage for text boxes [#issue636](https://github.com/xulihang/ImageTrans-docs/issues/636)
+* New export option: Panels. Panels can be exported as PDFs or images
+* Add coordinates and text to the response of the server
+
+
 ## v2.11.2 (2024/05/02)
 
 * Fix a problem that in the exported docx file, if the target text is empty, the width of the target text column is zero [#issue639](https://github.com/xulihang/ImageTrans-docs/issues/639)

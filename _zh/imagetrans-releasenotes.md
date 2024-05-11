@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+
+## v2.12.0 (2024/05/11)
+
+* 新增避免拆分单词的项目设置
+* 新增切换图片时自动选中第一条文字区域的偏好设置 [#issue642](https://github.com/xulihang/ImageTrans-docs/issues/642)
+* 添加伪类以完善用CSS自定义文本框样式的功能 [#issue636](https://github.com/xulihang/ImageTrans-docs/issues/636)
+* 支持按分镜导出图片或者PDF
+* 服务器的返回结果增加坐标和文本等数据
+
 ## v2.11.2 (2024/05/02)
 
 * 修复导出的docx文件中，如果译文为空，译文列宽度为0的问题 [#issue639](https://github.com/xulihang/ImageTrans-docs/issues/639)
