@@ -10,6 +10,9 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.12.1 (2024/05/12)
+
+允许被服务器调用以执行OCR和机器翻译
 
 ## v2.12.0 (2024/05/11)
 

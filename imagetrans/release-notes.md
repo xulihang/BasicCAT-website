@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+
+## v2.12.1 (2024/05/12)
+
+Allow being called by the server for OCR and machine translation
+
 ## v2.12.0 (2024/05/11)
 
 * New project setting: do not break words
