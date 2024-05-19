@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.12.2 (2024/05/19)
+
+* 允许设置机器翻译中间语言 [#issue647](https://github.com/xulihang/ImageTrans-docs/issues/647)
+* 修复OCR操作时生成掩膜失败导致批量操作中断的问题 [#issue650](https://github.com/xulihang/ImageTrans-docs/issues/650)
+* 修复通过服务器生成的图在非100%比例下分辨率不一致的问题
+
 ## v2.12.1 (2024/05/12)
 
 允许被服务器调用以执行OCR和机器翻译
