@@ -32,7 +32,7 @@ Now, the translated result becomes the following one:
 ![Translated result when words are not cut](/album/ja2en-lettering/en-nonbreaking.jpg)
 
 
-We can see that the text is on top of the bubble, not in the center. We can add a default font style that enables vertical center alignment. Also, we can set the font, the stroke and horizontal alignment.
+We can see that the text is in the top of the bubble, not in the center. We can add a default font style that enables vertical center alignment. Also, we can set the font, the stroke and horizontal alignment.
 
 ![Font style settings](/album/ja2en-lettering/font-style-settings.jpg)
 
