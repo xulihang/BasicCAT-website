@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v2.12.3 (2024/05/23)
+
+Fix a problem for PS scripts that vertical center and horizontal center with rich text mode enabled is not effective
+
 ## v2.12.2 (2024/05/19)
 
 * Allow using a bridge language for machine translation [#issue647](https://github.com/xulihang/ImageTrans-docs/issues/647)

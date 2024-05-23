@@ -10,6 +10,10 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v2.12.3 (2024/05/23)
+
+修复PS脚本垂直居中和富文本模式下水平居中失效的问题
+
 ## v2.12.2 (2024/05/19)
 
 * 允许设置机器翻译中间语言 [#issue647](https://github.com/xulihang/ImageTrans-docs/issues/647)
