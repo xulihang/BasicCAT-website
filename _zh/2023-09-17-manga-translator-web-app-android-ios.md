@@ -49,4 +49,8 @@ tags: imagetrans
    <video src="/album/web-app/ImageTrans-web-demo-ja2zh.mp4" controls="controls" style="max-width:100%;">
    您的浏览器不支持 video 标签。
    </video>
+   
+   或者通过浏览器打开摄像头，实时翻译某个区域。
+   
+   <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1004738936&bvid=BV1rx4y1W7J2&cid=1543942715&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
