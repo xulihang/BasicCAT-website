@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v2.12.4 (2024/06/02)
+
+* Enable vertical center alignment by default
+* If SHIFT is pressed, we can drag text areas without changing its horizontal position. If Z is pressed as well, the vertical position will be kept
+* Fix a problem that the rich text BBCode markup is not effective when it encloses line breaks
+* Fix a problem that the selection status is reset when switching translation mode
+
 ## v2.12.3 (2024/05/23)
 
 Fix a problem for PS scripts that vertical center and horizontal center with rich text mode enabled is not effective
