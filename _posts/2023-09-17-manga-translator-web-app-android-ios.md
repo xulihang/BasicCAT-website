@@ -50,3 +50,6 @@ If we run the web app at home, we can only access it on the local area network. 
    Your browser does not support the video tag.
    </video>
 
+   Or open the camera and scanlate a region:
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/RQOkvhXk5hM?si=N0rIJoATk7Sjbg-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
