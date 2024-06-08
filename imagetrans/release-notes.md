@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.0.0 (2024/06/08)
+
+* Update JRE to Java 23 to fix the text wrapping problem affected by leading and trailing spaces  [#issue482](https://github.com/xulihang/ImageTrans-docs/issues/482)
+* The style of text boxes can be customized
+* Mask editor can draw selection in any direction
+
 ## v2.12.4 (2024/06/02)
 
 * Enable vertical center alignment by default

@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.0.0 (2024/06/08)
+
+* 更新JRE为Java 23以修复两端空格影响自动换行效果的问题 [#issue482](https://github.com/xulihang/ImageTrans-docs/issues/482)
+* 支持定义文本框样式
+* 掩膜编辑器支持任意方向划选区域
+
 ## v2.12.4 (2024/06/02)
 
 * 默认启用垂直居中
