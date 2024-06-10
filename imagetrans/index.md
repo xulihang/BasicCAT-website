@@ -92,7 +92,7 @@ ImageTrans is available for purchase on FastSpring: [link](https://basiccat.onfa
 
 Pricing:
 
-* ImageTrans for personal use: $18.90
+* ImageTrans for personal use: $10.99
 * ImageTrans for commercial purpose: $299
 
 One-time purchase. Free upgrades within half a year.
