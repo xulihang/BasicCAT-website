@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.1.0 (2024/06/10)
+
+* Add a custom color picker in the image color picker
+* Use the image color picker in the TypeSetting form
+* Custom workflow can process the current image only
+* New custom workflow items: use the detected text color as the stroke color, set the stroke color based on the depth of the text color, set the text color based on the depth of the stroke color, match font style based on stroke color
+* Fix the encoding problem of the languages list for WinRT OCR
+
 ## v3.0.0 (2024/06/08)
 
 * Update JRE to Java 23 to fix the text wrapping problem affected by leading and trailing spaces  [#issue482](https://github.com/xulihang/ImageTrans-docs/issues/482)
