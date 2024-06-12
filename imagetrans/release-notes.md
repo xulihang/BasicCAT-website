@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.1.1 (2024/06/12)
+
+* Add "Get text area confidence" to custom work flow
+* Add the confidence threshold project setting
+* Add a project setting to correct the order of text of the OCR result of one area
+* Fix a problem that OCR plugins with combinations are not listed in preferences
+* Fix a problem that the text using horizontal text engine becomes white under a dark theme
+* Fix a problem that the text areas with text fail to merge if the reading order is set to right to left
+
 ## v3.1.0 (2024/06/10)
 
 * Add a custom color picker in the image color picker
