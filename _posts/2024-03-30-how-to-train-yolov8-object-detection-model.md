@@ -128,3 +128,9 @@ How to enable:
       }
    }
    ```
+
+## Managing Classes
+
+ImageTrans uses the font style setting for classes. The name of the font style and the name of the class should be the same.
+
+We can export the annotations with the font style's name as the class name. During object detection, we can use the detected class name as the name of the font style.
