@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.2.0 (2024/06/23)
+
+* Add a menu item to start a new project based on template [#issue688](https://github.com/xulihang/ImageTrans-docs/issues/688)
+* Better support for classes for object detection
+* Fix the problem that the shortcut defined by default may not work if it is set for another menu item [#issue630](https://github.com/xulihang/ImageTrans-docs/issues/630)
+* Fix the problem that OpenCV fails to load models under paths containing Unicode characters
+
 ## v3.1.1 (2024/06/12)
 
 * Add "Get text area confidence" to custom work flow
