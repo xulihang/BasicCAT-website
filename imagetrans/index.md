@@ -86,11 +86,6 @@ ImageTrans can use different combinations of text detection, text recognition an
 
 Visit [Gallery](/gallery/) to check out images translated using ImageTrans.
 
-## Testimonials
-
-* [xCryBaby](https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg): I've been using this program for a week now and it really helps us amateur translators (What took at least 2-3hours in photoshop is done in 1hour here).
-* [ocrhell](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773): The combination of the program with the integration of other software from around the web and the immediate informative replies to user concerns is simply unmatched.
-
 ## Get a Copy
 
 ImageTrans is available for purchase on FastSpring: [link](https://basiccat.onfastspring.com/).
@@ -107,6 +102,11 @@ Please follow the [installation instruction](https://imagetrans.readthedocs.io/e
 If you are from academic institutions, you can email to [admin@basiccat.org](mailto:admin@basiccat.org) with your institution's email to get a discount. Please tell us who you are and what you are gonna do with ImageTrans.
 
 If you cannot complete the payment, please [contact me](mailto:admin@basiccat.org).
+
+## Testimonials
+
+* [xCryBaby](https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg): I've been using this program for a week now and it really helps us amateur translators (What took at least 2-3hours in photoshop is done in 1hour here).
+* [ocrhell](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773): The combination of the program with the integration of other software from around the web and the immediate informative replies to user concerns is simply unmatched.
 
 ## More
 

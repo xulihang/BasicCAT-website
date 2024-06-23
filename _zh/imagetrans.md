@@ -88,11 +88,6 @@ ImageTrans可以自由组合不同的文字定位、文字识别和机器翻译�
 
 [访问这里](/zh/gallery/)来浏览使用ImageTrans翻译的图片。
 
-## 用户是怎么说的
-
-* [xCryBaby](https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg): 我用这个软件一周了，它真的帮助了我们业余翻译者（原本使用Photoshop需要花2到3个小时，现在只要1小时）
-* [ocrhell](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773): 软件在集成网络中各种软件，及时给用户有价值的回复方面做得非常出色
-
 ## 获取ImageTrans
 
 请前往面包多自主购买：[链接](https://mbd.pub/o/bread/YpmUmJhs)。
@@ -111,6 +106,11 @@ ImageTrans可以自由组合不同的文字定位、文字识别和机器翻译�
 来自高校的师生可以用教育网邮箱发送邮件至[admin@basiccat.org](mailto:admin@basiccat.org)，说明相关信息，打算用ImageTrans做什么任务，能够得到优惠。
 
 如果无法购买，也请[邮件联系我](mailto:admin@basiccat.org)。
+
+## 用户是怎么说的
+
+* [xCryBaby](https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg): 我用这个软件一周了，它真的帮助了我们业余翻译者（原本使用Photoshop需要花2到3个小时，现在只要1小时）
+* [ocrhell](https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773): 软件在集成网络中各种软件，及时给用户有价值的回复方面做得非常出色
 
 ## 更多内容
 
