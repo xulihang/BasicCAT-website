@@ -13,6 +13,7 @@ permalink: /zh/imagetrans/release-notes/
 ## v3.2.0 (2024/06/23)
 
 * 新增从模板新建项目的功能 [#issue688](https://github.com/xulihang/ImageTrans-docs/issues/688)
+* 支持在文本框中显示样式名
 * 加强目标检测对分类的支持
 * 修复默认的快捷键被设定到其它功能时可能不生效的问题 [#issue630](https://github.com/xulihang/ImageTrans-docs/issues/630)
 * 修复OpenCV从包含Unicode字符的路径加载模型失败的问题
