@@ -134,3 +134,12 @@ How to enable:
 ImageTrans uses the font style setting for classes. The name of the font style and the name of the class should be the same.
 
 We can export the annotations with the font style's name as the class name. During object detection, we can use the detected class name as the name of the font style.
+
+To get the class names during object detection, we need to put a file named `model.classes` along with the model file containing the class names of the model.
+
+```json
+{
+  "0":"balloon",
+  "1":"text"
+}
+```
