@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.2.1 (2024/06/24)
+
+* 一键翻译默认进行分镜检测和排序
+* 优化横排文字引擎保持单词不被切分时的显示效果
+
 ## v3.2.0 (2024/06/23)
 
 * 新增从模板新建项目的功能 [#issue688](https://github.com/xulihang/ImageTrans-docs/issues/688)

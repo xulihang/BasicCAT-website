@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.2.1 (2024/06/24)
+
+* Add panel detection and sorting to batch translation
+* Improve the behavior of horizontal text engine when the "do not break words" option is enabled
+
 ## v3.2.0 (2024/06/23)
 
 * Add a menu item to start a new project based on template [#issue688](https://github.com/xulihang/ImageTrans-docs/issues/688)
