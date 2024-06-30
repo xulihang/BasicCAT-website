@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.3.0 (2024/06/30)
+
+* Add top padding to font style settings [#issue697](https://github.com/xulihang/ImageTrans-docs/issues/697)
+* Add context menu items for text area operations in search and replace
+* Add operations like removing outer areas and detecting text direction in custom workflow
+* Prompt the user whether to import the images existing in the directory of the project file
+* Improve the performence of switching the percentage
+* Update PDFBox to fix the import of Japanese PDF
+
 ## v3.2.1 (2024/06/24)
 
 * Add panel detection and sorting to batch translation

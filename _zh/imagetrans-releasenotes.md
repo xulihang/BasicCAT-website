@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.3.0 (2024/06/30)
+
+* 字体样式新增上边距的设置 [#issue697](https://github.com/xulihang/ImageTrans-docs/issues/697)
+* 搜索与替换增加文字区域相关操作的右键菜单项
+* 自定义工作流添加去除外部区域、文字方向检测等操作
+* 新建项目时，如果项目文件所在文件夹存在图片，提示是否导入
+* 优化切换分辨率时的性能
+* 更新PDFBox以修复日文PDF的导入问题
+
 ## v3.2.1 (2024/06/24)
 
 * 一键翻译默认进行分镜检测和排序
