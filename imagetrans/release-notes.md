@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.3.1 (2024/07/06)
+
+* Fix the problem that the boxes are not redrawn during percentage switching
+* Fix the problem that the balloon detection results lose the class names if they are merged
+
 ## v3.3.0 (2024/06/30)
 
 * Add top padding to font style settings [#issue697](https://github.com/xulihang/ImageTrans-docs/issues/697)
