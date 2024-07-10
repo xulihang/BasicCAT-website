@@ -37,3 +37,5 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 
 * [如何在ImageTrans中使用有道云服务](https://www.basiccat.org/zh/how-to-use-youdao-in-imagetrans/)
 * [在ImageTrans中用ChatGPT来辅助翻译](https://www.basiccat.org/zh/ChatGPT-image-translator/)
+* [pororo，韩语专用OCR](https://github.com/xulihang/ImageTrans_plugins/tree/master/pororoOCR)
+

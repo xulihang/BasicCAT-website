@@ -37,3 +37,4 @@ Related guides:
 
 * [How to Use Google Cloud in ImageTrans](https://www.basiccat.org/how-to-use-google-cloud-in-imagetrans/)
 * [Use ChatGPT to Help Translate Images](https://www.basiccat.org/ChatGPT-image-translator/)
+* [pororo: a good Korean OCR](https://github.com/xulihang/ImageTrans_plugins/tree/master/pororoOCR)
