@@ -10,7 +10,7 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
-## v3.4.0 (2024/07/06)
+## v3.4.0 (2024/07/21)
 
 * 支持导入Epub、Mobi、ZIP和CBZ等格式的文件
 * 新增插件助手用于管理插件

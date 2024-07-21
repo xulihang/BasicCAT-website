@@ -9,7 +9,7 @@ layout: page
 }
 </style>
 
-## v3.4.0 (2024/07/06)
+## v3.4.0 (2024/07/21)
 
 * Add support of importing files in the following formats: epub, mobi, zip and cbz
 * Add Plugin Helper to manage plugins
