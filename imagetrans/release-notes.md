@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.4.0 (2024/07/06)
+
+* Add support of importing files in the following formats: epub, mobi, zip and cbz
+* Add Plugin Helper to manage plugins
+* Add edit toolbar to rotate and flip the images
+* Add Spread Manager. Images set as spread will be splitted into the left image and the right image for boxes sorting and panel detection
+* It is now possible to set the params of inpainter and mask generation plugins in Preferences
+* Fix the problem that the text-removed image is not loaded correctly in the Text Remover
+
 ## v3.3.1 (2024/07/06)
 
 * Fix the problem that the boxes are not redrawn during percentage switching
