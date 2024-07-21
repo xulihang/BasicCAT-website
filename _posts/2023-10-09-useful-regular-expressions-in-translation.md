@@ -16,6 +16,7 @@ Here is a list of useful regular expressions:
 * `[0-9]` match all numbers
 * `^.{1,2}$` match text whose length is 1 to 2 to filter out misrecognized text
 * `[a-zA-Z]` match all English characters
+* `^[a-zA-Z]*$` match text containing only English characters
 * `[\u4e00-\u9fa5]` match all Chinese characters
 
 
