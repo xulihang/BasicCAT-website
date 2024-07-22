@@ -103,6 +103,18 @@ layout: null
     let projectPath;
     let currentIndex = 0;
     window.onload = function(){
+      let cropper = document.querySelector("image-cropper");
+      cropper.addEventListener("imageLoaded",async function(){
+        let webtoon = getUrlParam("webtoon");
+        if (webtoon) {
+          if (document.documentElement.clientWidth < 600) { //for mobile devices
+            cropper.setAttribute("draggingmode","y-only");
+            await cropper.fitWidth();
+            await sleep(200);
+            await cropper.goToTop();
+          }  
+        }
+      })
       downloadProject();
       if (document.documentElement.clientWidth < 600) { //for mobile devices
         document.getElementsByClassName("imageview")[0].style.height = document.documentElement.clientHeight - 30 + "px";
@@ -110,6 +122,12 @@ layout: null
       updateDownloadAnchor();
     }
 
+    function sleep(time){
+      return new Promise(function(resolve){
+        setTimeout(resolve, time);
+      });
+    }
+    
     function updateDownloadAnchor(){
       document.getElementById("downloadAnchor").href = projectPath;
     }
