@@ -18,7 +18,7 @@
     cover-alt: Manga
 -
     title: Webtoon
-    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
     description: A long-strip webtoon in Chinese translated into English. The image is taken from <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>.
     cover-src: /gallery/projects/webtoon/out/SQ.webp
     cover-alt: Webtoon

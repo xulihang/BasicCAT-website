@@ -18,7 +18,7 @@
     cover-alt: 日漫
 -
     title: 条漫
-    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
     description: 条漫，中译英。图片来自<a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>。
     cover-src: /gallery/projects/webtoon/out/SQ.webp
     cover-alt: Webtoon
