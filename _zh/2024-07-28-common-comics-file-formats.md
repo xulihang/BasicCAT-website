@@ -45,5 +45,5 @@ tags: imagetrans
 * IDML/INDD，Adobe InDesign的文件格式
 
 
-漫画翻译软件ImageTrans支持以上大多数的文件格式。
+漫画翻译软件[ImageTrans](/zh/imagetrans/)支持以上大多数的文件格式。
 

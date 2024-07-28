@@ -45,5 +45,5 @@ Here are a few of the formats that are commonly used:
 * IDML/INDD, Adobe InDesign's file format
 
 
-The comic translation software, ImageTrans, supports most of the file formats mentioned above.
+The comic translation software, [ImageTrans](/imagetrans/), supports most of the file formats mentioned above.
 

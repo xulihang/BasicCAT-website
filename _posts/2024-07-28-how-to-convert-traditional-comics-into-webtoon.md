@@ -10,7 +10,7 @@ Traditional comics (manga) are usually drawn in a format suitable for printing o
 
 Converting an existing traditional comics to webtoon usually involves rearranging subplots and redrawing speech bubbles. You can refer to [the video](https://www.youtube.com/watch?v=NN8brEkMRv4) by comic artist Jason Brubaker.
 
-As readers, if we want to convert traditional comics to webtoon for easy reading on our mobile phones without too much effort, we can use ImageTrans for automatic conversion. This software can detect the panels and export them in a long image in the webtoon format. We can edit the panels and adjust the order of them in the software to ensure the results are correct before exporting.
+As readers, if we want to convert traditional comics to webtoon for easy reading on our mobile phones without too much effort, we can use [ImageTrans](/imagetrans/) for automatic conversion. This software can detect the panels and export them in a long image in the webtoon format. We can edit the panels and adjust the order of them in the software to ensure the results are correct before exporting.
 
 ![Panel detection](/album/panel-detection/imagetrans-panel-detection.jpg)
 
