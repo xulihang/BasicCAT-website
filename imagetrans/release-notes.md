@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.5.0 (2024/07/28)
+
+* Allow dragging the four corners to adjust the size and position of text boxes
+* Use double to store the target geometry
+* Panels can be exported into one long image
+
 ## v3.4.0 (2024/07/21)
 
 * Add support of importing files in the following formats: epub, mobi, zip and cbz
@@ -17,6 +23,7 @@ layout: page
 * Add Spread Manager. Images set as spread will be splitted into the left image and the right image for boxes sorting and panel detection
 * It is now possible to set the params of inpainter and mask generation plugins in Preferences
 * Fix the problem that the text-removed image is not loaded correctly in the Text Remover
+* Store the machine translation results of multiple sentences
 
 ## v3.3.1 (2024/07/06)
 
