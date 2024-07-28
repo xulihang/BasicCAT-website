@@ -13,7 +13,7 @@ tags: imagetrans
 * 支持鼠标拖拽移动
 * 支持快捷键缩放
 * 支持各种常见的[文件格式](/zh/common-comics-file-formats/)：JPG、PNG、BMP、WebP、PDF、ZIP、CBZ、EPUB、MOBI
-* 支持检测分镜，并以分镜为单位进行阅读或者[转换漫画为条漫](/zh/comic-reader-app-that-translates/)
+* 支持检测分镜，并以分镜为单位进行阅读或者[转换漫画为条漫](/zh/how-to-convert-traditional-comics-into-webtoon/)
 * 支持使用TTS进行语音朗读
 * 支持导出结果为网页，供手机阅读
 
