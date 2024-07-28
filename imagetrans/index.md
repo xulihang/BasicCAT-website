@@ -7,7 +7,7 @@ layout: page
 
 ImageTrans is a computer-aided image and comic translation tool. It can automatically locate text areas and perform OCR operations using state-of-art OCR technology and a homebrew text areas merging and detecting algorithm, which is specially designed for comics (also webtoon, manga, manhwa and manhua). The original text can be automatically erased and the translation be reinjected.
 
-![](/album/imagetrans.jpg)
+![screenshot](/album/imagetrans.jpg)
 
 ImageTrans can be used not only as an AI image translator, but also an image reader, an image transcriber, a screenshot OCR and translator, and a deep learning annotator.
 
@@ -19,7 +19,7 @@ ImageTrans is the result of the thesis for my master's degree: [Design and Imple
 
 ### Accurate text area detection
 
-![](/album/imagetrans-features/localization.jpg)
+![text detection](/album/imagetrans-features/localization.jpg)
 
 It can use natural scene text detection, object detection and a heuristic method to detect text.
    
@@ -49,7 +49,7 @@ It also supports translation memory, corpus concordance, term management and oth
 
 The software can use tools and algorithms like Sickzil-Machine, binarization, PatchMatch to generate text mask and remove text. It can refill the translation and automatically adjust the font size according to the position and area of text regions. All the above operations support manual adjustment.
 
-![](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![text removal and reinjection](/album/imagetrans-features/text-removal-and-reinjection.jpg)
 
 ### Interoperability
 

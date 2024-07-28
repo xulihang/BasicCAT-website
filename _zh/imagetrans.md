@@ -8,7 +8,7 @@ permalink: /zh/imagetrans/
 
 ImageTrans是一款计算机辅助图片文字转录与翻译工具，能够使用OCR技术自动定位并识别文字，自动抹除原文并回填译文，并且拥有针对漫画设计的文字区域合并与检测算法。
 
-![](/album/imagetrans_zh.jpg)
+![界面截图](/album/imagetrans_zh.jpg)
 
 ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图片阅读器、文字转录器、截图OCR翻译器和深度学习标注器使用。
 
@@ -20,7 +20,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 准确定位文字区域
 
-![](/album/imagetrans-features/localization.jpg)
+![文字定位](/album/imagetrans-features/localization.jpg)
 
 支持使用自然场景文字检测法、目标检测法和启发式等多种定位方法。
 
@@ -51,7 +51,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 软件能调用Sickzil-Machine、二值化、PatchMatch等工具和算法生成文字掩膜、去除文字，并根据文字区域的位置和面积回填译文，自动调整译文字体大小。以上操作均支持手动调整。
 
-![](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![文字抹除与回填](/album/imagetrans-features/text-removal-and-reinjection.jpg)
 
 ### 互操作性
 
