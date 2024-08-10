@@ -9,6 +9,18 @@ layout: page
 }
 </style>
 
+## v3.6.0 (2024/08/10)
+
+* Add a project settings: pixels to expand when inpainting by text areas
+* Add a menu item to shrink the text areas
+* Add an operation to resize the text areas according to the text mask
+* Add Image Orientation Fixer. It can be used to fix the orientation of photos taken by an iPhone or a Samsung phone based on Exif
+* Automatically fix the orientation of downloaded images
+* Improve the image switching during batch operations
+* Add "Append OCR results to text areas" into custom workflow
+* Enable dragging and inpainting by text areas by default
+* Fix the problem that baidu machine translation does not handle multi-line text
+
 ## v3.5.0 (2024/07/28)
 
 * Allow dragging the four corners to adjust the size and position of text boxes
