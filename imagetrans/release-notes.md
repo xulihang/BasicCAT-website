@@ -15,6 +15,7 @@ layout: page
 * Add a menu item to shrink the text areas
 * Add an operation to resize the text areas according to the text mask
 * Add Image Orientation Fixer. It can be used to fix the orientation of photos taken by an iPhone or a Samsung phone based on Exif
+* Add a context menu item to merge with the next image
 * Automatically fix the orientation of downloaded images
 * Improve the image switching during batch operations
 * Add "Append OCR results to text areas" into custom workflow
