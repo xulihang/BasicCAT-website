@@ -76,6 +76,7 @@ ImageTrans has low requirements of the hardware and its size is only about 150MB
 
 * Can work offline on a local device
 * Global font style
+* Rotation detection
 * Automatic detection of background color and text color
 * Sort text areas based on the distance to the original, horizontal ordinate, vertical ordinate and panels
 * Batch processing
