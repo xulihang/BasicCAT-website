@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.6.1 (2024/08/17)
+
+* Add support of YOLO OBB to detect oriented text
+* Server can use custom workflow
+* Fix the problem that the rotated text areas are not rotated back after the rotation is canceled
+* Fix the problem that the rotation is not applied to oriented text areas detected by OCR
+
 ## v3.6.0 (2024/08/10)
 
 * Add a project settings: pixels to expand when inpainting by text areas
