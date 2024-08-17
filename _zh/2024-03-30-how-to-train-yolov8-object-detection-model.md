@@ -144,3 +144,22 @@ ImageTrans使用字体样式的设置对应目标检测的分类结果，需要�
   "1":"text"
 }
 ```
+
+## 对倾斜目标的处理
+
+如果需要检测倾斜的目标，得到它旋转的角度，我们需要使用OBB模型。
+
+在导出数据时勾选使用OBB格式，可以导出用于OBB的标注文件。
+
+训练时，也基于OBB的模型进行训练。
+
+```py
+from ultralytics import YOLO
+model = YOLO('yolov8n-obb.pt')  # load a pretrained model (recommended for training)
+# Train the model
+results = model.train(data='balloon.yaml', epochs=100, imgsz=640)
+```
+
+
+
+

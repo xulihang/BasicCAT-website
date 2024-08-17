@@ -143,3 +143,19 @@ To get the class names during object detection, we need to put a file named `mod
   "1":"text"
 }
 ```
+
+## Detect Orieneted Objects
+
+If we need to detect oriented objects and obtain their rotation degrees, we need to use OBB models.
+
+Check "Use OBB format" to export annotation files in OBB format.
+
+Then, train the model based on a OBB scheme or model.
+
+```py
+from ultralytics import YOLO
+model = YOLO('yolov8n-obb.pt')  # load a pretrained model (recommended for training)
+# Train the model
+results = model.train(data='balloon.yaml', epochs=100, imgsz=640)
+```
+
