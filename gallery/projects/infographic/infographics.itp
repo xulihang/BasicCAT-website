@@ -1,5 +1,6 @@
 {
     "settings": {
+        "pixelsToExpandForInpaintingByBox": 5,
         "otsu_enabled": true,
         "resize_before_balloon": true,
         "defaultInpainter": 0,
@@ -11,14 +12,21 @@
         "default_text_box_width": "100",
         "autocorrect": [],
         "precisionMode": 0,
+        "balloon_fixed_ratio": "1x1",
+        "output_format": 0,
         "sourceLang": "en",
         "maskRadius": 0,
+        "checkParagraphPositionForMerging": false,
+        "doNotCheckSeparationWithText": true,
+        "use_balloon_detection_model_params_first": true,
         "maxFontSize": 100,
         "position_restraint": false,
         "richtext": false,
+        "checkPunctuationForMerging": false,
         "readSubFolder": true,
         "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
         "showTTSButton": true,
+        "getClassIDAsTextStyle": false,
         "char_rotate": "[…—~]",
         "byTextArea": true,
         "invert": false,
@@ -27,19 +35,29 @@
         "output_with_bitmapcreator": false,
         "balloon_divide_ratio": 4,
         "minimumHSpan": "10",
+        "generateMaskDuringSceneTextDetection": true,
         "resize_before_balloon_height": 1024,
+        "flipOutputImage": false,
+        "sortCriteriaForText": 0,
         "expand": "6",
+        "useBatchSettings": false,
         "output_folder": "out",
         "pdf_dpi": 300,
+        "reorder_for_area_ocr": false,
         "resize_before_OCR_width": 2500,
+        "enable_bridge_language": false,
         "expand_for_balloon": true,
+        "use_fixed_ratio_for_balloon": false,
         "defaultMaskGen": 0,
         "inpaintRadius": 3,
+        "offsetThresholdBetweenParagraphLines": 20,
         "blur": false,
         "installedFont": [],
+        "confidence_threshold": 0.5,
         "timeout": "60",
         "fontStyles": [
             {
+                "padding": 0,
                 "kerning": 5,
                 "capital": false,
                 "b4jfont": "System",
@@ -57,6 +75,7 @@
                 "direction": 0
             },
             {
+                "padding": 0,
                 "kerning": 5,
                 "capital": false,
                 "b4jfont": "System",
@@ -76,7 +95,19 @@
         ],
         "right2left": false,
         "autoFontSize": true,
+        "endingPunctuations": "[\\.,!?。！？…\"]",
+        "bridge_language": "en",
         "invertBasedOnColor": false,
+        "firstchar_to_moveup": "",
+        "batchSettings": {
+            "ocrInterval": 200,
+            "engine": "tencent",
+            "enable_panel_detection": true,
+            "mergeOperation": "2",
+            "detectionMethod": "0",
+            "interval": 1000,
+            "type": "MT"
+        },
         "imgQuality": 90,
         "expanding_pix": 5,
         "autoThreshold": true,
@@ -90,6 +121,7 @@
             "去除内部区域",
             "拓展区域"
         ],
+        "do_not_break_words": true,
         "minimumHeight": "3",
         "minFontSize": 20,
         "furiganaStipperMethod": 0,
@@ -114,13 +146,14 @@
             "boxes": [
                 {
                     "targetGeometry": {
-                        "X": 65,
+                        "X": 67,
                         "width": 482,
-                        "Y": 167,
+                        "Y": 178,
                         "height": 98
                     },
                     "suitableSize": 51,
                     "adjusted": true,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 65,
                         "width": 930,
@@ -140,6 +173,7 @@
                     "suitableSize": 19,
                     "fontstyle": "title",
                     "adjusted": true,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 77,
                         "width": 261,
@@ -147,10 +181,11 @@
                         "height": 30
                     },
                     "text": "Find the Right Keywords:",
-                    "target": "找到正确的关键字："
+                    "target": "找到正确的关键词："
                 },
                 {
                     "suitableSize": 22,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 62,
                         "width": 292,
@@ -161,8 +196,16 @@
                     "target": "在开始写一篇文章之前，使用像Keyword Magic Tool这样的工具来进行关键词研究"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 451,
+                        "width": 289,
+                        "Y": 377,
+                        "height": 30
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 451,
                         "width": 289,
@@ -174,6 +217,7 @@
                 },
                 {
                     "suitableSize": 25,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 431,
                         "width": 294,
@@ -184,8 +228,16 @@
                     "target": "利用人们也爱问(PAA)这样的SERP功能，找出您的用户真正想知道的内容"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 864,
+                        "width": 215,
+                        "Y": 377,
+                        "height": 29
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 864,
                         "width": 215,
@@ -196,8 +248,16 @@
                     "target": "确定并满足"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 864,
+                        "width": 151,
+                        "Y": 421,
+                        "height": 27
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 864,
                         "width": 151,
@@ -209,6 +269,7 @@
                 },
                 {
                     "suitableSize": 26,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 849,
                         "width": 272,
@@ -216,11 +277,19 @@
                         "height": 86
                     },
                     "text": "Identify search intent for your keywords and create appropriate content",
-                    "target": "确定您的关键字的搜索意图并创建适当的内容"
+                    "target": "确定您的关键词的搜索意图并创建适当的内容"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 865,
+                        "width": 223,
+                        "Y": 668,
+                        "height": 31
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 863,
                         "width": 223,
@@ -231,8 +300,16 @@
                     "target": "查看竞争对手的"
                 },
                 {
-                    "suitableSize": 18,
+                    "targetGeometry": {
+                        "X": 865,
+                        "width": 93,
+                        "Y": 712,
+                        "height": 22
+                    },
+                    "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 865,
                         "width": 93,
@@ -251,6 +328,7 @@
                     },
                     "suitableSize": 22,
                     "adjusted": true,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 847,
                         "width": 236,
@@ -261,8 +339,16 @@
                     "target": "使用Keyword Gap Tool来了解竞争对手用了哪些关键词"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 865,
+                        "width": 247,
+                        "Y": 958,
+                        "height": 29
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 864,
                         "width": 247,
@@ -281,6 +367,7 @@
                     },
                     "suitableSize": 22,
                     "adjusted": true,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 847,
                         "width": 291,
@@ -291,8 +378,16 @@
                     "target": "创建具有吸引力且值得分享的原创研究、案例研究和深入指南"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 864,
+                        "width": 268,
+                        "Y": 1264,
+                        "height": 32
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 864,
                         "width": 268,
@@ -303,8 +398,16 @@
                     "target": "优化页眉、标题、"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 863,
+                        "width": 246,
+                        "Y": 1307,
+                        "height": 29
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 862,
                         "width": 246,
@@ -316,6 +419,7 @@
                 },
                 {
                     "suitableSize": 22,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 847,
                         "width": 301,
@@ -323,11 +427,19 @@
                         "height": 121
                     },
                     "text": "Don't just optimize for keywords. Keep your reader at the center with skim-able and user-friendly content",
-                    "target": "不要只针对关键字进行优化。以读者为中心，提供可以快速浏览的、良好的阅读体验"
+                    "target": "不要只针对关键词进行优化。以读者为中心，提供可以快速浏览的、良好的阅读体验"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 446,
+                        "width": 195,
+                        "Y": 1263,
+                        "height": 29
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 446,
                         "width": 195,
@@ -338,8 +450,16 @@
                     "target": "创建有组织的、"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 446,
+                        "width": 244,
+                        "Y": 1307,
+                        "height": 28
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
                         "X": 446,
                         "width": 244,
@@ -351,6 +471,7 @@
                 },
                 {
                     "suitableSize": 22,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 430,
                         "width": 311,
@@ -361,10 +482,18 @@
                     "target": "用户希望迅速得到答案，这意味着他们应该能够快速地浏览您的内容以找到他们需要的东西"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 79,
+                        "width": 171,
+                        "Y": 1263,
+                        "height": 28
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
-                        "X": 75,
+                        "X": 74,
                         "width": 171,
                         "Y": 1261,
                         "height": 28
@@ -374,6 +503,7 @@
                 },
                 {
                     "suitableSize": 25,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 62,
                         "width": 293,
@@ -385,7 +515,7 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 78,
+                        "X": 79,
                         "width": 158,
                         "Y": 1016,
                         "height": 30
@@ -393,6 +523,7 @@
                     "suitableSize": 19,
                     "fontstyle": "title",
                     "adjusted": true,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 74,
                         "width": 158,
@@ -404,6 +535,7 @@
                 },
                 {
                     "suitableSize": 24,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 62,
                         "width": 282,
@@ -414,10 +546,18 @@
                     "target": "CTA为登陆您的页面的用户提供合理的后续步骤"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 79,
+                        "width": 140,
+                        "Y": 666,
+                        "height": 29
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
-                        "X": 78,
+                        "X": 74,
                         "width": 140,
                         "Y": 666,
                         "height": 29
@@ -426,10 +566,18 @@
                     "target": "注意"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 79,
+                        "width": 191,
+                        "Y": 712,
+                        "height": 27
+                    },
                     "suitableSize": 19,
                     "fontstyle": "title",
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
                     "geometry": {
-                        "X": 77,
+                        "X": 74,
                         "width": 191,
                         "Y": 709,
                         "height": 27
@@ -439,6 +587,7 @@
                 },
                 {
                     "suitableSize": 24,
+                    "verticalBaseLineShift": 0,
                     "geometry": {
                         "X": 62,
                         "width": 360,
@@ -452,66 +601,114 @@
             "text-removed": true,
             "panels": [
                 {
+                    "boxes": [
+                        0
+                    ],
                     "X": 40,
                     "width": 1045,
                     "Y": 145,
                     "height": 128
                 },
                 {
+                    "boxes": [
+                        1,
+                        2
+                    ],
                     "X": 37,
                     "width": 338,
                     "Y": 280,
                     "height": 281
                 },
                 {
+                    "boxes": [
+                        3,
+                        4
+                    ],
                     "X": 400,
                     "width": 351,
                     "Y": 284,
                     "height": 277
                 },
                 {
+                    "boxes": [
+                        5,
+                        6,
+                        7
+                    ],
                     "X": 828,
                     "width": 335,
                     "Y": 280,
                     "height": 275
                 },
                 {
+                    "boxes": [
+                        8,
+                        9,
+                        10
+                    ],
                     "X": 828,
                     "width": 321,
                     "Y": 562,
                     "height": 301
                 },
                 {
+                    "boxes": [
+                        11,
+                        12
+                    ],
                     "X": 828,
                     "width": 327,
                     "Y": 868,
                     "height": 262
                 },
                 {
+                    "boxes": [
+                        13,
+                        14,
+                        15
+                    ],
                     "X": 828,
                     "width": 335,
                     "Y": 1160,
                     "height": 317
                 },
                 {
+                    "boxes": [
+                        16,
+                        17,
+                        18
+                    ],
                     "X": 395,
                     "width": 374,
                     "Y": 1164,
                     "height": 314
                 },
                 {
+                    "boxes": [
+                        19,
+                        20
+                    ],
                     "X": 41,
                     "width": 338,
                     "Y": 1160,
                     "height": 314
                 },
                 {
+                    "boxes": [
+                        21,
+                        22
+                    ],
                     "X": 41,
                     "width": 335,
                     "Y": 895,
                     "height": 260
                 },
                 {
+                    "boxes": [
+                        23,
+                        24,
+                        25
+                    ],
                     "X": 37,
                     "width": 382,
                     "Y": 565,
@@ -519,6 +716,24 @@
                 }
             ]
         }
+    },
+    "UISettings": {
+        "autosave": true,
+        "chinesePunc": false,
+        "dividerPosition": [
+            0.02249357326478149,
+            0.8502570694087404
+        ],
+        "translateAfterOCR": false,
+        "vertical": false,
+        "percent": 100,
+        "autoClean": true,
+        "removeSpaces": false,
+        "precisionMode": true,
+        "OCRAfterSelection": false,
+        "autoCapital": false,
+        "pannable": true,
+        "opacity": 100
     },
     "terms": {},
     "dirPath": "F:\\imagetrans_projects\\semrush",
