@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v3.7.0 (2024/08/18)
+
+* Scene text detection can now handle oriented text
+* InsetRect Mask Generator can now handle oriented text areas
+* Text detection operations only check overlapping with existing text areas
+* Use the bounding rectangles of oriented text areas for inpainting by box
+* Fix the width and height of text areas imported from OBB-format annotations
+* Fix the merging of text areas rotated by 90 degrees during object detection
+* Fix the calling of non-ONNX models
+* Fix the image shift in mask editor and text remover when the selection is out of the image
+
 ## v3.6.1 (2024/08/17)
 
 * Add support of YOLO OBB to detect oriented text
