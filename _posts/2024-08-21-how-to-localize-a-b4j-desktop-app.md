@@ -8,7 +8,7 @@ tags: imagetrans basiccat
 
 ImageTrans is a desktop program written in B4J which can be displayed in multiple languages.
 
-The[Localizer](https://www.b4x.com/android/forum/threads/b4x-localizator-localize-your-b4x-applications.68751/#content)localization library is used behind it.
+The [Localizer](https://www.b4x.com/android/forum/threads/b4x-localizator-localize-your-b4x-applications.68751/#content) localization library is used behind it.
 
 It needs to store keys and text in different languages in an Excel spreadsheet like the following.
 
