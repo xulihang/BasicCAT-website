@@ -8,8 +8,8 @@ permalink: /zh/download/
 
 ### BasicCAT v1.10.7
 
-* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x86.exe) /  [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT_mac.dmg)
+* Windows: [32位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x86.exe) / [64位](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x64.exe)
+* macOS:  [Intel CPU版本](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-mac-x64.dmg) / [苹果CPU版本](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-mac-arm.dmg)
 * Linux 和其它系统:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-crossplatforms.zip)
 
 也可从百度网盘下载：[链接](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)

@@ -8,7 +8,7 @@ Please choose your download based on platform.
 ### BasicCAT v1.10.7
 
 * Windows: [32bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x86.exe) /  [64bit](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-windows-x64.exe)
-* macOS:  [DMG](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT_mac.dmg)
+* macOS:  [Intel CPU](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-mac-x64.dmg) / [Apple CPU](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-mac-arm.dmg)
 * Linux and the other:  [CrossPlatfroms.zip](https://github.com/xulihang/BasicCAT/releases/download/v1.10.7/BasicCAT-crossplatforms.zip)
 
 Also available on Baidu NetDisk: [Link](https://pan.baidu.com/s/1HmD4pJ9hIYyK9bnqINtoFQ)
