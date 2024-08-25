@@ -9,6 +9,19 @@ layout: page
 }
 </style>
 
+## v3.8.0 (2024/08/25)
+
+* Panel detection can now handle dark background images automatically [#issue741](https://github.com/xulihang/ImageTrans-docs/issues/741)
+* It is now possible to set the background for the exported comics in webtoon format 
+* Add a new operation to remove areas and add missing areas using balloon detection
+* Fix the problem that if the inverted mode is enabled, the text merging operation is not using the inverted image
+* For batch operations, we can now set whether to enable text areas filtering based on confidence
+* We can put the balloon detection models under the `models` folder and select which model to use in the project settings
+* Enable offline balloon detection by default
+* Add a new context meun item to run one-click translation using custom workflow
+* New templates: Chinese manhua, webtoon (korean) and comics.
+* Templates can specify whether the user need to set the language pair and download the balloon detection model
+
 ## v3.7.0 (2024/08/18)
 
 * Scene text detection can now handle oriented text
