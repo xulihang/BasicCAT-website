@@ -84,7 +84,7 @@ Enable OAuth so that we can login our gmail account.
 ### Install the Plugin for ImageTrans
 
 1. Download the jar file and put it in ImageTrans's folder: [google_drive_ocr_commandline.jar](https://github.com/xulihang/Google-Drive-OCR-Java/releases/download/builds/google_drive_ocr_commandline.jar). Rename it as `google_drive_ocr.jar`.
-2. Download the plugin zip and unzip it in the plugins folder: [google_drive.zip](https://github.com/xulihang/ImageTrans-docs/files/7404613/google_drive.zip)
+2. Download the plugin zip and unzip it in the plugins folder: [google_drive.zip](https://github.com/xulihang/ImageTrans-docs/files/7404613/google_drive.zip) (Remember to restart ImageTrans after this step)
 3. Select Google Drive as the OCR engine.
 
    ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg)
