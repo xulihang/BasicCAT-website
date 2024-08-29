@@ -86,7 +86,7 @@ OCR和机器翻译可以公用一个API key。启用后，我们就可以用谷�
 ### 安装ImageTrans的插件
 
 1. 下载下面的jar文件，放到ImageTrans的目录： [google_drive_ocr_commandline.jar](https://github.com/xulihang/Google-Drive-OCR-Java/releases/download/builds/google_drive_ocr_commandline.jar)。更名为`google_drive_ocr.jar`。
-2. 下载插件的压缩包，解压到ImageTrans的plugins目录：[google_drive.zip](https://github.com/xulihang/ImageTrans-docs/files/7404613/google_drive.zip)（替换后记得重启ImageTrans）
+2. 下载插件的压缩包，解压到ImageTrans的plugins目录：[commandline_plugin.zip](https://github.com/xulihang/Google-Drive-OCR-Java/releases/download/builds/commandline_plugin.zip)（替换后记得重启ImageTrans）
 3. 选择google drive作为OCR引擎以进行OCR操作。
 
    ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg)
