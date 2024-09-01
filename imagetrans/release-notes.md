@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.9.0 (2024/09/01)
+
+* Allow using a dialog to select which balloon detection model to use
+* New alignment: justify
+* Add guides and auto snap for aligning the text boxes [#issue733](https://github.com/xulihang/ImageTrans-docs/issues/733)
+* Allow calling the engine 2 of OCRSpace
+* Allow case conversion for the source text before machine translation
+
 ## v3.8.0 (2024/08/25)
 
 * Panel detection can now handle dark background images automatically [#issue741](https://github.com/xulihang/ImageTrans-docs/issues/741)

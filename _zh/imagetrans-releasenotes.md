@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.9.0 (2024/09/01)
+
+* 气泡检测支持弹出对话框选择模型
+* 新的对齐方式：两端对齐
+* 新增对齐辅助线和自动吸附功能 [#issue733](https://github.com/xulihang/ImageTrans-docs/issues/733)
+* 允许调用OCRSpace的引擎2
+* 机器翻译前支持对原文进行大小写转换
+
 ## v3.8.0 (2024/08/25)
 
 * 分镜检测支持自动处理深色背景图片 [#issue741](https://github.com/xulihang/ImageTrans-docs/issues/741)
