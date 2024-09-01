@@ -73,9 +73,9 @@ Switch to PatchMatch. We can see it has a better restoration of the background, 
 ![](/album/imagetrans-text-removal/gradual_color_background-text-removed_patchmatch.jpg)
 
 
-### Some Special Cases
+## Some Special Cases
 
-#### Text with Shadow or Stroke
+### Text with Shadow or Stroke
 
 ![](/album/imagetrans-text-removal/big_font_with_background.jpg)
 
@@ -93,7 +93,7 @@ Set the dilation kernel size to 10 and use PatchMatch.
 
 ![](/album/imagetrans-text-removal/big_font_with_background.jpg-text-removed_inpaint.jpg)
 
-#### Handwritten Text which is Connected with Edges
+### Handwritten Text which is Connected with Edges
 
 ![](/album/imagetrans-text-removal/handwritten_text.jpg)
 
@@ -110,7 +110,7 @@ The edited mask and inpainting result using Sickzil-Machine:
 ![](/album/imagetrans-text-removal/handwritten_text_mask_and_text_removed.jpg)
 
 
-#### Image with Complex Background
+### Image with Complex Background
 
 ![](/album/imagetrans-text-removal/complex_background.jpg)
 
@@ -131,7 +131,31 @@ Translated:
 ![](/album/imagetrans-text-removal/complex_background_translated.png)
 
 
+## Lama Inpaint
 
+Added in new versions of ImageTrans, there is an AI algorithm called Lama Inpaint which can restore the background with amazing results. Here is the comparison of different inpainting methods.
+
+Original Image:
+
+![origin](/album/imagetrans-text-removal/mrz/origin.jpg)
+
+
+Mask:
+
+![mask](/album/imagetrans-text-removal/mrz/mask.png)
+
+
+OpenCV Telea:
+
+![OpenCV](/album/imagetrans-text-removal/mrz/opencv.jpg)
+
+Patchmatch:
+
+![Patchmatch](/album/imagetrans-text-removal/mrz/patchmatch.jpg)
+
+Lama Inpaint:
+
+![Lama Inpaint](/album/imagetrans-text-removal/mrz/lama.jpg)
 
 
 

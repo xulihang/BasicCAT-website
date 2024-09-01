@@ -73,9 +73,9 @@ SickZil-Machine方法：
 ![](/album/imagetrans-text-removal/gradual_color_background-text-removed_patchmatch.jpg)
 
 
-### 一些特别情况
+## 一些特别情况
 
-#### 带阴影或者描边的文字
+### 带阴影或者描边的文字
 
 ![](/album/imagetrans-text-removal/big_font_with_background.jpg)
 
@@ -93,7 +93,7 @@ SickZil-Machine方法：
 
 ![](/album/imagetrans-text-removal/big_font_with_background.jpg-text-removed_inpaint.jpg)
 
-#### 文字和边缘相连的手写文本
+### 文字和边缘相连的手写文本
 
 ![](/album/imagetrans-text-removal/handwritten_text.jpg)
 
@@ -110,7 +110,7 @@ SickZil-Machine方法：
 ![](/album/imagetrans-text-removal/handwritten_text_mask_and_text_removed.jpg)
 
 
-#### 背景复杂的图像
+### 背景复杂的图像
 
 ![](/album/imagetrans-text-removal/complex_background.jpg)
 
@@ -131,7 +131,31 @@ SickZil-Machine方法：
 ![](/album/imagetrans-text-removal/complex_background_translated.png)
 
 
+## Lama Inpaint
 
+新版本的ImageTrans增加了一种AI算法叫做LamaInpaint，可以很好地还原背景。下面是和不同算法的一个对比。
+
+原图：
+
+![原图](/album/imagetrans-text-removal/mrz/origin.jpg)
+
+
+文字掩膜：
+
+![文字掩膜](/album/imagetrans-text-removal/mrz/mask.png)
+
+
+OpenCV Telea：
+
+![OpenCV](/album/imagetrans-text-removal/mrz/opencv.jpg)
+
+Patchmatch：
+
+![Patchmatch](/album/imagetrans-text-removal/mrz/patchmatch.jpg)
+
+Lama Inpaint：
+
+![Lama Inpaint](/album/imagetrans-text-removal/mrz/lama.jpg)
 
 
 
