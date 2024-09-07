@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.10.0 (2024/09/07)
+
+* 新增对竖排内横排的支持 [#issue507](https://github.com/xulihang/ImageTrans-docs/issues/507)
+* 横排文字引擎的富文本支持设置删除线和下划线
+* 释放鼠标和刷新时清除对齐线
+* 允许调整竖排文字的偏移量
+* 限制文字区域在图片内这一操作会保存译文区域位置信息
+
 ## v3.9.0 (2024/09/01)
 
 * 气泡检测支持弹出对话框选择模型

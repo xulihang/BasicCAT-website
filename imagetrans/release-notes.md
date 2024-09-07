@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.10.0 (2024/09/07)
+
+* Add support for using horizontal text within vertical text [#issue507](https://github.com/xulihang/ImageTrans-docs/issues/507)
+* Add new rich text format for horizontal text engine: underline and strikethrough
+* Clear the guide lines after the mouse is released or the refresh operation is performed
+* Allow setting offsets for vertical text engine
+* Save the target geometry after restraining text boxes within the image
+
 ## v3.9.0 (2024/09/01)
 
 * Allow using a dialog to select which balloon detection model to use
