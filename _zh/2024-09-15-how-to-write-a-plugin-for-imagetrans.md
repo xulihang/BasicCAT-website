@@ -203,3 +203,8 @@ Log(targetList)
 
 
 ![编译](/album/B4J/compile-to-library.jpg)
+
+
+## 更多插件示例
+
+可以在这里找到更多的插件示例：<https://github.com/xulihang/ImageTrans_plugins>
