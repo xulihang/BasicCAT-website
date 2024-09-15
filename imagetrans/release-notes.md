@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.10.1 (2024/09/15)
+
+* Go to the previous image by default when opening a project
+* Fix a panel export problem that happens for images without panels or with wrong sized panels
+
 ## v3.10.0 (2024/09/07)
 
 * Add support for using horizontal text within vertical text [#issue507](https://github.com/xulihang/ImageTrans-docs/issues/507)

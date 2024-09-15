@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.10.1 (2024/09/15)
+
+* 打开项目时默认跳转到上次打开的图片
+* 修复无分镜图片和错误尺寸分镜导出时报错的问题
+
 ## v3.10.0 (2024/09/07)
 
 * 新增对竖排内横排的支持 [#issue507](https://github.com/xulihang/ImageTrans-docs/issues/507)
