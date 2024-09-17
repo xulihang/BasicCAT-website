@@ -12,7 +12,7 @@ ImageTrans提供了ChatGPT的插件，让我们可以调用ChatGPT来帮助翻�
 
 ## 使用需求
 
-注册OpenAI的账号并生成一个API密钥（或者使用第三方服务，比如国内的[API2D](https://api2d.com/)）。
+注册OpenAI的账号并生成一个API密钥（或者使用第三方服务，比如国内的[API2D](https://api2d.com/)、字节跳动的火山引擎，只要兼容OpenAI接口就行）。
 
 另外国内使用OpenAI的API服务需要科学上网。
 
