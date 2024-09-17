@@ -12,8 +12,8 @@ Here we are going to write a Google machine translation plugin for demonstration
 
 ## Environments
 
-1. Download B4J 8.9: [B4J. zip](https://github.com/xulihang/misc/releases/download/builds/B4J.zip).
-2. Download additional libraries: [b4jlib. zip](https://github.com/xulihang/misc/releases/download/builds/b4jlib.zip).
+1. Download B4J 8.9: [B4J.zip](https://github.com/xulihang/misc/releases/download/builds/B4J.zip).
+2. Download additional libraries: [b4jlib.zip](https://github.com/xulihang/misc/releases/download/builds/b4jlib.zip).
 3. Download OpenJDK+OpenJFX: [jdk-14.0.1.zip](https://www.b4x.com/b4j/files/java/jdk-14.0.1.zip)
 
 
@@ -26,9 +26,9 @@ Configure the library path and the JDK path in the software.
 
 Create a new UI project.
 
-In Build Configuration, change the package to`org. xulihang. imagetrans`, which is the same as ImageTrans.
+In Build Configuration, change the package to`org.xulihang.imagetrans`, which is the same as ImageTrans.
 
-Then create a new`googleMTPlugin. bas`class, containing the following template content:
+Then create a new`googleMTPlugin.bas`class, containing the following template content:
 
 ```vb
 Sub Class_Globals
@@ -81,12 +81,12 @@ ImageTrans will pass the name of the operation to be executed and the correspond
 
 Here are the common operations:
 
-* `getParams`: Get the parameters that need to be configured.
-* `getDefaultParamValues`: Get default params
-* `getSetupParams`: Get params for installation
-* `getIsInstalledOrRunning`: Check if the plugin is installed or running
-* `translate`: Translate a single sentence
-* `batchtranslate`: Translate multiple sentences
+* `getParams`: get the parameters that need to be configured.
+* `getDefaultParamValues`: get default params
+* `getSetupParams`: get params for installation
+* `getIsInstalledOrRunning`: check if the plugin is installed or running
+* `translate`: translate a single sentence
+* `batchtranslate`: translate multiple sentences
 * `supportBatchTranslation`: whether it supports multiple sentence translation
 * `getText`: recognize text in a single area
 * `getTextWithLocation`: recognize the text of the entire image and return coordinate information
