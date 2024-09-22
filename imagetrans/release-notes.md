@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.10.2 (2024/09/22)
+
+* Add an option to extract text for PDF import
+* Auto restore the screen reader's window after calling it through the shortcut
+* Update the ChatGPT plugin to allowing setting the host with version
+* Fix the problem that mask generation will fail if there is a text area whose width or height is 0
+* Fix the blurry screen capture problem under high DPI
+* Check whether the mask is correct based on the center for fitting the text areas with mask
+
 ## v3.10.1 (2024/09/15)
 
 * Go to the previous image by default when opening a project
