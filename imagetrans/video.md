@@ -9,6 +9,10 @@ layout: page
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DQarSxT9OPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### Translation of a PDF File
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zRjFq9ejXZY?si=SQrFujRpoVkPKKUa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Translation of Japanese Manga
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/S_6FF-5zTns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
