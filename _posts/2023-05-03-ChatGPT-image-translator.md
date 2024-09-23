@@ -78,3 +78,12 @@ In addition to ChatGPT, ImageTrans also supports other machine translation engin
 * Papago
 * Opus-CAT (offline, free)
 * Sugoi Translator (offline, free)
+
+## Use other LLMs
+
+As long as the large language model provides an OpenAI compatible API, we can use it.
+
+Some LLMs:
+
+* [Ollama](https://ollama.com/)
+* [SakuraLLM](https://github.com/SakuraLLM/SakuraLLM)
