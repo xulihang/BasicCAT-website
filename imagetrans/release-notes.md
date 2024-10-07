@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.10.3 (2024/10/07)
+
+* New way to open a project: command line and drag and drop 
+* Add source image viewer [#issue763](https://github.com/xulihang/ImageTrans-docs/issues/763)
+* Fix the problem that empty machine translation results are stored
+
 ## v3.10.2 (2024/09/22)
 
 * Add an option to extract text for PDF import

@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.10.3 (2024/10/07)
+
+* 支持使用命令行和拖拽文件的方式打开项目
+* 新增原图查看器 [#issue763](https://github.com/xulihang/ImageTrans-docs/issues/763)
+* 修复存储了空的机器翻译的问题
+
 ## v3.10.2 (2024/09/22)
 
 * 导入PDF时可以设置是否提取文字
