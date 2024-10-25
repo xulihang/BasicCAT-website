@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.11.0 (2024/10/25)
+
+* Stay in the current image after importing new images
+* Balloon detection using a local server [#issue771](https://github.com/xulihang/ImageTrans-docs/issues/771)
+* Add object detection as panel detection method [#issue772](https://github.com/xulihang/ImageTrans-docs/issues/772)
+* Allow saving multiple workflow settings
+
 ## v3.10.3 (2024/10/07)
 
 * New way to open a project: command line and drag and drop 

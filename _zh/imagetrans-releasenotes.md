@@ -10,6 +10,14 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.11.0 (2024/10/25)
+
+* 导入图片后停留在当前图片
+* 支持调用本地气泡检测服务 [#issue771](https://github.com/xulihang/ImageTrans-docs/issues/771)
+* 分镜检测支持使用目标检测 [#issue772](https://github.com/xulihang/ImageTrans-docs/issues/772)
+* 可以保存多个自定义工作流设置
+
+
 ## v3.10.3 (2024/10/07)
 
 * 支持使用命令行和拖拽文件的方式打开项目
