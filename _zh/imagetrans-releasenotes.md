@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.11.1 (2024/11/03)
+
+* 支持导入使用JBIG格式的PDF图像
+* 支持通过命令行调用自定义工作流处理文件 [#issue785](https://github.com/xulihang/ImageTrans-docs/issues/785)
+* 自定义工作流支持修改当前设置
+* 支持使用文字样式中的背景颜色作为文本框颜色 [#issue775](https://github.com/xulihang/ImageTrans-docs/issues/775)
+* 添加分镜排序和缩小区域操作到自定义工作流 [#issue774](https://github.com/xulihang/ImageTrans-docs/issues/774) [#issue776](https://github.com/xulihang/ImageTrans-docs/issues/776)
+
+
 ## v3.11.0 (2024/10/25)
 
 * 导入图片后停留在当前图片

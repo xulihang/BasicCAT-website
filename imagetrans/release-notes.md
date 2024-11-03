@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.11.1 (2024/11/03)
+
+* Support PDF images in JBIG format
+* Support calling custom workflow via the command line [#issue785](https://github.com/xulihang/ImageTrans-docs/issues/785)
+* Custom workflow's existing settings can be modified
+* Add an option to use the background color of font styles as the text boxes' border color [#issue775](https://github.com/xulihang/ImageTrans-docs/issues/775)
+* Add "Shrink areas" and "Sort panels" to custom workflow [#issue774](https://github.com/xulihang/ImageTrans-docs/issues/774) [#issue776](https://github.com/xulihang/ImageTrans-docs/issues/776)
+
 ## v3.11.0 (2024/10/25)
 
 * Stay in the current image after importing new images
