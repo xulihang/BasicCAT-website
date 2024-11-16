@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.11.2 (2024/11/16)
+
+* Add Ali machine translation
+* Add "Show original text boxes" checkbox in source image toolbar
+* Add menu items to adjust the position of textboxes
+
 ## v3.11.1 (2024/11/03)
 
 * Support PDF images in JBIG format
