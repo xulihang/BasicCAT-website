@@ -601,113 +601,178 @@
                     "target": "Size"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 47,
+                        "width": 62,
+                        "Y": 107.77778063291393,
+                        "height": 42
+                    },
                     "verticalBaseLineShift": 9,
                     "geometry": {
                         "X": 47,
                         "width": 62,
-                        "Y": 107,
+                        "Y": 106,
                         "height": 42
                     },
                     "localStyle": {
                         "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "上衣",
                     "target": "Tops"
                 },
                 {
-                    "verticalBaseLineShift": 11,
+                    "targetGeometry": {
+                        "X": 184.8,
+                        "width": 62,
+                        "Y": 108,
+                        "height": 41
+                    },
+                    "verticalBaseLineShift": 9,
                     "geometry": {
                         "X": 183,
                         "width": 62,
-                        "Y": 109,
+                        "Y": 106,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "胸围",
                     "target": "Bust"
                 },
                 {
-                    "verticalBaseLineShift": 11,
-                    "geometry": {
-                        "X": 340,
+                    "targetGeometry": {
+                        "X": 343.2,
                         "width": 64,
-                        "Y": 109,
+                        "Y": 108.8,
+                        "height": 41
+                    },
+                    "suitableSize": 14,
+                    "verticalBaseLineShift": 9,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 344,
+                        "width": 64,
+                        "Y": 106,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "肩宽",
                     "target": "Shoulder"
                 },
                 {
-                    "verticalBaseLineShift": 11,
+                    "targetGeometry": {
+                        "X": 488,
+                        "width": 63,
+                        "Y": 107.77778063291393,
+                        "height": 41
+                    },
+                    "verticalBaseLineShift": 9,
                     "geometry": {
                         "X": 488,
                         "width": 63,
-                        "Y": 109,
+                        "Y": 106,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "袖长",
                     "target": "Sleeve"
                 },
                 {
-                    "verticalBaseLineShift": 2,
+                    "targetGeometry": {
+                        "X": 629,
+                        "width": 64,
+                        "Y": 107.77778063291393,
+                        "height": 41
+                    },
+                    "verticalBaseLineShift": -2,
                     "geometry": {
                         "X": 629,
                         "width": 64,
-                        "Y": 109,
+                        "Y": 106,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "衣长",
                     "target": "Tops Length"
                 },
                 {
-                    "verticalBaseLineShift": 11,
+                    "targetGeometry": {
+                        "X": 46,
+                        "width": 63,
+                        "Y": 461.1111233263843,
+                        "height": 41
+                    },
+                    "verticalBaseLineShift": 9,
                     "geometry": {
                         "X": 46,
                         "width": 63,
-                        "Y": 464,
+                        "Y": 463,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "裙子",
                     "target": "Skirt"
                 },
                 {
-                    "verticalBaseLineShift": 2,
+                    "targetGeometry": {
+                        "X": 631,
+                        "width": 63,
+                        "Y": 461.1111233263843,
+                        "height": 41
+                    },
+                    "verticalBaseLineShift": -2,
                     "geometry": {
                         "X": 631,
                         "width": 63,
-                        "Y": 464,
+                        "Y": 463,
                         "height": 41
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "裙长",
                     "target": "Skirt Length"
                 },
                 {
-                    "verticalBaseLineShift": 10,
-                    "geometry": {
-                        "X": 349,
+                    "targetGeometry": {
+                        "X": 351.11112041237936,
                         "width": 61,
-                        "Y": 465,
+                        "Y": 461.1111233263843,
+                        "height": 39
+                    },
+                    "verticalBaseLineShift": 8,
+                    "geometry": {
+                        "X": 347,
+                        "width": 61,
+                        "Y": 463,
                         "height": 39
                     },
                     "localStyle": {
+                        "size": 15,
+                        "vertical-center": true,
                         "alignment": 1
                     },
                     "text": "胸围",
@@ -715,9 +780,9 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 176,
+                        "X": 178.66666666666666,
                         "width": 413,
-                        "Y": 782,
+                        "Y": 774.6666666666666,
                         "height": 48
                     },
                     "verticalBaseLineShift": 14,
@@ -727,6 +792,9 @@
                         "width": 326,
                         "Y": 793,
                         "height": 30
+                    },
+                    "localStyle": {
+                        "alignment": 1
                     },
                     "text": "因测量方式不同，存在1-3cm误差",
                     "target": "Due to different measurement methods, there may be a 1-3 cm error"
@@ -806,7 +874,7 @@
         "chinesePunc": true,
         "dividerPosition": [
             0.034572733202870194,
-            0.8183300717547293
+            0.9073711676451403
         ],
         "translateAfterOCR": false,
         "vertical": false,
