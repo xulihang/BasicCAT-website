@@ -1,0 +1,828 @@
+{
+    "settings": {
+        "pixelsToExpandForInpaintingByBox": 5,
+        "otsu_enabled": true,
+        "resize_before_balloon": true,
+        "defaultInpainter": 0,
+        "checkColorForSeparationInference": false,
+        "correct_input": true,
+        "threshold": "200",
+        "use_puretext": false,
+        "overlapped_width_percent": 50,
+        "default_text_box_width": "100",
+        "autocorrect": [],
+        "precisionMode": 0,
+        "balloon_fixed_ratio": "1x1",
+        "output_format": 0,
+        "sourceLang": "zh",
+        "maskRadius": 0,
+        "checkParagraphPositionForMerging": false,
+        "doNotCheckSeparationWithText": true,
+        "use_balloon_detection_model_params_first": true,
+        "maxFontSize": 100,
+        "position_restraint": false,
+        "richtext": false,
+        "checkPunctuationForMerging": false,
+        "readSubFolder": true,
+        "char_center_align": "[\\!\\?！？⁉‼…—~⋮0-9a-zA-Z]",
+        "showTTSButton": true,
+        "getClassIDAsTextStyle": false,
+        "auto_invert_for_panel_detection": true,
+        "char_rotate": "[…—~]",
+        "byTextArea": true,
+        "invert": false,
+        "resize_before_OCR": true,
+        "balloonModel": "chinese_webtoon",
+        "inferSeparation": true,
+        "output_with_bitmapcreator": false,
+        "balloon_divide_ratio": 4,
+        "generateMaskDuringSceneTextDetection": true,
+        "minimumHSpan": "10",
+        "flipOutputImage": false,
+        "sortCriteriaForText": 0,
+        "resize_before_balloon_height": 1024,
+        "expand": "6",
+        "useBatchSettings": false,
+        "output_folder": "out",
+        "reorder_for_area_ocr": false,
+        "resize_before_OCR_width": 2500,
+        "enable_bridge_language": false,
+        "expand_for_balloon": true,
+        "use_fixed_ratio_for_balloon": false,
+        "defaultMaskGen": 0,
+        "inpaintRadius": 3,
+        "offsetThresholdBetweenParagraphLines": 20,
+        "blur": false,
+        "confidence_threshold": 0.5,
+        "timeout": "60",
+        "fontStyles": [],
+        "right2left": false,
+        "autoFontSize": false,
+        "endingPunctuations": "[\\.,!?。！？…\"]",
+        "bridge_language": "en",
+        "invertBasedOnColor": false,
+        "firstchar_to_moveup": "",
+        "batchSettings": {
+            "ocrInterval": 200,
+            "engine": "tencent",
+            "enable_panel_detection": true,
+            "mergeOperation": "2",
+            "detectionMethod": "0",
+            "interval": 1000,
+            "type": "MT"
+        },
+        "imgQuality": 90,
+        "expanding_pix": 5,
+        "enableCaseConversionOfSourceForMT": false,
+        "autoThreshold": true,
+        "targetLang": "en",
+        "overlapped_height_percent": 70,
+        "do_not_break_words": true,
+        "textLocalizationProcess": [
+            "去除外部区域",
+            "横向合并",
+            "纵向合并",
+            "过滤过小项",
+            "去除内部区域",
+            "拓展区域"
+        ],
+        "minimumHeight": "3",
+        "caseConversion": 2,
+        "minFontSize": 15,
+        "auto_params": true,
+        "furiganaStipperMethod": 0,
+        "cjk_vertical_text_engine": true,
+        "default_text_box_height": "50",
+        "dilation": 5,
+        "autocorrect_enabled": false,
+        "char_right_align": "[\\.,。，、]",
+        "OCR_divide_ratio": 4,
+        "resize": true,
+        "maximumHeight": "100",
+        "sortBasedOnPanel": true,
+        "char_zerowordspace": "[—]",
+        "convert_vertical_to_horizontal_layout": false,
+        "sortCriteria": 0,
+        "char_replace": "{\n  \"（\":\"︵\",\n  \"）\":\"︶\",\n  \"『\":\"﹃\",\n  \"』\":\"﹄\"\n}",
+        "minimumVSpan": "10"
+    },
+    "images": {
+        "manual.jpg": {
+            "boxes": [
+                {
+                    "suitableSize": 27,
+                    "verticalBaseLineShift": 7,
+                    "geometry": {
+                        "X": 94,
+                        "width": 206,
+                        "Y": 189,
+                        "height": 53
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 25,
+                        "name": "null",
+                        "fontcolor": "90,88,89",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "参数说明",
+                    "textColor": "90,88,89",
+                    "target": "Parameters"
+                },
+                {
+                    "suitableSize": 14,
+                    "verticalBaseLineShift": 2,
+                    "geometry": {
+                        "X": 96,
+                        "width": 219,
+                        "Y": 320,
+                        "height": 27
+                    },
+                    "text": "",
+                    "target": ""
+                },
+                {
+                    "suitableSize": 17,
+                    "verticalBaseLineShift": 1,
+                    "geometry": {
+                        "X": 94,
+                        "width": 121,
+                        "Y": 439,
+                        "height": 33
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 20,
+                        "name": "null",
+                        "fontcolor": "91,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "品名\/Name",
+                    "target": "Name"
+                },
+                {
+                    "suitableSize": 16,
+                    "verticalBaseLineShift": 0,
+                    "geometry": {
+                        "X": 434,
+                        "width": 201,
+                        "Y": 440,
+                        "height": 31
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 20,
+                        "name": "null",
+                        "fontcolor": "91,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "产品功能\/Funcyusa",
+                    "target": "Features"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 435,
+                        "width": 299,
+                        "Y": 481,
+                        "height": 56
+                    },
+                    "suitableSize": 12,
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 434,
+                        "width": 251,
+                        "Y": 476,
+                        "height": 30
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 16,
+                        "name": "null",
+                        "fontcolor": "89,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "遥控／手控 \/ 音乐／灯光",
+                    "target": "Remote control \/ manual control \/ music \/ lighting"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 240,
+                        "Y": 480,
+                        "height": 36
+                    },
+                    "suitableSize": 11,
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 94,
+                        "width": 171,
+                        "Y": 480,
+                        "height": 29
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 16,
+                        "name": "null",
+                        "fontcolor": "89,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "智能感应遥控车",
+                    "target": "Intelligent remote control car"
+                },
+                {
+                    "suitableSize": 16,
+                    "verticalBaseLineShift": 0,
+                    "geometry": {
+                        "X": 94,
+                        "width": 144,
+                        "Y": 573,
+                        "height": 31
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 20,
+                        "name": "null",
+                        "fontcolor": "91,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "材质\/Material",
+                    "target": "Material"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 434,
+                        "width": 118,
+                        "Y": 574,
+                        "height": 31
+                    },
+                    "suitableSize": 16,
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 434,
+                        "width": 118,
+                        "Y": 573,
+                        "height": 31
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 20,
+                        "name": "null",
+                        "fontcolor": "91,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "颜色\/Color",
+                    "target": "Color"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 251,
+                        "Y": 613,
+                        "height": 46
+                    },
+                    "suitableSize": 11,
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 94,
+                        "width": 248,
+                        "Y": 613,
+                        "height": 26
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 16,
+                        "name": "null",
+                        "fontcolor": "89,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "ABS环保塑料\/电子元件",
+                    "target": "ABS environmentally friendly plastic \/ electronic components"
+                },
+                {
+                    "suitableSize": 14,
+                    "verticalBaseLineShift": 0,
+                    "geometry": {
+                        "X": 434,
+                        "width": 339,
+                        "Y": 613,
+                        "height": 28
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 16,
+                        "name": "null",
+                        "fontcolor": "89,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "柠黄／玫粉／蓝色小猪／粉色小猪",
+                    "target": "Lemon yellow \/ rose pink \/ blue"
+                },
+                {
+                    "suitableSize": 16,
+                    "verticalBaseLineShift": 0,
+                    "geometry": {
+                        "X": 94,
+                        "width": 194,
+                        "Y": 708,
+                        "height": 31
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 20,
+                        "name": "null",
+                        "fontcolor": "91,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "产品数量\/Quantity",
+                    "target": "Quantity"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 551,
+                        "Y": 748,
+                        "height": 30
+                    },
+                    "suitableSize": 13,
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 94,
+                        "width": 484,
+                        "Y": 748,
+                        "height": 25
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": false,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "vertical-center": false,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 16,
+                        "name": "null",
+                        "fontcolor": "89,87,88",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "1感应车／1遥控器／1USB线\/1说明书／1海洋球",
+                    "target": "1 remote control car \/ 1 remote \/ 1 USB cable \/ 1 manual \/ 1 ocean ball"
+                }
+            ],
+            "text-removed": true
+        },
+        "overview.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 34.999999478459365,
+                        "width": 494.9999926239253,
+                        "Y": 24.999999627470977,
+                        "height": 98.74999852851036
+                    },
+                    "verticalBaseLineShift": -11,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 9,
+                        "width": 618,
+                        "Y": 21,
+                        "height": 107
+                    },
+                    "localStyle": {
+                        "padding": 0,
+                        "kerning": 5,
+                        "capital": true,
+                        "b4jfont": "System",
+                        "line-height": 1.25,
+                        "bold": true,
+                        "vertical-center": true,
+                        "fontname": "ArialMT",
+                        "italic": false,
+                        "bgcolor": "0,0,0",
+                        "size": 40,
+                        "name": "null",
+                        "fontcolor": "0,0,0",
+                        "alignment": 0,
+                        "wrap": true,
+                        "direction": 0
+                    },
+                    "text": "智能感应遥控车，",
+                    "target": "Intelligent\nremote control car"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 44,
+                        "width": 454.6154012905782,
+                        "Y": 146,
+                        "height": 50.00000183398914
+                    },
+                    "verticalBaseLineShift": 0,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 46,
+                        "width": 396,
+                        "Y": 136,
+                        "height": 39
+                    },
+                    "localStyle": {
+                        "size": 14,
+                        "fontcolor": "255,255,255",
+                        "bold": true,
+                        "vertical-center": false
+                    },
+                    "text": "遥控\/跟随\/躲避\/巡线\/一键演示",
+                    "target": "Remote control \/ follow \/ dodge \/ patrol \/ quick demo"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 45,
+                        "width": 302,
+                        "Y": 195,
+                        "height": 42
+                    },
+                    "verticalBaseLineShift": 10,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 43,
+                        "width": 290,
+                        "Y": 192,
+                        "height": 36
+                    },
+                    "localStyle": {
+                        "size": 14
+                    },
+                    "text": "模式提示音+灯光音乐",
+                    "target": "Mode prompt sound + lighting + music"
+                }
+            ]
+        },
+        "table.jpg": {
+            "boxes": [
+                {
+                    "targetGeometry": {
+                        "X": 320,
+                        "width": 111,
+                        "Y": 23,
+                        "height": 35
+                    },
+                    "verticalBaseLineShift": 2,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 321,
+                        "width": 111,
+                        "Y": 18,
+                        "height": 35
+                    },
+                    "localStyle": {
+                        "size": 20,
+                        "vertical-center": true,
+                        "alignment": 1
+                    },
+                    "text": "尺寸说明",
+                    "target": "Size"
+                },
+                {
+                    "verticalBaseLineShift": 9,
+                    "geometry": {
+                        "X": 47,
+                        "width": 62,
+                        "Y": 107,
+                        "height": 42
+                    },
+                    "localStyle": {
+                        "size": 15,
+                        "alignment": 1
+                    },
+                    "text": "上衣",
+                    "target": "Tops"
+                },
+                {
+                    "verticalBaseLineShift": 11,
+                    "geometry": {
+                        "X": 183,
+                        "width": 62,
+                        "Y": 109,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "胸围",
+                    "target": "Bust"
+                },
+                {
+                    "verticalBaseLineShift": 11,
+                    "geometry": {
+                        "X": 340,
+                        "width": 64,
+                        "Y": 109,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "肩宽",
+                    "target": "Shoulder"
+                },
+                {
+                    "verticalBaseLineShift": 11,
+                    "geometry": {
+                        "X": 488,
+                        "width": 63,
+                        "Y": 109,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "袖长",
+                    "target": "Sleeve"
+                },
+                {
+                    "verticalBaseLineShift": 2,
+                    "geometry": {
+                        "X": 629,
+                        "width": 64,
+                        "Y": 109,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "衣长",
+                    "target": "Tops Length"
+                },
+                {
+                    "verticalBaseLineShift": 11,
+                    "geometry": {
+                        "X": 46,
+                        "width": 63,
+                        "Y": 464,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "裙子",
+                    "target": "Skirt"
+                },
+                {
+                    "verticalBaseLineShift": 2,
+                    "geometry": {
+                        "X": 631,
+                        "width": 63,
+                        "Y": 464,
+                        "height": 41
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "裙长",
+                    "target": "Skirt Length"
+                },
+                {
+                    "verticalBaseLineShift": 10,
+                    "geometry": {
+                        "X": 349,
+                        "width": 61,
+                        "Y": 465,
+                        "height": 39
+                    },
+                    "localStyle": {
+                        "alignment": 1
+                    },
+                    "text": "胸围",
+                    "target": "Hips"
+                },
+                {
+                    "targetGeometry": {
+                        "X": 176,
+                        "width": 413,
+                        "Y": 782,
+                        "height": 48
+                    },
+                    "verticalBaseLineShift": 14,
+                    "adjusted": true,
+                    "geometry": {
+                        "X": 209,
+                        "width": 326,
+                        "Y": 793,
+                        "height": 30
+                    },
+                    "text": "因测量方式不同，存在1-3cm误差",
+                    "target": "Due to different measurement methods, there may be a 1-3 cm error"
+                },
+                {
+                    "geometry": {
+                        "X": 235,
+                        "width": 293,
+                        "Y": 53,
+                        "height": 24
+                    },
+                    "text": "",
+                    "target": ""
+                }
+            ],
+            "text-removed": true
+        },
+        "complex-background.jpg": {
+            "boxes": [
+                {
+                    "suitableSize": 25,
+                    "verticalBaseLineShift": 4,
+                    "geometry": {
+                        "X": 309,
+                        "width": 263,
+                        "Y": 239,
+                        "height": 48
+                    },
+                    "localStyle": {
+                        "kerning": 5,
+                        "b4jfont": "System",
+                        "size": 25,
+                        "fontcolor": "103,84,90",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "fontname": "ArialMT",
+                        "alignment": 1,
+                        "wrap": true,
+                        "italic": false,
+                        "direction": 0
+                    },
+                    "text": "ABS环保材质",
+                    "textColor": "103,84,90",
+                    "target": "ABS Plastic"
+                },
+                {
+                    "suitableSize": 19,
+                    "verticalBaseLineShift": 7,
+                    "geometry": {
+                        "X": 125,
+                        "width": 630,
+                        "Y": 290,
+                        "height": 44
+                    },
+                    "localStyle": {
+                        "kerning": 5,
+                        "b4jfont": "System",
+                        "size": 19,
+                        "fontcolor": "146,119,128",
+                        "line-height": 1.25,
+                        "bold": false,
+                        "fontname": "ArialMT",
+                        "alignment": 1,
+                        "wrap": true,
+                        "italic": false,
+                        "direction": 0
+                    },
+                    "text": "环保上色，产品无异味，孩子可放心玩耍",
+                    "textColor": "146,119,128",
+                    "target": "Environmentally friendly coloring, odorless and safe for children"
+                }
+            ]
+        }
+    },
+    "UISettings": {
+        "autosave": true,
+        "chinesePunc": true,
+        "dividerPosition": [
+            0.034572733202870194,
+            0.8183300717547293
+        ],
+        "translateAfterOCR": false,
+        "vertical": false,
+        "percent": 100,
+        "autoClean": true,
+        "removeSpaces": false,
+        "precisionMode": true,
+        "OCRAfterSelection": false,
+        "autoCapital": false,
+        "pannable": false,
+        "opacity": 100
+    },
+    "terms": {},
+    "dirPath": "C:\\Users\\HP\\Documents\\ImageTrans\\imagetrans_projects\\电商",
+    "previousOCR": {
+        "engineName": "RapidOCR",
+        "lang": "0"
+    }
+}

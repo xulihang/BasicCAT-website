@@ -34,3 +34,10 @@
     description: A comic strip in English translated to Chinese. The image is by <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>.
     cover-src: /gallery/projects/comic-strip/out/alzward.webp
     cover-alt: Comic Strip
+-
+    title: E-Commerce Images
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: E-commerce images translated from Chinese to English.
+    cover-src: /gallery/projects/e-commerce/out/overview.jpg
+    cover-alt: E-Commerce Images
+    

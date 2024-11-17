@@ -34,3 +34,9 @@
     description: 四格漫画，英译中。图片来自<a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>。
     cover-src: /gallery/projects/comic-strip/out/alzward.webp
     cover-alt: 四格漫画
+-
+    title: 电商图片
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: 电商图片翻译，中译英。
+    cover-src: /gallery/projects/e-commerce/out/overview.jpg
+    cover-alt: 电商图片
