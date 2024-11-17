@@ -38,5 +38,5 @@
     title: 电商图片
     href: /viewer/?project=/gallery/projects/e-commerce/1.itp
     description: 电商图片翻译，中译英。
-    cover-src: /gallery/projects/e-commerce/out/overview.jpg
+    cover-src: /gallery/projects/e-commerce/out/overview.webp
     cover-alt: 电商图片
