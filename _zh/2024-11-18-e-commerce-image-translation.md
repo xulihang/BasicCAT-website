@@ -31,7 +31,7 @@ ImageTrans提供以下功能，能较好地处理跨境电商图片的翻译。
    去文字图：
    
    ![复杂背景去文字图](/album/e-commerce/complex-background.jpg-text-removed.jpg)
-2. 支持预先用机器翻译进行翻译，并能调用多个机器翻译，为翻译提供参考。虽然电商翻译是一种创造性翻译，但机器翻译还是能提供一定的帮助。
+2. 支持预先用机器翻译进行翻译，并能调用多个机器翻译（阿里电商、ChatGPT、DeepL、百度等），为翻译提供参考。虽然电商翻译是一种创造性翻译，但机器翻译还是能提供一定的帮助。
 
    ![机器翻译](/album/e-commerce/machine-translation.jpg)
    
