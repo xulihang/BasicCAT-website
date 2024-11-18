@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans 电商
 ---
 
-ImageTrans是一款计算机辅助图片翻译软件，我们可以用它翻译跨境电商用的图片。
+[ImageTrans](/zh/imagetrans/)是一款计算机辅助图片翻译软件，我们可以用它翻译跨境电商用的图片。
 
 跨境电商的图片种类丰富，有用于搜索结果的主图、有详情页图片。给翻译提出了不少挑战：
 

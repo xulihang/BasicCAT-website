@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans e-commerce
 ---
 
-ImageTrans is a computer-aided image translation tool. We can use it to translate e-commerce images.
+[ImageTrans](/imagetrans/) is a computer-aided image translation tool. We can use it to translate e-commerce images.
 
 There are a wide variety of images for cross-border e-commerce. Some images are used as the main image for search results and some are used in the details. It poses a number of challenges for translators:
 
