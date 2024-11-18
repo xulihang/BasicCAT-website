@@ -111,7 +111,7 @@
             "boxes": [
                 {
                     "suitableSize": 27,
-                    "verticalBaseLineShift": 7,
+                    "verticalBaseLineShift": 8,
                     "geometry": {
                         "X": 94,
                         "width": 206,
@@ -122,9 +122,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -153,8 +153,14 @@
                     "target": ""
                 },
                 {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 121,
+                        "Y": 439,
+                        "height": 33
+                    },
                     "suitableSize": 17,
-                    "verticalBaseLineShift": 1,
+                    "verticalBaseLineShift": 2,
                     "geometry": {
                         "X": 94,
                         "width": 121,
@@ -165,9 +171,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -183,21 +189,27 @@
                     "target": "Name"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 434,
+                        "width": 201,
+                        "Y": 439,
+                        "height": 31
+                    },
                     "suitableSize": 16,
-                    "verticalBaseLineShift": 0,
+                    "verticalBaseLineShift": 1,
                     "geometry": {
                         "X": 434,
                         "width": 201,
-                        "Y": 440,
+                        "Y": 439,
                         "height": 31
                     },
                     "localStyle": {
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -214,7 +226,7 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 435,
+                        "X": 434,
                         "width": 299,
                         "Y": 481,
                         "height": 56
@@ -232,14 +244,14 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
                         "bold": false,
                         "vertical-center": false,
                         "fontname": "ArialMT",
                         "italic": false,
                         "bgcolor": "0,0,0",
-                        "size": 16,
+                        "size": 18,
                         "name": "null",
                         "fontcolor": "89,87,88",
                         "alignment": 0,
@@ -269,14 +281,14 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
                         "bold": false,
                         "vertical-center": false,
                         "fontname": "ArialMT",
                         "italic": false,
                         "bgcolor": "0,0,0",
-                        "size": 16,
+                        "size": 18,
                         "name": "null",
                         "fontcolor": "89,87,88",
                         "alignment": 0,
@@ -287,8 +299,14 @@
                     "target": "Intelligent remote control car"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 144,
+                        "Y": 573,
+                        "height": 31
+                    },
                     "suitableSize": 16,
-                    "verticalBaseLineShift": 0,
+                    "verticalBaseLineShift": 1,
                     "geometry": {
                         "X": 94,
                         "width": 144,
@@ -299,9 +317,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -320,11 +338,11 @@
                     "targetGeometry": {
                         "X": 434,
                         "width": 118,
-                        "Y": 574,
+                        "Y": 573,
                         "height": 31
                     },
                     "suitableSize": 16,
-                    "verticalBaseLineShift": 0,
+                    "verticalBaseLineShift": 1,
                     "adjusted": true,
                     "geometry": {
                         "X": 434,
@@ -336,9 +354,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -373,14 +391,14 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
                         "bold": false,
                         "vertical-center": false,
                         "fontname": "ArialMT",
                         "italic": false,
                         "bgcolor": "0,0,0",
-                        "size": 16,
+                        "size": 18,
                         "name": "null",
                         "fontcolor": "89,87,88",
                         "alignment": 0,
@@ -391,6 +409,12 @@
                     "target": "ABS environmentally friendly plastic \/ electronic components"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 434,
+                        "width": 339,
+                        "Y": 613,
+                        "height": 28
+                    },
                     "suitableSize": 14,
                     "verticalBaseLineShift": 0,
                     "geometry": {
@@ -403,14 +427,14 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
                         "bold": false,
                         "vertical-center": false,
                         "fontname": "ArialMT",
                         "italic": false,
                         "bgcolor": "0,0,0",
-                        "size": 16,
+                        "size": 18,
                         "name": "null",
                         "fontcolor": "89,87,88",
                         "alignment": 0,
@@ -421,8 +445,14 @@
                     "target": "Lemon yellow \/ rose pink \/ blue"
                 },
                 {
+                    "targetGeometry": {
+                        "X": 94,
+                        "width": 194,
+                        "Y": 708,
+                        "height": 31
+                    },
                     "suitableSize": 16,
-                    "verticalBaseLineShift": 0,
+                    "verticalBaseLineShift": 1,
                     "geometry": {
                         "X": 94,
                         "width": 194,
@@ -433,9 +463,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -453,9 +483,9 @@
                 {
                     "targetGeometry": {
                         "X": 94,
-                        "width": 551,
+                        "width": 576,
                         "Y": 748,
-                        "height": 30
+                        "height": 36
                     },
                     "suitableSize": 13,
                     "verticalBaseLineShift": 0,
@@ -470,14 +500,14 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": false,
-                        "b4jfont": "System",
+                        "b4jfont": "Lato",
                         "line-height": 1.25,
                         "bold": false,
                         "vertical-center": false,
                         "fontname": "ArialMT",
                         "italic": false,
                         "bgcolor": "0,0,0",
-                        "size": 16,
+                        "size": 18,
                         "name": "null",
                         "fontcolor": "89,87,88",
                         "alignment": 0,
@@ -494,12 +524,12 @@
             "boxes": [
                 {
                     "targetGeometry": {
-                        "X": 34.999999478459365,
+                        "X": 35,
                         "width": 494.9999926239253,
-                        "Y": 24.999999627470977,
+                        "Y": 26,
                         "height": 98.74999852851036
                     },
-                    "verticalBaseLineShift": -11,
+                    "verticalBaseLineShift": 1,
                     "adjusted": true,
                     "geometry": {
                         "X": 9,
@@ -511,9 +541,9 @@
                         "padding": 0,
                         "kerning": 5,
                         "capital": true,
-                        "b4jfont": "System",
-                        "line-height": 1.25,
-                        "bold": true,
+                        "b4jfont": "Lato Black",
+                        "line-height": 0.9999999962747097,
+                        "bold": false,
                         "vertical-center": true,
                         "fontname": "ArialMT",
                         "italic": false,
@@ -538,15 +568,16 @@
                     "verticalBaseLineShift": 0,
                     "adjusted": true,
                     "geometry": {
-                        "X": 46,
+                        "X": 43,
                         "width": 396,
                         "Y": 136,
                         "height": 39
                     },
                     "localStyle": {
-                        "size": 14,
+                        "b4jfont": "Lato Black",
+                        "size": 15,
                         "fontcolor": "255,255,255",
-                        "bold": true,
+                        "bold": false,
                         "vertical-center": false
                     },
                     "text": "遥控\/跟随\/躲避\/巡线\/一键演示",
@@ -554,7 +585,7 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 45,
+                        "X": 44,
                         "width": 302,
                         "Y": 195,
                         "height": 42
@@ -568,7 +599,8 @@
                         "height": 36
                     },
                     "localStyle": {
-                        "size": 14
+                        "b4jfont": "Lato Heavy",
+                        "size": 15
                     },
                     "text": "模式提示音+灯光音乐",
                     "target": "Mode prompt sound + lighting + music"
@@ -584,7 +616,7 @@
                         "Y": 23,
                         "height": 35
                     },
-                    "verticalBaseLineShift": 2,
+                    "verticalBaseLineShift": 3,
                     "adjusted": true,
                     "geometry": {
                         "X": 321,
@@ -593,6 +625,7 @@
                         "height": 35
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 20,
                         "vertical-center": true,
                         "alignment": 1
@@ -607,7 +640,7 @@
                         "Y": 107.77778063291393,
                         "height": 42
                     },
-                    "verticalBaseLineShift": 9,
+                    "verticalBaseLineShift": 10,
                     "geometry": {
                         "X": 47,
                         "width": 62,
@@ -615,6 +648,7 @@
                         "height": 42
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -637,6 +671,7 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -661,6 +696,7 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -683,6 +719,7 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -697,7 +734,7 @@
                         "Y": 107.77778063291393,
                         "height": 41
                     },
-                    "verticalBaseLineShift": -2,
+                    "verticalBaseLineShift": 2,
                     "geometry": {
                         "X": 629,
                         "width": 64,
@@ -705,7 +742,9 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
+                        "line-height": 0.9999999962747097,
                         "vertical-center": true,
                         "alignment": 1
                     },
@@ -727,6 +766,7 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -741,7 +781,7 @@
                         "Y": 461.1111233263843,
                         "height": 41
                     },
-                    "verticalBaseLineShift": -2,
+                    "verticalBaseLineShift": 2,
                     "geometry": {
                         "X": 631,
                         "width": 63,
@@ -749,7 +789,9 @@
                         "height": 41
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
+                        "line-height": 0.9999999962747097,
                         "vertical-center": true,
                         "alignment": 1
                     },
@@ -771,6 +813,7 @@
                         "height": 39
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
                         "size": 15,
                         "vertical-center": true,
                         "alignment": 1
@@ -780,12 +823,12 @@
                 },
                 {
                     "targetGeometry": {
-                        "X": 178.66666666666666,
-                        "width": 413,
-                        "Y": 774.6666666666666,
-                        "height": 48
+                        "X": 156,
+                        "width": 454,
+                        "Y": 781,
+                        "height": 54
                     },
-                    "verticalBaseLineShift": 14,
+                    "verticalBaseLineShift": 16,
                     "adjusted": true,
                     "geometry": {
                         "X": 209,
@@ -794,6 +837,8 @@
                         "height": 30
                     },
                     "localStyle": {
+                        "b4jfont": "Lato",
+                        "size": 15,
                         "alignment": 1
                     },
                     "text": "因测量方式不同，存在1-3cm误差",
@@ -815,8 +860,15 @@
         "complex-background.jpg": {
             "boxes": [
                 {
+                    "targetGeometry": {
+                        "X": 309,
+                        "width": 263,
+                        "Y": 243,
+                        "height": 49
+                    },
                     "suitableSize": 25,
-                    "verticalBaseLineShift": 4,
+                    "verticalBaseLineShift": 2,
+                    "adjusted": true,
                     "geometry": {
                         "X": 309,
                         "width": 263,
@@ -825,11 +877,11 @@
                     },
                     "localStyle": {
                         "kerning": 5,
-                        "b4jfont": "System",
-                        "size": 25,
+                        "b4jfont": "Lato",
+                        "size": 30,
                         "fontcolor": "103,84,90",
                         "line-height": 1.25,
-                        "bold": false,
+                        "bold": true,
                         "fontname": "ArialMT",
                         "alignment": 1,
                         "wrap": true,
@@ -851,8 +903,8 @@
                     },
                     "localStyle": {
                         "kerning": 5,
-                        "b4jfont": "System",
-                        "size": 19,
+                        "b4jfont": "Lato Semibold",
+                        "size": 20,
                         "fontcolor": "146,119,128",
                         "line-height": 1.25,
                         "bold": false,
@@ -874,7 +926,7 @@
         "chinesePunc": true,
         "dividerPosition": [
             0.034572733202870194,
-            0.9073711676451403
+            0.9024787997390737
         ],
         "translateAfterOCR": false,
         "vertical": false,
