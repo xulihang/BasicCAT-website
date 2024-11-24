@@ -9,6 +9,20 @@ layout: page
 }
 </style>
 
+## v3.12.0 (2024/11/24)
+
+* When using the select toolbar, display the coordinates of the selected text box after it is pressed or dragged in the UI
+* Add "Unify width" and "Unify height" operations
+* Add color picker in the font toolbar
+* Add sentence case and title case conversion in Find and Replace
+* Add a menu item to calculate the suitable font size
+* The mask in non-precise mode will only be generated using the source geometry
+* Fix the incorrect selected area problem for TextRemover
+* Fix the parsing of workflow config for Server
+* Fix the display and saving problem of custom workflow
+* Fix the panel sorting for spread images
+* Fix the problem that the mask in non-precise mode is not responsive to rotation
+
 ## v3.11.2 (2024/11/16)
 
 * Add Ali machine translation
