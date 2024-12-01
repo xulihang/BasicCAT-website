@@ -22,3 +22,9 @@
     description: TMXSearch是一个在线应用，可以用于检索TMX格式的翻译记忆文件。
     cover-src: /album/tmxsearch_zh.jpg
     cover-alt: TMXSearch
+-
+    title: 在线图片翻译器
+    href: /zh/online-image-translator/
+    description: 在网页中翻译一整张图或者使用手机相机翻译某个区域。
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: 在线图片翻译器

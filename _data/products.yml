@@ -22,3 +22,9 @@
     description: TMXSearch is an online application for translation memory concordance.
     cover-src: /album/tmxsearch.jpg
     cover-alt: TMXSearch
+-
+    title: Online Image Translator
+    href: /online-image-translator/
+    description: Online image translator which makes it easy to translate a whole image or use the mobile phone to read from the camera.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: Online Image Translator
