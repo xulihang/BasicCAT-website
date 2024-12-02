@@ -48,41 +48,57 @@ async function tessOCR(image) {
     return imgMap;
 }
 
+let opencvReady = false;
+var Module = {
+  // https://emscripten.org/docs/api_reference/module.html#Module.onRuntimeInitialized
+  onRuntimeInitialized() {
+    console.log("initialized");
+    opencvReady = true;
+  }
+};
+
 async function initPaddleOCR(){
     checkCloseByHeight = true;
     if (!paddleOCR) {
-        window.ortWasmPaths = "https://cdn.jsdelivr.net/npm/paddleocr-browser/dist/";
-        await loadLibrary("https://cdn.jsdelivr.net/npm/paddleocr-browser/dist/paddleocr.js","text/javascript");
-        let resourcesPath = "https://cdn.jsdelivr.net/npm/@gutenye/ocr-models/assets";
-        paddleOCR = await Ocr.create({
-            models: {
-                detectionPath: resourcesPath+'/ch_PP-OCRv4_det_infer.onnx',
-                recognitionPath: resourcesPath+'/ch_PP-OCRv4_rec_infer.onnx',
-                dictionaryPath: resourcesPath+'/ppocr_keys_v1.txt'
-            }
-        })
+        await loadLibrary("https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js","text/javascript");
+        await loadLibrary("https://docs.opencv.org/4.8.0/opencv.js","text/javascript");
+        const assetsPath = "https://cdn.jsdelivr.net/npm/paddleocr-browser/dist/";
+        const res = await fetch(assetsPath+"ppocr_keys_v1.txt");
+        const dic = await res.text();
+        await Paddle.init({
+            detPath: assetsPath+"ppocr_det.onnx",
+            recPath: assetsPath+"ppocr_rec.onnx",
+            dic: dic,
+            ort,
+            node: false,
+            cv:cv
+        });
+        paddleOCR = true;
     }
 }
 
 async function ocrWithPaddle(image){
-    const results = await paddleOCR.detect(image);
+    const result = await Paddle.ocr(image);;
+    console.log(result);
     let boxes = [];
-    results.forEach(result => {
-        if (result.mean>0.5) {
-            const box = {};
-            box["text"] = result.text;
-            box["target"] = "";
-            box["geometry"] = {
-                X: result.box[0][0],
-                Y: result.box[0][1],
-                width: result.box[1][0] - result.box[0][0],
-                height: result.box[2][1] - result.box[0][1]
-            }
-            boxes.push(box);
-        }
+
+    result.columns.forEach(column => {
+      const box = {};
+      box["geometry"] = {
+        X: column.outerBox[0][0],
+        Y: column.outerBox[0][1],
+        width: column.outerBox[2][0] - column.outerBox[0][0],
+        height: column.outerBox[2][1] - column.outerBox[0][1]
+      };
+      box["target"] = "";
+      let text = "";
+      column.src.forEach(src => {
+        text = text + src.text + "\n";
+      });
+      box["text"] = text;
+      boxes.push(box);
     });
     const imgMap = {};
-    boxes = mergedBoxes(boxes);
     imgMap["boxes"] = boxes;
     return imgMap;
 }
