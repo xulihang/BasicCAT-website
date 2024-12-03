@@ -386,7 +386,8 @@
       }
       toggleStatusMask("");
     }else if (engine === "paddle") {
-      await initPaddleOCR();
+      let paddleOCRLang = localStorage.getItem("paddleOCRLang") ?? "chs";
+      await initPaddleOCR(paddleOCRLang);
       let imgMap = await ocrWithPaddle(dataURL);
       let boxes = imgMap["boxes"];
       if (boxes.length>0) {

@@ -1,6 +1,30 @@
 let tessWorker;
 let tessLang;
-let paddleOCR;
+let paddleOCRLang = "";
+
+let paddleOCRLangMap = {
+  "chs":{
+    "model":"ppocr_rec.onnx",
+    "dic":"ppocr_keys_v1.txt"
+  },
+  "en":{
+    "model":"rec_en_PP-OCRv3_infer.onnx",
+    "dic":"dict_en.txt"
+  },
+  "ja":{
+    "model":"rec_japan_PP-OCRv3_infer.onnx",
+    "dic":"dict_japan.txt"
+  },
+  "ko":{
+    "model":"rec_korean_PP-OCRv3_infer.onnx",
+    "dic":"dict_korean.txt"
+  },
+  "cht":{
+    "model":"rec_chinese_cht_PP-OCRv3_infer.onnx",
+    "dic":"dict_chinese_cht.txt"
+  }
+}
+
 let checkCloseByHeight = true;
 async function initTess(lang){
     if (lang.indexOf("vert") != -1) {
@@ -57,24 +81,27 @@ var Module = {
   }
 };
 
-async function initPaddleOCR(){
+async function initPaddleOCR(lang){
     checkCloseByHeight = true;
-    if (!paddleOCR) {
+    if (!paddleOCRLang) {
         await loadLibrary("https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js","text/javascript");
         await loadLibrary("https://docs.opencv.org/4.8.0/opencv.js","text/javascript");
-        const assetsPath = "https://cdn.jsdelivr.net/npm/paddleocr-browser/dist/";
-        const res = await fetch(assetsPath+"ppocr_keys_v1.txt");
-        const dic = await res.text();
-        await Paddle.init({
-            detPath: assetsPath+"ppocr_det.onnx",
-            recPath: assetsPath+"ppocr_rec.onnx",
-            dic: dic,
-            ort,
-            node: false,
-            cv:cv
-        });
-        paddleOCR = true;
     }
+    if (lang != paddleOCRLang) {
+      const map = paddleOCRLangMap[lang];
+      const assetsPath = "https://cdn.jsdelivr.net/npm/paddleocr-browser/dist/";
+      const res = await fetch(assetsPath+map.dic);
+      const dic = await res.text();
+      await Paddle.init({
+          detPath: assetsPath+"ppocr_det.onnx",
+          recPath: assetsPath+map.model,
+          dic: dic,
+          ort,
+          node: false,
+          cv:cv
+      });
+    }
+    paddleOCRLang = lang;
 }
 
 async function ocrWithPaddle(image){

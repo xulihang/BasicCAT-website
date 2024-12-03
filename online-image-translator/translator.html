@@ -245,7 +245,8 @@ async function translate(){
     updateDisplayOfSourceImgAndTargetImg(true);
     toggleStatusMask("");
   }else if (engine === "paddle") {
-    await initPaddleOCR();
+    let paddleOCRLang = localStorage.getItem("paddleOCRLang") ?? "chs";
+    await initPaddleOCR(paddleOCRLang);
     let imgMap = await ocrWithPaddle(sourceImg.src);
     console.log(imgMap);
     await translateBoxes(imgMap.boxes);
