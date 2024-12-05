@@ -10,9 +10,7 @@
 
   <title>{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
   
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
-  {% endif %}
+  {% raw %}{% seo %}{% endraw %}
   
   
   {% include google_analytics.html %}
