@@ -21,6 +21,12 @@ plugins:
 
 exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
 
+defaults:
+  - scope:
+      path: "_zh"
+    values:
+      locale: "zh_CN"
+      
 collections:
   zh:
     output: true
