@@ -1,6 +1,7 @@
 ---
 title: ImageTrans - Computer-Aided Image and Comic Translation Tool
 layout: page
+description: ImageTrans is a computer-aided image and comic translation tool.
 ---
 
 ## Introduction

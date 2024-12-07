@@ -2,6 +2,7 @@
 title: ImageTrans - 计算机辅助图片翻译工具 
 layout: page
 permalink: /zh/imagetrans/
+description: ImageTrans是一款计算机辅助图片文字转录与翻译工具。
 ---
 
 ## 简介
