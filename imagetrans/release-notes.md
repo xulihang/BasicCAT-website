@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.13.0 (2024/12/07)
+
+* Improve the zero-wordspace characters' display results using vertical text engine
+* Improve the OCR result of a single area using mangaTranslator
+* Server can now connect to a remote server
+
 ## v3.12.0 (2024/11/24)
 
 * When using the select toolbar, display the coordinates of the selected text box after it is pressed or dragged in the UI
