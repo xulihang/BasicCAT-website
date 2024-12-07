@@ -340,21 +340,37 @@
     let dataURL = canvas.toDataURL();
     let engine = localStorage.getItem("engine");
     if (!engine || engine === "imagetrans") {
-      var URL = localStorage.getItem("URL");
-      if (!URL) {
+      var serverURL = localStorage.getItem("URL");
+      if (!serverURL) {
         if (window.location.host) {
-          URL = "translateRegion";
+          if (window.location.host === "www.basiccat.org") { //online image translator
+            serverURL = "https://service.basiccat.org:51043/translateRegion";
+          }else{
+            serverURL = "translateRegion";
+          }
         }else{
-          URL = "http://127.0.0.1:51042/translateRegion";
+          serverURL = "http://127.0.0.1:51042/translateRegion";
         }
       }else{
-        URL = URL + "/translateRegion"
+        serverURL = serverURL + "/translateRegion"
       }
-     
+
+      var name = localStorage.getItem("displayName");
+      if (!name) {
+        name = "";
+      }else{
+        name = name.replace(/\\\\/g,"\\");
+      }
+      var password = localStorage.getItem("password");
+      if (!password) {
+        password = "";
+      }
+      var sourceLang = localStorage.getItem("sourceLang") ?? "";
+      var targetLang = localStorage.getItem("targetLang") ?? "";
       var ajaxObj = new XMLHttpRequest();
-      ajaxObj.open('POST', URL);
+      ajaxObj.open('POST', serverURL);
       ajaxObj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      ajaxObj.send("base64="+encodeURIComponent(dataURL));
+      ajaxObj.send("base64="+encodeURIComponent(dataURL)+"&displayName="+encodeURIComponent(name)+"&password="+encodeURIComponent(password)+"&sourceLang="+encodeURIComponent(sourceLang)+"&targetLang="+encodeURIComponent(targetLang));
       ajaxObj.onreadystatechange = function () {
         toggleStatusMask("");
         try {
@@ -370,6 +386,7 @@
       }
       ajaxObj.onerror = function () {
         alert("error connecting the server");
+        toggleStatusMask("");
       }
     }else if (engine === "tesseract") {
       let tessOCRLang = localStorage.getItem("tessOCRLang") ?? "jpn_vert";

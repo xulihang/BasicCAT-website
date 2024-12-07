@@ -9,8 +9,9 @@
   <h2>Settings</h2>
   <label>
     Server URL:
-    <input id="serverURL" type="text" value="" placeholder="http://127.0.0.1:51042"/>
+    <input id="serverURL" type="text" value="" placeholder="https://127.0.0.1:51043"/>
   </label>
+  <button onclick="usePublicServer();">Use public server</button>
   <br/>
   Scan Region (in percent):
   <br/>
@@ -43,8 +44,19 @@
     </select>
   </label>
   <br/>
+  <label id="imagetransInstanceLabel">
+    Display name of ImageTrans instance:
+    <input id="imagetransInstanceInput" type="text" placeholder="default" />
+  </label>
+  <button onclick="checkImageTrans();">Check existing instances</button>
+  <br/>
+  <label id="imagetransPasswordLabel">
+    Password for ImageTrans instance:
+    <input id="imagetransPasswordInput" type="password" />
+  </label>
+  <br/>
   <label id="tessOCRLanguageLabel">
-    OCR language for tesseract:
+    OCR language for Tesseract:
     <select id="tessOCRLangSelect">
     </select>
   </label>
@@ -104,12 +116,36 @@
     ]
     loadLanguageCodes();
     loadTessLanguages();
+    function usePublicServer(){
+      document.getElementById("serverURL").value = "https://service.basiccat.org:51043";
+    }
+    function checkImageTrans(){
+      let serverURL = document.getElementById("serverURL").value;
+      if (serverURL) {
+        window.open(serverURL + "/list");
+      }else{
+        alert("Server URL is not set. Will use go to the local address.");
+        window.open("https://local.basiccat.org:51043/list");
+      }
+    }
     document.getElementsByClassName("saveButton")[0].addEventListener("click",function(){
       let url = document.getElementById("serverURL").value;
       if (url) {
         localStorage.setItem("URL",url);
       }else{
         localStorage.removeItem("URL");
+      }
+      let imageTransDisplayName = document.getElementById("imagetransInstanceInput").value;
+      if (imageTransDisplayName) {
+        localStorage.setItem("displayName",imageTransDisplayName);
+      }else{
+        localStorage.removeItem("displayName");
+      }
+      let imagetransPassword = document.getElementById("imagetransPasswordInput").value;
+      if (imagetransPassword) {
+        localStorage.setItem("password",imagetransPassword);
+      }else{
+        localStorage.removeItem("password");
       }
       let region = {};
       region.left = document.getElementById("regionLeft").value;
@@ -135,6 +171,16 @@
       if (url) {
         document.getElementById("serverURL").value = url;
       }
+      let imageTransDisplayName = localStorage.getItem("displayName");
+      
+      if (imageTransDisplayName) {
+        document.getElementById("imagetransInstanceInput").value = imageTransDisplayName;
+      }
+      let imagetransPassword = localStorage.getItem("password");
+      if (imagetransPassword) {
+        document.getElementById("imagetransPasswordInput").value = imagetransPassword;
+      }
+
       let region = JSON.parse(localStorage.getItem("region"));
       if (region) {
         document.getElementById("regionLeft").value = region.left;
