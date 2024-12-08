@@ -15,6 +15,7 @@ layout: page
 * Fix the parsing of JSON-format OCR results
 * Use the bundled JDK to lauch jars on macOS
 * Server can upload the text data only without the image
+* Server will send images in WebP format to save bandwidth
 
 ## v3.13.0 (2024/12/07)
 

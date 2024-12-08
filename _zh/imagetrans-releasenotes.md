@@ -16,7 +16,7 @@ permalink: /zh/imagetrans/release-notes/
 * 修复JSON格式的OCR结果没有被解析的问题
 * macOS使用自带的java启动外部jar
 * 服务器支持只传文本数据，不传图片
-
+* 服务器默认传送WebP格式的图片以节省带宽
 
 ## v3.13.0 (2024/12/07)
 
