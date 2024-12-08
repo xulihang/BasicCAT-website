@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.13.1 (2024/12/08)
+
+* Fix the Y position problem for vertical text engine after applying a top padding
+* Fix the parsing of JSON-format OCR results
+* Use the bundled JDK to lauch jars on macOS
+* Server can upload the text data only without the image
+
 ## v3.13.0 (2024/12/07)
 
 * Improve the zero-wordspace characters' display results using vertical text engine
