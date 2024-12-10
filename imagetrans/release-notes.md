@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.13.2 (2024/12/10)
+
+* Fix the problem that the menu item names are not localized after resetting shortcuts
+* Fix the problem that the shortcuts are not adapted for macOS after resetting
+* Fix the problem that the program does not jump to the last copied image correctly
+* Add WebP as an output format
+* Decrease the interval for reconnecting the server from 30s to 5s
+* Server can now convert local WebP files
+
 ## v3.13.1 (2024/12/08)
 
 * Fix the Y position problem for vertical text engine after applying a top padding
