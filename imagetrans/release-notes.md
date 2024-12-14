@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v3.14.0 (2024/12/14)
+
+* Add grid
+* Add menu items to check the spellings
+* Use TextArea to input the settings to allow multiple-line text
+* Clicking under box drawing selection mode will not deselect text boxes with the control key pressed
+* Box drawing selection will deselect text boxes with the control key pressed
+* Server will send heartbeat at a 30s interval
+* Server can change the OCR engine based on the source lang
+* Fix the problem that the image generated using Server does not have the original resolution
+
 ## v3.13.2 (2024/12/10)
 
 * Fix the problem that the menu item names are not localized after resetting shortcuts
