@@ -9,6 +9,10 @@
     import * as Paddle from "https://cdn.jsdelivr.net/npm/esearch-ocr@5.1.5/dist/esearch-ocr.js";
     window.Paddle = Paddle;
   </script>
+  <script type="module">
+    import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/image-cropper-component/dist/esm/loader.js';
+    defineCustomElements();
+  </script>
   <style>
   .app {
     position:fixed;
@@ -53,6 +57,15 @@
   }
 
   .camera:hover {
+    cursor: pointer;
+  }
+
+  .gallery {
+    position: absolute;
+    right: 50px;
+  }
+
+  .gallery:hover {
     cursor: pointer;
   }
   
@@ -164,12 +177,37 @@
     stroke-width: 2;
   }
 
+  .image-cropper {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+  }
+
+  .ttsButton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .ttsButton:hover {
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
 <div class="app">
   <div class="header">
     Scan and Translate
+    <svg class="gallery" width="30px" height="30px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="5" stroke="#FFFFFF" fill="none">
+      <rect x="9.16" y="9.16" width="45.69" height="45.69" rx="2.51"/>
+      <polyline points="9.16 41.95 20.68 32.19 29.71 40.38 43.27 23.51 54.77 40.38"/>
+      <circle cx="19.76" cy="19.38" r="3.93"/>
+    </svg>
+    <input style="display:none;" id="imgfile" type="file" name="image" onchange="onFileSelected(event);" />
     <svg class="camera" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M3 16.8V9.2C3 8.0799 3 7.51984 3.21799 7.09202C3.40973 6.71569 3.71569 6.40973 4.09202 6.21799C4.51984 6 5.0799 6 6.2 6H7.25464C7.37758 6 7.43905 6 7.49576 5.9935C7.79166 5.95961 8.05705 5.79559 8.21969 5.54609C8.25086 5.49827 8.27836 5.44328 8.33333 5.33333C8.44329 5.11342 8.49827 5.00346 8.56062 4.90782C8.8859 4.40882 9.41668 4.08078 10.0085 4.01299C10.1219 4 10.2448 4 10.4907 4H13.5093C13.7552 4 13.8781 4 13.9915 4.01299C14.5833 4.08078 15.1141 4.40882 15.4394 4.90782C15.5017 5.00345 15.5567 5.11345 15.6667 5.33333C15.7216 5.44329 15.7491 5.49827 15.7803 5.54609C15.943 5.79559 16.2083 5.95961 16.5042 5.9935C16.561 6 16.6224 6 16.7454 6H17.8C18.9201 6 19.4802 6 19.908 6.21799C20.2843 6.40973 20.5903 6.71569 20.782 7.09202C21 7.51984 21 8.0799 21 9.2V16.8C21 17.9201 21 18.4802 20.782 18.908C20.5903 19.2843 20.2843 19.5903 19.908 19.782C19.4802 20 18.9201 20 17.8 20H6.2C5.0799 20 4.51984 20 4.09202 19.782C3.71569 19.5903 3.40973 19.2843 3.21799 18.908C3 18.4802 3 17.9201 3 16.8Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -200,22 +238,38 @@
     <button class="switchButton">Switch</button>
   </div>
 </div>
+<div class="image-cropper">
+  <image-cropper></image-cropper>
+</div>
 <div class="mask" style="display:none;">
   <div class="status"></div>
 </div>
 <div class="textModal" style="display:none;">
   <button class="closeModalButton">Close</button>
   <div class="textContainer"></div>
+  <svg class="ttsButton" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.15838 13.9306C2.44537 12.7423 2.44537 11.2577 3.15838 10.0694V10.0694C3.37596 9.70674 3.73641 9.45272 4.1511 9.36978L5.84413 9.03117C5.94499 9.011 6.03591 8.95691 6.10176 8.87788L8.17085 6.39498C9.3534 4.97592 9.94468 4.26638 10.4723 4.45742C11 4.64846 11 5.57207 11 7.41928L11 16.5807C11 18.4279 11 19.3515 10.4723 19.5426C9.94468 19.7336 9.3534 19.0241 8.17085 17.605L6.10176 15.1221C6.03591 15.0431 5.94499 14.989 5.84413 14.9688L4.1511 14.6302C3.73641 14.5473 3.37596 14.2933 3.15838 13.9306V13.9306Z" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M15.5355 8.46447C16.4684 9.39732 16.9948 10.6611 17 11.9803C17.0052 13.2996 16.4888 14.5674 15.5633 15.5076" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19.6569 6.34314C21.1494 7.83572 21.9916 9.85769 21.9999 11.9685C22.0083 14.0793 21.182 16.1078 19.7012 17.6121" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </svg>
 </div>
+<script src="tts.js"></script>
 <script>
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoices;
+  }
   let cameras = [];
   let currentCamera;
+  let sourceText = "";
   init();
   async function init(){
     await requestCameraPermission();
     await listCameras();
     document.getElementsByClassName("camera")[0].addEventListener("click",function(){
       startCamera(cameras[cameras.length - 1]);
+    })
+    document.getElementsByClassName("gallery")[0].addEventListener("click",function(){
+      loadAnImage();
     })
     document.getElementById("video").addEventListener("loadeddata",function(){
       drawScanRegion();
@@ -235,10 +289,30 @@
       switchCamera();
     })
     document.getElementsByClassName("shutterCircle")[0].addEventListener("click",function(){
-      translate();
+      let canvas = capture();
+      translate(canvas);
     })
     document.getElementsByClassName("overlay")[0].addEventListener("click",function(event){
       adjustRegion(event);
+    })
+    let cropper = document.querySelector("image-cropper");
+    console.log(cropper);
+    cropper.addEventListener("canceled",function(){
+      document.getElementsByClassName("image-cropper")[0].style.display = "none";
+    })
+    cropper.addEventListener("confirmed",async function(){
+      console.log(cropper);
+      await cropper.getCroppedImage({});
+      translate(cropper.shadowRoot.childNodes[0].getElementsByTagName("canvas")[0]);
+    });
+    document.getElementsByClassName("ttsButton")[0].addEventListener("click",function(e){
+      let tts = localStorage.getItem("tts");
+      let voice;
+      if (tts) {
+        voice = getVoiceByName(tts);
+      }
+      speak(sourceText,voice);
+      e.stopPropagation();
     })
   }
 
@@ -334,9 +408,8 @@
     }
   }
 
-  async function translate(){
+  async function translate(canvas){
     toggleStatusMask("translating...");
-    let canvas = capture();
     let dataURL = "";
     if (isSupportWebp(canvas)) {
       dataURL = canvas.toDataURL("image/webp",0.8);
@@ -372,6 +445,14 @@
       }
       var sourceLang = localStorage.getItem("sourceLang") ?? "";
       var targetLang = localStorage.getItem("targetLang") ?? "";
+      if (serverURL.startsWith("https://service.basiccat.org:51043/")) {
+        if (!sourceLang || !targetLang || sourceLang === "auto" || targetLang === "auto") {
+          alert("Please the the source lang and the target lang first.");
+          window.open("./settings.html");
+          toggleStatusMask("");
+          return;
+        }
+      }
       var ajaxObj = new XMLHttpRequest();
       ajaxObj.open('POST', serverURL);
       ajaxObj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -450,6 +531,7 @@
 
   function getTextForDisplay(regionMap) {
     let text = "";
+    sourceText = regionMap["source"];
     text = text + regionMap["source"] + "\n";
     let targetArray = regionMap["target"];
     for (let index = 0; index < targetArray.length; index++) {
@@ -526,6 +608,38 @@
         y: (event.clientY - CTM.f) / CTM.d
       };
     }
+  }
+
+  function loadAnImage(){
+    document.getElementById("imgfile").click();
+  }
+
+  function onFileSelected(e){
+    var file = event.target.files[0];
+    var reader = new FileReader();    
+    reader.onload = function(e){
+      let img = document.createElement("img");
+      img.onload = function(){
+        let cropperContainer = document.getElementsByClassName("image-cropper")[0];
+        cropperContainer.style.display = "block";
+        let cropper = document.querySelector("image-cropper");
+        cropper.img = img;
+        let x = Math.min(Math.max(0,img.naturalWidth - 50),50);
+        let y = Math.min(Math.max(0,img.naturalHeight - 50),50);
+        let right = Math.min(x+200,img.naturalWidth);
+        let bottom = Math.min(y+200,img.naturalHeight);
+        let width = right - x;
+        let height = bottom - y;
+        cropper.rect = {x:x,y:y,width:width,height:height};
+      }
+      img.src = e.target.result;
+    };
+    
+    reader.onerror = function () {
+      alert('oops, something went wrong.');
+    };
+    
+    reader.readAsDataURL(file);  
   }
 </script>
 </body>
