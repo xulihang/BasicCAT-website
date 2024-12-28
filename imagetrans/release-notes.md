@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.14.1 (2024/12/28)
+
+* Set the default mask radius to 10 for the imprecision mode
+* Increase the responsive area for adjusting the size of textboxes under typesetting mode
+* Fix the problem that the mask is blurry with a radius over 0 in imprecision mode
+* Fix the problem that the server fails to switch to a downloaded image
+
 ## v3.14.0 (2024/12/14)
 
 * Add grid
