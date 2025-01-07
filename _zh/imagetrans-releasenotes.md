@@ -10,6 +10,12 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.14.2 (2025/01/07)
+
+* 修复对较大图片的旋转区域执行透视变换失败的问题 [#issue813](https://github.com/xulihang/ImageTrans-docs/issues/813)
+* 保存项目时检测项目是否被另一进程修改
+* 自定义工作流新增合并分镜内区域的操作
+
 ## v3.14.1 (2024/12/28)
 
 * 非精确模式覆盖文本框的圆角半径默认设为10

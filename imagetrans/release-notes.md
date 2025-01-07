@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.14.2 (2025/01/07)
+
+* Fix the perspective transformation failure problem of rotated text areas in a large image [#issue813](https://github.com/xulihang/ImageTrans-docs/issues/813)
+* Detect whether the project file was modified by another process when saving
+* New custom workflow item: merge text areas within a panel
+
 ## v3.14.1 (2024/12/28)
 
 * Set the default mask radius to 10 for the imprecision mode
