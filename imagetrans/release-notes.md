@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.14.3 (2025/01/08)
+
+* Fix the position shifting problem of text areas which are not left-aligned
+* New OCR plugin: ChatGPT
+
 ## v3.14.2 (2025/01/07)
 
 * Fix the perspective transformation failure problem of rotated text areas in a large image [#issue813](https://github.com/xulihang/ImageTrans-docs/issues/813)

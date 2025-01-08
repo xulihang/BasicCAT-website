@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.14.3 (2025/01/08)
+
+* 修复非左对齐的文本切换比例时会偏移的问题
+* 新增使用ChatGPT的OCR插件
+
 ## v3.14.2 (2025/01/07)
 
 * 修复对较大图片的旋转区域执行透视变换失败的问题 [#issue813](https://github.com/xulihang/ImageTrans-docs/issues/813)
