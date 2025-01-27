@@ -11,6 +11,12 @@
     cover-src: /album/imagetrans_zh.jpg
     cover-alt: ImageTrans
 -
+    title: Silhouette
+    href: /zh/silhouette
+    description: Silhouette是一款音视频翻译软件。
+    cover-src: /album/silhouete/screenshot_zh.webp
+    cover-alt: Silhouette
+-
     title: Aligner
     href: /zh/new-tool-bitext-aligner/
     description: Aligner是一款双语对齐软件，可以从文档、表格、字幕等文件提取文本并自动按句子对齐，并支持手动调整。支持导出数据为翻译记忆，供其它软件调用。

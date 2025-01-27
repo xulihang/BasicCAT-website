@@ -11,6 +11,12 @@
     cover-src: /album/imagetrans.jpg
     cover-alt: ImageTrans
 -
+    title: Silhouette
+    href: /silhouette
+    description: Silhouette is a computer-aided translation tool for videos and audios.
+    cover-src: /album/silhouete/screenshot_en.webp
+    cover-alt: Silhouette
+-
     title: Aligner
     href: /new-tool-bitext-aligner/
     description: Aligner is a bi-text alignment tool. It can extract text from documents, tables, subtitles and align the text in sentence level automatically with manual adjustment support. It can export the bi-text to translation memory files for other tools to use.
