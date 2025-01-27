@@ -30,7 +30,7 @@ Silhouette是一款计算机辅助音视频翻译软件。
 * [面包多](https://mbd.pub/o/bread/Z56WlpZv)
 * [FastSpring（海外用户）](https://basiccat.onfastspring.com/silhouette)
 
-注：默认有7天试用。使用过后，功能会受限。对媒体长度、波形图和导入等功能会有限制。
+注：默认有7天试用。试用过后，功能会受限，对媒体长度、波形图和导入等功能会有限制。
 
 ## 更多
 
