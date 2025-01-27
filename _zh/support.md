@@ -11,3 +11,6 @@ permalink: /zh/support/
 BasicCAT: <https://github.com/xulihang/BasicCAT/issues>
 
 ImageTrans: <https://github.com/xulihang/ImageTrans-docs/issues>
+
+Silhouette: <https://github.com/xulihang/silhouette/issues>
+
