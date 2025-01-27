@@ -2,7 +2,7 @@
 title: Silhouette - 计算机辅助音视频翻译软件
 layout: page
 description: Silhouette是一款计算机辅助音视频翻译软件，使用了Whisper等大语言人工智能模型。
-permalink: /zh/sihouette/
+permalink: /zh/silhouette/
 ---
 
 Silhouette是一款计算机辅助音视频翻译软件。
