@@ -1,5 +1,5 @@
 ---
-title: 付费
+title: 捐助
 layout: page
 permalink: /zh/donation/
 ---
