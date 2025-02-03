@@ -20,7 +20,7 @@ BasicCAT是一款开源免费的计算机辅助翻译软件，旨在为译员提
 
 BasicCAT的设计原则是尽量减少译者的视线转移，专注于译文编辑。机器翻译、划词取义还是拼写错误，都会以下拉列表的形式呈现在输入框下方。
 
-![](/album/demo.gif)
+![demo](/album/demo.gif)
 
 BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 
@@ -41,9 +41,15 @@ BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 * 支持翻译记忆标准TMX、术语管理标准TBX和句段分割标准SRX
 * 使用Git进行版本控制
 
-更多内容请见[说明文档](https://docs.basiccat.org/zh_CN/latest/)。
+链接：
+
+* [下载](https://www.basiccat.org/zh/download)
+* [发布说明](https://www.basiccat.org/zh/releasenote)
+* [文档](https://docs.basiccat.org/zh_CN/latest/)
 
 如果需要翻译漫画/图片，请使用[ImageTrans](/zh/imagetrans/)。
+
+如果需要翻译音视频，请使用[Silhouette](/zh/silhouette/)。
 
 更多产品请见[产品列表](/zh/products/)。
 
