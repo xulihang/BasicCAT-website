@@ -7,6 +7,8 @@
    {% assign releasenote=site.data.zh.text.releasenote %}
    {% assign document=site.data.zh.text.document %}
    {% assign download=site.data.zh.text.download %}
+   {% assign imagetrans='图片翻译' %}
+   {% assign silhouette='音视频翻译' %}
    {% assign donation=site.data.zh.text.donation %}
    {% assign support=site.data.zh.text.support %}
    {% assign homelink='/zh/' %}
@@ -19,6 +21,8 @@
    {% assign releasenote=site.data.text.releasenote %}
    {% assign document=site.data.text.document %}
    {% assign download=site.data.text.download %}
+   {% assign imagetrans='Image Translation' %}
+   {% assign silhouette='Video Translation' %}
    {% assign donation=site.data.text.donation %}
    {% assign support=site.data.text.support %}
    {% assign homelink='/' %}
@@ -31,7 +35,8 @@
 <a href="{{ homelink | append: 'download' | prepend: site.baseurl | prepend: site.url }}">{{download}}</a> /
 <a href="{{ homelink | append: 'releasenote' | prepend: site.baseurl | prepend: site.url }}">{{releasenote}}</a> /
 <a href="{{ homelink | append: 'blog' | prepend: site.baseurl | prepend: site.url }}">{{blog}}</a> /
-<a href="{{ homelink | append: 'imagetrans' | prepend: site.baseurl | prepend: site.url }}">ImageTrans</a> /
+<a href="{{ homelink | append: 'imagetrans' | prepend: site.baseurl | prepend: site.url }}">{{imagetrans}}</a> /
+<a href="{{ homelink | append: 'silhouette' | prepend: site.baseurl | prepend: site.url }}">{{silhouette}}</a> /
 <a href="{{ homelink | append: 'support' | prepend: site.baseurl | prepend: site.url }}">{{support}}</a> /
 <a href="{{ homelink | append: 'donation' | prepend: site.baseurl | prepend: site.url }}">{{donation}}</a> /
 <a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
