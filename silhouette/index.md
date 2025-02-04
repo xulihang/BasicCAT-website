@@ -10,12 +10,13 @@ Silhouette is a computer-aided translation tool for videos and audios.
 
 ## Features
 
-1. AI-powered speech recognition and voice activity detection using models like OpenAI Whisper.
+1. AI-powered speech recognition and voice activity detection using models like OpenAI Whisper. It supports various natural languages like English, Chinese, Japanese, etc.
 2. AI-powered translation which takes the context into consideration.
 3. Easy-to-use interface to adjust the subtitle lines with the help of the waveform and various playback controls.
 
    ![waveform](/album/silhouette/waveform_en.webp)
-4. Cross-platform. It runs on Windows, macOS and Linux.   
+4. Cross-platform. It runs on Windows, macOS and Linux.
+5. Subtitle file export and import (SRT or TXT)
 
 ## Download
 

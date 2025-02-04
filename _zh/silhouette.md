@@ -11,12 +11,13 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
 ## 功能
 
-1. AI驱动的语音识别和语音活动检测功能。使用了OpenAI Whisper等人工智能模型。
+1. AI驱动的语音识别和语音活动检测功能。使用了OpenAI Whisper等人工智能模型。支持英语、汉语、日语、粤语等各种语言。
 2. AI驱动的机器翻译，充分考虑上下文。
 3. 易于使用的界面，支持显示波形图，有各种播放控制功能，可以便捷地调整字幕。
 
    ![waveform](/album/silhouette/waveform_zh.webp)
 4. 跨平台。支持Windows、macOS和Linux。
+5. 字幕文件导入导出（SRT或者TXT）
 
 ## 下载
 
