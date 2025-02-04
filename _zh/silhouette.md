@@ -36,6 +36,7 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
 ## 更多
 
+* [文档](/zh/silhouette/docs/)
 * [发布日志](/zh/silhouette/release-notes/)
 * [技术支持](/zh/support/)
 
