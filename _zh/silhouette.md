@@ -43,5 +43,7 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
 我老家海宁的皮影戏，英文名叫leather-silhouette show，可以看作电影的一种早期形式。这里取silhouette一词来命名软件。
 
+![皮影戏](/album/leather-sihouette-show.jpg)
+
 {% include comments.html %}
 

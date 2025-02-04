@@ -37,6 +37,7 @@ PS: There is 7-day full-feature trial. After the trial, there are limitations on
 ## Why the Name
 
 An art form in my hometown (Haining, China) uses the sihouette of leather cut, which can be seen as an early form of film, so I pick Silhouette as the name.
+![leather-sihouette show](/album/leather-sihouette-show.jpg)
 
 {% include comments.html %}
 
