@@ -2,7 +2,24 @@
 title: Silhouette发布日志 
 layout: page
 permalink: /zh/silhouette/release-notes/
+description: Silhouette发布日志 
 ---
+
+## v1.1.0 (2025/02/04)
+
+* 添加字幕字体大小的偏好设置
+* 添加使用GPU的偏好设置
+* 添加提示词的项目设置
+* 添加批量翻译
+* 添加时间轴整体偏移功能
+* 添加上移下移所选行的菜单项
+* 进度文本使用hh:mm:ss格式
+* macOS的快捷键使用花键
+* 支持用删除键快速删除选中的行
+* 在选中的行后面插入新行
+* macOS和Linux上提示路径不要带空格
+* 修复字幕的居中对齐问题
+* 修复本地化问题
 
 ## v1.0.0 (2025/01/27)
 
