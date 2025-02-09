@@ -15,7 +15,7 @@ description: Silhouette文档
 sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 ```
 
-对于Linux ，可以使用Windows的zip包中的文件。需要安装FFmpeg、Whisper.cpp、Java和JavaFX来运行程序。
+对于Linux ，可以使用Windows的zip包中的文件。需要安装FFmpeg、Whisper.cpp、Java和JavaFX来运行程序。[模板文件](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip)
 
 
 ## 设置

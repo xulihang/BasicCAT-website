@@ -22,6 +22,7 @@ Silhouette is a computer-aided translation tool for videos and audios.
 
 * [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.2.0/Silhouette-windows-x64.zip)
 * [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.2.0/Silhouette-mac-arm.dmg)
+* [Linux](/silhouette/docs/#installation)
 
 ## Purchase
 

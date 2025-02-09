@@ -14,7 +14,7 @@ For macOS, drag the application in the dmg file into the `Applications` folder t
 sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 ```
 
-For Linux, you can use the files in the Windows's zip file. You need to install FFmpeg, Whisper.cpp and Java with JavaFX to start it.
+For Linux, you can use the files in the Windows's zip file. You need to install FFmpeg, Whisper.cpp and Java with JavaFX to start it. [Template file](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip)
 
 
 ## Setup
