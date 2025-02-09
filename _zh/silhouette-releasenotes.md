@@ -5,6 +5,12 @@ permalink: /zh/silhouette/release-notes/
 description: Silhouette发布日志 
 ---
 
+<style>
+.post-content h2 {
+  font-size: 1.5rem;
+}
+</style>
+
 ## v1.1.0 (2025/02/04)
 
 * 添加字幕字体大小的偏好设置

@@ -4,6 +4,12 @@ layout: page
 description: Silhouette release notes.
 ---
 
+<style>
+.post-content h2 {
+  font-size: 1.5rem;
+}
+</style>
+
 ## v1.1.0 (2025/02/04)
 
 * Add subtitle font size preference
