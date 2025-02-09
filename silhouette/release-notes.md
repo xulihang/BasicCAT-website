@@ -10,6 +10,16 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.2.0 (2025/02/09)
+
+* Add a preference to play the selection precisely
+* Add voice input
+* Add sentence splitter
+* Add Export SRT to the Batch Translator
+* Ask for a range for shifting the time
+* Fix the inaccurate drawing of the waveform
+* Other minor bugfixes
+
 ## v1.1.0 (2025/02/04)
 
 * Add subtitle font size preference
