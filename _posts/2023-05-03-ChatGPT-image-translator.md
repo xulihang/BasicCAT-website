@@ -55,6 +55,11 @@ In addition, you can export the source text, use a third-party tool to do the tr
 
 You can define terms in the project. If the sentences to translate contain term entries, ImageTrans will send the terms to ChatGPT to improve the translation. For example, we can define the translation of Jenny to "詹妮" instead of "珍妮". Check out [this issue](https://github.com/xulihang/ImageTrans-docs/issues/546#issuecomment-1873325038) for details.
 
+## OCR
+
+ChatGPT can also be used to recognize text.
+
+
 ## Limitation
 
 The limitation of the plugin is that it does not allow for continuous conversations like the web version to improve the translation.
