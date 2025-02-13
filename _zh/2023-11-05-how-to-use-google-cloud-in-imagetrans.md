@@ -96,7 +96,9 @@ OCR和机器翻译可以公用一个API key。启用后，我们就可以用谷�
 
 ## Gemini
 
-谷歌最新的人工智能大语言模型Gemini，也可以用于机器翻译。
+谷歌最新的人工智能大语言模型Gemini，也可以用于机器翻译和文字识别。
 
-可以参考这个[issue](https://github.com/xulihang/ImageTrans-docs/issues/538)进行使用。
+可以参考以下链接：
 
+* [GeminiMT](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiMT)
+* [GeminiOCR](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiOCR)
