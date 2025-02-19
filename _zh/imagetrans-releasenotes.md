@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.14.4 (2025/02/19)
+
+* 支持通过系统默认打开方式打开项目
+* 支持右键用外部程序打开当前图片
+* 修复macOS上高DPI时固定区域截图坐标不对的问题
+* 修复用谷歌翻译多个句子时可能出错的问题 [#issue835](https://github.com/xulihang/ImageTrans-docs/issues/835)
+
 ## v3.14.3 (2025/01/08)
 
 * 修复非左对齐的文本切换比例时会偏移的问题

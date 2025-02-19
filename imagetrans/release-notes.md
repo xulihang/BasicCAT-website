@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.14.4 (2025/02/19)
+
+* Add support of opening the project via system
+* Add a context menu item to open the current image with an external program 
+* Fix the coordinates of fixed-area screenshot on macOS using HiDPI
+* Fix the occasional exception using Google to translate multiple sentences [#issue835](https://github.com/xulihang/ImageTrans-docs/issues/835)
+
 ## v3.14.3 (2025/01/08)
 
 * Fix the position shifting problem of text areas which are not left-aligned
