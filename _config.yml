@@ -2,7 +2,7 @@
 header: BasicCAT
 title: "BasicCAT — Computer-Aided Translation (CAT) Tools"
 title_zh: "BasicCAT——计算机辅助翻译（CAT）软件"
-baseurl: "https://www.basiccat.org/" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
+baseurl: "" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
 #url: ""
 author: "xulihang"
 
