@@ -17,8 +17,8 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
    ![waveform](/album/silhouette/waveform_zh.webp)
 4. 跨平台。支持Windows、macOS和Linux。
-5. 字幕文件导入导出（SRT或者TXT）
-6. 支持将识别的时间轴和已有文稿进行对齐（音文对齐）
+5. 字幕文件导入导出（SRT或者TXT）。
+6. 支持将识别的时间轴和已有文稿进行对齐（音文对齐）。
 
 ## 下载
 
