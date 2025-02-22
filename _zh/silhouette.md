@@ -12,17 +12,18 @@ Silhouette是一款计算机辅助音视频翻译软件。
 ## 功能
 
 1. AI驱动的语音识别和语音活动检测功能。使用了OpenAI Whisper等人工智能模型。支持英语、汉语、日语、粤语等各种语言。
-2. AI驱动的机器翻译，充分考虑上下文。
+2. AI驱动的机器翻译，充分考虑上下文。支持调用ChatGPT、DeepSeek。
 3. 易于使用的界面，支持显示波形图，有各种播放控制功能，可以便捷地调整字幕。
 
    ![waveform](/album/silhouette/waveform_zh.webp)
 4. 跨平台。支持Windows、macOS和Linux。
 5. 字幕文件导入导出（SRT或者TXT）
+6. 支持将识别的时间轴和已有文稿进行对齐（音文对齐）
 
 ## 下载
 
-* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.2.0/Silhouette-windows-x64.zip)
-* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.2.0/Silhouette-mac-arm.dmg)
+* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.3.0/Silhouette-windows-x64.zip)
+* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.3.0/Silhouette-mac-arm.dmg)
 * [Linux](/zh/silhouette/docs/#安装)
 
 [网盘下载](https://pan.quark.cn/s/0eefc3296abc)

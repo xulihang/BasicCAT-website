@@ -10,6 +10,17 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.3.0 (2025/02/22)
+
+* Add Aligner to align the speech lines with existing text (forced alignment)
+* Add support for the import and export of XLIFF
+* Add support for importing a bilingual SRT file
+* Add project settings to set extra params for ASR
+* New menu item to switch source and target
+* New ASR option: recognize the whole audio file (do not split)
+* Ask whether to enable GPU on the first startup for Windows
+* Other bugfixes
+
 ## v1.2.0 (2025/02/09)
 
 * Add a preference to play the selection precisely
