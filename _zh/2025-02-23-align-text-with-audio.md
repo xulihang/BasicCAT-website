@@ -18,16 +18,16 @@ tags: silhouette
 
 识别的结果：
 
-![识别的结果](/album/silhouette/recognized-result.jpg)
+![识别的结果](/album/forced-alignment/recognized-result.jpg)
 
 
 对齐器：
 
-![对齐器](/album/silhouette/aligner.jpg)
+![对齐器](/album/forced-alignment/aligner.jpg)
 
 对齐的结果：
 
-![对齐的结果](/album/silhouette/aligned.jpg)
+![对齐的结果](/album/forced-alignment/aligned.jpg)
 
 注：如果识别的语音是准确的，我们不必这样做。这适用于音频质量不佳，导致识别结果不佳的情况。
 
