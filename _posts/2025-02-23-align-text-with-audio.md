@@ -43,5 +43,7 @@ A text fragment can have arbitrary granularity:
 * a sentence,
 * a word
 
+There are many ways to achieve this. A simple method is to divide the speech based on syllables.
+
 Generally, it is an automatic approach. But in order to get an accurate result, human intervention is needed. This is what Silhouette is used for.
 
