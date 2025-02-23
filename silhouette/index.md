@@ -17,7 +17,7 @@ Silhouette is a computer-aided translation tool for videos and audios.
    ![waveform](/album/silhouette/waveform_en.webp)
 4. Cross-platform. It runs on Windows, macOS and Linux.
 5. Subtitle file export and import (SRT or TXT)
-6. Alignment of the recognized time lines and existing text (forced alignment)
+6. Alignment of the recognized time lines and existing text ([forced alignment](/align-text-with-audio/))
 
 ## Download
 
