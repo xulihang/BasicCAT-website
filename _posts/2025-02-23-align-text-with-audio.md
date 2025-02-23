@@ -11,6 +11,7 @@ You've got an audio or a video and the script of the speech. Now, you would like
 
 * First, recognize the speech to get the timelines with the recognized words. 
 * Then, align the recognized text with the existing text.
+* Finally, determining the alignment of the aligned text and the timelines based on the text length.
 
 
 The computer-aided video/audio translation tool [Silhouette](/silhouette/) is made for such a purpose.
