@@ -36,6 +36,7 @@ PS: There is 7-day full-feature trial. After the trial, there are limitations on
 * [Documentation](/silhouette/docs/)
 * [Release Notes](/silhouette/release-notes/)
 * [Technical Support](/support/)
+* [Video](/silhouette/video/)
 
 ## Why the Name
 
