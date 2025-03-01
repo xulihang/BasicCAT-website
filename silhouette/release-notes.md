@@ -10,6 +10,14 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.4.0 (2025/03/01)
+
+* Add Chinese Converter
+* Add Frames Extractor
+* Add menu items related to jumping and playing lines
+* Add a context menu item to recognize the selection
+* Fix the Chinese language code for Whisper
+
 ## v1.3.0 (2025/02/22)
 
 * Add Aligner to align the speech lines with existing text (forced alignment)
