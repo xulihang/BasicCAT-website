@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.15.0 (2025/03/02)
+
+* Add Video Sub Extractor
+* Add initial support for multithreaded OCR
+* Add replace mode for Search and Replace
+* Improve the sorting logic of image names based on numbers
+* Fix the escaping problem of the target text in exported tab-delimited txt files
+
 ## v3.14.4 (2025/02/19)
 
 * Add support of opening the project via system
@@ -698,7 +706,7 @@ New preferences setting: temp folder for HTTP. It is to solve the "Access is Den
 * Add a manager for original images without text and pure-text images [#issue199](https://github.com/xulihang/ImageTrans-docs/issues/199)
 * AutoCorrect can be enabled for OCR [#issue199](https://github.com/xulihang/ImageTrans-docs/issues/199#issuecomment-1126957556)
 * Fix a problem of importing XLIFF [#issue207](https://github.com/xulihang/ImageTrans-docs/issues/207)
-* Translation can be imported from a tab-delimitted txt file [#issue207](https://github.com/xulihang/ImageTrans-docs/issues/207)
+* Translation can be imported from a tab-delimited txt file [#issue207](https://github.com/xulihang/ImageTrans-docs/issues/207)
 * The background of a font style can be set to transparent [#issue208](https://github.com/xulihang/ImageTrans-docs/issues/208)
 * Other bugfixes and improvements [#issue203](https://github.com/xulihang/ImageTrans-docs/issues/203)
 
