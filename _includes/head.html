@@ -10,7 +10,7 @@
 
   <title>{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
   
-  {% seo %}
+  {% seo title=false  %}
   
   
   {% include google_analytics.html %}
