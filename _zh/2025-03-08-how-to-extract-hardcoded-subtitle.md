@@ -50,6 +50,8 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 
 操作完成后，我们可以看到图片中的字幕行被检测出来了。
 
+![detected text lines](/album/hardcoded-subtitle-extraction/detected-text-lines.jpg)
+
 之后，我们点击“OCR所有关键帧”，会识别所有字幕图像中的文字。因为我们这里只识别关键帧，需要处理的图片数变成了21。
 
 可以看到多了一个文本框，包含识别的文本。
@@ -61,6 +63,8 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 因为这是双语字幕，还有一些额外操作。首先，“OCR所有关键帧”前，要取消勾选“自动去除换行”。之后在硬字幕提取器中，点击“只保留最后一个换行符”。这样我们可以让文本变成一行原文、一行译文的形式。
 
 然后再勾选合并双语字幕同一条字幕对应的多条译文，会把分散的译文都合并到一起。
+
+![bilingual settings](/album/hardcoded-subtitle-extraction/bilingual-settings.jpg)
 
 下面是提取出来的字幕：
 
@@ -149,3 +153,4 @@ I'm profoundly flattered.
 
 使用ImageTrans提取硬字幕的优点是，整个过程我们都可以进行干预和修改，可以根据不同的语言选择不同的OCR引擎。
 
+字幕提取后，也可以导入计算机辅助音视频翻译软件Silhouette，结合波形图进行调整。
