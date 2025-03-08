@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.15.1 (2025/03/08)
+
+* Improved Video Sub Extractor
+* Add "Jump to..." menu item
+
 ## v3.15.0 (2025/03/02)
 
 * Add Video Sub Extractor
