@@ -25,6 +25,7 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 ![frame16](/album/hardcoded-subtitle-extraction/frame16.jpg)
 
 ![frame135](/album/hardcoded-subtitle-extraction/frame135.jpg)
+
 ![frame135](/album/hardcoded-subtitle-extraction/frame137.jpg)
 
 可以看到字幕会有两行、三行等多种情况，译文可能分散在多条相同原文的字幕中。
