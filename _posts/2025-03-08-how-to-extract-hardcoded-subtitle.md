@@ -155,3 +155,9 @@ I'm profoundly flattered.
 The advantage of using ImageTrans to extract hardcoded subtitles is that we can intervene and modify the whole process, and different OCR engines can be selected for different languages.
 
 After the subtitles are extracted, they can also be imported into Silhouette, a computer-aided audio-video translation software, and adjusted with the help of the waveform.
+
+Video tutorials:
+
+* Traditional approach (VideoSubFinder + ImageTrans): https://www.youtube.com/watch?v=__MTiAtqrTs
+* OCR approach (Silhouette + ImageTrans): https://www.youtube.com/watch?v=5zEDfrXUAdI
+

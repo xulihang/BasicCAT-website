@@ -155,3 +155,10 @@ I'm profoundly flattered.
 使用ImageTrans提取硬字幕的优点是，整个过程我们都可以进行干预和修改，可以根据不同的语言选择不同的OCR引擎。
 
 字幕提取后，也可以导入计算机辅助音视频翻译软件Silhouette，结合波形图进行调整。
+
+视频教程：
+
+* 传统图像处理方法（VideoSubFinder + ImageTrans)）：https://www.bilibili.com/video/BV1tGR5YYEJB/
+* OCR做检测的方法（Silhouette + ImageTrans）：https://www.bilibili.com/video/BV1tGR5YYEQk/
+
+
