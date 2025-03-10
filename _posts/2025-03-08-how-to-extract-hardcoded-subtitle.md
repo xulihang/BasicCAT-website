@@ -158,6 +158,6 @@ After the subtitles are extracted, they can also be imported into Silhouette, a 
 
 Video tutorials:
 
-* Traditional approach (VideoSubFinder + ImageTrans): https://www.youtube.com/watch?v=__MTiAtqrTs
-* OCR approach (Silhouette + ImageTrans): https://www.youtube.com/watch?v=5zEDfrXUAdI
+* Traditional approach (VideoSubFinder + ImageTrans): <https://www.youtube.com/watch?v=__MTiAtqrTs>
+* OCR approach (Silhouette + ImageTrans): <https://www.youtube.com/watch?v=5zEDfrXUAdI>
 

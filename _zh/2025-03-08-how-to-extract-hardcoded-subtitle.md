@@ -158,7 +158,7 @@ I'm profoundly flattered.
 
 视频教程：
 
-* 传统图像处理方法（VideoSubFinder + ImageTrans)）：https://www.bilibili.com/video/BV1tGR5YYEJB/
-* OCR做检测的方法（Silhouette + ImageTrans）：https://www.bilibili.com/video/BV1tGR5YYEQk/
+* 传统图像处理方法（VideoSubFinder + ImageTrans）：<https://www.bilibili.com/video/BV1tGR5YYEJB/>
+* OCR做检测的方法（Silhouette + ImageTrans）：<https://www.bilibili.com/video/BV1tGR5YYEQk/>
 
 
