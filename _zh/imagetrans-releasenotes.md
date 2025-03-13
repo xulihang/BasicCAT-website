@@ -10,6 +10,11 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.15.2 (2025/03/13)
+
+* 添加帮助链接
+* 竖排引擎新增自由高度字符设置 [#841](https://github.com/xulihang/ImageTrans-docs/issues/841)
+
 ## v3.15.1 (2025/03/08)
 
 * 更完善的硬字幕提取

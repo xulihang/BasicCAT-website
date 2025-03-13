@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.15.2 (2025/03/13)
+
+* Add help links
+* Add free height characters setting for vertical text engine [#841](https://github.com/xulihang/ImageTrans-docs/issues/841)
+
 ## v3.15.1 (2025/03/08)
 
 * Improved Video Sub Extractor
