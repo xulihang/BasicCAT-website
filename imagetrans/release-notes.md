@@ -12,6 +12,7 @@ layout: page
 ## v3.15.3 (2025/03/29)
 
 * Add menu items to fill in the source in the target or fill in the target in the source
+* Add magic buttons to trigger customized actions to edit the text
 * Add Deepseek plugin
 
 ## v3.15.2 (2025/03/13)
