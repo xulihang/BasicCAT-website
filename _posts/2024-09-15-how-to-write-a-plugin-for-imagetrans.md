@@ -74,6 +74,7 @@ The types of plugins are distinguished based on the suffixes of their names, and
 * Text recognition: `OCR`
 * Image inpainting (text removal): `Inpaint`
 * Text mask generation: `MaskGen`
+* Cutsom action: `Action`
 
 ## Plugin Implementation
 
@@ -93,7 +94,7 @@ Here are the common operations:
 * `inpaint`: generate text-removed images
 * `genMask`: generate text mask
 * `byTextArea`: designed to process by text area
-
+* `process`: process text in text areas
 
 Here, let's implement translation using Google.
 
