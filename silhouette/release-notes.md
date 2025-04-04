@@ -10,6 +10,13 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.4.1 (2025/04/04)
+
+* Add import and export of txt files
+* Add more options for importing SRT files
+* Add DeepSeek plugin
+* Increase the timeout for ChatGPT to 2 minutes
+
 ## v1.4.0 (2025/03/01)
 
 * Add Chinese Converter
