@@ -45,7 +45,7 @@ Using a template has many benefits. The text styles, the language pair, OCR and 
 
    We need to modify two params:
 
-   * host: change to `http://localhost:11434`
+   * host: change to `http://localhost:11434/v1`
    * model: change to `qwen2.5`
    
 2. Configure custom workflow.
