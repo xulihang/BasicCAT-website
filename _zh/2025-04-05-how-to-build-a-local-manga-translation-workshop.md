@@ -45,7 +45,7 @@ tags: imagetrans
 
    需要修改两个地方：
 
-   * host：改成`http://localhost:11434`
+   * host：改成`http://localhost:11434/v1`
    * model：改成`qwen2.5`
    
 2. 配置自定义工作流。
