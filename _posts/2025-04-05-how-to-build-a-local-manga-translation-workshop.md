@@ -11,11 +11,11 @@ Thanks to the current AI technologies, we can now run our offline AI manga trans
 ## Software Used
 
 * [ImageTrans](/imagetrans/): an integrated workshop for image translation. It can extract the text with OCR, call AI translation, remove the text and reinject the translation.
-* A large language model tool, like LM Studio and Ollama, to call models like Deepseek, qwen and sakuraLLM。We are going to use Ollama in this article.
+* A large language model tool, like LM Studio and Ollama, to call models like Deepseek, qwen and sakuraLLM. We are going to use Ollama in this article.
 
 ## Start Local Services
 
-1. Start a local manga OCR servce which ImageTrans uses for Japanese recognition ([guide](https://github.com/xulihang/ImageTrans_plugins/tree/master/mangaOCR). If you need to translation images in other languages, you can choose other services.
+1. Start a local manga OCR servce which ImageTrans uses for Japanese recognition ([guide](https://github.com/xulihang/ImageTrans_plugins/tree/master/mangaOCR)). If you need to translation images in other languages, you can choose other services.
 
    ![mangaocr](/album/local-manga-translator/manga-ocr.jpg)
    
@@ -33,11 +33,11 @@ Create a new project based on the Japanese -> Chinese manga template.
 
 ![new project](/album/local-manga-translator/new-project.jpg)
 
-Using a template has many benefits. The text styles, the language pair, OCR and translation engines to use are all configured. If it requires a specific ballon detection model, it will also prompt you to download it.
+Using a template has many benefits. The text styles, the language pair, OCR and translation engines to use are all configured. If it requires a specific balloon detection model, it will also prompt you to download it.
 
 ### Configuration
 
-1. Configure Ollama
+1. Configure Ollama.
 
    In ImageTrans's preferences, configure the ChatGPT plugin to let it call the local Ollama server.
 
@@ -45,10 +45,10 @@ Using a template has many benefits. The text styles, the language pair, OCR and 
 
    We need to modify two params:
 
-   * host：change to `http://localhost:11434`
-   * model：change to `qwen2.5`
+   * host: change to `http://localhost:11434`
+   * model: change to `qwen2.5`
    
-2. Configure custom workflowe.
+2. Configure custom workflow.
 
    Through menu->project->batch->custom worflow to open the custom worflow form. Set the translation engine to ChatGPT and save the settings.
 
