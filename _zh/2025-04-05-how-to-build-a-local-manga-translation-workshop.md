@@ -59,6 +59,8 @@ tags: imagetrans
 
 导入图片后，在图片上右键，点当前图片->一键翻译（自定义工作流），就可以一键翻译图片了。要想翻译整个图片，也可以通过批处理中的自定义工作流进行操作。
 
+![one-click-translation](/album/local-manga-translator/one-click-translation.jpg)
+
 演示视频：
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114284013095465&bvid=BV1kqRRYBE89&cid=29245309296&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>

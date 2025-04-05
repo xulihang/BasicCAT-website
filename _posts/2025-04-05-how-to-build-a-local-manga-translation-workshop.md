@@ -59,6 +59,8 @@ Using a template has many benefits. The text styles, the language pair, OCR and 
 
 Import the images and right click on the image. Through current image -> one-click translation (custom workflow), we can translate the current image. We can translate all the images through batch operations.
 
+![one-click-translation](/album/local-manga-translator/one-click-translation.jpg)
+
 Demo video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DOS0Kh4Y1g4?si=LCz6oAObFRBKxlVt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
