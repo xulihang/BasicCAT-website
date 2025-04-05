@@ -61,7 +61,7 @@ Import the images and right click on the image. Through current image -> one-cli
 
 Demo video:
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114284013095465&bvid=BV1kqRRYBE89&cid=29245309296&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DOS0Kh4Y1g4?si=LCz6oAObFRBKxlVt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Sample Translation Result
 
