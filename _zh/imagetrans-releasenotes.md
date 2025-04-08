@@ -13,7 +13,7 @@ permalink: /zh/imagetrans/release-notes/
 ## v3.15.3 (2025/03/29)
 
 * 添加在译文中填入原文和在原文中填入译文的菜单项
-* 添加魔法按钮以支持执行自定义文本编辑操作
+* 添加魔法按钮以支持执行自定义文本编辑操作 [#858](https://github.com/xulihang/ImageTrans-docs/issues/858)
 * 添加专门的DeepSeek翻译插件
 
 ## v3.15.2 (2025/03/13)
