@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans basiccat
 ---
 
-ImageTrans uses the ABPlugin library to provide plugin functionality. We can develop four types of plugins: text recognition, machine translation, mask generation, and text removal.
+ImageTrans uses the ABPlugin library to provide plugin functionality. We can develop five types of plugins: text recognition, machine translation, custom action, mask generation, and text removal.
 
 Here we are going to write a Google machine translation plugin for demonstration.
 

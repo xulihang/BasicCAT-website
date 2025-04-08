@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans basiccat
 ---
 
-ImageTrans使用ABPlugin这个库提供插件功能。我们可以编写文字识别、机器翻译、掩膜生成和文字去除等四种插件。
+ImageTrans使用ABPlugin这个库提供插件功能。我们可以编写文字识别、机器翻译、自定义操作、掩膜生成和文字去除等五种插件。
 
 这里我们演示一下如何编写一个谷歌机器翻译插件。
 
