@@ -11,7 +11,7 @@ layout: page
 
 ## v3.15.4 (2025/04/18)
 
-* Searc and replace can select empty segments using regular expression
+* Search and replace can select empty segments using regular expression
 * Add support for zoom with the mouse position as the origin
 * Add shortcut for "Jump to"
 
