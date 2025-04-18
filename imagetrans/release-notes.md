@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.15.4 (2025/04/18)
+
+* Searc and replace can select empty segments using regular expression
+* Add support for zoom with the mouse position as the origin
+* Add shortcut for "Jump to"
+
 ## v3.15.3 (2025/03/29)
 
 * Add menu items to fill in the source in the target or fill in the target in the source
