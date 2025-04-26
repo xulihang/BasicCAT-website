@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.16.0 (2025/04/26)
+
+* Add an option to make border for area OCR [#issue866](https://github.com/xulihang/ImageTrans-docs/issues/866)
+* Add maximum X offset and maximum Y offset settings for text localization
+* Remove non-text image content for "Append text to existing areas using OCR"
+* Fix the ineffective dragging when the mouse is above the text in translation mode
+
 ## v3.15.4 (2025/04/18)
 
 * Search and replace can select empty segments using regular expression

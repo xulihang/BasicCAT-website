@@ -10,6 +10,13 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.16.0 (2025/04/26)
+
+* OCR单个区域时，支持给图像添加边界 [#issue866](https://github.com/xulihang/ImageTrans-docs/issues/866)
+* 文字定位与合并项目设置新增最大纵坐标差、最大横坐标差的选项
+* 用OCR给现有区域添加文字时，会将区域外的图像进行去除
+* 修复查看翻译时在文字上移动图片无效的问题
+
 ## v3.15.4 (2025/04/18)
 
 * 搜索与替换支持用正则选中空的片段
