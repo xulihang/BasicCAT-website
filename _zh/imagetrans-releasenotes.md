@@ -10,6 +10,15 @@ permalink: /zh/imagetrans/release-notes/
 }
 </style>
 
+## v3.16.1 (2025/05/02)
+
+* 气泡检测支持根据样式ID过滤结果
+* 支持根据文字颜色合并文本
+* 根据段落位置信息合并支持竖排文本
+* 添加清除原文、清除译文、清除译文位置、清除样式到自定义工作流
+* 自定义工作流添加清空按钮
+
+
 ## v3.16.0 (2025/04/26)
 
 * OCR单个区域时，支持给图像添加边界 [#issue866](https://github.com/xulihang/ImageTrans-docs/issues/866)

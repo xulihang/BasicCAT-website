@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.16.1 (2025/05/02)
+
+* Balloon detector can filter results based on the class ID
+* Add support for merging text based on text color
+* Add support for horizontal text merging based on paragraph position info
+* Add clear source, clear target, clear styles and clear target position to custom workflow
+* Add clear button to custom workflow form
+
 ## v3.16.0 (2025/04/26)
 
 * Add an option to make border for area OCR [#issue866](https://github.com/xulihang/ImageTrans-docs/issues/866)
