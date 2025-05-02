@@ -10,6 +10,16 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.0 (2025/05/02)
+
+* New features: break lines and merge lines
+* Add split sentences button to split the sentences with SRX rules in Sentence Splitter
+* Add split & merge mode
+* Add quick translate button
+* Add subtitle label CSS preference setting
+* Fix the extra params for recognizing the entire file with Whisper
+* Improve the error message of Whisper
+
 ## v1.4.1 (2025/04/04)
 
 * Add import and export of txt files
