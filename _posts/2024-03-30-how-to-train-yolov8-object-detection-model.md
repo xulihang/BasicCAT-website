@@ -144,6 +144,20 @@ To get the class names during object detection, we need to put a file named `mod
 }
 ```
 
+If you need to filter the detection results using class IDs in ImageTrans, you can `classes_to_use` to `model.json`.
+
+Example:
+
+```json
+{
+  "width":1024,
+  "height":1024,
+  "ratio":1,
+  "classes_to_use":[0,1],
+  "model":"model.onnx"
+}
+```
+
 ## Detect Orieneted Objects
 
 If we need to detect oriented objects and obtain their rotation degrees, we need to use OBB models.

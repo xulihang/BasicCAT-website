@@ -145,6 +145,20 @@ ImageTrans使用字体样式的设置对应目标检测的分类结果，需要�
 }
 ```
 
+如果需要根据分类ID过滤结果，可以给`model.json`添加`classes_to_use`的值。
+
+例如：
+
+```json
+{
+  "width":1024,
+  "height":1024,
+  "ratio":1,
+  "classes_to_use":[0,1],
+  "model":"model.onnx"
+}
+```
+
 ## 对倾斜目标的处理
 
 如果需要检测倾斜的目标，得到它旋转的角度，我们需要使用OBB模型。
