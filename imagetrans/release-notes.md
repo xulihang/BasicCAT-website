@@ -8,6 +8,12 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+## v3.16.2 (2025/05/10)
+
+* Disable the "process the current image" button in custom workflow when the processing has not completed 
+* "Append text to existing text areas with OCR" will add extra info like text color and rotation if it exists
+* Add an option to change the text opacity as well when changing the overlay's opacity
+* Add delete mask images and delete text-removed images to custom workflow
 
 ## v3.16.1 (2025/05/02)
 
