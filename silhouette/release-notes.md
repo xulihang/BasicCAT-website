@@ -10,6 +10,14 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.1 (2025/05/11)
+
+* Disable "Follow progress" when playing a selection
+* Allow using Aligner to align a range of text
+* Add subtitle preferences: format, match video width
+* Add FFmpeg helper
+* Add support for export to video with burn-in subtitle using FFmpeg
+
 ## v1.5.0 (2025/05/02)
 
 * New features: break lines and merge lines
