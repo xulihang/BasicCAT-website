@@ -31,7 +31,7 @@ tags: silhouette imagetrans
 
    ![提取帧](/album/subtitle-removal/extract-frames-zh.jpg)
 
-2. 使用Silhouette根据声音生成字幕（也可以直接[检测硬字幕](/zh/)）。从而知道哪些图像包含字幕，减少需要处理的数据量。
+2. 使用Silhouette根据声音生成字幕（也可以直接[检测硬字幕](/zh/how-to-extract-hardcoded-subtitle/)）。从而知道哪些图像包含字幕，减少需要处理的数据量。
 
    ![检测语音活动](/album/subtitle-removal/detect-voice-activity-zh.jpg)
    
