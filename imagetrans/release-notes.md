@@ -17,6 +17,7 @@ layout: page
 * Add a text area filtering option: non-transparent-background areas
 * Add support for using mask to remove unwanted areas in the image for OCR
 * Keep the properties of the cut boxes 
+* Source Image Viewer can toggle whether to sync zoom ratio
 * Fix the width and height set for the expanded roi
 
 ## v3.16.2 (2025/05/10)
