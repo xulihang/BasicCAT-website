@@ -10,6 +10,11 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.2 (2025/05/18)
+
+* Add Subtitle-Removed Video Creator
+* Add support for progress jumping by clicking the waveform
+
 ## v1.5.1 (2025/05/11)
 
 * Disable "Follow progress" when playing a selection
