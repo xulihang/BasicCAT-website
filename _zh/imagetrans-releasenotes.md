@@ -18,7 +18,7 @@ permalink: /zh/imagetrans/release-notes/
 * 添加背景非透明的文字区域过滤选项
 * 支持为OCR操作设置掩膜以去除不需要识别的区域
 * 保留被分割的文字区域的属性
-* 原图查看器可以切换是否同步缩放
+* 原图查看器可以切换是否同步缩放 [#879](https://github.com/xulihang/ImageTrans-docs/issues/879)
 * 修复去除文字时拓展像素的宽高设得不对的问题
 
 ## v3.16.2 (2025/05/10)
