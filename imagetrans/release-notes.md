@@ -15,7 +15,7 @@ layout: page
 * New text removing method: gaussian blur
 * Add invert selection, select areas with the same style and send to back to menu items
 * Add a text area filtering option: non-transparent-background areas
-* Add support for using mask to remove unwanted areas in the image for OCR
+* Add support for using mask to remove unwanted areas in the image for OCR [#881](https://github.com/xulihang/ImageTrans-docs/issues/881)
 * Keep the properties of the cut boxes 
 * Source Image Viewer can toggle whether to sync zoom ratio [#879](https://github.com/xulihang/ImageTrans-docs/issues/879)
 * Fix the width and height set for the expanded roi
