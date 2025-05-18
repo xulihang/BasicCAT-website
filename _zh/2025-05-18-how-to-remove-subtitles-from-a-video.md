@@ -8,7 +8,7 @@ tags: silhouette imagetrans
 
 找不到无字幕的原版视频，我们又想做些二次创作，比如创作解说视频、剪辑和翻译时，我们只有对带字幕的视频进行处理，对其中的字幕进行去除或者遮盖的操作。
 
-下面是对视频帧进行处理的示例，点击图片可以查看视频。
+下面是对《士兵突击》视频片段的视频帧进行处理的示例，点击图片可以查看视频。
 
 带字幕的原始视频帧：
 
@@ -22,7 +22,7 @@ tags: silhouette imagetrans
 
 [![frame blur](/album/subtitle-removal/frame52-blur.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-Blur.mp4)
 
-可以看到，AI算法对背景还原的效果还是可以的。不过虽然单张图片效果可以，放在视频里还是能看到明显的修改痕迹和画面波动。毕竟一般的视频一秒有25帧，每帧AI处理的结果都有所不同，目前没找到特别好的解决方法。而模糊处理则没有明显的画面波动。
+可以看到，AI算法对背景还原的效果还是可以的。不过虽然单张图片效果可以，放在视频里还是能看到明显的修改痕迹和画面波动。毕竟一般的视频一秒有25帧，每帧AI处理的结果都有所不同，这点目前没找到特别好的解决方法。而模糊处理则没有明显的画面波动。
 
 下面讲下如何使用图片翻译软件[ImageTrans](/zh/imagetrans/)和音视频翻译软件[Silhouette](/zh/silhouette/)去除视频中的字幕。
 
@@ -38,6 +38,10 @@ tags: silhouette imagetrans
 3. 使用ImageTrans打开导出的图像。打开视频字幕去除器，导入SRT格式的字幕，选择好字幕位置，生成去文字图。如果有漏抹除的图（一般在字幕的开头和结尾位置），可以用OCR等技术检测文字，调整有文字的图的范围。
 
    ![字幕去除器](/album/subtitle-removal/subtitle-remover-zh.jpg)
+   
+   文字抹除方式可以在项目设置中进行设置。
+   
+   ![文字去除设置](/album/subtitle-removal/text-removal-settings-zh.jpg)
 
 4. 使用Silhouette基于去文字图生成最终的视频。
 
