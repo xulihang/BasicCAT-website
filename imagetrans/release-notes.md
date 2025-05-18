@@ -8,6 +8,17 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+
+## v3.17.0 (2025/05/18)
+
+* Add Video Subtitle Remover
+* New text removing method: gaussian blur
+* Add invert selection, select areas with the same style and send to back to menu items
+* Add a text area filtering option: non-transparent-background areas
+* Add support for using mask to remove unwanted areas in the image for OCR
+* Keep the properties of the cut boxes 
+* Fix the width and height set for the expanded roi
+
 ## v3.16.2 (2025/05/10)
 
 * Disable the "process the current image" button in custom workflow when the processing has not completed 
