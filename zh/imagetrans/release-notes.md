@@ -1,7 +1,6 @@
 ---
 title: ImageTrans发布日志 
 layout: page
-permalink: /zh/imagetrans/release-notes/
 ---
 
 <style>

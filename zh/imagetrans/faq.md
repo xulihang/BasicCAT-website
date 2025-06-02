@@ -1,7 +1,6 @@
 ---
 title: FAQ - ImageTrans
 layout: page
-permalink: /zh/imagetrans/faq/
 ---
 
 ImageTrans 常见问题整理，更多问题可在[这里](https://github.com/xulihang/ImageTrans-docs/issues)搜索。

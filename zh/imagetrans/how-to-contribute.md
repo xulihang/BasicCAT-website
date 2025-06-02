@@ -1,7 +1,6 @@
 ---
 title: 帮助完善ImageTrans
 layout: page
-permalink: /zh/imagetrans/how-to-contribute/
 ---
 
 你可以通过以下方式帮助完善ImageTrans:
