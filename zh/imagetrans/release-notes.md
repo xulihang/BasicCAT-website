@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.17.1 (2025/06/02)
+
+* 支持使用CSS来调整文字的样式 [#883](https://github.com/xulihang/ImageTrans-docs/issues/883)
+* 新增STTN文字去除方式
+* 视频字幕去除器支持调用STTN这一视频专用文字去除方式
+
 ## v3.17.0 (2025/05/18)
 
 * 新增视频字幕去除器

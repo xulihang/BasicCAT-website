@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.17.1 (2025/06/02)
+
+* Allow using CSS to style text [#883](https://github.com/xulihang/ImageTrans-docs/issues/883)
+* New inpainter: STTN
+* Video Subtitle Remover can use STTN, a video-specific text-removal method, to remove text
+
 ## v3.17.0 (2025/05/18)
 
 * Add Video Subtitle Remover
