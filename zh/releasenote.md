@@ -1,7 +1,6 @@
 ---
 title: 发布说明
 layout: page
-permalink: /zh/releasenote/
 ---
 
 <style>

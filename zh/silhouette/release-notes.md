@@ -1,7 +1,6 @@
 ---
 title: Silhouette发布日志 
 layout: page
-permalink: /zh/silhouette/release-notes/
 description: Silhouette发布日志 
 ---
 

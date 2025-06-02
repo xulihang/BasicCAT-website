@@ -1,7 +1,6 @@
 ---
 title: 博客
 layout: page
-permalink: /zh/blog/
 ---
 
 <ul class="post-list">

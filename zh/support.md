@@ -1,7 +1,6 @@
 ---
 title: 支持
 layout: page
-permalink: /zh/support/
 ---
 
 不建议给我发邮件，因为邮件内容不能被以后的人看到。

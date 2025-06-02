@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "首页"
-permalink: /zh/
 description: BasicCAT是一款开源的计算机辅助翻译软件
 ---
 

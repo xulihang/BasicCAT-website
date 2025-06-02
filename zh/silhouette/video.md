@@ -1,7 +1,6 @@
 ---
 title: Silhouette视频
 layout: page
-permalink: /zh/silhouette/video/
 description: Silhouette视频 
 ---
 

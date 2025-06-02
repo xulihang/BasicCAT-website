@@ -1,7 +1,6 @@
 ---
 title: Silhouette文档
 layout: page
-permalink: /zh/silhouette/docs/
 description: Silhouette文档
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 捐助
 layout: page
-permalink: /zh/donation/
 ---
 
 金钱的支持可以让我更好地开发BasicCAT和相关的翻译软件。
