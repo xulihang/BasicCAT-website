@@ -24,6 +24,8 @@ Video frame with subtitles blurred:
 
 We can see that the effect of AI algorithms on background restoration is fairly good. However, although the effect of a single image is OK, you can still see obvious traces of changes and fluctuations in the generated video. After all, normal videos have 25 frames per second, and the results of AI processing vary from frame to frame. At present, there is no particularly good solution. If we simply use blurring, there will be no obvious fluctuations.
 
+**Update: ** The new ImageTrans version has added the STTN network model, it can remove text based on multiple frames, which can have a better result.
+
 Here's how to remove subtitles from a video using [ImageTrans](/imagetrans/) and [Silhouette](/silhouette/).
 
 
