@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.17.2 (2025/06/04)
+
+* Improve the logic of image switching
+* Add text-removed property to images that have text-removed images generated using Video Subtitle Remover
+* Video Subtitle Remover can generate text areas for all images
+* Fix a bug that SRT has to be imported to open Video Subtitle Remover
+
 ## v3.17.1 (2025/06/02)
 
 * Allow using CSS to style text [#883](https://github.com/xulihang/ImageTrans-docs/issues/883)
