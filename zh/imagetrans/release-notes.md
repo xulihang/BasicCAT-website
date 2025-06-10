@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.17.3 (2025/06/10)
+
+* 添加样式设置的菜单项 [#888](https://github.com/xulihang/ImageTrans-docs/issues/888)
+* 添加区域过滤的菜单项 [#887](https://github.com/xulihang/ImageTrans-docs/issues/887)
+* 优化本地样式设置逻辑
+* 修复本地样式设置打开失败的问题 [#889](https://github.com/xulihang/ImageTrans-docs/issues/889)
+* 视频字幕去除器使用STTN处理全部图片时以30张图为单位进行处理
+
+
 ## v3.17.2 (2025/06/04)
 
 * 优化图片切换逻辑

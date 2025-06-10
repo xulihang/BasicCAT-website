@@ -8,6 +8,14 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+## v3.17.3 (2025/06/10)
+
+* Add menu items to set font style [#888](https://github.com/xulihang/ImageTrans-docs/issues/888)
+* Add menu items to filter areas [#887](https://github.com/xulihang/ImageTrans-docs/issues/887)
+* Optimize the logic of setting local font style
+* Fix an error opening local font style setting caused by the newly added help link [#889](https://github.com/xulihang/ImageTrans-docs/issues/889)
+* Video Subtitle Remover processes images in batches of 30 using STTN to process all the images
+
 
 ## v3.17.2 (2025/06/04)
 
