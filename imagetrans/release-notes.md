@@ -8,6 +8,16 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+
+## v3.17.4 (2025/06/20)
+
+* Add menu items for the current image: refresh and open with an external program
+* Add menu items to expand and shrink selected areas
+* Add preferences for the border color of low-confidence areas
+* Use natural sorting for file names
+* Use the main view's image percentage for the mask editor and text remover
+
+
 ## v3.17.3 (2025/06/10)
 
 * Add menu items to set font style [#888](https://github.com/xulihang/ImageTrans-docs/issues/888)
