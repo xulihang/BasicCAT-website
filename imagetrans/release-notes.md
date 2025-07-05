@@ -12,6 +12,7 @@ layout: page
 ## v3.17.5 (2025/07/05)
 
 * Use right align for text in TextArea for bi-directional languages like Arabic
+* Double click on text areas to request focus for editing
 * AutoCorrect rules can be exported as CSV or imported from CSV
 * Add support for text area filtering using custom rules
 * Add a menu item to open the text-removed image with an external program
