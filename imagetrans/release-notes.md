@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.17.5 (2025/07/05)
+
+* Use right align for text in TextArea for bi-directional languages like Arabic
+* AutoCorrect rules can be exported as CSV or imported from CSV
+* Add support for text area filtering using custom rules
+* Add a menu item to open the text-removed image with an external program
+* Add Text Splitter
+
 ## v3.17.4 (2025/06/20)
 
 * Add menu items for the current image: refresh and open with an external program
