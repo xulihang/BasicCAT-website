@@ -10,6 +10,12 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.3 (2025/07/06)
+
+* Add time span preference for jumping
+* Add play every line menu item
+* Fix bugs
+
 ## v1.5.2 (2025/05/18)
 
 * Add Subtitle-Removed Video Creator
