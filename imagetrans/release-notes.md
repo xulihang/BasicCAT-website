@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.18.0 (2025/07/19)
+
+* Add support for saving params for text detection and recognition flow items in custom workflow [#issue914](https://github.com/xulihang/ImageTrans-docs/issues/914)
+* Add log viewer
+* Add bookmark manager
+* Fix a problem that the balloon detection model selection is not effective after the first selection
+* Fix a problem that the current project is not closed when opening a new project through drag and drop
+
 ## v3.17.5 (2025/07/05)
 
 * Use right align for text in TextArea for bi-directional languages like Arabic
