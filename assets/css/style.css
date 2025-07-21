@@ -44,7 +44,7 @@
   margin-top: 10px;
   background: #F5F5F5;
   width: 300px;
-  max-width: 30%;
+  max-width: calc(30% - 20px);
   margin-right: 10px;
 }
 
