@@ -33,7 +33,9 @@ Create a new project based on the Japanese -> Chinese manga template.
 
 ![new project](/album/local-manga-translator/new-project.jpg)
 
-Using a template has many benefits. The text styles, the language pair, OCR and translation engines to use are all configured. If it requires a specific balloon detection model, it will also prompt you to download it.
+Using a template has many benefits. The text styles, the language pair, workflows, OCR and translation engines to use are all configured. If it requires a specific balloon detection model, it will also prompt you to download it.
+
+PS: if you failed to download the balloon detection model, you can download it directly via [this link](https://github.com/xulihang/balloon-dataset/releases/download/models/japanese-manga.zip) and unzip the files to `models\japanese-manga`.
 
 ### Configuration
 
@@ -54,6 +56,7 @@ Using a template has many benefits. The text styles, the language pair, OCR and 
 
    ![custom workflow](/album/local-manga-translator/custom-workflow.jpg)
 
+PS: for new versions of ImageTrans, you can also directly use the Ollama plugin.
 
 ### Import Images and Start Translation
 

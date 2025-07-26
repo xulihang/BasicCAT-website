@@ -33,7 +33,9 @@ tags: imagetrans
 
 ![new project](/album/local-manga-translator/new-project.jpg)
 
-使用模板的好处是，相关的配置，例如字体、项目语言、要使用的翻译和OCR等都已经配好了。如果需要的气泡模型没有下载，打开时还会提示进行下载。
+使用模板的好处是，相关的配置，例如字体、项目语言、工作流、要使用的翻译和OCR等都已经配好了。如果需要的气泡模型没有下载，打开时还会提示进行下载。
+
+注：如果下载气泡模型失败，可以直接[链接下载](https://github.com/xulihang/balloon-dataset/releases/download/models/japanese-manga.zip)或者从百度网盘下载日漫气泡检测模型，解压到软件的`models\japanese-manga`目录。
 
 ### 软件配置
 
@@ -54,6 +56,8 @@ tags: imagetrans
 
    ![custom workflow](/album/local-manga-translator/custom-workflow.jpg)
 
+
+注：新版本也可以直接用Ollama插件。
 
 ### 导入图片并翻译
 
