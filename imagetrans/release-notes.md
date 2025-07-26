@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v3.18.1 (2025/07/26)
+
+* New text area context menu item: paste translation
+* New translation plugin: Ollama
+* Display the main form after all the plugins are loaded
+* Disable auto clean by default for server
+* Fix the disappered labels of selected text areas when unifying fonts
+* Fix the program that unselecting a text area after multiple selection does not trigger the selected index changed event
+
 ## v3.18.0 (2025/07/19)
 
 * Add support for saving params for text detection and recognition flow items in custom workflow [#issue914](https://github.com/xulihang/ImageTrans-docs/issues/914)
