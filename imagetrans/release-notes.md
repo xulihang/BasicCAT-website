@@ -16,7 +16,7 @@ layout: page
 * Display the main form after all the plugins are loaded
 * Disable auto clean by default for server
 * Fix the disappered labels of selected text areas when unifying fonts
-* Fix the program that unselecting a text area after multiple selection does not trigger the selected index changed event
+* Fix the problem that unselecting a text area after multiple selection does not trigger the selected index changed event
 
 ## v3.18.0 (2025/07/19)
 
