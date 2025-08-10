@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.18.2 (2025/08/10)
+
+* Add shortcut for mask editor's erase mode [issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
+* New boxes shifting menu item
+* Fix the font resize problem after clicking a text area because of the triggering of the text changed event
+* Fix the potential blurriness of text because of using double to set the location of text areas [issue928](https://github.com/xulihang/ImageTrans-docs/issues/928)
+
 ## v3.18.1 (2025/07/26)
 
 * New text area context menu item: paste translation
