@@ -11,7 +11,7 @@ layout: page
 
 ## v3.19.0 (2025/08/16)
 
-* 允许使用OCR进行旋转检测并增加相关项目设置
+* 允许使用OCR进行旋转检测并增加相关项目设置 [#934](https://github.com/xulihang/ImageTrans-docs/issues/934)
 * 更新OCR插件以支持旋转检测
 * 新增区域重叠比例的设置
 * 其它Bug修复
@@ -19,7 +19,7 @@ layout: page
 
 ## v3.18.2 (2025/08/10)
 
-* 掩膜编辑器新增切换消除模式的快捷键 [issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
+* 掩膜编辑器新增切换消除模式的快捷键 [#issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
 * 新增给文字区域设置固定偏移的操作
 * 修复因为点击文字区域触发文字变更事件，导致文字区域重新计算文字大小的问题
 * 修复因为使用双精度设置文字区域大小导致文本可能模糊的问题 [issue928](https://github.com/xulihang/ImageTrans-docs/issues/928)

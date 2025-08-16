@@ -11,14 +11,14 @@ layout: page
 
 ## v3.19.0 (2025/08/16)
 
-* Allow using OCR to detect rotation and add related project settings
+* Allow using OCR to detect rotation and add related project settings [#934](https://github.com/xulihang/ImageTrans-docs/issues/934)
 * Update OCR plugins to support rotation detection
 * New project setting: area overlapping percent
 * Other bugfixes
 
 ## v3.18.2 (2025/08/10)
 
-* Add shortcut for mask editor's erase mode [issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
+* Add shortcut for mask editor's erase mode [#issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
 * New boxes shifting menu item
 * Fix the font resize problem after clicking a text area because of the triggering of the text changed event
 * Fix the potential blurriness of text because of using double to set the location of text areas [issue928](https://github.com/xulihang/ImageTrans-docs/issues/928)
