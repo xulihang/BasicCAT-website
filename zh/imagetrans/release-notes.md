@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v3.19.0 (2025/08/16)
+
+* 允许使用OCR进行旋转检测并增加相关项目设置
+* 更新OCR插件以支持旋转检测
+* 新增区域重叠比例的设置
+* 其它Bug修复
+
+
 ## v3.18.2 (2025/08/10)
 
 * 掩膜编辑器新增切换消除模式的快捷键 [issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)

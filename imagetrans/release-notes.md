@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v3.19.0 (2025/08/16)
+
+* Allow using OCR to detect rotation and add related project settings
+* Update OCR plugins to support rotation detection
+* New project setting: area overlapping percent
+* Other bugfixes
+
 ## v3.18.2 (2025/08/10)
 
 * Add shortcut for mask editor's erase mode [issue924](https://github.com/xulihang/ImageTrans-docs/issues/924)
