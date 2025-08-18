@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v3.19.1 (2025/08/17)
+
+* Use integer for the pixel size used in the rendering of text
+* Add support for importing WebP files directly
+
 ## v3.19.0 (2025/08/16)
 
 * Allow using OCR to detect rotation and add related project settings [#934](https://github.com/xulihang/ImageTrans-docs/issues/934)

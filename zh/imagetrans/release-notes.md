@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v3.19.1 (2025/08/17)
+
+* 文字引擎不同比例下的渲染尺寸像素单位统一使用整型
+* 支持直接导入WebP格式图片
+
+
 ## v3.19.0 (2025/08/16)
 
 * 允许使用OCR进行旋转检测并增加相关项目设置 [#934](https://github.com/xulihang/ImageTrans-docs/issues/934)
