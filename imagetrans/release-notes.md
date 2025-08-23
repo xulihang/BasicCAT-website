@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v4.0.0 (2025/08/23)
+
+* New mask generation method: OCR
+* Keep alpha channel for WebP
+* The ROI for checking separation of areas with text will use the center as the beginning
+* Use the current project path as the title [#946](https://github.com/xulihang/ImageTrans-docs/issues/946)
+* Fix an issue that if the font style name does not exist, the default font style is not applied
+* Fix an issue that class names by local balloon detetion server will be used as font style names even if this option is off
+* Fix the ineffective Command-key-related actions like multiple selection for macOS
+* Fix PatchMatch by rebuilding it for macOS and using PNG to fix the JPEG issue on Windows
+
 ## v3.19.1 (2025/08/17)
 
 * Use integer for the pixel size used in the rendering of text
