@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v4.0.1 (2025/08/29)
+
+改善旋转的文字的清晰度 [#950](https://github.com/xulihang/ImageTrans-docs/issues/950)
+
 ## v4.0.0 (2025/08/23)
 
 * 新增掩膜生成方法：OCR

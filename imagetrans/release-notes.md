@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v4.0.1 (2025/08/29)
+
+Improve the fidelity of rotated text [#950](https://github.com/xulihang/ImageTrans-docs/issues/950)
+
 ## v4.0.0 (2025/08/23)
 
 * New mask generation method: OCR
