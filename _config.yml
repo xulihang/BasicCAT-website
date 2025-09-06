@@ -18,6 +18,7 @@ disqus_shortname:
 sitemap: true
 plugins:
   - jekyll-sitemap
+  - jekyll-relative-links
 
 exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
 
