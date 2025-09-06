@@ -33,5 +33,7 @@ collections:
     output: true
     permalink: /:collection/:title/
     
-
+relative_links:
+  enabled:     true
+  collections: true
   
