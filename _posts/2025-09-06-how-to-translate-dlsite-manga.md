@@ -8,7 +8,7 @@ tags: imagetrans
 
 DLsite is the largest doujin platform in Japan. We can purchase manga, games and ASMRs on it.
 
-In this post, we are going to talk about how to purchase and translate manga on DLsite.
+In this post, we are going to talk about how to purchase and translate raw manga on DLsite.
 
 ## Purchase
 
