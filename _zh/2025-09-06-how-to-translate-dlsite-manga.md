@@ -36,7 +36,7 @@ DLsite是日本最大的同人漫画平台，在这上面，我们可以购买�
 
 如果对翻译不满意，可以在软件中对结果进行调整。
 
-翻译示例：
+翻译示例（[男子高生×新人OLの話](https://www.dlsite.com/girls/work/=/product_id/RJ276847.html)）：
 
 原图：
 
