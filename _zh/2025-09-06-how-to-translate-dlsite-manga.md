@@ -16,7 +16,7 @@ DLsite是日本最大的同人漫画平台，在这上面，我们可以购买�
 
 选中一本漫画后，点击页面右方的Buy Now按钮，完成购买。
 
-![购买](/album/dlsite/custom-workflow.jpg)
+![购买](/album/dlsite/purchase.jpg)
 
 购买完成后，就可以下载漫画了。一般是PDF和JPG格式的图片内容。
 
