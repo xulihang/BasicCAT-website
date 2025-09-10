@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v4.0.2 (2025/09/10)
+
+* Correct the text order by mergin text areas for operations like merge text areas within panels and append text to exising text areas with OCR
+* Add an option to remove image content outside text areas when appending text with OCR to existing areas
+* Restore the ROI expanding behavior for horizontal text areas merging when there is text
+* Improve the speed of panel detection
+* Improve the display of order numbers
+* Fix the ineffective panel detection method setting in custom workflow
+* Fix the index problem when selecting a text area to jump to the image content and adjusting the order of the text areas
+
 ## v4.0.1 (2025/08/29)
 
 Improve the fidelity of rotated text [#950](https://github.com/xulihang/ImageTrans-docs/issues/950)
