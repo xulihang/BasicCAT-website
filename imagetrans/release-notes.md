@@ -12,7 +12,7 @@ layout: page
 ## v4.1.0 (2025/09/13)
 
 * New built-in OCR：rapid
-* Add a offline balloon detection [model](https://github.com/xulihang/ImageTrans-docs/issues/860) for Japanese lines
+* Add an offline balloon detection [model](https://github.com/xulihang/ImageTrans-docs/issues/860) for Japanese lines
 * New OCR plugin: DocTR
 
 ## v4.0.2 (2025/09/10)
