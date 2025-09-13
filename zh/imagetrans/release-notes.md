@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v4.1.0 (2025/09/13)
+
+* 新的内置OCR：rapid
+* 默认附带识别日语文字行的[模型](https://github.com/xulihang/ImageTrans-docs/issues/860)
+* 添加DocTROCR插件
+
 ## v4.0.2 (2025/09/10)
 
 * 合并分镜内区域以及用OCR给现有区域添加文字操作会做区域合并操作来纠正顺序

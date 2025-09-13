@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v4.1.0 (2025/09/13)
+
+* New built-in OCR：rapid
+* Add a offline balloon detection [model](https://github.com/xulihang/ImageTrans-docs/issues/860) for Japanese lines
+* New OCR plugin: DocTR
+
 ## v4.0.2 (2025/09/10)
 
 * Correct the text order by mergin text areas for operations like merge text areas within panels and append text to exising text areas with OCR
