@@ -32,7 +32,7 @@ tags: silhouette
 
 注：如果识别的语音是准确的，我们不必这样做。这适用于音频质量不佳，导致识别结果不佳的情况。
 
-
+视频教程：<https://www.bilibili.com/video/BV1ReADeYEw3/>
 
 ## 延伸阅读
 
