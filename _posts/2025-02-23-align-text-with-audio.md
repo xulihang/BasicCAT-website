@@ -32,7 +32,7 @@ Aligned result:
 
 PS: if the recognized speech is accurate, we do not have to do this. This is for cases where the audio quality is not good, which leads to bad recognition results.
 
-
+Video tutorial: https://www.youtube.com/watch?v=QWbFLkAUdC0
 
 ## Further Reading
 
