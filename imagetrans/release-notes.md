@@ -9,7 +9,7 @@ layout: page
 }
 </style>
 
-## v4.1.0 (2025/09/13)
+## v4.2.0 (2025/09/21)
 
 * The auto font size feature of the vertical text engine is more accurate.
 * Text direction detection now defaults to using image proportions.
