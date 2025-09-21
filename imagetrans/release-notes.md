@@ -11,6 +11,28 @@ layout: page
 
 ## v4.1.0 (2025/09/13)
 
+* The auto font size feature of the vertical text engine is more accurate.
+* Text direction detection now defaults to using image proportions.
+* Add a new menu item to open the application folder.  
+* For batch translation, balloon detection is followed by text area merging.  
+* Recognition-only OCR can now be used specifically for long strip text.  
+* RapidOCR now supports returning character-level results.  
+* The ONNX version of mangaOCR is now included by default.  
+* Optimize templates based on the new built-in OCR.  
+* Timely release OpenCV's Mat to optimize memory usage.  
+* Batch text area merging is now a UI-independent operation.  
+* Dynamic libraries of ONNXRuntime are now loaded by default.  
+* Added "Remove Non-Text Areas (OCR)" to the custom workflow.  
+* When OCR processes a single area, cropping is based on the stored location rather than the view's position.  
+* RapidOCR now corrects the order by default when recognizing a single area.  
+* The reordering option for single-area OCR is ineffective for recognition-only engines like mangaOCR.  
+* Fix the text order issue with Baidu OCR Accurate Edition.  
+* Fix the localization issue for parameterized items in custom workflow.  
+* Fix the text area selection error when enabling typesetting mode without checking "Translated".  
+* Fix the issue of being unable to add general items when enabling parameter addition in custom workflow.
+
+## v4.1.0 (2025/09/13)
+
 * New built-in OCR：rapid
 * Add an offline balloon detection [model](https://github.com/xulihang/ImageTrans-docs/issues/860) for Japanese lines
 * New OCR plugin: DocTR
