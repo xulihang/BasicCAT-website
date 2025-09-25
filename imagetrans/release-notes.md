@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v4.3.0 (2025/09/24)
+
+* Expand small images to 1024x1024 before balloon detection
+* When merging areas, add spaces and new lines based on the merging direction and if the area is a character
+* Add `isChar` property for RapidOCR's character-level result
+* Add Arabic OCR model for RapidOCR
+* Do not expand areas after balloon detection
+* Add a custom workflow item to recognize long text areas and remove the project setting: use recognition-only OCR only for long text areas
+* Add a custom workflow item to recognize textless areas mergable with areas with text
+* New long text ratio project setting
+* Update manga templates
+* Fix the issue of possible float geometry values of balloons detected
+* Fix the issue where text with only a spaces is trimmed if auto remove line breaks is checked
+*Fix a localization problem of custom workflow items which will add an extra space after the item's name
+
 ## v4.2.0 (2025/09/21)
 
 * The auto font size feature of the vertical text engine is more accurate.
