@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v4.4.0 (2025/09/27)
+
+* Add workflow toolbar
+* Select OCR language based on project language when creating a new project
+* Automatically save project files after creating a new project
+* Load the pre-defined workflow when opening custom workflow configuration for the first time
+* When using the toolbar to modify styles, only keep the modified styles in local styles
+* Fix the command-line parameter passing issue for Windows's bat and exe files
+
 ## v4.3.0 (2025/09/24)
 
 * Expand small images to 1024x1024 before balloon detection
