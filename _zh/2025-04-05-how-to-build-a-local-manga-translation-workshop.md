@@ -15,15 +15,12 @@ tags: imagetrans
 
 ## 启动本地服务
 
-1. 启动本地mangaOCR服务，供ImageTrans调用以识别日语。[具体操作说明](https://github.com/xulihang/ImageTrans_plugins/tree/master/mangaOCR)。如果需要翻译其它语言，可以使用其它提供的本地服务。
 
-   ![mangaocr](/album/local-manga-translator/manga-ocr.jpg)
-   
-2. 安装并运行Ollama，执行以下命令下载阿里的千问大语言模型：
+安装并运行Ollama，执行以下命令下载阿里的千问大语言模型：
 
-   ```
-   ollama run qwen2.5
-   ```
+```
+ollama run qwen2.5
+```
    
 ## 使用ImageTrans翻译日漫
 

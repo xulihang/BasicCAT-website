@@ -15,15 +15,11 @@ Thanks to the current AI technologies, we can now run our offline AI manga trans
 
 ## Start Local Services
 
-1. Start a local manga OCR servce which ImageTrans uses for Japanese recognition ([guide](https://github.com/xulihang/ImageTrans_plugins/tree/master/mangaOCR)). If you need to translation images in other languages, you can choose other services.
+Install and run Ollama. Execute the following command to download the qwen model.
 
-   ![mangaocr](/album/local-manga-translator/manga-ocr.jpg)
-   
-2. Install and run Ollama. Execute the following command to download the qwen model.
-
-   ```
-   ollama run qwen2.5
-   ```
+```
+ollama run qwen2.5
+```
    
 ## Use ImageTrans to Translate Manga
 
