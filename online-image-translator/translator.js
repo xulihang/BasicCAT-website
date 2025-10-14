@@ -33,7 +33,7 @@ async function initTess(lang){
         checkCloseByHeight = true;
     }
     if (!tessWorker) {
-        await loadLibrary("https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js","text/javascript");
+        await loadLibrary("https://cdn.jsdelivr.net/npm/@scribe.js/tesseract.js/dist/tesseract.min.js","text/javascript");
     }
     if (!tessLang || lang != tessLang) {
         tessLang = lang;
@@ -51,6 +51,7 @@ async function initTess(lang){
 
 async function tessOCR(image) {
     const ret = await worker.recognize(image);
+    console.log(ret);
     let boxes = [];
     ret.data.lines.forEach(line => {
         if (line.confidence>10) {
