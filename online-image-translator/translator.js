@@ -38,6 +38,7 @@ async function initTess(lang){
     if (!tessLang || lang != tessLang) {
         tessLang = lang;
         worker = await Tesseract.createWorker(lang, 1, {
+            workerPath: "https://cdn.jsdelivr.net/npm/@scribe.js/tesseract.js/dist/worker.min.js",
             logger: m => console.log(m),
         });
         if (lang.indexOf("vert") != -1) {
