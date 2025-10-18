@@ -18,6 +18,7 @@ layout: page
 * Merge operation in batch mode now uses threads to prevent software unresponsiveness
 * Optimize plugin loading
 * New PSD export option: calculate text offset
+* New MT plugin: Sakura
 * Fix vertical text engine rendering error when text contains only line breaks
 * Fix incorrect order when double-clicking to set the index
 * Fix incorrect alpha channel handling in Text Remover when processing images with transparency
