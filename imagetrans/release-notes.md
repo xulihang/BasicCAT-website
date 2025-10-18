@@ -9,6 +9,22 @@ layout: page
 }
 </style>
 
+## v4.5.0 (2025/10/18)
+
+* New sorting methods: counter clockwise, clockwise, text columns
+* New panel detection method: text clustering
+* Add batch adjustment of the order of selected areas or panels
+* Panel detection now supports specifying the sorting method and the object detection model
+* Merge operation in batch mode now uses threads to prevent software unresponsiveness
+* Optimize plugin loading
+* Fix vertical text engine rendering error when text contains only line breaks
+* Fix incorrect order when double-clicking to set the index
+* Fix incorrect alpha channel handling in Text Remover when processing images with transparency
+* Fix failures to load WebP images for operations like OCR
+* Fix software title not updating and recent records not being added after "Save As"
+* Fix error when determining the style based on the direction if the style doesn't exist
+* Other bug fixes
+
 ## v4.4.0 (2025/09/27)
 
 * Add workflow toolbar
