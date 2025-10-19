@@ -21,9 +21,9 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
 ## 下载
 
-* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.5.3/Silhouette-windows-x64.zip)
-* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.3/Silhouette-mac-arm.dmg)
-* [macOS (Intel CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.3/Silhouette-mac-x64.dmg)
+* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.5.4/Silhouette-windows-x64.zip)
+* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.4/Silhouette-mac-arm.dmg)
+* [macOS (Intel CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.4/Silhouette-mac-x64.dmg)
 * [Linux](/zh/silhouette/docs/#安装)
 
 [网盘下载](https://pan.quark.cn/s/0eefc3296abc)

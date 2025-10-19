@@ -24,9 +24,8 @@ Upon opening the program, you need to enter your order ID and your email to veri
 
 There are other things you need to setup.
 
-1. VLC. Silhouette uses VLC as the video player. You need to install it first. Remember to download VLC v3 and choose the 64-bit version (or Apple Silicon for macOS).
-2. Whisper model. You need to select a Whisper model for speech recognition. You can find the download link in the program or download them [here](https://github.com/xulihang/Silhouette_plugins/#whisper-models).
-3. API keys. If you need to use translation services like ChatGPT, Google or DeepL. You need to fill in the API keys in Preferences
+1. Whisper model. You need to select a Whisper model for speech recognition. You can find the download link in the program or download them [here](https://github.com/xulihang/Silhouette_plugins/#whisper-models).
+2. API keys. If you need to use translation services like ChatGPT, Google or DeepL. You need to fill in the API keys in Preferences
 
 
 ## Getting Started

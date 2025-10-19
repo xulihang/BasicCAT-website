@@ -23,9 +23,9 @@ sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 
 此外，还需要完成其他设置。
 
-1. VLC。Silhouette使用VLC作为视频播放器。需要先安装它。记得下载64位版VLC v3（mac选Apple Silicon）。
-2. Whisper模型。需要为语音识别选择一个Whisper模型。可以在程序中找到下载链接或者在[这里](https://github.com/xulihang/Silhouette_plugins/#whisper-models)下载。
-3. API密钥。如果需要使用ChatGPT、Google或DeepL等翻译服务。需要在偏好设置中填写API密钥
+
+1. Whisper模型。需要为语音识别选择一个Whisper模型。可以在程序中找到下载链接或者在[这里](https://github.com/xulihang/Silhouette_plugins/#whisper-models)下载。
+2. API密钥。如果需要使用ChatGPT、Google或DeepL等翻译服务。需要在偏好设置中填写API密钥
 
 
 ## 快速开始

@@ -10,6 +10,11 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.4 (2025/10/19)
+
+* Fix an issue of the video player's context menu
+* Include VLC by default
+
 ## v1.5.3 (2025/07/06)
 
 * Add time span preference for jumping
