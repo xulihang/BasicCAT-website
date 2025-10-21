@@ -4,6 +4,12 @@ layout: page
 description: Silhouette documentation.
 ---
 
+## Supported Systems
+
+* Windows 7+
+* macOS 10.15+
+* Linux
+
 ## Installation
 
 For Windows, unzip the file and use the `Silhouette.exe` to run the program.

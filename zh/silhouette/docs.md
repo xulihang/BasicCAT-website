@@ -4,6 +4,12 @@ layout: page
 description: Silhouette文档
 ---
 
+## 支持的操作系统
+
+* Windows 7+
+* macOS 10.15+
+* Linux
+
 ## 安装
 
 对于Windows ，解压文件后使用`Silhouette.exe`运行程序。

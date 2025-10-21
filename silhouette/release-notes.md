@@ -10,6 +10,13 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.5.5 (2025/10/21)
+
+* Windows 7 support added
+* VLC loading failures now trigger error reporting
+* Fix timeline navigation failure when clicking on disabled waveform display
+* Fix "Follow Progress" checkbox not resetting after pausing playback of selected lines
+
 ## v1.5.4 (2025/10/19)
 
 * Fix an issue of the video player's context menu
