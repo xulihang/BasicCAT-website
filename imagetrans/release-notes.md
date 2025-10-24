@@ -9,6 +9,20 @@ layout: page
 }
 </style>
 
+## v4.6.0 (2025/10/24)
+
+* When a text box is selected in typesetting mode, the font size updates after releasing the mouse  
+* Setting the font name via the toolbar no longer adds the font size to the local style  
+* Operations like auto font size now check whether the local style includes a font size, rather than checking for the existence of a local style  
+* macOS OCR now supports word-level results  
+* Update the ChatGPT plugin to support Siliconflow's thinking models  
+* PDF export supports using text-removed images or omitting images entirely  
+* PDF export supports vertical text, multi-line text, and Arabic script  
+* The text layer in PDF exports can be set to visible  
+* PDF import supports importing text at the word level  
+* PDF import also supports text extraction when selecting image extraction  
+* Added Lao, Khmer, and Cambodian to the list of languages without spaces
+
 ## v4.5.0 (2025/10/18)
 
 * New sorting methods: counter clockwise, clockwise, text columns
