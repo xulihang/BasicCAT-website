@@ -21,7 +21,7 @@ layout: page
 * The text layer in PDF exports can be set to visible  
 * PDF import supports importing text at the word level  
 * PDF import also supports text extraction when selecting image extraction  
-* Added Lao, Khmer, and Cambodian to the list of languages without spaces
+* Added Lao, Khmer, and Thai to the list of languages without spaces
 
 ## v4.5.0 (2025/10/18)
 
