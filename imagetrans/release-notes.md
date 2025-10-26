@@ -16,7 +16,6 @@ layout: page
 * Add new templates for CG images
 * Add the ONNX version of 48px CTC OCR from manga-image-translator
 * Add project setting to remove background from both ends of text in images when using OCR for pure recognition
-* Simplify ChatGPT's batch translation prompt
 * When adjusting the selected areas by offset, if the target index exceeds the boundary, it will be adjusted by adding or subtracting the total number of areas
 * Fix an issue where setting the color using toolbar did not take effect when the text area had a textColor attribute
 

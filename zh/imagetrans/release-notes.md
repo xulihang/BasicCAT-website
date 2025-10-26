@@ -16,7 +16,6 @@ layout: page
 * 新增CG图的模板
 * 新增ONNX版manga-image-translator的48px CTC OCR
 * 新增纯识别OCR运行时去除图像中文字两端背景的项目设置
-* 简化ChatGPT批量翻译的提示词
 * 按偏移调整所选区域时，如果目标序号超出边界，则用所有区域数量和目标序号相加或者减
 * 修复文字区域有textColor属性时，工具栏修改颜色不生效的问题
 
