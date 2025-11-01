@@ -9,6 +9,29 @@ layout: page
 }
 </style>
 
+## v5.0.0 (2025/11/01)
+
+* Added balloon detection to mask generation method
+* Balloon detection and OCR-based mask generation only process the entire image by default
+* Mask and inpainting method settings now use name-based values
+* Inpainting now only replaces the image within text areas
+* Add MIGAN inpainting method
+* Inpainting supports sliding window for large images or detail preservation
+* Improve text removal effect for CG templates
+* Expand pixels based on project settings for editing the text-removed image of an area
+* Text remover supports undo, area-based operations, and inpainting based on the current image
+* Percentage controls in text remover and mask editor now support scroll wheel adjustment
+* Mask dilation now applies to the entire image instead of individual text areas
+* Optimize text removal and mask generation speed
+* Update Lama plugin to support dynamically sized input images and added max size setting
+* Update Sakura prompts to avoid cross-line interference
+* ChatGPT now uses the same batch translation prompts as Sakura
+* Add preference to remember machine translation results
+* Add menu items to delete masks and text-removed images for the current picture
+* Default inpainting expansion pixels changed from 5 to 20
+* Fix inaccurate geometry for inpainting after expansion
+* Other bug fixes
+
 ## v4.7.0 (2025/10/26)
 
 * Color detection is executed in a separate thread to prevent the program from becoming unresponsive
