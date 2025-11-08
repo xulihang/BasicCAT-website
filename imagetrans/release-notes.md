@@ -9,6 +9,19 @@ layout: page
 }
 </style>
 
+## v5.1.0 (2025/11/08)
+
+* The mask editor now supports dilating or eroding selected areas and has changed the default method for selecting action modes.
+* Add new output format: Rasterized PSD (requires Krita).
+* Refactor the ORA format export.
+* New projects now save masks and text-removed images to the `intermediateResults` directory by default.
+* Change the output path to use the output directory as the root.
+* Add SegmentAnything as a new mask generator, which is more suitable for text on complex backgrounds.
+* Add custom workflow items for restoring UI state, generating mask images, and generating text-removed images.
+* Add menu items for generating mask or text-removed images for the current image.
+* Add support for lossless WebP output.
+* Fix an issue that the text area coordinates are not updated for single-area mask and text-removed images modification after ROI expansion
+
 ## v5.0.0 (2025/11/01)
 
 * Added balloon detection to mask generation method
