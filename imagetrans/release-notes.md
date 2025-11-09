@@ -23,6 +23,7 @@ layout: page
 * Optimize memory usage for OCR and balloon detection on long images  
 * Closing the progress dialog can stop the OCR and balloon detection operations for a single image  
 * Determine whether to use JPG or PNG as the intermediate format for external image inpainting based on the file extension
+* Fix a mask generation issue for overlapped text areas
 * Fix a problem for server that the translation mode is turned on before processing
 * Fix the image size limit (65500 pixels) for panel detector
 * Fix an issue that the text area coordinates are not updated for single-area mask and text-removed images modification after ROI expansion
