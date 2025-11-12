@@ -8,6 +8,13 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+## v5.1.1 (2025/11/12)
+
+* Text Remover's image can be dragged
+* Backfill text-removed image content based on mask
+* Add project setting for feathering the mask when backfilling text-removed images
+* Mask generation now removes contours without external contours instead of only keeping the most numerous contours
+* Other bug fixes
 
 ## v5.1.0 (2025/11/08)
 
