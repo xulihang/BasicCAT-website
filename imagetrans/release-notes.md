@@ -17,6 +17,7 @@ layout: page
 * Default value for image inpainting expansion pixels changed from 20 to 5
 * Remove mask content by a few pixels at edges when mask covers the entire image
 * When server selects OCR based on language, it also determines whether to disable right-to-left reading order option according to language
+* Do not uncheck by text area when selecting a deep learning image inpainting method like MIGAN and Lama
 * Use Krita to convert PSD to JPG
 * Remove obsolete PSD operations
 * Add support for generating editable PSDs for current image
