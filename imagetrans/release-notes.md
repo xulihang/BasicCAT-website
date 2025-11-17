@@ -11,8 +11,8 @@ layout: page
 
 ## v5.2.0 (2025/11/15)
 
-* Remov AutoitV3 version Photoshop scripts and switch to directly calling JavaScript files
-* Using Shell+AppleScript to launch Photoshop on macOS
+* Remove AutoitV3 version Photoshop scripts and switch to directly calling JavaScript files
+* Use Shell+AppleScript to launch Photoshop on macOS
 * Server now supports receiving workflow, API, project settings, and template names
 * Default value for image inpainting expansion pixels changed from 20 to 5
 * Remove mask content by a few pixels at edges when mask covers the entire image
