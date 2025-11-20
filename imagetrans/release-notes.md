@@ -9,6 +9,23 @@ layout: page
 }
 </style>
 
+## v5.3.0 (2025/11/20)
+
+
+* Add crop and any angle rotation features to image editing
+* Add French and Vietnamese to RapidOCR's language list
+* Add a menu item for reversing text
+* RapidOCR now uses the v5 Arabic model
+* Add a menu item for filtering images in Find & Replace
+* Translated Image Manager now supports inverting selection
+* Direction control characters are now removed from text when generating PDFs
+* Add "Remove Low-Confidence Areas" to the custom workflow
+* Fix an issue where the current image in Find & Replace did not update after switching images
+* Fix incorrect intermediate result directory parameter params when generating PSD files
+* Fix an issue where text layers in exported PDFs might extend beyond the document boundaries
+* Fix an issue where PDF generation did not report errors properly
+* Fix an issue where non-Arabic characters are reversed when generating Arabic PDFs
+
 ## v5.2.0 (2025/11/15)
 
 * Remove AutoitV3 version Photoshop scripts and switch to directly calling JavaScript files
