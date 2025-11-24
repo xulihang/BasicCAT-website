@@ -8,7 +8,7 @@ tags: imagetrans
 
 这周谷歌发布了基于Gemini 3的Nano Banana Pro，可以输入一张图片，直接给出它的翻译版本。
 
-原图：
+原图（[男子高生×新人OLの話](https://www.dlsite.com/girls/work/=/product_id/RJ276847.html)）：
 
 ![原图](/album/dlsite/006-ja.webp)
 
