@@ -1,7 +1,7 @@
 ---
 date: 2025-11-25 21:20:50+08:00
 layout: post
-title: Can Large Language Model Replace Human Translator in Manga Translation?
+title: Can Large Language Models Replace Human Translators in Manga Translation?
 categories: blog
 tags: imagetrans
 ---
