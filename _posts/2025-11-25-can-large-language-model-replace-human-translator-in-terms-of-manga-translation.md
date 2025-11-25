@@ -7,7 +7,7 @@ tags: imagetrans
 ---
 
 <style>
-table {
+.post-content table {
   width: auto;
 }
 </style>
