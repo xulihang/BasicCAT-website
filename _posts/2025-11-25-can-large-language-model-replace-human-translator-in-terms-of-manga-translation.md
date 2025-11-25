@@ -57,7 +57,7 @@ Through comparison, it can be observed that current large AI models still fall s
 
 However, human translation also has its problems, such as translators over-interpreting or not adhering closely enough to the original text. This was more common before the emergence of high-quality machine translation. Nowadays, with the widespread adoption of machine translation post-editing, many human translators may directly use machine translation results, resulting in higher fidelity to the original text.
 
-As for which large language model performs the best, it can be seen that the more parameters a model has, the better its quality tends to be. Some large language models, such as Sakura, are fine-tuned using Japanese-Chinese corpora. However, due to their smaller parameter amount, their translation performance remains suboptimal and they are even more prone to hallucinations compared to larger lanuage models with more parameters.
+As for which large language model performs the best, it can be seen that the more parameters a model has, the better its quality tends to be. Some large language models, such as Sakura, are fine-tuned using Japanese-Chinese corpora. However, due to their smaller parameter amount, their translation performance remains suboptimal and is prone to hallucinations compared to larger lanuage models with more parameters. But their performance is usually better than general models with similar number of parameters.
 
 
 Check out [ImageTrans](/imagetrans/), a computer-aided image translation tool, to complete manga translation with the help of various large language models.
