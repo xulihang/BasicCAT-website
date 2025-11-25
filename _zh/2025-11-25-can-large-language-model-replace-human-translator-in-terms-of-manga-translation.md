@@ -1,7 +1,7 @@
 ---
 date: 2025-11-25 21:20:50+08:00
 layout: post
-title: 大模型在漫画翻译领域能取代人工译员吗？
+title: 大模型能取代人工译员吗（以漫画翻译为例）？
 categories: blog
 tags: imagetrans
 ---
