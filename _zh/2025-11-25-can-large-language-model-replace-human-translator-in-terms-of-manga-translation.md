@@ -1,7 +1,7 @@
 ---
 date: 2025-11-25 21:20:50+08:00
 layout: post
-title: 大模型能取代人工译员吗（以漫画翻译为例）？
+title: 大模型能取代人工译员吗？（以漫画翻译为例）
 categories: blog
 tags: imagetrans
 ---
@@ -12,7 +12,7 @@ tags: imagetrans
 }
 </style>
 
-大模型在漫画翻译领域能取代人工译员吗？我们可以以下面这张《乱马1/2》漫画为例，比对以下大模型的翻译和人工翻译。比对了ChatGPT、Claude、Gemini等在线大模型，Sakura、Qwen等本地大模型和谷歌、百度、彩云等传统机器翻译。
+大模型在漫画翻译领域能取代人工译员吗？我们可以以下面这张《乱马1/2》漫画为例，比对一下大模型的翻译和人工翻译。比对了ChatGPT、Claude、Gemini等在线大模型，Sakura、Qwen等本地大模型和谷歌、百度、彩云等传统机器翻译。
 
 ![原图](/album/imagetrans-language-learning/Ranma1_012.jpg)
 
