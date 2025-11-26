@@ -103,4 +103,10 @@ tags: imagetrans
 | gpt-oss-120b | 0.0473 | 0.0850 | 0.0662 |
 | gpt-oss-20b | 0.0477 | 0.0711 | 0.0594 |
 
-欢迎使用计算机辅助漫画翻译软件[ImageTrans](/zh/imagetrans/)，可以在各种大模型的帮助下完成翻译。
+当然，漫画翻译是种多模态翻译，实际翻译工作还有嵌字、重修等各种环节。以下是Viz Media的英文版：
+
+![Vizmedia](/album/ranma-vizmedia.webp)
+
+欢迎使用计算机辅助漫画翻译软件[ImageTrans](/zh/imagetrans/)，可以在各种大模型的帮助下完成翻译，一站式完成OCR、翻译、嵌字、修图等工作。
+
+

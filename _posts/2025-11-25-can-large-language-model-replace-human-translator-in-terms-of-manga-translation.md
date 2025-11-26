@@ -104,5 +104,10 @@ Japanese to English:
 | gpt-oss-20b | 0.0477 | 0.0711 | 0.0594 |
 
 
-Check out [ImageTrans](/imagetrans/), a computer-aided image translation tool, to complete manga translation with the help of various large language models.
+Of course, manga translation is multimodal. It involves other works like lettering and retouching. Here is the English version by Viz Media:
+
+![Vizmedia](/album/ranma-vizmedia.webp)
+
+
+Check out [ImageTrans](/imagetrans/), a computer-aided image translation tool, to complete manga translation with the help of various large language models. It is an integrated app, which lets you do OCR, translation, lettering and retouching in one place.
 
