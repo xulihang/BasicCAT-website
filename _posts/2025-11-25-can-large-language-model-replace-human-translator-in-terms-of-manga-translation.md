@@ -67,5 +67,42 @@ However, human translation also has its problems, such as translators over-inter
 As for which large language model performs the best, it can be seen that the more parameters a model has, the better its quality tends to be. Some large language models, such as Sakura, are fine-tuned using Japanese-Chinese corpora. However, due to their smaller parameter amount, their translation performance remains suboptimal and is prone to hallucinations compared to larger lanuage models with more parameters. But their performance is usually better than general models with similar number of parameters.
 
 
+Below are tables of different engines' BLEU scores. The scores are calculated comparing the similarity with the human translation, which can be used to evaluate the quality.
+
+Japanese to Chinese:
+
+| Engine | BLEU@bilibili | BLEU@Hongkong | BLEU@op | Average |
+| --- | --- | --- | --- | --- |
+| qwen3-235b | 0.2035 | 0.0484 | 0.2247 | 0.1589 |
+| caiyun | 0.1760 | 0.0481 | 0.2147 | 0.1463 |
+| deepseek-chat-v3.2 | 0.1803 | 0.0335 | 0.1719 | 0.1286 |
+| claude-4.5-sonnet | 0.1104 | 0.0917 | 0.1751 | 0.1257 |
+| chatgpt-gpt4o | 0.1253 | 0.0565 | 0.1448 | 0.1089 |
+| sakura-14b | 0.1115 | 0.0652 | 0.1370 | 0.1046 |
+| sakura-7b | 0.0647 | 0.0816 | 0.1530 | 0.0998 |
+| baidu | 0.0933 | 0.0533 | 0.1408 | 0.0958 |
+| gpt-oss-120b | 0.1032 | 0.0225 | 0.1226 | 0.0828 |
+| gemini-2.5-flash | 0.0961 | 0.0400 | 0.0981 | 0.0781 |
+| gpt-oss-20b | 0.0616 | 0.0320 | 0.0868 | 0.0601 |
+| qwen3-8b | 0.0527 | 0.0225 | 0.0601 | 0.0451 |
+| google | 0.0247 | 0.0552 | 0.0502 | 0.0434 |
+
+Japanese to English:
+
+| Engine | BLEU@vizmedia | BLEU@op | Average |
+| --- | --- | --- | --- |
+| chatgpt-gpt4o | 0.0545 | 0.1968 | 0.1257 |
+| qwen3-235b | 0.0523 | 0.1864 | 0.1194 |
+| deepseek-chat-v3.2 | 0.0813 | 0.1432 | 0.1122 |
+| claude-4.5-sonnet | 0.0606 | 0.1267 | 0.0937 |
+| caiyun | 0.0625 | 0.1193 | 0.0909 |
+| google | 0.0468 | 0.1348 | 0.0908 |
+| gemini-2.5-flash | 0.0515 | 0.1294 | 0.0904 |
+| baidu | 0.0540 | 0.1065 | 0.0803 |
+| qwen3-8b | 0.0438 | 0.1081 | 0.0760 |
+| gpt-oss-120b | 0.0473 | 0.0850 | 0.0662 |
+| gpt-oss-20b | 0.0477 | 0.0711 | 0.0594 |
+
+
 Check out [ImageTrans](/imagetrans/), a computer-aided image translation tool, to complete manga translation with the help of various large language models.
 
