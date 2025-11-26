@@ -31,6 +31,23 @@ tags: imagetrans
 
 ![nano去文字图](/album/nano-banana/text-removed-nano.webp)
 
+很多时候，它还会自己想出一些图片内容。即使通过以下API基于掩膜编辑也无法避免。
+
+```bash
+export OPENAI_BASE_URL="https://api.qnaigc.com/v1"
+export OPENAI_API_KEY=""
+
+curl "$OPENAI_BASE_URL/images/edits" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $OPENAI_API_KEY" \
+    -d '{
+        "model": "gemini-3.0-pro-image-preview",
+        "image": "https://www.basiccat.org/album/dlsite/006-ja.webp",
+        "mask": "https://www.basiccat.org/album/nano-banana/mask.png",
+        "prompt": "将文字翻译成英文"
+    }'
+```
+
 这样看来，想用它来辅助快速翻译图片是可行的，但要人工漫画翻译，融合它到传统人工翻译流程，输出高质量的翻译结果还是存在一些问题。
 
 下面是使用计算机辅助图片翻译软件[ImageTrans](/zh/imagetrans/)走人工翻译流程的结果。
@@ -48,3 +65,6 @@ tags: imagetrans
 ![翻译的版本](/album/nano-banana/translated.webp)
 
 
+## 附件
+
+保存了原图、nano生成的去文字图、翻译图的PSD文件：[nano-banana-modified.psd](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/nano-banana-modified.psd)

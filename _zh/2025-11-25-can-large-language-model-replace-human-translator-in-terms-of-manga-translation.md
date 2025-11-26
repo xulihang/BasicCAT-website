@@ -107,6 +107,6 @@ tags: imagetrans
 
 ![Vizmedia](/album/ranma-vizmedia.webp)
 
-欢迎使用计算机辅助漫画翻译软件[ImageTrans](/zh/imagetrans/)，可以在各种大模型的帮助下完成翻译，一站式完成OCR、翻译、嵌字、修图等工作。
+欢迎使用计算机辅助漫画翻译软件[ImageTrans](/zh/imagetrans/)，可以在各种大模型的帮助下，一站式完成OCR、翻译、嵌字、修图等工作。
 
 
