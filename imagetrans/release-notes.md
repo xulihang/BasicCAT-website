@@ -9,6 +9,19 @@ layout: page
 }
 </style>
 
+## v5.4.0 (2025/11/29)
+
+* New poject setting: do not check separation for text areas on complex background
+* Add spell checking based using the ChatGPT plugin
+* New machine translation plugin: macOS's built-in translation
+* LamaInpaint on macOS can now use the CoreML model
+* mangaOCR uses balloon detection to locate the text by default
+* Add word-level detection for RapidOCR
+* Add mask-based mode for image cropping
+* Add a context menu to clear settings in API perferences
+* Fix merging of consecutive non-Arabic words in Arabic text
+* Fix the issue where consecutive non-Arabic words were not reversed as a whole when exporting Arabic PDFs
+
 ## v5.3.0 (2025/11/20)
 
 
