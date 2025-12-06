@@ -12,7 +12,7 @@ layout: page
 ## v5.4.0 (2025/11/29)
 
 * New poject setting: do not check separation for text areas on complex background
-* Add spell checking based using the ChatGPT plugin
+* Add spell checking using the ChatGPT plugin
 * New machine translation plugin: macOS's built-in translation
 * LamaInpaint on macOS can now use the CoreML model
 * mangaOCR uses balloon detection to locate the text by default
