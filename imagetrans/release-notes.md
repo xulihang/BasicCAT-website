@@ -14,6 +14,7 @@ layout: page
 * Add new image inpainting plugins: OpenAI and Gemini; support using Gemini 3 Pro Image (Nano Banana) for image redraw
 * Add new OCR plugin: DeepSeek-OCR
 * Add new workflow item: Remove areas outside panels
+* Do not merge areas of different panels
 * Support using OCR plugins for layout analysis (via panel detection)
 * PDF export supports image compression
 * Support adding files to the project via drag-and-drop

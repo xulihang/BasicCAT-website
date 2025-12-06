@@ -14,6 +14,7 @@ layout: page
 * 新增图像修复插件：OpenAI和Gemini，支持调用Gemini 3 Pro Image (Nano Banana)重绘图像
 * 新增OCR插件：DeepSeek-OCR
 * 新增工作流流程：去除分镜外区域
+* 不合并不在一个分镜的区域
 * 支持调用OCR插件做版面分析（通过分镜检测）
 * PDF导出支持压缩图像
 * 支持通过拖拽的方式添加文件到项目
