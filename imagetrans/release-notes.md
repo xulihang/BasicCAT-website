@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.5.0 (2025/12/06)
+
+* Add new image inpainting plugins: OpenAI and Gemini; support using Gemini 3 Pro Image (Nano Banana) for image redraw
+* Add new OCR plugin: DeepSeek-OCR
+* Add new workflow item: Remove areas outside panels
+* Support using OCR plugins for layout analysis (via panel detection)
+* PDF export supports image compression
+* Support adding files to the project via drag-and-drop
+
 ## v5.4.0 (2025/11/29)
 
 * New poject setting: do not check separation for text areas on complex background
