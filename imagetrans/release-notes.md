@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v5.5.1 (2025/12/07)
+
+* Directly save raw image bytes in PDF when importing PDF with the image extraction mode
+* Fix an issue where PDF importing is not aborted after the cancel button is clicked
+
 ## v5.5.0 (2025/12/06)
 
 * Add new image inpainting plugins: OpenAI and Gemini; support using Gemini 3 Pro Image (Nano Banana) for image redraw

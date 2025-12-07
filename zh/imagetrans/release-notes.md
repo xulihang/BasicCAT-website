@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.5.1 (2025/12/07)
+
+* 图像提取模式导入PDF时，直接保存PDF中的原始数据
+* 修复导入PDF时点了取消没有结束操作的问题
+
+
 ## v5.5.0 (2025/12/06)
 
 * 新增图像修复插件：OpenAI和Gemini，支持调用Gemini 3 Pro Image (Nano Banana)重绘图像
