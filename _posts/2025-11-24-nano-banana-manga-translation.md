@@ -68,3 +68,11 @@ Translated:
 ## Attachments
 
 PSD file with the original image and nano banana created text-cleaned and translated images：[nano-banana-modified.psd](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/nano-banana-modified.psd)
+
+## 2025-12-08 Update
+
+After testing, as long as the input image size matches the output size, for example 1024×1024, the aspect ratio can be preserved. In this case, using it to remove text is not a problem. The new version of ImageTrans has integrated Gemini's image inpainting plugin.
+
+Example:
+
+![example](/album/imagetrans-features/text-removal-and-reinjection.jpg)

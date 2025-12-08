@@ -68,3 +68,11 @@ curl "$OPENAI_BASE_URL/images/edits" \
 ## 附件
 
 保存了原图、nano生成的去文字图、翻译图的PSD文件：[nano-banana-modified.psd](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/nano-banana-modified.psd)
+
+## 2025-12-08更新
+
+经过测试，只要输入的图像尺寸符合输出尺寸，比如1024x1024，比例可以保持不变。这样用它来去除文字就没有问题了。新版的ImageTrans已经集成了Gemini的图像修复插件。
+
+示例图：
+
+![示例图](/album/imagetrans-features/text-removal-and-reinjection.jpg)
