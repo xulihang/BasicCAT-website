@@ -158,4 +158,12 @@ Lama Inpaint：
 ![Lama Inpaint](/album/imagetrans-text-removal/mrz/lama.jpg)
 
 
+## 使用图生图模型
 
+如果背景被文字遮挡较多，而且是人物等比较精细的内容，用以上方法还原背景效果就一般了。这时可以使用Stable Diffusion、Gemini等图生图模型。
+
+Gemini的Nano Banana可以取得不错的效果。
+
+示例：
+
+![gemini示例](/album/imagetrans-features/text-removal-and-reinjection.jpg)

@@ -159,3 +159,15 @@ Lama Inpaint:
 
 
 
+## Image-to-Image Model
+
+If the background is blocked by the text severely and the content is delicate (e.g. human body), the above methods cannot have a decent result.
+
+We can use image-to-image models like Stable Diffusion and Gemini to restore the background.
+
+The Nano Banana model of Gemini can have a good result.
+
+Sample:
+
+![gemini sample](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+
