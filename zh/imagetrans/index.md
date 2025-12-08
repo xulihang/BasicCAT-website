@@ -49,7 +49,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 
 ### 准确抹除文字并回填译文
 
-软件能调用Sickzil-Machine、二值化、PatchMatch等工具和算法生成文字掩膜、去除文字，并根据文字区域的位置和面积回填译文，自动调整译文字体大小。以上操作均支持手动调整。
+软件能调用二值化、PatchMatch、Lama Inpaint、Gemini Nano Banana等算法和工具生成文字掩膜、去除文字，并根据文字区域的位置和面积回填译文，自动调整译文字体大小。以上操作均支持手动调整。
 
 ![文字抹除与回填](/album/imagetrans-features/text-removal-and-reinjection.jpg)
 

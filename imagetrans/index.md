@@ -48,7 +48,7 @@ It also supports translation memory, corpus concordance, term management and oth
 
 ### Precise text removal and reinjection
 
-The software can use tools and algorithms like Sickzil-Machine, binarization, PatchMatch to generate text mask and remove text. It can refill the translation and automatically adjust the font size according to the position and area of text regions. All the above operations support manual adjustment.
+The software can use algorithms and tools like binarization, PatchMatch, Lama Inpaint and Gemini Nano Banana to generate text mask and remove text. It can refill the translation and automatically adjust the font size according to the position and area of text regions. All the above operations support manual adjustment.
 
 ![text removal and reinjection](/album/imagetrans-features/text-removal-and-reinjection.jpg)
 
