@@ -59,6 +59,11 @@ You can define terms in the project. If the sentences to translate contain term 
 
 ChatGPT can also be used to recognize text.
 
+If using general OCR software to get the text, we can use ChatGPT to spell check the result.
+
+## Text Cleaning
+
+With image-to-image model, we can get the translated picture in an end-to-end way. But the current result is not satisfying and is not easy to be integrated into a traditional workflow. It is more suitable for text cleaning. Gemini has a better result than ChatGPT in this aspect.
 
 ## Limitation
 
