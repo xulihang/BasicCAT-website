@@ -17,7 +17,7 @@ Here are the steps to do this:
 
    ![Home](/album/searchablePDF/home-en.jpg)
    
-3. Export the images as a PDF. Use the original images and add a searchable text layer with the source text.
+3. Export the images as a PDF. Use the original images and add a searchable text layer with the source text. Here, we need to specify a font. We can use Arial Unicode MS, which supports all languages.
 
    ![export options](/album/searchablePDF/export-en.jpg)
 

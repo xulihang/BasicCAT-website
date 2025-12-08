@@ -17,7 +17,7 @@ ImageTrans是一款计算机辅助文字识别和图片翻译软件，可以使�
 
    ![首页](/album/searchablePDF/home-zh.jpg)
    
-3. 导出图片为PDF。使用原文图像并用原文添加可检索文本层。
+3. 导出图片为PDF。使用原文图像并用原文添加可检索文本层。这里需要选择一个合适的字体，推荐用Arial Unicode MS，支持所有语言。
 
    ![导出选项](/album/searchablePDF/export-zh.jpg)
    
