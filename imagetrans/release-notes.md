@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v5.6.0 (2025/12/14)
+
+* Add support for using ONNXRuntime as the engine for object detection
+* New feature: Hot Folder
+* Add the ability to detect languages in images and text
+* RapidOCR now supports automatic detection of languages in images
+* New workflow items: Export PDF, detect languages in images to set OCR, and detect text to set the project source language
+* Add support for preset PDF import/export options and PSD export options
+* Add support for processing PDF and other files via command-line
+* New project settings: merge based on panels
+* New project settings: multiply with alpha channel during image inpainting
+* New project settings: mask generation methods and image inpainting methods for complex background areas
+* Fix the issue where adding images in project folder via drag-and-drop would fail
+* Fix the issue where copying text would fail when "Remove Line Breaks" is unchecked
+
 ## v5.5.1 (2025/12/07)
 
 * Directly save raw image bytes in PDF when importing PDF with the image extraction mode
