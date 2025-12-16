@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+
+## v5.6.1 (2025/12/16)
+
+* Use OCR to help differentiate whether the image contains Chinese or Japanese
+* Improve the zoom behavior with the mouse cursor as the center
+* Add the missing Latin language in the default template to set OCR based on language
+
+
 ## v5.6.0 (2025/12/14)
 
 * Add support for using ONNXRuntime as the engine for object detection
@@ -23,6 +31,7 @@ layout: page
 * New project settings: mask generation methods and image inpainting methods for complex background areas
 * Fix the issue where adding images in project folder via drag-and-drop would fail
 * Fix the issue where copying text would fail when "Remove Line Breaks" is unchecked
+* Fix issues related to the server, like custom workflow configs will be delated
 
 ## v5.5.1 (2025/12/07)
 
