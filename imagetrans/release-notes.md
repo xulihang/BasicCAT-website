@@ -14,6 +14,7 @@ layout: page
 
 * Use OCR to help differentiate whether the image contains Chinese or Japanese
 * Improve the zoom behavior with the mouse cursor as the center
+* Improve the performance of zooming
 * Add the missing Latin language in the default template to set OCR based on language
 
 
