@@ -9,6 +9,19 @@ layout: page
 }
 </style>
 
+## v5.7.0 (2025/12/21)
+
+* New object detection model: Paddle's [DocLayout](https://github.com/xulihang/PP_DocLayout_ONNX) layout analysis model
+* New sorting algorithm: XYCut
+* Add an extra class field to panels
+* Add settings and workflow for image and table panels
+* New export format: markdown
+* New template: Document
+* Update the DeepSeek-OCR plugin to support saving class names
+* Support generating text-removed images in non-precise mode
+* Object detection now supports filtering results directly by classification names
+* Optimize line break handling for horizontal target text in PDF exports
+
 
 ## v5.6.1 (2025/12/16)
 
