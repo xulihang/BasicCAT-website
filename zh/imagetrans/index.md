@@ -10,7 +10,7 @@ ImageTrans是一款计算机辅助图片文字转录与翻译工具，能够使�
 
 ![界面截图](/album/imagetrans_zh.jpg)
 
-ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用作图片阅读器、文字转录器、截图OCR翻译器和深度学习标注器使用。
+ImageTrans除了当作图片翻译器翻译海报、漫画，也可以用于图片阅读、文字转录、截图OCR翻译、PDF转markdown与翻译、生成扫描文档的双层可搜索PDF生成和深度学习标注等用途。
 
 ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的设计与实现](https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool)。
 
@@ -30,6 +30,7 @@ ImageTrans是我硕士毕业论文的成果：[一个漫画翻译辅助工具的
 * 支持调用多种OCR引擎（允许自定义[插件](https://github.com/xulihang/ImageTrans_plugins)）
 * 支持世界上主要的语言
 * 支持使用图像预处理、文本替换和拼写检查来改善结果
+* 支持通过版面分析确定阅读顺序
 
 示例：
 
