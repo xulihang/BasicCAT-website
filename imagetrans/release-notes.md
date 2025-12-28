@@ -13,7 +13,7 @@ layout: page
 
 * Use tiles to optimize the display of large images [#issue739](https://github.com/xulihang/ImageTrans-docs/issues/739)
 * Generate thumbnails for large images to speed up loading
-* Use middle button to toggle the edit mode in mask editor
+* Use middle button to toggle the edit mode in mask editor [#issue1022](https://github.com/xulihang/ImageTrans-docs/issues/1022)
 * Fix the hidden text areas after picking color
 
 ## v5.7.0 (2025/12/21)
