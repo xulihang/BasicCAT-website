@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v5.8.0 (2025/12/28)
+
+* 使用瓦片优化超大图片的浏览 [#issue739](https://github.com/xulihang/ImageTrans-docs/issues/739)
+* 给超大图片生成缩略图以加速加载
+* 掩膜编辑器支持使用鼠标中键切换编辑模式
+* 修复在图片上取色后文本框还是被隐藏的问题
+
 ## v5.7.0 (2025/12/21)
 
 * 新的目标检测模型：Paddle的[DocLayout](https://github.com/xulihang/PP_DocLayout_ONNX)版面分析模型

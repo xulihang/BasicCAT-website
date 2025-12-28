@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v5.8.0 (2025/12/28)
+
+* Use tiles to optimize the display of large images [#issue739](https://github.com/xulihang/ImageTrans-docs/issues/739)
+* Generate thumbnails for large images to speed up loading
+* Use middle button to toggle the edit mode in mask editor
+* Fix the hidden text areas after picking color
+
 ## v5.7.0 (2025/12/21)
 
 * New object detection model: Paddle's [DocLayout](https://github.com/xulihang/PP_DocLayout_ONNX) layout analysis model
