@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v5.8.1 (2025/12/30)
+
+* 用瓦片方式显示的图片不显示时，释放图片
+* 瓦片方式加载图片添加对bmp的支持
+
 ## v5.8.0 (2025/12/28)
 
 * 使用瓦片优化超大图片的浏览 [#issue739](https://github.com/xulihang/ImageTrans-docs/issues/739)

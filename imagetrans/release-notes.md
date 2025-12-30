@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v5.8.1 (2025/12/30)
+
+* Release images displayed using tiles when not displayed
+* Add bmp support for tile-based image display
+
 ## v5.8.0 (2025/12/28)
 
 * Use tiles to optimize the display of large images [#issue739](https://github.com/xulihang/ImageTrans-docs/issues/739)
