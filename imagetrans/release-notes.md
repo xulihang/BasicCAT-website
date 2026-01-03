@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v5.8.2 (2026/01/03)
+
+* Use double to store the degree of text areas
+* Add operations related to rotating the images based on the degrees of text areas
+* Add operations related to super resolution
+* Change the step of any angle rotation from 1.0 to 0.1
+* Add support for calling ssReader to import PDZ files
+* Add more image processing options for PDF export
+* Add colon and semicolon to the list of punctuations to convert to Chinese
+* Fix an issue where the previous image is used for operations like OCR after image editing
+
 ## v5.8.1 (2025/12/30)
 
 * Release images displayed using tiles when not displayed
