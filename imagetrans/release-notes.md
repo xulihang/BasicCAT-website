@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.8.3 (2026/01/05)
+
+* Optimize the handling of misdetected angles when rotating images based on text area rotation information.
+* Enhance support for the alpha channel when rotating images based on text area rotation information.
+* Improve the processing of overlapping and out-of-image areas in balloon detection.
+* Increase tolerance for applying OCR masks.
+* Add support for importing bookmarks from Superstar Reader.
+* Fix an issue where clearing images causes errors.
+
 ## v5.8.2 (2026/01/03)
 
 * Use double to store the degree of text areas
