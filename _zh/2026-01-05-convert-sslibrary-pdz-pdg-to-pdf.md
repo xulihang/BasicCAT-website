@@ -23,4 +23,6 @@ ImageTrans使用了第二种方法。选择好要导出图片的pdz文件，它�
 超星图书馆扫描的图书质量可能不佳，不适合直接用电子墨水设备看，我还专门给图像做了漂白的处理，具体见这篇文章：[扫描图书的漂白、矫正和清晰化处理](/zh/clean-deskew-enhance-scanned-books/)
 
 
+视频教程：
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115847666336407&bvid=BV1ztqwBaEod&cid=35224554595&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
