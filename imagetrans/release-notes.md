@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v5.9.0 (2026/01/13)
+
+* Add support for center alignment and bottom alignment for vertical text engine
+* Add character-level color detection
+* Add support for setting the rich text format for source text
+* Add horizonal center style setting
+* Change the default minimum Y offset to 2000
+
 ## v5.8.3 (2026/01/05)
 
 * Optimize the handling of misdetected angles when rotating images based on text area rotation information.
