@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v5.10.0 (2026/01/17)
+
+* 添加对YOLO 26的支持 [#issue1026](https://github.com/xulihang/ImageTrans-docs/issues/1026)
+* 添加横排文本对调整水平偏移和垂直偏移的支持 [#issue826](https://github.com/xulihang/ImageTrans-docs/issues/826)
+* 添加横排文本对调整字间距的支持
+* 添加富文本对调整字间距的支持
+* 默认的字间距改成0，并用tracking作为名称进行存储
+* 富文本编辑器支持设置字间距、水平偏移和垂直偏移
+* 修复用富文本编辑器设置格式后没有更新渲染结果的问题
+
 ## v5.9.0 (2026/01/13)
 
 * 竖排引擎支持居中对齐和底端对齐

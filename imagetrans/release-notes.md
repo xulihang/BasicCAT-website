@@ -8,6 +8,15 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+## v5.10.0 (2026/01/17)
+
+* Add support for YOLO 26 [#issue1026](https://github.com/xulihang/ImageTrans-docs/issues/1026)
+* Add support for adjusting the horizontal offset and the vertical offset for horizontal text engine [#issue826](https://github.com/xulihang/ImageTrans-docs/issues/826)
+* Add support for tracking for horizontal text engine
+* Add support for tracking for rich text
+* The default tracking is now 0 and stored with the name "tracking" in the settings
+* Rich text editor can now adjust the tracking, the horizontal offset and the vertical offset
+* Fix an issue where the text is not updated after setting the format with the rich text editor
 
 ## v5.9.0 (2026/01/13)
 
