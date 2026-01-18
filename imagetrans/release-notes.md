@@ -17,6 +17,7 @@ layout: page
 * The default tracking is now 0 and stored with the name "tracking" in the settings
 * Rich text editor can now adjust the tracking, the horizontal offset and the vertical offset
 * Fix an issue where the text is not updated after setting the format with the rich text editor
+* Fix the ineffective zoom shortcuts
 
 ## v5.9.0 (2026/01/13)
 
