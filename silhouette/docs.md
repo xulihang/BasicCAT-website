@@ -20,8 +20,7 @@ For macOS, drag the application in the dmg file into the `Applications` folder t
 sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 ```
 
-For Linux, you can use the files in the Windows's zip file. You need to install FFmpeg, Whisper.cpp and Java with JavaFX to start it. [Template file](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip)
-
+For Linux, you can use the files in the Windows's zip file. You need to install FFmpeg, Whisper.cpp and Java with JavaFX to start it. You can use the [template file](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip), which has them included. You also need to unzip the ONNXRuntime so files in the app's folder: [linux-onnxruntime-1.20.0.zip](https://github.com/xulihang/onnxruntime-for-win7/releases/download/builds/linux-onnxruntime-1.20.0.zip).
 
 ## Setup
 

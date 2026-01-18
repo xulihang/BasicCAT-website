@@ -20,8 +20,7 @@ description: Silhouette文档
 sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 ```
 
-对于Linux ，可以使用Windows的zip包中的文件。需要安装FFmpeg、Whisper.cpp、Java和JavaFX来运行程序。[模板文件](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip)
-
+对于Linux ，可以使用Windows的zip包中的文件。需要安装FFmpeg、Whisper.cpp、Java和JavaFX来运行程序。可以使用包含这些依赖的[模板文件](https://github.com/xulihang/Silhouette/releases/download/v1.1.0/Silhouette-Linux-template.zip)。然后还需要下载ONNXRuntime，解压so文件到软件目录：[linux-onnxruntime-1.20.0.zip](https://github.com/xulihang/onnxruntime-for-win7/releases/download/builds/linux-onnxruntime-1.20.0.zip)。
 
 ## 设置
 
