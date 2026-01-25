@@ -13,7 +13,8 @@ layout: page
 
 * New feature: document scanner (using eSCL)
 * New feature: image info viewer
-* Fix an issue where the richtext size combobox items are not loaded using the vertical editor mode [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
+* Update Pagago translation plugin
+* Fix an issue where the richtext size combobox items are not loaded using the vertical editor mode [#issue1032](https://github.com/xulihang/ImageTrans-docs/issues/1032)
 
 ## v5.10.0 (2026/01/17)
 

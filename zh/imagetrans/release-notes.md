@@ -13,7 +13,8 @@ layout: page
 
 * 新增文档扫描功能（基于eSCL）
 * 新增查看图片信息的功能
-* 修复纵向编辑模式没有显示富文本大小设置选项的问题 [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
+* 更新Papago翻译插件
+* 修复纵向编辑模式没有显示富文本大小设置选项的问题 [#issue1032](https://github.com/xulihang/ImageTrans-docs/issues/1032)
 
 ## v5.10.0 (2026/01/17)
 
