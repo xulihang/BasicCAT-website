@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.10.1 (2026/01/25)
+
+* 新增文档扫描功能（基于eSCL）
+* 新增查看图片信息的功能
+* 修复纵向编辑模式没有显示富文本大小设置选项的问题 [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
+
 ## v5.10.0 (2026/01/17)
 
 * 添加对YOLO 26的支持 [#issue1026](https://github.com/xulihang/ImageTrans-docs/issues/1026)
@@ -18,6 +24,7 @@ layout: page
 * 默认的字间距改成0，并用tracking作为名称进行存储
 * 富文本编辑器支持设置字间距、水平偏移和垂直偏移
 * 修复用富文本编辑器设置格式后没有更新渲染结果的问题
+* 修复自定义工作流执行合并区域时可能卡住的问题 [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
 * 修复使用快捷键缩放无效的问题
 
 ## v5.9.0 (2026/01/13)

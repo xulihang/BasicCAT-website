@@ -8,6 +8,13 @@ layout: page
   font-size: 1.5rem;
 }
 </style>
+
+## v5.10.1 (2026/01/25)
+
+* New feature: document scanner (using eSCL)
+* New feature: image info viewer
+* Fix an issue where the richtext size combobox items are not loaded using the vertical editor mode [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
+
 ## v5.10.0 (2026/01/17)
 
 * Add support for YOLO 26 [#issue1026](https://github.com/xulihang/ImageTrans-docs/issues/1026)
@@ -17,6 +24,7 @@ layout: page
 * The default tracking is now 0 and stored with the name "tracking" in the settings
 * Rich text editor can now adjust the tracking, the horizontal offset and the vertical offset
 * Fix an issue where the text is not updated after setting the format with the rich text editor
+* Fix an issue where merging areas may stuck using custom overflow [#issue1029](https://github.com/xulihang/ImageTrans-docs/issues/1029)
 * Fix the ineffective zoom shortcuts
 
 ## v5.9.0 (2026/01/13)
