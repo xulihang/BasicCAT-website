@@ -65,7 +65,7 @@ eSCL是由苹果推动的一个基于HTTP的网络文档扫描协议，只要扫
 ### SDK
 
 * Dynamsoft: Dynamic Web TWAIN
-* Aspryse: JSane、JTWAIN、Scanner.js
+* Aprise: JSane、JTWAIN、Scanner.js
 * Leadtools
 * Vintasoft
 * ScanOnWeb
