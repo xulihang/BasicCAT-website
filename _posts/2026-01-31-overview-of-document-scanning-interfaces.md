@@ -36,7 +36,7 @@ Using WIA cannot use the manufacturer's specialized scanning software.
 
 ICA is the official interface provided by Apple. After installing the dedicated ICA driver, a customized scanning interface becomes available in the Image Capture application. It also supports calling via the interface without displaying the UI.
 
-![ica](/album/document-scanning-api/ica.jpg)
+![ica](/album/document-scanning-api/imagecapture.jpg)
 
 ## SANE
 

@@ -37,7 +37,7 @@ WIA是Windows官方支持的图像获取设备的接口。安装扫描仪驱动�
 
 ICA是苹果官方提供的接口。安装专门的ICA驱动后，就可以在图像捕获应用中看到定制化的扫描界面了。也支持通过接口不显示UI进行调用。
 
-![ica](/album/document-scanning-api/ica.jpg)
+![ica](/album/document-scanning-api/imagecapture.jpg)
 
 
 ## SANE
