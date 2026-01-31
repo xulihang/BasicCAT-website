@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-现代文档扫描仪大概在19世纪80年代出现，为了连接扫描仪和电脑，出现了很多文档扫描的API接口：TWAIN、ICA、SANE、WIA、eSCL等等。本文会对这些协议做个概述。
+现代文档扫描仪大概在20世纪80年代出现，为了连接扫描仪和电脑，出现了很多文档扫描的API接口：TWAIN、ICA、SANE、WIA、eSCL等等。本文会对这些协议做个概述。
 
 ## TWAIN
 
@@ -23,7 +23,6 @@ tags: imagetrans
 TWAIN主要用于Windows。
 
 ## WIA
-
 WIA是Windows官方支持的图像获取设备的接口。安装扫描仪驱动后，一般就可以通过Windows的传真和扫描应用进行扫描。
 
 ![windows fax](/album/document-scanning-api/windows-fax.jpg)
@@ -72,6 +71,7 @@ eSCL是由苹果推动的一个基于HTTP的网络文档扫描协议，只要扫
 * ScanOnWeb
 
 在这些SDK中，以Dynamic Web TWAIN支持的协议最全，维护程度最高。
+
 
 
 
