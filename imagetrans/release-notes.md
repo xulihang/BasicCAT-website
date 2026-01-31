@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.11.0 (2026/01/31)
+
+* Document scanning now supports calling system scanning interfaces (WIA, ICA, SANE)
+* The list of previously found scanners is saved for document scanning
+* PDF now supports high-definition display
+* Document template: the settings for removing text by area and inversion based on color for panel detection are disabled
+* Tile loading operations during image zoom now use debouncing
+* Fix an issue where the image iss not correctly updated after rotation
+
 ## v5.10.1 (2026/01/25)
 
 * New feature: document scanner (using eSCL)
