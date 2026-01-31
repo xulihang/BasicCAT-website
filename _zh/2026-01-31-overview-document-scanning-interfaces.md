@@ -58,10 +58,10 @@ eSCL是由苹果推动的一个基于HTTP的网络文档扫描协议，只要扫
 
 ### 桌面软件
 
-* NAPS2：支持TWAIN、WIA、SANE、eSCL、ICA，是一个一站式跨平台的扫描软件。
+* NAPS2：支持TWAIN、WIA、SANE、eSCL、ICA，是一个开源的、一站式跨平台的扫描软件。
 * [ImageTrans](/zh/imagetrans/)：基于WIA、SANE、ICA和eSCL集成了文档扫描功能，可以直接扫描文档，完成OCR、翻译、可搜索PDF生成等任务。
 * VueScan：逆向了绝大多数扫描仪的驱动，不需要额外安装驱动就能直接调用扫描仪。
-* SilverFast：在扫描照片、底片领域非常专业，一般买扫描仪都会附赠这一软件
+* SilverFast：在扫描照片、底片领域非常专业，一般买扫描仪都会附赠这一软件。
 
 ### SDK
 
