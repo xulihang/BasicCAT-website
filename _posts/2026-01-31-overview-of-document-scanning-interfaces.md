@@ -62,7 +62,7 @@ eSCL is an HTTP-based network document scanning protocol promoted by Apple. As l
 ### SDKs
 
 * **Dynamsoft**: Dynamic Web TWAIN
-* **Aprise**: JSane, JTWAIN, Scanner.js
+* **Asprise**: JSane, JTWAIN, Scanner.js
 * **Leadtools**
 * **Vintasoft**
 * **ScanOnWeb**
