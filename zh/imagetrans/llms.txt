@@ -1,0 +1,9 @@
+# ImageTrans
+
+计算机辅助图片翻译软件。
+
+## 目录
+
+- [首页](https://www.basiccat.org/zh/imagetrans/)
+- [博客](https://www.basiccat.org/zh/tagged/#imagetrans)
+- [文档](https://imagetrans.readthedocs.io/zh-cn/latest/)

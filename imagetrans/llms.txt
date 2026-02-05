@@ -1,0 +1,9 @@
+# ImageTrans
+
+A computer-aided image and comic translation tool.
+
+## Table of Contents
+
+- [Homepage](https://www.basiccat.org/imagetrans/)
+- [Blogs](https://www.basiccat.org/tagged/#imagetrans)
+- [Documentation](https://imagetrans.readthedocs.io/en/latest/)
