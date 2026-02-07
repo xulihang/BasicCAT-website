@@ -9,12 +9,23 @@ layout: page
 }
 </style>
 
+## v5.11.1 (2026/02/07)
+
+* Document scanning now supports scanning multiple pages
+* Document scanning now supports feeder (eSCL only)
+* Fix the color mode using eSCL
+* Use affine transform instead of perspective transform for faux italic to fix the width and height of the text if faux bold is set as well
+* Add support for putting a file named server-mode to skip error dialog using server
+
+
 ## v5.11.0 (2026/01/31)
 
 * Document scanning now supports calling system scanning interfaces (WIA, ICA, SANE)
 * The list of previously found scanners is saved for document scanning
 * PDF now supports high-definition display
 * Document template: the settings for removing text by area and inversion based on color for panel detection are disabled
+* Export txt now can select source or source+target to export
+* Import txt now supports translation-only files
 * Tile loading operations during image zoom now use debouncing
 * Fix an issue where the image iss not correctly updated after rotation
 
