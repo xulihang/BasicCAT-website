@@ -9,6 +9,28 @@ layout: page
 }
 </style>
 
+## v5.12.0 (2026/02/14)
+
+* 文档扫描：
+   * WIA、ICA、SANE支持进纸器、多页扫描和双页扫描
+   * WIA、ICA、SANE支持取消扫描任务
+   * SANE支持实时预览单张图片的扫描结果
+   * macOS支持调用SANE进行扫描
+   * 支持设置扫描区域
+   * 使用现代化的Windows Runtime API调用WIA
+   * 黑白图片以1位PNG格式保存以节省空间
+   * 关闭文档扫描窗口时自动清除临时扫描文件
+   * 新增删除图片的按钮
+   * 修复eSCL连续多页扫描文件保存错误的问题
+* 添加测距功能
+* 添加图像编辑右键菜单
+* 支持设置带小数的字体大小、默认字体调整步值改成0.5 [#issue1038](https://github.com/xulihang/ImageTrans-docs/issues/1038)
+* 工具栏的字体大小支持用滚轮调整 [#issue1038](https://github.com/xulihang/ImageTrans-docs/issues/1038)
+* 粘贴的图片的命名去除千位数字的逗号
+* 支持根据粘贴图片的路径选择使用PNG还是JPG
+* 修复使用远程服务器时发送错误信息的URL不对的问题
+
+
 ## v5.11.1 (2026/02/07)
 
 * 文档扫描支持扫描多页

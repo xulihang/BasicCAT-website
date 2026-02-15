@@ -9,6 +9,28 @@ layout: page
 }
 </style>
 
+
+## v5.12.0 (2026/02/14)
+
+* Document Scanning:
+  * WIA, ICA, and SANE support document feeders, multi-page scanning, and duplex scanning
+  * WIA, ICA, and SANE support canceling scan tasks
+  * SANE supports real-time preview of individual scanned images
+  * macOS supports invoking SANE for scanning
+  * Add support for setting scan area
+  * Utilizes modern Windows Runtime API to invoke WIA
+  * Black and white images are saved in 1-bit PNG format to save space
+  * Automatically clears temporary scan files when closing the document scanning window
+  * Add a button to delete images
+  * Fix an issue with incorrect file saving during consecutive eSCL multi-page scanning
+* Add distance measurement feature
+* Add image editing context menu
+* Add support for setting font sizes with decimals; default font size adjustment step changed to 0.5 [#issue1038](https://github.com/xulihang/ImageTrans-docs/issues/1038)
+* Font size in the toolbar can be adjusted using the mouse wheel [#issue1038](https://github.com/xulihang/ImageTrans-docs/issues/1038)
+* Remove thousand separators (commas) from filenames of pasted images
+* Add support for selecting PNG or JPG format based on the path of the pasted image
+* Fix an issue where the URL for sending errors was incorrect when using a remote server
+
 ## v5.11.1 (2026/02/07)
 
 * Document scanning now supports scanning multiple pages
