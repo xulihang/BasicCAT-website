@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.13.0 (2026/02/23)
+
+* Document Scanning:
+  * Add support for invoking TWAIN on Windows
+  * Add support for scanning documents such as films and slides using a transparency unit
+  * Error prompt when using WIA without .NET 8 installed locally
+* Release opened images when closing a project
+* Cropping operation supports saving the image as a new one
+* New image editing operations: Invert Colors, Remove Film Mask
 
 ## v5.12.0 (2026/02/14)
 
