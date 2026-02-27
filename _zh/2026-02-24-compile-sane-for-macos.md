@@ -31,7 +31,7 @@ SANE可以通过homebrew安装，不过因为我想编一个分发方便的版�
    make install
    ```
    
-5. 如果要分发到没有homebrew的环境，可以用otool再改一下path。
+5. 如果要分发到没有homebrew的环境，可以用`otool`和`install_name_tool`再改一下path。
 
 
 [ImageTrans](/zh/imagetrans/)的macOS版已经集成了SANE，可以直接调用这种老的扫描仪进行扫描。

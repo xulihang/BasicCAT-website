@@ -31,7 +31,7 @@ SANE can be installed via Homebrew, but since I wanted to compile a version that
    make install  
    ```  
 
-5. If you need to distribute it to an environment without Homebrew, you can use `otool` to modify the paths.  
+5. If you need to distribute it to an environment without Homebrew, you can use `otool` and `install_name_tool` to modify the paths.  
 
 The macOS version of [ImageTrans](/imagetrans/) has already integrated SANE, allowing you to directly use scanners like the old fi-6130 for scanning.
 
