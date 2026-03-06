@@ -9,6 +9,22 @@ layout: page
 }
 </style>
 
+## v5.14.0 (2026/03/06)
+
+* PDF Import:
+   * Support for selecting page range
+   * When importing PDF in image extraction mode, pages without images will be rendered
+* PDF Export:
+   * Support for finding corresponding font files based on font name
+   * Support for using TTC fonts
+   * Default font on Mac uses Arial Unicode
+   * When displaying vertical text, replace punctuation marks such as brackets with vertical-specific characters, and replace half-width characters with full-width characters
+   * Optimize display of vertical text
+* Increase timeout for ChatGPTOCR plugin
+* Add OllamaOCR plugin
+* Add "eSCL" suffix to eSCL scanner names
+* Fix an issue with poor automatic sizing of vertical text when word wrap is disabled
+
 ## v5.13.0 (2026/02/23)
 
 * Document Scanning:
