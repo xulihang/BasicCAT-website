@@ -49,9 +49,13 @@ tags: imagetrans
 
 ![cloud translate search](/album/googlecloud/cloud_translate_search.jpg)
 
-OCR和机器翻译可以公用一个API key。启用后，我们就可以用谷歌进行机器翻译了。
+OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，就可以看到用谷歌进行机器翻译了。
 
 ![cloud translate](/album/googlecloud/google_translate.jpg)
+
+我们也可以通过点击菜单-编辑-自动翻译所有区域，来选择某个机器翻译进行预翻译，自动翻译所有区域。
+
+文字识别和翻译也可以串联起来，需要通过一键翻译或者自定义功能工作流进行操作。
 
 ## Google Drive OCR
 
