@@ -47,9 +47,13 @@ Similarly, we can enable cloud translation.
 
 ![cloud translate search](/album/googlecloud/cloud_translate_search.jpg)
 
-OCR and machine translation can share the same API key. After enabling it, we can use Google to translate texts.
+OCR and machine translation can share the same API key. After enabling it, we can use Google to translate texts in the translation assist tab.
 
 ![cloud translate](/album/googlecloud/google_translate.jpg)
+
+We can also pretranslate the areas using menu -> edit -> translate all areas.
+
+OCR and translation can be used together in one workflow via the batch translation or custom workflow functions.
 
 ## Enable OCR via Google Drive
 
