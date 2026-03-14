@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v5.15.0 (2026/03/14)
+
+* Add thumbnail viewer
+* Add image navigator
+* Add image manager (accessed by right-clicking on the image list)
+* Add support for adjusting image order
+* Remove commas from sequence numbers in imported PDF image names
+* Optimize image switching speed
+* Skip images without text when translating multiple sentences
+* Fix the issue where filtering images with exported translations in the translated image manager failed [#issue1044](https://github.com/xulihang/ImageTrans-docs/issues/1044)
+
 ## v5.14.0 (2026/03/06)
 
 * PDF Import:
