@@ -72,7 +72,7 @@ It can also run as a server for online usage. Mobile devices can use it to scan 
 
 ### Low requirements
 
-ImageTrans has low requirements of the hardware and its size is only about 150MB including a Java runtime. Your old or low-end devices can run it without a problem. But for things involving deep learning, like ballon detection, you'd better run it on a device with at least an Intel Core CPU.
+ImageTrans has low requirements of the hardware and its size is about 400MB including a Java runtime and the models. Your old or low-end devices can run it without a problem. But for things involving deep learning, like ballon detection, you'd better run it on a device with at least an Intel Core CPU.
 
 ### Others
 
