@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v5.15.1 (2026/03/17)
+
+* Optimize vertical text engine support for negative letter spacing
+* Add support for stroke color detection
+* Multi-purpose size setting control in rich text editor now supports negative values
+* Fix shifted translation text box issue when zooming
+* Fix an issue that filling machine translation via Quick Translate or choosing the MT candidate does not trigger update of the target text in the image in type setting mode
+
 ## v5.15.0 (2026/03/14)
 
 * Add thumbnail viewer
