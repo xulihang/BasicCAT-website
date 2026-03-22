@@ -9,6 +9,19 @@ layout: page
 }
 </style>
 
+## v5.16.0 (2026/03/22)
+
+* 添加标注汉语拼音和日语假名的功能
+* 新的导出格式：单HTML
+* 添加生成去文字PDF的操作
+* 添加文本框列表显示什么文字的偏好设置 [#1052](https://github.com/xulihang/ImageTrans-docs/issues/1053)
+* 图片管理器支持添加新加入文件夹的图片的功能 [#1053](https://github.com/xulihang/ImageTrans-docs/issues/1053)
+* 添加带定位版本的mit48px_ctc OCR
+* mangaOCR默认处理灰度图，以提高对彩色文字的识别率
+* 修复存在分镜时，以文字聚类方式重新生成分镜失败的问题
+
+
+
 ## v5.15.1 (2026/03/17)
 
 * 优化竖排文字引擎对负字间距的支持

@@ -9,6 +9,17 @@ layout: page
 }
 </style>
 
+## v5.16.0 (2026/03/22)
+
+* Add functionality to annotate Kanji with Chinese Pinyin or Japanese hiragana
+* New export format: single HTML
+* Add operation to generate text-removed PDF
+* Add preference setting of text to display in the text box list [#1052](https://github.com/xulihang/ImageTrans-docs/issues/1053)
+* Add support for the Image Manager to import images newly added in the folder [#1053](https://github.com/xulihang/ImageTrans-docs/issues/1053)
+* Add text detection enabled mit48px_ctc OCR
+* MangaOCR now processes grayscale images by default to improve recognition rate for colored text
+* Fix an issue where regenerating panels using text clustering may fail when panels already exist
+
 ## v5.15.1 (2026/03/17)
 
 * Optimize vertical text engine support for negative letter spacing
