@@ -8,7 +8,7 @@ tags: imagetrans
 
 Japanese kanji originated from China and are logographic characters. Their pronunciation can be annotated using romaji or kana. The kana used for this purpose are called furigana.
 
-Below are some examples of text with pronunciation annotations:
+Below are some examples of text with pronunciation annotations (raw text and annotated):
 
 Example 1:
 
