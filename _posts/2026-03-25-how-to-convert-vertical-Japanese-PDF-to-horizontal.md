@@ -14,7 +14,9 @@ The computer-aided image translation software [ImageTrans](/imagetrans/) support
 
 Example:
 
-[Original PDF (click to open)](/assets/japanese.pdf)
+Original PDF File:
+
+<iframe src="/assets/japanese.pdf" width="240px" height="320px"></iframe>
 
 Converted horizontal text:
 
