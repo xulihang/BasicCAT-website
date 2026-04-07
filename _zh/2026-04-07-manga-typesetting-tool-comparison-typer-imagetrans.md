@@ -12,7 +12,7 @@ tags: imagetrans
 
 ## 概述
 
-**TypeR** 是一个 Photoshop 扩展（派生自 TypeRTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
+**TypeR** 是一个 Photoshop 扩展（派生自 TyperTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
 
 ![typer](/album/typer/typer.jpg)
 

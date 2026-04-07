@@ -13,7 +13,7 @@ Both target similar users—scanlators, translators, letterers, and comic locali
 
 ## Overview
 
-**TypeR** is a Photoshop extension (forked from TypeRTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
+**TypeR** is a Photoshop extension (forked from TyperTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
 
 ![typer](/album/typer/typer.jpg)
 
