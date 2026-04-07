@@ -1,7 +1,7 @@
 ---
 date: 2026-04-07 21:06:50+08:00
 layout: post
-title: Manga Typesetting Tool Comparison: Typer and ImageTrans
+title: "Manga Typesetting Tool Comparison: Typer and ImageTrans"
 categories: blog
 tags: imagetrans
 ---
