@@ -8,7 +8,7 @@ tags: imagetrans
 
 In the world of manga translation, typesetting is where everything comes together. After OCR and translation, you still need to place text back into the artwork in a way that feels natural, readable, and faithful to the original design. This is where tools like **Typer** and **ImageTrans** come in.
 
-Both target similar users—scanlators, translators, and comic localizers—but they represent two very different philosophies: one centered on Photoshop, the other on an integrated pipeline.
+Both target similar users—scanlators, translators, letterers, and comic localizers—but they represent two very different philosophies: one centered on Photoshop, the other on an integrated pipeline.
 
 
 ## Overview
