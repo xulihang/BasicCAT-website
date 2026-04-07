@@ -1,18 +1,18 @@
 ---
 date: 2026-04-07 21:06:50+08:00
 layout: post
-title: 漫画排版工具对比：Typer 与 ImageTrans
+title: 漫画排版工具对比：TypeR 与 ImageTrans
 categories: blog
 tags: imagetrans
 ---
 
-在漫画翻译的世界里，排版是将一切整合在一起的最后一步。完成 OCR 和翻译之后，你仍然需要把文字放回原图，使其看起来自然、易读，并且忠实于原始设计。这时，像 **Typer** 和 **ImageTrans** 这样的工具就派上了用场。
+在漫画翻译的世界里，排版是将一切整合在一起的最后一步。完成 OCR 和翻译之后，你仍然需要把文字放回原图，使其看起来自然、易读，并且忠实于原始设计。这时，像 **TypeR** 和 **ImageTrans** 这样的工具就派上了用场。
 
 两者的目标用户群相似——汉化组、译者、漫画本地化人员——但它们代表了两种截然不同的设计理念：一个以 Photoshop 为中心，另一个则提供整合所有操作的平台。
 
 ## 概述
 
-**Typer** 是一个 Photoshop 扩展（派生自 TyperTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
+**TypeR** 是一个 Photoshop 扩展（派生自 TypeRTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
 
 ![typer](/album/typer/typer.jpg)
 
@@ -22,12 +22,12 @@ tags: imagetrans
 
 ## 工作流程对比
 
-### Typer：以 Photoshop 为中心的工作流
+### TypeR：以 Photoshop 为中心的工作流
 
-Typer 假设 Photoshop 是你的主要工作环境：
+TypeR 假设 Photoshop 是你的主要工作环境：
 
 1. 在 Photoshop 中打开图像
-2. 使用 Typer 工具插入文字
+2. 使用 TypeR 工具插入文字
 3. 手动调整布局
 
 
@@ -56,7 +56,7 @@ ImageTrans 覆盖了整个流程：
 
 ## 功能对比表
 
-| 功能 | Typer | ImageTrans |
+| 功能 | TypeR | ImageTrans |
 | ----------------------- | ------------------------------------------------------ | ----------------------------------------------------------- |
 | 核心类型 | Photoshop 插件 | 独立应用程序 |
 | OCR（文字提取） | ❌ 不支持 | ✅ 内置多引擎 OCR |
@@ -74,7 +74,7 @@ ImageTrans 覆盖了整个流程：
 
 ## 如何选择
 
-如果你更喜欢完全在 Photoshop 内完成排版，那么 Typer 是一个不错的选择。
+如果你更喜欢完全在 Photoshop 内完成排版，那么 TypeR 是一个不错的选择。
 
 而 ImageTrans 在几乎各个方面都是更好的选择：
 

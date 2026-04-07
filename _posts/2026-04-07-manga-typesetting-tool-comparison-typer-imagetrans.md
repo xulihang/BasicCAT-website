@@ -1,19 +1,19 @@
 ---
 date: 2026-04-07 21:06:50+08:00
 layout: post
-title: "Manga Typesetting Tool Comparison: Typer and ImageTrans"
+title: "Manga Typesetting Tool Comparison: TypeR and ImageTrans"
 categories: blog
 tags: imagetrans
 ---
 
-In the world of manga translation, typesetting is where everything comes together. After OCR and translation, you still need to place text back into the artwork in a way that feels natural, readable, and faithful to the original design. This is where tools like **Typer** and **ImageTrans** come in.
+In the world of manga translation, typesetting is where everything comes together. After OCR and translation, you still need to place text back into the artwork in a way that feels natural, readable, and faithful to the original design. This is where tools like **TypeR** and **ImageTrans** come in.
 
 Both target similar users—scanlators, translators, letterers, and comic localizers—but they represent two very different philosophies: one centered on Photoshop, the other on an integrated pipeline.
 
 
 ## Overview
 
-**Typer** is a Photoshop extension (forked from TyperTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
+**TypeR** is a Photoshop extension (forked from TypeRTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
 
 ![typer](/album/typer/typer.jpg)
 
@@ -23,12 +23,12 @@ Both target similar users—scanlators, translators, letterers, and comic locali
 
 ## Workflow Comparison
 
-### Typer: Photoshop-Centric Workflow
+### TypeR: Photoshop-Centric Workflow
 
-Typer assumes Photoshop is your main workspace:
+TypeR assumes Photoshop is your main workspace:
 
 1. Open image in Photoshop
-2. Insert text using Typer tools
+2. Insert text using TypeR tools
 3. Adjust layout manually
 
 
@@ -58,7 +58,7 @@ This reduces tool switching and enables large-scale workflows.
 
 ## Feature Comparison Table
 
-| Feature | Typer | ImageTrans |
+| Feature | TypeR | ImageTrans |
 | ----------------------- | ------------------------------------------------------ | ----------------------------------------------------------- |
 | Core Type | Photoshop plugin | Standalone application |
 | OCR (text extraction) | ❌ Not supported | ✅ Built-in multi-engine OCR |
