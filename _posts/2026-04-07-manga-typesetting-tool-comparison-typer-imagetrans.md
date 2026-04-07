@@ -15,11 +15,11 @@ Both target similar users—scanlators, translators, letterers, and comic locali
 
 **Typer** is a Photoshop extension (forked from TyperTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
 
-![](/album/typer/typer.png)
-
+![typer](/album/typer/typer.jpg)
 
 **ImageTrans** is a standalone computer-aided translation tool that covers OCR, translation, and text reinsertion. It can automatically detect text regions, remove original text, and inject translations, while still supporting export back to Photoshop for refinement.
 
+![imagetrans](/album/typer/imagetrans.png)
 
 ## Workflow Comparison
 
@@ -31,7 +31,7 @@ Typer assumes Photoshop is your main workspace:
 2. Insert text using Typer tools
 3. Adjust layout manually
 
-![typer](/album/typer/typer.jpg)
+
 
 Its biggest strength is eliminating repetitive actions (copy-paste, alignment, style switching) inside Photoshop.
 
@@ -50,7 +50,7 @@ ImageTrans covers the full pipeline:
 4. Remove original text and reinsert translation
 5. Export to PSD for final refinement
 
-![imagetrans](/album/typer/imagetrans.png)
+
 
 It integrates OCR, large language model translation, text cleaning, typesetting and batch processing into one system.
 

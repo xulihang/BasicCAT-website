@@ -14,9 +14,11 @@ tags: imagetrans
 
 **Typer** 是一个 Photoshop 扩展（派生自 TyperTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
 
-![typer](/album/typer/typer.png)
+![typer](/album/typer/typer.jpg)
 
 **ImageTrans** 是一个独立的计算机辅助翻译工具，涵盖 OCR、翻译和文字回填。它可以自动检测文字区域、擦除原文并注入译文，同时也支持导出回 Photoshop 进行精细化调整。
+
+![imagetrans](/album/typer/imagetrans.png)
 
 ## 工作流程对比
 
@@ -28,7 +30,7 @@ Typer 假设 Photoshop 是你的主要工作环境：
 2. 使用 Typer 工具插入文字
 3. 手动调整布局
 
-![imagetrans](/album/typer/imagetrans.jpg)
+
 
 它最大的优势是消除 Photoshop 内部的重复性动作（复制粘贴、对齐、样式切换）。
 
@@ -47,7 +49,6 @@ ImageTrans 覆盖了整个流程：
 4. 擦除原文并回填译文
 5. 导出为 PSD 进行最终润色
 
-![imagetrans](/album/typer/imagetrans.png)
 
 它将 OCR、大语言模型翻译、文字清理、排版和批处理集成到了一个系统中。
 
