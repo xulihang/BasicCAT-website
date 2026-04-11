@@ -9,6 +9,18 @@ layout: page
 }
 </style>
 
+## v5.17.0 (2026/04/11)
+
+* ScreenReader:
+   * Adjust layout
+   * Add pronunciation annotation
+   * Add text to speech function
+   * Auto detection now checks whether the image is stable
+   * If only one machine translation engine is enabled, do not display engine name
+* Load previous settings for TTS
+* Cross-page machine translation [#issue1058](https://github.com/xulihang/ImageTrans-docs/issues/1058)
+* Adjust machine translation preferences
+
 ## v5.16.0 (2026/03/22)
 
 * Add functionality to annotate Kanji with Chinese Pinyin or Japanese hiragana
