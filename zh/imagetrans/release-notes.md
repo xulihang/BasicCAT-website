@@ -18,7 +18,7 @@ layout: page
    * 自动识别会等待图像稳定后再截图
    * 如果只启用了一个机器翻译，不显示引擎名
 * 打开朗读器时加载之前的设置
-* 机器翻译支持跨页翻译 [#issue1058](https://github.com/xulihang/ImageTrans-docs/issues/1058)
+* 机器翻译支持跨页翻译 [#issue1055](https://github.com/xulihang/ImageTrans-docs/issues/1055)
 * 调整机器翻译的偏好设置
 
 ## v5.16.0 (2026/03/22)
