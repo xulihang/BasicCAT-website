@@ -26,4 +26,4 @@ tags: imagetrans
 
 ImageTrans还可以翻译其他媒介，例如书籍和漫画。它是一个集成化的翻译工具，就像翻译领域的Photoshop一样。
 
-ImageTrans可以在Windows、macOS和Linux这样的桌面平台使用，目前暂不支持安卓和iOS。
+ImageTrans可以在Windows、macOS和Linux这样的桌面平台使用，目前暂不支持安卓和iOS等手机操作系统。

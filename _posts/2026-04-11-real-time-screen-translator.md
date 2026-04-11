@@ -28,3 +28,6 @@ The following is a demo video. Although it takes a while for the OCR and transla
 
 
 ImageTrans can also translate other medias, like books and manga. It is an integrated translation tool, like Photoshop for translation.
+
+ImageTrans can run on desktop platforms like Windows, macOS and Linux. Mobile operating systems like Android and iOS are currently not supported.
+
