@@ -8,7 +8,7 @@ tags: imagetrans
 
 Recently, I want to play the raw Japanese GBA game *Ace Attorney*. I like the feeling of the original Japanese version and want to improve my Japanese skill. My Japanese level is limited so I still need a screen translator to help me.
 
-[ImageTrans](/imagetrans/) is such a program. It integrates with various OCR and translation engines and can work as a real-time screen translator to play visual novel, games and read manga.
+[ImageTrans](/imagetrans/) is such a program. It integrates with various OCR and translation engines and can work as a real-time screen translator to play games like visual novel and read manga.
 
 
 Here is its workflow:
