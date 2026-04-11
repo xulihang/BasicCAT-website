@@ -22,7 +22,7 @@ Here is its workflow:
 
 The whole process is automatic. You can also make the screen capture by yourself and ask the program to translate, since you may also need to read the text outside the region you specified.
 
-The following is a demo video. Although it takes a while for the OCR and translation to complete, it is playable.
+The following is a demo video. Although it takes a while for the OCR and translation to complete and there are mistakes, it is playable.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B9xmNjmcb10?si=rod6GaSBPGQ0KBAX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

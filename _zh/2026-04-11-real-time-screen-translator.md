@@ -20,7 +20,7 @@ tags: imagetrans
 
 整个过程是自动完成的。当然，也可以手动截取屏幕并让程序进行翻译，因为有时可能需要读取指定区域之外的文本。
 
-下面是一个演示视频。虽然OCR和翻译需要一些时间完成，但还是可以玩的。
+下面是一个演示视频。虽然OCR和翻译需要一些时间完成，还有错误，但还是可以玩的。
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116385896268517&bvid=BV19nDkBiEUS&cid=37421580919&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
