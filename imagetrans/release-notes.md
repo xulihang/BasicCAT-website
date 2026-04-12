@@ -15,8 +15,10 @@ layout: page
    * Adjust layout
    * Add pronunciation annotation
    * Add text to speech function
+   * Add support for using custom workflow
    * Auto detection now checks whether the image is stable
    * If only one machine translation engine is enabled, do not display engine name
+   * Fix issues related to saving results to project
 * Load previous settings for TTS
 * Cross-page machine translation [#issue1055](https://github.com/xulihang/ImageTrans-docs/issues/1055)
 * Adjust machine translation preferences
