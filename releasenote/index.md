@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v1.11.0 (2026/04/14)
+
+* Add support for multiple sentence translation in one request (batch translation)
+* Cancel pretranslation if the progress dialog is closed
+* Update plugins
+
 ## v1.10.7 (2024/04/23)
 
 * Fix a problem in find and replace searching repeated characters
