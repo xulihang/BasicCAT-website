@@ -156,7 +156,25 @@ I'm profoundly flattered.
 
 字幕提取后，也可以导入计算机辅助音视频翻译软件Silhouette，结合波形图进行调整。
 
-视频教程：
+## 测试数据
+
+测试视频：1小时41分的古早视频《姐妹易嫁》（<https://www.bilibili.com/video/BV1E4411L7bN/>）
+
+测试机器：HP ZBook Studio G3, i7 6820HQ CPU, DDR4-2133 16GB
+
+Video Sub Finder：直接处理视频，识别到5028张字幕图像，耗时20分钟
+
+ImageTrans+PaddleOCR：处理总共18100张图，识别到1373张字幕图像，耗时6分钟
+
+Video Sub Finder使用传统方法，会有很多误识别的没有字幕的图像，而且处理耗时更久。ImageTrans的表现更为优秀。
+
+## 推荐的文字定位引擎
+
+ImageTrans支持用YOLO目标检测和各种OCR定位文字。
+
+推荐的OCR是：PaddleOCR（2.x），它处理速度快，对并发的支持好，没有独显的机器单纯用CPU性能也非常好。可以在此下载：<https://github.com/xulihang/ImageTrans_plugins/tree/master/paddleOCR>
+
+## 视频教程
 
 * 传统图像处理方法（VideoSubFinder + ImageTrans）：<https://www.bilibili.com/video/BV1tGR5YYEJB/>
 * OCR做检测的方法（Silhouette + ImageTrans）：<https://www.bilibili.com/video/BV1tGR5YYEQk/>
