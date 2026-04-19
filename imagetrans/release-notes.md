@@ -9,6 +9,24 @@ layout: page
 }
 </style>
 
+## v5.18.0 (2026/04/19)
+
+* Translation Memory:
+   * Add translation memory project settings
+   * Add option to use project text
+   * Add support for importing and using external translation memory (SQLite-based)
+* Screen Reader:
+   * Add translation memory support
+   * Fix an issue where phonetic annotation is invoked even when not enabled
+* Add support for calling OCR plugins to perform concurrent recognition
+* Video Subtitle Extractor:
+   * Add balloon detection support
+   * Optimize the operation of using OCR plugins for concurrent recognition
+   * Add left offset condition for keyframe recognition
+   * Add operation to unify text areas of images with similar keyframe OCR result
+* New balloon detection project setting: Expand Image
+* Other optimizations
+
 ## v5.17.0 (2026/04/11)
 
 * ScreenReader:
