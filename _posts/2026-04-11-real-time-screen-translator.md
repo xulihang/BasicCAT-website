@@ -31,3 +31,23 @@ ImageTrans can also translate other medias, like books and manga. It is an integ
 
 ImageTrans can run on desktop platforms like Windows, macOS and Linux. Mobile operating systems like Android and iOS are currently not supported.
 
+## Optimizing Translation Speed and Quality
+
+Real-time translation processes text only within the current input box, lacking contextual information, which leads to lower translation quality. Additionally, performing a translation operation each time results in slower speeds.
+
+For many games, the text can be extracted, or transcriptions are already available. In such cases, we can pre-translate the text using a large language model. Later, during on-screen translation, the system can match the source text with OCR results and directly retrieve the pre-translated text, achieving both high speed and high quality. This feature is called **translation memory** in ImageTrans.
+
+Below is a simple comparison using DeepSeek for translation. It shows that more context leads to higher translation quality.
+
+| Original Text                                                | Full-Text Translation                                          | Sentence-by-Sentence Translation                               |
+|--------------------------------------------------------------|----------------------------------------------------------------|---------------------------------------------------------------|
+| （うう‥‥。 キンチョーするなあ‥‥）                               | (Ugh... I'm so nervous...)                                     | (Ugh... Don't be so nervous...)                                    |
+| ‥‥なるほどくん！                                              | ...Naruhodo-kun!                                               | ...Mr. I See!                                                 |
+| ふう。 なんとか、間にあったわね。                             | Phew. I managed to make it in time.                            | Phew. We made it just in time.                                 |
+| どうかしら？　初めての法廷は。                                | How do you feel? Your first time in court.                     | How about it? Your first time in court?          |
+| こ、こんなにドキドキするの、 小学校の学級裁判のとき以来です。 | Th-This is the first time my heart has raced like this since the class trial in elementary school. | My heart's pounding like this for the first time since the class trial back in elementary school. |
+| ‥‥それはそれは。 ずいぶん、ごぶさたしてるのね。               | ...Well, well. It's been a long time, hasn't it?                | ...My, my. It's been quite a while, hasn't it?                |
+
+Additionally, ImageTrans supports fuzzy matching between the source text and OCR results. Even if OCR makes errors, it can still find matches, preventing translation mistakes caused by faulty OCR.
+
+For example, the sentence `借りがあるんですよ。 ヤツには。` might be misrecognized as `借りがあるんですよ。 ャツには。`, where the character "ヤ" becomes the small kana "ャ", potentially leading to translation errors. For instance, DeepSeek might mistakenly translate it as "I owe you a favor" instead of "I owe him a favor." Matching against pre-translated text extracted from the original avoids such issues.
