@@ -156,7 +156,25 @@ The advantage of using ImageTrans to extract hardcoded subtitles is that we can 
 
 After the subtitles are extracted, they can also be imported into Silhouette, a computer-aided audio-video translation software, and adjusted with the help of the waveform.
 
-Video tutorials:
+## Test Data
+
+Test video: An old video titled "Sisters Swap Husbands" with a duration of 1 hour and 41 minutes (<https://www.bilibili.com/video/BV1E4411L7bN/>)
+
+Test machine: HP ZBook Studio G3, i7 6820HQ CPU, DDR4-2133 16GB
+
+Video Sub Finder: Processes the video directly, identifies 5,028 subtitle images, takes 20 minutes
+
+ImageTrans+PaddleOCR: Processes a total of 18,100 images, identifies 1,373 subtitle images, takes 6 minutes
+
+Video Sub Finder uses traditional methods, resulting in many false positives for non-subtitle images, and the processing takes longer. ImageTrans performs much better.
+
+## Recommended Text Detection Engine
+
+ImageTrans supports text detection using YOLO object detection as well as various OCR engines.
+
+The recommended OCR engine is: PaddleOCR (2.x), which offers fast processing speed, good support for concurrency, and excellent performance even on machines without a dedicated GPU when running on CPU alone. It can be downloaded here: <https://github.com/xulihang/ImageTrans_plugins/tree/master/paddleOCR>
+
+## Video Tutorials
 
 * Traditional approach (VideoSubFinder + ImageTrans): <https://www.youtube.com/watch?v=__MTiAtqrTs>
 * OCR approach (Silhouette + ImageTrans): <https://www.youtube.com/watch?v=5zEDfrXUAdI>
