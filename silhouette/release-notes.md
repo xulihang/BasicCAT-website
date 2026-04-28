@@ -10,6 +10,14 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.6.0 (2026/04/28)
+
+* Add Qwen3-ASR
+* More line merging options: punctuations, time
+* Subtitle bottom offset preference
+* Check if ASR plugins are installed or running
+* Fix the opening of audio files
+
 ## v1.5.5 (2025/10/21)
 
 * Windows 7 support added
