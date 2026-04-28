@@ -10,7 +10,7 @@ Silhouette is a computer-aided translation tool for videos and audios.
 
 ## Features
 
-1. AI-powered speech recognition and voice activity detection using models like OpenAI Whisper. It supports various natural languages like English, Chinese, Japanese, etc.
+1. AI-powered speech recognition and voice activity detection using models like OpenAI Whisper and Qwen3-ASR. It supports various natural languages like English, Chinese, Japanese, etc.
 2. AI-powered translation which takes the context into consideration. ChatGPT and DeepSeek supported.
 3. Easy-to-use interface to adjust the subtitle lines with the help of the waveform and various playback controls.
 
@@ -21,9 +21,9 @@ Silhouette is a computer-aided translation tool for videos and audios.
 
 ## Download
 
-* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.5.5/Silhouette-windows-x64.zip)
-* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.5/Silhouette-mac-arm.dmg)
-* [macOS (Intel CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.5.5/Silhouette-mac-x64.dmg)
+* [Windows (x86_64)](https://github.com/xulihang/Silhouette/releases/download/v1.6.0/Silhouette-windows-x64.zip)
+* [macOS (Apple CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.6.0/Silhouette-mac-arm.dmg)
+* [macOS (Intel CPU)](https://github.com/xulihang/Silhouette/releases/download/v1.6.0/Silhouette-mac-x64.dmg)
 * [Linux](/silhouette/docs/#installation)
 
 ## Purchase
