@@ -10,6 +10,13 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.6.1 (2026/05/01)
+
+* Add FunASR
+* Fix an issue where exported SRT files fails to parse when recognition results contained only numbers
+* Fix an issue where subtitle font size preferences are not applied during audio playback
+* Fix an issue where focus of text area would unexpectedly switch when pressing the spacebar or moving the mouse
+
 ## v1.6.0 (2026/04/28)
 
 * Add Qwen3-ASR
