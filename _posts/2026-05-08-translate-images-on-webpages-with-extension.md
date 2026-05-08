@@ -30,3 +30,9 @@ Extension link: <https://github.com/xulihang/ImageTrans_chrome_extension>
 Demo video:
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116533535705831&bvid=BV1TKdPBcE5G&cid=38164957756&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+PS:
+
+ImageTrans's extension also supports OCR right in the browser through WebAssembly. But its pocessing speed is slow and the ability is limited. It is provided as a free option along with the public ImageTrans server. It is recommended to use the extension with ImageTrans desktop version.
+
+
