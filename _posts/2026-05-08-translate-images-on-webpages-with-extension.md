@@ -21,7 +21,7 @@ Because this operates within the browser, some technical limitations must be ove
 2. If an image is cross‑origin restricted, it cannot be downloaded directly, and fetching image data via canvas will result in a tainted canvas error. In this case, the extension must modify headers to remove CORS restrictions. If referrer information is also restricted, or if the image is not an `<img>` element but a canvas, making direct download impossible, a screenshot feature can be used—but content outside the viewport will be lost. Pixiv, for example, restricts cross‑origin access.
 3. Some websites overlay additional content on images, so replacing the image alone does not display the translated version. For instance, X.com.
 
-The ImageTrans extension can already translate images on common websites. Tested sites include Read Comics Online, Pixiv, MangaDex, Lezhin, Tencent Comics, and more.
+The ImageTrans extension can already translate images on common websites. Tested sites include Read Comics Online, Pixiv, MangaDex, Lezhin, Tencent Comics, and more. It supports various image types: manga, webtoon, manhua, comics, illustration, scanned books, etc.
 
 Many browser extensions on the market rely on remote servers and require a subscription. ImageTrans, by contrast, runs entirely on the local computer, allowing unlimited translation, using various OCR engines and large language models, directly downloading images to the local machine, preserving translation results, and freely defining text styles.
 

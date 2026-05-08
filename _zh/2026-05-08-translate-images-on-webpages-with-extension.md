@@ -21,7 +21,7 @@ tags: imagetrans
 2. 如果图片禁止跨域，无法直接下载图片，通过canvas获取图像数据也会提示tainted canvas。这时需要利用插件修改header，移除CORS限制。如果还限制referer等信息，或者不使用img元素，用的canvas，实在无法直接下载，只有使用截图功能，但可视区域外的图片内容会丢失。像pixiv就是限制跨域的。
 3. 有的网站图片上面还改了一层东西，导致直接替换图片的内容看不到翻译版本的图片。比如X.com。
 
-ImageTrans的扩展插件已经能做到常见网站的图片的翻译，测试的站点有read comics online，pixiv，mangadex，腾讯动漫等等。
+ImageTrans的扩展插件已经能做到常见网站的图片的翻译，测试的站点有read comics online，pixiv，mangadex，腾讯动漫等等。支持漫画、插图、扫描图书等各种图片。
 
 市面上的很多插件都依赖于远程服务器，所以需要订阅。ImageTrans这种模式则完全在本地电脑上进行，可以无限制地翻译，使用各种OCR、大模型，直接下载图片到本地，保留翻译结果，自由定义文本样式等等。
 
