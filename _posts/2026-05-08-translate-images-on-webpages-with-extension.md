@@ -1,12 +1,12 @@
 ---
 date: 2026-05-08 20:42:50+08:00
 layout: post
-title: How to Translate Images in a Web Page
+title: How to Translate Images on a Web Page
 categories: blog
 tags: imagetrans
 ---
 
-Browsers all have built-in webpage translation features, but they usually can only translate selectable text, not images. Yandex supports image translation, but with unsatisfactory results. Safari allows copying text but has no translation function. The computer-assisted image translation software [ImageTrans](/imagetrans/) provides a Chrome browser extension that supports direct translation of images in web pages, erasing the original text, filling in the translated text, and restoring colors, rotations, and various styles.
+Browsers all have built-in webpage translation features, but they usually can only translate selectable text, not images. Yandex supports image translation, but with unsatisfactory results. Safari allows copying text but has no translation function. The computer-assisted image translation software [ImageTrans](/imagetrans/) provides a Chrome browser extension that supports direct translation of images on web pages, erasing the original text, filling in the translated text, and restoring colors, rotations, and various styles.
 
 Below is its processing workflow:
 
