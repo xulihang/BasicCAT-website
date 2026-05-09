@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.19.0 (2026/05/09)
+
+* Support setting horizontal and vertical offsets for characters in the vertical text engine [#issue1063](https://github.com/xulihang/ImageTrans-docs/issues/1063)
+* Support passing additional project settings and preference settings when calling template mode via command line
+* Optimize command-line invocations
+* Fix issue where creating a duplicate did not use deep cloning
+* Fix issue where image extraction mode failed to extract PNG images from PDF files
+* Fix issue where exporting translated results could alter text area coordinates when typesetting mode is enabled [#issue839](https://github.com/xulihang/ImageTrans-docs/issues/839)
+
 ## v5.18.0 (2026/04/19)
 
 * Translation Memory:

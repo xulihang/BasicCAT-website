@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.19.0 (2026/05/09)
+
+* 支持给竖排文字引擎的字符设置水平和垂直偏移 [#issue1063](https://github.com/xulihang/ImageTrans-docs/issues/1063)
+* 命令行调用模板模式支持传入额外的项目设置和偏好设置
+* 优化通过命令行的调用
+* 修复创建副本没有使用深拷贝的问题
+* 修复图片提取模式提取PDF中的png图片失败的问题
+* 修复开启排版模式时导出翻译结果可能导致文字区域坐标被改变的问题 [#issue839](https://github.com/xulihang/ImageTrans-docs/issues/839)
+
 ## v5.18.0 (2026/04/19)
 
 * 翻译记忆：
