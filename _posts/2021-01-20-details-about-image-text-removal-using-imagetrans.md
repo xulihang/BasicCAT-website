@@ -173,3 +173,4 @@ Sample:
 
 ![gemini sample](/album/imagetrans-features/text-removal-and-reinjection.jpg)
 
+Generative AI models like Lama Inpaint and Nano Banana have relatively low requirements for mask precision. By simply generating rectangular masks based on text areas, we can still achieve good results: <https://github.com/xulihang/ImageTrans-docs/issues/413>

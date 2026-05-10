@@ -169,3 +169,5 @@ Gemini的Nano Banana可以取得不错的效果。
 示例：
 
 ![gemini示例](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+
+Lama Inpaint和Nano Banana这种生成式AI模型对掩膜的精确度要求较低，我们直接基于文字区域生成矩形的掩膜，也可以取得不错的效果：<https://github.com/xulihang/ImageTrans-docs/issues/413>
