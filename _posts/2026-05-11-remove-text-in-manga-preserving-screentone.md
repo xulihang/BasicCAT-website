@@ -30,6 +30,10 @@ PatchMatch (traditional image processing):
 
 ![PatchMatch](/album/screentones/patchmatch.jpg)
 
+Flux Klein 9B：
+
+![Flux](/album/screentones/flux.jpg)
+
 Lama Inpaint (original):
 
 ![Original Lama](/album/screentones/original.jpg)

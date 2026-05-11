@@ -31,6 +31,11 @@ PatchMatch（传统图像处理）：
 
 ![PatchMatch](/album/screentones/patchmatch.jpg)
 
+Flux Klein 9B：
+
+![Flux](/album/screentones/flux.jpg)
+
+
 Lama Inpaint（原版）：
 
 ![原版lama](/album/screentones/original.jpg)
