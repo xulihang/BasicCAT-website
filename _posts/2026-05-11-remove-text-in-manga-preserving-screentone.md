@@ -46,7 +46,7 @@ Gemini 3.0 (Nano Banana):
 
 ![Gemini](/album/screentones/nano-banana-2.jpg)
 
-As you can see, the results are quite good, and even when there are minor flaws, only a small amount of correction is needed.
+As you can see, the results of Gemini and fine-tuned Lama are quite good, and even when there are minor flaws, only a small amount of correction is needed.
 
 These generative AI models have powerful repainting capabilities. Besides restoring screentones, they can also reconstruct various backgrounds covered by text, such as human figures, landscapes, and other content.
 
