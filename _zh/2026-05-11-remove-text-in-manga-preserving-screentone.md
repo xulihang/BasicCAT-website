@@ -31,11 +31,11 @@ PatchMatch（传统图像处理）：
 
 ![PatchMatch](/album/screentones/patchmatch.jpg)
 
-Lama（原版）：
+Lama Inpaint（原版）：
 
 ![原版lama](/album/screentones/original.jpg)
 
-Lama（日漫微调版）：
+Lama Inpaint（日漫微调版）：
 
 ![微调lama](/album/screentones/fine-tuned.jpg)
 
