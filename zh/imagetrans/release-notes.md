@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.19.1 (2026/05/16)
+
+* 更新DeepSeek、ChatGPT的插件以支持设置额外字段
+* DeepSeek默认不启用思考
+* 添加显示字体样式序号的偏好设置 [#issue1066](https://github.com/xulihang/ImageTrans-docs/issues/1066)
+
 ## v5.19.0 (2026/05/09)
 
 * 支持给竖排文字引擎的字符设置水平和垂直偏移 [#issue1063](https://github.com/xulihang/ImageTrans-docs/issues/1063)

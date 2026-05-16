@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.19.1 (2026/05/16)
+
+* Update DeepSeek, ChatGPT plugins to set extra fields
+* Disable thinking for DeepSeek
+* Add preference to display font style name number [#issue1066](https://github.com/xulihang/ImageTrans-docs/issues/1066)
+
 ## v5.19.0 (2026/05/09)
 
 * Support setting horizontal and vertical offsets for characters in the vertical text engine [#issue1063](https://github.com/xulihang/ImageTrans-docs/issues/1063)
