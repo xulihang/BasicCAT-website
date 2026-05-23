@@ -22,7 +22,7 @@ layout: page
 * Mask editor and text remover:
    * Detect whether plugins are installed or running when selecting a method
    * Add region-based auto method selection to the method list; no longer automatically selects based on complex background by default
-* Custom workflow now support concurrent execution using multiple processes to optimize processing speed
+* Custom workflow now supports concurrent execution using multiple processes to optimize processing speed
 * Fix an issue where batch processing files via command line using templates did not support single images
 
 ## v5.19.1 (2026/05/16)
