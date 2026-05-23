@@ -9,6 +9,22 @@ layout: page
 }
 </style>
 
+## v5.20.0 (2026/05/23)
+
+* Vertical text engine:
+   * Fix character center alignment
+   * Add Japanese sokuon to right-aligned characters
+* Server:
+   * Do not clean images during translation
+   * Add preferences for scheduled restart and using independent processes
+   * Save server settings
+   * Add support for directly opening ImageTrans to connect to a server via command line
+* Mask editor and text remover:
+   * Detect whether plugins are installed or running when selecting a method
+   * Add region-based auto method selection to the method list; no longer automatically selects based on complex background by default
+* Custom workflow now support concurrent execution using multiple processes to optimize processing speed
+* Fix an issue where batch processing files via command line using templates did not support single images
+
 ## v5.19.1 (2026/05/16)
 
 * Update DeepSeek, ChatGPT plugins to set extra fields
