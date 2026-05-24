@@ -24,6 +24,7 @@ layout: page
    * Add region-based auto method selection to the method list; no longer automatically selects based on complex background by default
 * Custom workflow now supports concurrent execution using multiple processes to optimize processing speed
 * Fix an issue where batch processing files via command line using templates did not support single images
+* Fix the self launching for macOS
 
 ## v5.19.1 (2026/05/16)
 
