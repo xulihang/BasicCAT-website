@@ -31,7 +31,7 @@ Its development has been stable. With the advent of large language models, I've 
 BasicCAT.org also provides other tools:
 
 * [Aligner](/new-tool-bitext-aligner/): Bi-text aligner.
-* [ImageTrans](/imagetrans/) is a computer-aided image translation and transcription tool. 
+* [ImageTrans](/imagetrans/) is a computer-aided image translation and transcription (OCR) tool. 
 * [Silhouette](/silhouette/) is a computer-aided translation tool for videos and audios.
 
 These tools are a good company for freelance translators, translation hobbyists, teachers and students as well as companies.
