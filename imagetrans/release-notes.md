@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.21.0 (2026/05/30)
+
+* Add preference to remember the window status for mask editing
+* Improve the consistency of auto correcting center aligned characters in different font sizes for vertical text engine
+* Fix the launching of processes when the server is launched via command line 
+
 ## v5.20.0 (2026/05/23)
 
 * Vertical text engine:
