@@ -13,6 +13,7 @@ layout: page
 
 * Add preference to remember the window status for mask editing
 * Improve the consistency of auto correcting center aligned characters in different font sizes for vertical text engine
+* Add class to use for panel detection for balloon detection model
 * Fix the launching of processes when the server is launched via command line 
 
 ## v5.20.0 (2026/05/23)
