@@ -19,7 +19,7 @@ tags: imagetrans
 ### API配置
 
 1. 安装看典古籍OCR的插件。解压插件到软件的plugins目录。[下载](/assets/kandiangujiOCRPlugin.zip)
-2. 打开ImageTrans，在偏好设置中找到API设置，给kandianguji一项填写API和账号（邮箱或密码）。
+2. 打开ImageTrans，在偏好设置中找到API设置，给kandianguji一项填写API和账号（邮箱或手机号）。
 
 可以在看典古籍官网获取API：<https://kandianguji.com/shuzihua?page_mode=ocr_api>
 
