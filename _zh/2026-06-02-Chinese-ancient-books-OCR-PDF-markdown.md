@@ -16,6 +16,8 @@ tags: imagetrans
 
 下面我们介绍怎么使用看典古籍API识别《世说新语》的一张图片。
 
+![](/album/ancient-book/shi_shuo_xin_yu02.jpg)
+
 ### API配置
 
 1. 安装看典古籍OCR的插件。解压插件到软件的plugins目录。[下载](/assets/kandiangujiOCRPlugin.zip)

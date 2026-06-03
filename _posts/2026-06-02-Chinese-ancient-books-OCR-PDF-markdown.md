@@ -17,6 +17,8 @@ Recognizing text from ancient books presents difficulties such as vertical layou
 
 Below, we introduce how to use the Kandianguji Ancient Book API to recognize an image from *Shishuo Xinyu* (A New Account of the Tales of the World).
 
+![](/album/ancient-book/shi_shuo_xin_yu02.jpg)
+
 ### API Configuration
 
 1. Install the Kandianguji Ancient Book OCR plugin. Extract the plugin into the software's plugins directory. [Download](/assets/kandiangujiOCRPlugin.zip)
