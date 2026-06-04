@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v5.21.1 (2026/06/04)
+
+* Support setting the border size of an active text area
+* Support importing TIFF files
+* Support saving text in panels
+* Add a custom workflow item for creating text areas using panels
+* Improve the consistency of auto correcting center aligned characters in different font sizes for vertical text engine
+* Fix a potential dictionary encoding issue in the mit48px OCR module
+
 ## v5.21.0 (2026/05/30)
 
 * Add preference to remember the window status for mask editing
