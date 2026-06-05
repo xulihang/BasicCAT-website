@@ -136,7 +136,7 @@ Extract Text Layers
 
 ↓
 
-AI Translation
+Translation
 
 ↓
 
@@ -177,7 +177,7 @@ OCR Text Extraction
 
 ↓
 
-AI Translation
+Translation
 
 ↓
 
@@ -185,7 +185,7 @@ Text Removal
 
 ↓
 
-Automatic Typesetting
+Typesetting 
 
 ↓
 
