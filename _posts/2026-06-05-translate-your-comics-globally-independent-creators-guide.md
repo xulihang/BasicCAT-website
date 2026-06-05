@@ -124,7 +124,7 @@ Whether you are translating a new project or localizing older works, ImageTrans 
 
 If you still have your original project files, there is no reason to start from exported images.
 
-ImageTrans can work directly with PSD files and other source files containing editable text layers.
+[ImageTrans](/imagetrans/) can work directly with PSD files and other source files containing editable text layers.
 
 A typical workflow looks like this:
 
