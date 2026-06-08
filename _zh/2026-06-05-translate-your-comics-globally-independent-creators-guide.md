@@ -1,7 +1,7 @@
 ---
 date: 2026-06-05 20:52:50+08:00
 layout: post
-title: "Translate Your Comic Into Multiple Languages: A Guide for Independent Creators Going Global"
+title: "将你的漫画作品翻译到全球语言：独立创作者出海指南"
 categories: blog
 tags: imagetrans
 ---
