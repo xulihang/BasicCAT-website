@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v5.21.2 (2026/06/10)
+
+* Improve display of Hanyu Pinyin in exported HTML
+* Server supports using self-signed certificates
+
 ## v5.21.1 (2026/06/04)
 
 * Support setting the border size of an active text area
