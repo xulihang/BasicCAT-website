@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v5.21.3 (2026/06/16)
+
+Update rapid OCR to use PPOCRv6
+
 ## v5.21.2 (2026/06/10)
 
 * Improve display of Hanyu Pinyin in exported HTML
