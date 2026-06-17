@@ -1,7 +1,7 @@
 ---
 date: 2026-06-17 20:32:50+08:00
 layout: post
-title: "在安卓浏览器上用插件翻译漫画图片"
+title: "Translate Manga Images on Android Browser with Extension"
 categories: blog
 tags: imagetrans
 ---
