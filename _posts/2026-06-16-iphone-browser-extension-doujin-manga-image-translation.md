@@ -182,3 +182,5 @@ Although browser extension support on iPhone is still more limited than on deskt
 By combining Orion Browser with ImageTrans, you can translate manga, doujinshi, comics, scanned documents, and other image-based content directly while browsing.
 
 Due to current iOS limitations, Screenshot Translation remains the most reliable workflow. When paired with an HTTPS-enabled ImageTrans server, it provides a practical way to read foreign-language image content on an iPhone without constantly switching between apps.
+
+Demo video: <https://youtube.com/shorts/YeDeC-KigDE?si=NK240zYsoEEUpMok>

@@ -188,4 +188,6 @@ ImageTrans 并不仅限于漫画和同人志。
 
 受当前 iOS 平台限制影响，截图翻译仍然是最稳定可靠的工作方式。而配合启用了 HTTPS 的 ImageTrans 服务后，你就能够在 iPhone 上更加流畅地阅读各种外语图片内容，而无需频繁切换应用。
 
+演示视频：
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116760279843176&bvid=BV1HxjV6DE67&cid=39167985975&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
