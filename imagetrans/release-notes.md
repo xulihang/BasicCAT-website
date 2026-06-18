@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.22.0 (2026/06/18)
+
+* Add OCR setting for minimum width; if an image is smaller than this width, enlarge it to this width
+* Fix issue where failed server download did not delete the failed file
+* Fix issue where server startup failure still reported a successful start
+
 ## v5.21.3 (2026/06/16)
 
 Update rapid OCR to use PPOCRv6
