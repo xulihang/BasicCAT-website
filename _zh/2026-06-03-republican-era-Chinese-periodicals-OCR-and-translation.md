@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-民国期刊大多采用竖直排版的繁体文言文。本文会介绍如何使用[ImageTrans](/zh/imagetrans/)识别文字，然后翻译成简体白话文。
+民国期刊、报纸大多采用竖直排版的繁体文言文。本文会介绍如何使用[ImageTrans](/zh/imagetrans/)识别文字，然后翻译成简体白话文。
 
 例如（《中华妇女界》第一期第一卷《妇德》）：
 
