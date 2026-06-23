@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v5.22.1 (2026/06/23)
+
+* Support using already-entered account credentials for authentication when invoked from the command line
+* Support using images to provide context for translation (requires a vision-capable large model)
+* Support using text from previous pages to provide context for translation
+
 ## v5.22.0 (2026/06/18)
 
 * Add OCR setting for minimum width; if an image is smaller than this width, enlarge it to this width
