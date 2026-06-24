@@ -28,6 +28,10 @@ Below are test results for Chinese-to-English translation of two images from the
 | 我不做人了!!          | I'm no longer human!!               | I'm not gonna be human anymore!!     |
 | 未完待续              | To be continued                     | To be continued                      |
 
+
+The model used is GLM 5V turbo.
+
+
 ## Using Previous Pages for More Context
 
 | Original Text                                                                                   | Translation (without previous context)                                                                                                                                                        | Translation (with previous context)                                                                                                                                                |
@@ -36,6 +40,8 @@ Below are test results for Chinese-to-English translation of two images from the
 | 这忽如其来的温柔,让单身二十六年的我没一点防备……                                                | This sudden tenderness made me, who has been single for twenty-six years, completely unprepared...                                                                                           | This sudden kindness caught me completely off guard after being single for twenty-six years...                                                                                     |
 | 我不做人了!!                                                                                    | I won’t be a human anymore!!                                                                                                                                                                 | I don't want to be a person anymore!!                                                                                                                                              |
 | 未完待续                                                                                        | To be continued                                                                                                                                                                              | To be continued                                                                                                                                                                    |
+
+The model used is Tencent-HY-MT1.5-1.8B. An offline model was used here due to concerns that the caching mechanisms of online services like Deepseek might interfere with the results.
 
 ## Conclusion
 
