@@ -1,5 +1,5 @@
 ---
-date: 2026-06-17 20:32:50+08:00
+date: 2026-06-24 19:54:50+08:00
 layout: post
 title: "Use Context to Improve Translation Quality for Comics, Game Screenshots, and Other Images"
 categories: blog
