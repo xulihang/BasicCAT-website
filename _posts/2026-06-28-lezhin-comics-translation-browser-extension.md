@@ -46,6 +46,10 @@ ImageTrans is available for:
 
 This means you can read translated comics on both desktop and mobile devices.
 
+## All is Done on Your Own Device
+
+All the processing can be done natively on your own device. The image is not sent to a remote server for processing.
+
 ## Give It a Try
 
 If you're looking for a Lezhin Comics translation browser extension, ImageTrans offers an easy way to read Korean webtoons without leaving your browser.
