@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v5.23.0 (2026/06/29)
+
+* New OCR plugin: oneocr (Windows 11 snipping tool OCR)
+* OCR now splits images before performing scaling
+* Fix issue where vertical text engine vertical centering was ineffective
+* Fix issue where coordinates were incorrect for small width webtoon recognition
+
 ## v5.22.1 (2026/06/23)
 
 * Support using already-entered account credentials for authentication when invoked from the command line
