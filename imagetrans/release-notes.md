@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v5.24.0 (2026/06/30)
+
+* Improved the efficiency of the vertical text engine's automatic font size calculation
+* Fix the vertical text engine's handling of automatic font size for multi-line text when text wrapping is disabled
+
 ## v5.23.0 (2026/06/29)
 
 * New OCR plugin: oneocr (Windows 11 snipping tool OCR)
