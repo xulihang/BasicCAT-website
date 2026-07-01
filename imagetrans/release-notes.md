@@ -11,7 +11,9 @@ layout: page
 
 ## v5.24.0 (2026/06/30)
 
-* Improved the efficiency of the vertical text engine's automatic font size calculation
+* Do not store rotation < 0.01
+* New project setting for vertical text engine: no punc at start
+* Improve the efficiency of the vertical text engine's automatic font size calculation
 * Fix the vertical text engine's handling of automatic font size for multi-line text when text wrapping is disabled
 
 ## v5.23.0 (2026/06/29)
