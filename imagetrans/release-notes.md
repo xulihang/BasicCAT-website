@@ -13,7 +13,10 @@ layout: page
 
 * Do not store rotation < 0.01
 * New project setting for vertical text engine: no punc at start
+* New custom workflow item: expand/shrink areas for target
+* Expand and shrink areas for target under typesetting mode
 * Improve the efficiency of the vertical text engine's automatic font size calculation
+* Fix the oscillation issue when calculating the font size for vertical text
 * Fix the vertical text engine's handling of automatic font size for multi-line text when text wrapping is disabled
 
 ## v5.23.0 (2026/06/29)
