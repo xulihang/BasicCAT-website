@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v6.0.0 (2026/07/03)
+
+* Use precise font size calculation for horizontal text
+* API preferences can be customized in project settings
+* Fix bug in automatic font sizing for rotated vertical text areas
+
 ## v5.24.0 (2026/06/30)
 
 * Do not store rotation < 0.01
