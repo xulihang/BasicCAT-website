@@ -55,3 +55,5 @@ tags: imagetrans
 
    ![markdown](/album/pdf-translation/markdown-zh.jpg)
 
+
+除了导出为markdown，也支持导出为PDF、HTML等其它格式。
