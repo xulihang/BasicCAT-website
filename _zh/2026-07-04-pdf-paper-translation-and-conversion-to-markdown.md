@@ -65,3 +65,9 @@ tags: imagetrans
 另外也支持本地运行。
 
 除了DeepSeek-OCR，也可以使用GLM和MinerU等其它大模型进行布局分析。
+
+## 系列文章
+
+* ![古籍OCR：将古籍扫描件转换为可搜索PDF和Markdown](./2026-06-02-Chinese-ancient-books-OCR-PDF-markdown.md)
+* ![民国期刊OCR：文字提取与使用简体白话文翻译](./2026-06-03-republican-era-Chinese-periodicals-OCR-and-translation.md)
+* ![PDF论文翻译与转换为Markdown](./2026-07-04-pdf-paper-translation-and-conversion-to-markdown.md)
