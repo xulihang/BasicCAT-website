@@ -57,3 +57,11 @@ tags: imagetrans
 
 
 除了导出为markdown，也支持导出为PDF、HTML等其它格式。
+
+## 配置
+
+使用DeepSeek-OCR需要在偏好设置里配置硅基流动的API密钥：https://cloud.siliconflow.cn/models?target=deepseek-ai/DeepSeek-OCR
+
+另外也支持本地运行。
+
+除了DeepSeek-OCR，也可以使用GLM和MinerU等其它大模型进行布局分析。

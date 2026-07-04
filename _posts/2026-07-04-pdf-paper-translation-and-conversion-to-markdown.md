@@ -55,3 +55,11 @@ This article will use [ImageTrans](/imagetrans/), an image OCR and translation s
    ![Markdown](/album/pdf-translation/markdown-en.jpg)
 
 In addition to exporting as Markdown, export to PDF, HTML, and other formats is also supported.
+
+## Setup
+
+To use DeepSeek-OCR, you need to fill in the API key of Siliconflow in preferences: https://cloud.siliconflow.cn/models?target=deepseek-ai/DeepSeek-OCR
+
+You can also run DeepSeek-OCR locally.
+
+In addition to DeepSeek-OCR, other large models such as GLM and MinerU can also be used for layout analysis.
