@@ -9,14 +9,19 @@ layout: page
 }
 </style>
 
-
 ## v6.0.1 (2026/07/07)
 
-* Optimize the vertical text engine's handling of punctuation avoidance at line start/end.
-* Change the server parameter check for command-line server invocation from containment to equality.
-* Fix an issue where the vertical text engine's width calculation does not account for stroke width.
-* Fix an issue with incorrect stroke radius for rotated vertical text areas.
-* Fix an issue where the progress range is incorrect when importing a PDF with a specified page range.
+* Optimize the vertical text engine's handling of punctuation avoidance at line start/end
+* Change the server parameter check for command-line server invocation from containment to equality
+* When extracing images from PDF, convert TIFF to JPG
+* New project settings: merge overlapped balloons
+* Check if the balloons belong to the same class when merging
+* Add support for PPDocLayout v6
+* Fix the reinitialization of the balloon detector instance when the selected balloon does not change
+* Fix the memory leak of PPDocLayout
+* Fix an issue where the vertical text engine's width calculation does not account for stroke width
+* Fix an issue with incorrect stroke radius for rotated vertical text areas
+* Fix an issue where the progress range is incorrect when importing a PDF with a specified page range
 
 ## v6.0.0 (2026/07/03)
 
