@@ -56,7 +56,7 @@ On success, the endpoint returns JSON:
 }
 ```
 
-- `img`: The translated image as a base64 JPEG.
+- `img`: The translated image as a base64 WebP.
 - `imgMap.boxes`: Detected text boxes with source text, translated text, and geometry.
 
 
@@ -119,7 +119,7 @@ Response:
 
 ### Targeting a Specific Instance
 
-If you have multiple ImageTrans instances connected, specify the target with `displayName`:
+If you have multiple ImageTrans instances connected, specify the target with `displayName` (optional password is supported):
 
 ```bash
 curl -X POST http://localhost:51042/translate \
@@ -133,7 +133,7 @@ curl -X POST http://localhost:51042/translate \
 
 There are two server projects, which differ in their deployment approaches:
 
-* [ImageTrans_wsServer](https://github.com/xulihang/ImageTrans_wsServer): The server runs on `http://localhost:51042` by default. All translation requests are forwarded to a connected ImageTrans desktop instance via WebSocket, and the result is returned as an HTTP response. You can deploy the server on a public VPS or NAS at home and then connect your local AI computer to the server. The server is written in B4J.
+* [ImageTrans_wsServer](https://github.com/xulihang/ImageTrans_wsServer): The server runs on `http://IP:51042`/`https://IP:51043` by default. All translation requests are forwarded to a connected ImageTrans desktop instance via WebSocket, and the result is returned as an HTTP response. You can deploy the server on a public VPS or NAS at home and then connect your local AI computer to the server. The server is written in B4J.
 * [image-translation-server](https://github.com/xulihang/image-translation-server): The server directly launches local ImageTrans instances via command line. It can be deployed to a powerful VPS or your local AI computer. The server is written in Python. Docker deployment is supported.
 
 ## AI Agent Integration
