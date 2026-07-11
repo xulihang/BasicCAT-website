@@ -134,3 +134,6 @@ There are two server projects, which differ in their deployment approaches:
 * [ImageTrans_wsServer](https://github.com/xulihang/ImageTrans_wsServer): The server runs on `http://localhost:51042` by default. All translation requests are forwarded to a connected ImageTrans desktop instance via WebSocket, and the result is returned as an HTTP response. You can deploy the server on a public VPS or NAS at home and then connect your local AI computer to the server. The server is written in B4J.
 * [image-translation-server](https://github.com/xulihang/image-translation-server): The server directly launches local ImageTrans instances via command line. It can be deployed to a powerful VPS or your local AI computer. The server is written in Python. Docker deployment is supported.
 
+## Conclusion
+
+With a self-hosted API server, manga translation becomes a service you can integrate into any workflow — whether it's a browser extension, a batch processing script, or a mobile reading app. Choose `ImageTrans_wsServer` if you want a lightweight relay between a remote server and your local ImageTrans desktop, or `image-translation-server` for a standalone deployment with Docker support. Both projects are open source, so you can customize them to fit your specific needs.
