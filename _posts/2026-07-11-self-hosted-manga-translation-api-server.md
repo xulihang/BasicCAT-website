@@ -13,7 +13,9 @@ AI manga translation usually requires several different technologies working tog
 * Image processing for removing and replacing text
 * Typesetting for keeping the original manga style
 
-For users who want to integrate manga translation into their own applications, a desktop translation tool alone is not enough.
+Computer-aided image translation [ImageTrans](/imagetrans/) is a program combining all the parts mentioned above.
+
+However, for users who want to integrate manga translation into their own applications, a desktop translation tool alone is not enough.
 
 A self-hosted API layer makes it possible to connect manga translation capabilities with browsers, scripts, mobile applications, and automation workflows.
 
