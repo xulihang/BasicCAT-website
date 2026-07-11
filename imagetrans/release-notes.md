@@ -9,6 +9,18 @@ layout: page
 }
 </style>
 
+## v6.0.2 (2026/07/11)
+
+* Add right-click menu for editing class in the panel list
+* More markdown export options
+* Add Export markdown to custom workflows
+* Support preset markdown export settings in project settings
+* When opening a project via command line to execute a custom workflow, read preferences.conf, settings.json, setOCRBasedOnLang from the project location, consistent with template-created project mode
+* Remove the .itp suffix from initial file names on Mac to avoid duplication
+* Update the templates' intermediate results folder to `intermediateResults`
+* Support using [ImageTrans-skills](https://github.com/xulihang/ImageTrans-skills) via agents such as OpenClaw and Claude
+* Fix an issue where exporting PDF via command line showed a completion dialog
+
 ## v6.0.1 (2026/07/07)
 
 * Optimize the vertical text engine's handling of punctuation avoidance at line start/end
