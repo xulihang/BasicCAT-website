@@ -29,7 +29,7 @@ Send a base64-encoded image to the `/translate` endpoint:
 
 ```bash
 curl -X POST http://localhost:51042/translate \
-  -d "src=data:image/png;base64,iVBORw0KGgo...rest of base64 data" \
+  -d "src=data:image/png;base64,iVBORw0KGgo..." \
   -d "sourceLang=ja" \
   -d "targetLang=en"
 ```
@@ -129,8 +129,8 @@ curl -X POST http://localhost:51042/translate \
 ## Deployment
 
 
-There are two server projects, which have different deployment:
+There are two server projects, which differ in their deployment approaches:
 
 * [ImageTrans_wsServer](https://github.com/xulihang/ImageTrans_wsServer): The server runs on `http://localhost:51042` by default. All translation requests are forwarded to a connected ImageTrans desktop instance via WebSocket, and the result is returned as an HTTP response. You can deploy the server on a public VPS or NAS at home and then connect your local AI computer to the server. The server is written in B4J.
-* [image-translation-server](https://github.com/xulihang/image-translation-server): The server directly lanuches local ImageTrans instances via command line. It can be deployed to a powerful VPS or your local AI computer. The server is written in Python. Docker deployment is supported.
+* [image-translation-server](https://github.com/xulihang/image-translation-server): The server directly launches local ImageTrans instances via command line. It can be deployed to a powerful VPS or your local AI computer. The server is written in Python. Docker deployment is supported.
 
