@@ -21,6 +21,16 @@ AI漫画翻译通常需要多种不同的技术协同工作：
 
 借助[ImageTrans API Server](https://github.com/xulihang/ImageTrans_wsServer)，你可以将现有的[ImageTrans](/zh/imagetrans/)安装部署为一个私有的漫画翻译服务。
 
+## 完全本地处理
+
+所有处理 — OCR、翻译、文字去除和排版 — 都可以完全在本地计算机上运行。与基于云的翻译服务不同，本地设置为你提供：
+
+- **无额外费用**：使用开源模型，无需按字符付费的API费用。
+- **无使用限制**：翻译任意数量的页面，无速率限制或配额。
+- **无隐私问题**：你的漫画图片永远不会离开你的计算机。
+
+关于设置完整的本地漫画翻译工作坊（ImageTrans + Ollama + 自定义工作流）的分步指南，请参阅前文：[离线AI漫画翻译器](./2025-04-05-how-to-build-a-local-manga-translation-workshop.md)。
+
 ## 用法
 
 ### 翻译整张图片

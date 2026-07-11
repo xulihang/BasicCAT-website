@@ -21,6 +21,16 @@ A self-hosted API layer makes it possible to connect manga translation capabilit
 
 With the [ImageTrans API Server](https://github.com/xulihang/ImageTrans_wsServer), you can expose your existing [ImageTrans](/imagetrans/) installation as a private manga translation service.
 
+## Fully Local Processing
+
+All processing — OCR, translation, text removal, and typesetting — can run entirely on your local machine. Unlike cloud-based translation services, a local setup gives you:
+
+- **No extra cost**: Use open-source models without paying per-character API fees.
+- **No usage limits**: Translate as many pages as you want, no rate limiting or quotas.
+- **No privacy concerns**: Your manga images never leave your computer.
+
+For a step-by-step guide on setting up a complete local manga translation workshop (ImageTrans + Ollama + custom workflows), see the previous article: [Offline AI Manga Translator](./2025-04-05-how-to-build-a-local-manga-translation-workshop.md).
+
 ## Usage
 
 ### Translate a Whole Image
