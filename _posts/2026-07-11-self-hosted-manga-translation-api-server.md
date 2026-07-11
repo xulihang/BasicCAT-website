@@ -1,7 +1,7 @@
 ---
 date: 2026-07-11 19:08:50+08:00
 layout: post
-title: "Self-hosted Manga Translation API Server"
+title: "Self-Hosted Manga Translation API Server"
 categories: blog
 tags: imagetrans
 ---
