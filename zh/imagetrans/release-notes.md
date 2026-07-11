@@ -15,7 +15,7 @@ layout: page
 * 更多的markdown导出选项
 * 添加导出markdown到自定义工作流
 * 支持在项目设置预设markdown导出设置
-* 通过命令行打开项目执行自定义工作流时读取项目处的perferences.conf、settings.json、setOCRBasedOnLang，与通过模板创建项目模式保持一致
+* 通过命令行打开项目执行自定义工作流时读取项目处的preferences.conf、settings.json、setOCRBasedOnLang，与通过模板创建项目模式保持一致
 * mac的初始文件名去除.itp的后缀避免重复
 * 更新模板的中间结果文件夹为`intermediateResults`
 * 支持使用[ImageTrans-skills](https://github.com/xulihang/ImageTrans-skills)，通过小龙虾、Claude等智能体调用
