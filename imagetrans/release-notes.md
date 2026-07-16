@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v6.0.3 (2026/07/16)
+
+* Add table recognition
+* Do not merge areas in table panels when running merging areas in panels workflow item
+
 ## v6.0.2 (2026/07/11)
 
 * Add right-click menu for editing class in the panel list
