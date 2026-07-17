@@ -157,6 +157,10 @@
     });
     // Update page title
     updatePageTitle(tabId);
+    // Refresh settings form if switching to settings tab
+    if (tabId === 'settings') {
+      populateSettingsForm();
+    }
   }
 
   function updatePageTitle(tabId) {
