@@ -174,7 +174,7 @@ const OCR = (function() {
       if (typeof window['esearch-ocr'] === 'undefined') {
         report('Loading OCR engine...');
         // esearch-ocr.umd.js sets window['esearch-ocr']
-        await loadScript('/online-image-translator/js/lib/esearch-ocr/dist/esearch-ocr.umd.js');
+        await loadScript('/online-image-translator/lib/esearch-ocr/dist/esearch-ocr.umd.js');
       }
 
       // Wait for OpenCV to be fully ready (it sets cv on a callback)
