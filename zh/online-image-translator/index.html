@@ -68,15 +68,22 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      height: 100vh;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
 
     /* ===== Tab Bar ===== */
@@ -473,12 +480,12 @@
       padding: 10px;
       font-size: 15px;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-top: 16px;
       position: sticky;
-      top: 0;
+      bottom: 0;
       z-index: 10;
       background: var(--primary);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
     }
     .btn-sm { padding: 4px 10px; font-size: 12px; }
 
@@ -662,7 +669,6 @@
   <!-- ===== Settings Tab ===== -->
   <div class="tab-panel hidden" id="panel-settings">
     <div class="settings-layout">
-      <button class="btn-primary btn-save" id="btn-settings-save" data-i18n="settings_save">保存设置</button>
       <div class="settings-card">
         <div class="settings-card-title" data-i18n="settings_translation">翻译</div>
         <div class="form-row">
@@ -806,6 +812,7 @@
         </div>
       </div>
 
+      <button class="btn-primary btn-save" id="btn-settings-save" data-i18n="settings_save">保存设置</button>
     </div>
   </div>
 
