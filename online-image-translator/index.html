@@ -1,40 +1,903 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Online Image Translator</title>
+  <title>Online Image Translator — Translate Comics, Manga &amp; Images Instantly</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Free online image translator that translates text in comics, manga, screenshots, and photos. Supports camera translate, OCR + AI translation for Japanese, Chinese, Korean, and more. No installation required." />
+  <meta name="keywords" content="online image translator, comic translation, manga translation, camera translate, image translator, translate manga, translate comic, OCR translation, photo translate" />
+  <meta name="author" content="ImageTrans" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.basiccat.org/online-image-translator/" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="https://www.basiccat.org/online-image-translator/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.basiccat.org/zh/online-image-translator/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.basiccat.org/online-image-translator/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Online Image Translator — Translate Comics, Manga &amp; Images Instantly" />
+  <meta property="og:description" content="Free online tool to translate text inside images: comics, manga, screenshots, and photos. Supports camera capture, OCR, and AI-powered translation for 14+ languages." />
+  <meta property="og:url" content="https://www.basiccat.org/online-image-translator/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Online Image Translator — Translate Comics, Manga &amp; Images" />
+  <meta name="twitter:description" content="Free online image translator. Translate text in comics, manga, screenshots &amp; photos. Camera translate, OCR + AI. 14+ languages." />
   <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Online Image Translator",
+    "url": "https://www.basiccat.org/online-image-translator/",
+    "description": "Free online image translator that translates text in comics, manga, screenshots, and photos using OCR and AI translation.",
+    "applicationCategory": "MultilingualApplication",
+    "operatingSystem": "All",
+    "inLanguage": ["en", "zh-CN"],
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "xulihang"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f0f2f5;
+      --card-bg: #ffffff;
+      --primary: #4a6cf7;
+      --primary-hover: #3b5de7;
+      --text: #2d3748;
+      --text-secondary: #718096;
+      --border: #e2e8f0;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ===== Tab Bar ===== */
+    .tab-bar {
+      display: flex;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 8px;
+      flex-shrink: 0;
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+    .tab-btn {
+      padding: 12px 20px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .tab-btn .icon { margin-right: 4px; }
+
+    /* ===== Main Content ===== */
+    .main-content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tab-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    .tab-panel.hidden { display: none !important; }
+
+    /* ===== Status Mask ===== */
+    .status-mask {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .status-spinner {
+      width: 40px; height: 40px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .status-text { color: #fff; font-size: 16px; }
+
+    /* ===== Translate Tab ===== */
+    .translate-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .translate-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .translate-toolbar label { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .translate-image-area {
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 16px;
+      background: #e8ecf1;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      box-shadow: var(--shadow);
+      border-radius: 4px;
+    }
+    .text-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .text-box {
+      position: absolute;
+      color: transparent;
+      background: transparent;
+      pointer-events: auto;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .text-box:hover { border: 1px dotted #4a6cf7; }
+    .text-box.show-text {
+      color: #000;
+      background: #fff;
+      border-radius: 10%;
+      text-align: center;
+      font-family: sans-serif;
+      text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      word-break: break-word;
+      border-color: transparent;
+    }
+
+    .drop-zone {
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 48px;
+      text-align: center;
+      color: #999;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      align-self: center;
+      margin: auto;
+    }
+    .drop-zone:hover, .drop-zone.drag-over {
+      border-color: var(--primary);
+      background: rgba(74,108,247,0.04);
+      color: var(--primary);
+    }
+    .drop-zone .dz-icon { font-size: 48px; margin-bottom: 12px; }
+    .drop-zone.hidden { display: none; }
+
+    /* ===== Scan Tab ===== */
+    .scan-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .scan-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .scan-results {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .scan-result {
+      display: flex;
+      gap: 12px;
+      padding: 10px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      align-items: flex-start;
+      cursor: pointer;
+    }
+    .scan-result:hover { background: #f7f8fa; }
+    .scan-result img { max-height: 60px; border-radius: 4px; }
+    .scan-result-text { font-size: 13px; white-space: pre-wrap; color: var(--text-secondary); flex: 1; }
+
+    /* Full-screen scan overlay */
+    .scan-fullscreen {
+      position: fixed;
+      inset: 0;
+      z-index: 9990;
+      background: #000;
+      display: none;
+    }
+    .scan-fullscreen.active { display: block; }
+    .scan-fullscreen img,
+    .scan-fullscreen video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .scan-selection-mask {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .scan-selection-box {
+      position: absolute;
+      border: 2px dashed #fff;
+      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+      pointer-events: auto;
+      cursor: move;
+      box-sizing: border-box;
+    }
+    /* Resize handles */
+    .scan-handle {
+      position: fixed;
+      z-index: 9995;
+      width: 12px; height: 12px;
+      background: #fff;
+      border: 1px solid #333;
+      border-radius: 2px;
+      cursor: nwse-resize;
+    }
+    .scan-handle.ne { cursor: nesw-resize; }
+    .scan-handle.sw { cursor: nesw-resize; }
+    /* Scan overlay toolbar */
+    .scan-fs-toolbar {
+      position: fixed;
+      z-index: 9992;
+      display: flex;
+      gap: 8px;
+    }
+    .scan-fs-btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      touch-action: manipulation;
+    }
+    .scan-fs-btn.close {
+      position: fixed;
+      top: 12px; right: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .scan-fs-camera-select {
+      position: fixed;
+      top: 12px; left: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 13px;
+      max-width: 180px;
+      cursor: pointer;
+    }
+    .scan-fs-camera-select option { color: #333; background: #fff; }
+    .scan-fs-btn.capture {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9993;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #ccc;
+      font-size: 12px;
+      font-weight: 700;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      .scan-handle { width: 16px; height: 16px; }
+      .scan-fs-btn.capture { width: 56px; height: 56px; }
+    }
+
+    /* ===== Settings Tab ===== */
+    .settings-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .settings-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .settings-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .form-row:last-child { margin-bottom: 0; }
+    .form-row label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .form-row textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 12px;
+      resize: vertical;
+    }
+    select, input[type="text"], input[type="password"], input[type="number"] {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(74,108,247,0.1);
+    }
+    input[type="text"], input[type="password"] { width: 220px; }
+    input.wide { width: 100%; }
+    input[type="number"] { width: 70px; }
+    input[type="checkbox"] { accent-color: var(--primary); width: 16px; height: 16px; }
+
+    button {
+      padding: 7px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:active { transform: scale(0.97); }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: #edf2f7;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-save {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+    .btn-sm { padding: 4px 10px; font-size: 12px; }
+
+
+    /* ===== Setup Modal ===== */
+    .setup-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10001;
+    }
+    .setup-modal-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      max-width: 520px;
+      width: 92%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .setup-modal-content h2 { font-size: 18px; margin-bottom: 4px; }
+    .setup-section { margin-bottom: 14px; }
+    .setup-label { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px; }
+    .setup-options { display: flex; flex-direction: column; gap: 8px; }
+    .setup-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .setup-option:hover { border-color: var(--primary); }
+    .setup-option input[type="radio"] { accent-color: var(--primary); width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+    .setup-option-content strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .setup-option-content span { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+    .setup-option.selected { border-color: var(--primary); background: rgba(74,108,247,0.04); }
+    .setup-row { display: flex; gap: 10px; align-items: center; }
+    .setup-row label { font-size: 13px; color: var(--text-secondary); }
+    .setup-row select { flex: 1; }
+    @media (max-width: 600px) {
+      .setup-modal-content { padding: 20px 14px; }
+      .setup-option { padding: 10px; }
+    }
+
+    /* ===== Text Modal ===== */
+    .text-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    .text-modal-content {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .text-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .text-modal-header h3 { font-size: 16px; margin: 0; }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #999;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    .modal-close:hover { color: #333; }
+    .text-modal-section { margin-bottom: 14px; }
+    .text-modal-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 4px; }
+    .text-modal-source { font-size: 18px; color: #333; line-height: 1.5; word-break: break-word; }
+    .text-modal-target { font-size: 16px; color: var(--primary); line-height: 1.5; word-break: break-word; }
+    .text-modal-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      justify-content: flex-end;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .tab-btn { padding: 10px 12px; font-size: 13px; }
+      .translate-toolbar { padding: 8px 12px; }
+      .translate-image-area { padding: 8px; }
+      .drop-zone { padding: 32px 16px; }
+      .settings-layout { padding: 12px 8px; }
+      .settings-card { padding: 12px 14px; }
+      .form-row { flex-direction: column; align-items: flex-start; }
+      .form-row input[type="text"], .form-row input[type="password"] { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <h2>Online Image Translator</h2>
-  Select your action:
-  <ul>
-    <li>
-      <a href="translator.html">Translate a whole image</a>
-    </li>
-    <li>
-      <a href="scantranslator.html">Scan and translate a region</a>
-    </li>
-    <li>
-      <a href="settings.html">Settings</a>
-    </li>
-  </ul>
-  <p style="margin-top:2em;">
-  By default, it connects to an <a href="https://www.basiccat.org/imagetrans">ImageTrans</a> server instance which is configured to translate Japanese manga. You can configure its URL in settings. If you do not have ImageTrans, please go to settings to select Tesseract-OCR or PaddleOCR, which works completely on your browser.
-  </p>
-  <p>
-    Check out the <a href="https://www.basiccat.org/gallery/" target="_blank">gallery</a> to see some translated images samples.
-  </p>
-  <p>
-    There is also an <a href="imageviewer.html" target="_blank">image viewer.</a>. You can use it to view multiple images and the Chrome Extension for batch translation.
-  </p>
-  <p>
-    Demo video:
-    <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/RQOkvhXk5hM?si=nkF5E-WjFrexXWta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- Skip to content (accessibility) -->
+<a href="#main-content" style="position:absolute;left:-9999px;" aria-label="Skip to main content">Skip to main content</a>
+
+<!-- Page Heading -->
+<h1 style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Online Image Translator — Comic Translation, Manga Translation, Camera Translate</h1>
+
+<!-- Tab Bar -->
+<nav class="tab-bar" aria-label="Main navigation">
+  <button class="tab-btn active" id="tab-translate" data-i18n="tab_translate">Translate</button>
+  <button class="tab-btn" id="tab-scan" data-i18n="tab_scan">Scan</button>
+  <button class="tab-btn" id="tab-settings" data-i18n="tab_settings">Settings</button>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content" id="main-content">
+
+  <!-- ===== Translate Tab ===== -->
+  <div class="tab-panel" id="panel-translate">
+    <div class="translate-layout">
+      <div class="translate-toolbar">
+        <button class="btn-secondary" id="btn-select-image" data-i18n="select_image">Select Image</button>
+        <button class="btn-primary" id="btn-translate" data-i18n="translate_btn">Translate</button>
+        <label>
+          <input type="checkbox" id="chk-show-translated" />
+          <span data-i18n="show_translated">Translated</span>
+        </label>
+      </div>
+      <div class="translate-image-area">
+        <div class="drop-zone" id="translate-drop-zone">
+          <div class="dz-icon">🖼️</div>
+          <div data-i18n="upload_image">Click to upload or drag &amp; drop</div>
+        </div>
+        <div class="image-container" id="translate-image-container">
+          <img id="img-source" alt="Source image uploaded for translation" style="display:none;" />
+          <img id="img-target" alt="Translated image with text replaced" style="display:none;" />
+          <div class="text-overlay" id="translate-text-overlay"></div>
+        </div>
+      </div>
     </div>
-  </p>
+    <input type="file" id="translate-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- ===== Scan Tab ===== -->
+  <div class="tab-panel hidden" id="panel-scan">
+    <div class="scan-layout">
+      <div class="scan-toolbar">
+        <button class="btn-primary" id="btn-camera-start" data-i18n="camera_start">Open Camera</button>
+        <button class="btn-secondary" id="btn-scan-gallery" data-i18n="scan_gallery">Load Image</button>
+      </div>
+      <div class="scan-results" id="scan-results"></div>
+    </div>
+    <input type="file" id="scan-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- Full-screen Scan Overlay (outside tab panels, covers entire viewport) -->
+  <div class="scan-fullscreen" id="scan-fullscreen">
+    <img id="scan-fs-image" style="display:none;" />
+    <video id="scan-fs-video" muted autoplay playsinline style="display:none;"></video>
+    <div class="scan-selection-mask" id="scan-selection-mask">
+      <div class="scan-selection-box" id="scan-selection-box"></div>
+    </div>
+    <button class="scan-fs-btn close" id="scan-fs-close" title="Close">✕</button>
+    <select class="scan-fs-camera-select" id="scan-fs-camera-select" style="display:none;"></select>
+    <button class="scan-fs-btn capture" id="scan-fs-capture" data-i18n="scan_capture_btn">Capture</button>
+  </div>
+
+  <!-- ===== Settings Tab ===== -->
+  <div class="tab-panel hidden" id="panel-settings">
+    <div class="settings-layout">
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_translation">Translation</div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_source_lang">Source lang</span>
+            <select id="setting-sourceLang"></select>
+          </label>
+          <label>
+            <span data-i18n="settings_target_lang">Target lang</span>
+            <select id="setting-targetLang"></select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_translation_mode">Translation Mode</span>
+            <select id="setting-translationMode">
+              <option value="imagetrans" data-i18n="settings_mode_imagetrans">ImageTrans</option>
+              <option value="local" data-i18n="settings_mode_local">Local PaddleOCR</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_default_preset">Default Preset</span>
+            <select id="setting-defaultPresetTranslation">
+              <option value="mymemory" data-i18n="settings_preset_mymemory">MyMemory</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_server">Server Connection</div>
+        <div class="form-row">
+          <label><span data-i18n="settings_server_url">Server URL</span></label>
+          <input type="text" id="setting-serverURL" class="wide" />
+        </div>
+        <div class="form-row">
+          <button class="btn-secondary btn-sm" id="btn-public-server" data-i18n="settings_public_server">Use public server</button>
+          <button class="btn-secondary btn-sm" id="btn-local-server" data-i18n="settings_local_server">Use local server</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_display_name">Display name</span></label>
+          <input type="text" id="setting-displayName" placeholder="default" />
+          <button class="btn-secondary btn-sm" id="btn-check-instances" data-i18n="settings_check_instances">Check instances</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_password">Password</span></label>
+          <input type="password" id="setting-password" />
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_rendering">Rendering</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-renderTextInFrontend" />
+            <span data-i18n="settings_render_frontend">Render text in front-end</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="settings_font_css">Font CSS</label>
+          <textarea id="setting-renderTextCSS" rows="3"></textarea>
+        </div>
+        <div class="form-row" style="gap:6px;">
+          <span style="font-size:12px;color:var(--text-secondary);" data-i18n="css_presets">CSS Presets:</span>
+          <button class="btn-secondary btn-sm" id="css-default" data-i18n="css_default">Default</button>
+          <button class="btn-secondary btn-sm" id="css-center" data-i18n="css_center">Center</button>
+          <button class="btn-secondary btn-sm" id="css-center-bold" data-i18n="css_center_bold">Center+Bold</button>
+          <button class="btn-secondary btn-sm" id="css-rounded" data-i18n="css_rounded">Rounded</button>
+          <button class="btn-secondary btn-sm" id="css-uppercase" data-i18n="css_uppercase">Uppercase</button>
+          <button class="btn-secondary btn-sm" id="css-rounded-uppercase" data-i18n="css_rounded_uppercase">Rounded+Up</button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_openai">OpenAI API</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useOpenAI" />
+            <span data-i18n="settings_enable_openai">Enable OpenAI API</span>
+          </label>
+        </div>
+        <div id="openai-section" style="display:none;">
+          <div class="form-row">
+            <label><span data-i18n="settings_ocr_method">OCR method</span></label>
+            <select id="setting-ocrMethod">
+              <option value="paddleocr" data-i18n="settings_ocr_paddleocr">PaddleOCR</option>
+              <option value="imagetrans" data-i18n="settings_ocr_imagetrans">ImageTrans</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_url">API URL</span></label>
+            <input type="text" id="setting-openaiURL" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_key">API Key</span></label>
+            <input type="password" id="setting-openaiKey" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_model">Model</span></label>
+            <input type="text" id="setting-openaiModel" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_prompt">Prompt</span></label>
+            <textarea id="setting-openaiPrompt" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_image_processing">Image Processing</div>
+        <div class="form-row">
+          <label><span data-i18n="settings_x_spacing">X spacing</span></label>
+          <input type="number" id="setting-xSpacing" min="0" max="200" />
+          <label><span data-i18n="settings_y_spacing">Y spacing</span></label>
+          <input type="number" id="setting-ySpacing" min="0" max="200" />
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLODetection" />
+            <span data-i18n="settings_use_yolo">Use YOLO for text detection</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLOForJapanese" />
+            <span data-i18n="settings_use_yolo_jp">Use YOLO for Japanese</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_ui_lang">Interface Language</div>
+        <div class="form-row">
+          <select id="setting-uiLanguage">
+            <option value="" data-i18n="options_ui_lang_default">Browser Default</option>
+            <option value="en" data-i18n="options_ui_lang_en">English</option>
+            <option value="zh_CN" data-i18n="options_ui_lang_zh">中文</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-save" id="btn-settings-save" data-i18n="settings_save">Save Settings</button>
+    </div>
+  </div>
+
+
+</main>
+
+<!-- Status Mask -->
+<div class="status-mask" id="status-mask">
+  <div class="status-spinner"></div>
+  <div class="status-text" id="status-text">Translating...</div>
+</div>
+
+<!-- First-run Setup Modal -->
+<div class="setup-modal" id="setup-modal">
+  <div class="setup-modal-content">
+    <h2>Welcome to Online Image Translator</h2>
+    <p style="color:var(--text-secondary);margin-bottom:16px;">Choose your translation method and languages to get started.</p>
+
+    <div class="setup-section">
+      <div class="setup-label">Translation Method</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-server">
+          <input type="radio" name="setup-mode" value="imagetrans" checked />
+          <div class="setup-option-content">
+            <strong>ImageTrans Server</strong>
+            <span>Connect to a remote/local ImageTrans server. Best quality, handles layout & rendering.</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-local">
+          <input type="radio" name="setup-mode" value="local" />
+          <div class="setup-option-content">
+            <strong>Local PaddleOCR</strong>
+            <span>Run OCR in your browser. Free, no server needed. Translate via MyMemory (free) or bring your own API key for ChatGPT / DeepSeek / OpenAI-compatible services.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="setup-section">
+      <div class="setup-label">Languages</div>
+      <div class="setup-row">
+        <label>Source <select id="setup-sourceLang"></select></label>
+        <label>→ Target <select id="setup-targetLang"></select></label>
+      </div>
+    </div>
+
+    <div class="setup-section" id="setup-server-section">
+      <div class="setup-label">Server URL (optional)</div>
+      <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
+    </div>
+
+    <button class="btn-primary" id="btn-setup-start" style="width:100%;padding:12px;font-size:15px;font-weight:600;margin-top:8px;">Get Started</button>
+    <div style="text-align:center;margin-top:8px;">
+      <a href="javascript:void(0)" id="btn-setup-skip" style="color:var(--text-secondary);font-size:13px;">Skip, use defaults</a>
+    </div>
+  </div>
+</div>
+
+<!-- Text Modal -->
+<div class="text-modal" id="text-modal">
+  <div class="text-modal-content">
+    <div class="text-modal-header">
+      <h3 data-i18n="text_detail">Text Detail</h3>
+      <button class="modal-close">✕</button>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="source_text">Source</div>
+      <div class="text-modal-source modal-source"></div>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="target_text">Translation</div>
+      <div class="text-modal-target modal-target"></div>
+    </div>
+    <div class="text-modal-actions">
+      <select class="modal-tts-select" id="modal-tts-select" style="flex:1;min-width:0;"></select>
+      <button class="btn-secondary btn-sm modal-copy-btn" data-i18n="scan_copy">Copy</button>
+      <button class="btn-secondary btn-sm modal-tts-btn" data-i18n="scan_speak">Speak</button>
+    </div>
+  </div>
+</div>
+
+<noscript><div style="padding:20px;text-align:center;background:#fff3cd;border-bottom:1px solid #ffc107;font-size:14px;">This application requires JavaScript. Please enable JavaScript in your browser settings.</div></noscript>
+
+<!-- Application Modules -->
+<script>
+  // Set default UI language for English page
+  if (!localStorage.getItem('uiLanguage')) {
+    localStorage.setItem('uiLanguage', 'en');
+  }
+</script>
+<script src="js/settings.js"></script>
+<script src="js/fittext.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/ocr.js"></script>
+<script src="js/render.js"></script>
+<script src="js/translate.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

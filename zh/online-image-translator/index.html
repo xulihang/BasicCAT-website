@@ -1,40 +1,903 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <title>在线图片翻译器</title>
+  <title>在线图片翻译器 — 漫画翻译、拍照翻译、在线图片翻译</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="免费的在线图片翻译工具，支持漫画翻译、拍照翻译、截屏翻译。可翻译日语、英语、韩语、中文等多国语言图片中的文字。无需安装，打开即用。" />
+  <meta name="keywords" content="在线图片翻译, 漫画翻译, 拍照翻译, 图片翻译, 在线翻译, 漫画图片翻译, OCR翻译, 照片翻译, 截图翻译, 日文翻译, 韩文翻译" />
+  <meta name="author" content="ImageTrans" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.basiccat.org/zh/online-image-translator/" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="https://www.basiccat.org/online-image-translator/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.basiccat.org/zh/online-image-translator/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.basiccat.org/online-image-translator/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="在线图片翻译器 — 漫画翻译、拍照翻译、在线图片翻译" />
+  <meta property="og:description" content="免费在线图片翻译工具，支持漫画翻译、拍照翻译。OCR + AI 翻译，支持日语、英语、韩语、中文等 14+ 种语言。" />
+  <meta property="og:url" content="https://www.basiccat.org/zh/online-image-translator/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="在线图片翻译器 — 漫画翻译、拍照翻译、图片翻译" />
+  <meta name="twitter:description" content="免费在线图片翻译工具。漫画翻译、拍照翻译、截图翻译。OCR + AI，支持 14+ 种语言。" />
   <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "在线图片翻译器",
+    "url": "https://www.basiccat.org/zh/online-image-translator/",
+    "description": "免费的在线图片翻译工具，支持漫画翻译、拍照翻译和截屏翻译。使用 OCR 和 AI 翻译技术，支持日语、英语、韩语、中文等多国语言。",
+    "applicationCategory": "MultilingualApplication",
+    "operatingSystem": "All",
+    "inLanguage": ["zh-CN", "en"],
+    "browserRequirements": "需要启用 JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "xulihang"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f0f2f5;
+      --card-bg: #ffffff;
+      --primary: #4a6cf7;
+      --primary-hover: #3b5de7;
+      --text: #2d3748;
+      --text-secondary: #718096;
+      --border: #e2e8f0;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ===== Tab Bar ===== */
+    .tab-bar {
+      display: flex;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 8px;
+      flex-shrink: 0;
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+    .tab-btn {
+      padding: 12px 20px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .tab-btn .icon { margin-right: 4px; }
+
+    /* ===== Main Content ===== */
+    .main-content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tab-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    .tab-panel.hidden { display: none !important; }
+
+    /* ===== Status Mask ===== */
+    .status-mask {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .status-spinner {
+      width: 40px; height: 40px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .status-text { color: #fff; font-size: 16px; }
+
+    /* ===== Translate Tab ===== */
+    .translate-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .translate-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .translate-toolbar label { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .translate-image-area {
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 16px;
+      background: #e8ecf1;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      box-shadow: var(--shadow);
+      border-radius: 4px;
+    }
+    .text-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .text-box {
+      position: absolute;
+      color: transparent;
+      background: transparent;
+      pointer-events: auto;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .text-box:hover { border: 1px dotted #4a6cf7; }
+    .text-box.show-text {
+      color: #000;
+      background: #fff;
+      border-radius: 10%;
+      text-align: center;
+      font-family: sans-serif;
+      text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      word-break: break-word;
+      border-color: transparent;
+    }
+
+    .drop-zone {
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 48px;
+      text-align: center;
+      color: #999;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      align-self: center;
+      margin: auto;
+    }
+    .drop-zone:hover, .drop-zone.drag-over {
+      border-color: var(--primary);
+      background: rgba(74,108,247,0.04);
+      color: var(--primary);
+    }
+    .drop-zone .dz-icon { font-size: 48px; margin-bottom: 12px; }
+    .drop-zone.hidden { display: none; }
+
+    /* ===== Scan Tab ===== */
+    .scan-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .scan-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .scan-results {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .scan-result {
+      display: flex;
+      gap: 12px;
+      padding: 10px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      align-items: flex-start;
+      cursor: pointer;
+    }
+    .scan-result:hover { background: #f7f8fa; }
+    .scan-result img { max-height: 60px; border-radius: 4px; }
+    .scan-result-text { font-size: 13px; white-space: pre-wrap; color: var(--text-secondary); flex: 1; }
+
+    /* Full-screen scan overlay */
+    .scan-fullscreen {
+      position: fixed;
+      inset: 0;
+      z-index: 9990;
+      background: #000;
+      display: none;
+    }
+    .scan-fullscreen.active { display: block; }
+    .scan-fullscreen img,
+    .scan-fullscreen video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .scan-selection-mask {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .scan-selection-box {
+      position: absolute;
+      border: 2px dashed #fff;
+      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+      pointer-events: auto;
+      cursor: move;
+      box-sizing: border-box;
+    }
+    /* Resize handles */
+    .scan-handle {
+      position: fixed;
+      z-index: 9995;
+      width: 12px; height: 12px;
+      background: #fff;
+      border: 1px solid #333;
+      border-radius: 2px;
+      cursor: nwse-resize;
+    }
+    .scan-handle.ne { cursor: nesw-resize; }
+    .scan-handle.sw { cursor: nesw-resize; }
+    /* Scan overlay toolbar */
+    .scan-fs-toolbar {
+      position: fixed;
+      z-index: 9992;
+      display: flex;
+      gap: 8px;
+    }
+    .scan-fs-btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      touch-action: manipulation;
+    }
+    .scan-fs-btn.close {
+      position: fixed;
+      top: 12px; right: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .scan-fs-camera-select {
+      position: fixed;
+      top: 12px; left: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 13px;
+      max-width: 180px;
+      cursor: pointer;
+    }
+    .scan-fs-camera-select option { color: #333; background: #fff; }
+    .scan-fs-btn.capture {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9993;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #ccc;
+      font-size: 12px;
+      font-weight: 700;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      .scan-handle { width: 16px; height: 16px; }
+      .scan-fs-btn.capture { width: 56px; height: 56px; }
+    }
+
+    /* ===== Settings Tab ===== */
+    .settings-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .settings-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .settings-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .form-row:last-child { margin-bottom: 0; }
+    .form-row label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .form-row textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 12px;
+      resize: vertical;
+    }
+    select, input[type="text"], input[type="password"], input[type="number"] {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(74,108,247,0.1);
+    }
+    input[type="text"], input[type="password"] { width: 220px; }
+    input.wide { width: 100%; }
+    input[type="number"] { width: 70px; }
+    input[type="checkbox"] { accent-color: var(--primary); width: 16px; height: 16px; }
+
+    button {
+      padding: 7px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:active { transform: scale(0.97); }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: #edf2f7;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-save {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+    .btn-sm { padding: 4px 10px; font-size: 12px; }
+
+
+    /* ===== Setup Modal ===== */
+    .setup-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10001;
+    }
+    .setup-modal-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      max-width: 520px;
+      width: 92%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .setup-modal-content h2 { font-size: 18px; margin-bottom: 4px; }
+    .setup-section { margin-bottom: 14px; }
+    .setup-label { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px; }
+    .setup-options { display: flex; flex-direction: column; gap: 8px; }
+    .setup-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .setup-option:hover { border-color: var(--primary); }
+    .setup-option input[type="radio"] { accent-color: var(--primary); width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+    .setup-option-content strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .setup-option-content span { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+    .setup-option.selected { border-color: var(--primary); background: rgba(74,108,247,0.04); }
+    .setup-row { display: flex; gap: 10px; align-items: center; }
+    .setup-row label { font-size: 13px; color: var(--text-secondary); }
+    .setup-row select { flex: 1; }
+    @media (max-width: 600px) {
+      .setup-modal-content { padding: 20px 14px; }
+      .setup-option { padding: 10px; }
+    }
+
+    /* ===== Text Modal ===== */
+    .text-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    .text-modal-content {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .text-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .text-modal-header h3 { font-size: 16px; margin: 0; }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #999;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    .modal-close:hover { color: #333; }
+    .text-modal-section { margin-bottom: 14px; }
+    .text-modal-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 4px; }
+    .text-modal-source { font-size: 18px; color: #333; line-height: 1.5; word-break: break-word; }
+    .text-modal-target { font-size: 16px; color: var(--primary); line-height: 1.5; word-break: break-word; }
+    .text-modal-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      justify-content: flex-end;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .tab-btn { padding: 10px 12px; font-size: 13px; }
+      .translate-toolbar { padding: 8px 12px; }
+      .translate-image-area { padding: 8px; }
+      .drop-zone { padding: 32px 16px; }
+      .settings-layout { padding: 12px 8px; }
+      .settings-card { padding: 12px 14px; }
+      .form-row { flex-direction: column; align-items: flex-start; }
+      .form-row input[type="text"], .form-row input[type="password"] { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <h2>在线图片翻译器</h2>
-  选择操作：
-  <ul>
-    <li>
-      <a href="translator.html">翻译整张图片</a>
-    </li>
-    <li>
-      <a href="scantranslator.html">拍照翻译某个区域</a>
-    </li>
-    <li>
-      <a href="settings.html">设置</a>
-    </li>
-  </ul>
-  <p style="margin-top:2em;">
-  默认会连接到一个用于翻译日漫的<a href="https://www.basiccat.org/zh/imagetrans/">ImageTrans</a>服务器进行翻译。可以在设置中配置其URL。如果没有ImageTrans，也可以到设置中选择使用Tesseract-OCR或者PaddleOCR，这两个完全在浏览器端运行。
-  </p>
-  <p>
-    可以到<a href="https://www.basiccat.org/zh/gallery/" target="_blank">这里</a>查看一些翻译好的图片的例子。
-  </p>
-  <p>
-    另外还有一个<a href="imageviewer.html" target="_blank">图像阅读器</a>。可以查看多张图片并用Chrome插件进行翻译。
-  </p>
-  <p>
-    演示视频：
-    <div>
-      <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1004738936&bvid=BV1rx4y1W7J2&cid=1543942715&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<!-- Skip to content (accessibility) -->
+<a href="#main-content" style="position:absolute;left:-9999px;" aria-label="跳转到主要内容">跳转到主要内容</a>
+
+<!-- Page Heading -->
+<h1 style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">在线图片翻译器 — 漫画翻译、拍照翻译、在线图片翻译工具</h1>
+
+<!-- Tab Bar -->
+<nav class="tab-bar" aria-label="主导航">
+  <button class="tab-btn active" id="tab-translate" data-i18n="tab_translate">翻译</button>
+  <button class="tab-btn" id="tab-scan" data-i18n="tab_scan">扫描</button>
+  <button class="tab-btn" id="tab-settings" data-i18n="tab_settings">设置</button>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content" id="main-content">
+
+  <!-- ===== Translate Tab ===== -->
+  <div class="tab-panel" id="panel-translate">
+    <div class="translate-layout">
+      <div class="translate-toolbar">
+        <button class="btn-secondary" id="btn-select-image" data-i18n="select_image">选择图片</button>
+        <button class="btn-primary" id="btn-translate" data-i18n="translate_btn">翻译</button>
+        <label>
+          <input type="checkbox" id="chk-show-translated" />
+          <span data-i18n="show_translated">显示译文</span>
+        </label>
+      </div>
+      <div class="translate-image-area">
+        <div class="drop-zone" id="translate-drop-zone">
+          <div class="dz-icon">🖼️</div>
+          <div data-i18n="upload_image">点击上传或拖放图片</div>
+        </div>
+        <div class="image-container" id="translate-image-container">
+          <img id="img-source" alt="上传的待翻译原图" style="display:none;" />
+          <img id="img-target" alt="翻译后的图片，文字已被替换" style="display:none;" />
+          <div class="text-overlay" id="translate-text-overlay"></div>
+        </div>
+      </div>
     </div>
-  </p>
+    <input type="file" id="translate-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- ===== Scan Tab ===== -->
+  <div class="tab-panel hidden" id="panel-scan">
+    <div class="scan-layout">
+      <div class="scan-toolbar">
+        <button class="btn-primary" id="btn-camera-start" data-i18n="camera_start">打开相机</button>
+        <button class="btn-secondary" id="btn-scan-gallery" data-i18n="scan_gallery">加载图片</button>
+      </div>
+      <div class="scan-results" id="scan-results"></div>
+    </div>
+    <input type="file" id="scan-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- Full-screen Scan Overlay (outside tab panels, covers entire viewport) -->
+  <div class="scan-fullscreen" id="scan-fullscreen">
+    <img id="scan-fs-image" alt="扫描图片" style="display:none;" />
+    <video id="scan-fs-video" muted autoplay playsinline style="display:none;"></video>
+    <div class="scan-selection-mask" id="scan-selection-mask">
+      <div class="scan-selection-box" id="scan-selection-box"></div>
+    </div>
+    <button class="scan-fs-btn close" id="scan-fs-close" title="关闭">✕</button>
+    <select class="scan-fs-camera-select" id="scan-fs-camera-select" style="display:none;"></select>
+    <button class="scan-fs-btn capture" id="scan-fs-capture" data-i18n="scan_capture_btn">拍照</button>
+  </div>
+
+  <!-- ===== Settings Tab ===== -->
+  <div class="tab-panel hidden" id="panel-settings">
+    <div class="settings-layout">
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_translation">翻译</div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_source_lang">源语言</span>
+            <select id="setting-sourceLang"></select>
+          </label>
+          <label>
+            <span data-i18n="settings_target_lang">目标语言</span>
+            <select id="setting-targetLang"></select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_translation_mode">翻译模式</span>
+            <select id="setting-translationMode">
+              <option value="imagetrans" data-i18n="settings_mode_imagetrans">ImageTrans</option>
+              <option value="local" data-i18n="settings_mode_local">本地PaddleOCR</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_default_preset">默认预设</span>
+            <select id="setting-defaultPresetTranslation">
+              <option value="mymemory" data-i18n="settings_preset_mymemory">MyMemory</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_server">服务器连接</div>
+        <div class="form-row">
+          <label><span data-i18n="settings_server_url">服务器URL</span></label>
+          <input type="text" id="setting-serverURL" class="wide" />
+        </div>
+        <div class="form-row">
+          <button class="btn-secondary btn-sm" id="btn-public-server" data-i18n="settings_public_server">使用公共服务器</button>
+          <button class="btn-secondary btn-sm" id="btn-local-server" data-i18n="settings_local_server">使用本地服务器</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_display_name">显示名称</span></label>
+          <input type="text" id="setting-displayName" placeholder="default" />
+          <button class="btn-secondary btn-sm" id="btn-check-instances" data-i18n="settings_check_instances">检查已有实例</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_password">密码（可选）</span></label>
+          <input type="password" id="setting-password" />
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_rendering">图片捕捉和渲染</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-renderTextInFrontend" />
+            <span data-i18n="settings_render_frontend">在前端渲染文字</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="settings_font_css">字体CSS</label>
+          <textarea id="setting-renderTextCSS" rows="3"></textarea>
+        </div>
+        <div class="form-row" style="gap:6px;">
+          <span style="font-size:12px;color:var(--text-secondary);" data-i18n="css_presets">CSS预设：</span>
+          <button class="btn-secondary btn-sm" id="css-default" data-i18n="css_default">默认</button>
+          <button class="btn-secondary btn-sm" id="css-center" data-i18n="css_center">居中</button>
+          <button class="btn-secondary btn-sm" id="css-center-bold" data-i18n="css_center_bold">居中+粗体</button>
+          <button class="btn-secondary btn-sm" id="css-rounded" data-i18n="css_rounded">圆角+居中</button>
+          <button class="btn-secondary btn-sm" id="css-uppercase" data-i18n="css_uppercase">大写+居中</button>
+          <button class="btn-secondary btn-sm" id="css-rounded-uppercase" data-i18n="css_rounded_uppercase">圆角+大写</button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_openai">OpenAI兼容API（可选）</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useOpenAI" />
+            <span data-i18n="settings_enable_openai">启用OpenAI兼容API</span>
+          </label>
+        </div>
+        <div id="openai-section" style="display:none;">
+          <div class="form-row">
+            <label><span data-i18n="settings_ocr_method">OCR方法</span></label>
+            <select id="setting-ocrMethod">
+              <option value="paddleocr" data-i18n="settings_ocr_paddleocr">PaddleOCR（本地）</option>
+              <option value="imagetrans" data-i18n="settings_ocr_imagetrans">ImageTrans</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_url">API URL</span></label>
+            <input type="text" id="setting-openaiURL" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_key">API Key</span></label>
+            <input type="password" id="setting-openaiKey" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_model">模型</span></label>
+            <input type="text" id="setting-openaiModel" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_prompt">提示词</span></label>
+            <textarea id="setting-openaiPrompt" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_image_processing">图片处理（用于PaddleOCR）</div>
+        <div class="form-row">
+          <label><span data-i18n="settings_x_spacing">X间距（px）</span></label>
+          <input type="number" id="setting-xSpacing" min="0" max="200" />
+          <label><span data-i18n="settings_y_spacing">Y间距（px）</span></label>
+          <input type="number" id="setting-ySpacing" min="0" max="200" />
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLODetection" />
+            <span data-i18n="settings_use_yolo">使用YOLO检测文字</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLOForJapanese" />
+            <span data-i18n="settings_use_yolo_jp">日语使用YOLO检测</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_ui_lang">界面语言</div>
+        <div class="form-row">
+          <select id="setting-uiLanguage">
+            <option value="" data-i18n="options_ui_lang_default">浏览器默认</option>
+            <option value="en" data-i18n="options_ui_lang_en">English</option>
+            <option value="zh_CN" data-i18n="options_ui_lang_zh">中文</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-save" id="btn-settings-save" data-i18n="settings_save">保存设置</button>
+    </div>
+  </div>
+
+
+</main>
+
+<!-- Status Mask -->
+<div class="status-mask" id="status-mask">
+  <div class="status-spinner"></div>
+  <div class="status-text" id="status-text">翻译中...</div>
+</div>
+
+<!-- First-run Setup Modal -->
+<div class="setup-modal" id="setup-modal">
+  <div class="setup-modal-content">
+    <h2>欢迎使用在线图片翻译器</h2>
+    <p style="color:var(--text-secondary);margin-bottom:16px;">选择翻译方式和语言，开始使用。</p>
+
+    <div class="setup-section">
+      <div class="setup-label">翻译方式</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-server">
+          <input type="radio" name="setup-mode" value="imagetrans" checked />
+          <div class="setup-option-content">
+            <strong>ImageTrans 服务器</strong>
+            <span>连接到远程或本地 ImageTrans 服务器。效果最佳，自动处理排版和渲染。</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-local">
+          <input type="radio" name="setup-mode" value="local" />
+          <div class="setup-option-content">
+            <strong>本地 PaddleOCR</strong>
+            <span>在浏览器中运行 OCR。免费，无需服务器。通过 MyMemory（免费）或自带 API Key（ChatGPT / DeepSeek / OpenAI 兼容服务）进行翻译。</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="setup-section">
+      <div class="setup-label">语言</div>
+      <div class="setup-row">
+        <label>源语言 <select id="setup-sourceLang"></select></label>
+        <label>→ 目标语言 <select id="setup-targetLang"></select></label>
+      </div>
+    </div>
+
+    <div class="setup-section" id="setup-server-section">
+      <div class="setup-label">服务器 URL（可选）</div>
+      <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
+    </div>
+
+    <button class="btn-primary" id="btn-setup-start" style="width:100%;padding:12px;font-size:15px;font-weight:600;margin-top:8px;">开始使用</button>
+    <div style="text-align:center;margin-top:8px;">
+      <a href="javascript:void(0)" id="btn-setup-skip" style="color:var(--text-secondary);font-size:13px;">跳过，使用默认设置</a>
+    </div>
+  </div>
+</div>
+
+<!-- Text Modal -->
+<div class="text-modal" id="text-modal">
+  <div class="text-modal-content">
+    <div class="text-modal-header">
+      <h3 data-i18n="text_detail">文字详情</h3>
+      <button class="modal-close">✕</button>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="source_text">原文</div>
+      <div class="text-modal-source modal-source"></div>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="target_text">译文</div>
+      <div class="text-modal-target modal-target"></div>
+    </div>
+    <div class="text-modal-actions">
+      <select class="modal-tts-select" id="modal-tts-select" style="flex:1;min-width:0;"></select>
+      <button class="btn-secondary btn-sm modal-copy-btn" data-i18n="scan_copy">复制</button>
+      <button class="btn-secondary btn-sm modal-tts-btn" data-i18n="scan_speak">朗读</button>
+    </div>
+  </div>
+</div>
+
+<noscript><div style="padding:20px;text-align:center;background:#fff3cd;border-bottom:1px solid #ffc107;font-size:14px;">此应用需要启用 JavaScript。请在浏览器设置中启用 JavaScript。</div></noscript>
+
+<!-- Application Modules -->
+<script>
+  // 中文页面默认使用中文界面
+  if (!localStorage.getItem('uiLanguage')) {
+    localStorage.setItem('uiLanguage', 'zh_CN');
+  }
+</script>
+<script src="/online-image-translator/js/settings.js"></script>
+<script src="/online-image-translator/js/fittext.js"></script>
+<script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/ocr.js"></script>
+<script src="/online-image-translator/js/render.js"></script>
+<script src="/online-image-translator/js/translate.js"></script>
+<script src="/online-image-translator/js/app.js"></script>
+
 </body>
 </html>
