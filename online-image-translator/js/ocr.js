@@ -4,19 +4,6 @@
 const OCR = (function() {
   'use strict';
 
-  // Derive base path from current script location so that relative paths work
-  // regardless of whether the page is served at /online-image-translator/,
-  // /zh/online-image-translator/, or any other subpath.
-  var _ocrBasePath = '';
-  if (document.currentScript && document.currentScript.src) {
-    var _src = document.currentScript.src;
-    // ocr.js is at <base>/js/ocr.js — strip the /js/ocr.js suffix to get base
-    var _idx = _src.lastIndexOf('/js/ocr.js');
-    if (_idx !== -1) {
-      _ocrBasePath = _src.substring(0, _idx);
-    }
-  }
-
   let paddleReady = false;
   let paddleCurrentLang = null;
   let paddleInitPromise = null;
@@ -187,7 +174,7 @@ const OCR = (function() {
       if (typeof window['esearch-ocr'] === 'undefined') {
         report('Loading OCR engine...');
         // esearch-ocr.umd.js sets window['esearch-ocr']
-        await loadScript(_ocrBasePath + '/lib/esearch-ocr/dist/esearch-ocr.umd.js');
+        await loadScript('/online-image-translator/js/lib/esearch-ocr/dist/esearch-ocr.umd.js');
       }
 
       // Wait for OpenCV to be fully ready (it sets cv on a callback)
