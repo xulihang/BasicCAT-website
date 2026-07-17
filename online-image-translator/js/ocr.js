@@ -90,7 +90,7 @@ const OCR = (function() {
     });
   }
 
-  // Try primary CDN (jsdelivr, global), fall back to mirror (jsdmirror, China) after timeout.
+  // Try primary CDN (jsdmirror, China), fall back to jsdelivr (global) after timeout.
   // Resolves with the URL that was actually used.
   function loadScriptCDN(primary, fallback, timeoutMs) {
     timeoutMs = timeoutMs || 15000;
@@ -145,13 +145,13 @@ const OCR = (function() {
     depsPromise = (async function() {
       const report = function(msg) { if (_onProgress) _onProgress(msg); };
 
-      // 1. ONNX Runtime (jsdelivr → jsdmirror fallback)
-      let ortCDN = 'https://cdn.jsdelivr.net/npm/onnxruntime-web';
+      // 1. ONNX Runtime (jsdmirror → jsdelivr fallback)
+      let ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web';
       if (typeof window.ort === 'undefined') {
         report('Loading ONNX Runtime...');
         const used = await loadScriptCDN(
-          'https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js',
-          'https://cdn.jsdmirror.com/npm/onnxruntime-web/dist/ort.min.js'
+          'https://cdn.jsdmirror.com/npm/onnxruntime-web/dist/ort.min.js',
+          'https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js'
         );
         // Derive base URL: strip '/dist/ort.min.js' suffix
         ortCDN = used.replace(/\/dist\/ort\.min\.js$/, '');
@@ -161,12 +161,12 @@ const OCR = (function() {
         window.ort.env.wasm.wasmPaths = ortCDN + '/dist/';
       }
 
-      // 2. OpenCV.js (jsdelivr → jsdmirror fallback)
+      // 2. OpenCV.js (jsdmirror → jsdelivr fallback)
       if (typeof window.cv === 'undefined') {
         report('Loading OpenCV...');
         await loadScriptCDN(
-          'https://cdn.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js',
-          'https://cdn.jsdmirror.com/npm/paddleocr-browser@1.0.4/dist/opencv.js'
+          'https://cdn.jsdmirror.com/npm/paddleocr-browser@1.0.4/dist/opencv.js',
+          'https://cdn.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js'
         );
       }
 
