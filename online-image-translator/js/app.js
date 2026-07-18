@@ -86,11 +86,11 @@
 
   function cacheDOMElements() {
     // Tab buttons
-    ['translate', 'scan', 'settings'].forEach(function(id) {
+    ['translate', 'scan', 'settings', 'about'].forEach(function(id) {
       tabButtons[id] = $('#tab-' + id);
     });
     // Tab panels
-    ['translate', 'scan', 'settings'].forEach(function(id) {
+    ['translate', 'scan', 'settings', 'about'].forEach(function(id) {
       tabPanels[id] = $('#panel-' + id);
     });
 
@@ -137,12 +137,14 @@
     en: {
       translate: 'Online Image Translator — Translate Comics, Manga & Images',
       scan: 'Camera Translate — Online Image Translator',
-      settings: 'Settings — Online Image Translator'
+      settings: 'Settings — Online Image Translator',
+      about: 'About — Online Image Translator'
     },
     zh: {
       translate: '在线图片翻译器 — 漫画翻译、拍照翻译',
       scan: '拍照翻译 — 在线图片翻译器',
-      settings: '设置 — 在线图片翻译器'
+      settings: '设置 — 在线图片翻译器',
+      about: '关于 — 在线图片翻译器'
     }
   };
 

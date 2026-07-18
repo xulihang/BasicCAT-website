@@ -409,6 +409,84 @@
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
     }
+    /* About tab */
+    .about-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .about-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .about-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+    .about-supplementary {
+      border-left: 3px solid var(--primary, #2563eb);
+    }
+    .about-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .about-features {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-features li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .about-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-link:hover {
+      text-decoration: underline;
+    }
+    .about-links {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-links li {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .about-links a {
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-links a:hover {
+      text-decoration: underline;
+    }
     .form-row {
       display: flex;
       align-items: center;
@@ -593,6 +671,8 @@
       .drop-zone { padding: 32px 16px; }
       .settings-layout { padding: 12px 8px; }
       .settings-card { padding: 12px 14px; }
+      .about-layout { padding: 12px 8px; }
+      .about-card { padding: 12px 14px; }
       .form-row { flex-direction: column; align-items: flex-start; }
       .form-row input[type="text"], .form-row input[type="password"] { width: 100%; }
     }
@@ -611,6 +691,7 @@
   <button class="tab-btn active" id="tab-translate" data-i18n="tab_translate">Translate</button>
   <button class="tab-btn" id="tab-scan" data-i18n="tab_scan">Scan</button>
   <button class="tab-btn" id="tab-settings" data-i18n="tab_settings">Settings</button>
+  <button class="tab-btn" id="tab-about" data-i18n="tab_about">About</button>
 </nav>
 
 <!-- Main Content -->
@@ -816,6 +897,41 @@
     </div>
   </div>
 
+  <!-- ===== About Tab ===== -->
+  <div class="tab-panel hidden" id="panel-about">
+    <div class="about-layout">
+      <!-- About this online tool -->
+      <div class="about-card">
+        <h2 data-i18n="about_title">About Online Image Translator</h2>
+        <p data-i18n="about_intro">Online Image Translator is a free, open-source web tool that translates text in images — comics, manga, screenshots, and photos — right in your browser. No installation required.</p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_how_it_works">How It Works</h3>
+        <p><strong data-i18n="about_mode_1_label">Local PaddleOCR Mode:</strong> <span data-i18n="about_mode_1_desc">OCR runs entirely in your browser using PaddleOCR (compiled to WebAssembly). Translation uses the free MyMemory API or an OpenAI-compatible API (ChatGPT, DeepSeek, etc.). No server needed.</span></p>
+        <p style="margin-top:8px;"><strong data-i18n="about_mode_2_label">ImageTrans Server Mode:</strong> <span data-i18n="about_mode_2_desc">Connect to an ImageTrans server (public or self-hosted) for the full pipeline — OCR, translation, and rendered output in one step.</span></p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_source_code">Source Code</h3>
+        <p data-i18n="about_source_code_desc">This project is open source under the MIT license. You can view the source code, report issues, or contribute on GitHub.</p>
+        <a href="https://github.com/xulihang/online-image-translator" target="_blank" rel="noopener" class="about-link" data-i18n="about_source_code_link">View on GitHub</a>
+      </div>
+
+      <!-- Supplementary tools -->
+      <div class="about-card about-supplementary">
+        <h3 data-i18n="about_supplementary">Supplementary Tools</h3>
+
+        <h4 data-i18n="about_desktop">ImageTrans Desktop</h4>
+        <p data-i18n="about_desktop_desc">Need to deploy a local translation server, batch translate images, or manually edit translation results? ImageTrans Desktop is a full-featured computer-assisted image translation application with an image editor, multiple OCR engines, and support for various translation services.</p>
+        <a href="https://www.basiccat.org/zh/imagetrans/" target="_blank" rel="noopener" class="about-link" data-i18n="about_desktop_cta">Learn more about ImageTrans Desktop</a>
+
+        <h4 data-i18n="about_extension" style="margin-top:14px;">Browser Extension</h4>
+        <p data-i18n="about_extension_desc">ImageTrans also offers a browser extension that can detect and translate images directly on webpages, making it easy to read translated comics and manga online.</p>
+        <a href="https://www.basiccat.org/zh/translate-images-on-webpages-with-extension/" target="_blank" rel="noopener" class="about-link" data-i18n="about_extension_cta">Learn more about the Browser Extension</a>
+      </div>
+    </div>
+  </div>
 
 </main>
 

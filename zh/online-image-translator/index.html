@@ -409,6 +409,84 @@
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
     }
+    /* About tab */
+    .about-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .about-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .about-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+    .about-supplementary {
+      border-left: 3px solid var(--primary, #2563eb);
+    }
+    .about-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .about-features {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-features li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .about-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-link:hover {
+      text-decoration: underline;
+    }
+    .about-links {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-links li {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .about-links a {
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-links a:hover {
+      text-decoration: underline;
+    }
     .form-row {
       display: flex;
       align-items: center;
@@ -593,6 +671,8 @@
       .drop-zone { padding: 32px 16px; }
       .settings-layout { padding: 12px 8px; }
       .settings-card { padding: 12px 14px; }
+      .about-layout { padding: 12px 8px; }
+      .about-card { padding: 12px 14px; }
       .form-row { flex-direction: column; align-items: flex-start; }
       .form-row input[type="text"], .form-row input[type="password"] { width: 100%; }
     }
@@ -611,6 +691,7 @@
   <button class="tab-btn active" id="tab-translate" data-i18n="tab_translate">翻译</button>
   <button class="tab-btn" id="tab-scan" data-i18n="tab_scan">扫描</button>
   <button class="tab-btn" id="tab-settings" data-i18n="tab_settings">设置</button>
+  <button class="tab-btn" id="tab-about" data-i18n="tab_about">关于</button>
 </nav>
 
 <!-- Main Content -->
@@ -816,6 +897,41 @@
     </div>
   </div>
 
+  <!-- ===== 关于Tab ===== -->
+  <div class="tab-panel hidden" id="panel-about">
+    <div class="about-layout">
+      <!-- 关于本在线工具 -->
+      <div class="about-card">
+        <h2 data-i18n="about_title">关于在线图片翻译器</h2>
+        <p data-i18n="about_intro">在线图片翻译器是一款免费、开源的网页工具，可直接在浏览器中翻译图片中的文字——漫画、截图、照片等，无需安装。</p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_how_it_works">工作原理</h3>
+        <p><strong data-i18n="about_mode_1_label">本地PaddleOCR模式：</strong><span data-i18n="about_mode_1_desc">OCR完全在浏览器中运行（PaddleOCR编译为WebAssembly），翻译使用免费的MyMemory API或OpenAI兼容API（ChatGPT、DeepSeek等），无需服务器。</span></p>
+        <p style="margin-top:8px;"><strong data-i18n="about_mode_2_label">ImageTrans服务器模式：</strong><span data-i18n="about_mode_2_desc">连接到ImageTrans服务器（公共服务器或自建服务器），一站式完成OCR识别、翻译和文字渲染。</span></p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_source_code">源代码</h3>
+        <p data-i18n="about_source_code_desc">本项目基于MIT协议开源。你可以在GitHub上查看源代码、报告问题或参与贡献。</p>
+        <a href="https://github.com/xulihang/online-image-translator" target="_blank" rel="noopener" class="about-link" data-i18n="about_source_code_link">在GitHub上查看</a>
+      </div>
+
+      <!-- 补充工具 -->
+      <div class="about-card about-supplementary">
+        <h3 data-i18n="about_supplementary">补充工具</h3>
+
+        <h4 data-i18n="about_desktop">ImageTrans桌面版</h4>
+        <p data-i18n="about_desktop_desc">需要本地部署翻译服务、批量翻译图片或手动编辑翻译结果？ImageTrans桌面版是一款功能完整的计算机辅助图片翻译软件，内置图片编辑器，支持多种OCR引擎和翻译服务。</p>
+        <a href="https://www.basiccat.org/zh/imagetrans/" target="_blank" rel="noopener" class="about-link" data-i18n="about_desktop_cta">了解更多桌面版信息</a>
+
+        <h4 data-i18n="about_extension" style="margin-top:14px;">浏览器插件</h4>
+        <p data-i18n="about_extension_desc">ImageTrans还提供浏览器插件，可以检测并翻译网页中的图片，方便在线阅读翻译后的漫画。</p>
+        <a href="https://www.basiccat.org/zh/translate-images-on-webpages-with-extension/" target="_blank" rel="noopener" class="about-link" data-i18n="about_extension_cta">了解更多插件信息</a>
+      </div>
+    </div>
+  </div>
 
 </main>
 
