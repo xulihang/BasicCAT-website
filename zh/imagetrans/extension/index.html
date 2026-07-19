@@ -1,0 +1,510 @@
+---
+title: ImageTrans 浏览器扩展 — 翻译网页上的任何图片
+layout: page
+description: 使用ImageTrans浏览器扩展翻译网页上的任何图片。右键或按Ctrl+Shift+F即刻翻译漫画、海报、截图和照片。支持Chrome和Firefox。
+---
+
+<style>
+  :root {
+    --ext-primary: #4a6cf7;
+    --ext-primary-hover: #3b5de7;
+    --ext-text: #2d3748;
+    --ext-text-secondary: #718096;
+    --ext-bg: #f8fafc;
+    --ext-card-bg: #ffffff;
+    --ext-border: #e2e8f0;
+    --ext-radius: 12px;
+    --ext-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --ext-shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .ext-hero {
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--ext-radius);
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .ext-hero-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+  }
+  .ext-hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #fff;
+  }
+  .ext-hero p {
+    font-size: 17px;
+    opacity: 0.9;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ext-hero-meta {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+  }
+  .ext-hero-meta span {
+    margin: 0 8px;
+  }
+
+  .ext-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .ext-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+  }
+  .ext-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+  .ext-btn-chrome {
+    background: #fff;
+    color: #333;
+  }
+  .ext-btn-firefox {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .ext-btn-firefox:hover {
+    background: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .ext-btn img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Section titles */
+  .ext-section {
+    margin-bottom: 36px;
+  }
+  .ext-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ext-border);
+    color: var(--ext-text);
+  }
+  .ext-section h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-text);
+  }
+  .ext-section p {
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* Feature grid */
+  .ext-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .ext-feature-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-feature-card .ext-feature-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .ext-feature-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+  }
+  .ext-feature-card p {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Steps */
+  .ext-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .ext-steps li {
+    counter-increment: step;
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px 20px 20px 52px;
+    position: relative;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 26px;
+    height: 26px;
+    background: var(--ext-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ext-steps li strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .ext-steps li span {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Shortcut badge */
+  .ext-kbd {
+    display: inline-block;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+  }
+
+  /* Info cards */
+  .ext-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .ext-info-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-info-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-primary);
+  }
+  .ext-info-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+  }
+
+  /* CTA section */
+  .ext-cta {
+    background: var(--ext-bg);
+    border: 2px dashed var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .ext-cta h3 {
+    margin-top: 0;
+  }
+  .ext-cta .ext-buttons {
+    margin-top: 16px;
+  }
+  .ext-cta .ext-btn-chrome {
+    background: #4285f4;
+    color: #fff;
+    border: none;
+  }
+  .ext-cta .ext-btn-firefox {
+    background: #ff6611;
+    color: #fff;
+    border: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .ext-hero {
+      padding: 32px 16px 28px;
+    }
+    .ext-hero h1 {
+      font-size: 24px;
+    }
+    .ext-hero p {
+      font-size: 15px;
+    }
+    .ext-hero-icon {
+      width: 64px;
+      height: 64px;
+      font-size: 32px;
+      border-radius: 16px;
+    }
+    .ext-features,
+    .ext-steps,
+    .ext-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Hero -->
+<div class="ext-hero">
+  <div class="ext-hero-icon">🖼️</div>
+  <h1>ImageTrans 浏览器扩展</h1>
+  <p>一键翻译网页上的任何图片，专为漫画、海报、截图等场景设计。右键点击或使用快捷键即可获得翻译结果。</p>
+  <div class="ext-hero-meta">
+    版本 5.20 &nbsp;·&nbsp; 免费且开源 (GPL v2.0)
+  </div>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      <span>🌐</span> 添加到 Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      <span>🦊</span> 添加到 Firefox
+    </a>
+  </div>
+</div>
+
+<!-- What is it -->
+<div class="ext-section">
+  <h2>什么是ImageTrans浏览器扩展？</h2>
+  <p>
+    <strong>ImageTrans浏览器扩展</strong>将AI驱动的图片翻译能力直接带入您的浏览器。它可以检测网页中图片（漫画、海报、截图、宣传册等）上的文字，并自动将其替换为翻译后的版本。
+  </p>
+  <p>
+    基于 <strong>PaddleOCR</strong> 和 <strong>ImageTrans</strong> 桌面应用后端，该扩展将最先进的OCR技术与神经机器翻译相结合，为您提供准确、符合上下文的翻译结果。
+  </p>
+</div>
+
+<!-- Features -->
+<div class="ext-section">
+  <h2>主要功能</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🖱️</div>
+      <h4>右键翻译</h4>
+      <p>在网页上右键点击任意图片，选择"翻译图片"即可立即获取翻译后的版本。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">⌨️</div>
+      <h4>键盘快捷键</h4>
+      <p>按下 <span class="ext-kbd">Ctrl+Shift+F</span> 即可翻译光标下的图片，快速高效。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🔄</div>
+      <h4>自动翻译</h4>
+      <p>启用自动翻译后，页面加载时图片会自动翻译。非常适合阅读长篇漫画。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📸</div>
+      <h4>截图翻译</h4>
+      <p>在浏览器中截取屏幕区域进行翻译，适合翻译无法下载的图片或仅翻译图片的局部区域。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🤖</div>
+      <h4>灵活的翻译选项</h4>
+      <p>将任意OCR后端（ImageTrans或PaddleOCR）与OpenAI兼容API（ChatGPT、Gemini、DeepSeek）或内置翻译引擎搭配使用，获得最佳翻译效果。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🀄</div>
+      <h4>注音标注</h4>
+      <p>为日语文字标注假名，为中文文字标注拼音——语言学习者的得力助手。</p>
+    </div>
+  </div>
+</div>
+
+<!-- How to Use -->
+<div class="ext-section">
+  <h2>如何使用</h2>
+  <ol class="ext-steps">
+    <li>
+      <strong>安装扩展</strong>
+      <span>从 <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" target="_blank" rel="noopener">Chrome应用商店</a> 或 <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" target="_blank" rel="noopener">Firefox附加组件</a> 添加。</span>
+    </li>
+    <li>
+      <strong>配置后端</strong>
+      <span>连接到 <a href="/zh/imagetrans/">ImageTrans</a> 服务器，使用内置PaddleOCR，或配置您自己的OpenAI兼容API密钥。</span>
+    </li>
+    <li>
+      <strong>开始翻译</strong>
+      <span>右键点击图片 → "翻译图片"，或对任意图片按 <span class="ext-kbd">Ctrl+Shift+F</span>。完成！</span>
+    </li>
+  </ol>
+</div>
+
+<!-- Requirements & Integration -->
+<div class="ext-section">
+  <h2>工作原理</h2>
+
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🔌 配合 ImageTrans 桌面版（推荐）</h4>
+      <ul>
+        <li>ImageTrans 负责完整流程：检测 → OCR → 文字抹除 → 翻译 → 渲染</li>
+        <li>最佳的准确度、最广的语言支持和丰富的编辑功能</li>
+        <li>扩展将图片发送给 ImageTrans 处理后直接展示成品</li>
+        <li>需要 <a href="/zh/imagetrans/">ImageTrans</a> 在本地或服务器上运行</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🧩 不依赖 ImageTrans（纯浏览器运行）</h4>
+      <ul>
+        <li>扩展在前端独立完成全部流程：OCR（PaddleOCR）→ 翻译 → 渲染</li>
+        <li>无需服务器或安装任何软件——完全自包含</li>
+        <li>免费且保护隐私</li>
+        <li>准确度、速度和语言选项较为有限</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>翻译选项</h3>
+  <p>以下翻译方式在两种模式下均可使用。当配合 ImageTrans 使用 OpenAI 兼容 API 时，ImageTrans 仅负责 OCR，翻译和渲染由扩展在前端完成。</p>
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🌐 ImageTrans 内置翻译</h4>
+      <ul>
+        <li>连接 ImageTrans 时可用</li>
+        <li>支持多种翻译引擎（Google、DeepL、百度等）</li>
+        <li>包含翻译记忆、术语管理和语料检索功能</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🤖 OpenAI 兼容 API</h4>
+      <ul>
+        <li>使用 ChatGPT、Gemini、DeepSeek 或任何兼容 API</li>
+        <li>配合或不配合 ImageTrans 均可使用——使用自己的 API 密钥</li>
+        <li>灵活的自定义提示词，实现更细致的翻译</li>
+        <li>配合 ImageTrans 时：ImageTrans 仅负责 OCR，扩展负责翻译和渲染</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🆓 MyMemory（免费）</h4>
+      <ul>
+        <li>免费机器翻译 API，无需密钥</li>
+        <li>适合快速、临时的翻译需求</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Applications -->
+<div class="ext-section">
+  <h2>您可以翻译什么？</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📚</div>
+      <h4>漫画与条漫</h4>
+      <p>在任何网站上阅读翻译后的漫画、条漫和同人作品。该扩展专为漫画对话框和文字布局进行了优化。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📋</div>
+      <h4>海报与宣传册</h4>
+      <p>快速理解外文宣传材料、信息图和广告内容。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📱</div>
+      <h4>截图与照片</h4>
+      <p>使用截图功能翻译图片的局部区域，或翻译网页上无法下载的图片——一切都在浏览器内完成。</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📝</div>
+      <h4>从图片提取文字</h4>
+      <p>无需翻译即可从图片中提取文字。适用于OCR任务、数据录入和辅助功能场景。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Open Source -->
+<div class="ext-section">
+  <h2>免费且开源</h2>
+  <p>
+    ImageTrans浏览器扩展完全<strong>免费</strong>，并以 <strong>GNU General Public License v2.0</strong> 许可证开源。源代码托管在GitHub上：
+  </p>
+  <p>
+    📦 <a href="https://github.com/xulihang/ImageTrans_firefox_extension" target="_blank" rel="noopener">GitHub仓库</a> — 浏览代码、报告问题或参与贡献。
+  </p>
+  <p>
+    <strong>无数据收集。</strong>该扩展不会收集或发送您的数据到任何地方。您的图片和翻译数据保留在您的设备上。
+  </p>
+</div>
+
+<!-- CTA -->
+<div class="ext-cta">
+  <h3>准备好在任何网页上翻译图片了吗？</h3>
+  <p style="color: var(--ext-text-secondary);">免费 · 开源 · 无数据收集</p>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      🌐 添加到 Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      🦊 添加到 Firefox
+    </a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ImageTrans 浏览器扩展",
+  "url": "https://www.basiccat.org/zh/imagetrans/extension/",
+  "description": "一键翻译网页上的任何图片。AI驱动的图片翻译浏览器扩展，适用于漫画、海报、截图等场景。",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Firefox, Edge 及兼容浏览器",
+  "author": {
+    "@type": "Person",
+    "name": "xulihang"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "softwareVersion": "5.20",
+  "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+}
+</script>
