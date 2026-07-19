@@ -470,6 +470,9 @@ description: Translate images on any webpage with the ImageTrans browser extensi
   <p>
     <strong>No data collection.</strong> The extension does not collect or send your data anywhere. Your images and translations stay on your device.
   </p>
+  <p>
+    📄 <a href="/imagetrans/extension/privacy/">Privacy Policy</a> — learn more about how the extension handles your data.
+  </p>
 </div>
 
 <!-- CTA -->

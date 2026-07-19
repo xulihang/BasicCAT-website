@@ -470,6 +470,9 @@ description: 使用ImageTrans浏览器扩展翻译网页上的任何图片。右
   <p>
     <strong>无数据收集。</strong>该扩展不会收集或发送您的数据到任何地方。您的图片和翻译数据保留在您的设备上。
   </p>
+  <p>
+    📄 <a href="/zh/imagetrans/extension/privacy/">隐私政策</a> — 了解更多关于扩展如何处理您的数据。
+  </p>
 </div>
 
 <!-- CTA -->
