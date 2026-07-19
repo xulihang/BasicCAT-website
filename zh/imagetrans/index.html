@@ -1,0 +1,412 @@
+---
+title: ImageTrans - 计算机辅助图片翻译工具
+layout: page
+description: ImageTrans是一款计算机辅助图片翻译工具，能够自动检测、识别、抹除和回填图片中的文字。支持导出PSD，跨平台桌面软件。
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-primary-hover: #3b5de7;
+    --it-accent: #764ba2;
+    --it-text: #2d3748;
+    --it-text-secondary: #718096;
+    --it-bg: #f8fafc;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .it-hero {
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--it-radius);
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .it-hero-icon {
+    width: 80px; height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+  }
+  .it-hero h1 {
+    font-size: 32px; font-weight: 700;
+    margin: 0 0 12px 0; color: #fff;
+  }
+  .it-hero p {
+    font-size: 17px; opacity: 0.9;
+    margin: 0 auto 24px auto; line-height: 1.6;
+    max-width: 640px;
+  }
+  .it-hero-screenshot {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    margin-bottom: 24px;
+  }
+  .it-hero-buttons {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .it-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s; cursor: pointer;
+  }
+  .it-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; }
+  .it-btn-primary {
+    background: #fff; color: #333;
+  }
+  .it-btn-secondary {
+    background: rgba(255,255,255,0.25); color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .it-btn-secondary:hover { background: rgba(255,255,255,0.35); color: #fff; }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+    color: var(--it-text);
+  }
+  .it-section h3 {
+    font-size: 17px; font-weight: 600;
+    margin: 0 0 12px 0; color: var(--it-text);
+  }
+  .it-section p {
+    color: var(--it-text-secondary); line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; color: var(--it-text-secondary); line-height: 1.6; margin: 0; }
+
+  /* ===== Pricing ===== */
+  .it-pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-pricing-card {
+    background: var(--it-card-bg);
+    border: 2px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: var(--it-shadow);
+  }
+  .it-pricing-card.recommended { border-color: var(--it-primary); }
+  .it-pricing-card h4 { font-size: 17px; font-weight: 600; margin: 0 0 8px 0; }
+  .it-pricing-card .it-price {
+    font-size: 36px; font-weight: 800; color: var(--it-primary);
+    margin-bottom: 4px;
+  }
+  .it-pricing-card .it-price-note {
+    font-size: 13px; color: var(--it-text-secondary); margin-bottom: 12px;
+  }
+  .it-pricing-card ul {
+    text-align: left; margin: 0 0 16px 0; padding-left: 20px;
+    font-size: 13px; color: var(--it-text-secondary); line-height: 1.8;
+  }
+  .it-btn-buy {
+    display: inline-block;
+    padding: 10px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    background: var(--it-primary); color: #fff;
+    transition: background 0.2s;
+  }
+  .it-btn-buy:hover { background: var(--it-primary-hover); text-decoration: none; color: #fff; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    color: var(--it-text-secondary);
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== Cross-promo ===== */
+  .it-cross-promo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-cross-card {
+    background: var(--it-bg);
+    border: 2px dashed var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .it-cross-card .it-feature-icon { font-size: 32px; margin-bottom: 8px; }
+  .it-cross-card h4 { font-size: 16px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-cross-card p { font-size: 13px; color: var(--it-text-secondary); line-height: 1.6; margin: 0 0 12px 0; }
+  .it-cross-card a { font-weight: 600; color: var(--it-primary); text-decoration: none; font-size: 14px; }
+  .it-cross-card a:hover { text-decoration: underline; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px; color: var(--it-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== CTA ===== */
+  .it-cta {
+    background: var(--it-bg);
+    border: 2px dashed var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 32px 24px; text-align: center;
+  }
+  .it-cta h3 { margin-top: 0; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-hero { padding: 32px 16px 28px; }
+    .it-hero h1 { font-size: 24px; }
+    .it-hero p { font-size: 15px; }
+    .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
+    .it-features,
+    .it-pricing,
+    .it-testimonials,
+    .it-cross-promo { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="it-hero">
+  <div class="it-hero-icon">🖼️</div>
+  <h1>ImageTrans</h1>
+  <p>计算机辅助图片翻译工具。自动检测、识别、抹除并回填图片中的文字——专为漫画、海报等场景设计。</p>
+  <img class="it-hero-screenshot" src="/album/imagetrans_zh.jpg" alt="ImageTrans 界面截图" loading="lazy" />
+  <div class="it-hero-buttons">
+    <a href="#get-a-copy" class="it-btn it-btn-primary">立即购买</a>
+    <a href="https://imagetrans.readthedocs.io/zh_CN/latest/" class="it-btn it-btn-secondary" target="_blank" rel="noopener">软件文档</a>
+  </div>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>核心功能</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>准确定位文字区域</h4>
+      <p>支持自然场景文字检测、目标检测和启发式等多种方法，拥有针对漫画对话框设计的文字区域合并与检测算法。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>多引擎 OCR 识别</h4>
+      <p>支持多种 OCR 引擎及<a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">自定义插件</a>，覆盖世界主要语言，通过版面分析确定阅读顺序。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>翻译辅助</h4>
+      <p>支持多种机器翻译引擎和 AI 大模型（ChatGPT、Gemini、DeepSeek 等）并排对比结果。配备翻译记忆、语料检索、术语管理，以及漫画拟声词检索系统。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>文字抹除与回填</h4>
+      <p>支持二值化、PatchMatch、Lama Inpaint、Gemini Nano Banana 等算法和 AI 模型生成文字掩膜并去除文字，自动调整译文字体大小，全部支持手动调整。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>导出 PSD</h4>
+      <p>将结果保存为 Photoshop PSD 文件，文字分层独立，方便设计师进行后期处理。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>批量处理</h4>
+      <p>一次性处理数百张图片。全局字体样式、背景色/文字色检测、旋转方向检测、智能排序等完备功能。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>跨平台 · 低硬件要求</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>支持 Windows 7+、macOS 10.11+ 和 Linux。亦可作为服务器运行，通过移动设备扫描和翻译图片。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>轻量高效</h4>
+      <p>包含 Java 运行环境和模型约 400 MB，可在较旧或低端设备上运行。支持离线工作，无需联网。</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>互操作性</h4>
+      <p>PSD 导出、Excel/Word/XLIFF 数据交换、LabelPlus 项目转换，配合 Chrome 扩展翻译网页中的图片。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>翻译示例</h2>
+  <p>ImageTrans 可以自由组合不同的文字定位、文字识别和机器翻译方法来处理各种图片。访问画廊查看真实效果：</p>
+  <p>
+    <a href="/zh/gallery/" class="it-btn-buy" style="display: inline-block;">浏览画廊 →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>获取 ImageTrans</h2>
+  <p>一次购买，终身使用。半年内免费更新。国内用户通过面包多购买，海外用户使用 FastSpring。</p>
+  <div class="it-pricing">
+    <div class="it-pricing-card recommended">
+      <h4>🪪 个人用途</h4>
+      <div class="it-price">￥75</div>
+      <div class="it-price-note">一次购买 · 终身使用</div>
+      <ul>
+        <li>全部功能可用</li>
+        <li>半年内免费更新</li>
+        <li>用于个人项目</li>
+      </ul>
+      <a href="https://mbd.pub/o/bread/YpmUmJhs" class="it-btn-buy" target="_blank" rel="noopener">面包多购买</a>
+      <div style="font-size:12px;color:var(--it-text-secondary);margin-top:6px;">海外用户：<a href="https://basiccat.onfastspring.com/" target="_blank" rel="noopener">FastSpring</a></div>
+    </div>
+    <div class="it-pricing-card">
+      <h4>🏢 商业用途</h4>
+      <div class="it-price">￥1500</div>
+      <div class="it-price-note">一次购买 · 终身使用</div>
+      <ul>
+        <li>全部功能可用</li>
+        <li>半年内免费更新</li>
+        <li>允许商业项目使用</li>
+      </ul>
+      <a href="https://basiccat.onfastspring.com/" class="it-btn-buy" target="_blank" rel="noopener">FastSpring 购买</a>
+    </div>
+  </div>
+  <p style="margin-top: 14px; font-size: 13px; color: var(--it-text-secondary);">
+    🎓 教育优惠 — 用教育网邮箱发送邮件至 <a href="mailto:admin@basiccat.org">admin@basiccat.org</a>。
+    &nbsp;·&nbsp;
+    📖 <a href="https://imagetrans.readthedocs.io/zh_CN/latest/gettingstarted.html" target="_blank" rel="noopener">安装说明</a>。
+    &nbsp;·&nbsp;
+    💬 无法购买？<a href="mailto:admin@basiccat.org">邮件联系我</a>。
+  </p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>用户评价</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>我用这个软件一周了，它真的帮助了我们业余翻译者。原本使用 Photoshop 需要花 2 到 3 个小时，现在只要 1 小时。</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>软件在集成网络中各种软件，及时给用户有价值的回复方面做得非常出色。</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Cross-promo ===== -->
+<div class="it-section">
+  <h2>延伸产品</h2>
+  <div class="it-cross-promo">
+    <div class="it-cross-card">
+      <div class="it-feature-icon">🧩</div>
+      <h4>浏览器扩展</h4>
+      <p>右键翻译网页上的任何图片。支持快捷键 Ctrl+Shift+F。可配合 ImageTrans 作为后端使用。</p>
+      <a href="/zh/imagetrans/extension/">ImageTrans 浏览器扩展 →</a>
+    </div>
+    <div class="it-cross-card">
+      <div class="it-feature-icon">🌍</div>
+      <h4>在线图片翻译器</h4>
+      <p>无需安装，在浏览器中直接翻译图片。免费开源，基于 PaddleOCR + AI 翻译。</p>
+      <a href="/zh/online-image-translator/">在线图片翻译器 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>更多资源</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/zh_CN/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 软件文档</a>
+    <a href="/zh/imagetrans/release-notes/" class="it-link-chip">📋 发布日志</a>
+    <a href="/zh/imagetrans/video/" class="it-link-chip">🎬 视频教程</a>
+    <a href="/zh/imagetrans/faq/" class="it-link-chip">❓ 常见问题</a>
+    <a href="/zh/support/" class="it-link-chip">🛠️ 技术支持</a>
+    <a href="/zh/tagged/#imagetrans" class="it-link-chip">📝 技术博客</a>
+    <a href="/zh/imagetrans/how-to-contribute/" class="it-link-chip">🤝 参与贡献</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ImageTrans",
+  "url": "https://www.basiccat.org/zh/imagetrans/",
+  "description": "计算机辅助图片翻译工具，支持OCR文字识别、自动抹除与回填、PSD导出。",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows 7+, macOS 10.11+, Linux",
+  "author": {
+    "@type": "Person",
+    "name": "xulihang"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "75",
+    "priceCurrency": "CNY"
+  }
+}
+</script>

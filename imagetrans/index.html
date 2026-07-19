@@ -1,0 +1,411 @@
+---
+title: ImageTrans - Computer-Aided Image and Comic Translation Tool
+layout: page
+description: ImageTrans is a computer-aided image and comic translation tool. Detect, OCR, translate, and re-render text in images. Export to PSD. Cross-platform desktop software.
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-primary-hover: #3b5de7;
+    --it-accent: #764ba2;
+    --it-text: #2d3748;
+    --it-text-secondary: #718096;
+    --it-bg: #f8fafc;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .it-hero {
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--it-radius);
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .it-hero-icon {
+    width: 80px; height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+  }
+  .it-hero h1 {
+    font-size: 32px; font-weight: 700;
+    margin: 0 0 12px 0; color: #fff;
+  }
+  .it-hero p {
+    font-size: 17px; opacity: 0.9;
+    margin: 0 auto 24px auto; line-height: 1.6;
+    max-width: 640px;
+  }
+  .it-hero-screenshot {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    margin-bottom: 24px;
+  }
+  .it-hero-buttons {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .it-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s; cursor: pointer;
+  }
+  .it-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; }
+  .it-btn-primary {
+    background: #fff; color: #333;
+  }
+  .it-btn-secondary {
+    background: rgba(255,255,255,0.25); color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .it-btn-secondary:hover { background: rgba(255,255,255,0.35); color: #fff; }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+    color: var(--it-text);
+  }
+  .it-section h3 {
+    font-size: 17px; font-weight: 600;
+    margin: 0 0 12px 0; color: var(--it-text);
+  }
+  .it-section p {
+    color: var(--it-text-secondary); line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; color: var(--it-text-secondary); line-height: 1.6; margin: 0; }
+
+  /* ===== Pricing ===== */
+  .it-pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-pricing-card {
+    background: var(--it-card-bg);
+    border: 2px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: var(--it-shadow);
+  }
+  .it-pricing-card.recommended { border-color: var(--it-primary); }
+  .it-pricing-card h4 { font-size: 17px; font-weight: 600; margin: 0 0 8px 0; }
+  .it-pricing-card .it-price {
+    font-size: 36px; font-weight: 800; color: var(--it-primary);
+    margin-bottom: 4px;
+  }
+  .it-pricing-card .it-price-note {
+    font-size: 13px; color: var(--it-text-secondary); margin-bottom: 12px;
+  }
+  .it-pricing-card ul {
+    text-align: left; margin: 0 0 16px 0; padding-left: 20px;
+    font-size: 13px; color: var(--it-text-secondary); line-height: 1.8;
+  }
+  .it-btn-buy {
+    display: inline-block;
+    padding: 10px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    background: var(--it-primary); color: #fff;
+    transition: background 0.2s;
+  }
+  .it-btn-buy:hover { background: var(--it-primary-hover); text-decoration: none; color: #fff; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    color: var(--it-text-secondary);
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== Cross-promo ===== */
+  .it-cross-promo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-cross-card {
+    background: var(--it-bg);
+    border: 2px dashed var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .it-cross-card .it-feature-icon { font-size: 32px; margin-bottom: 8px; }
+  .it-cross-card h4 { font-size: 16px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-cross-card p { font-size: 13px; color: var(--it-text-secondary); line-height: 1.6; margin: 0 0 12px 0; }
+  .it-cross-card a { font-weight: 600; color: var(--it-primary); text-decoration: none; font-size: 14px; }
+  .it-cross-card a:hover { text-decoration: underline; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px; color: var(--it-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== CTA ===== */
+  .it-cta {
+    background: var(--it-bg);
+    border: 2px dashed var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 32px 24px; text-align: center;
+  }
+  .it-cta h3 { margin-top: 0; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-hero { padding: 32px 16px 28px; }
+    .it-hero h1 { font-size: 24px; }
+    .it-hero p { font-size: 15px; }
+    .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
+    .it-features,
+    .it-pricing,
+    .it-testimonials,
+    .it-cross-promo { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="it-hero">
+  <div class="it-hero-icon">🖼️</div>
+  <h1>ImageTrans</h1>
+  <p>Computer-aided image and comic translation tool. Automatically detect, OCR, erase, and re-render text in images — designed for comics, manga, posters, and more.</p>
+  <img class="it-hero-screenshot" src="/album/imagetrans.jpg" alt="ImageTrans screenshot" loading="lazy" />
+  <div class="it-hero-buttons">
+    <a href="#get-a-copy" class="it-btn it-btn-primary">Get a Copy</a>
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="it-btn it-btn-secondary" target="_blank" rel="noopener">Documentation</a>
+  </div>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>Features</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>Accurate Text Detection</h4>
+      <p>Natural scene text detection, object detection, and a heuristic method specially designed for comic speech bubbles. Handles complex layouts.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>Multi-Engine OCR</h4>
+      <p>Support for multiple OCR engines with <a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">custom plugin</a> support. Major world languages. Layout analysis for reading order.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>Translation Assist</h4>
+      <p>Multiple MT engines and AI large language models (ChatGPT, Gemini, DeepSeek, etc.) side by side. Translation memory, corpus concordance, term management, and a sound effects search engine for comics.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>Text Removal &amp; Re-injection</h4>
+      <p>Binarization, PatchMatch, Lama Inpaint, and Gemini Nano Banana for clean text removal. Auto-adjusted font sizing with full manual control.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>Export to PSD</h4>
+      <p>Save results as Photoshop PSD files with separate text layers, ready for further editing by designers.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>Batch Processing</h4>
+      <p>Process hundreds of images in one go. Global font styles, background/text color detection, rotation detection, and intelligent text area sorting.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>Cross-Platform &amp; Low Requirements</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>Runs on Windows 7+, macOS 10.11+, and Linux. Can also serve as a server for online access from mobile devices.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>Lightweight</h4>
+      <p>~400 MB including Java runtime and models. Works on older or low-end devices. Works offline on your local machine.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>Interoperable</h4>
+      <p>PSD export, Excel/Word/XLIFF data exchange, LabelPlus project conversion, and Chrome Extension for web page translation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>Translated Examples</h2>
+  <p>ImageTrans combines different text detectors, OCR engines, and MT services to handle all kinds of images. Visit the gallery to see real results:</p>
+  <p>
+    <a href="/gallery/" class="it-btn-buy" style="display: inline-block;">Browse Gallery →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>Get a Copy</h2>
+  <p>One-time purchase. Free upgrades for half a year. Available via FastSpring.</p>
+  <div class="it-pricing">
+    <div class="it-pricing-card recommended">
+      <h4>🪪 Personal Use</h4>
+      <div class="it-price">$10.99</div>
+      <div class="it-price-note">one-time · lifetime access</div>
+      <ul>
+        <li>All features included</li>
+        <li>Free upgrades for 6 months</li>
+        <li>Use on personal projects</li>
+      </ul>
+      <a href="https://basiccat.onfastspring.com/" class="it-btn-buy" target="_blank" rel="noopener">Buy on FastSpring</a>
+    </div>
+    <div class="it-pricing-card">
+      <h4>🏢 Commercial Use</h4>
+      <div class="it-price">$299</div>
+      <div class="it-price-note">one-time · lifetime access</div>
+      <ul>
+        <li>All features included</li>
+        <li>Free upgrades for 6 months</li>
+        <li>Commercial projects allowed</li>
+      </ul>
+      <a href="https://basiccat.onfastspring.com/" class="it-btn-buy" target="_blank" rel="noopener">Buy on FastSpring</a>
+    </div>
+  </div>
+  <p style="margin-top: 14px; font-size: 13px; color: var(--it-text-secondary);">
+    🎓 Academic discount available — email <a href="mailto:admin@basiccat.org">admin@basiccat.org</a> with your institution email.
+    &nbsp;·&nbsp;
+    📖 <a href="https://imagetrans.readthedocs.io/en/latest/gettingstarted.html#id2" target="_blank" rel="noopener">Installation guide</a>.
+    &nbsp;·&nbsp;
+    💬 Payment issues? <a href="mailto:admin@basiccat.org">Contact me</a>.
+  </p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>What Users Say</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>I've been using this program for a week now and it really helps us amateur translators. What took at least 2–3 hours in Photoshop is done in 1 hour here.</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>The combination of the program with the integration of other software from around the web and the immediate informative replies to user concerns is simply unmatched.</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Cross-promo ===== -->
+<div class="it-section">
+  <h2>Also Available</h2>
+  <div class="it-cross-promo">
+    <div class="it-cross-card">
+      <div class="it-feature-icon">🧩</div>
+      <h4>Browser Extension</h4>
+      <p>Translate images directly on web pages. Right-click or use Ctrl+Shift+F. Works with ImageTrans as backend.</p>
+      <a href="/imagetrans/extension/">ImageTrans Browser Extension →</a>
+    </div>
+    <div class="it-cross-card">
+      <div class="it-feature-icon">🌍</div>
+      <h4>Online Image Translator</h4>
+      <p>Translate images in your browser without installing anything. Free, open-source, powered by PaddleOCR + AI.</p>
+      <a href="/online-image-translator/">Online Image Translator →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>More Resources</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 Documentation</a>
+    <a href="/imagetrans/release-notes/" class="it-link-chip">📋 Release Notes</a>
+    <a href="/imagetrans/video/" class="it-link-chip">🎬 Video Tutorials</a>
+    <a href="/imagetrans/faq/" class="it-link-chip">❓ FAQ</a>
+    <a href="/support/" class="it-link-chip">🛠️ Support</a>
+    <a href="/tagged/#imagetrans" class="it-link-chip">📝 Blog</a>
+    <a href="https://github.com/xulihang/ImageTrans-docs/issues" class="it-link-chip" target="_blank" rel="noopener">🐛 Report Issues</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ImageTrans",
+  "url": "https://www.basiccat.org/imagetrans/",
+  "description": "Computer-aided image and comic translation tool with OCR, text detection, MT integration, and PSD export.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows 7+, macOS 10.11+, Linux",
+  "author": {
+    "@type": "Person",
+    "name": "xulihang"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "10.99",
+    "priceCurrency": "USD"
+  }
+}
+</script>
