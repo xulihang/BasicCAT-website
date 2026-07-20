@@ -8,11 +8,11 @@
    {% assign sitetitle=site.title %}
   {% endif %}
 
-  <title>{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}{{ sitetitle }}</title>
-  
+  <title>{% if page.title %}{{ page.title | append: " | " }}{% assign title_size = page.title | size %}{% if title_size > 20 %}{{ site.header }}{% else %}{{ sitetitle }}{% endif %}{% else %}{{ sitetitle }}{% endif %}</title>
+
   {% seo title=false  %}
-  
-  
+
+
   {% include google_analytics.html %}
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
