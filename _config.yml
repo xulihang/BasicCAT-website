@@ -27,6 +27,10 @@ defaults:
       path: "_zh"
     values:
       locale: "zh_CN"
+  - scope:
+      path: "zh"
+    values:
+      locale: "zh_CN"
       
 collections:
   zh:
