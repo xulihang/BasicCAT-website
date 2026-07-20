@@ -36,7 +36,7 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
     margin: 0 auto 20px;
     backdrop-filter: blur(10px);
   }
-  .it-hero h1 {
+  .it-hero-title {
     font-size: 32px; font-weight: 700;
     margin: 0 0 12px 0; color: #fff;
   }
@@ -220,7 +220,7 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
   /* ===== Responsive ===== */
   @media (max-width: 600px) {
     .it-hero { padding: 32px 16px 28px; }
-    .it-hero h1 { font-size: 24px; }
+    .it-hero-title { font-size: 24px; }
     .it-hero p { font-size: 15px; }
     .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
     .it-features,
@@ -233,7 +233,7 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
 <!-- ===== Hero ===== -->
 <div class="it-hero">
   <div class="it-hero-icon">🖼️</div>
-  <h1>ImageTrans</h1>
+  <div class="it-hero-title">ImageTrans</div>
   <p>Computer-aided image and comic translation tool. Automatically detect, OCR, erase, and re-render text in images — designed for comics, manga, posters, and more.</p>
   <img class="it-hero-screenshot" src="/album/imagetrans.jpg" alt="ImageTrans screenshot" loading="lazy" />
   <div class="it-hero-buttons">
