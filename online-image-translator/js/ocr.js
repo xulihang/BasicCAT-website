@@ -14,14 +14,18 @@ const OCR = (function() {
   // Other languages: v5/v4 language-specific rec models, fallback to default tiny det
   const PADDLE_CDN_BASE = 'https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.1';
   const PADDLE_CDN_BASE_V5 = 'https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0';
+  // Det model variants: tiny (default, faster) or small (more accurate)
+  const PADDLE_DET_TINY = '/onnx/PP-OCRv6/det/PP-OCRv6_det_tiny.onnx';
+  const PADDLE_DET_SMALL = '/onnx/PP-OCRv6/det/PP-OCRv6_det_small.onnx';
+
   const PADDLE_MODEL_URLS = {
     default: {
-      det: PADDLE_CDN_BASE + '/onnx/PP-OCRv6/det/PP-OCRv6_det_tiny.onnx',
+      det: PADDLE_CDN_BASE + PADDLE_DET_TINY,
       rec: PADDLE_CDN_BASE + '/onnx/PP-OCRv6/rec/PP-OCRv6_rec_tiny.onnx',
       dict: PADDLE_CDN_BASE + '/paddle/PP-OCRv6/rec/PP-OCRv6_rec_tiny/ppocrv6_tiny_dict.txt'
     },
     japanese: {
-      det: PADDLE_CDN_BASE + '/onnx/PP-OCRv6/det/PP-OCRv6_det_tiny.onnx',
+      det: PADDLE_CDN_BASE + PADDLE_DET_TINY,
       rec: PADDLE_CDN_BASE + '/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx',
       dict: PADDLE_CDN_BASE + '/paddle/PP-OCRv6/rec/PP-OCRv6_rec_small/ppocrv6_dict.txt'
     },
@@ -65,9 +69,15 @@ const OCR = (function() {
   function getPaddleModelInfo(sourceLang) {
     const modelKey = PADDLE_LANG_TO_MODEL[sourceLang] || 'default';
     const modelInfo = PADDLE_MODEL_URLS[modelKey] || PADDLE_MODEL_URLS['default'];
+    // Allow switching det model: tiny (default) or small
+    let detUrl = modelInfo.det;
+    const detModelSize = Settings.get('paddleDetModel');
+    if (detModelSize === 'small' && detUrl) {
+      detUrl = detUrl.replace(PADDLE_DET_TINY, PADDLE_DET_SMALL);
+    }
     return {
       modelKey: modelKey,
-      detUrl: modelInfo.det,
+      detUrl: detUrl,
       recUrl: modelInfo.rec,
       dicUrl: modelInfo.dict
     };
@@ -234,7 +244,9 @@ const OCR = (function() {
         dic: dic,
         ort: window.ort,
         node: false,
-        cv: window.cv
+        cv: window.cv,
+        det_db_thresh: 0.6,
+        erode_size: 2
       });
 
       paddleReady = true;
@@ -629,7 +641,7 @@ const OCR = (function() {
         }
       });
     });
-
+    console.log(srcItems);
     const xSpacing = Settings.get('xSpacing');
     const ySpacing = Settings.get('ySpacing');
     const mergedGroups = mergeTextBoxes(srcItems, sourceLang, xSpacing, ySpacing);

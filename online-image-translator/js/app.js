@@ -250,7 +250,7 @@
       startBtn.onclick = function() {
         const mode = document.querySelector('input[name="setup-mode"]:checked');
         Settings.set('translationMode', mode ? mode.value : 'imagetrans');
-        Settings.set('renderTextInFrontend', mode && mode.value === 'local');
+        //Settings.set('renderTextInFrontend', mode && mode.value === 'local');
         if (srcSelect) Settings.set('sourceLang', srcSelect.value);
         if (tgtSelect) Settings.set('targetLang', tgtSelect.value);
         if (serverInput && serverInput.value) Settings.set('serverURL', serverInput.value);
@@ -1178,7 +1178,7 @@
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
-      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese',
+      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
@@ -1209,7 +1209,7 @@
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
-      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese',
+      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
