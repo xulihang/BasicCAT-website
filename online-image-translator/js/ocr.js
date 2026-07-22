@@ -64,6 +64,52 @@ const OCR = (function() {
 
 
 
+  // ==================== IndexedDB Model Cache ====================
+
+  const MODEL_DB = 'paddle-models';
+  var modelDB = null;
+
+  function getModelDB() {
+    if (modelDB) return Promise.resolve(modelDB);
+    return new Promise(function(resolve, reject) {
+      var req = indexedDB.open(MODEL_DB, 1);
+      req.onupgradeneeded = function() {
+        req.result.createObjectStore('buffers', { keyPath: 'url' });
+      };
+      req.onsuccess = function() {
+        modelDB = req.result;
+        resolve(modelDB);
+      };
+      req.onerror = function() { reject(req.error); };
+    });
+  }
+
+  // Load an ArrayBuffer from cache or network, keyed by URL
+  async function loadModelBuffer(url) {
+    var db = await getModelDB();
+    // Check cache
+    var cached = await new Promise(function(resolve, reject) {
+      var tx = db.transaction('buffers', 'readonly');
+      var req = tx.objectStore('buffers').get(url);
+      req.onsuccess = function() { resolve(req.result); };
+      req.onerror = function() { reject(req.error); };
+    });
+    if (cached) {
+      console.log('[ModelCache] Hit:', url.substring(url.lastIndexOf('/') + 1));
+      return cached.data;
+    }
+    // Download
+    console.log('[ModelCache] Downloading:', url.substring(url.lastIndexOf('/') + 1));
+    var res = await fetch(url);
+    var data = await res.arrayBuffer();
+    // Store in cache
+    db.transaction('buffers', 'readwrite').objectStore('buffers')
+      .put({ url: url, data: data, ts: Date.now() });
+    console.log('[ModelCache] Stored (' + (data.byteLength / 1024 / 1024).toFixed(1) + ' MB):',
+      url.substring(url.lastIndexOf('/') + 1));
+    return data;
+  }
+
   // ==================== PaddleOCR (esearch-ocr CDN) ====================
 
   function getPaddleModelInfo(sourceLang) {
@@ -235,19 +281,27 @@ const OCR = (function() {
       const Paddle = window['esearch-ocr'];
 
       const modelInfo = getPaddleModelInfo(sourceLang);
-      const res = await fetch(modelInfo.dicUrl);
-      const dic = await res.text();
 
-      await Paddle.init({
-        detPath: modelInfo.detUrl,
-        recPath: modelInfo.recUrl,
+      // Download models in parallel: dict (text) + det & rec (binary via IndexedDB)
+      const [dic, detBuf, recBuf] = await Promise.all([
+        fetch(modelInfo.dicUrl).then(function(r) { return r.text(); }),
+        loadModelBuffer(modelInfo.detUrl),
+        loadModelBuffer(modelInfo.recUrl)
+      ]);
+
+      const initOpts = {
+        detPath: detBuf,
+        recPath: recBuf,
         dic: dic,
         ort: window.ort,
         node: false,
-        cv: window.cv,
-        det_db_thresh: 0.6,
-        erode_size: 2
-      });
+        cv: window.cv
+      };
+      if (sourceLang === 'zh') {
+        initOpts.det_db_thresh = 0.6;
+        initOpts.erode_size = 2;
+      }
+      await Paddle.init(initOpts);
 
       paddleReady = true;
     })();
@@ -600,7 +654,8 @@ const OCR = (function() {
     if (yoloSession && yoloModelUrl === yoloUrl) return;
     yoloModelUrl = yoloUrl;
     const sessionOpts = { executionProviders: ['wasm'], graphOptimizationLevel: 'all' };
-    yoloSession = await window.ort.InferenceSession.create(yoloUrl, sessionOpts);
+    const yoloBuf = await loadModelBuffer(yoloUrl);
+    yoloSession = await window.ort.InferenceSession.create(yoloBuf, sessionOpts);
   }
 
   async function runYOLO(sourceCanvas) {
