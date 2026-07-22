@@ -202,12 +202,31 @@ const OCR = (function() {
       const report = function(msg) { if (_onProgress) _onProgress(msg); };
 
       // 1. ONNX Runtime (jsdmirror → jsdelivr fallback)
-      let ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web';
+      // iOS 15 / old Safari don't support WebAssembly SIMD. Newer ORT
+      // versions ship SIMD-only WASM and fail with "no available backend".
+      // Detect SIMD support and load the matching ORT version.
+      var ORT_VERSION;
+      try {
+        // Validate a minimal WASM module that contains a SIMD instruction.
+        // If the browser rejects it, SIMD is not available.
+        var SIMD_CHECK = new Uint8Array(
+          [0,97,115,109,1,0,0,0,1,4,1,96,0,0,3,2,1,0,10,10,1,8,0,65,0,253,12,0,11]
+        );
+        if (WebAssembly.validate(SIMD_CHECK)) {
+          ORT_VERSION = ''; // use latest
+        } else {
+          ORT_VERSION = '@1.18.0'; // last version with non-SIMD WASM
+        }
+      } catch (e) {
+        ORT_VERSION = '@1.18.0';
+      }
+      
+      var ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION;
       if (typeof window.ort === 'undefined') {
         report('Loading ONNX Runtime...');
-        const used = await loadScriptCDN(
-          'https://cdn.jsdmirror.com/npm/onnxruntime-web/dist/ort.min.js',
-          'https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js'
+        var used = await loadScriptCDN(
+          'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js',
+          'https://cdn.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js'
         );
         // Derive base URL: strip '/dist/ort.min.js' suffix
         ortCDN = used.replace(/\/dist\/ort\.min\.js$/, '');
