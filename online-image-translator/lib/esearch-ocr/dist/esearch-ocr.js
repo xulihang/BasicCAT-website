@@ -1,7 +1,12 @@
 var Qt = Object.defineProperty;
 var Zt = (t, n, o) => n in t ? Qt(t, n, { enumerable: !0, configurable: !0, writable: !0, value: o }) : t[n] = o;
 var kt = (t, n, o) => Zt(t, typeof n != "symbol" ? n + "" : n, o);
-let jt = (t, n) => new OffscreenCanvas(t, n);
+let jt = (t, n) => {
+  if (typeof OffscreenCanvas < "u")
+    return new OffscreenCanvas(t, n);
+  const o = document.createElement("canvas");
+  return o.width = t, o.height = n, o;
+};
 function it(t, n) {
   return jt(t, n);
 }
