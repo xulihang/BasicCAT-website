@@ -4,8 +4,6 @@ layout: page
 description: Privacy policy for the ImageTrans browser extension. Learn about how the extension handles your images and data.
 ---
 
-# Privacy Policy
-
 **Last updated: July 19, 2026**
 
 ImageTrans respects your privacy. This Privacy Policy explains how the ImageTrans browser extension handles your data.

@@ -4,8 +4,6 @@ layout: page
 description: ImageTrans 浏览器扩展的隐私政策。了解扩展如何处理您的图片和数据。
 ---
 
-# 隐私政策
-
 **最后更新：2026年7月19日**
 
 ImageTrans 尊重您的隐私。本隐私政策说明了 ImageTrans 浏览器扩展如何处理您的数据。
