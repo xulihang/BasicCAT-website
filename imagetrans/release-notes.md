@@ -9,6 +9,15 @@ layout: page
 }
 </style>
 
+## v6.1.0 (2026/07/24)
+
+* Add barcode scanning based on ZXingCPP
+* Add background running mode, supporting running the server in the background without showing a window during translation
+* Set the timeout of the multi-process way of running workflow to 10 minutes
+* Server supports loading language-specific workflow templates (`custom_workflow_src-tgt.json`)
+* Fix an issue where server's custom workflow mode directly use previously exported same-name images
+* Fix an issue where images loaded by the server can be invalid
+
 ## v6.0.3 (2026/07/16)
 
 * Add table recognition
