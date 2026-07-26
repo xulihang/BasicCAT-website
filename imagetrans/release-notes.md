@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v6.2.0 (2026/07/26)
+
+* Add a general (for server) template
+* Automatically select the appropriate OCR when creating a project from a generic language pair template
+* Add a custom workflow for detecting cells in table panels
+* Rewrite all logic for determining which panel a text area belongs to
+* Use text masks to optimize judgment for areas with complex backgrounds
+* Change Deepseek's default model name to deepseek-v4-flash
+* Panel detection and translation workflows support defining parameters for each entry
+* Optimize inverted-area judgment in mask generation
+* Server supports setting a remote server password (`ws_secret`)
+* Server supports loading language-specific project settings (`src.json`)
+* Server auto-cleanup image feature now also clears thumbnails
+* Fix oneocr onnxruntime version conflict issue
+
 ## v6.1.0 (2026/07/24)
 
 * Add barcode scanning based on ZXingCPP
