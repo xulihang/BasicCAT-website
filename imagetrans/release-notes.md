@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v6.2.1 (2026/07/28)
+
+* Remove `Character.UnicodeBlock.GENERAL_PUNCTUATION` (e.g. …) from the Chinese character detection condition
+* Update the minimum vertical coordinate offset in templates to 2000
+* Fix an issue where the server's uploaded error message did not include the name
+* Fix an issue where the server could set the running state to false before the translated image upload was complete
+
 ## v6.2.0 (2026/07/26)
 
 * Add a general (for server) template
