@@ -112,40 +112,9 @@ description: ImageTrans 是一款计算机辅助图片翻译、漫画翻译软�
   .it-feature-card strong { color: var(--it-text); font-size: 13px; }
 
   /* ===== Pricing ===== */
-  .it-pricing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-  }
-  .it-pricing-card {
-    background: var(--it-card-bg);
-    border: 2px solid var(--it-border);
-    border-radius: var(--it-radius);
-    padding: 28px 24px;
-    text-align: center;
-    box-shadow: var(--it-shadow);
-  }
-  .it-pricing-card.recommended { border-color: var(--it-primary); }
-  .it-pricing-card h4 { font-size: 17px; font-weight: 600; margin: 0 0 8px 0; }
-  .it-pricing-card .it-price {
-    font-size: 36px; font-weight: 800; color: var(--it-primary);
-    margin-bottom: 4px;
-  }
-  .it-pricing-card .it-price-note {
-    font-size: 13px; color: var(--it-text-secondary); margin-bottom: 12px;
-  }
-  .it-pricing-card ul {
-    text-align: left; margin: 0 0 16px 0; padding-left: 20px;
-    font-size: 13px; color: var(--it-text-secondary); line-height: 1.8;
-  }
-  .it-btn-buy {
-    display: inline-block;
-    padding: 10px 28px; border-radius: 8px;
-    font-size: 14px; font-weight: 600; text-decoration: none;
-    background: var(--it-primary); color: #fff;
-    transition: background 0.2s;
-  }
-  .it-btn-buy:hover { background: var(--it-primary-hover); text-decoration: none; color: #fff; }
+  .it-pricing { margin-bottom: 12px; }
+  .it-pricing p { margin: 0 0 8px 0; font-size: 15px; }
+  .it-pricing a { color: var(--it-primary); font-weight: 500; }
 
   /* ===== Testimonials ===== */
   .it-testimonials {
@@ -225,7 +194,6 @@ description: ImageTrans 是一款计算机辅助图片翻译、漫画翻译软�
     .it-hero p { font-size: 15px; }
     .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
     .it-features,
-    .it-pricing,
     .it-testimonials,
     .it-cross-promo { grid-template-columns: 1fr; }
   }
@@ -394,29 +362,8 @@ description: ImageTrans 是一款计算机辅助图片翻译、漫画翻译软�
   <h2>获取 ImageTrans</h2>
   <p>一次购买，终身使用。半年内免费更新。国内用户通过面包多购买，海外用户使用 FastSpring。</p>
   <div class="it-pricing">
-    <div class="it-pricing-card recommended">
-      <h4>👤 个人用途</h4>
-      <div class="it-price">￥75</div>
-      <div class="it-price-note">一次购买 · 终身使用</div>
-      <ul>
-        <li>全部功能可用</li>
-        <li>半年内免费更新</li>
-        <li>用于个人项目</li>
-      </ul>
-      <a href="https://mbd.pub/o/bread/YpmUmJhs" class="it-btn-buy" target="_blank" rel="noopener">面包多购买</a>
-      <div style="font-size:12px;color:var(--it-text-secondary);margin-top:6px;">海外用户：<a href="https://basiccat.onfastspring.com/" target="_blank" rel="noopener">FastSpring</a></div>
-    </div>
-    <div class="it-pricing-card">
-      <h4>🏢 商业用途</h4>
-      <div class="it-price">￥1500</div>
-      <div class="it-price-note">一次购买 · 终身使用</div>
-      <ul>
-        <li>全部功能可用</li>
-        <li>半年内免费更新</li>
-        <li>允许商业项目使用</li>
-      </ul>
-      <a href="https://basiccat.onfastspring.com/imagetrans-commercial-purpose" class="it-btn-buy" target="_blank" rel="noopener">FastSpring 购买</a>
-    </div>
+    <p><strong>个人用途</strong> — ￥75 &nbsp; <a href="https://mbd.pub/o/bread/YpmUmJhs" target="_blank" rel="noopener">面包多购买 →</a> &nbsp; <span style="font-size:13px;color:var(--it-text-secondary);">海外用户：<a href="https://basiccat.onfastspring.com/" target="_blank" rel="noopener">FastSpring</a></span></p>
+    <p><strong>商业用途</strong> — ￥1500 &nbsp; <a href="https://basiccat.onfastspring.com/imagetrans-commercial-purpose" target="_blank" rel="noopener">FastSpring 购买 →</a></p>
   </div>
   <p style="margin-top: 14px; font-size: 13px; color: var(--it-text-secondary);">
     🎓 教育优惠 — 用教育网邮箱发送邮件至 <a href="mailto:admin@basiccat.org">admin@basiccat.org</a>。

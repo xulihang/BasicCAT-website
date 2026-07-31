@@ -112,40 +112,9 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
   .it-feature-card strong { color: var(--it-text); font-size: 13px; }
 
   /* ===== Pricing ===== */
-  .it-pricing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-  }
-  .it-pricing-card {
-    background: var(--it-card-bg);
-    border: 2px solid var(--it-border);
-    border-radius: var(--it-radius);
-    padding: 28px 24px;
-    text-align: center;
-    box-shadow: var(--it-shadow);
-  }
-  .it-pricing-card.recommended { border-color: var(--it-primary); }
-  .it-pricing-card h4 { font-size: 17px; font-weight: 600; margin: 0 0 8px 0; }
-  .it-pricing-card .it-price {
-    font-size: 36px; font-weight: 800; color: var(--it-primary);
-    margin-bottom: 4px;
-  }
-  .it-pricing-card .it-price-note {
-    font-size: 13px; color: var(--it-text-secondary); margin-bottom: 12px;
-  }
-  .it-pricing-card ul {
-    text-align: left; margin: 0 0 16px 0; padding-left: 20px;
-    font-size: 13px; color: var(--it-text-secondary); line-height: 1.8;
-  }
-  .it-btn-buy {
-    display: inline-block;
-    padding: 10px 28px; border-radius: 8px;
-    font-size: 14px; font-weight: 600; text-decoration: none;
-    background: var(--it-primary); color: #fff;
-    transition: background 0.2s;
-  }
-  .it-btn-buy:hover { background: var(--it-primary-hover); text-decoration: none; color: #fff; }
+  .it-pricing { margin-bottom: 12px; }
+  .it-pricing p { margin: 0 0 8px 0; font-size: 15px; }
+  .it-pricing a { color: var(--it-primary); font-weight: 500; }
 
   /* ===== Testimonials ===== */
   .it-testimonials {
@@ -225,7 +194,6 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
     .it-hero p { font-size: 15px; }
     .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
     .it-features,
-    .it-pricing,
     .it-testimonials,
     .it-cross-promo { grid-template-columns: 1fr; }
   }
@@ -392,30 +360,10 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
 <!-- ===== Pricing ===== -->
 <div class="it-section" id="get-a-copy">
   <h2>Get a Copy</h2>
-  <p>One-time purchase. Free upgrades for half a year. Available via FastSpring.</p>
+  <p>One-time purchase. Free upgrades for half a year.</p>
   <div class="it-pricing">
-    <div class="it-pricing-card recommended">
-      <h4>👤 Personal Use</h4>
-      <div class="it-price">$10.99</div>
-      <div class="it-price-note">one-time · lifetime access</div>
-      <ul>
-        <li>All features included</li>
-        <li>Free upgrades for 6 months</li>
-        <li>Use on personal projects</li>
-      </ul>
-      <a href="https://basiccat.onfastspring.com/imagetrans" class="it-btn-buy" target="_blank" rel="noopener">Buy on FastSpring</a>
-    </div>
-    <div class="it-pricing-card">
-      <h4>🏢 Commercial Use</h4>
-      <div class="it-price">$299</div>
-      <div class="it-price-note">one-time · lifetime access</div>
-      <ul>
-        <li>All features included</li>
-        <li>Free upgrades for 6 months</li>
-        <li>Commercial projects allowed</li>
-      </ul>
-      <a href="https://basiccat.onfastspring.com/imagetrans-commercial-purpose" class="it-btn-buy" target="_blank" rel="noopener">Buy on FastSpring</a>
-    </div>
+    <p><strong>Personal Use</strong> — $10.99 &nbsp; <a href="https://basiccat.onfastspring.com/imagetrans" target="_blank" rel="noopener">Buy on FastSpring →</a></p>
+    <p><strong>Commercial Use</strong> — $299 &nbsp; <a href="https://basiccat.onfastspring.com/imagetrans-commercial-purpose" target="_blank" rel="noopener">Buy on FastSpring →</a></p>
   </div>
   <p style="margin-top: 14px; font-size: 13px; color: var(--it-text-secondary);">
     🎓 Academic discount available — email <a href="mailto:admin@basiccat.org">admin@basiccat.org</a> with your institution email.
