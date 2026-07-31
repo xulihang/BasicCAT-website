@@ -7,69 +7,13 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
 <style>
   :root {
     --it-primary: #4a6cf7;
-    --it-primary-hover: #3b5de7;
-    --it-accent: #764ba2;
     --it-text: #333;
     --it-text-secondary: #333;
-    --it-bg: #f8fafc;
     --it-card-bg: #ffffff;
     --it-border: #e2e8f0;
     --it-radius: 12px;
     --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
   }
-
-  /* ===== Hero ===== */
-  .it-hero {
-    text-align: center;
-    padding: 48px 24px 40px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: var(--it-radius);
-    color: #fff;
-    margin-bottom: 32px;
-  }
-  .it-hero-icon {
-    width: 80px; height: 80px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 20px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 40px;
-    margin: 0 auto 20px;
-    backdrop-filter: blur(10px);
-  }
-  .it-hero-title {
-    font-size: 32px; font-weight: 700;
-    margin: 0 0 12px 0; color: #fff;
-  }
-  .it-hero p {
-    font-size: 17px; opacity: 0.9;
-    margin: 0 auto 24px auto; line-height: 1.6;
-    max-width: 640px;
-  }
-  .it-hero-screenshot {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    margin-bottom: 24px;
-  }
-  .it-hero-buttons {
-    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-  }
-  .it-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 24px; border-radius: 8px;
-    font-size: 15px; font-weight: 600; text-decoration: none;
-    transition: transform 0.15s, box-shadow 0.15s; cursor: pointer;
-  }
-  .it-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; }
-  .it-btn-primary {
-    background: #fff; color: #333;
-  }
-  .it-btn-secondary {
-    background: rgba(255,255,255,0.25); color: #fff;
-    border: 2px solid rgba(255,255,255,0.5);
-  }
-  .it-btn-secondary:hover { background: rgba(255,255,255,0.35); color: #fff; }
 
   /* ===== Sections ===== */
   .it-section { margin-bottom: 36px; }
@@ -78,10 +22,6 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
     margin: 0 0 16px 0; padding-bottom: 8px;
     border-bottom: 2px solid var(--it-border);
     color: var(--it-text);
-  }
-  .it-section h3 {
-    font-size: 17px; font-weight: 600;
-    margin: 0 0 12px 0; color: var(--it-text);
   }
   .it-section p {
     color: var(--it-text-secondary); line-height: 1.7;
@@ -111,11 +51,6 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
   .it-feature-card li a { color: var(--it-primary); }
   .it-feature-card strong { color: var(--it-text); font-size: 13px; }
 
-  /* ===== Pricing ===== */
-  .it-pricing { margin-bottom: 12px; }
-  .it-pricing p { margin: 0 0 8px 0; font-size: 15px; }
-  .it-pricing a { color: var(--it-primary); font-weight: 500; }
-
   /* ===== Testimonials ===== */
   .it-testimonials {
     display: grid;
@@ -142,25 +77,6 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
   .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
   .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
 
-  /* ===== Cross-promo ===== */
-  .it-cross-promo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-  }
-  .it-cross-card {
-    background: var(--it-bg);
-    border: 2px dashed var(--it-border);
-    border-radius: var(--it-radius);
-    padding: 24px;
-    text-align: center;
-  }
-  .it-cross-card .it-feature-icon { font-size: 32px; margin-bottom: 8px; }
-  .it-cross-card h4 { font-size: 16px; font-weight: 600; margin: 0 0 6px 0; }
-  .it-cross-card p { font-size: 13px; color: var(--it-text-secondary); line-height: 1.6; margin: 0 0 12px 0; }
-  .it-cross-card a { font-weight: 600; color: var(--it-primary); text-decoration: none; font-size: 14px; }
-  .it-cross-card a:hover { text-decoration: underline; }
-
   /* ===== More links ===== */
   .it-links {
     display: flex; flex-wrap: wrap; gap: 10px;
@@ -178,24 +94,10 @@ description: ImageTrans is a computer-aided image and comic (also manga, manhua,
   }
   .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
 
-  /* ===== CTA ===== */
-  .it-cta {
-    background: var(--it-bg);
-    border: 2px dashed var(--it-border);
-    border-radius: var(--it-radius);
-    padding: 32px 24px; text-align: center;
-  }
-  .it-cta h3 { margin-top: 0; }
-
   /* ===== Responsive ===== */
   @media (max-width: 600px) {
-    .it-hero { padding: 32px 16px 28px; }
-    .it-hero-title { font-size: 24px; }
-    .it-hero p { font-size: 15px; }
-    .it-hero-icon { width: 64px; height: 64px; font-size: 32px; border-radius: 16px; }
     .it-features,
-    .it-testimonials,
-    .it-cross-promo { grid-template-columns: 1fr; }
+    .it-testimonials { grid-template-columns: 1fr; }
   }
 </style>
 
