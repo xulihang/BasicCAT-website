@@ -8,7 +8,7 @@ const CDN_URLS = [
 ];
 
 // Paths to offload to CDN
-const CDN_PATHS = ['/album/', '/assets/'];
+const CDN_PATHS = ['/album/', '/assets/','/gallery/'];
 
 // File extensions that benefit from CDN (static assets)
 const CDN_EXTENSIONS = /\.(png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|pdf|zip|json|js|css|woff2?|ttf|eot)$/i;
