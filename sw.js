@@ -1,8 +1,11 @@
 // Service Worker for CDN offloading
-// Intercepts requests to /album/* and /assets/* and fetches from jsDelivr CDN
-// Falls back to the original URL if CDN fails
+// Intercepts requests to /album/* and /assets/* and fetches from CDN mirrors
+// Tries jsdmirror → jsdelivr → origin (first success wins)
 
-const CDN_BASE = 'https://cdn.jsdelivr.net/gh/xulihang/BasicCAT-website@master';
+const CDN_URLS = [
+  'https://cdn.jsdmirror.com/gh/xulihang/BasicCAT-website@master',
+  'https://cdn.jsdelivr.net/gh/xulihang/BasicCAT-website@master',
+];
 
 // Paths to offload to CDN
 const CDN_PATHS = ['/album/', '/assets/'];
@@ -16,6 +19,18 @@ function shouldUseCDN(url) {
   if (urlObj.origin !== self.location.origin) return false;
   const path = urlObj.pathname;
   return CDN_PATHS.some(prefix => path.startsWith(prefix)) && CDN_EXTENSIONS.test(path);
+}
+
+async function tryCDNs(path) {
+  for (const base of CDN_URLS) {
+    try {
+      const res = await fetch(base + path, { mode: 'cors', credentials: 'omit' });
+      if (res.ok) return res;
+    } catch (_) {
+      // try next
+    }
+  }
+  throw new Error('All CDNs failed');
 }
 
 // Install - activate immediately
@@ -36,14 +51,8 @@ self.addEventListener('fetch', (event) => {
   if (!shouldUseCDN(request.url)) return;
 
   const url = new URL(request.url);
-  const cdnUrl = CDN_BASE + url.pathname;
 
   event.respondWith(
-    fetch(cdnUrl, { mode: 'cors', credentials: 'omit' })
-      .then(response => {
-        if (response.ok) return response;
-        throw new Error('CDN returned ' + response.status);
-      })
-      .catch(() => fetch(request))
+    tryCDNs(url.pathname).catch(() => fetch(request))
   );
 });
