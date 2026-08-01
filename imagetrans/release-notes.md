@@ -14,6 +14,7 @@ layout: page
 * PPDocLayout v3 supports mac mlx version
 * Store panel detector in a global variable to avoid frequent model loading
 * Remove extra spaces in English translation of object detection
+* Pretranslation skip images with no text to translate
 
 ## v6.2.1 (2026/07/28)
 
