@@ -9,10 +9,16 @@ layout: page
 }
 </style>
 
+## v6.2.2 (2026/08/01)
+
+* PPDocLayout v3 supports mac mlx version
+* Store panel detector in a global variable to avoid frequent model loading
+* Remove extra spaces in English translation of object detection
+
 ## v6.2.1 (2026/07/28)
 
 * Remove `Character.UnicodeBlock.GENERAL_PUNCTUATION` (e.g. …) from the Chinese character detection condition
-* Update the minimum vertical coordinate offset in templates to 2000
+* Update the maximum vertical coordinate offset in templates to 2000
 * Fix an issue where the server's uploaded error message did not include the name
 * Fix an issue where the server could set the running state to false before the translated image upload was complete
 
