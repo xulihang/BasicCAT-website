@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v6.3.0 (2026/08/06)
+
+* The installation package includes by default the int8-quantized Lama Inpaint ONNX model with a fixed 512x512 size.
+* The installation package removes MIGAN Inpaint.
+* The installation package removes the image language classification model.
+* The CG template optimizes its use of Lama Inpaint.
+* Add support for the RTDETR model.
+* New custom workflow item for removing non-rotated areas.
+* New project setting that allows splitting words when they exceed a specified length.
+* Remote model downloads support SHA256 verification.
+* RapidOCR automatically downloads models from the network and does not display a "model not installed" prompt when switching languages.
+* The installation package includes by default the Thai and Arabic dictionaries for RapidOCR.
+* When removing text by area, if areas overlap, merge them before removal, improving the text removal effect in overlapping cases.
+* Fix the inconsistency in the ROI used for checking whether an image is complex during mask generation and text removal.
+
 ## v6.2.2 (2026/08/01)
 
 * PPDocLayout v3 supports mac mlx version
