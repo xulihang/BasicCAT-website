@@ -15,7 +15,7 @@ layout: page
 * The installation package removes MIGAN Inpaint.
 * The installation package removes the image language classification model.
 * The CG template optimizes its use of Lama Inpaint.
-* Add support for the RTDETR model.
+* Add support for the RF-DETR model.
 * New custom workflow item for removing non-rotated areas.
 * New project setting that allows splitting words when they exceed a specified length.
 * Remote model downloads support SHA256 verification.
