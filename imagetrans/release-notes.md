@@ -22,6 +22,7 @@ layout: page
 * RapidOCR automatically downloads models from the network and does not display a "model not installed" prompt when switching languages.
 * The installation package includes by default the Thai and Arabic dictionaries for RapidOCR.
 * When removing text by area, if areas overlap, merge them before removal, improving the text removal effect in overlapping cases.
+* When using mangaOCR for whole-image OCR, if mit48px OCR model does not exist, use rapid to recognize long text.
 * Fix the inconsistency in the ROI used for checking whether an image is complex during mask generation and text removal.
 
 ## v6.2.2 (2026/08/01)
