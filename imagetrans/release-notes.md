@@ -24,6 +24,7 @@ layout: page
 * When removing text by area, if areas overlap, merge them before removal, improving the text removal effect in overlapping cases.
 * When using mangaOCR for whole-image OCR, if mit48px OCR model does not exist, use rapid to recognize long text.
 * Fix the inconsistency in the ROI used for checking whether an image is complex during mask generation and text removal.
+* Fix a bug for pretranslation skipping images with no text to translate
 
 ## v6.2.2 (2026/08/01)
 
