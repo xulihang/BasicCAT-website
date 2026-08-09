@@ -15,7 +15,7 @@
       }
 
       /* Immersive full-screen scroll area for injected images. */
-      /* Full width so images span the whole viewport, including on mobile. */
+      /* Mobile: full width. Desktop: constrained with side margins. */
       #imagetrans-reader {
         width: 100%;
         max-width: none;
@@ -27,6 +27,14 @@
         align-items: center;
         min-height: 100vh;
         justify-content: flex-start;
+      }
+
+      /* On larger screens, add margins so images aren't flush to the edges. */
+      @media (min-width: 640px) {
+        #imagetrans-reader {
+          max-width: 860px;   /* comfortable reading width */
+          padding: 24px 40px 80px;
+        }
       }
 
       /* Wait hint shown while the container is empty (pure CSS). */
