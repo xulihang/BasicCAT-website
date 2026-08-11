@@ -100,9 +100,17 @@ OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，�
 
 ## Gemini
 
-谷歌最新的人工智能大语言模型Gemini，也可以用于机器翻译和文字识别。
+谷歌最新的人工智能大语言模型Gemini，也可以用于机器翻译、文字识别和图像修复（去文字）。
 
-可以参考以下链接：
+需要在<https://aistudio.google.com/api-keys>申请一个key，填入偏好设置中。然后模型可以通过修改URL进行调整。
+
+插件链接：
 
 * [GeminiMT](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiMT)
 * [GeminiOCR](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiOCR)
+* [GeminiInpaint](https://github.com/xulihang/ImageTrans_plugins/tree/master/GeminiInpaint)
+
+
+另外，通过ChatGPT开头的插件，利用OpenAI兼容的接口去调用也是可以的。
+
+

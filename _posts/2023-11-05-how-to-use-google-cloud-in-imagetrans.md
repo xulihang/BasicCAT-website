@@ -98,10 +98,14 @@ You can learn more about Google Drive OCR [here](https://github.com/xulihang/Ima
 
 ## Gemini
 
-The latest AI LLM model by Google, Gemini, can also be used for machine translation and OCR.
+The latest AI LLM model by Google, Gemini, can also be used for machine translation, OCR and inpainting (text-removal).
 
-Check out the following links to learn about how to use it.
+You need to apply for an API key at <https://aistudio.google.com/api-keys> and the fill in the preferences. You can change the model by adjusting the URL.
+
+Plugin links:
 
 * [GeminiMT](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiMT)
 * [GeminiOCR](https://github.com/xulihang/ImageTrans_plugins/tree/master/geminiOCR)
+* [GeminiInpaint](https://github.com/xulihang/ImageTrans_plugins/tree/master/GeminiInpaint)
 
+In addition, it is also possible to use the plugins whose names starting with ChatGPT via OpenAI-compatible interfaces.
