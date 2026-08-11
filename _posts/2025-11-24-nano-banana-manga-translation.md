@@ -71,7 +71,7 @@ PSD file with the original image and nano banana created text-cleaned and transl
 
 ## 2025-12-08 Update
 
-After testing, as long as the input image size matches the output size, for example 1024×1024, the aspect ratio can be preserved. In this case, using it to remove text is not a problem. The new version of ImageTrans has integrated Gemini's image inpainting plugin.
+After testing, as long as the input image size matches the output size, for example 1024×1024, the aspect ratio can be preserved. In this case, using it to remove text is not a problem. The new version of ImageTrans has integrated Gemini's image inpainting plugin. You need to get an API key at <https://aistudio.google.com/api-keys> or a third-party service to use it.
 
 Example:
 
