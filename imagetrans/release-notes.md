@@ -9,6 +9,10 @@ layout: page
 }
 </style>
 
+## v6.3.1 (2026/08/13)
+
+Fix an issue where the program does not wait for the UI and OCR settings to be applied before proceeding with further operations.
+
 ## v6.3.0 (2026/08/06)
 
 * The installation package includes by default the int8-quantized Lama Inpaint ONNX model with a fixed 512x512 size.
