@@ -879,6 +879,15 @@
       <div class="settings-card">
         <div class="settings-card-title" data-i18n="settings_image_processing">图片处理（用于PaddleOCR）</div>
         <div class="form-row">
+          <label>
+            <span data-i18n="settings_ocr_backend">OCR后端</span>
+            <select id="setting-ocrBackend">
+              <option value="webgpu" data-i18n="settings_ocr_backend_webgpu">WebGPU（最快，现代浏览器）</option>
+              <option value="wasm" data-i18n="settings_ocr_backend_wasm">WebAssembly</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
           <label><span data-i18n="settings_x_spacing">X间距（px）</span></label>
           <input type="number" id="setting-xSpacing" min="0" max="200" />
           <label><span data-i18n="settings_y_spacing">Y间距（px）</span></label>
@@ -904,6 +913,10 @@
               <option value="small" data-i18n="settings_paddle_det_small">Small（更准确）</option>
             </select>
           </label>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_paddle_extra_params">PaddleOCR额外参数（JSON）</span></label>
+          <textarea id="setting-paddleExtraParams" rows="4"></textarea>
         </div>
       </div>
 

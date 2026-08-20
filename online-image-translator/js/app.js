@@ -1178,7 +1178,8 @@
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
-      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
+      'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
+      'paddleExtraParams',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
@@ -1186,13 +1187,17 @@
     fields.forEach(function(key) {
       const el = $('#setting-' + key);
       if (!el) return;
-      const val = Settings.get(key);
+      let val = Settings.get(key);
       if (el.type === 'checkbox') {
         el.checked = val;
       } else if (el.tagName === 'SELECT') {
         setSelectValue(el, val);
       } else {
-        el.value = val !== undefined && val !== null ? val : '';
+        // Settings stored as JSON objects (e.g. paddleExtraParams) must be
+        // shown as a JSON string in the form.
+        el.value = (typeof val === 'object' && val !== null)
+          ? JSON.stringify(val)
+          : (val !== undefined && val !== null ? val : '');
       }
     });
 
@@ -1209,7 +1214,8 @@
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
-      'ocrMethod', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
+      'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
+      'paddleExtraParams',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
