@@ -115,17 +115,25 @@ const OCR = (function() {
   function getPaddleModelInfo(sourceLang) {
     const modelKey = PADDLE_LANG_TO_MODEL[sourceLang] || 'default';
     const modelInfo = PADDLE_MODEL_URLS[modelKey] || PADDLE_MODEL_URLS['default'];
-    // Allow switching det model: tiny (default) or small
-    let detUrl = modelInfo.det;
+    const defaultInfo = PADDLE_MODEL_URLS['default'];
+    // det model size follows the setting (tiny or small)
     const detModelSize = Settings.get('paddleDetModel');
-    if (detModelSize === 'small' && detUrl) {
+    const detVariant = detModelSize === 'small' ? PADDLE_DET_SMALL : PADDLE_DET_TINY;
+    const defaultDet = PADDLE_CDN_BASE + detVariant;
+    let detUrl = modelInfo.det ||
+      // No language-specific det: use the shared default det (bumped to 'small' per setting)
+      defaultDet;
+    // Switch tiny <-> small on the default det URL when the setting asks for it
+    if (detUrl.indexOf(PADDLE_DET_TINY) !== -1 && detModelSize === 'small') {
       detUrl = detUrl.replace(PADDLE_DET_TINY, PADDLE_DET_SMALL);
+    } else if (detUrl.indexOf(PADDLE_DET_SMALL) !== -1 && detModelSize !== 'small') {
+      detUrl = detUrl.replace(PADDLE_DET_SMALL, PADDLE_DET_TINY);
     }
     return {
       modelKey: modelKey,
       detUrl: detUrl,
-      recUrl: modelInfo.rec,
-      dicUrl: modelInfo.dict
+      recUrl: modelInfo.rec || defaultInfo.rec,
+      dicUrl: modelInfo.dict || defaultInfo.dict
     };
   }
 
@@ -189,6 +197,50 @@ const OCR = (function() {
     });
   }
 
+  // Pinned ONNX Runtime versions.
+  //  - WEBGPU: recent fixed release with WebGPU EP support (WebGPU-capable browsers).
+  //  - WASM: last release shipping non-SIMD WASM, works on browsers without
+  //    WebGPU / SIMD (e.g. old iOS Safari).
+  const ORT_VERSION_WEBGPU = '@1.27.0';
+  const ORT_VERSION_WASM = '@1.18.0';
+
+  // Detect iOS (incl. iPadOS 13+, which reports a Macintosh UA).
+  // Apple only froze the OS version in the UA, not the device token, so
+  // this stays reliable.
+  function isIOS() {
+    const ua = navigator.userAgent || '';
+    return /iPhone|iPod|iPad/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  }
+
+  // Resolve the execution backend:
+  //  - 'webgpu' (default): pinned new ORT with the WebGPU EP. Only iOS needs
+  //    a navigator.gpu capability check — older iOS (< 18.2) lacks WebGPU,
+  //    while every modern non-iOS browser has it.
+  //  - 'wasm': ORT @1.18.0 with the WASM EP.
+  function resolveBackend() {
+    const backend = Settings.get('ocrBackend') || 'webgpu';
+    if (backend !== 'webgpu') return 'wasm';
+    if (isIOS() && !navigator.gpu) return 'wasm';
+    return 'webgpu';
+  }
+
+  // Apply user-configured extra PaddleOCR params (a JSON string from
+  // Settings, e.g. det_db_thresh / detMean / erode_size) onto an init
+  // options object. Invalid or empty config is ignored.
+  function applyExtraParams(initOpts) {
+    let extra = Settings.get('paddleExtraParams');
+    if (typeof extra === 'string' && extra.trim() !== '') {
+      try { extra = JSON.parse(extra); } catch (e) { return; }
+    }
+    if (!extra || typeof extra !== 'object' || Array.isArray(extra)) return;
+    Object.keys(extra).forEach(function(key) {
+      if (extra[key] !== undefined && extra[key] !== null) {
+        initOpts[key] = extra[key];
+      }
+    });
+  }
+
   async function loadDependencies(onProgress) {
     if (depsLoaded) return;
     if (depsLoading) {
@@ -202,24 +254,13 @@ const OCR = (function() {
       const report = function(msg) { if (_onProgress) _onProgress(msg); };
 
       // 1. ONNX Runtime (jsdmirror → jsdelivr fallback)
-      // iOS 15 / old Safari don't support WebAssembly SIMD. Newer ORT
-      // versions ship SIMD-only WASM and fail with "no available backend".
-      // Detect SIMD support and load the matching ORT version.
-      var ORT_VERSION;
-      try {
-        // Validate a minimal WASM module that contains a SIMD instruction.
-        // If the browser rejects it, SIMD is not available.
-        var SIMD_CHECK = new Uint8Array(
-          [0,97,115,109,1,0,0,0,1,4,1,96,0,0,3,2,1,0,10,10,1,8,0,65,0,253,12,0,11]
-        );
-        if (WebAssembly.validate(SIMD_CHECK)) {
-          ORT_VERSION = ''; // use latest
-        } else {
-          ORT_VERSION = '@1.18.0'; // last version with non-SIMD WASM
-        }
-      } catch (e) {
-        ORT_VERSION = '@1.18.0';
-      }
+      // The ORT version is pinned by backend:
+      //  - webgpu: a recent fixed release with WebGPU EP support (all modern
+      //    non-iOS browsers; on iOS only when navigator.gpu is present).
+      //  - wasm: @1.18.0, the last version shipping non-SIMD WASM, so it
+      //    works on old Safari / iOS without WebGPU.
+      var backend = resolveBackend();
+      var ORT_VERSION = backend === 'webgpu' ? ORT_VERSION_WEBGPU : ORT_VERSION_WASM;
       
       var ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION;
       if (typeof window.ort === 'undefined') {
@@ -313,13 +354,13 @@ const OCR = (function() {
         recPath: recBuf,
         dic: dic,
         ort: window.ort,
+        // Prefer the selected backend; with 'webgpu' let ORT fall back to
+        // the WASM EP for any ops the WebGPU EP can't run yet.
+        ortOption: { executionProviders: resolveBackend() === 'webgpu' ? ['webgpu', 'wasm'] : ['wasm'] },
         node: false,
         cv: window.cv
       };
-      if (sourceLang === 'zh') {
-        initOpts.det_db_thresh = 0.6;
-        initOpts.erode_size = 2;
-      }
+      applyExtraParams(initOpts);
       await Paddle.init(initOpts);
 
       paddleReady = true;
@@ -672,7 +713,11 @@ const OCR = (function() {
   async function ensureYOLOModel(yoloUrl) {
     if (yoloSession && yoloModelUrl === yoloUrl) return;
     yoloModelUrl = yoloUrl;
-    const sessionOpts = { executionProviders: ['wasm'], graphOptimizationLevel: 'all' };
+    const backend = resolveBackend();
+    const sessionOpts = {
+      executionProviders: backend === 'webgpu' ? ['webgpu', 'wasm'] : ['wasm'],
+      graphOptimizationLevel: 'all'
+    };
     const yoloBuf = await loadModelBuffer(yoloUrl);
     yoloSession = await window.ort.InferenceSession.create(yoloBuf, sessionOpts);
   }
