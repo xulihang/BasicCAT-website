@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v6.3.2 (2026/08/21)
+
+* The text remover will load the specified method in project settings
+* If the mask generation or image inpainting method for complex background is set, use auto-select as the default
+* Detect text direction and set font style will only run for languages that can be vertical (Chinese and Japanese)
+* Cert generator will preset IP and the cert folder ("cert" folder under the app's root)
+* Fix the fixed IP issue for cert generator
+
 ## v6.3.1 (2026/08/13)
 
 Fix an issue where the program does not wait for the UI and OCR settings to be applied before proceeding with further operations.
