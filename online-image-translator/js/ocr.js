@@ -218,9 +218,19 @@ const OCR = (function() {
   //    a navigator.gpu capability check — older iOS (< 18.2) lacks WebGPU,
   //    while every modern non-iOS browser has it.
   //  - 'wasm': ORT @1.18.0 with the WASM EP.
+  //
+  // Firefox never attempts WebGPU: its WebGPU implementation is unreliable
+  // with ORT's GPU buffer readback and throws 'DOMException: Buffer unmapped'.
+  // Firefox therefore always resolves to the WASM backend.
+  function isFirefox() {
+    const ua = navigator.userAgent || '';
+    return ua.indexOf('Firefox') !== -1;
+  }
+
   function resolveBackend() {
     const backend = Settings.get('ocrBackend') || 'webgpu';
     if (backend !== 'webgpu') return 'wasm';
+    if (isFirefox()) return 'wasm';
     if (isIOS() && !navigator.gpu) return 'wasm';
     return 'webgpu';
   }
@@ -261,7 +271,7 @@ const OCR = (function() {
       //    works on old Safari / iOS without WebGPU.
       var backend = resolveBackend();
       var ORT_VERSION = backend === 'webgpu' ? ORT_VERSION_WEBGPU : ORT_VERSION_WASM;
-      
+
       var ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION;
       if (typeof window.ort === 'undefined') {
         report('Loading ONNX Runtime...');
