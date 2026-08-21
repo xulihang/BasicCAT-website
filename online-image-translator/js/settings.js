@@ -4,6 +4,10 @@
 const DEFAULT_OPENAI_PROMPT = `Translate the following texts from {sourceLang} to {targetLang}. Return ONLY a JSON array of translated strings in the same order (no markdown, no code fences).
 Texts: {texts}`;
 
+// Default OpenAI extra params, merged into the chat/completions request body.
+// Matches the Chrome extension's DeepSeek default.
+const DEFAULT_OPENAI_EXTRA_PARAMS = '{"thinking":{"type":"disabled"}}';
+
 const DEFAULTS = {
   serverURL: 'https://service.basiccat.org:51043',
   pickingWay: '1',
@@ -17,10 +21,11 @@ const DEFAULTS = {
   sourceLang: 'auto',
   targetLang: 'auto',
   useOpenAI: false,
-  openaiURL: 'https://api.openai.com/v1',
+  openaiURL: 'https://api.deepseek.com/v1',
   openaiKey: '',
-  openaiModel: 'gpt-4o',
+  openaiModel: 'deepseek-v4-flash',
   openaiPrompt: DEFAULT_OPENAI_PROMPT,
+  openaiExtraParams: DEFAULT_OPENAI_EXTRA_PARAMS,
   ocrMethod: 'paddleocr',
   ocrBackend: 'webgpu',
   translationMode: 'imagetrans',
@@ -167,6 +172,7 @@ const I18N = {
     settings_mode_local: 'Local PaddleOCR + Free Translation or OpenAI',
     settings_default_preset: 'Default Preset Translation',
     settings_preset_mymemory: 'MyMemory',
+    settings_preset_original: 'Original Text',
     settings_source_lang: 'Source lang',
     settings_target_lang: 'Target lang',
     settings_server: 'Server Connection',
@@ -188,6 +194,7 @@ const I18N = {
     settings_api_key: 'API Key',
     settings_model: 'Model',
     settings_prompt: 'Prompt',
+    settings_openai_extra_params: 'Extra Params (JSON)',
     settings_image_processing: 'Image Processing (for PaddleOCR)',
     settings_ocr_backend: 'OCR Backend',
     settings_ocr_backend_webgpu: 'WebGPU (fastest, modern browsers)',
@@ -230,6 +237,8 @@ const I18N = {
     css_rounded: 'Rounded + Center',
     css_uppercase: 'Uppercase + Center',
     css_rounded_uppercase: 'Rounded + Uppercase',
+    css_vertical: 'Vertical Text',
+    css_rtl: 'Arabic (RTL)',
     options_ui_lang_default: 'Browser Default',
     options_ui_lang_en: 'English',
     options_ui_lang_zh: '中文',
@@ -284,6 +293,7 @@ const I18N = {
     settings_mode_local: '本地PaddleOCR + 免费翻译或OpenAI',
     settings_default_preset: '默认翻译预设',
     settings_preset_mymemory: 'MyMemory',
+    settings_preset_original: '原文',
     settings_source_lang: '源语言',
     settings_target_lang: '目标语言',
     settings_server: '服务器连接',
@@ -305,6 +315,7 @@ const I18N = {
     settings_api_key: 'API Key',
     settings_model: '模型',
     settings_prompt: '提示词',
+    settings_openai_extra_params: '额外参数（JSON）',
     settings_image_processing: '图片处理（用于PaddleOCR）',
     settings_ocr_backend: 'OCR后端',
     settings_ocr_backend_webgpu: 'WebGPU（最快，现代浏览器）',
@@ -347,6 +358,8 @@ const I18N = {
     css_rounded: '圆角+居中',
     css_uppercase: '大写+居中',
     css_rounded_uppercase: '圆角+大写',
+    css_vertical: '竖排',
+    css_rtl: '阿拉伯语（RTL）',
     options_ui_lang_default: '浏览器默认',
     options_ui_lang_en: 'English',
     options_ui_lang_zh: '中文',

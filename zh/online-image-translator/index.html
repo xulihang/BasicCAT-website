@@ -792,6 +792,7 @@
             <span data-i18n="settings_default_preset">默认预设</span>
             <select id="setting-defaultPresetTranslation">
               <option value="mymemory" data-i18n="settings_preset_mymemory">MyMemory</option>
+              <option value="original" data-i18n="settings_preset_original">原文</option>
             </select>
           </label>
         </div>
@@ -838,6 +839,8 @@
           <button class="btn-secondary btn-sm" id="css-rounded" data-i18n="css_rounded">圆角+居中</button>
           <button class="btn-secondary btn-sm" id="css-uppercase" data-i18n="css_uppercase">大写+居中</button>
           <button class="btn-secondary btn-sm" id="css-rounded-uppercase" data-i18n="css_rounded_uppercase">圆角+大写</button>
+          <button class="btn-secondary btn-sm" id="css-vertical" data-i18n="css_vertical">竖排</button>
+          <button class="btn-secondary btn-sm" id="css-rtl" data-i18n="css_rtl">阿拉伯语（RTL）</button>
         </div>
       </div>
 
@@ -872,6 +875,10 @@
           <div class="form-row">
             <label><span data-i18n="settings_prompt">提示词</span></label>
             <textarea id="setting-openaiPrompt" rows="4"></textarea>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_openai_extra_params">额外参数（JSON）</span></label>
+            <input type="text" id="setting-openaiExtraParams" class="wide" placeholder='{"thinking":{"type":"disabled"}}' />
           </div>
         </div>
       </div>
@@ -1062,6 +1069,7 @@
 <script src="/online-image-translator/js/fittext.js"></script>
 <script src="/online-image-translator/js/tts.js"></script>
 <script src="/online-image-translator/js/ocr.js"></script>
+<script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>
 <script src="/online-image-translator/js/translate.js"></script>
 <script src="/online-image-translator/js/app.js"></script>

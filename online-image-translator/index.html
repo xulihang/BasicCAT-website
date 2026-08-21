@@ -792,6 +792,7 @@
             <span data-i18n="settings_default_preset">Default Preset</span>
             <select id="setting-defaultPresetTranslation">
               <option value="mymemory" data-i18n="settings_preset_mymemory">MyMemory</option>
+              <option value="original" data-i18n="settings_preset_original">Original Text</option>
             </select>
           </label>
         </div>
@@ -838,6 +839,8 @@
           <button class="btn-secondary btn-sm" id="css-rounded" data-i18n="css_rounded">Rounded</button>
           <button class="btn-secondary btn-sm" id="css-uppercase" data-i18n="css_uppercase">Uppercase</button>
           <button class="btn-secondary btn-sm" id="css-rounded-uppercase" data-i18n="css_rounded_uppercase">Rounded+Up</button>
+          <button class="btn-secondary btn-sm" id="css-vertical" data-i18n="css_vertical">Vertical</button>
+          <button class="btn-secondary btn-sm" id="css-rtl" data-i18n="css_rtl">Arabic (RTL)</button>
         </div>
       </div>
 
@@ -872,6 +875,10 @@
           <div class="form-row">
             <label><span data-i18n="settings_prompt">Prompt</span></label>
             <textarea id="setting-openaiPrompt" rows="4"></textarea>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_openai_extra_params">Extra Params (JSON)</span></label>
+            <input type="text" id="setting-openaiExtraParams" class="wide" placeholder='{"thinking":{"type":"disabled"}}' />
           </div>
         </div>
       </div>
@@ -1062,6 +1069,7 @@
 <script src="js/fittext.js"></script>
 <script src="js/tts.js"></script>
 <script src="js/ocr.js"></script>
+<script src="lib/html-to-image/html-to-image.js"></script>
 <script src="js/render.js"></script>
 <script src="js/translate.js"></script>
 <script src="js/app.js"></script>

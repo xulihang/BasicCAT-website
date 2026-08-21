@@ -1177,7 +1177,7 @@
     const fields = [
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
-      'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
+      'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt', 'openaiExtraParams',
       'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
       'paddleExtraParams',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
@@ -1213,7 +1213,7 @@
     const fields = [
       'serverURL', 'displayName', 'password',
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
-      'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt',
+      'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt', 'openaiExtraParams',
       'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
       'paddleExtraParams',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
@@ -1243,7 +1243,9 @@
       'css-center-bold': 'text-align: center;\nfont-weight: bold;',
       'css-rounded': 'text-align: center;\nborder-radius: 8px;',
       'css-uppercase': 'text-align: center;\ntext-transform: uppercase;',
-      'css-rounded-uppercase': 'text-align: center;\nborder-radius: 8px;\ntext-transform: uppercase;'
+      'css-rounded-uppercase': 'text-align: center;\nborder-radius: 8px;\ntext-transform: uppercase;',
+      'css-vertical': 'writing-mode: vertical-rl;\ntext-align: start;',
+      'css-rtl': 'direction: rtl;\ntext-align: start;'
     };
 
     Object.keys(presets).forEach(function(id) {

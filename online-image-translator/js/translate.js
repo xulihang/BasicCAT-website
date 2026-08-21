@@ -162,16 +162,32 @@ const Translate = (function() {
 
     const apiUrl = openaiURL.replace(/\/+$/, '') + '/chat/completions';
 
+    // Build the request body, merging any user-configured extra params (a JSON
+    // string from Settings, e.g. temperature / max_tokens) onto the standard
+    // fields. Invalid or empty config is ignored.
+    const body = {
+      model: openaiModel,
+      messages: [{ role: 'user', content: prompt }]
+    };
+    let extra = Settings.get('openaiExtraParams');
+    if (typeof extra === 'string' && extra.trim() !== '') {
+      try { extra = JSON.parse(extra); } catch (e) { extra = null; }
+    }
+    if (extra && typeof extra === 'object' && !Array.isArray(extra)) {
+      Object.keys(extra).forEach(function(key) {
+        if (extra[key] !== undefined && extra[key] !== null) {
+          body[key] = extra[key];
+        }
+      });
+    }
+
     const resp = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + openaiKey
       },
-      body: JSON.stringify({
-        model: openaiModel,
-        messages: [{ role: 'user', content: prompt }]
-      })
+      body: JSON.stringify(body)
     });
 
     if (!resp.ok) {
@@ -270,9 +286,13 @@ const Translate = (function() {
       return { boxes: boxes, translatedImage: null, renderTextInFrontend: true, noText: true };
     }
 
-    // Step 3: Translate
+    // Step 3: Translate. When the default preset is 'original', skip
+    // translation and fill the recognized source text back so OCR results can
+    // be viewed in place (matching the Chrome extension's behavior).
     let translations;
-    if (useOpenAI) {
+    if (defaultPreset === 'original') {
+      translations = sourceTexts.slice();
+    } else if (useOpenAI) {
       translations = await translateViaOpenAI(sourceTexts, sourceLang, targetLang);
     } else {
       translations = await translateBatchViaMyMemory(sourceTexts, sourceLang, targetLang);

@@ -115,17 +115,25 @@ const OCR = (function() {
   function getPaddleModelInfo(sourceLang) {
     const modelKey = PADDLE_LANG_TO_MODEL[sourceLang] || 'default';
     const modelInfo = PADDLE_MODEL_URLS[modelKey] || PADDLE_MODEL_URLS['default'];
-    // Allow switching det model: tiny (default) or small
-    let detUrl = modelInfo.det;
+    const defaultInfo = PADDLE_MODEL_URLS['default'];
+    // det model size follows the setting (tiny or small)
     const detModelSize = Settings.get('paddleDetModel');
-    if (detModelSize === 'small' && detUrl) {
+    const detVariant = detModelSize === 'small' ? PADDLE_DET_SMALL : PADDLE_DET_TINY;
+    const defaultDet = PADDLE_CDN_BASE + detVariant;
+    let detUrl = modelInfo.det ||
+      // No language-specific det: use the shared default det (bumped to 'small' per setting)
+      defaultDet;
+    // Switch tiny <-> small on the default det URL when the setting asks for it
+    if (detUrl.indexOf(PADDLE_DET_TINY) !== -1 && detModelSize === 'small') {
       detUrl = detUrl.replace(PADDLE_DET_TINY, PADDLE_DET_SMALL);
+    } else if (detUrl.indexOf(PADDLE_DET_SMALL) !== -1 && detModelSize !== 'small') {
+      detUrl = detUrl.replace(PADDLE_DET_SMALL, PADDLE_DET_TINY);
     }
     return {
       modelKey: modelKey,
       detUrl: detUrl,
-      recUrl: modelInfo.rec,
-      dicUrl: modelInfo.dict
+      recUrl: modelInfo.rec || defaultInfo.rec,
+      dicUrl: modelInfo.dict || defaultInfo.dict
     };
   }
 
