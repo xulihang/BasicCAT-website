@@ -217,11 +217,17 @@ const OCR = (function() {
   //  - 'webgpu' (default): pinned new ORT with the WebGPU EP. Only iOS needs
   //    a navigator.gpu capability check — older iOS (< 18.2) lacks WebGPU,
   //    while every modern non-iOS browser has it.
+  //  - 'forcewebgpu': always attempt the WebGPU backend, regardless of
+  //    browser / OS. Firefox normally falls back because its WebGPU is
+  //    unreliable with ORT's GPU buffer readback ('DOMException: Buffer
+  //    unmapped'), but some users want to try under Chrome flags, newer
+  //    Firefox, etc.
   //  - 'wasm': ORT @1.18.0 with the WASM EP.
   //
-  // Firefox never attempts WebGPU: its WebGPU implementation is unreliable
-  // with ORT's GPU buffer readback and throws 'DOMException: Buffer unmapped'.
-  // Firefox therefore always resolves to the WASM backend.
+  // Firefox never attempts WebGPU by default: its WebGPU implementation is
+  // unreliable with ORT's GPU buffer readback and throws 'DOMException:
+  // Buffer unmapped'. Firefox therefore resolves to the WASM backend unless
+  // the backend is force-resolved to WebGPU.
   function isFirefox() {
     const ua = navigator.userAgent || '';
     return ua.indexOf('Firefox') !== -1;
@@ -229,6 +235,7 @@ const OCR = (function() {
 
   function resolveBackend() {
     const backend = Settings.get('ocrBackend') || 'webgpu';
+    if (backend === 'forcewebgpu') return 'webgpu';
     if (backend !== 'webgpu') return 'wasm';
     if (isFirefox()) return 'wasm';
     if (isIOS() && !navigator.gpu) return 'wasm';
