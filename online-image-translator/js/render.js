@@ -364,6 +364,10 @@ const Render = (function() {
   // html-to-image (SVG foreignObject -> native browser layout). This makes Arabic
   // RTL bidi and CSS like writing-mode behave exactly as in a browser, and lets the
   // user's renderTextCSS apply verbatim instead of being converted to canvas props.
+  //
+  // The base image is NOT placed inside the DOM: Safari cannot rasterize an <img>
+  // inside SVG foreignObject (it comes out blank), so the image is drawn directly
+  // on the result canvas and the rasterized text overlay is composited on top.
   async function renderTranslatedImageDOM(base64Image, boxes, cssText) {
     const img = await loadImageElement(base64Image);
     const natW = img.naturalWidth;
@@ -379,13 +383,13 @@ const Render = (function() {
       'all:initial;display:block;position:fixed;left:-99999px;top:0;' +
       'width:' + natW + 'px;height:' + natH + 'px;';
 
+    // Text-only overlay; the transparent background lets the base image show
+    // through where there is no text box when composited.
     const container = document.createElement('div');
     container.style.cssText =
       'all:initial;display:block;position:relative;left:0;top:0;' +
-      'width:' + natW + 'px;height:' + natH + 'px;';
-
-    img.style.cssText = 'all:initial;display:block;width:' + natW + 'px;height:' + natH + 'px;max-width:none;';
-    container.appendChild(img);
+      'width:' + natW + 'px;height:' + natH + 'px;' +
+      'background-color:transparent;';
 
     const clampBox = function(x, y, w, h) {
       x = Math.max(0, x);
@@ -471,7 +475,8 @@ const Render = (function() {
     }
 
     try {
-      const canvas = await htmlToImage.toCanvas(container, {
+      // Rasterize just the text overlay (transparent background).
+      const overlayCanvas = await htmlToImage.toCanvas(container, {
         width: natW,
         height: natH,
         canvasWidth: natW,
@@ -479,7 +484,14 @@ const Render = (function() {
         skipFonts: true,
         pixelRatio: 1
       });
-      return canvas.toDataURL('image/webp', 0.8);
+      // Composite: draw the base image, then the text overlay on top.
+      const out = document.createElement('canvas');
+      out.width = natW;
+      out.height = natH;
+      const ctx = out.getContext('2d');
+      ctx.drawImage(img, 0, 0, natW, natH);
+      ctx.drawImage(overlayCanvas, 0, 0, natW, natH);
+      return out.toDataURL('image/webp', 0.8);
     } finally {
       wrapper.remove();
     }
