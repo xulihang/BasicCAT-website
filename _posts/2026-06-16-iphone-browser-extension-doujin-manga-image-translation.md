@@ -35,7 +35,7 @@ Apple's Safari does not support Chrome extensions directly.
 
 Fortunately, Orion Browser provides experimental support for many Chrome and Firefox extensions on iPhone and iPad.
 
-This makes it possible to install and use the ImageTrans browser extension on iOS.
+This makes it possible to install and use the ImageTrans browser extension on iOS. It is recommended to install the Firefox addon, which is always the latest version: <https://addons.mozilla.org/en-US/firefox/addon/imagetrans/>
 
 Once installed, ImageTrans can help translate manga pages, comics, scanned documents, and other image-based content while browsing.
 

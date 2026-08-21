@@ -36,7 +36,7 @@ ImageTrans 通过对图片进行 OCR 识别、翻译以及图像编辑，解决�
 
 幸运的是，Orion Browser 在 iPhone 和 iPad 上提供了对大量 Chrome 和 Firefox 扩展的实验性支持。
 
-因此，我们可以在 iOS 上安装并使用 ImageTrans 浏览器插件。
+因此，我们可以在 iOS 上安装并使用 ImageTrans 浏览器插件。推荐使用 Firefox 扩展，更新更及时：<https://addons.mozilla.org/zh-CN/firefox/addon/imagetrans/>
 
 安装完成后，ImageTrans 就可以帮助你在浏览网页时翻译漫画页面、扫描文档以及其他基于图片的内容。
 
