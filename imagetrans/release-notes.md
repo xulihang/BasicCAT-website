@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v6.3.3 (2026/08/28)
+
+* New merge overlapping areas custom workflow
+* New Portuguese (Brazil) language option
+* Classes to use for object-detection-based panel detection can be defined through names via `class_names_to_use_for_panel` in `model.json`
+* Fix an issue when creating a new project without setting the language pair
+* Fix an issue where PDF fails to export if the text is vertical
+
 ## v6.3.2 (2026/08/21)
 
 * The text remover will load the specified method in project settings
