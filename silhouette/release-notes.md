@@ -10,6 +10,12 @@ description: Silhouette release notes.
 }
 </style>
 
+## v1.6.2 (2026/08/30)
+
+* Update ChatGPT and DeepSeek plugins
+* New free LLM plugin
+* Fix the misuse of the source text instead of the target text when splitting text
+
 ## v1.6.1 (2026/05/01)
 
 * Add FunASR

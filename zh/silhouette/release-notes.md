@@ -10,6 +10,13 @@ description: Silhouette发布日志
 }
 </style>
 
+## v1.6.2 (2026/08/30)
+
+* 更新ChatGPT和DeepSeek的翻译插件
+* 新增免费LLM插件
+* 修复分割文本时，译文文本错误使用了原文文本的问题
+
+
 ## v1.6.1 (2026/05/01)
 
 * 添加FunASR
