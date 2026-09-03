@@ -13,6 +13,8 @@ layout: page
 
 * Optimize the default font selection for PDF export options  
 * The automatic font lookup feature for PDF export includes fonts in the Windows user directory's font folder  
+* Improve the word space between vertical characters in exported PDF
+* Detect text direction when exporting PDF in Japanese or Chinese without any font styles in project settings
 * Custom workflow supports record processing time  
 * Change all default translation engines to Baidu  
 * Fix the incorrect text height issue in exported translated vertical Chinese PDFs  
