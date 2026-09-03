@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v6.4.0 (2026/09/03)
+
+* Optimize the default font selection for PDF export options  
+* The automatic font lookup feature for PDF export includes fonts in the Windows user directory's font folder  
+* Custom workflow supports record processing time  
+* Change all default translation engines to Baidu  
+* Fix the incorrect text height issue in exported translated vertical Chinese PDFs  
+* Fix the issue where RapidOCR incorrectly reverses Arabic numerals  
+* Fix the issue where Arabic numerals are incorrectly reversed during Arabic PDF generation
+
 ## v6.3.3 (2026/08/28)
 
 * New merge overlapping areas custom workflow
