@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v6.5.0 (2026/09/11)
+
+* Add high-fidelity JPEG export setting
+* Add custom workflow for detecting text direction and setting rotation degree
+* Rotate the node of text areas instead of the image
+* Fix text in exported PDF not supporting rotation
+* Fix text in rotated area not being centered
+* Fix resizing of rotated area
+* Fix an error when CJK vertical direction is disabled
+
 ## v6.4.0 (2026/09/03)
 
 * Optimize the default font selection for PDF export options  
