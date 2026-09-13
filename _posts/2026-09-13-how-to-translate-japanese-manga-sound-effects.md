@@ -15,6 +15,7 @@ Below we list Japanese onomatopoeia and mimetic words by category, together with
 ### 1. 擬音語 (Giongo) — Imitating Real Sounds
 
 #### Animal Calls
+
 | Japanese | Reading | Chinese | English |
 |------|------|------|------|
 | ワンワン | wanwan | 汪汪 | woof woof |
@@ -26,6 +27,7 @@ Below we list Japanese onomatopoeia and mimetic words by category, together with
 | ヒヒーン | hihīn | 咴咴 | neigh |
 
 #### Nature and Weather
+
 | Japanese | Reading | Chinese | English |
 |------|------|------|------|
 | ザーザー | zāzā | 哗哗（大雨） | pouring |
@@ -37,6 +39,7 @@ Below we list Japanese onomatopoeia and mimetic words by category, together with
 | パラパラ | parapara | 噼里啪啦（小雨） | sprinkling |
 
 #### Objects and Actions
+
 | Japanese | Reading | Chinese | English |
 |------|------|------|------|
 | バン | ban | 砰 | bang |
@@ -52,6 +55,7 @@ Below we list Japanese onomatopoeia and mimetic words by category, together with
 ### 2. 擬態語 (Gitaigo) — Describing States and Appearances
 
 #### Visual States
+
 | Japanese | Reading | Chinese | English |
 |------|------|------|------|
 | キラキラ | kirakira | 闪闪发光 | sparkle / glitter |
@@ -66,6 +70,7 @@ Below we list Japanese onomatopoeia and mimetic words by category, together with
 | カラカラ | karakara | 干巴巴 | dry / parched |
 
 #### Manner and Movement
+
 | Japanese | Reading | Chinese | English |
 |------|------|------|------|
 | ゆっくり | yukkuri | 慢慢地 | slowly |
