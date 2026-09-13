@@ -57,3 +57,13 @@ tags: imagetrans
 ![翻译的图](/album/ja2en-lettering/target.jpg)
 
 
+## 更高级的重排
+
+日译英如果要求高，通常会重新绘制气泡，用适合横排的方式去排版英文。
+
+下面是Lezhin上的韩漫的官方翻译的例子。
+
+![](/album/ja2en-lettering/brawling_go_jp.jpg)
+
+![](/album/ja2en-lettering/brawling_go_en.jpg)
+

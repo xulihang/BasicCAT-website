@@ -57,3 +57,14 @@ Translated image:
 ![Translated image](/album/ja2en-lettering/target.jpg)
 
 
+## More Advanced Rearrangement
+
+For high-quality Japanese to English translation, the bubbles are usually redrawn so that the English can be lettered in a way that suits horizontal typesetting.
+
+Below is an example of the official translation of a Korean comic on Lezhin.
+
+![](/album/ja2en-lettering/brawling_go_jp.jpg)
+
+![](/album/ja2en-lettering/brawling_go_en.jpg)
+
+
