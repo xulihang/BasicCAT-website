@@ -1,7 +1,7 @@
 ---
 date: 2026-09-13 16:12:50+08:00
 layout: post
-title: 如何识别日语漫画中的拟声词
+title: 如何翻译日语漫画中的拟声词
 categories: blog
 tags: imagetrans
 ---
