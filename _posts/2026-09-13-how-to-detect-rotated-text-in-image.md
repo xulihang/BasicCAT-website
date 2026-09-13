@@ -34,3 +34,7 @@ OCR engines with rotation support in ImageTrans:
 * mangaTranslator
 * macOCR (the OCR built into macOS)
 * oneocr (the OCR built into the Windows 11 Snipping Tool)
+
+## 90-degree rotation
+
+One kind of rotation is special: a 90-degree rotation. When Western letters are set vertically, the text has to be rotated 90 degrees, and its angle can no longer be calculated simply from the coordinates of the four corner points. You can detect it with an orientation detection model, or just work it out from the aspect ratio: if the height divided by the width is greater than, say, 1.2, treat it as a 90-degree rotation.
