@@ -20,6 +20,7 @@ layout: page
 * Fix resizing of rotated area
 * Fix an error when CJK vertical direction is disabled
 * Fix rapidOCR's reversion of Arabic digits
+* Fix the reversion of pure Arabic digits
 
 ## v6.4.0 (2026/09/03)
 
