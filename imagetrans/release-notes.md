@@ -14,10 +14,12 @@ layout: page
 * Add high-fidelity JPEG export setting
 * Add custom workflow for detecting text direction and setting rotation degree
 * Rotate the node of text areas instead of the image
+* Aligning boxes in translation mode only aligns target geometries
 * Fix text in exported PDF not supporting rotation
 * Fix text in rotated area not being centered
 * Fix resizing of rotated area
 * Fix an error when CJK vertical direction is disabled
+* Fix rapidOCR's reversion of Arabic digits
 
 ## v6.4.0 (2026/09/03)
 
