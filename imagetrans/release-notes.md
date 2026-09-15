@@ -11,12 +11,13 @@ layout: page
 
 ## v6.5.0 (2026/09/11)
 
-* Update Windows's JRE to [JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
+* Update JRE to [JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
 * Add high-fidelity JPEG export setting
 * Add custom workflow for detecting text direction and setting rotation degree
 * Rotate the node of text areas instead of the image
 * Aligning boxes in translation mode only aligns target geometries
 * Set related nodes' orientation to RIGHT_TO_LEFT for right to left languages, instead of setting just text alignment to right
+* Fix the forgotten setting of text area style after creating a new project
 * Fix the order of words when merging words that have both Arabic and non-Arabic characters
 * Fix the output Arabic text not enabling RTL
 * Fix text in exported PDF not supporting rotation
