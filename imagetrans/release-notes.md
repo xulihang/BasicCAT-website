@@ -11,6 +11,7 @@ layout: page
 
 ## v6.5.0 (2026/09/11)
 
+* Update Windows's JRE to [JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
 * Add high-fidelity JPEG export setting
 * Add custom workflow for detecting text direction and setting rotation degree
 * Rotate the node of text areas instead of the image

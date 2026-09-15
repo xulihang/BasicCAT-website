@@ -11,6 +11,7 @@ layout: page
 
 ## v6.5.0 (2026/09/11)
 
+* 更新Windows的JRE为[JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
 * 新增高保真JPEG导出设置
 * 新增检测文字方向并设置旋转角度的自定义工作流
 * 旋转文字区域的节点而不是图像
