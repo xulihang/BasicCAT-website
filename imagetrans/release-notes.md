@@ -15,6 +15,9 @@ layout: page
 * Add custom workflow for detecting text direction and setting rotation degree
 * Rotate the node of text areas instead of the image
 * Aligning boxes in translation mode only aligns target geometries
+* Set related nodes' orientation to RIGHT_TO_LEFT for right to left languages, instead of setting just text alignment to right
+* Fix the order of words when merging words that have both Arabic and non-Arabic characters
+* Fix the output Arabic text not enabling RTL
 * Fix text in exported PDF not supporting rotation
 * Fix text in rotated area not being centered
 * Fix resizing of rotated area
