@@ -55,3 +55,8 @@ On your phone:
 5. Choose ImageTrans as the translation method, and you can start translating.
 
    ![](/album/certificate/extension-translation-settings.jpg)
+
+
+## External Network Sharing
+
+You can use the intranet penetration service provided by ngrok to perform translation on your home computer when you are outside. Since ngrok provides an HTTPS certificate, the certificate installation steps above can also be skipped.
