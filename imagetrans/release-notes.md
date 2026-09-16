@@ -17,6 +17,8 @@ layout: page
 * Rotate the node of text areas instead of the image
 * Aligning boxes in translation mode only aligns target geometries
 * Set related nodes' orientation to RIGHT_TO_LEFT for right to left languages, instead of setting just text alignment to right
+* More options for downloading server
+* Fix the issue of deleting failed download files because of slow network request
 * Fix the forgotten setting of text area style after creating a new project
 * Fix the order of words when merging words that have both Arabic and non-Arabic characters
 * Fix the output Arabic text not enabling RTL

@@ -11,12 +11,14 @@ layout: page
 
 ## v6.5.0 (2026/09/11)
 
-* 更新的JRE为[JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
+* 更新JRE为[JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
 * 新增高保真JPEG导出设置
 * 新增检测文字方向并设置旋转角度的自定义工作流
 * 旋转文字区域的节点而不是图像
 * 翻译模式对齐选中区域只调整译文区域的位置
 * 使用RTL语言的控件，设置NodeOrientation为RIGHT_TO_LEFT而不是单纯设置右对齐
+* 增加更多的服务器下载选项
+* 修复网络请求慢时取消下载后没有及时删除失败文件的问题
 * 修复新建项目时忘记更新TextArea样式的问题
 * 修复合并混合阿拉伯语和非阿拉伯语的单词时的顺序
 * 修复排版阿拉伯语没有启用RTL的问题
