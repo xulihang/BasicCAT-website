@@ -122,6 +122,8 @@ ImageTrans 支持在本地电脑上运行 OCR 和翻译服务，无需依赖云�
 
 完成后，浏览器便可以通过局域网 IP 安全地访问 ImageTrans 服务。
 
+查看[详细配置指南](./2026-09-16-use-self-hosted-imagetrans-server-with-self-signed-certificate-for-ios.md)。
+
 ### 无法使用本地 PaddleOCR
 
 ImageTrans 浏览器插件原本支持通过 WebAssembly（WASM）直接在浏览器内运行 PaddleOCR。

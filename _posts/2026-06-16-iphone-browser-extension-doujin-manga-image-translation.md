@@ -121,6 +121,8 @@ A self-signed certificate is needed for Intranet usage, you will need to:
 
 After the certificate is trusted, the browser can securely communicate with the ImageTrans server through its local network address.
 
+Check [detailed setup guide](./2026-09-16-use-self-hosted-imagetrans-server-with-self-signed-certificate-for-ios.md).
+
 ### Local PaddleOCR Is Not Available
 
 The ImageTrans browser extension can normally run PaddleOCR directly inside the browser using WebAssembly (WASM).
