@@ -98,7 +98,7 @@ This approach depends on the font carrying the presentation form glyphs in U+FE8
 
 There is an unexpected benefit: although what is stored in the PDF is presentation form glyphs, what gets copied out is ordinary Arabic text.
 
-The reason is that PDFBox applies NFKC normalization to each word when extracting text, and NFKC happens to compatibility-decompose U+FE70–FEFF back into the base letters. So the exported PDF both displays correctly and can be copied and searched.
+The reason is that text extraction applies NFKC normalization to each word, and NFKC happens to compatibility-decompose U+FE70–FEFF back into the base letters. This is standard behaviour, not something specific to any one library, so the same holds in other PDF readers. So the exported PDF both displays correctly and can be copied and searched.
 
 ### Known limitations
 
