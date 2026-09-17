@@ -6,7 +6,7 @@ categories: blog
 tags: imagetrans
 ---
 
-Arabic, Hebrew and Persian are written from right to left, while the Arabic numerals and Latin words mixed into them are read the normal left-to-right way. That is why they are called bidirectional text. When image OCR and translation software runs into these languages, it has to deal with an extra set of problems: how the interface displays the text, how to restore the character order of the OCR output, how to join words into lines in the correct order, and how to lay text out in reading order when exporting a PDF.
+Arabic, Hebrew and Persian are written from right to left, while the Arabic numerals and Latin words mixed into them are read the normal left-to-right way. That is why they are called bidirectional text. Furthermore, the actual glyphs displayed for Arabic characters depend on the context — that is, the surrounding characters — resulting in changes such as ligatures and overlaps. This is known as complex text. When image OCR and translation software runs into these languages, it has to deal with an extra set of problems: how the interface displays the text, how to restore the character order of the OCR output, how to join words into lines in the correct order, and how to lay text out in reading order when exporting a PDF.
 
 This article describes how [ImageTrans](/imagetrans/) handles these.
 
@@ -105,6 +105,41 @@ The reason is that text extraction applies NFKC normalization to each word, and 
 - The font must contain the presentation form glyphs (U+FE80–FEFC), otherwise the export will fail. If your font runs into this problem, just switch to one with full coverage.
 - If the source text carries diacritics (harakat), they enter the text layer along with everything else. Searching may then require including the diacritics to match exactly; the exact behaviour depends on the reader's implementation.
 - Ligatures (such as `لا`) are currently assembled from two joined glyphs. The visual result is close, and extraction restores them correctly as two letters.
+
+## Bidirectional and Complex Text List
+
+The following table combines **bidirectionality** and **complexity**, marking each dimension with "Yes/No".
+
+| Language/Script | Bidirectional Text (RTL/LTR mixing) | Complex Text (contextual shaping/reordering) | Main Region | Key Characteristics |
+| :--- | :---: | :---: | :--- | :--- |
+| **Arabic** | Yes | Yes | Middle East, North Africa | RTL direction; letters take initial/medial/final/isolated forms, with ligatures |
+| **Hebrew** | Yes | Yes | Israel | RTL direction; vowel marks (niqqud) require positioning, often mixed with English |
+| **Persian (Farsi)** | Yes | Yes | Iran | Arabic script variant, RTL, contextual shaping |
+| **Urdu** | Yes | Yes | Pakistan, India | Arabic script, RTL, contextual shaping |
+| **Uyghur** | Yes | Yes | Xinjiang, China | Arabic script, RTL, contextual shaping |
+| **Syriac** | Yes | Yes | Parts of the Middle East | RTL; complex ligatures and vowel marks |
+| **Dhivehi (Thaana)** | Yes | No | Maldives | RTL direction; glyphs are largely independent, no complex shaping |
+| **Yiddish** | Yes | Yes | Global Jewish communities | Written in Hebrew script, RTL; vowel mark positioning |
+| **Kurdish** | Yes | Yes | Iraq, Syria, etc. | Some dialects use Arabic script, RTL, contextual shaping |
+| **Sindhi** | Yes | Yes | Pakistan, India | Arabic script, RTL, contextual shaping |
+| **Hindi (Devanagari)** | No | Yes | India | LTR; consonant clusters, vowel sign reordering |
+| **Bengali** | No | Yes | Bangladesh, India | LTR; consonant clusters and shaping rules |
+| **Tamil** | No | Yes | South India, Sri Lanka | LTR; consonant-vowel combinations and ligatures |
+| **Thai** | No | Yes | Thailand | LTR; stacked vowels, tone mark positioning |
+| **Tibetan** | No | Yes | Tibet, Qinghai, etc., China | LTR; stacked consonants, vowel sign shaping |
+| **Mongolian (Traditional)** | No | Yes | Inner Mongolia (China), Mongolia | Vertical writing; initial/medial/final shaping (direction differs from RTL, it is vertical) |
+| **Khmer** | No | Yes | Cambodia | LTR; complex consonant clusters and vowel reordering |
+| **Burmese** | No | Yes | Myanmar | LTR; complex shaping similar to Khmer |
+| **English, Chinese, etc.** | No | No | Global | Basic LTR, characters and glyphs largely one-to-one |
+
+### Key Points
+
+Dedicated shaping libraries like HarfBuzz and bidirectional algorithm libraries can support the processing of various languages. Here are some key points.
+
+1. **Bidirectional ⊂ Complex, but not fully overlapping**: Arabic, Hebrew, etc. are both bidirectional and complex; Dhivehi is bidirectional but not complex; Tibetan, Thai are complex but not bidirectional.
+2. **Scope of HarfBuzz**: All languages marked "Complex = Yes" can receive shaping support from HarfBuzz (glyph selection, ligatures, positioning).
+3. **Scope of Bidi algorithms**: All languages marked "Bidirectional = Yes" require additional Bidi algorithms (such as ICU, FriBidi) for direction segmentation; HarfBuzz itself does not do this.
+4. **Special case of Mongolian**: Traditional Mongolian is written vertically, and its direction is neither standard LTR nor RTL, but it is still complex text, and HarfBuzz also supports its contextual shaping.
 
 ---
 
