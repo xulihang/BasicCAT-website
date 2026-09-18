@@ -6,11 +6,12 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
-     {% if page.lang == 'zh' or page.lang == 'ja' %}
-       {% assign dateformat="%Y年%-m月%-d日" %}
-     {% else %}
-       {% assign dateformat="%b %d, %Y" %}
-     {% endif %}
+     {% comment %}
+       Date format per language, taken from the languages list in _config.yml.
+       Languages that use the year-month-day ideographic form set the format
+       there; anything else (including English) falls back to "%b %d, %Y".
+     {% endcomment %}
+     {% assign dateformat = cur.dateformat | default: "%b %d, %Y" %}
 
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: dateformat }}</time>
       {% if page.author %} &middot; <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}

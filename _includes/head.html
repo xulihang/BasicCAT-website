@@ -2,13 +2,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   {% if page.lang == 'ja' %}
-   {% assign sitetitle=site.title_ja %}
-  {% elsif page.lang == 'zh' %}
-   {% assign sitetitle=site.title_zh %}
-  {% else %}
-   {% assign sitetitle=site.title %}
-  {% endif %}
+  {% comment %}
+    Site title for the current language. The per-language title lives in the
+    languages list in _config.yml (falling back to the default site title),
+    so adding a language does not require touching this template.
+  {% endcomment %}
+  {% assign sitetitle = cur.title | default: site.title %}
 
   <title>{% if page.title %}{{ page.title | append: " | " }}{% assign title_size = page.title | size %}{% if title_size > 20 %}{{ site.header }}{% else %}{{ sitetitle }}{% endif %}{% else %}{{ sitetitle }}{% endif %}</title>
 
