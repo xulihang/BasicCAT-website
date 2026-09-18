@@ -1,6 +1,11 @@
 {% assign lang = page.lang | default: 'en' %}
 {% assign cur = site.languages | where: "code", lang | first %}
+{% comment %}
+  English text lives in the _data/text.yml file (site.data.text); the other
+  languages live in directories (site.data.<code>.text).
+{% endcomment %}
 {% assign t = site.data[lang].text %}
+{% if t == nil %}{% assign t = site.data.text %}{% endif %}
 {% assign homelink = cur.url %}
 
 <p class="site-nav">
