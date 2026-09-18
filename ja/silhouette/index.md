@@ -31,10 +31,7 @@ Silhouetteはコンピュータ支援の音声・動画翻訳ソフトです。
 
 ## 購入
 
-サードパーティのプラットフォームでSilhouetteを購入すると、すべての機能を利用できます：
-
-* [麺包多](https://mbd.pub/o/bread/Z56WlpZv)
-* [FastSpring（海外ユーザー向け）](https://basiccat.onfastspring.com/silhouette)
+Silhouette を購入すると、すべての機能を利用できます：[リンク](https://basiccat.onfastspring.com/silhouette)
 
 注：既定で7日間のトライアルがあります。トライアル終了後は機能が制限され、メディアの長さ、波形表示、インポートなどに制限がかかります。
 
