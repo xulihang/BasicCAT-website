@@ -1,0 +1,35 @@
+---
+title: Notes de version
+layout: page
+lang: fr
+---
+
+<style>
+.post-content h2 {
+  font-size: 1.5rem;
+}
+</style>
+
+## v1.11.0 (2026/04/14)
+
+* La traduction automatique prend désormais en charge la traduction de plusieurs phrases en une seule requête (traduction par lots)
+* La pré-traduction peut être annulée en fermant la fenêtre de progression
+* Mise à jour des plugins
+
+## v1.10.7 (2024/04/23)
+
+* Correction d'une erreur lors de la recherche de caractères consécutifs dans Rechercher et remplacer
+* Ajout d'un élément de menu pour la vérification orthographique
+
+## Notes de version précédentes
+
+<section>
+    <ul class="post-list">
+        {% assign posts=site.fr | where: "layout", "post" | where: "categories", "releasenote" %}
+        {% for post in posts reversed %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

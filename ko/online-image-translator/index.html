@@ -1064,7 +1064,8 @@ lang: ko
 
 <!-- Application Modules -->
 <script>
-  // 한국어 페이지는 기본적으로 한국어 인터페이스를 사용합니다
+  // 앱의 UI 사전에는 영어와 중국어만 있어, 한국어 사전이 생기기 전까지
+  // 기본값을 중국어로 유지합니다
   if (!localStorage.getItem('uiLanguage')) {
     localStorage.setItem('uiLanguage', 'zh_CN');
   }

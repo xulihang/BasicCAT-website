@@ -57,6 +57,18 @@ languages:
     doclang: en/latest/
     # 기계 번역된 페이지에는 기계 번역 안내 표시줄을 보여 줍니다
     machine_translated: true
+  - code: fr
+    label: Français
+    url: /fr/
+    locale: fr_FR
+    hreflang: fr
+    title: "BasicCAT — Outils de traduction assistée par ordinateur (TAO)"
+    dateformat: "%d/%m/%Y"
+    # Il n'existe pas encore de site de documentation en français, donc nous
+    # renvoyons vers la version anglaise
+    doclang: en/latest/
+    # Les pages traduites automatiquement affichent un bandeau de traduction
+    machine_translated: true
 
 # Build settings
 kramdown:
@@ -100,6 +112,11 @@ defaults:
     values:
       locale: "ko_KR"
       lang: "ko"
+  - scope:
+      path: "fr"
+    values:
+      locale: "fr_FR"
+      lang: "fr"
 
 collections:
   zh:
@@ -118,6 +135,12 @@ collections:
   # 아직 한국어로 번역된 블로그 글이 없어 비어 있는 컬렉션입니다.
   # _ko 디렉터리에 글을 추가하면 /ko/blog/ 와 /ko/tagged/ 에 반영됩니다.
   ko:
+    output: true
+    permalink: /:collection/:title/
+  # Aucun article de blog n'est encore traduit en français, la collection est
+  # donc vide. Ajoutez des articles dans _fr pour qu'ils apparaissent dans
+  # /fr/blog/ et /fr/tagged/.
+  fr:
     output: true
     permalink: /:collection/:title/
     

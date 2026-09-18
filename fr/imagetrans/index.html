@@ -1,0 +1,297 @@
+---
+title: ImageTrans - Logiciel d'aide à la traduction d'images et de bandes dessinées
+layout: page
+description: ImageTrans est un logiciel d'aide à la traduction d'images et de bandes dessinées. Détection automatique du texte, OCR, effacement du texte original et réinjection de la traduction avec une composition typographique professionnelle. Prise en charge de plusieurs moteurs OCR, de la traduction par IA (ChatGPT, Gemini, DeepSeek), du texte vertical, de la préservation des trames, de l'export PSD et du traitement par lots. Convient aussi aux images e-commerce, à la traduction de documents et à l'extraction de sous-titres. Logiciel multiplateforme, avec API et appel par agent IA.
+lang: fr
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+  }
+  .it-section p {
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+  .it-feature-card p + p { margin-top: 10px; }
+  .it-feature-card ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.8; }
+  .it-feature-card li { padding-left: 16px; position: relative; margin-bottom: 2px; }
+  .it-feature-card li::before { content: '•'; position: absolute; left: 0; color: var(--it-primary); }
+  .it-feature-card li a { color: var(--it-primary); }
+  .it-feature-card strong { font-size: 13px; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-features,
+    .it-testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Intro ===== -->
+<div class="it-intro">
+  <p>ImageTrans est un outil d'aide à la transcription et à la traduction de texte dans les images. Il utilise la technologie OCR pour localiser et reconnaître automatiquement le texte, efface le texte original puis réinjecte la traduction, et intègre un algorithme de fusion et de détection des zones de texte conçu spécialement pour les bandes dessinées.</p>
+  <img src="/album/imagetrans_zh.jpg" alt="Capture d'écran de l'interface d'ImageTrans" width="1024" height="731" loading="lazy" />
+  <p>Outre son usage comme traducteur d'images pour les affiches et les bandes dessinées, ImageTrans peut aussi servir à la lecture d'images, à la transcription de texte, à la traduction OCR de captures d'écran, à la conversion et à la traduction de PDF en markdown, à la génération de PDF double couche indexables à partir de documents numérisés et à l'annotation pour l'apprentissage profond.</p>
+  <p>ImageTrans est le fruit de mon mémoire de master : <a href="https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool" target="_blank">Conception et implémentation d'un outil d'aide à la traduction de bandes dessinées</a>.</p>
+  <p><a href="#get-a-copy">Obtenir ImageTrans</a></p>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>Fonctionnalités principales</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>Localisation précise des zones de texte</h4>
+      <p>Prise en charge de plusieurs méthodes : détection de texte en scène naturelle, détection d'objets et méthodes heuristiques, avec un algorithme de fusion et de détection des zones de texte conçu pour les bulles de bande dessinée.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>Reconnaissance OCR multi-moteurs</h4>
+      <p>Prise en charge de plusieurs moteurs OCR et de <a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">plugins personnalisés</a>, couvrant les principales langues du monde. Reconnaissance du <a href="/zh/vertical-japanese-chinese-OCR/">texte vertical japonais et chinois</a>, avec analyse de mise en page pour déterminer l'ordre de lecture. Possibilité d'<a href="/zh/use-large-language-models-to-get-good-OCR-results/">utiliser de grands modèles de langage pour corriger et améliorer la précision de l'OCR</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>Traduction</h4>
+      <p><strong>Traduction automatique :</strong> prise en charge de nombreux moteurs de traduction automatique et de grands modèles de langage (ChatGPT, Gemini, DeepSeek, etc.). <a href="/zh/context-matters-for-image-translation/">Exploiter le contexte pour améliorer la qualité de la traduction</a>.</p>
+      <p><strong>Fonctions d'assistance :</strong> comparaison côte à côte de plusieurs résultats, mémoire de traduction, recherche dans les corpus, gestion terminologique, <a href="/zh/how-to-add-pronunciation-annotation-furigana-to-Japanese-kanji/">annotation en furigana et en pinyin</a>, ainsi qu'un système de recherche d'onomatopées de bande dessinée.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🧹</div>
+      <h4>Suppression du texte</h4>
+      <p>Prise en charge de la binarisation, de PatchMatch, de Lama Inpaint, de <a href="/zh/nano-banana-manga-translation/">Gemini Nano Banana</a> et d'autres algorithmes et modèles d'IA pour générer un masque de texte et le supprimer. <a href="/zh/remove-text-in-manga-preserving-screentone/">Préserver les trames de la bande dessinée lors de la suppression du texte</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>Composition typographique</h4>
+      <ul>
+        <li>Adaptation automatique de la taille de police</li>
+        <li><a href="/zh/lettering-guide-for-Japanese-English-manga-translation/">Optimisation des retours à la ligne pour les langues à espaces</a> (par exemple de japonais vers anglais)</li>
+        <li><a href="/zh/handling-of-punctuation-at-starting-or-ending-positionin-type-setting/">Gestion des ponctuations en début et en fin de ligne</a></li>
+        <li>Texte enrichi et styles de police (système de styles similaire à celui de Word)</li>
+        <li><a href="/zh/how-to-detect-text-color-in-image/">Détection de la couleur du texte</a></li>
+        <li>Détection de l'angle de rotation</li>
+        <li>Composition du texte vertical</li>
+      </ul>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>Export au format PSD</h4>
+      <p>Enregistrez les résultats dans des fichiers Photoshop PSD, avec les textes répartis sur des calques distincts, pour faciliter le travail de post-production des designers.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>Traitement par lots</h4>
+      <p>Traitez des centaines d'images en une seule fois. Prise en charge de flux d'opérations personnalisés, des appels en ligne de commande et du traitement parallèle multiprocessus, pour une production rapide à grande échelle.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>Une interface intuitive et puissante</h4>
+      <p>Éditeur visuel avec aperçu en temps réel. Exécutez pas à pas les opérations d'OCR, de traduction, de retouche d'image, d'incrustation de texte, de recherche-remplacement et de flux de travail personnalisés — le tout dans une interface unifiée, puissante et facile à utiliser.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extra Features ===== -->
+<div class="it-section">
+  <h2>Fonctionnalités supplémentaires</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📄</div>
+      <h4>Traduction de PDF et conversion en Markdown</h4>
+      <p><a href="/zh/pdf-paper-translation-and-conversion-to-markdown/">Traduire un PDF et le convertir en Markdown</a>, avec une sortie en texte original, en traduction ou en version bilingue, en conservant la structure des articles à plusieurs colonnes, des formules, des tableaux et des notes de bas de page. <a href="/zh/how-to-create-searchable-pdf-from-scanned-documents/">Générer un PDF double couche indexable</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>Traduction d'écran en temps réel</h4>
+      <p><a href="/zh/real-time-screen-translator/">Capturer et traduire en temps réel n'importe quelle zone de l'écran</a>. Détection automatique des changements de contenu et correspondance immédiate grâce à la mémoire de traduction.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎬</div>
+      <h4>Extraction des sous-titres incrustés dans une vidéo</h4>
+      <p><a href="/zh/how-to-extract-hardcoded-subtitle/">Extraire les sous-titres incrustés d'une vidéo</a> grâce à une détection de texte OCR rapide, à la fois rapide et précise, et exporter un fichier de sous-titres SRT.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📷</div>
+      <h4>Numérisation et amélioration de documents</h4>
+      <p>Prise en charge de la numérisation intégrée TWAIN / WIA / SANE / ICA / eSCL. <a href="/zh/clean-deskew-enhance-scanned-books/">Nettoyer, redresser et améliorer des livres numérisés</a> pour obtenir le meilleur prétraitement d'image possible.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Usability ===== -->
+<div class="it-section">
+  <h2>Facilité d'utilisation</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⌨️</div>
+      <h4>Raccourcis clavier</h4>
+      <p>Presque toutes les opérations disposent de raccourcis clavier : plus besoin de passer sans cesse à la souris, votre flux de travail devient rapide et efficace.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Ligne de commande et API</h4>
+      <p>Appelez ImageTrans en ligne de commande pour exécuter des tâches automatisées. Peut fonctionner comme <a href="/zh/self-hosted-manga-translation-api-server/" target="_blank" rel="noopener">serveur API</a> et fournir un service de traduction via HTTP, pour une intégration facile avec n'importe quelle application ou service.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚙️</div>
+      <h4>Flux de travail personnalisés</h4>
+      <p>Combinez librement les étapes de détection, d'OCR, de traduction et de rendu pour construire des flux de travail automatisés adaptés à vos besoins.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🤖</div>
+      <h4>Intégration d'agents IA</h4>
+      <p>Grâce à <a href="https://github.com/xulihang/ImageTrans-skills" target="_blank" rel="noopener">ImageTrans Skills</a>, permettez à un agent IA d'appeler ImageTrans — des définitions de compétences structurées permettent aux agents pilotés par LLM d'exécuter des tâches de traduction de manière programmatique.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📐</div>
+      <h4>Alignement intelligent et recherche-remplacement</h4>
+      <p>Repères d'alignement lors du déplacement des zones de texte, alignement par lots sur la position du texte source et fonction de recherche-remplacement intégrée. Idéal pour des cas comme la <a href="/zh/e-commerce-image-translation/">traduction d'images pour le commerce en ligne</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>Multiplateforme · Configuration modeste</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>Compatible avec Windows 7+, macOS 10.11+ et Linux. Peut également fonctionner comme serveur pour numériser et traduire des images depuis un appareil mobile.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>Léger et efficace</h4>
+      <p>Environ 400 Mo, environnement d'exécution Java et modèles inclus ; fonctionne sur des appareils anciens ou d'entrée de gamme. Fonctionne hors ligne, sans connexion internet.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>Interopérabilité</h4>
+      <p>Export PSD, échange de données Excel/Word/XLIFF, conversion de projets LabelPlus, et <a href="./extension/" target="_blank">extension Chrome</a> pour traduire les images des pages web.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>Exemples de traduction</h2>
+  <p>ImageTrans permet de combiner librement différentes méthodes de localisation du texte, de reconnaissance de texte et de traduction automatique pour traiter toutes sortes d'images. La galerie contient de nombreux exemples tels que la <a href="/zh/how-to-build-a-local-manga-translation-workshop/">traduction de bandes dessinées</a>, la <a href="/zh/e-commerce-image-translation/">traduction d'images pour le commerce en ligne</a>, etc. Visitez la galerie pour découvrir des résultats concrets :</p>
+  <p>
+    <a href="/fr/gallery/" class="it-btn-buy" style="display: inline-block;">Parcourir la galerie →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>Obtenir ImageTrans</h2>
+  <p>ImageTrans est disponible à l'achat sur FastSpring : <a href="https://basiccat.onfastspring.com/" target="_blank">lien</a></p>
+  <p>Tarifs :</p>
+  <ul>
+    <li>Usage personnel : $10.99</li>
+    <li>Usage commercial : $299</li>
+  </ul>
+  <p>Achat unique. Mises à jour gratuites pendant six mois.</p>
+  <p>En cas de problème d'achat ou de paiement, vous pouvez me contacter par <a href="mailto:admin@basiccat.org">e-mail</a>.</p>
+  <p>Les groupes de scanlation ainsi que les étudiants et enseignants du supérieur peuvent également me contacter par e-mail pour demander une réduction.</p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>Avis des utilisateurs</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>J'utilise ce logiciel depuis une semaine et il aide vraiment les traducteurs amateurs que nous sommes. Ce qui demandait 2 à 3 heures sous Photoshop ne prend plus qu'une heure.</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>Le logiciel excelle dans l'intégration des différents programmes disponibles sur le web et dans les réponses utiles qu'il apporte rapidement aux utilisateurs.</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>Autres ressources</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 Documentation du logiciel</a>
+    <a href="/fr/imagetrans/release-notes/" class="it-link-chip">📋 Notes de version</a>
+    <a href="/fr/imagetrans/video/" class="it-link-chip">🎬 Tutoriels vidéo</a>
+    <a href="/fr/imagetrans/faq/" class="it-link-chip">❓ Questions fréquentes</a>
+    <a href="/fr/support/" class="it-link-chip">🛠️ Support technique</a>
+    <a href="/fr/tagged/#imagetrans" class="it-link-chip">📝 Blog technique</a>
+    <a href="/fr/imagetrans/how-to-contribute/" class="it-link-chip">🤝 Comment contribuer</a>
+  </div>
+</div>

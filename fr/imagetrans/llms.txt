@@ -1,0 +1,9 @@
+# ImageTrans
+
+Un outil d'aide à la traduction d'images et de bandes dessinées.
+
+## Sommaire
+
+- [Page d'accueil](https://www.basiccat.org/fr/imagetrans/)
+- [Blog](https://www.basiccat.org/fr/tagged/#imagetrans)
+- [Documentation](https://imagetrans.readthedocs.io/en/latest/)
