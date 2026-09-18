@@ -1,6 +1,5 @@
 home: 首页
 description: BasicCAT是一款开源的计算机辅助翻译软件
-intro: BasicCAT是一款开源的计算机辅助翻译软件
 about: 关于
 rss: 订阅
 blog: 博客
@@ -13,5 +12,5 @@ donation: 捐助
 support: 支持
 imagetrans: 图片翻译
 silhouette: 音视频翻译
-mt_notice: 本页面由机器翻译生成，内容可能存在错误。
+mt_notice: 本页面由机器翻译生成，内容可能存在错误或者过时。
 mt_notice_link: 查看英文版

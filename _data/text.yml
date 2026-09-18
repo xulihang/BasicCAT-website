@@ -1,6 +1,5 @@
 home: Home
 description: BasicCAT is an open source computer-aided translation tool
-intro: BasicCAT is an open source computer-aided translation tool
 about: About
 rss: RSS
 blog: Blog
@@ -13,5 +12,5 @@ donation: Donation
 support: Support
 imagetrans: Image Translation
 silhouette: Video Translation
-mt_notice: This page has been machine translated and may contain errors.
+mt_notice: This page has been machine translated and may contain errors or outdated information.
 mt_notice_link: View in English
