@@ -18,6 +18,7 @@
 {% endcomment %}
 {% assign altlangs = '' | split: '' %}
 {% assign altlabels = '' | split: '' %}
+{% assign althreflangs = '' | split: '' %}
 {% assign englishurl = nil %}
 {% for l in site.languages %}
   {% assign cand = l.url | append: rest | replace: '//', '/' %}
@@ -28,6 +29,7 @@
   {% if is_cur or found != nil %}
     {% assign altlangs = altlangs | push: cand %}
     {% assign altlabels = altlabels | push: l.label %}
+    {% assign althreflangs = althreflangs | push: l.hreflang %}
   {% endif %}
   {% if l.code == 'en' and found != nil %}{% assign englishurl = cand %}{% endif %}
 {% endfor %}

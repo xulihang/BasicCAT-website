@@ -8,21 +8,26 @@ baseurl: "" # required if used under gh-pages branch, else (under master branch)
 author: "xulihang"
 
 # Languages. The English site lives at the root, the others under a prefix.
+# locale   -> <html lang> and og:locale (underscore form, e.g. zh_CN)
+# hreflang -> BCP 47 for <link rel="alternate" hreflang> (hyphen form, e.g. zh-CN)
 languages:
   - code: en
     label: English
     url: /
     locale: en
+    hreflang: en
     doclang: en/latest/
   - code: zh
     label: 中文
     url: /zh/
     locale: zh_CN
+    hreflang: zh-CN
     doclang: zh_CN/latest/
   - code: ja
     label: 日本語
     url: /ja/
     locale: ja
+    hreflang: ja
     # 日本語版のドキュメントサイトはまだ無いため、英語版にフォールバックします
     doclang: en/latest/
     # 機械翻訳されたページには「機械翻訳」の通知バーを表示します

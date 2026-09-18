@@ -14,6 +14,21 @@
 
   {% seo title=false  %}
 
+  {% comment %}
+    hreflang alternates. altlangs / althreflangs are built in default.html and
+    hold every language that actually has this page, so we never emit a
+    hreflang pointing at a page that does not exist.
+    x-default points at the English version, which is the root site.
+  {% endcomment %}
+  {% if altlangs.size > 1 %}
+  {% assign siteurl = site.url | default: 'https://www.basiccat.org' %}
+  {% for cand in altlangs %}
+    {% assign idx = forloop.index0 %}
+  <link rel="alternate" hreflang="{{ althreflangs[idx] }}" href="{{ siteurl }}{{ site.baseurl }}{{ cand }}" />
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ siteurl }}{{ site.baseurl }}{{ englishurl | default: '/' }}" />
+  {% endif %}
+
 
   {% include google_analytics.html %}
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
