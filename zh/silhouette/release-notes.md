@@ -2,6 +2,7 @@
 title: Silhouette发布日志 
 layout: page
 description: Silhouette发布日志 
+lang: zh
 ---
 
 <style>

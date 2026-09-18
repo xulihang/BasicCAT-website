@@ -1,6 +1,7 @@
 ---
 title: 发布说明
 layout: page
+lang: zh
 ---
 
 <style>

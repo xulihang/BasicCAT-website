@@ -1,6 +1,7 @@
 ---
 title: 捐助
 layout: page
+lang: zh
 ---
 
 金钱的支持可以让我更好地开发BasicCAT和相关的翻译软件。

@@ -1,6 +1,7 @@
 ---
 title: ImageTrans发布日志 
 layout: page
+lang: zh
 ---
 
 <style>

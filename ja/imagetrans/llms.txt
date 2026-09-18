@@ -1,0 +1,9 @@
+# ImageTrans
+
+コンピュータ支援の画像翻訳ソフト。
+
+## 目次
+
+- [ホーム](https://www.basiccat.org/ja/imagetrans/)
+- [ブログ](https://www.basiccat.org/zh/tagged/#imagetrans)
+- [ドキュメント](https://imagetrans.readthedocs.io/en/latest/)

@@ -2,9 +2,29 @@
 header: BasicCAT
 title: "BasicCAT — Computer-Aided Translation (CAT) Tools"
 title_zh: "BasicCAT——计算机辅助翻译（CAT）软件"
+title_ja: "BasicCAT — コンピュータ支援翻訳（CAT）ツール"
 baseurl: "" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
 #url: ""
 author: "xulihang"
+
+# Languages. The English site lives at the root, the others under a prefix.
+languages:
+  - code: en
+    label: English
+    url: /
+    locale: en
+    doclang: en/latest/
+  - code: zh
+    label: 中文
+    url: /zh/
+    locale: zh_CN
+    doclang: zh_CN/latest/
+  - code: ja
+    label: 日本語
+    url: /ja/
+    locale: ja
+    # 日本語版のドキュメントサイトはまだ無いため、英語版にフォールバックします
+    doclang: en/latest/
 
 # Build settings
 kramdown:
@@ -31,7 +51,13 @@ defaults:
       path: "zh"
     values:
       locale: "zh_CN"
-      
+      lang: "zh"
+  - scope:
+      path: "ja"
+    values:
+      locale: "ja"
+      lang: "ja"
+
 collections:
   zh:
     output: true

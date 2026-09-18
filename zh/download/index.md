@@ -2,6 +2,7 @@
 title: 下载
 layout: page
 permalink: /zh/download/
+lang: zh
 ---
 
 请根据您的操作系统选择对应的安装包。

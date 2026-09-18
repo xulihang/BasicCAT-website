@@ -1,6 +1,7 @@
 ---
 title: ImageTrans视频教程与演示
 layout: page
+lang: zh
 ---
 
 ## 视频教程与演示

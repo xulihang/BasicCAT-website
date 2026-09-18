@@ -2,6 +2,7 @@
 title: Silhouette文档
 layout: page
 description: Silhouette文档
+lang: zh
 ---
 
 ## 支持的操作系统

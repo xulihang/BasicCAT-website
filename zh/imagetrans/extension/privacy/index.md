@@ -2,6 +2,7 @@
 title: 隐私政策 — ImageTrans 浏览器扩展
 layout: page
 description: ImageTrans 浏览器扩展的隐私政策。了解扩展如何处理您的图片和数据。
+lang: zh
 ---
 
 **最后更新：2026年7月19日**

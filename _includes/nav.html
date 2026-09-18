@@ -1,39 +1,14 @@
-  {% if page.url contains '/zh/' %}
-   {% assign home=site.data.zh.text.home %}
-   {% assign about=site.data.zh.text.about %}
-   {% assign rss=site.data.zh.text.rss %}
-   {% assign doclang='zh_CN/latest/' %}
-   {% assign blog=site.data.zh.text.blog %}
-   {% assign releasenote=site.data.zh.text.releasenote %}
-   {% assign document=site.data.zh.text.document %}
-   {% assign download=site.data.zh.text.download %}
-   {% assign imagetrans='图片翻译' %}
-   {% assign silhouette='音视频翻译' %}
-   {% assign donation=site.data.zh.text.donation %}
-   {% assign support=site.data.zh.text.support %}
-   {% assign homelink='/zh/' %}
-  {% else %}
-   {% assign home=site.data.text.home %}
-   {% assign about=site.data.text.about %}
-   {% assign rss=site.data.text.rss %}
-   {% assign doclang='en/latest/' %}
-   {% assign blog=site.data.text.blog %}
-   {% assign releasenote=site.data.text.releasenote %}
-   {% assign document=site.data.text.document %}
-   {% assign download=site.data.text.download %}
-   {% assign imagetrans='Image Translation' %}
-   {% assign silhouette='Video Translation' %}
-   {% assign donation=site.data.text.donation %}
-   {% assign support=site.data.text.support %}
-   {% assign homelink='/' %}
-  {% endif %}
+{% assign lang = page.lang | default: 'en' %}
+{% assign cur = site.languages | where: "code", lang | first %}
+{% assign t = site.data[lang].text %}
+{% assign homelink = cur.url %}
 
 <p class="site-nav">
-<a href="{{ homelink | prepend: site.baseurl | prepend: site.url }}">{{home}}</a> / 
-<a href="{{ homelink | append: 'blog' | prepend: site.baseurl | prepend: site.url }}">{{blog}}</a> /
-<a href="{{ homelink | append: 'imagetrans' | prepend: site.baseurl | prepend: site.url }}">{{imagetrans}}</a> /
-<a href="{{ homelink | append: 'silhouette' | prepend: site.baseurl | prepend: site.url }}">{{silhouette}}</a> /
-<a href="{{ homelink | append: 'support' | prepend: site.baseurl | prepend: site.url }}">{{support}}</a> /
-<a href="{{ homelink | append: 'donation' | prepend: site.baseurl | prepend: site.url }}">{{donation}}</a> /
-<a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{rss}}</a>
+<a href="{{ homelink | prepend: site.baseurl | prepend: site.url }}">{{ t.home }}</a> /
+<a href="{{ homelink | append: 'blog' | prepend: site.baseurl | prepend: site.url }}">{{ t.blog }}</a> /
+<a href="{{ homelink | append: 'imagetrans' | prepend: site.baseurl | prepend: site.url }}">{{ t.imagetrans }}</a> /
+<a href="{{ homelink | append: 'silhouette' | prepend: site.baseurl | prepend: site.url }}">{{ t.silhouette }}</a> /
+<a href="{{ homelink | append: 'support' | prepend: site.baseurl | prepend: site.url }}">{{ t.support }}</a> /
+<a href="{{ homelink | append: 'donation' | prepend: site.baseurl | prepend: site.url }}">{{ t.donation }}</a> /
+<a href="{{ homelink | append: 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">{{ t.rss }}</a>
 </p>

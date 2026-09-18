@@ -1,6 +1,7 @@
 ---
 title: 博客
 layout: page
+lang: zh
 ---
 
 <ul class="post-list">

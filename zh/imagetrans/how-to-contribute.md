@@ -1,6 +1,7 @@
 ---
 title: 帮助完善ImageTrans
 layout: page
+lang: zh
 ---
 
 你可以通过以下方式帮助完善ImageTrans:

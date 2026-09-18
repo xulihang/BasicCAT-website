@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /ja
+    description: BasicCATは無料のオープンソースのコンピュータ支援翻訳ツールです。翻訳メモリ、機械翻訳、用語管理などの機能を使って、文書、Webページ、表、スライドなどを翻訳できます。
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /ja/imagetrans
+    description: ImageTransはコンピュータ支援の画像翻訳ツールです。漫画、ポスター、商品ページなどの画像を翻訳できます。
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /ja/silhouette
+    description: Silhouetteは音声・動画翻訳ソフトです。
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Alignerは対訳アラインメントツールです。文書、表、字幕などからテキストを抽出し、文単位で自動的にアラインメントします。手動での調整にも対応しています。対訳データを翻訳メモリとしてエクスポートし、他のソフトから利用できます。
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /ja/TMXSearch/
+    description: TMXSearchは、TMX形式の翻訳メモリを検索するオンラインアプリです。
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: オンライン画像翻訳ツール
+    href: /ja/online-image-translator/
+    description: Webページ上で画像全体を翻訳したり、スマートフォンのカメラで読み取って翻訳できます。
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: オンライン画像翻訳ツール

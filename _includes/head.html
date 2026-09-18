@@ -2,7 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   {% if page.url contains '/zh/' %}
+   {% if page.lang == 'ja' %}
+   {% assign sitetitle=site.title_ja %}
+  {% elsif page.lang == 'zh' %}
    {% assign sitetitle=site.title_zh %}
   {% else %}
    {% assign sitetitle=site.title %}

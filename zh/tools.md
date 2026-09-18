@@ -1,6 +1,7 @@
 ---
 title: 工具
 layout: page
+lang: zh
 ---
 
 我在翻译工作中开发的一些工具：

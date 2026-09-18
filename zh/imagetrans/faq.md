@@ -1,6 +1,7 @@
 ---
 title: FAQ - ImageTrans
 layout: page
+lang: zh
 ---
 
 ImageTrans 常见问题整理，更多问题可在[这里](https://github.com/xulihang/ImageTrans-docs/issues)搜索。

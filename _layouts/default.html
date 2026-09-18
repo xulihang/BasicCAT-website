@@ -1,31 +1,47 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign cur = site.languages | where: "code", lang | first %}
+{% if cur == nil %}{% assign cur = site.languages | first %}{% endif %}
+
+{% comment %}
+  Path of the current page relative to its language root,
+  so we can look for the equivalent page in the other languages.
+{% endcomment %}
+{% assign rest = page.url %}
+{% unless cur.url == '/' %}
+  {% assign rest = page.url | remove_first: cur.url | prepend: '/' %}
+{% endunless %}
+
+{% comment %}
+  Build the list of languages that actually have this page.
+  The current language always counts; the others only when a page or
+  document with the matching url exists.
+{% endcomment %}
+{% assign altlangs = '' | split: '' %}
+{% assign altlabels = '' | split: '' %}
+{% for l in site.languages %}
+  {% assign cand = l.url | append: rest | replace: '//', '/' %}
+  {% assign is_cur = false %}
+  {% if l.code == lang %}{% assign is_cur = true %}{% endif %}
+  {% assign found = site.pages | where: "url", cand | first %}
+  {% if found == nil %}{% assign found = site.documents | where: "url", cand | first %}{% endif %}
+  {% if is_cur or found != nil %}
+    {% assign altlangs = altlangs | push: cand %}
+    {% assign altlabels = altlabels | push: l.label %}
+  {% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
-{% if page.url contains '/zh/' %}
-  {% assign lang='zh-CN' %}
-{% else %}
-  {% assign lang='en' %}
-{% endif %}
-<html lang="{{lang}}">
+<html lang="{{ cur.locale }}">
   {% include head.html %}
   <body>
-    {% if page.url contains '/zh/' %}
-      {% assign enurl=page.url | replace:'/zh/','/' %}
-      {% assign zhurl=page.url %}
-    {% else %}
-      {% assign enurl=page.url %}
-      {% assign zhurl=page.url | prepend:'/zh' %}
-    {% endif %}
-    {% assign enpage = site.pages | where: "url", enurl | first %}
-    {% assign zhpage = site.pages | where:"url", zhurl | first %}
-      {% if enpage == nil %}
-        {% assign enpage = site.documents | where: "url", enurl | first %}
-      {% endif %}
-      {% if zhpage == nil %}
-        {% assign zhpage = site.documents | where: "url", zhurl | first %}
-      {% endif %}
-    {% if enpage != nil and zhpage != nil %}
+    {% if altlangs.size > 1 %}
     <div class="language-chooser">
-      <a href="{{enurl}}">English</a>
-      <a href="{{zhurl}}">中文</a>
+      <select id="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value">
+        {% for cand in altlangs %}
+          {% assign idx = forloop.index0 %}
+          <option value="{{ cand }}"{% if cand == page.url %} selected{% endif %}>{{ altlabels[idx] }}</option>
+        {% endfor %}
+      </select>
     </div>
     {% endif %}
     <div class="page-content">

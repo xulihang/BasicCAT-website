@@ -6,7 +6,7 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
-     {% if page.url contains '/zh/' %}
+     {% if page.lang == 'zh' or page.lang == 'ja' %}
        {% assign dateformat="%Y年%-m月%-d日" %}
      {% else %}
        {% assign dateformat="%b %d, %Y" %}
@@ -18,8 +18,8 @@ layout: default
       {% assign post = page %}
   		{% if post.tags.size > 0 %}
 		
-        {% if page.url contains '/zh/' %}
-           {% assign tagfile="zh/tagged" %}
+        {% if page.lang == 'zh' or page.lang == 'ja' %}
+           {% assign tagfile=page.lang | append: "/tagged" %}
         {% else %}
            {% assign tagfile="tagged" %}
         {% endif %}
@@ -43,13 +43,10 @@ layout: default
   </div>
 
 <span>
-  {% if page.url contains '/zh/' %}
-   {% assign previous=site.data.zh.text.previous %}
-   {% assign next=site.data.zh.text.next %}
-  {% else %}
-   {% assign previous=site.data.text.previous %}
-   {% assign next=site.data.text.next %}
-  {% endif %}
+  {% assign t = site.data[page.lang].text %}
+  {% if t == nil %}{% assign t = site.data.text %}{% endif %}
+   {% assign previous=t.previous %}
+   {% assign next=t.next %}
 	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >{{previous}}</a>
 	&nbsp;&nbsp;&nbsp;
 	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >{{next}}</a>

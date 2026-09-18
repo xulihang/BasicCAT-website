@@ -1,9 +1,4 @@
-  {% if page.url contains '/zh/' %}
-   {% assign intro=site.data.zh.text.intro %}
-   {% assign intro=site.data.zh.text.home %}
-  {% else %}
-   {% assign intro=site.data.text.intro %}
-   {% assign intro=site.data.text.home %}
-  {% endif %}
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data[lang].text %}
 
-<p class="site-intro">{{ home }}</p>
+<p class="site-intro">{{ t.intro }}</p>

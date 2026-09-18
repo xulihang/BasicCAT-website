@@ -2,6 +2,7 @@
 title: Silhouette视频
 layout: page
 description: Silhouette视频 
+lang: zh
 ---
 
 日语视频字幕生成和翻译：
