@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /pt
+    description: BasicCAT é uma ferramenta de tradução assistida por computador gratuita e de código aberto. Podemos usá-la para traduzir documentos, páginas web, tabelas, slides e muito mais, com recursos como memória de tradução, tradução automática e gerenciamento de terminologia.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /pt/imagetrans
+    description: ImageTrans é uma ferramenta de tradução de imagens assistida por computador. Podemos usá-la para traduzir quadrinhos, mangás, pôsteres, etc.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /pt/silhouette
+    description: Silhouette é uma ferramenta de tradução assistida por computador para vídeos e áudios.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner é uma ferramenta de alinhamento de bitexto. Ela extrai texto de documentos, tabelas e legendas e alinha o texto em nível de frase automaticamente, com suporte a ajustes manuais. O bitexto pode ser exportado para arquivos de memória de tradução, para uso em outras ferramentas.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /pt/TMXSearch/
+    description: TMXSearch é um aplicativo online para consulta de memória de tradução.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: Tradutor de Imagens Online
+    href: /pt/online-image-translator/
+    description: Tradutor de imagens online que facilita a tradução de uma imagem inteira ou o uso da câmera do celular para ler e traduzir.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: Tradutor de Imagens Online

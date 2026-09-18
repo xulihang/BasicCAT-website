@@ -1,0 +1,42 @@
+-
+    title: Quadrinho americano
+    href: /viewer/?project=/gallery/projects/scrooge/scrooge.itp
+    description: A primeira história do primeiro número da revista "Tio Patinhas", de 1952
+    cover-src: /gallery/projects/scrooge/out/02.webp
+    cover-alt: Quadrinho americano
+-
+    title: CG em japonês
+    href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
+    description: Imagem CG, traduzida do japonês para o chinês. Sem balões — o texto fica direto sobre o fundo, com contorno. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Fonte da imagem</a>
+    cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
+    cover-alt: Artistic CG
+-
+    title: Mangá japonês
+    href: /viewer/?project=/gallery/projects/manga/ranma.itp
+    description: Mangá em quadros, traduzido do japonês para o inglês. Imagens do primeiro volume de Ranma ½.
+    cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
+    cover-alt: Mangá japonês
+-
+    title: Webtoon
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
+    description: Webtoon, traduzido do chinês para o inglês. Imagem de <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>.
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
+    title: Infográfico
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: Infográfico usado em um <a href="https://www.semrush.com/blog/seo-copywriting/">post do blog</a> da SEMRush.
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: Infographic
+-
+    title: Tira de jornal
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: Tira de jornal, traduzida do inglês para o chinês. Imagem de <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>.
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: Tira de jornal
+-
+    title: Imagem de e-commerce
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: Tradução de imagem de e-commerce, do chinês para o inglês.
+    cover-src: /gallery/projects/e-commerce/out/overview.webp
+    cover-alt: Imagem de e-commerce

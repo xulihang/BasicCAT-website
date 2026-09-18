@@ -1,8 +1,6 @@
 # Site settings
 header: BasicCAT
 title: "BasicCAT — Computer-Aided Translation (CAT) Tools"
-title_zh: "BasicCAT——计算机辅助翻译（CAT）软件"
-title_ja: "BasicCAT — コンピュータ支援翻訳（CAT）ツール"
 baseurl: "" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
 #url: ""
 author: "xulihang"
@@ -10,6 +8,7 @@ author: "xulihang"
 # Languages. The English site lives at the root, the others under a prefix.
 # locale   -> <html lang> and og:locale (underscore form, e.g. zh_CN)
 # hreflang -> BCP 47 for <link rel="alternate" hreflang> (hyphen form, e.g. zh-CN)
+# title    -> site title for <title>, shown when the page title is missing or long
 languages:
   - code: en
     label: English
@@ -22,15 +21,30 @@ languages:
     url: /zh/
     locale: zh_CN
     hreflang: zh-CN
+    title: "BasicCAT——计算机辅助翻译（CAT）软件"
+    dateformat: "%Y年%-m月%-d日"
     doclang: zh_CN/latest/
   - code: ja
     label: 日本語
     url: /ja/
     locale: ja
     hreflang: ja
+    title: "BasicCAT — コンピュータ支援翻訳（CAT）ツール"
+    dateformat: "%Y年%-m月%-d日"
     # 日本語版のドキュメントサイトはまだ無いため、英語版にフォールバックします
     doclang: en/latest/
     # 機械翻訳されたページには「機械翻訳」の通知バーを表示します
+    machine_translated: true
+  - code: pt
+    label: Português
+    url: /pt/
+    locale: pt_BR
+    hreflang: pt-BR
+    title: "BasicCAT — Ferramentas de Tradução Assistida por Computador (CAT)"
+    dateformat: "%d/%m/%Y"
+    # Ainda não há site de documentação em português, então usamos o inglês
+    doclang: en/latest/
+    # Páginas traduzidas automaticamente exibem um aviso de tradução automática
     machine_translated: true
 
 # Build settings
@@ -65,6 +79,11 @@ defaults:
     values:
       locale: "ja"
       lang: "ja"
+  - scope:
+      path: "pt"
+    values:
+      locale: "pt_BR"
+      lang: "pt"
 
 collections:
   zh:
@@ -73,6 +92,11 @@ collections:
   # 日本語版のブログ記事はまだ翻訳していないため、現時点では空のコレクションです。
   # _ja ディレクトリに記事を追加すれば、/ja/blog/ と /ja/tagged/ に反映されます。
   ja:
+    output: true
+    permalink: /:collection/:title/
+  # Ainda não há artigos de blog traduzidos para o português, então a coleção
+  # está vazia. Adicione artigos em _pt para que apareçam em /pt/blog/.
+  pt:
     output: true
     permalink: /:collection/:title/
     

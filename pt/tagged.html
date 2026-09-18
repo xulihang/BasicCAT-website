@@ -1,0 +1,50 @@
+---
+layout: default
+title: Tagged
+lang: pt
+---
+
+{% assign posts=site.pt | where: "layout", "post" | where: "categories", "blog" %}
+
+{% assign rawtags = "" %}
+{% for post in posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+<div class="home">
+	<section class="site-header">
+		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.header }}</a></h1>
+		<p>Os posts com etiquetas serão listados aqui.</p>
+	</section>
+
+	<section>
+		{% for tag in tags %}
+		<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
+		<ul class="post-list">
+		
+		{% for post in posts reversed %}
+	    {% if post.tags contains tag %}
+			<li>
+				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+			</li>
+			{% endif %}
+	    {% endfor %}
+		</ul>
+		{% endfor %}
+	</section>
+
+</div>
