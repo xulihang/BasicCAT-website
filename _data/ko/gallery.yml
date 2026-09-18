@@ -1,0 +1,42 @@
+-
+    title: 미국 만화
+    href: /viewer/?project=/gallery/projects/scrooge/scrooge.itp
+    description: 1952년 『스크루지 삼촌』 창간호에 실린 첫 번째 이야기
+    cover-src: /gallery/projects/scrooge/out/02.webp
+    cover-alt: 미국 만화
+-
+    title: 일본어 CG
+    href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
+    description: CG 이미지, 일본어를 중국어로 번역. 말풍선이 없고 텍스트가 배경 위에 바로 놓여 있으며 테두리가 있습니다. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">이미지 출처</a>
+    cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
+    cover-alt: Artistic CG
+-
+    title: 일본 만화
+    href: /viewer/?project=/gallery/projects/manga/ranma.itp
+    description: 컷 만화, 일본어를 영어로 번역. 이미지는 『란마 1/2』 1권에서 가져왔습니다.
+    cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
+    cover-alt: 일본 만화
+-
+    title: 웹툰
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
+    description: 세로 스크롤 만화, 중국어를 영어로 번역. 이미지 출처는 <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>입니다.
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
+    title: 인포그래픽
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: SEMRush <a href="https://www.semrush.com/blog/seo-copywriting/">블로그</a>에 사용된 인포그래픽입니다.
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: Infographic
+-
+    title: 네컷 만화
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: 네컷 만화, 영어를 중국어로 번역. 이미지 출처는 <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>입니다.
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: 네컷 만화
+-
+    title: 이커머스 이미지
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: 이커머스 이미지 번역, 중국어를 영어로 번역.
+    cover-src: /gallery/projects/e-commerce/out/overview.webp
+    cover-alt: 이커머스 이미지

@@ -46,6 +46,17 @@ languages:
     doclang: en/latest/
     # Páginas traduzidas automaticamente exibem um aviso de tradução automática
     machine_translated: true
+  - code: ko
+    label: 한국어
+    url: /ko/
+    locale: ko_KR
+    hreflang: ko-KR
+    title: "BasicCAT — 컴퓨터 지원 번역(CAT) 도구"
+    dateformat: "%Y년 %-m월 %-d일"
+    # 한국어 문서 사이트가 아직 없어 영어 버전으로 대체합니다
+    doclang: en/latest/
+    # 기계 번역된 페이지에는 기계 번역 안내 표시줄을 보여 줍니다
+    machine_translated: true
 
 # Build settings
 kramdown:
@@ -84,6 +95,11 @@ defaults:
     values:
       locale: "pt_BR"
       lang: "pt"
+  - scope:
+      path: "ko"
+    values:
+      locale: "ko_KR"
+      lang: "ko"
 
 collections:
   zh:
@@ -97,6 +113,11 @@ collections:
   # Ainda não há artigos de blog traduzidos para o português, então a coleção
   # está vazia. Adicione artigos em _pt para que apareçam em /pt/blog/.
   pt:
+    output: true
+    permalink: /:collection/:title/
+  # 아직 한국어로 번역된 블로그 글이 없어 비어 있는 컬렉션입니다.
+  # _ko 디렉터리에 글을 추가하면 /ko/blog/ 와 /ko/tagged/ 에 반영됩니다.
+  ko:
     output: true
     permalink: /:collection/:title/
     

@@ -1,0 +1,9 @@
+# ImageTrans
+
+컴퓨터 보조 이미지 및 만화 번역 도구입니다.
+
+## 목차
+
+- [홈페이지](https://www.basiccat.org/ko/imagetrans/)
+- [블로그](https://www.basiccat.org/ko/tagged/#imagetrans)
+- [문서](https://imagetrans.readthedocs.io/en/latest/)

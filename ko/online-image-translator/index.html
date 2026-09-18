@@ -1,0 +1,1083 @@
+---
+lang: ko
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>온라인 이미지 번역기 — 만화 번역, 카메라 번역, 온라인 이미지 번역</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="무료 온라인 이미지 번역 도구로 만화 번역, 카메라 번역, 스크린샷 번역을 지원합니다. 일본어, 영어, 한국어, 중국어 등 여러 언어 이미지 속 텍스트를 번역할 수 있습니다. 설치 없이 바로 사용할 수 있습니다." />
+  <meta name="keywords" content="온라인 이미지 번역, 만화 번역, 카메라 번역, 이미지 번역, 온라인 번역, 만화 이미지 번역, OCR 번역, 사진 번역, 스크린샷 번역, 일본어 번역, 한국어 번역" />
+  <meta name="author" content="ImageTrans" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.basiccat.org/ko/online-image-translator/" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="https://www.basiccat.org/online-image-translator/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.basiccat.org/zh/online-image-translator/" />
+  <link rel="alternate" hreflang="ko" href="https://www.basiccat.org/ko/online-image-translator/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.basiccat.org/online-image-translator/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="온라인 이미지 번역기 — 만화 번역, 카메라 번역, 온라인 이미지 번역" />
+  <meta property="og:description" content="무료 온라인 이미지 번역 도구로 만화 번역, 카메라 번역을 지원합니다. OCR + AI 번역으로 일본어, 영어, 한국어, 중국어 등 14개 이상의 언어를 지원합니다." />
+  <meta property="og:url" content="https://www.basiccat.org/ko/online-image-translator/" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="온라인 이미지 번역기 — 만화 번역, 카메라 번역, 이미지 번역" />
+  <meta name="twitter:description" content="무료 온라인 이미지 번역 도구입니다. 만화 번역, 카메라 번역, 스크린샷 번역. OCR + AI로 14개 이상의 언어를 지원합니다." />
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVGN9L9008"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GVGN9L9008');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "e4pwjixgrz");
+  </script>
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "온라인 이미지 번역기",
+    "url": "https://www.basiccat.org/ko/online-image-translator/",
+    "description": "무료 온라인 이미지 번역 도구로 만화 번역, 카메라 번역, 스크린샷 번역을 지원합니다. OCR과 AI 번역 기술을 사용하며 일본어, 영어, 한국어, 중국어 등 여러 언어를 지원합니다.",
+    "applicationCategory": "MultilingualApplication",
+    "operatingSystem": "All",
+    "inLanguage": ["zh-CN", "en", "ko"],
+    "browserRequirements": "JavaScript가 필요합니다",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "xulihang"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f0f2f5;
+      --card-bg: #ffffff;
+      --primary: #4a6cf7;
+      --primary-hover: #3b5de7;
+      --text: #2d3748;
+      --text-secondary: #718096;
+      --border: #e2e8f0;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    /* ===== Tab Bar ===== */
+    .tab-bar {
+      display: flex;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 8px;
+      flex-shrink: 0;
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+    .tab-btn {
+      padding: 12px 20px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .tab-btn .icon { margin-right: 4px; }
+
+    /* ===== Main Content ===== */
+    .main-content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tab-panel {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+    .tab-panel.hidden { display: none !important; }
+
+    /* ===== Status Mask ===== */
+    .status-mask {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .status-spinner {
+      width: 40px; height: 40px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .status-text { color: #fff; font-size: 16px; }
+
+    /* ===== Translate Tab ===== */
+    .translate-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .translate-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .translate-toolbar label { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .translate-image-area {
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 16px;
+      background: #e8ecf1;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      box-shadow: var(--shadow);
+      border-radius: 4px;
+    }
+    .text-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .text-box {
+      position: absolute;
+      color: transparent;
+      background: transparent;
+      pointer-events: auto;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .text-box:hover { border: 1px dotted #4a6cf7; }
+    .text-box.show-text {
+      color: #000;
+      background: #fff;
+      border-radius: 10%;
+      text-align: center;
+      font-family: sans-serif;
+      text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      word-break: break-word;
+      border-color: transparent;
+    }
+
+    .drop-zone {
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 48px;
+      text-align: center;
+      color: #999;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      align-self: center;
+      margin: auto;
+    }
+    .drop-zone:hover, .drop-zone.drag-over {
+      border-color: var(--primary);
+      background: rgba(74,108,247,0.04);
+      color: var(--primary);
+    }
+    .drop-zone .dz-icon { font-size: 48px; margin-bottom: 12px; }
+    .drop-zone.hidden { display: none; }
+
+    /* ===== Scan Tab ===== */
+    .scan-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .scan-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .scan-results {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .scan-result {
+      display: flex;
+      gap: 12px;
+      padding: 10px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      align-items: flex-start;
+      cursor: pointer;
+    }
+    .scan-result:hover { background: #f7f8fa; }
+    .scan-result img { max-height: 60px; border-radius: 4px; }
+    .scan-result-text { font-size: 13px; white-space: pre-wrap; color: var(--text-secondary); flex: 1; }
+
+    /* Full-screen scan overlay */
+    .scan-fullscreen {
+      position: fixed;
+      inset: 0;
+      z-index: 9990;
+      background: #000;
+      display: none;
+    }
+    .scan-fullscreen.active { display: block; }
+    .scan-fullscreen img,
+    .scan-fullscreen video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .scan-selection-mask {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .scan-selection-box {
+      position: absolute;
+      border: 2px dashed #fff;
+      box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+      pointer-events: auto;
+      cursor: move;
+      box-sizing: border-box;
+    }
+    /* Resize handles */
+    .scan-handle {
+      position: fixed;
+      z-index: 9995;
+      width: 12px; height: 12px;
+      background: #fff;
+      border: 1px solid #333;
+      border-radius: 2px;
+      cursor: nwse-resize;
+    }
+    .scan-handle.ne { cursor: nesw-resize; }
+    .scan-handle.sw { cursor: nesw-resize; }
+    /* Scan overlay toolbar */
+    .scan-fs-toolbar {
+      position: fixed;
+      z-index: 9992;
+      display: flex;
+      gap: 8px;
+    }
+    .scan-fs-btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      touch-action: manipulation;
+    }
+    .scan-fs-btn.close {
+      position: fixed;
+      top: 12px; right: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .scan-fs-camera-select {
+      position: fixed;
+      top: 12px; left: 12px;
+      z-index: 9993;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 13px;
+      max-width: 180px;
+      cursor: pointer;
+    }
+    .scan-fs-camera-select option { color: #333; background: #fff; }
+    .scan-fs-btn.capture {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9993;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #ccc;
+      font-size: 12px;
+      font-weight: 700;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      .scan-handle { width: 16px; height: 16px; }
+      .scan-fs-btn.capture { width: 56px; height: 56px; }
+    }
+
+    /* ===== Settings Tab ===== */
+    .settings-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .settings-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .settings-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    /* About tab */
+    .about-layout {
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .about-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .about-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+    .about-supplementary {
+      border-left: 3px solid var(--primary, #2563eb);
+    }
+    .about-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .about-features {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-features li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .about-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-link:hover {
+      text-decoration: underline;
+    }
+    .about-links {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .about-links li {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .about-links a {
+      color: var(--primary, #2563eb);
+      text-decoration: none;
+    }
+    .about-links a:hover {
+      text-decoration: underline;
+    }
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .form-row:last-child { margin-bottom: 0; }
+    .form-row label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .form-row textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 12px;
+      resize: vertical;
+    }
+    select, input[type="text"], input[type="password"], input[type="number"] {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(74,108,247,0.1);
+    }
+    input[type="text"], input[type="password"] { width: 220px; }
+    input.wide { width: 100%; }
+    input[type="number"] { width: 70px; }
+    input[type="checkbox"] { accent-color: var(--primary); width: 16px; height: 16px; }
+
+    button {
+      padding: 7px 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:active { transform: scale(0.97); }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: #edf2f7;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-save {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 16px;
+      position: sticky;
+      bottom: 0;
+      z-index: 10;
+      background: var(--primary);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+    }
+    .btn-sm { padding: 4px 10px; font-size: 12px; }
+
+
+    /* ===== Setup Modal ===== */
+    .setup-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10001;
+    }
+    .setup-modal-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      max-width: 520px;
+      width: 92%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .setup-modal-content h2 { font-size: 18px; margin-bottom: 4px; }
+    .setup-section { margin-bottom: 14px; }
+    .setup-label { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 6px; }
+    .setup-options { display: flex; flex-direction: column; gap: 8px; }
+    .setup-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .setup-option:hover { border-color: var(--primary); }
+    .setup-option input[type="radio"] { accent-color: var(--primary); width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+    .setup-option-content strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .setup-option-content span { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
+    .setup-option.selected { border-color: var(--primary); background: rgba(74,108,247,0.04); }
+    .setup-row { display: flex; gap: 10px; align-items: center; }
+    .setup-row label { font-size: 13px; color: var(--text-secondary); }
+    .setup-row select { flex: 1; }
+    @media (max-width: 600px) {
+      .setup-modal-content { padding: 20px 14px; }
+      .setup-option { padding: 10px; }
+    }
+
+    /* ===== Text Modal ===== */
+    .text-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    .text-modal-content {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .text-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .text-modal-header h3 { font-size: 16px; margin: 0; }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #999;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    .modal-close:hover { color: #333; }
+    .text-modal-section { margin-bottom: 14px; }
+    .text-modal-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 4px; }
+    .text-modal-source { font-size: 18px; color: #333; line-height: 1.5; word-break: break-word; }
+    .text-modal-target { font-size: 16px; color: var(--primary); line-height: 1.5; word-break: break-word; }
+    .text-modal-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      justify-content: flex-end;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .tab-btn { padding: 10px 12px; font-size: 13px; }
+      .translate-toolbar { padding: 8px 12px; }
+      .translate-image-area { padding: 8px; }
+      .drop-zone { padding: 32px 16px; }
+      .settings-layout { padding: 12px 8px; }
+      .settings-card { padding: 12px 14px; }
+      .about-layout { padding: 12px 8px; }
+      .about-card { padding: 12px 14px; }
+      .form-row { flex-direction: column; align-items: flex-start; }
+      .form-row input[type="text"], .form-row input[type="password"] { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Skip to content (accessibility) -->
+<a href="#main-content" style="position:absolute;left:-9999px;" aria-label="본문으로 건너뛰기">본문으로 건너뛰기</a>
+
+<!-- Page Heading -->
+<h1 style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">온라인 이미지 번역기 — 만화 번역, 카메라 번역, 온라인 이미지 번역 도구</h1>
+
+<!-- Tab Bar -->
+<nav class="tab-bar" aria-label="주요 메뉴">
+  <button class="tab-btn active" id="tab-translate" data-i18n="tab_translate">번역</button>
+  <button class="tab-btn" id="tab-scan" data-i18n="tab_scan">스캔</button>
+  <button class="tab-btn" id="tab-settings" data-i18n="tab_settings">설정</button>
+  <button class="tab-btn" id="tab-about" data-i18n="tab_about">정보</button>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content" id="main-content">
+
+  <!-- ===== Translate Tab ===== -->
+  <div class="tab-panel" id="panel-translate">
+    <div class="translate-layout">
+      <div class="translate-toolbar">
+        <button class="btn-secondary" id="btn-select-image" data-i18n="select_image">이미지 선택</button>
+        <button class="btn-primary" id="btn-translate" data-i18n="translate_btn">번역</button>
+        <label>
+          <input type="checkbox" id="chk-show-translated" />
+          <span data-i18n="show_translated">번역문 표시</span>
+        </label>
+      </div>
+      <div class="translate-image-area">
+        <div class="drop-zone" id="translate-drop-zone">
+          <div class="dz-icon">🖼️</div>
+          <div data-i18n="upload_image">클릭하여 업로드하거나 이미지를 끌어다 놓으세요</div>
+        </div>
+        <div class="image-container" id="translate-image-container">
+          <img id="img-source" alt="업로드한 번역 전 원본 이미지" style="display:none;" />
+          <img id="img-target" alt="번역 후 이미지(텍스트가 교체됨)" style="display:none;" />
+          <div class="text-overlay" id="translate-text-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <input type="file" id="translate-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- ===== Scan Tab ===== -->
+  <div class="tab-panel hidden" id="panel-scan">
+    <div class="scan-layout">
+      <div class="scan-toolbar">
+        <button class="btn-primary" id="btn-camera-start" data-i18n="camera_start">카메라 열기</button>
+        <button class="btn-secondary" id="btn-scan-gallery" data-i18n="scan_gallery">이미지 불러오기</button>
+      </div>
+      <div class="scan-results" id="scan-results"></div>
+    </div>
+    <input type="file" id="scan-file-input" accept="image/*" style="display:none;" />
+  </div>
+
+  <!-- Full-screen Scan Overlay (outside tab panels, covers entire viewport) -->
+  <div class="scan-fullscreen" id="scan-fullscreen">
+    <img id="scan-fs-image" alt="스캔 이미지" style="display:none;" />
+    <video id="scan-fs-video" muted autoplay playsinline style="display:none;"></video>
+    <div class="scan-selection-mask" id="scan-selection-mask">
+      <div class="scan-selection-box" id="scan-selection-box"></div>
+    </div>
+    <button class="scan-fs-btn close" id="scan-fs-close" title="닫기">✕</button>
+    <select class="scan-fs-camera-select" id="scan-fs-camera-select" style="display:none;"></select>
+    <button class="scan-fs-btn capture" id="scan-fs-capture" data-i18n="scan_capture_btn">촬영</button>
+  </div>
+
+  <!-- ===== Settings Tab ===== -->
+  <div class="tab-panel hidden" id="panel-settings">
+    <div class="settings-layout">
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_translation">번역</div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_source_lang">원본 언어</span>
+            <select id="setting-sourceLang"></select>
+          </label>
+          <label>
+            <span data-i18n="settings_target_lang">대상 언어</span>
+            <select id="setting-targetLang"></select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_translation_mode">번역 모드</span>
+            <select id="setting-translationMode">
+              <option value="imagetrans" data-i18n="settings_mode_imagetrans">ImageTrans</option>
+              <option value="local" data-i18n="settings_mode_local">로컬 PaddleOCR</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_default_preset">기본 프리셋</span>
+            <select id="setting-defaultPresetTranslation">
+              <option value="mymemory" data-i18n="settings_preset_mymemory">MyMemory</option>
+              <option value="original" data-i18n="settings_preset_original">원문</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_server">서버 연결</div>
+        <div class="form-row">
+          <label><span data-i18n="settings_server_url">서버 URL</span></label>
+          <input type="text" id="setting-serverURL" class="wide" />
+        </div>
+        <div class="form-row">
+          <button class="btn-secondary btn-sm" id="btn-public-server" data-i18n="settings_public_server">공용 서버 사용</button>
+          <button class="btn-secondary btn-sm" id="btn-local-server" data-i18n="settings_local_server">로컬 서버 사용</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_display_name">표시 이름</span></label>
+          <input type="text" id="setting-displayName" placeholder="default" />
+          <button class="btn-secondary btn-sm" id="btn-check-instances" data-i18n="settings_check_instances">기존 인스턴스 확인</button>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_password">비밀번호(선택 사항)</span></label>
+          <input type="password" id="setting-password" />
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_rendering">이미지 캡처 및 렌더링</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-renderTextInFrontend" />
+            <span data-i18n="settings_render_frontend">프런트엔드에서 텍스트 렌더링</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="settings_font_css">글꼴 CSS</label>
+          <textarea id="setting-renderTextCSS" rows="3"></textarea>
+        </div>
+        <div class="form-row" style="gap:6px;">
+          <span style="font-size:12px;color:var(--text-secondary);" data-i18n="css_presets">CSS 프리셋:</span>
+          <button class="btn-secondary btn-sm" id="css-default" data-i18n="css_default">기본</button>
+          <button class="btn-secondary btn-sm" id="css-center" data-i18n="css_center">가운데 정렬</button>
+          <button class="btn-secondary btn-sm" id="css-center-bold" data-i18n="css_center_bold">가운데 정렬 + 굵게</button>
+          <button class="btn-secondary btn-sm" id="css-rounded" data-i18n="css_rounded">둥근 모서리 + 가운데 정렬</button>
+          <button class="btn-secondary btn-sm" id="css-uppercase" data-i18n="css_uppercase">대문자 + 가운데 정렬</button>
+          <button class="btn-secondary btn-sm" id="css-rounded-uppercase" data-i18n="css_rounded_uppercase">둥근 모서리 + 대문자</button>
+          <button class="btn-secondary btn-sm" id="css-vertical" data-i18n="css_vertical">세로쓰기</button>
+          <button class="btn-secondary btn-sm" id="css-rtl" data-i18n="css_rtl">아랍어(RTL)</button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_openai">OpenAI 호환 API(선택 사항)</div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useOpenAI" />
+            <span data-i18n="settings_enable_openai">OpenAI 호환 API 사용</span>
+          </label>
+        </div>
+        <div id="openai-section" style="display:none;">
+          <div class="form-row">
+            <label><span data-i18n="settings_ocr_method">OCR 방식</span></label>
+            <select id="setting-ocrMethod">
+              <option value="paddleocr" data-i18n="settings_ocr_paddleocr">PaddleOCR(로컬)</option>
+              <option value="imagetrans" data-i18n="settings_ocr_imagetrans">ImageTrans</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_url">API URL</span></label>
+            <input type="text" id="setting-openaiURL" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_api_key">API Key</span></label>
+            <input type="password" id="setting-openaiKey" class="wide" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_model">모델</span></label>
+            <input type="text" id="setting-openaiModel" />
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_prompt">프롬프트</span></label>
+            <textarea id="setting-openaiPrompt" rows="4"></textarea>
+          </div>
+          <div class="form-row">
+            <label><span data-i18n="settings_openai_extra_params">추가 파라미터(JSON)</span></label>
+            <input type="text" id="setting-openaiExtraParams" class="wide" placeholder='{"thinking":{"type":"disabled"}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_image_processing">이미지 처리(PaddleOCR용)</div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_ocr_backend">OCR 백엔드</span>
+            <select id="setting-ocrBackend">
+              <option value="webgpu" data-i18n="settings_ocr_backend_webgpu">WebGPU(가장 빠름, 최신 브라우저)</option>
+              <option value="forcewebgpu" data-i18n="settings_ocr_backend_force_webgpu">WebGPU 강제(모든 브라우저에서 시도)</option>
+              <option value="wasm" data-i18n="settings_ocr_backend_wasm">WebAssembly</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_x_spacing">X 간격(px)</span></label>
+          <input type="number" id="setting-xSpacing" min="0" max="200" />
+          <label><span data-i18n="settings_y_spacing">Y 간격(px)</span></label>
+          <input type="number" id="setting-ySpacing" min="0" max="200" />
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLODetection" />
+            <span data-i18n="settings_use_yolo">YOLO로 텍스트 감지 사용</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="setting-useYOLOForJapanese" />
+            <span data-i18n="settings_use_yolo_jp">일본어에 YOLO 감지 사용</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="settings_paddle_det_model">PaddleOCR 감지 모델</span>
+            <select id="setting-paddleDetModel">
+              <option value="tiny" data-i18n="settings_paddle_det_tiny">Tiny(더 빠름)</option>
+              <option value="small" data-i18n="settings_paddle_det_small">Small(더 정확)</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label><span data-i18n="settings_paddle_extra_params">PaddleOCR 추가 파라미터(JSON)</span></label>
+          <textarea id="setting-paddleExtraParams" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <div class="settings-card-title" data-i18n="settings_ui_lang">인터페이스 언어</div>
+        <div class="form-row">
+          <select id="setting-uiLanguage">
+            <option value="" data-i18n="options_ui_lang_default">브라우저 기본값</option>
+            <option value="en" data-i18n="options_ui_lang_en">English</option>
+            <option value="zh_CN" data-i18n="options_ui_lang_zh">中文</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-save" id="btn-settings-save" data-i18n="settings_save">설정 저장</button>
+    </div>
+  </div>
+
+  <!-- ===== 정보 탭 ===== -->
+  <div class="tab-panel hidden" id="panel-about">
+    <div class="about-layout">
+      <!-- 이 온라인 도구 정보 -->
+      <div class="about-card">
+        <h2 data-i18n="about_title">온라인 이미지 번역기 소개</h2>
+        <p data-i18n="about_intro">온라인 이미지 번역기는 무료 오픈 소스 웹 도구로, 만화, 스크린샷, 사진 등 이미지 속 텍스트를 브라우저에서 바로 번역할 수 있습니다. 설치가 필요하지 않습니다.</p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_how_it_works">작동 방식</h3>
+        <p><strong data-i18n="about_mode_1_label">로컬 PaddleOCR 모드:</strong><span data-i18n="about_mode_1_desc">OCR이 전적으로 브라우저에서 실행되며(PaddleOCR을 WebAssembly로 컴파일), 번역에는 무료 MyMemory API 또는 OpenAI 호환 API(ChatGPT, DeepSeek 등)를 사용하므로 서버가 필요하지 않습니다.</span></p>
+        <p style="margin-top:8px;"><strong data-i18n="about_mode_2_label">ImageTrans 서버 모드:</strong><span data-i18n="about_mode_2_desc">ImageTrans 서버(공용 서버 또는 자체 서버)에 연결하여 OCR 인식, 번역, 텍스트 렌더링을 한 번에 처리합니다.</span></p>
+      </div>
+
+      <div class="about-card">
+        <h3 data-i18n="about_source_code">소스 코드</h3>
+        <p data-i18n="about_source_code_desc">이 프로젝트는 MIT 라이선스로 공개되어 있습니다. GitHub에서 소스 코드를 확인하고, 문제를 보고하거나 기여할 수 있습니다.</p>
+        <a href="https://github.com/xulihang/online-image-translator" target="_blank" rel="noopener" class="about-link" data-i18n="about_source_code_link">GitHub에서 보기</a>
+      </div>
+
+      <!-- 보조 도구 -->
+      <div class="about-card about-supplementary">
+        <h3 data-i18n="about_supplementary">보조 도구</h3>
+
+        <h4 data-i18n="about_desktop">ImageTrans 데스크톱 버전</h4>
+        <p data-i18n="about_desktop_desc">번역 서비스를 로컬에 구축하거나, 이미지를 일괄 번역하거나, 번역 결과를 직접 편집해야 하시나요? ImageTrans 데스크톱 버전은 이미지 편집기가 내장된 완전한 기능의 컴퓨터 지원 이미지 번역 소프트웨어로, 다양한 OCR 엔진과 번역 서비스를 지원합니다.</p>
+        <a href="https://www.basiccat.org/ko/imagetrans/" target="_blank" rel="noopener" class="about-link" data-i18n="about_desktop_cta">데스크톱 버전 자세히 보기</a>
+
+        <h4 data-i18n="about_extension" style="margin-top:14px;">브라우저 확장 프로그램</h4>
+        <p data-i18n="about_extension_desc">ImageTrans는 브라우저 확장 프로그램도 제공합니다. 웹 페이지의 이미지를 감지하고 번역하여 번역된 만화를 온라인에서 편하게 읽을 수 있습니다.</p>
+        <a href="https://www.basiccat.org/zh/translate-images-on-webpages-with-extension/" target="_blank" rel="noopener" class="about-link" data-i18n="about_extension_cta">확장 프로그램 자세히 보기</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Status Mask -->
+<div class="status-mask" id="status-mask">
+  <div class="status-spinner"></div>
+  <div class="status-text" id="status-text">번역 중...</div>
+</div>
+
+<!-- First-run Setup Modal -->
+<div class="setup-modal" id="setup-modal">
+  <div class="setup-modal-content">
+    <h2>온라인 이미지 번역기에 오신 것을 환영합니다</h2>
+    <p style="color:var(--text-secondary);margin-bottom:16px;">번역 방식과 언어를 선택하고 시작하세요.</p>
+
+    <div class="setup-section">
+      <div class="setup-label">번역 방식</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-server">
+          <input type="radio" name="setup-mode" value="imagetrans" checked />
+          <div class="setup-option-content">
+            <strong>ImageTrans 서버</strong>
+            <span>원격 또는 로컬 ImageTrans 서버에 연결합니다. 가장 좋은 품질을 제공하며 레이아웃과 렌더링을 자동으로 처리합니다.</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-local">
+          <input type="radio" name="setup-mode" value="local" />
+          <div class="setup-option-content">
+            <strong>로컬 PaddleOCR</strong>
+            <span>브라우저에서 OCR을 실행합니다. 무료이며 서버가 필요하지 않습니다. MyMemory(무료) 또는 직접 발급받은 API Key(ChatGPT / DeepSeek / OpenAI 호환 서비스)로 번역합니다.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="setup-section">
+      <div class="setup-label">언어</div>
+      <div class="setup-row">
+        <label>원본 언어 <select id="setup-sourceLang"></select></label>
+        <label>→ 대상 언어 <select id="setup-targetLang"></select></label>
+      </div>
+    </div>
+
+    <div class="setup-section" id="setup-server-section">
+      <div class="setup-label">서버 URL(선택 사항)</div>
+      <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
+    </div>
+
+    <button class="btn-primary" id="btn-setup-start" style="width:100%;padding:12px;font-size:15px;font-weight:600;margin-top:8px;">시작하기</button>
+    <div style="text-align:center;margin-top:8px;">
+      <a href="javascript:void(0)" id="btn-setup-skip" style="color:var(--text-secondary);font-size:13px;">건너뛰고 기본 설정 사용</a>
+    </div>
+  </div>
+</div>
+
+<!-- Text Modal -->
+<div class="text-modal" id="text-modal">
+  <div class="text-modal-content">
+    <div class="text-modal-header">
+      <h3 data-i18n="text_detail">텍스트 상세</h3>
+      <button class="modal-close">✕</button>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="source_text">원문</div>
+      <div class="text-modal-source modal-source"></div>
+    </div>
+    <div class="text-modal-section">
+      <div class="text-modal-label" data-i18n="target_text">번역문</div>
+      <div class="text-modal-target modal-target"></div>
+    </div>
+    <div class="text-modal-actions">
+      <select class="modal-tts-select" id="modal-tts-select" style="flex:1;min-width:0;"></select>
+      <button class="btn-secondary btn-sm modal-copy-btn" data-i18n="scan_copy">복사</button>
+      <button class="btn-secondary btn-sm modal-tts-btn" data-i18n="scan_speak">읽기</button>
+    </div>
+  </div>
+</div>
+
+<noscript><div style="padding:20px;text-align:center;background:#fff3cd;border-bottom:1px solid #ffc107;font-size:14px;">이 앱을 사용하려면 JavaScript가 필요합니다. 브라우저 설정에서 JavaScript를 사용하도록 설정하세요.</div></noscript>
+
+<!-- Application Modules -->
+<script>
+  // 한국어 페이지는 기본적으로 한국어 인터페이스를 사용합니다
+  if (!localStorage.getItem('uiLanguage')) {
+    localStorage.setItem('uiLanguage', 'zh_CN');
+  }
+</script>
+<script src="/online-image-translator/js/polyfills.js"></script>
+<script src="/online-image-translator/js/settings.js"></script>
+<script src="/online-image-translator/js/fittext.js"></script>
+<script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/ocr.js"></script>
+<script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
+<script src="/online-image-translator/js/render.js"></script>
+<script src="/online-image-translator/js/translate.js"></script>
+<script src="/online-image-translator/js/app.js"></script>
+
+</body>
+</html>

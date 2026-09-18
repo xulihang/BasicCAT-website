@@ -1,0 +1,297 @@
+---
+title: ImageTrans - 컴퓨터 보조 이미지 및 만화 번역 소프트웨어
+layout: page
+description: ImageTrans는 컴퓨터 보조 이미지 및 만화 번역 소프트웨어입니다. 텍스트 자동 감지, OCR 인식, 원문 지우기, 전문적인 조판으로 번역문 재삽입을 지원합니다. 다양한 OCR 엔진, AI 번역(ChatGPT, Gemini, DeepSeek), 세로쓰기, 스크린톤 보존, PSD 내보내기, 일괄 처리를 지원합니다. 전자상거래 이미지, 문서 번역, 자막 추출에도 활용할 수 있습니다. API와 AI 에이전트 호출을 지원하는 크로스 플랫폼 데스크톱 소프트웨어입니다.
+lang: ko
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+  }
+  .it-section p {
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+  .it-feature-card p + p { margin-top: 10px; }
+  .it-feature-card ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.8; }
+  .it-feature-card li { padding-left: 16px; position: relative; margin-bottom: 2px; }
+  .it-feature-card li::before { content: '•'; position: absolute; left: 0; color: var(--it-primary); }
+  .it-feature-card li a { color: var(--it-primary); }
+  .it-feature-card strong { font-size: 13px; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-features,
+    .it-testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Intro ===== -->
+<div class="it-intro">
+  <p>ImageTrans는 컴퓨터 보조 이미지 텍스트 전사 및 번역 도구로, OCR 기술을 사용해 텍스트를 자동으로 찾아 인식하고, 원문을 자동으로 지운 뒤 번역문을 다시 채워 넣습니다. 또한 만화를 위해 설계된 텍스트 영역 병합 및 감지 알고리즘을 갖추고 있습니다.</p>
+  <img src="/album/imagetrans_zh.jpg" alt="ImageTrans 인터페이스 스크린샷" width="1024" height="731" loading="lazy" />
+  <p>ImageTrans는 포스터나 만화를 번역하는 이미지 번역기로 사용할 수 있을 뿐만 아니라, 이미지 읽기, 텍스트 전사, 스크린샷 OCR 번역, PDF를 마크다운으로 변환 및 번역, 스캔 문서의 이중 레이어 검색 가능 PDF 생성, 딥러닝 라벨링 등의 용도로도 활용할 수 있습니다.</p>
+  <p>ImageTrans는 제 석사 학위 논문의 성과물입니다: <a href="https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool" target="_blank">만화 번역 보조 도구의 설계와 구현</a>.</p>
+  <p><a href="#get-a-copy">ImageTrans 받기</a></p>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>핵심 기능</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>텍스트 영역 정확하게 찾기</h4>
+      <p>자연 장면 텍스트 감지, 객체 감지, 휴리스틱 등 여러 방법을 지원하며, 만화 말풍선을 위해 설계된 텍스트 영역 병합 및 감지 알고리즘을 갖추고 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>다중 엔진 OCR 인식</h4>
+      <p>다양한 OCR 엔진과 <a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">사용자 정의 플러그인</a>을 지원하며, 세계 주요 언어를 커버합니다. <a href="/zh/vertical-japanese-chinese-OCR/">세로쓰기 중·일문 인식</a>을 지원하고, 레이아웃 분석으로 읽기 순서를 결정합니다. <a href="/zh/use-large-language-models-to-get-good-OCR-results/">대규모 언어 모델을 활용해 OCR 정확도를 교정·개선</a>할 수 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>번역</h4>
+      <p><strong>기계 번역:</strong> 다양한 기계 번역 엔진과 AI 대규모 언어 모델(ChatGPT, Gemini, DeepSeek 등)을 지원합니다. <a href="/zh/context-matters-for-image-translation/">문맥 정보를 활용해 번역 품질을 높입니다</a>.</p>
+      <p><strong>보조 기능:</strong> 여러 결과 나란히 비교, 번역 메모리, 말뭉치 검색, 용어 관리, <a href="/zh/how-to-add-pronunciation-annotation-furigana-to-Japanese-kanji/">후리가나와 병음 주석</a>, 그리고 만화 의성어 검색 시스템을 제공합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🧹</div>
+      <h4>텍스트 제거</h4>
+      <p>이진화, PatchMatch, Lama Inpaint, <a href="/zh/nano-banana-manga-translation/">Gemini Nano Banana</a> 등의 알고리즘과 AI 모델로 텍스트 마스크를 생성해 텍스트를 제거합니다. <a href="/zh/remove-text-in-manga-preserving-screentone/">텍스트를 제거할 때 만화 스크린톤을 보존</a>합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>텍스트 조판</h4>
+      <ul>
+        <li>글꼴 크기 자동 조정</li>
+        <li><a href="/zh/lettering-guide-for-Japanese-English-manga-translation/">공백으로 단어를 구분하는 언어의 줄바꿈 최적화</a>(일→영 번역 등)</li>
+        <li><a href="/zh/handling-of-punctuation-at-starting-or-ending-positionin-type-setting/">구두점 줄머리·줄끝 회피 처리</a></li>
+        <li>서식 있는 텍스트와 글꼴 스타일(Word와 유사한 스타일 시스템)</li>
+        <li><a href="/zh/how-to-detect-text-color-in-image/">텍스트 색상 감지</a></li>
+        <li>회전 각도 감지</li>
+        <li>세로쓰기 조판</li>
+      </ul>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>PSD 내보내기</h4>
+      <p>결과를 Photoshop PSD 파일로 저장하며, 텍스트가 레이어로 분리되어 디자이너가 후처리하기 편리합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>일괄 처리</h4>
+      <p>수백 장의 이미지를 한 번에 처리합니다. 사용자 정의 작업 흐름, 명령줄 호출, 다중 프로세스 병렬 처리를 지원해 고속으로 대량 결과물을 만들어 냅니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>직관적이고 강력한 인터페이스</h4>
+      <p>시각적 편집기와 실시간 미리보기를 제공합니다. OCR, 번역, 이미지 보정, 레터링, 검색 및 바꾸기, 사용자 정의 워크플로 등 다양한 작업을 단계별로 실행할 수 있습니다 — 통일된 인터페이스에서 강력하면서도 사용하기 쉽습니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extra Features ===== -->
+<div class="it-section">
+  <h2>더 많은 기능</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📄</div>
+      <h4>PDF 번역과 Markdown 변환</h4>
+      <p><a href="/zh/pdf-paper-translation-and-conversion-to-markdown/">PDF를 번역해 Markdown으로 변환</a>하고, 원문·번역문·대역으로 출력할 수 있으며 다단 논문, 수식, 표, 각주 등의 구조를 유지합니다. <a href="/zh/how-to-create-searchable-pdf-from-scanned-documents/">검색 가능한 이중 레이어 PDF를 생성</a>합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>화면 실시간 번역</h4>
+      <p><a href="/zh/real-time-screen-translator/">화면의 임의 영역을 실시간으로 캡처해 번역</a>합니다. 내용 변화를 자동으로 감지하고 번역 메모리 즉시 일치를 지원합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎬</div>
+      <h4>동영상 하드코딩 자막 추출</h4>
+      <p><a href="/zh/how-to-extract-hardcoded-subtitle/">동영상의 하드코딩 자막을 추출</a>합니다. 빠른 OCR 텍스트 감지를 활용해 빠르고 정확하며, SRT 자막 파일로 출력합니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📷</div>
+      <h4>문서 스캔과 이미지 개선</h4>
+      <p>TWAIN / WIA / SANE / ICA / eSCL 통합 스캔을 지원합니다. <a href="/zh/clean-deskew-enhance-scanned-books/">스캔한 책을 정리하고 기울기를 보정하며 개선</a>해 최상의 이미지 전처리 효과를 얻습니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Usability ===== -->
+<div class="it-section">
+  <h2>사용 편의성</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⌨️</div>
+      <h4>키보드 단축키</h4>
+      <p>거의 모든 작업이 키보드 단축키를 지원하므로 마우스로 자주 오갈 필요 없이 작업 흐름이 빠르고 효율적입니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>명령줄과 API 호출</h4>
+      <p>명령줄을 통해 ImageTrans를 호출해 자동화 작업을 수행할 수 있습니다. <a href="/zh/self-hosted-manga-translation-api-server/" target="_blank" rel="noopener">API 서버</a>로 실행해 HTTP로 번역 서비스를 제공하므로 어떤 애플리케이션이나 서비스와도 손쉽게 통합할 수 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚙️</div>
+      <h4>사용자 정의 워크플로</h4>
+      <p>감지, OCR, 번역, 렌더링 등 처리 단계를 자유롭게 조합해 필요에 맞는 자동화 워크플로를 구성할 수 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🤖</div>
+      <h4>AI Agent 통합</h4>
+      <p><a href="https://github.com/xulihang/ImageTrans-skills" target="_blank" rel="noopener">ImageTrans Skills</a>를 통해 AI Agent가 ImageTrans를 호출할 수 있습니다 — 구조화된 스킬 정의로 LLM 기반 에이전트가 번역 작업을 프로그래밍 방식으로 수행할 수 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📐</div>
+      <h4>스마트 정렬과 검색·바꾸기</h4>
+      <p>텍스트 상자를 이동할 때 정렬 안내선을 표시하고, 선택한 상자를 원문 텍스트 위치에 일괄 정렬하며, 검색 및 바꾸기 기능을 내장하고 있습니다. <a href="/zh/e-commerce-image-translation/">전자상거래 이미지 번역</a> 등의 시나리오에 적합합니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>크로스 플랫폼 · 낮은 하드웨어 요구 사항</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>Windows 7+, macOS 10.11+ 및 Linux를 지원합니다. 서버로도 실행할 수 있어 모바일 기기로 이미지를 스캔하고 번역할 수 있습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>가볍고 효율적</h4>
+      <p>Java 실행 환경과 모델을 포함해 약 400 MB이며, 오래되었거나 저사양인 기기에서도 실행됩니다. 오프라인 작업을 지원하므로 인터넷 연결이 필요 없습니다.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>상호 운용성</h4>
+      <p>PSD 내보내기, Excel/Word/XLIFF 데이터 교환, LabelPlus 프로젝트 변환을 지원하며, <a href="./extension/" target="_blank">Chrome 확장 프로그램</a>과 함께 사용해 웹페이지의 이미지를 번역할 수 있습니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>번역 예시</h2>
+  <p>ImageTrans는 다양한 텍스트 감지, 문자 인식, 기계 번역 방법을 자유롭게 조합해 여러 가지 이미지를 처리할 수 있습니다. 갤러리에는 <a href="/zh/how-to-build-a-local-manga-translation-workshop/">만화 번역</a>, <a href="/zh/e-commerce-image-translation/">전자상거래 이미지 번역</a> 등 다양한 예시가 포함되어 있습니다. 갤러리에서 실제 결과를 확인해 보세요:</p>
+  <p>
+    <a href="/ko/gallery/" class="it-btn-buy" style="display: inline-block;">갤러리 보기 →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>ImageTrans 받기</h2>
+  <p>ImageTrans는 FastSpring에서 구매하실 수 있습니다: <a href="https://basiccat.onfastspring.com/" target="_blank">링크</a></p>
+  <p>가격:</p>
+  <ul>
+    <li>개인용: $10.99</li>
+    <li>상업용: $299</li>
+  </ul>
+  <p>1회 구매로 영구 사용. 6개월간 무료 업데이트.</p>
+  <p>구매나 결제 과정에서 문제가 있으시면 <a href="mailto:admin@basiccat.org">이메일</a>로 연락해 주세요.</p>
+  <p>팬 번역 그룹이나 대학 교수·학생도 이메일로 연락해 할인을 신청할 수 있습니다.</p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>사용자 평가</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>이 소프트웨어를 일주일째 사용하고 있는데, 아마추어 번역가인 저희에게 정말 큰 도움이 됩니다. Photoshop에서는 2~3시간 걸리던 작업이 이제는 1시간이면 끝납니다.</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>이 프로그램은 웹 곳곳의 다양한 소프트웨어와 통합되고, 사용자의 문의에 즉시 유용한 답변을 제공하는 점이 정말 뛰어납니다.</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>더 많은 자료</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 소프트웨어 문서</a>
+    <a href="/ko/imagetrans/release-notes/" class="it-link-chip">📋 릴리스 노트</a>
+    <a href="/ko/imagetrans/video/" class="it-link-chip">🎬 동영상 튜토리얼</a>
+    <a href="/ko/imagetrans/faq/" class="it-link-chip">❓ 자주 묻는 질문</a>
+    <a href="/ko/support/" class="it-link-chip">🛠️ 기술 지원</a>
+    <a href="/ko/tagged/#imagetrans" class="it-link-chip">📝 기술 블로그</a>
+    <a href="/ko/imagetrans/how-to-contribute/" class="it-link-chip">🤝 기여하기</a>
+  </div>
+</div>

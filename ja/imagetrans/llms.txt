@@ -5,5 +5,5 @@
 ## 目次
 
 - [ホーム](https://www.basiccat.org/ja/imagetrans/)
-- [ブログ](https://www.basiccat.org/zh/tagged/#imagetrans)
+- [ブログ](https://www.basiccat.org/ja/tagged/#imagetrans)
 - [ドキュメント](https://imagetrans.readthedocs.io/en/latest/)

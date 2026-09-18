@@ -1,0 +1,50 @@
+---
+layout: default
+title: Tagged
+lang: ko
+---
+
+{% assign posts=site.ko | where: "layout", "post" | where: "categories", "blog" %}
+
+{% assign rawtags = "" %}
+{% for post in posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+<div class="home">
+	<section class="site-header">
+		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.header }}</a></h1>
+		<p>태그가 달린 글은 모두 여기에 나열됩니다.</p>
+	</section>
+
+	<section>
+		{% for tag in tags %}
+		<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
+		<ul class="post-list">
+
+		{% for post in posts reversed %}
+	    {% if post.tags contains tag %}
+			<li>
+				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y년 %-m월 %-d일" }}</time>
+			</li>
+			{% endif %}
+	    {% endfor %}
+		</ul>
+		{% endfor %}
+	</section>
+
+</div>

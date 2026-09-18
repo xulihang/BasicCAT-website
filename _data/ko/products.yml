@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /ko
+    description: BasicCAT은 무료 오픈 소스 컴퓨터 지원 번역 도구입니다. 번역 메모리, 기계 번역, 용어 관리 등의 기능을 활용해 문서, 웹 페이지, 표, 슬라이드 등을 번역할 수 있습니다.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /ko/imagetrans
+    description: ImageTrans는 컴퓨터 지원 이미지 번역 도구입니다. 만화, 망가, 포스터 등을 번역하는 데 사용할 수 있습니다.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /ko/silhouette
+    description: Silhouette는 영상과 음성을 위한 컴퓨터 지원 번역 도구입니다.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner는 병렬 텍스트 정렬 도구입니다. 문서, 표, 자막에서 텍스트를 추출해 문장 단위로 자동 정렬하며 수동 조정도 지원합니다. 병렬 텍스트를 번역 메모리 파일로 내보내 다른 도구에서 사용할 수 있습니다.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /ko/TMXSearch/
+    description: TMXSearch는 번역 메모리 검색을 위한 온라인 애플리케이션입니다.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: 온라인 이미지 번역기
+    href: /ko/online-image-translator/
+    description: 이미지 전체를 번역하거나 휴대폰 카메라로 읽어서 번역할 수 있는 온라인 이미지 번역기입니다.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: 온라인 이미지 번역기
