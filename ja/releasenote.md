@@ -25,7 +25,10 @@ lang: ja
 
 <section>
     <ul class="post-list">
-        {% assign posts=site.zh | where: "layout", "post" | where: "categories", "releasenote" %}
+        {% comment %}
+          日本語版のリリースノート記事はまだ翻訳していないため、一覧は空になります。
+        {% endcomment %}
+        {% assign posts=site.ja | where: "layout", "post" | where: "categories", "releasenote" %}
         {% for post in posts reversed %}
         <li>
             <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>

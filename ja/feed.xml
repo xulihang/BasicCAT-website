@@ -12,7 +12,10 @@ lang: ja
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% assign posts=site.zh | where: "layout", "post" | reverse %}
+    {% comment %}
+      日本語版のブログ記事はまだ翻訳していないため、フィードは空になります。
+    {% endcomment %}
+    {% assign posts=site.ja | where: "layout", "post" | reverse %}
     {% for post in posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>

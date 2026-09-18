@@ -64,6 +64,11 @@ collections:
   zh:
     output: true
     permalink: /:collection/:title/
+  # 日本語版のブログ記事はまだ翻訳していないため、現時点では空のコレクションです。
+  # _ja ディレクトリに記事を追加すれば、/ja/blog/ と /ja/tagged/ に反映されます。
+  ja:
+    output: true
+    permalink: /:collection/:title/
     
 relative_links:
   enabled:     true
