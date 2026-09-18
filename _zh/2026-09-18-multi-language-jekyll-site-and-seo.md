@@ -1,7 +1,7 @@
 ---
 date: 2026-09-18 19:40:00+08:00
 layout: post
-title: 用Jekyll给网站加多语言支持和SEO优化
+title: Jekyll站点多语言支持和SEO优化
 categories: blog
 tags: jekyll
 ---
