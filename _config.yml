@@ -54,6 +54,7 @@ defaults:
       path: "_zh"
     values:
       locale: "zh_CN"
+      lang: "zh"
   - scope:
       path: "zh"
     values:
