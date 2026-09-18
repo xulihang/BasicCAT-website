@@ -1,0 +1,17 @@
+{% comment %}
+  Machine-translation notice.
+  Shown only when the current language is flagged with machine_translated: true
+  in _config.yml. Links to the English version of the same page when one exists
+  (englishurl is computed in default.html).
+{% endcomment %}
+{% if cur.machine_translated %}
+  {% assign t = site.data[lang].text %}
+  {% if t == nil %}{% assign t = site.data.text %}{% endif %}
+<div class="mt-notice" role="note">
+  <span class="mt-notice-icon" aria-hidden="true">&#9888;</span>
+  <span class="mt-notice-text">{{ t.mt_notice }}</span>
+  {% if englishurl %}
+  <a class="mt-notice-link" href="{{ englishurl | prepend: site.baseurl | prepend: site.url }}">{{ t.mt_notice_link }}</a>
+  {% endif %}
+</div>
+{% endif %}

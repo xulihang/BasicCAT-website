@@ -14,6 +14,31 @@
     cursor: pointer;
 }
 
+.mt-notice{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    margin: 0 0 16px 0;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #7a5c00;
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 4px;
+}
+
+.mt-notice-icon{
+    flex: none;
+}
+
+.mt-notice-link{
+    flex: none;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
 .post-content iframe{
     width:100%;
     height:500px;

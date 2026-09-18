@@ -25,6 +25,8 @@ languages:
     locale: ja
     # 日本語版のドキュメントサイトはまだ無いため、英語版にフォールバックします
     doclang: en/latest/
+    # 機械翻訳されたページには「機械翻訳」の通知バーを表示します
+    machine_translated: true
 
 # Build settings
 kramdown:

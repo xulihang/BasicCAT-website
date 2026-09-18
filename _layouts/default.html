@@ -18,6 +18,7 @@
 {% endcomment %}
 {% assign altlangs = '' | split: '' %}
 {% assign altlabels = '' | split: '' %}
+{% assign englishurl = nil %}
 {% for l in site.languages %}
   {% assign cand = l.url | append: rest | replace: '//', '/' %}
   {% assign is_cur = false %}
@@ -28,6 +29,7 @@
     {% assign altlangs = altlangs | push: cand %}
     {% assign altlabels = altlabels | push: l.label %}
   {% endif %}
+  {% if l.code == 'en' and found != nil %}{% assign englishurl = cand %}{% endif %}
 {% endfor %}
 
 <!DOCTYPE html>
@@ -44,6 +46,7 @@
       </select>
     </div>
     {% endif %}
+    {% include mt_notice.html %}
     <div class="page-content">
       {{ content }}
       <div class="copyright">
