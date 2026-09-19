@@ -1,0 +1,297 @@
+---
+title: ImageTrans - برنامج الترجمة بمساعدة الحاسوب للصور والقصص المصورة
+layout: page
+description: ImageTrans برنامج للترجمة بمساعدة الحاسوب للصور والقصص المصورة. يكتشف النصوص تلقائيًا ويتعرّف عليها بتقنية OCR ويمحو النص الأصلي ويعيد إدراج الترجمة بتنسيق احترافي. يدعم محركات OCR متعددة، والترجمة بالذكاء الاصطناعي (ChatGPT وGemini وDeepSeek)، والنص العمودي، والحفاظ على التظليل الشبكي، والتصدير إلى PSD، والمعالجة بالدفعات. يصلح أيضًا لصور التجارة الإلكترونية وترجمة المستندات واستخراج الترجمات. برنامج سطح مكتب متعدد المنصات يدعم الاستدعاء عبر API ووكلاء الذكاء الاصطناعي.
+lang: ar
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+  }
+  .it-section p {
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+  .it-feature-card p + p { margin-top: 10px; }
+  .it-feature-card ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.8; }
+  .it-feature-card li { padding-left: 16px; position: relative; margin-bottom: 2px; }
+  .it-feature-card li::before { content: '•'; position: absolute; left: 0; color: var(--it-primary); }
+  .it-feature-card li a { color: var(--it-primary); }
+  .it-feature-card strong { font-size: 13px; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-features,
+    .it-testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Intro ===== -->
+<div class="it-intro">
+  <p>ImageTrans أداة لنسخ النصوص في الصور وترجمتها بمساعدة الحاسوب. تستطيع تحديد مواضع النصوص والتعرّف عليها تلقائيًا بتقنية OCR، ومحو النص الأصلي وإعادة إدراج الترجمة محلّه، كما تمتلك خوارزمية لدمج مناطق النص واكتشافها مصمّمة خصيصًا للقصص المصورة.</p>
+  <img src="/album/imagetrans_zh.jpg" alt="لقطة شاشة لواجهة ImageTrans" width="1024" height="731" loading="lazy" />
+  <p>وإلى جانب استخدام ImageTrans كمترجم للصور لترجمة الملصقات والقصص المصورة، يمكن استخدامه أيضًا لقراءة الصور، ونسخ النصوص، وترجمة لقطات الشاشة بتقنية OCR، وتحويل PDF إلى markdown وترجمته، وإنشاء ملفات PDF مزدوجة الطبقات قابلة للبحث من المستندات الممسوحة ضوئيًا، ووسم بيانات التعلّم العميق، وغير ذلك من الاستخدامات.</p>
+  <p>ImageTrans هو نتيجة رسالتي للماجستير: <a href="https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool" target="_blank">تصميم وتنفيذ أداة مساعدة لترجمة القصص المصورة</a>.</p>
+  <p><a href="#get-a-copy">احصل على ImageTrans</a></p>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>الميزات الأساسية</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>تحديد دقيق لمناطق النص</h4>
+      <p>يدعم عدة طرق مثل اكتشاف النص في المشاهد الطبيعية، واكتشاف الأجسام، والطرق الاستدلالية، ويمتلك خوارزمية لدمج مناطق النص واكتشافها مصمّمة خصيصًا لفقاعات الحوار في القصص المصورة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>التعرّف الضوئي على الحروف (OCR) بمحركات متعددة</h4>
+      <p>يدعم محركات OCR متعددة و<a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">إضافات مخصّصة</a>، ويغطي اللغات الرئيسية في العالم. يدعم <a href="/zh/vertical-japanese-chinese-OCR/">التعرّف على النص الياباني والصيني العمودي</a>، مع تحليل التخطيط لتحديد ترتيب القراءة. ويمكن <a href="/zh/use-large-language-models-to-get-good-OCR-results/">الاستعانة بالنماذج اللغوية الكبيرة لتدقيق نتائج OCR وتحسين دقتها</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>الترجمة</h4>
+      <p><strong>الترجمة الآلية:</strong> يدعم محركات ترجمة آلية متعددة ونماذج الذكاء الاصطناعي الكبيرة (ChatGPT وGemini وDeepSeek وغيرها). <a href="/zh/context-matters-for-image-translation/">الاستفادة من معلومات السياق لتحسين جودة الترجمة</a>.</p>
+      <p><strong>أدوات مساعدة:</strong> المقارنة الجانبية بين نتائج متعددة، والذاكرة الترجمية، والبحث في المدوّنات اللغوية، وإدارة المصطلحات، و<a href="/zh/how-to-add-pronunciation-annotation-furigana-to-Japanese-kanji/">إضافة تعليقات النطق (الفوريغانا والبينيين)</a>، إضافة إلى نظام للبحث في المحاكيات الصوتية في القصص المصورة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🧹</div>
+      <h4>إزالة النص</h4>
+      <p>يدعم الثنائية (Binarization) وPatchMatch وLama Inpaint و<a href="/zh/nano-banana-manga-translation/">Gemini Nano Banana</a> وغيرها من الخوارزميات ونماذج الذكاء الاصطناعي لإنشاء قناع للنص وإزالته. <a href="/zh/remove-text-in-manga-preserving-screentone/">الحفاظ على التظليل الشبكي للقصص المصورة عند إزالة النص</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>تنسيق النص</h4>
+      <ul>
+        <li>ضبط حجم الخط تلقائيًا</li>
+        <li><a href="/zh/lettering-guide-for-Japanese-English-manga-translation/">تحسين قطع الأسطر في اللغات المفصولة بمسافات</a> (مثل الترجمة من اليابانية إلى الإنجليزية)</li>
+        <li><a href="/zh/handling-of-punctuation-at-starting-or-ending-positionin-type-setting/">معالجة علامات الترقيم في بداية السطر ونهايته</a></li>
+        <li>نص منسّق وأنماط خطوط (على غرار نظام الأنماط في Word)</li>
+        <li><a href="/zh/how-to-detect-text-color-in-image/">اكتشاف لون النص</a></li>
+        <li>اكتشاف زاوية الدوران</li>
+        <li>تنسيق النص العمودي</li>
+      </ul>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>التصدير إلى PSD</h4>
+      <p>حفظ النتائج في ملفات Photoshop PSD مع فصل طبقات النص، مما يسهّل على المصمّمين إجراء المعالجة اللاحقة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>المعالجة بالدفعات</h4>
+      <p>معالجة مئات الصور دفعة واحدة. يدعم تخصيص خطوات العمل، والاستدعاء من سطر الأوامر، والمعالجة المتوازية بعمليات متعددة، لتحقيق إنتاج سريع بالجملة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>واجهة بديهية وقوية</h4>
+      <p>محرّر مرئي مع معاينة فورية. نفّذ خطوة بخطوة عمليات OCR والترجمة وتحرير الصور وإدراج النص والبحث والاستبدال وسير العمل المخصّص وغيرها — كل ذلك في واجهة موحّدة، قوية وسهلة الاستخدام.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extra Features ===== -->
+<div class="it-section">
+  <h2>ميزات إضافية</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📄</div>
+      <h4>ترجمة PDF والتحويل إلى Markdown</h4>
+      <p><a href="/zh/pdf-paper-translation-and-conversion-to-markdown/">ترجمة ملفات PDF وتحويلها إلى Markdown</a>، مع إمكانية إخراج النص الأصلي أو المترجم أو نسخة ثنائية اللغة، والحفاظ على بنية الأوراق متعددة الأعمدة والصيغ الرياضية والجداول والحواشي. <a href="/zh/how-to-create-searchable-pdf-from-scanned-documents/">إنشاء ملفات PDF مزدوجة الطبقات قابلة للبحث</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>الترجمة الفورية على الشاشة</h4>
+      <p><a href="/zh/real-time-screen-translator/">التقاط وترجمة أي منطقة من الشاشة في الوقت الفعلي</a>. اكتشاف تلقائي لتغيّرات المحتوى، مع دعم المطابقة الفورية من الذاكرة الترجمية.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎬</div>
+      <h4>استخراج الترجمات المدمجة في الفيديو</h4>
+      <p><a href="/zh/how-to-extract-hardcoded-subtitle/">استخراج الترجمات المدمجة من الفيديو</a> بالاعتماد على اكتشاف نص OCR سريع، بسرعة ودقة عاليتين، مع إخراج ملفات ترجمة بصيغة SRT.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📷</div>
+      <h4>مسح المستندات وتحسينها</h4>
+      <p>دعم المسح الضوئي المدمج عبر TWAIN / WIA / SANE / ICA / eSCL. <a href="/zh/clean-deskew-enhance-scanned-books/">تنظيف الكتب الممسوحة ضوئيًا وتصحيح ميلها وتحسينها</a> للحصول على أفضل نتائج المعالجة المسبقة للصور.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Usability ===== -->
+<div class="it-section">
+  <h2>سهولة الاستخدام</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⌨️</div>
+      <h4>اختصارات لوحة المفاتيح</h4>
+      <p>تدعم جميع العمليات تقريبًا اختصارات لوحة المفاتيح، فلا حاجة إلى التنقل المتكرر بالفأرة، مما يجعل سير العمل سريعًا وفعّالًا.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>سطر الأوامر والاستدعاء عبر API</h4>
+      <p>يمكن استدعاء ImageTrans من سطر الأوامر لتنفيذ المهام الآلية. كما يمكن تشغيله كـ<a href="/zh/self-hosted-manga-translation-api-server/" target="_blank" rel="noopener">خادم API</a> لتقديم خدمات الترجمة عبر HTTP، مما يسهّل التكامل مع أي تطبيق أو خدمة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚙️</div>
+      <h4>سير عمل قابل للتخصيص</h4>
+      <p>اجمع بحرية بين خطوات المعالجة المختلفة مثل الاكتشاف وOCR والترجمة والعرض، لبناء سير عمل آلي يلبّي احتياجاتك.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🤖</div>
+      <h4>التكامل مع وكلاء الذكاء الاصطناعي</h4>
+      <p>من خلال <a href="https://github.com/xulihang/ImageTrans-skills" target="_blank" rel="noopener">ImageTrans Skills</a> يمكن لوكلاء الذكاء الاصطناعي استدعاء ImageTrans — فتعريفات المهارات المهيكلة تتيح للوكلاء المدعومين بنماذج LLM تنفيذ مهام الترجمة برمجيًا.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📐</div>
+      <h4>المحاذاة الذكية والبحث والاستبدال</h4>
+      <p>إظهار خطوط المحاذاة الإرشادية عند تحريك مربّعات النص، ومحاذاة مجموعة مربّعات إلى مواضع النص الأصلي دفعة واحدة، مع وظيفة بحث واستبدال مدمجة. مناسب لحالات مثل <a href="/zh/e-commerce-image-translation/">ترجمة صور التجارة الإلكترونية</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>متعدد المنصات · متطلبات عتادية منخفضة</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>يعمل على Windows 7+ وmacOS 10.11+ وLinux. كما يمكن تشغيله كخادم لمسح الصور وترجمتها من الأجهزة المحمولة.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>خفيف وفعّال</h4>
+      <p>حجمه نحو 400 MB مع بيئة تشغيل Java والنماذج، ويمكن تشغيله على أجهزة أقدم أو منخفضة الإمكانات. يعمل دون اتصال بالإنترنت.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>قابلية التشغيل البيني</h4>
+      <p>التصدير إلى PSD، وتبادل البيانات بصيغ Excel/Word/XLIFF، وتحويل مشاريع LabelPlus، مع <a href="./extension/" target="_blank">إضافة Chrome</a> لترجمة الصور في صفحات الويب.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>أمثلة على الترجمة</h2>
+  <p>يتيح ImageTrans الجمع بحرية بين طرق مختلفة لتحديد النص والتعرّف عليه والترجمة الآلية لمعالجة شتّى أنواع الصور. ويضم المعرض أمثلة غنية مثل <a href="/zh/how-to-build-a-local-manga-translation-workshop/">ترجمة القصص المصورة</a> و<a href="/zh/e-commerce-image-translation/">ترجمة صور التجارة الإلكترونية</a> وغيرها. زُر المعرض لترى النتائج الفعلية:</p>
+  <p>
+    <a href="/ar/gallery/" class="it-btn-buy" style="display: inline-block;">تصفّح المعرض ←</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>احصل على ImageTrans</h2>
+  <p>يتوفّر ImageTrans للشراء على FastSpring: <a href="https://basiccat.onfastspring.com/" target="_blank">الرابط</a></p>
+  <p>الأسعار:</p>
+  <ul>
+    <li>للاستخدام الشخصي: $10.99</li>
+    <li>للاستخدام التجاري: $299</li>
+  </ul>
+  <p>شراء لمرة واحدة. تحديثات مجانية لمدة ستة أشهر.</p>
+  <p>إذا واجهت أي مشكلة في الشراء أو الدفع، يمكنك التواصل معي عبر <a href="mailto:admin@basiccat.org">البريد الإلكتروني</a>.</p>
+  <p>كما يمكن لفرق الترجمة التطوعية للقصص المصورة أو لطلاب الجامعات وأساتذتها مراسلتي لطلب خصم.</p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>آراء المستخدمين</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>أستخدم هذا البرنامج منذ أسبوع، وقد ساعدنا حقًا نحن المترجمين الهواة. فما كان يستغرق ساعتين إلى ثلاث ساعات في Photoshop ينجز الآن في ساعة واحدة.</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>يتميّز البرنامج بقدرته على التكامل مع مختلف البرامج المتاحة على الشبكة، وبردوده الفورية المفيدة على استفسارات المستخدمين.</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>مزيد من المصادر</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 توثيق البرنامج</a>
+    <a href="/ar/imagetrans/release-notes/" class="it-link-chip">📋 ملاحظات الإصدار</a>
+    <a href="/ar/imagetrans/video/" class="it-link-chip">🎬 دروس فيديو</a>
+    <a href="/ar/imagetrans/faq/" class="it-link-chip">❓ الأسئلة الشائعة</a>
+    <a href="/ar/support/" class="it-link-chip">🛠️ الدعم الفني</a>
+    <a href="/ar/tagged/#imagetrans" class="it-link-chip">📝 المدوّنة التقنية</a>
+    <a href="/ar/imagetrans/how-to-contribute/" class="it-link-chip">🤝 المساهمة</a>
+  </div>
+</div>

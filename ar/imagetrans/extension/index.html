@@ -1,0 +1,556 @@
+---
+title: إضافة المتصفح ImageTrans — ترجم أي صورة على الويب
+layout: page
+description: ترجم أي صورة على صفحات الويب باستخدام إضافة المتصفح ImageTrans. انقر بزر الفأرة الأيمن أو اضغط Ctrl+Shift+F لترجمة القصص المصورة والملصقات ولقطات الشاشة والصور فورًا. تدعم Chrome وFirefox.
+lang: ar
+---
+
+<style>
+  :root {
+    --ext-primary: #4a6cf7;
+    --ext-primary-hover: #3b5de7;
+    --ext-text: #333;
+    --ext-text-secondary: #333;
+    --ext-bg: #f8fafc;
+    --ext-card-bg: #ffffff;
+    --ext-border: #e2e8f0;
+    --ext-radius: 12px;
+    --ext-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --ext-shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .ext-hero {
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--ext-radius);
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .ext-hero-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+  }
+  .ext-hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #fff;
+  }
+  .ext-hero p {
+    font-size: 17px;
+    opacity: 0.9;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ext-hero-meta {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+  }
+  .ext-hero-meta span {
+    margin: 0 8px;
+  }
+
+  .ext-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .ext-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+  }
+  .ext-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+  .ext-btn-chrome {
+    background: #fff;
+    color: #333;
+  }
+  .ext-btn-firefox {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .ext-btn-firefox:hover {
+    background: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .ext-btn-edge {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .ext-btn-edge:hover {
+    background: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .ext-btn img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Section titles */
+  .ext-section {
+    margin-bottom: 36px;
+  }
+  .ext-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ext-border);
+    color: var(--ext-text);
+  }
+  .ext-section h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-text);
+  }
+  .ext-section p {
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* Feature grid */
+  .ext-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .ext-feature-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-feature-card .ext-feature-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .ext-feature-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+  }
+  .ext-feature-card p {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Steps */
+  .ext-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .ext-steps li {
+    counter-increment: step;
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px 20px 20px 52px;
+    position: relative;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 26px;
+    height: 26px;
+    background: var(--ext-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ext-steps li strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .ext-steps li span {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Shortcut badge */
+  .ext-kbd {
+    display: inline-block;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+  }
+
+  /* Info cards */
+  .ext-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .ext-info-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-info-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-primary);
+  }
+  .ext-info-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+  }
+
+  /* CTA section */
+  .ext-cta {
+    background: var(--ext-bg);
+    border: 2px dashed var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .ext-cta h3 {
+    margin-top: 0;
+  }
+  .ext-cta .ext-buttons {
+    margin-top: 16px;
+  }
+  .ext-cta .ext-btn-chrome {
+    background: #4285f4;
+    color: #fff;
+    border: none;
+  }
+  .ext-cta .ext-btn-firefox {
+    background: #ff6611;
+    color: #fff;
+    border: none;
+  }
+  .ext-cta .ext-btn-edge {
+    background: #0aa0b6;
+    color: #fff;
+    border: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .ext-hero {
+      padding: 32px 16px 28px;
+    }
+    .ext-hero-title {
+      font-size: 24px;
+    }
+    .ext-hero p {
+      font-size: 15px;
+    }
+    .ext-hero-icon {
+      width: 64px;
+      height: 64px;
+      font-size: 32px;
+      border-radius: 16px;
+    }
+    .ext-features,
+    .ext-steps,
+    .ext-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Hero -->
+<div class="ext-hero">
+  <div class="ext-hero-icon">🖼️</div>
+  <div class="ext-hero-title">إضافة المتصفح ImageTrans</div>
+  <p>ترجم أي صورة على صفحات الويب بنقرة واحدة، بتصميم مخصص للقصص المصورة والملصقات ولقطات الشاشة وغيرها من الحالات. انقر بزر الفأرة الأيمن أو استخدم اختصار لوحة المفاتيح للحصول على الترجمة.</p>
+  <div class="ext-hero-meta">
+    مجاني ومفتوح المصدر (GPL v2.0)
+  </div>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      <span>🌐</span> أضف إلى Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      <span>🦊</span> أضف إلى Firefox
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" class="ext-btn ext-btn-edge" target="_blank" rel="noopener">
+      <span>🧊</span> أضف إلى Edge
+    </a>
+  </div>
+</div>
+
+<!-- What is it -->
+<div class="ext-section">
+  <h2>ما هي إضافة المتصفح ImageTrans؟</h2>
+  <p>
+    <strong>إضافة المتصفح ImageTrans</strong> تجلب قدرات ترجمة الصور المدعومة بالذكاء الاصطناعي مباشرة إلى متصفحك. فهي تكتشف النص الموجود في الصور على صفحات الويب (القصص المصورة، الملصقات، لقطات الشاشة، الكتيبات، وغيرها) وتستبدله تلقائيًا بالنسخة المترجمة.
+  </p>
+  <p>
+    استنادًا إلى <strong>PaddleOCR</strong> والخلفية البرمجية لتطبيق سطح المكتب <strong>ImageTrans</strong>، تجمع الإضافة بين أحدث تقنيات التعرّف الضوئي على الحروف والترجمة الآلية العصبية لتقدم لك ترجمات دقيقة تراعي السياق.
+  </p>
+</div>
+
+<!-- Features -->
+<div class="ext-section">
+  <h2>الميزات الرئيسية</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🖱️</div>
+      <h4>الترجمة بالنقر الأيمن</h4>
+      <p>انقر بزر الفأرة الأيمن على أي صورة في صفحة الويب، ثم اختر «ترجمة الصورة» للحصول على النسخة المترجمة فورًا.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">⌨️</div>
+      <h4>اختصار لوحة المفاتيح</h4>
+      <p>اضغط <span class="ext-kbd">Ctrl+Shift+F</span> لترجمة الصورة الموجودة تحت المؤشر، بسرعة وكفاءة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🔄</div>
+      <h4>الترجمة التلقائية</h4>
+      <p>عند تفعيل الترجمة التلقائية، تُترجم الصور تلقائيًا عند تحميل الصفحة. مثالي لقراءة القصص المصورة الطويلة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📸</div>
+      <h4>ترجمة لقطات الشاشة</h4>
+      <p>التقط منطقة من الشاشة داخل المتصفح لترجمتها، وهو مناسب لترجمة الصور التي لا يمكن تنزيلها أو لترجمة جزء من الصورة فقط.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🤖</div>
+      <h4>خيارات ترجمة مرنة</h4>
+      <p>استخدم أي خلفية للتعرّف الضوئي على الحروف (ImageTrans أو PaddleOCR) مع واجهة API متوافقة مع OpenAI (ChatGPT وGemini وDeepSeek) أو مع محركات الترجمة المدمجة للحصول على أفضل نتائج الترجمة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🀄</div>
+      <h4>تعليقات النطق</h4>
+      <p>أضف الفراغانا إلى النصوص اليابانية والبينيين إلى النصوص الصينية — مساعد قيّم لمتعلمي اللغات.</p>
+    </div>
+  </div>
+</div>
+
+<!-- How to Use -->
+<div class="ext-section">
+  <h2>كيفية الاستخدام</h2>
+  <ol class="ext-steps">
+    <li>
+      <strong>تثبيت الإضافة</strong>
+      <span>أضفها من <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" target="_blank" rel="noopener">متجر Chrome</a> أو <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" target="_blank" rel="noopener">إضافات Firefox</a> أو <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" target="_blank" rel="noopener">متجر إضافات Microsoft Edge</a>.</span>
+      <span style="display:block;margin-top:6px;color:#4a5568;">📱 <strong>الأجهزة المحمولة:</strong> على iOS يمكنك استخدام متصفح Orion لتشغيل إضافات Chrome أو Firefox. وعلى Android يمكنك استخدام Firefox for Android أو Edge أو متصفح Kiwi.</span>
+    </li>
+    <li>
+      <strong>إعداد الخلفية البرمجية</strong>
+      <span>اتصل بخادم <a href="/ar/imagetrans/">ImageTrans</a>، أو استخدم PaddleOCR المدمج، أو اضبط مفتاح API خاصًا بك متوافقًا مع OpenAI.</span>
+    </li>
+    <li>
+      <strong>ابدأ الترجمة</strong>
+      <span>انقر بزر الفأرة الأيمن على الصورة → «ترجمة الصورة». يمكنك أيضًا تفعيل <strong>الترجمة التلقائية</strong> لترجمة جميع الصور عند تحميل الصفحة، أو استخدام <strong>خاصية لقطة الشاشة</strong> لترجمة جزء من الشاشة، أو <strong>خاصية التصوير</strong> لالتقاط صورة وترجمتها فورًا. انتهيت!</span>
+    </li>
+  </ol>
+</div>
+
+<!-- Requirements & Integration -->
+<div class="ext-section">
+  <h2>كيف تعمل</h2>
+
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🔌 مع ImageTrans لسطح المكتب (موصى به)</h4>
+      <ul>
+        <li>يتولى ImageTrans العملية كاملة: الكشف → التعرّف الضوئي على الحروف → محو النص → الترجمة → العرض</li>
+        <li>أفضل دقة وأوسع دعم للغات وميزات تحرير غنية</li>
+        <li>ترسل الإضافة الصور إلى ImageTrans لمعالجتها ثم تعرض النتيجة النهائية مباشرة</li>
+        <li>يتطلب تشغيل <a href="/ar/imagetrans/">ImageTrans</a> محليًا أو على خادم</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🧩 دون الاعتماد على ImageTrans (يعمل بالكامل في المتصفح)</h4>
+      <ul>
+        <li>تنفذ الإضافة العملية كاملة في الواجهة الأمامية: التعرّف الضوئي على الحروف (PaddleOCR) → الترجمة → العرض</li>
+        <li>لا حاجة إلى خادم أو تثبيت أي برنامج — مكتفية ذاتيًا بالكامل</li>
+        <li>مجانية وتحافظ على الخصوصية</li>
+        <li>دقة وسرعة وخيارات لغات أكثر محدودية</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>خيارات الترجمة</h3>
+  <p>تتوفر طرق الترجمة التالية في الوضعين كليهما. وعند استخدام واجهة API متوافقة مع OpenAI مع ImageTrans، يتولى ImageTrans التعرّف الضوئي على الحروف فقط، بينما تنفذ الإضافة الترجمة والعرض في الواجهة الأمامية.</p>
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🌐 الترجمة المدمجة في ImageTrans</h4>
+      <ul>
+        <li>متاحة عند الاتصال بـ ImageTrans</li>
+        <li>تدعم محركات ترجمة متعددة (Google وDeepL وBaidu وغيرها)</li>
+        <li>تتضمن ذاكرة الترجمة وإدارة المصطلحات والبحث في المدونات اللغوية</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🤖 واجهة API متوافقة مع OpenAI</h4>
+      <ul>
+        <li>استخدم ChatGPT أو Gemini أو DeepSeek أو أي واجهة API متوافقة</li>
+        <li>قابلة للاستخدام مع ImageTrans أو بدونه — بمفتاح API الخاص بك</li>
+        <li>أوامر توجيهية مخصصة ومرنة لترجمة أكثر دقة</li>
+        <li>مع ImageTrans: يتولى ImageTrans التعرّف الضوئي على الحروف فقط، وتتولى الإضافة الترجمة والعرض</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🆓 MyMemory (مجاني)</h4>
+      <ul>
+        <li>واجهة ترجمة آلية مجانية، دون مفتاح</li>
+        <li>مناسبة لاحتياجات الترجمة السريعة والعابرة</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- About ImageTrans Desktop -->
+<div class="ext-section">
+  <h2>حول ImageTrans لسطح المكتب</h2>
+  <p>
+    <a href="/ar/imagetrans/"><strong>ImageTrans</strong></a> برنامج سطح مكتب متكامل لترجمة الصور بمساعدة الحاسوب. إضافة المتصفح مناسبة للترجمة السريعة الفورية، بينما يمنحك ImageTrans لسطح المكتب تحكمًا كاملًا في سير عمل الترجمة بأكمله.
+  </p>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🎛️</div>
+      <h4>ميزات تخصيص قوية</h4>
+      <p>اضبط كل خطوة بدقة: اختر بحرية من بين محركات تعرّف ضوئي متعددة، واضبط خوارزميات الكشف، وخصص معاملات العرض لتلبية احتياجاتك بدقة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">✏️</div>
+      <h4>التحرير اليدوي</h4>
+      <p>عدّل مناطق النص، وصحّح نتائج التعرّف الضوئي، وحرّر الترجمات، واضبط مواضع النص — عندما لا يكفي التشغيل الآلي، تبقى كل الأمور تحت سيطرتك.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🎨</div>
+      <h4>تصدير PSD</h4>
+      <p>صدّر الصور المترجمة إلى ملفات Photoshop (PSD) مع طبقات نصية مستقلة، لتسهيل تسليمها إلى المصممين للمعالجة اللاحقة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📦</div>
+      <h4>المعالجة بالدفعات</h4>
+      <p>ترجم مئات الصور دفعة واحدة. يدعم استيراد البيانات وتصديرها عبر Excel أو Word أو XLIFF للتكامل السلس مع أدوات الترجمة الأخرى.</p>
+    </div>
+  </div>
+  <p style="margin-top:12px;">
+    💡 <a href="/ar/imagetrans/">اعرف المزيد عن ImageTrans لسطح المكتب →</a>
+  </p>
+</div>
+
+<!-- Applications -->
+<div class="ext-section">
+  <h2>ما الذي يمكنك ترجمته؟</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📚</div>
+      <h4>القصص المصورة والويبتون</h4>
+      <p>اقرأ القصص المصورة والويبتون والأعمال الفنية المترجمة على أي موقع ويب. صُممت الإضافة خصيصًا لفقاعات الحوار وتخطيط النص في القصص المصورة.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📋</div>
+      <h4>الملصقات والكتيبات</h4>
+      <p>افهم بسرعة المواد الترويجية والرسوم المعلوماتية والإعلانات المكتوبة بلغة أجنبية.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📱</div>
+      <h4>لقطات الشاشة والصور</h4>
+      <p>استخدم خاصية لقطة الشاشة لترجمة جزء من الصورة، أو ترجم الصور التي لا يمكن تنزيلها من صفحات الويب — كل ذلك داخل المتصفح.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📝</div>
+      <h4>استخراج النص من الصور</h4>
+      <p>استخرج النص من الصور دون ترجمته. مفيد لمهام التعرّف الضوئي على الحروف وإدخال البيانات وسيناريوهات إمكانية الوصول.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Open Source -->
+<div class="ext-section">
+  <h2>مجاني ومفتوح المصدر</h2>
+  <p>
+    إضافة المتصفح ImageTrans <strong>مجانية</strong> بالكامل، ومفتوحة المصدر تحت رخصة <strong>GNU General Public License v2.0</strong>. الشيفرة المصدرية مستضافة على GitHub:
+  </p>
+  <p>
+    📦 <a href="https://github.com/xulihang/ImageTrans_chrome_extension" target="_blank" rel="noopener">إضافة Chrome (GitHub)</a> &nbsp;·&nbsp; <a href="https://github.com/xulihang/ImageTrans_firefox_extension" target="_blank" rel="noopener">إضافة Firefox (GitHub)</a> — تصفح الشيفرة، أو أبلغ عن مشكلة، أو شارك في التطوير.
+  </p>
+  <p>
+    <strong>لا جمع للبيانات.</strong> لا تجمع الإضافة بياناتك أو ترسلها إلى أي مكان. تبقى صورك وبيانات ترجماتك على جهازك.
+  </p>
+  <p>
+    📄 <a href="/ar/imagetrans/extension/privacy/">سياسة الخصوصية</a> — اعرف المزيد عن كيفية تعامل الإضافة مع بياناتك.
+  </p>
+</div>
+
+<!-- Support -->
+<div class="ext-section">
+  <h2>الدعم الفني</h2>
+  <p>
+    هل واجهت مشكلة أثناء استخدام الإضافة؟ هل اكتشفت خطأً برمجيًا أو لديك اقتراح لميزة؟ أبلغ عنه على GitHub حتى يتمكن الآخرون أيضًا من رؤية النقاش والحل.
+  </p>
+  <p>
+    🐛 <a href="https://github.com/xulihang/ImageTrans_chrome_extension/issues" target="_blank" rel="noopener">مشكلات إضافة Chrome</a> &nbsp;·&nbsp; <a href="https://github.com/xulihang/ImageTrans_firefox_extension/issues" target="_blank" rel="noopener">مشكلات إضافة Firefox</a>
+  </p>
+</div>
+
+<!-- CTA -->
+<div class="ext-cta">
+  <h3>هل أنت مستعد لترجمة الصور على أي صفحة ويب؟</h3>
+  <p style="color: var(--ext-text-secondary);">مجاني · مفتوح المصدر · لا جمع للبيانات</p>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      🌐 أضف إلى Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      🦊 أضف إلى Firefox
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" class="ext-btn ext-btn-edge" target="_blank" rel="noopener">
+      🧊 أضف إلى Edge
+    </a>
+  </div>
+</div>

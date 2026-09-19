@@ -1,0 +1,9 @@
+# ImageTrans
+
+أداة بمساعدة الحاسوب لترجمة الصور والقصص المصوّرة.
+
+## المحتويات
+
+- [الصفحة الرئيسية](https://www.basiccat.org/ar/imagetrans/)
+- [المدونة](https://www.basiccat.org/ar/tagged/#imagetrans)
+- [التوثيق](https://imagetrans.readthedocs.io/en/latest/)

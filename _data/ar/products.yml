@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /ar
+    description: BasicCAT أداة مجانية مفتوحة المصدر للترجمة بمساعدة الحاسوب. يمكن استخدامها لترجمة المستندات وصفحات الويب والجداول والعروض التقديمية وغيرها، مع ميزات مثل ذاكرة الترجمة والترجمة الآلية وإدارة المصطلحات.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /ar/imagetrans
+    description: ImageTrans أداة لترجمة الصور بمساعدة الحاسوب. يمكن استخدامها لترجمة القصص المصورة والمانغا والملصقات وغيرها.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /ar/silhouette
+    description: Silhouette أداة لترجمة الفيديو والصوت بمساعدة الحاسوب.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner أداة لمحاذاة النصوص المتوازية. تستخرج النص من المستندات والجداول والترجمات، وتُحاذي النص على مستوى الجملة تلقائيًا مع دعم التعديل اليدوي. ويمكنها تصدير النص المتوازي إلى ملفات ذاكرة ترجمة لاستخدامها في أدوات أخرى.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /ar/TMXSearch/
+    description: TMXSearch تطبيق عبر الإنترنت للبحث في ذاكرة الترجمة.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: مترجم الصور عبر الإنترنت
+    href: /ar/online-image-translator/
+    description: مترجم صور عبر الإنترنت يسهّل ترجمة صورة كاملة أو استخدام كاميرا الهاتف للقراءة والترجمة.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: مترجم الصور عبر الإنترنت

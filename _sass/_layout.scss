@@ -244,3 +244,73 @@
     }
   }
 }
+
+/* ===== RTL (right-to-left) languages =====
+   The base theme uses physical properties (margin-left, border-left,
+   text-align: left). Rather than rewriting them as logical properties
+   everywhere, we override the handful that matter when <html dir="rtl">.
+   Any language flagged with `rtl: true` in _config.yml gets dir="rtl",
+   so a future RTL language needs no further CSS changes. */
+[dir="rtl"] {
+
+    body {
+        direction: rtl;
+        text-align: right;
+    }
+
+    /* Lists: the base indents from the left */
+    ol,
+    ul {
+        margin-left: 0;
+        margin-right: $spacing-unit;
+        padding-right: 0;
+    }
+
+    /* Post list items are pulled left in the base theme */
+    .post-list > li {
+        margin-left: 0;
+        margin-right: -2rem;
+    }
+
+    /* Blockquotes: bar and padding sit on the left by default */
+    blockquote {
+        padding-left: 0;
+        padding-right: $spacing-unit / 2;
+        border-left: 0;
+        border-right: 2px solid $grey-color-light;
+    }
+
+    /* Table headers */
+    th {
+        text-align: right;
+    }
+
+    /* The language chooser is pinned to the top right; in RTL the
+       natural position is the top left */
+    .language-chooser {
+        right: auto;
+        left: 0px;
+    }
+
+    /* Machine-translation notice */
+    .mt-notice {
+        text-align: right;
+    }
+
+    /* Inline code and preformatted text stay LTR: source code,
+       URLs and file paths are read left-to-right even in Arabic. */
+    code,
+    pre,
+    kbd,
+    samp {
+        direction: ltr;
+        text-align: left;
+        unicode-bidi: embed;
+    }
+
+    /* Same for standalone URLs and the copyright line */
+    .post-content pre,
+    .post-content code {
+        direction: ltr;
+    }
+}

@@ -35,7 +35,12 @@
 {% endfor %}
 
 <!DOCTYPE html>
-<html lang="{{ cur.locale }}">
+{% comment %}
+  dir="rtl" is set for right-to-left languages. The stylesheet has matching
+  [dir="rtl"] overrides because the base theme uses physical properties
+  (margin-left, border-left, text-align: left) that do not flip on their own.
+{% endcomment %}
+<html lang="{{ cur.locale }}"{% if cur.rtl %} dir="rtl"{% endif %}>
   {% include head.html %}
   <body>
     {% if altlangs.size > 1 %}

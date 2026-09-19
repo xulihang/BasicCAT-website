@@ -69,6 +69,19 @@ languages:
     doclang: en/latest/
     # Les pages traduites automatiquement affichent un bandeau de traduction
     machine_translated: true
+  - code: ar
+    label: العربية
+    url: /ar/
+    locale: ar
+    hreflang: ar
+    title: "BasicCAT — أدوات الترجمة بمساعدة الحاسوب"
+    dateformat: "%-d/%-m/%Y"
+    # لا يوجد بعد موقع توثيق بالعربية، لذا نحيل إلى النسخة الإنجليزية
+    doclang: en/latest/
+    # الصفحات المترجمة آليًا تعرض شريط تنبيه بالترجمة الآلية
+    machine_translated: true
+    # اللغة تُكتب من اليمين إلى اليسار، فيُضاف dir="rtl" إلى وسم <html>
+    rtl: true
 
 # Build settings
 kramdown:
@@ -117,6 +130,12 @@ defaults:
     values:
       locale: "fr_FR"
       lang: "fr"
+  - scope:
+      path: "ar"
+    values:
+      locale: "ar"
+      lang: "ar"
+      rtl: true
 
 collections:
   zh:
@@ -141,6 +160,11 @@ collections:
   # donc vide. Ajoutez des articles dans _fr pour qu'ils apparaissent dans
   # /fr/blog/ et /fr/tagged/.
   fr:
+    output: true
+    permalink: /:collection/:title/
+  # لا توجد بعد مقالات مدونة مترجمة إلى العربية، لذا المجموعة فارغة.
+  # أضف مقالات في _ar لتظهر في /ar/blog/ و /ar/tagged/.
+  ar:
     output: true
     permalink: /:collection/:title/
     
