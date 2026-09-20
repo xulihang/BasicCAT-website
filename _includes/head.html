@@ -36,12 +36,8 @@
   <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
   <script>
-    // Registered after load so the service worker install and its precache
-    // never compete with the first paint or the first user interaction.
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js');
-      });
+      navigator.serviceWorker.register('/sw.js');
     }
   </script>
 </head>
