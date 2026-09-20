@@ -15,15 +15,15 @@ ImageTrans是一款计算机辅助文字识别和图片翻译软件，可以使�
 1. 导入图片到ImageTrans。
 2. 识别图片中的文字行。如果有识别错误或者缺漏，可以手动调整。
 
-   ![首页](/album/searchablePDF/home-zh.jpg)
+   ![首页](/album/searchablePDF/home-zh.jpg){: width="1024" height="728"}
    
 3. 导出图片为PDF。使用原文图像并用原文添加可检索文本层。这里需要选择一个合适的字体，推荐用Arial Unicode MS，支持所有语言。
 
-   ![导出选项](/album/searchablePDF/export-zh.jpg)
+   ![导出选项](/album/searchablePDF/export-zh.jpg){: width="395" height="370"}
    
 4. 使用PDF阅读器打开PDF，搜索相关关键词，可以看到关键词能被搜索并高亮出来。
 
-   ![PDF阅读器](/album/searchablePDF/pdf-viewer.jpg)
+   ![PDF阅读器](/album/searchablePDF/pdf-viewer.jpg){: width="452" height="661"}
    
    
 [下载示例PDF](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/searchablePDF.pdf)

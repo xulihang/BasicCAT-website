@@ -26,11 +26,11 @@ tags: imagetrans
 
 打开Edge，可以看到文字能正确选择、复制和搜索。
 
-![](/album/edge-pdf-reading.jpg)
+![](/album/edge-pdf-reading.jpg){: width="1600" height="1128"}
 
 ImageTrans界面：
 
-![](/album/vertical-japanese-pdf-imagetrans-ui.jpg)
+![](/album/vertical-japanese-pdf-imagetrans-ui.jpg){: width="1600" height="1128"}
 
 ImageTrans还支持进一步对图片进行翻译，得到以下中文版的可搜索的双层PDF。
 

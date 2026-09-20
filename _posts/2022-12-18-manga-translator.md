@@ -23,11 +23,11 @@ Here are the steps to translate manga images.
 
 Original:
 
-![Japanese manga](/album/manga-translator/japanese.jpg)
+![Japanese manga](/album/manga-translator/japanese.jpg){: width="830" height="1170"}
 
 Translated:
 
-![English translation](/album/manga-translator/english.jpg)
+![English translation](/album/manga-translator/english.jpg){: width="831" height="1170"}
 
 Image source: <https://github.com/mantra-inc/open-mantra-dataset>
 

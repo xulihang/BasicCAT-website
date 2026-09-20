@@ -21,38 +21,38 @@ tags: imagetrans
 
 原图：
 
-![原图](/album/screentones/capture001.jpg)
+![原图](/album/screentones/capture001.jpg){: width="371" height="406"}
 
 文字掩膜：
 
-![掩膜](/album/screentones/capture001.jpg-mask.png)
+![掩膜](/album/screentones/capture001.jpg-mask.png){: width="371" height="406"}
 
 PatchMatch（传统图像处理）：
 
-![PatchMatch](/album/screentones/patchmatch.jpg)
+![PatchMatch](/album/screentones/patchmatch.jpg){: width="371" height="406"}
 
 Flux Klein 9B：
 
-![Flux](/album/screentones/flux.jpg)
+![Flux](/album/screentones/flux.jpg){: width="371" height="406"}
 
 
 Lama Inpaint（原版）：
 
-![原版lama](/album/screentones/original.jpg)
+![原版lama](/album/screentones/original.jpg){: width="371" height="406"}
 
 Lama Inpaint（日漫微调版）：
 
-![微调lama](/album/screentones/fine-tuned.jpg)
+![微调lama](/album/screentones/fine-tuned.jpg){: width="371" height="406"}
 
 Gemini 3.0 （Nano Banana）：
 
-![Gemini](/album/screentones/nano-banana-2.jpg)
+![Gemini](/album/screentones/nano-banana-2.jpg){: width="371" height="406"}
 
 可以看到效果还是不错的，特别是微调版lama，即使有点瑕疵，需要的修改也不多了。
 
 这些生成式人工智能模型有非常强大的重绘能力，除了修复网点，还可以还原文字覆盖的各种背景，比如人体、风景等各种内容。
 
-![示例2](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![示例2](/album/imagetrans-features/text-removal-and-reinjection.jpg){: width="1304" height="800"}
 
 
 

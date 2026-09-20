@@ -10,7 +10,7 @@ Most Republican-era Chinese periodicals were printed in vertically arranged Trad
 
 For example, the article *"Women's Virtue"* from Volume 1, Issue 1 of *Chinese Women's World*:
 
-![](/album/fude.jpg)
+![](/album/fude.jpg){: width="678" height="1024"}
 
 ## Configure MinerU
 
@@ -32,7 +32,7 @@ You can obtain an API Key from the official website:
 3. To process all images in the project, choose **Project → Batch → Detect text areas and recognize text for all pictures**.
 4. After OCR is complete, proceed with translation. You can use the DeepSeek large language model to translate the text into Simplified Chinese vernacular language. In the preferences dialog, modify the DeepSeek prompt and replace the `{langcode}` parameter with `Simplified Chinese Vernacular`.
 
-![](/album/Republican-era-Chinese-periodicals.jpg)
+![](/album/Republican-era-Chinese-periodicals.jpg){: width="1599" height="1140"}
 
 ## Export as Markdown
 

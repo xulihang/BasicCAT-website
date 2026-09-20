@@ -95,11 +95,11 @@ ImageTrans 常见问题整理，更多问题可在[这里](https://github.com/xu
 		
     示例图片：
 	
-	![](/album/unmerged.jpg)
+	![](/album/unmerged.jpg){: width="287" height="350"}
 	
 	合并后：
 	
-    ![](/album/merged.jpg)
+    ![](/album/merged.jpg){: width="289" height="335"}
 
 
 

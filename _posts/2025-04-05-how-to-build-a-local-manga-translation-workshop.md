@@ -27,7 +27,7 @@ ollama run qwen2.5
 
 Create a new project based on the Japanese -> Chinese manga template.
 
-![new project](/album/local-manga-translator/new-project.jpg)
+![new project](/album/local-manga-translator/new-project.jpg){: width="515" height="280"}
 
 Using a template has many benefits. The text styles, the language pair, workflows, OCR and translation engines to use are all configured. If it requires a specific balloon detection model, it will also prompt you to download it.
 
@@ -39,7 +39,7 @@ PS: if you failed to download the balloon detection model, you can download it d
 
    In ImageTrans's preferences, configure the ChatGPT plugin to let it call the local Ollama server.
 
-   ![api settings](/album/local-manga-translator/api-settings.jpg)
+   ![api settings](/album/local-manga-translator/api-settings.jpg){: width="632" height="481"}
 
    We need to modify two params:
 
@@ -50,7 +50,7 @@ PS: if you failed to download the balloon detection model, you can download it d
 
    Through menu->project->batch->custom worflow to open the custom worflow form. Set the translation engine to ChatGPT and save the settings.
 
-   ![custom workflow](/album/local-manga-translator/custom-workflow.jpg)
+   ![custom workflow](/album/local-manga-translator/custom-workflow.jpg){: width="602" height="632"}
 
 PS: for new versions of ImageTrans, you can also directly use the Ollama plugin.
 
@@ -58,7 +58,7 @@ PS: for new versions of ImageTrans, you can also directly use the Ollama plugin.
 
 Import the images and right click on the image. Through current image -> one-click translation (custom workflow), we can translate the current image. We can translate all the images through batch operations.
 
-![one-click-translation](/album/local-manga-translator/one-click-translation.jpg)
+![one-click-translation](/album/local-manga-translator/one-click-translation.jpg){: width="498" height="209"}
 
 Demo video:
 
@@ -82,4 +82,4 @@ Demo video:
 
 ヒンメル will be translated as 希梅尔 by default. Here, we can specify it as a term with the right translation (辛美尔) to regulate the translation of proper nouns.
 
-![terms](/album/local-manga-translator/terms.jpg)
+![terms](/album/local-manga-translator/terms.jpg){: width="515" height="295"}

@@ -16,11 +16,11 @@ tags: imagetrans
 
 原图：
 
-![原图](/album/imagetrans-language-learning/Ranma1_012.jpg)
+![原图](/album/imagetrans-language-learning/Ranma1_012.jpg){: width="1248" height="2028"}
 
 翻译的版本：
 
-![译图](/album/imagetrans-language-learning/zh/Ranma1_012_translated.jpg)
+![译图](/album/imagetrans-language-learning/zh/Ranma1_012_translated.jpg){: width="1248" height="2028"}
 
 ## 文字识别与翻译
 
@@ -52,13 +52,13 @@ tags: imagetrans
 
 软件能分析句子的句法，对句子进行分词，并标注词语的类型、发音等等。虽然有些漫画自带振假名，但可能不是很清楚，可以通过它来知道汉字的发音。
 
-![句子分析](/album/imagetrans-language-learning/zh/kuromoji.jpg)
+![句子分析](/album/imagetrans-language-learning/zh/kuromoji.jpg){: width="659" height="324"}
 
 ## 词语查询
 
 遇到不认识的词，可以查询在线词典。
 
-![在线词典](/album/imagetrans-language-learning/zh/online-dictionary.jpg)
+![在线词典](/album/imagetrans-language-learning/zh/online-dictionary.jpg){: width="827" height="439"}
 
 ## 机器翻译与词语管理
 
@@ -66,7 +66,7 @@ tags: imagetrans
 
 另外可以把不熟悉的词设置为术语。
 
-![术语](/album/imagetrans-language-learning/zh/term.jpg)
+![术语](/album/imagetrans-language-learning/zh/term.jpg){: width="456" height="462"}
 
 术语可以导出为表格，便于导入Notion、Obsidian等第三方的笔记软件，或者Anki等记忆软件。
 

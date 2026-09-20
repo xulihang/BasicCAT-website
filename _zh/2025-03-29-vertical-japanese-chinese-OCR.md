@@ -10,11 +10,11 @@ tags: imagetrans
 
 竖排和横排混合的日文：
 
-![竖排和横排混合的日文](/album/vertical-text/japanese-sample.jpg)
+![竖排和横排混合的日文](/album/vertical-text/japanese-sample.jpg){: width="326" height="305"}
 
 竖排的繁体中文：
 
-![竖排繁体中文](/album/vertical-text/chinese-sample.jpg)
+![竖排繁体中文](/album/vertical-text/chinese-sample.jpg){: width="110" height="117"}
 
 下面是识别竖排文字的相关方法。
 
@@ -26,7 +26,7 @@ tags: imagetrans
 
 识别结果：
 
-![单字检测-繁体中文](/album/vertical-text/chinese-sample-detected.jpg)
+![单字检测-繁体中文](/album/vertical-text/chinese-sample-detected.jpg){: width="146" height="153"}
 
 ## 文字行检测
 
@@ -36,11 +36,11 @@ tags: imagetrans
 
 识别结果：
 
-![文字行检测-日文](/album/vertical-text/japanese-sample-detected.jpg)
+![文字行检测-日文](/album/vertical-text/japanese-sample-detected.jpg){: width="372" height="348"}
 
 如果OCR只能识别横行，我们可以先对图像做一个处理，将竖排的图像转换成横排的。
 
-![竖排转横排](/album/vertical-text/converted.jpg)
+![竖排转横排](/album/vertical-text/converted.jpg){: width="88" height="72"}
 
 ## 识别整个图像
 

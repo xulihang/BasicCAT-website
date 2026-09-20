@@ -10,11 +10,11 @@ tags: imagetrans
 
 原图：
 
-![原图](/album/text-color-detection/source.jpg)
+![原图](/album/text-color-detection/source.jpg){: width="708" height="82"}
 
 翻译的图片：
 
-![翻译的图片](/album/text-color-detection/translated.jpg)
+![翻译的图片](/album/text-color-detection/translated.jpg){: width="708" height="82"}
 
 ## 实现原理
 
@@ -22,7 +22,7 @@ tags: imagetrans
 
 对于文字颜色，可以做轮廓检测，计算文字轮廓像素的平均值，并排除与背景颜色相近的像素。
 
-![纯色背景](/album/text-color-detection/plain-color.jpg)
+![纯色背景](/album/text-color-detection/plain-color.jpg){: width="728" height="244"}
 
 但如果背景比较复杂，并且还需要提取描边颜色、提取每个字符的颜色，传统图像处理方法效果一般。可以使用卷积神经网络进行提取。
 
@@ -36,32 +36,32 @@ tags: imagetrans
 
 许多CG图，经常用不同的颜色来区分不同人物的对话。
 
-![示例](/album/text-color-detection/example.jpg)
+![示例](/album/text-color-detection/example.jpg){: width="300" height="334"}
 
 
 ImageTrans可以检测描边颜色和文字颜色，以下是原始识别结果。
 
-![识别结果](/album/text-color-detection/detected.jpg)
+![识别结果](/album/text-color-detection/detected.jpg){: width="760" height="861"}
 
 可以看到，文字颜色和描边颜色被识别出来了，但不够准确。
 
 我们可以在项目设置中预先定义几个样式，确定每个样式使用的颜色。
 
-![项目设置](/album/text-color-detection/project-settings.jpg)
+![项目设置](/album/text-color-detection/project-settings.jpg){: width="977" height="1096"}
 
 之后，执行颜色匹配操作，根据文字颜色匹配样式。
 
-![工作流](/album/text-color-detection/workflow.jpg)
+![工作流](/album/text-color-detection/workflow.jpg){: width="1287" height="946"}
 
 这样就解决了识别的颜色不够准确的问题
 
-![调整了的](/album/text-color-detection/adjusted.jpg)
+![调整了的](/album/text-color-detection/adjusted.jpg){: width="822" height="966"}
 
 ### 示例二
 
 有的文字使用了富文本格式，一行文字可能存在多种颜色。ImageTrans支持识别每个字符的样式，并输出带有富文本标签的结果。
 
-![内联样式](/album/text-color-detection/inline-text.jpg)
+![内联样式](/album/text-color-detection/inline-text.jpg){: width="1425" height="595"}
 
 
 

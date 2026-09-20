@@ -23,4 +23,4 @@ Translation related features:
 * Support of calling multiple machine translation engines and large language models
 * Support of improving the translation with terms and strings substitution.
 
-![Interface screenshot](/album/imagetrans.jpg)
+![Interface screenshot](/album/imagetrans.jpg){: width="1024" height="728"}

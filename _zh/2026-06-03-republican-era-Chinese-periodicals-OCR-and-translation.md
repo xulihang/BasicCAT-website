@@ -10,7 +10,7 @@ tags: imagetrans
 
 例如（《中华妇女界》第一期第一卷《妇德》）：
 
-![](/album/fude.jpg)
+![](/album/fude.jpg){: width="678" height="1024"}
 
 ## 配置mineru
 
@@ -29,7 +29,7 @@ tags: imagetrans
 3. 如果要处理所有图片，可以点击菜单-项目-批处理-自动识别所有图片中的文字。
 4. 识别好文字后再进行翻译，可以使用大语言模型deepseek翻译成简体白话文。需要在偏好设置里修改deepseek的提示词，把{langcode}一项改成简体白话文。
 
-![](/album/Republican-era-Chinese-periodicals.jpg)
+![](/album/Republican-era-Chinese-periodicals.jpg){: width="1599" height="1140"}
 
 ## 导出markdown
 

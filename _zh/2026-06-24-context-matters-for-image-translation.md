@@ -17,9 +17,9 @@ ImageTrans v5.22.1增加了两个翻译相关功能，可以提供更多的上�
 
 下面是《一条狗》漫画中两张图片的一个中译英测试结果。
 
-![示例1](/album/context-llm/1.jpg)
+![示例1](/album/context-llm/1.jpg){: width="440" height="399"}
 
-![示例2](/album/context-llm/2.jpg)
+![示例2](/album/context-llm/2.jpg){: width="440" height="561"}
 
 ## 使用图片进行多模态翻译
 

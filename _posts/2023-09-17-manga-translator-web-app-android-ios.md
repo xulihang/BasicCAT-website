@@ -16,16 +16,16 @@ If we run the web app at home, we can only access it on the local area network. 
 
    1. Open the window form of the server via the menu.
 
-      ![Server](/album/web-app/menu-server.jpg)
+      ![Server](/album/web-app/menu-server.jpg){: width="426" height="266"}
 
    2. Click Start Server and connect. Here, you can set the machine translation, text detection, and boxes merging methods. Here we use ChatGPT for translation and the balloon detection model for text detection.
 
-      ![Server form](/album/web-app/server-form.jpg)
+      ![Server form](/album/web-app/server-form.jpg){: width="502" height="275"}
 
 
 3. After starting the server, we can access <https://local.basiccat.org:51043/> to use ImageTrans running on our computer. On this page, we can upload an image to translate.
 
-   ![Web page](/album/web-app/web-page.jpg)
+   ![Web page](/album/web-app/web-page.jpg){: width="698" height="347"}
 
 
 4. To use it on the internet, we can use ngrok.
@@ -40,7 +40,7 @@ If we run the web app at home, we can only access it on the local area network. 
 
       The following interface will be displayed:
 
-      ![ngrok](/album/web-app/ngrok-cli.jpg)
+      ![ngrok](/album/web-app/ngrok-cli.jpg){: width="820" height="416"}
 
       ngrok will provide a URL like `https://3751-101-71-39-138.ngrok-free.app-like` that we can use to access the web app of ImageTrans.
 

@@ -12,7 +12,7 @@ tags: imagetrans
 
 原始文件（[PDF](https://kmweb.moa.gov.tw/redirect_files.php?id=98635)）：
 
-![原始文件](/album/vertical-text-PDF/original.png)
+![原始文件](/album/vertical-text-PDF/original.png){: width="1440" height="2023"}
 
 转换成横排的markdown格式的文本：
 
@@ -82,7 +82,7 @@ F一五二是地力肥沃,灌溉水充沛蕉園的增產王牌,它的原料莖�
 
 保持原有排版的清晰化的版本（图片+PDF）：
 
-![清晰化版本](/album/vertical-text-PDF/reconstructed.png)
+![清晰化版本](/album/vertical-text-PDF/reconstructed.png){: width="1440" height="2023"}
 
 文字PDF，矢量文字，放大后依然非常清晰：
 
@@ -102,11 +102,11 @@ F一五二是地力肥沃,灌溉水充沛蕉園的增產王牌,它的原料莖�
 
 软件主界面：
 
-![软件主界面](/album/vertical-text-PDF/imagetrans.jpg)
+![软件主界面](/album/vertical-text-PDF/imagetrans.jpg){: width="1599" height="1140"}
 
 显示分镜和顺序：
 
-![显示分镜和顺序](/album/vertical-text-PDF/imagetrans-order-mode.jpg)
+![显示分镜和顺序](/album/vertical-text-PDF/imagetrans-order-mode.jpg){: width="1599" height="1140"}
 
 
 ## 系列文章

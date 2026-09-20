@@ -12,11 +12,11 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 
 原图：
 
-![原图](/album/us-comics/avengers.jpg)
+![原图](/album/us-comics/avengers.jpg){: width="1041" height="1600"}
 
 翻译的版本：
 
-![中文翻译版本](/album/us-comics/avengers-translated.jpg)
+![中文翻译版本](/album/us-comics/avengers-translated.jpg){: width="1041" height="1600"}
 
 
 ## 具体操作流程
@@ -26,11 +26,11 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 
    掩膜：
 
-   ![掩膜](/album/us-comics/avengers-mask.jpg)
+   ![掩膜](/album/us-comics/avengers-mask.jpg){: width="1041" height="1600"}
    
    去文字图：
    
-   ![去文字图](/album/us-comics/avengers-text-removed.jpg)
+   ![去文字图](/album/us-comics/avengers-text-removed.jpg){: width="1041" height="1600"}
 
 3. 选取一个OCR引擎，比如百度，识别所有文字区域的文字。
 4. 设置字体，在偏好设置里取消自动调整文字大小，并新建一个默认的文字样式。
@@ -49,11 +49,11 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
    
    原文：
    
-   ![原文](/album/us-comics/bold-italic-example.jpg)
+   ![原文](/album/us-comics/bold-italic-example.jpg){: width="227" height="136"}
    
    翻译版：
    
-   ![翻译版](/album/us-comics/bold-italic-transaltion-example.jpg)
+   ![翻译版](/album/us-comics/bold-italic-transaltion-example.jpg){: width="771" height="240"}
    
    
 7. 翻译完成后导出成品图。如果需要使用Photoshop生成翻译版图片，可以使用脚本生成PSD文件。

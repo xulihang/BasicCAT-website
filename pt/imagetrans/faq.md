@@ -95,11 +95,11 @@ Perguntas frequentes sobre o ImageTrans. Para buscar mais questões, use [este l
 		
     Imagem de exemplo:
 	
-	![](/album/unmerged.jpg)
+	![](/album/unmerged.jpg){: width="287" height="350"}
 	
 	Depois da mesclagem:
 	
-    ![](/album/merged.jpg)
+    ![](/album/merged.jpg){: width="289" height="335"}
 
 
 

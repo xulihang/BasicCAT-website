@@ -22,31 +22,31 @@ ImageTrans provides the following functions to handle the translation of cross-b
 
    Original image:
 
-   ![Complex background source image](/gallery/projects/e-commerce/complex-background.webp)
+   ![Complex background source image](/gallery/projects/e-commerce/complex-background.webp){: width="888" height="375"}
 
    Text mask:
 
-   ![Complex background text mask](/album/e-commerce/complex-background.jpg-mask.png)
+   ![Complex background text mask](/album/e-commerce/complex-background.jpg-mask.png){: width="888" height="375"}
 
    Text-removed image:
 
-   ![Complex background text-removed image](/album/e-commerce/complex-background.jpg-text-removed.jpg)
+   ![Complex background text-removed image](/album/e-commerce/complex-background.jpg-text-removed.jpg){: width="888" height="375"}
 2. It can pretranslate the text with machine translation. Multiple machine translation engines (Ali e-commerce, ChatGPT, DeepL, Baidu, etc.) can be used to provide references for translation. Although e-commerce translation is a creative translation, machine translation can still provide some help.
 
-   ![Machine translation](/album/e-commerce/machine-translation.jpg)
+   ![Machine translation](/album/e-commerce/machine-translation.jpg){: width="1342" height="480"}
 
 3. It can unify the text styles of multiple selected text boxes.
 
-   ![Multiple selection](/album/e-commerce/multiple-selection.jpg)
+   ![Multiple selection](/album/e-commerce/multiple-selection.jpg){: width="1465" height="930"}
 
 
 4. It can align multiple selected text boxes. They can also be aligned with the source text boxes.
 
-   ![Alignment](/album/e-commerce/alignment.jpg)
+   ![Alignment](/album/e-commerce/alignment.jpg){: width="395" height="282"}
 
 5. It supports displaying alignment lines when moving a text box.
 
-   ![Alignment line](/album/e-commerce/alignment-line.jpg)
+   ![Alignment line](/album/e-commerce/alignment-line.jpg){: width="769" height="200"}
    
 6. It can export the results as Photoshop images, or directly process existing PSD files for images that require complex modifications.
 7. It has built-in search and replace, which can be used to unify text case and perform other operations.
@@ -55,29 +55,29 @@ Here are some examples of translated images. Lato is used here as the font for E
 
 Example #1:
 
-![Manual](/gallery/projects/e-commerce/manual.webp)
+![Manual](/gallery/projects/e-commerce/manual.webp){: width="790" height="835"}
 
-![Manual](/gallery/projects/e-commerce/out/manual.webp)
+![Manual](/gallery/projects/e-commerce/out/manual.webp){: width="790" height="835"}
 
 Example #2:
 
-![Complex background](/gallery/projects/e-commerce/complex-background.webp)
+![Complex background](/gallery/projects/e-commerce/complex-background.webp){: width="888" height="375"}
 
-![Complex background](/gallery/projects/e-commerce/out/complex-background.webp)
+![Complex background](/gallery/projects/e-commerce/out/complex-background.webp){: width="888" height="375"}
 
 
 Example #3:
 
-![Table](/gallery/projects/e-commerce/table.webp)
+![Table](/gallery/projects/e-commerce/table.webp){: width="750" height="881"}
 
-![Table](/gallery/projects/e-commerce/out/table.webp)
+![Table](/gallery/projects/e-commerce/out/table.webp){: width="750" height="881"}
 
 
 Example #4:
 
-![Header picture](/gallery/projects/e-commerce/overview.webp)
+![Header picture](/gallery/projects/e-commerce/overview.webp){: width="800" height="800"}
 
-![Header picture](/gallery/projects/e-commerce/out/overview.webp)
+![Header picture](/gallery/projects/e-commerce/out/overview.webp){: width="800" height="800"}
 
 
 [Click here](https://www.basiccat.org/gallery/) for more image translation examples

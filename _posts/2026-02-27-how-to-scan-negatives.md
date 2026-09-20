@@ -14,17 +14,17 @@ Because negatives are very small and have an additional orange mask (color cast)
 
 1.  Negatives are transparent and require transmitted light to reveal the image. You can prepare a white light source, such as a phone screen or a ceiling light.
 
-    ![Negative on a phone screen](/album/negative/negative_on_screen.jpg)
+    ![Negative on a phone screen](/album/negative/negative_on_screen.jpg){: width="640" height="857"}
 
 2.  Use a macro lens to take the photo. For a mobile phone, you can attach an external macro lens.
 
-    ![Macro lens attached to a phone](/album/negative/macro_lens.jpg)
+    ![Macro lens attached to a phone](/album/negative/macro_lens.jpg){: width="640" height="853"}
 
 3.  After shooting, use software like Adobe Photoshop for further processing: inverting the colors and using the "Auto Color" function to remove the orange mask.
 
-    ![Inverted image](/album/negative/invert.jpg)
+    ![Inverted image](/album/negative/invert.jpg){: width="1600" height="1104"}
 
-    ![Result after auto color adjustment](/album/negative/auto_color_result.jpg)
+    ![Result after auto color adjustment](/album/negative/auto_color_result.jpg){: width="1600" height="1094"}
 
 
 Since a mobile phone was used here, there might be issues like insufficient sharpness, inaccurate colors, and screen moiré patterns. Using a professional camera would yield much better results, potentially offering greater sharpness than some scanners. Additionally, professional cameras can save files in raw format, which is more convenient for color correction.
@@ -33,11 +33,11 @@ Since a mobile phone was used here, there might be issues like insufficient shar
 
 Choose a flatbed scanner that supports scanning negatives, such as the Epson V850. The one I used here is an Epson V300, which comes with a transparency unit and film holders, making it suitable for scanning negatives.
 
-![Epson V300 scanner](/album/negative/epson-v300.jpg)
+![Epson V300 scanner](/album/negative/epson-v300.jpg){: width="1024" height="1024"}
 
 You can use the manufacturer's software, like Epson Scan, to scan. It can automatically crop negatives, invert colors, and remove the orange mask.
 
-![Epson Scan software interface](/album/negative/epson-scan.jpg)
+![Epson Scan software interface](/album/negative/epson-scan.jpg){: width="823" height="673"}
 
 If you prefer to obtain only the raw scan data, you can use software like [ImageTrans](/imagetrans/) to control the scanner via interfaces such as TWAIN, ICA, or SANE.
 
@@ -45,9 +45,9 @@ Afterwards, you can use ImageTrans or other software for cropping, inverting, an
 
 Scanning using ImageTrans:
 
-![ImageTrans scanning interface showing transparency unit option](/album/negative/imagetrans_transparency_unit.jpg)
+![ImageTrans scanning interface showing transparency unit option](/album/negative/imagetrans_transparency_unit.jpg){: width="903" height="947"}
 
 Result after cropping, inverting, and color correction using ImageTrans:
 
-![ImageTrans processed photo result](/album/negative/imagetrans_processed_photo.jpg)
+![ImageTrans processed photo result](/album/negative/imagetrans_processed_photo.jpg){: width="1591" height="1134"}
 

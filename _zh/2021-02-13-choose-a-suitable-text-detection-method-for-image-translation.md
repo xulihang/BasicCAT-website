@@ -20,21 +20,21 @@ ImageTrans提供了四种文字区域检测方法：OCR服务提供的检测、�
 
 	百度精确版：
 
-	![](/album/text-detection/baidu_tieji.jpg)
+	![](/album/text-detection/baidu_tieji.jpg){: width="474" height="312"}
 
-	![](/album/text-detection/baidu_scrooge.jpg)
+	![](/album/text-detection/baidu_scrooge.jpg){: width="484" height="329"}
 
 	谷歌：
 
-	![](/album/text-detection/google_tieji.jpg)
+	![](/album/text-detection/google_tieji.jpg){: width="474" height="312"}
 
-	![](/album/text-detection/google_scrooge.jpg)
+	![](/album/text-detection/google_scrooge.jpg){: width="484" height="329"}
 
 	搜狗：
 
-	![](/album/text-detection/sogou_tieji.jpg)
+	![](/album/text-detection/sogou_tieji.jpg){: width="474" height="312"}
 
-	![](/album/text-detection/sogou_scrooge.jpg)
+	![](/album/text-detection/sogou_scrooge.jpg){: width="484" height="329"}
 
 	可以总结出上述例子中通用OCR存在的一些缺点：
 
@@ -45,7 +45,7 @@ ImageTrans提供了四种文字区域检测方法：OCR服务提供的检测、�
 
 	总的来说，OCR服务的文字检测功能是较为准确的，能检测倾斜的文本、复杂背景上的文本，并且能同时给出文字识别的结果。目前效果最好的OCR是搜狗OCR，它给出的结果粒度较细，便于后期合并出正确的段落，文字识别结果也很准确。
 
-	![](/album/text-detection/sogou_xu.jpg)
+	![](/album/text-detection/sogou_xu.jpg){: width="600" height="848"}
 
 
 2. 启发式
@@ -56,33 +56,33 @@ ImageTrans提供了四种文字区域检测方法：OCR服务提供的检测、�
 
 	原图：
 
-	![](/album/text-detection/imagetrans.jpg)
+	![](/album/text-detection/imagetrans.jpg){: width="125" height="52"}
 
 	转换为灰度图片：
 
-	![](/album/text-detection/imagetrans_gray.jpg)
+	![](/album/text-detection/imagetrans_gray.jpg){: width="125" height="52"}
 
 	使用OTSU方法计算二值化阈值，对图片进行二值化：
 
-	![](/album/text-detection/imagetrans_thresh.jpg)
+	![](/album/text-detection/imagetrans_thresh.jpg){: width="125" height="52"}
 
 	标记连通区域，一个独立的英文字母就是一个连通区域：
 
-	![](/album/text-detection/imagetrans_connected_component.jpg)
+	![](/album/text-detection/imagetrans_connected_component.jpg){: width="125" height="52"}
 
 	对这些区域进行处理，得到文字行：
 
-	![](/album/text-detection/imagetrans_text_line.jpg)
+	![](/album/text-detection/imagetrans_text_line.jpg){: width="125" height="52"}
 
 	如果图片内容较为复杂，需要对合并的结果进行分类，去除非文字区域。
 
 	这一方法存在一些缺点，比如文字和背景的对比度不够高时可能无法分离出文字，文字与边缘粘连则不是一个独立的连通区域、倾斜的文本较难处理等。
 
-	![](/album/text-detection/ImageTrans_low_contrast.jpg)
+	![](/album/text-detection/ImageTrans_low_contrast.jpg){: width="125" height="52"}
 
-	![](/album/text-detection/connected_to_edges.jpg)
+	![](/album/text-detection/connected_to_edges.jpg){: width="311" height="48"}
 
-	![](/album/text-detection/slanted.jpg)
+	![](/album/text-detection/slanted.jpg){: width="168" height="127"}
 
 	对于漫画这样的图像，可以做进一步优化，比如不同气泡的文字存在分割轮廓，合并连通区域时就不进行合并。图像文字和背景的情况较为单一时，启发式可以有很好的结果。
 
@@ -96,7 +96,7 @@ ImageTrans提供了四种文字区域检测方法：OCR服务提供的检测、�
 
 	这一方法的定制性强，操作简单，检测准确度和检测速度都不错，但常常不能准确贴合文字，训练的模型可能会存在适应性不强等问题。
 
-	![](/album/text-detection/baidu_easydl.jpg)
+	![](/album/text-detection/baidu_easydl.jpg){: width="320" height="496"}
 
 
 4. 自然场景文字检测法

@@ -8,7 +8,7 @@ tags: silhouette
 
 有时我们可能需要转录和翻译一些日语视频。桌面软件[Silhouette](/zh/silhouette/)让这个操作变得很简单。
 
-![屏幕截图](/album/silhouette/japanese_zh.webp)
+![屏幕截图](/album/silhouette/japanese_zh.webp){: width="1599" height="1140"}
 
 处理可以完全在自己的计算机上离线完成。
 

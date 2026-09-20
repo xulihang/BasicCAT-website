@@ -19,14 +19,14 @@ Guides：
 
 ### Export text:
 
-![](/album/image-localization/psd_export.jpg)
+![](/album/image-localization/psd_export.jpg){: width="554" height="581"}
 
 1. Select the PSD folder
 2. Click Export to generate an xlsx table file under the PSD folder
 
 There are five columns: file name, layer name, source, target and note.
 
-![](/album/image-localization/psd-output-table.jpg)
+![](/album/image-localization/psd-output-table.jpg){: width="554" height="119"}
 
 Some layers do not need to handle, you can enter filter words in the text area so that these layers will be filtered.
 
@@ -35,7 +35,7 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 
 ### Refill Text:
 
-![](/album/image-localization/psd_refill.jpg)
+![](/album/image-localization/psd_refill.jpg){: width="554" height="581"}
 
 1. Select the PSD folder
 2. Select the xlsx file generated before with its target column filled.
@@ -45,11 +45,11 @@ Note: Non-text layers will have a note indicating that it is non-text. The sourc
 
 New feature: Every layer will be exported to JPG and get OCRed. The results will be saved to the xlsx file. This can be used to infer whether a layer contains text. It can also complete text (non-text layers' layer name may not include the complete text).
 
-![](/album/image-localization/ocr-verification.JPG)
+![](/album/image-localization/ocr-verification.JPG){: width="602" height="632"}
 
 The table with OCR result:
 
-![](/album/image-localization/ocr-verification-table.JPG)
+![](/album/image-localization/ocr-verification-table.JPG){: width="888" height="253"}
 
 ## Image Transcriber
 
@@ -60,13 +60,13 @@ The table with OCR result:
 	
 	Double-click the image and a red box will appear. Move and resize the box to fit the required area. Choose an OCR engine to extract text. Hold your mouse on the upper left corner of the box and drag it to move the box, and the lower right corner to adjust the size.
 
-	![](/album/image-localization/imagetranscriber.jpg)
+	![](/album/image-localization/imagetranscriber.jpg){: width="1267" height="761"}
 	
 2. Generate editable PSD files
 
     Click on File - Generate editable PSD files to export PSD, which can be further refilled with translation with the PSD Localization tool. Mask layers will be generated according to the positions and sizes of the boxes, covering the original text. Text layer will then be created above them. The color of mask layers can be set. The default is white.
 	
-	![](/album/image-localization/imagetranscriber-menu.jpg)
+	![](/album/image-localization/imagetranscriber-menu.jpg){: width="236" height="313"}
 
 
 [Download at the tools page](https://www.basiccat.org/tools/)

@@ -19,7 +19,7 @@ Here we are going to write a Google machine translation plugin for demonstration
 
 Configure the library path and the JDK path in the software.
 
-![Path configuration](/album/B4J/path.jpg)
+![Path configuration](/album/B4J/path.jpg){: width="808" height="247"}
 
 
 ## New Project
@@ -203,7 +203,7 @@ After the implementation, we need to package it.
 Perform the following compile to library operation and save the files to the plugins folder of ImageTrans.
 
 
-![Compile](/album/B4J/compile-to-library.jpg)
+![Compile](/album/B4J/compile-to-library.jpg){: width="656" height="422"}
 
 
 ## More Plugin Examples

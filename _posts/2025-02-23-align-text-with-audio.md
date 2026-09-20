@@ -19,16 +19,16 @@ The computer-aided video/audio translation tool [Silhouette](/silhouette/) is ma
 
 Recognized result:
 
-![recognized-result](/album/forced-alignment/recognized-result.jpg)
+![recognized-result](/album/forced-alignment/recognized-result.jpg){: width="634" height="330"}
 
 
 Aligner:
 
-![aligner](/album/forced-alignment/aligner.jpg)
+![aligner](/album/forced-alignment/aligner.jpg){: width="872" height="774"}
 
 Aligned result:
 
-![aligned](/album/forced-alignment/aligned.jpg)
+![aligned](/album/forced-alignment/aligned.jpg){: width="644" height="337"}
 
 PS: if the recognized speech is accurate, we do not have to do this. This is for cases where the audio quality is not good, which leads to bad recognition results.
 

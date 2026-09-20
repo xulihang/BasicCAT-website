@@ -7,7 +7,7 @@ lang: ar
 
 Silhouette برنامج لترجمة الصوت والفيديو بمساعدة الحاسوب.
 
-![لقطة شاشة](/album/silhouette/screenshot_zh.webp)
+![لقطة شاشة](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## الميزات
 
@@ -15,7 +15,7 @@ Silhouette برنامج لترجمة الصوت والفيديو بمساعدة 
 2. ترجمة آلية بدعم من الذكاء الاصطناعي تراعي السياق بشكل كامل. تدعم استدعاء ChatGPT وDeepSeek.
 3. واجهة سهلة الاستخدام، تدعم عرض مخطط الموجة، وتوفر وظائف متنوعة للتحكم في التشغيل، ما يسهّل ضبط أسطر الترجمة.
 
-   ![مخطط الموجة](/album/silhouette/waveform_zh.webp)
+   ![مخطط الموجة](/album/silhouette/waveform_zh.webp){: width="676" height="604"}
 4. متعدد المنصات. يدعم Windows وmacOS وLinux.
 5. استيراد وتصدير ملفات الترجمة (SRT أو TXT أو XLIFF).
 6. دعم مزامنة المخطط الزمني المُتعرَّف عليه مع نص موجود مسبقًا ([مزامنة الصوت مع النص](/zh/align-text-with-audio/)).
@@ -48,6 +48,6 @@ Silhouette برنامج لترجمة الصوت والفيديو بمساعدة 
 
 مسرح الظل في مسقط رأسي هاينينغ يُسمّى بالإنجليزية leather-silhouette show، ويمكن اعتباره شكلًا مبكرًا من أشكال السينما. ومن هنا اختيرت كلمة silhouette لتسمية البرنامج.
 
-![مسرح الظل](/album/leather-sihouette-show.jpg)
+![مسرح الظل](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}

@@ -79,7 +79,7 @@ Windows版运行环境下载（解压到Aligner的根目录）：[jre8u192.zip](
     * 给跳转到空白片段与问题片段的操作添加快捷键
 	* 新的片段操作，通过右键菜单调出（在编辑器的空白部分右键）
 	
-	![](/album/aligner_listview_context_menu.jpg)
+	![](/album/aligner_listview_context_menu.jpg){: width="200" height="195"}
 
 	[下载](https://github.com/xulihang/Aligner/releases/download/v1.5.3/Aligner.zip)
 

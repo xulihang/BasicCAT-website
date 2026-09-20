@@ -22,11 +22,11 @@ OCR is generally divided into two steps: detecting the text and recognizing the 
 
 First, let's take a look at what the subtitles in *Empresses in the Palace* look like. Here are a few screenshots:
 
-![frame16](/album/hardcoded-subtitle-extraction/frame16.jpg)
+![frame16](/album/hardcoded-subtitle-extraction/frame16.jpg){: width="1280" height="714"}
 
-![frame135](/album/hardcoded-subtitle-extraction/frame135.jpg)
+![frame135](/album/hardcoded-subtitle-extraction/frame135.jpg){: width="1280" height="714"}
 
-![frame135](/album/hardcoded-subtitle-extraction/frame137.jpg)
+![frame135](/album/hardcoded-subtitle-extraction/frame137.jpg){: width="1280" height="714"}
 
 We can see that the subtitles will have two lines, three lines, etc. The translated text may be scattered in multiple subtitles of the same original text.
 
@@ -34,7 +34,7 @@ We can see that the subtitles will have two lines, three lines, etc. The transla
 
 Open [Silhouette](/silhouette/) and use its frame extractor to extract video frames:
 
-![frame extraction](/album/hardcoded-subtitle-extraction/frame-extraction-en.jpg)
+![frame extraction](/album/hardcoded-subtitle-extraction/frame-extraction-en.jpg){: width="1097" height="737"}
 
 
 Here we can set FPS. When FPS is set to 3, only 3 frames are extracted per second. If we want to have accurate timestamps, we can make the FPS bigger, but it will take more time to process. If we just need the text and don't need the time to be accurate, FPS can be set smaller.
@@ -45,19 +45,19 @@ Next, open ImageTrans and import the video frames we just extracted.
 
 Open the video subtitle extractor through menu -> tools.
 
-![subtitle detection form](/album/hardcoded-subtitle-extraction/subtitle-detection-form-en.jpg)
+![subtitle detection form](/album/hardcoded-subtitle-extraction/subtitle-detection-form-en.jpg){: width="888" height="929"}
 
 Set the boundary of the region to be recognized, select the detection engine as "detect only (PaddleOCR)", set the number of threads as 4, and click "Detect subtitles in all images" to start detection. Here, we process a 54-second video. The FPS for extraction is set to 3 so there are 164 images to detect.
 
 After the operation is completed, we can see that the subtitle lines in the image are detected.
 
-![detected text lines](/album/hardcoded-subtitle-extraction/detected-text-lines-en.jpg)
+![detected text lines](/album/hardcoded-subtitle-extraction/detected-text-lines-en.jpg){: width="961" height="678"}
 
 After that, we click "OCR all keyframes", which recognizes the text in the subtitle images. Since we only recognize keyframes here, the number of images to be processed becomes 21.
 
 We can see that an additional text box containing the recognized text is added.
 
-![subtitle recognized](/album/hardcoded-subtitle-extraction/subtitle-recognized-en.jpg)
+![subtitle recognized](/album/hardcoded-subtitle-extraction/subtitle-recognized-en.jpg){: width="1570" height="906"}
 
 After that, we can export the subtitles as an SRT file.
 
@@ -65,7 +65,7 @@ Because it's bilingual, there are some extra steps. First, before "OCR all keyfr
 
 Then tick the checkbox: "merge multiple targets belonging to the same source". In this way, the scattered target text will be merged together.
 
-![bilingual settings](/album/hardcoded-subtitle-extraction/bilingual-settings-en.jpg)
+![bilingual settings](/album/hardcoded-subtitle-extraction/bilingual-settings-en.jpg){: width="1274" height="266"}
 
 Here are the extracted subtitles:
 

@@ -15,11 +15,11 @@ Both target similar users—scanlators, translators, letterers, and comic locali
 
 **TypeR** is a Photoshop extension (forked from TyperTools) designed specifically for manga and comic typesetting. It enhances Photoshop with features like smart alignment, style management, and multi-bubble handling, aiming to speed up manual work without leaving the design environment.
 
-![typer](/album/typer/typer.jpg)
+![typer](/album/typer/typer.jpg){: width="2048" height="1032"}
 
 **ImageTrans** is a standalone computer-aided translation tool that covers OCR, translation, and text reinsertion. It can automatically detect text regions, remove original text, and inject translations, while still supporting export back to Photoshop for refinement.
 
-![imagetrans](/album/typer/imagetrans.png)
+![imagetrans](/album/typer/imagetrans.png){: width="960" height="723"}
 
 ## Workflow Comparison
 

@@ -22,31 +22,31 @@ ImageTrans提供以下功能，能较好地处理跨境电商图片的翻译。
 
    原图：
    
-   ![复杂背景原图](/gallery/projects/e-commerce/complex-background.webp)
+   ![复杂背景原图](/gallery/projects/e-commerce/complex-background.webp){: width="888" height="375"}
    
    文字掩膜：
    
-   ![复杂背景文字掩膜](/album/e-commerce/complex-background.jpg-mask.png)
+   ![复杂背景文字掩膜](/album/e-commerce/complex-background.jpg-mask.png){: width="888" height="375"}
    
    去文字图：
    
-   ![复杂背景去文字图](/album/e-commerce/complex-background.jpg-text-removed.jpg)
+   ![复杂背景去文字图](/album/e-commerce/complex-background.jpg-text-removed.jpg){: width="888" height="375"}
 2. 支持预先用机器翻译进行翻译，并能调用多个机器翻译（阿里电商、ChatGPT、DeepL、百度等），为翻译提供参考。虽然电商翻译是一种创造性翻译，但机器翻译还是能提供一定的帮助。
 
-   ![机器翻译](/album/e-commerce/machine-translation.jpg)
+   ![机器翻译](/album/e-commerce/machine-translation.jpg){: width="1342" height="480"}
    
 3. 支持多选文字后对文字样式统一进行设置。
 
-    ![多选](/album/e-commerce/multiple-selection.jpg)
+    ![多选](/album/e-commerce/multiple-selection.jpg){: width="1465" height="930"}
 
 
 4. 支持选中多个区域后进行位置的对齐，并支持和原文区域进行对齐。
 
-   ![对齐](/album/e-commerce/alignment.jpg)
+   ![对齐](/album/e-commerce/alignment.jpg){: width="395" height="282"}
    
 5. 移动区域时，支持显示对齐线。
 
-   ![对齐线](/album/e-commerce/alignment-line.jpg)
+   ![对齐线](/album/e-commerce/alignment-line.jpg){: width="769" height="200"}
    
 6. 支持将结果导出为Photoshop图片，或者直接处理已有PSD文件，用于处理需要复杂修改的图片。
 7. 内建搜索与替换，可以用于统一文字大小写等操作。
@@ -55,29 +55,29 @@ ImageTrans提供以下功能，能较好地处理跨境电商图片的翻译。
 
 示例1：
 
-![手册](/gallery/projects/e-commerce/manual.webp)
+![手册](/gallery/projects/e-commerce/manual.webp){: width="790" height="835"}
 
-![手册](/gallery/projects/e-commerce/out/manual.webp)
+![手册](/gallery/projects/e-commerce/out/manual.webp){: width="790" height="835"}
 
 示例2：
 
-![复杂背景](/gallery/projects/e-commerce/complex-background.webp)
+![复杂背景](/gallery/projects/e-commerce/complex-background.webp){: width="888" height="375"}
 
-![复杂背景](/gallery/projects/e-commerce/out/complex-background.webp)
+![复杂背景](/gallery/projects/e-commerce/out/complex-background.webp){: width="888" height="375"}
 
 
 示例3：
 
-![表格](/gallery/projects/e-commerce/table.webp)
+![表格](/gallery/projects/e-commerce/table.webp){: width="750" height="881"}
 
-![表格](/gallery/projects/e-commerce/out/table.webp)
+![表格](/gallery/projects/e-commerce/out/table.webp){: width="750" height="881"}
 
 
 示例4：
 
-![头图](/gallery/projects/e-commerce/overview.webp)
+![头图](/gallery/projects/e-commerce/overview.webp){: width="800" height="800"}
 
-![头图](/gallery/projects/e-commerce/out/overview.webp)
+![头图](/gallery/projects/e-commerce/out/overview.webp){: width="800" height="800"}
 
 
 [点此](https://www.basiccat.org/zh/gallery/)查看更多图片翻译例子

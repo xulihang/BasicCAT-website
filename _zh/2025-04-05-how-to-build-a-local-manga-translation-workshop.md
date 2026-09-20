@@ -28,7 +28,7 @@ ollama run qwen2.5
 
 基于日译中日漫模板新建一个项目。
 
-![new project](/album/local-manga-translator/new-project.jpg)
+![new project](/album/local-manga-translator/new-project.jpg){: width="515" height="280"}
 
 使用模板的好处是，相关的配置，例如字体、项目语言、工作流、要使用的翻译和OCR等都已经配好了。如果需要的气泡模型没有下载，打开时还会提示进行下载。
 
@@ -40,7 +40,7 @@ ollama run qwen2.5
 
    在软件的偏好设置中，配置ChatGPT插件，让它可以调用本地的Ollama服务。
 
-   ![api settings](/album/local-manga-translator/api-settings.jpg)
+   ![api settings](/album/local-manga-translator/api-settings.jpg){: width="632" height="481"}
 
    需要修改两个地方：
 
@@ -51,7 +51,7 @@ ollama run qwen2.5
 
    通过菜单->项目->批处理->自定义工作流，打开自定义工作流页面。设置翻译引擎为ChatGPT，然后保存设置。
 
-   ![custom workflow](/album/local-manga-translator/custom-workflow.jpg)
+   ![custom workflow](/album/local-manga-translator/custom-workflow.jpg){: width="602" height="632"}
 
 
 注：新版本也可以直接用Ollama插件。
@@ -60,7 +60,7 @@ ollama run qwen2.5
 
 导入图片后，在图片上右键，点当前图片->一键翻译（自定义工作流），就可以一键翻译图片了。要想翻译整个图片，也可以通过批处理中的自定义工作流进行操作。
 
-![one-click-translation](/album/local-manga-translator/one-click-translation.jpg)
+![one-click-translation](/album/local-manga-translator/one-click-translation.jpg){: width="498" height="209"}
 
 演示视频：
 
@@ -84,4 +84,4 @@ ollama run qwen2.5
 
 其中，ヒンメル默认会被翻译成希梅尔。通过在软件中设置术语，可以对这类专有名词的翻译做规范。
 
-![terms](/album/local-manga-translator/terms.jpg)
+![terms](/album/local-manga-translator/terms.jpg){: width="515" height="295"}

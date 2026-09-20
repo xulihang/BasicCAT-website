@@ -18,40 +18,40 @@ tags: imagetrans
 
 首先创建一个项目。
 
-![新项目](/album/googlecloud/new_project.jpg)
+![新项目](/album/googlecloud/new_project.jpg){: width="548" height="453"}
 
 ## 启用Cloud Vision OCR
 
 前往API&Services，搜索"OCR"并启用Cloud Vision。
 
-![api services sidemenu](/album/googlecloud/api_services_sidemenu.jpg)
+![api services sidemenu](/album/googlecloud/api_services_sidemenu.jpg){: width="460" height="314"}
 
-![cloud vision search](/album/googlecloud/cloud_vision_search.jpg)
+![cloud vision search](/album/googlecloud/cloud_vision_search.jpg){: width="789" height="393"}
 
 
 ## 新API Key
 
 创建一个新的API key。
 
-![new api key](/album/googlecloud/cloud_vision_new_api_key.jpg)
+![new api key](/album/googlecloud/cloud_vision_new_api_key.jpg){: width="856" height="270"}
 
 在ImageTrans的偏好设置里填入这个key。
 
-![api preferences](/album/googlecloud/google_api_preferences.jpg)
+![api preferences](/album/googlecloud/google_api_preferences.jpg){: width="645" height="313"}
 
 之后，我们可以选择Google作为OCR的引擎完成处理。
 
-![ocr combobox](/album/googlecloud/ocr_combobox.jpg)
+![ocr combobox](/album/googlecloud/ocr_combobox.jpg){: width="465" height="200"}
 
 ## 启用机器翻译
 
 类似的，我们可以启用谷歌的机器翻译服务。
 
-![cloud translate search](/album/googlecloud/cloud_translate_search.jpg)
+![cloud translate search](/album/googlecloud/cloud_translate_search.jpg){: width="781" height="349"}
 
 OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，就可以看到用谷歌进行机器翻译了。
 
-![cloud translate](/album/googlecloud/google_translate.jpg)
+![cloud translate](/album/googlecloud/google_translate.jpg){: width="769" height="416"}
 
 我们也可以通过点击菜单-编辑-自动翻译所有区域，来选择某个机器翻译进行预翻译，自动翻译所有区域。
 
@@ -65,7 +65,7 @@ OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，�
 
 前往API&Services，搜索"Drive"并启用它。
 
-![Google Drive Search](/album/googlecloud/drive_search.jpg)
+![Google Drive Search](/album/googlecloud/drive_search.jpg){: width="777" height="359"}
 
 ### 启用OAuth
 
@@ -73,17 +73,17 @@ OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，�
 
 1. 新建一个OAuth screen，类型选择External。
     
-   ![oauth](/album/googlecloud/oauth.jpg)
+   ![oauth](/album/googlecloud/oauth.jpg){: width="806" height="527"}
    
 2. 填入必需的信息并添加测试账号。
 
-   ![add test user](/album/googlecloud/test_user.jpg)
+   ![add test user](/album/googlecloud/test_user.jpg){: width="868" height="381"}
 
 3. 新建一个OAuth client id。选择桌面程序。
 
-   ![new credentials](/album/googlecloud/cloud_vision_new_api_key.jpg)
+   ![new credentials](/album/googlecloud/cloud_vision_new_api_key.jpg){: width="856" height="270"}
    
-   ![new oauth client](/album/googlecloud/new_oauth_client.jpg)
+   ![new oauth client](/album/googlecloud/new_oauth_client.jpg){: width="817" height="358"}
 
 4. 下载JSON文件，命名为`credentials.json`后放到ImageTrans的目录里。
 
@@ -93,7 +93,7 @@ OCR和机器翻译可以公用一个API key。启用后，点击辅助翻译，�
 2. 下载插件的压缩包，解压到ImageTrans的plugins目录：[commandline_plugin.zip](https://github.com/xulihang/Google-Drive-OCR-Java/releases/download/builds/commandline_plugin.zip)（替换后记得重启ImageTrans）
 3. 选择google drive作为OCR引擎以进行OCR操作。
 
-   ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg)
+   ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg){: width="400" height="169"}
 
 更多说明可以见[这个页面](https://github.com/xulihang/ImageTrans_plugins/tree/master/googledriveOCR)。
 

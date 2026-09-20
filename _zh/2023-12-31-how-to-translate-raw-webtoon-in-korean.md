@@ -13,11 +13,11 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 
 原图：
 
-![原图](/album/webtoon/original.jpg)
+![原图](/album/webtoon/original.jpg){: width="720" height="7700"}
 
 翻译的版本：
 
-![中文翻译版本](/album/webtoon/chinese.jpg)
+![中文翻译版本](/album/webtoon/chinese.jpg){: width="720" height="7700"}
 
 
 ## 具体操作流程

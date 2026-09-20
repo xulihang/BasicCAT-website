@@ -20,7 +20,7 @@ tags: imagetrans
 
 创建一个应用。
 
-![新应用](/album/youdao/new_app.jpg)
+![新应用](/album/youdao/new_app.jpg){: width="911" height="700"}
 
 勾选文本翻译、通用文字识别，接入方式选择API。
 
@@ -28,22 +28,22 @@ tags: imagetrans
 
 创建应用后可以得到API密钥。
 
-![API密钥](/album/youdao/apikey.jpg)
+![API密钥](/album/youdao/apikey.jpg){: width="913" height="122"}
 
 然后打开ImageTrans的偏好设置，将其填入youdao的设置项里。
-![API填写](/album/youdao/apikeyfiller.jpg)
+![API填写](/album/youdao/apikeyfiller.jpg){: width="606" height="479"}
 
 
 ## 使用文字识别
 
 选择有道为OCR引擎。
 
-![引擎选择](/album/youdao/choose_ocr.jpg)
+![引擎选择](/album/youdao/choose_ocr.jpg){: width="426" height="144"}
 
 点击菜单栏-编辑-自动识别文字，可以识别出图片中的文字。这一过程会包含文字的位置信息。
 
 
-![菜单](/album/youdao/menu.jpg)
+![菜单](/album/youdao/menu.jpg){: width="371" height="130"}
 
 
 我们也可以手动框选区域后，点击左上角的OCR按钮，识别单个区域的文字。
@@ -55,11 +55,11 @@ tags: imagetrans
 
 在偏好设置的机器翻译中勾选youdao。
 
-![机器翻译设置](/album/youdao/mt_preference.jpg)
+![机器翻译设置](/album/youdao/mt_preference.jpg){: width="579" height="553"}
 
 之后，我们选中一个文字区域，切换右侧的编辑区域到辅助翻译，可以看到多个机器翻译的结果。
 
-![机器翻译列表](/album/youdao/mt_list.jpg)
+![机器翻译列表](/album/youdao/mt_list.jpg){: width="1024" height="729"}
 
 我们也可以通过点击菜单-编辑-自动翻译所有区域，来选择某个机器翻译进行预翻译，自动翻译所有区域。
 

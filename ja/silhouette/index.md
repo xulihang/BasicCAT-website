@@ -7,7 +7,7 @@ lang: ja
 
 Silhouetteはコンピュータ支援の音声・動画翻訳ソフトです。
 
-![スクリーンショット](/album/silhouette/screenshot_zh.webp)
+![スクリーンショット](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## 機能
 
@@ -15,7 +15,7 @@ Silhouetteはコンピュータ支援の音声・動画翻訳ソフトです。
 2. 文脈を十分に考慮したAIによる機械翻訳。ChatGPT、DeepSeekの呼び出しに対応。
 3. 使いやすいインターフェース。波形表示に対応し、各種の再生コントロール機能があり、字幕を手軽に調整できます。
 
-   ![波形](/album/silhouette/waveform_zh.webp)
+   ![波形](/album/silhouette/waveform_zh.webp){: width="676" height="604"}
 4. クロスプラットフォーム。Windows、macOS、Linuxに対応。
 5. 字幕ファイルのインポート・エクスポート（SRT、TXTまたはXLIFF）。
 6. 認識したタイムラインと既存の原稿を同期できます（[音声とテキストの同期](/zh/align-text-with-audio/)）。
@@ -46,6 +46,6 @@ Silhouette を購入すると、すべての機能を利用できます：[リ�
 
 私の故郷である海寧の皮影戯は、英語で leather-silhouette show と呼ばれ、映画の初期の形態の1つと見なされています。ここではその silhouette という語を取ってソフトの名前にしました。
 
-![皮影戯](/album/leather-sihouette-show.jpg)
+![皮影戯](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}

@@ -22,17 +22,17 @@ tags: imagetrans
 
 1. 基于“文档”模板新建一个项目，导入PDF。ImageTrans会转换PDF为图片进行处理。有一些参数需要设置。如果是扫描版PDF，可以选择提取图片模式，处理速度很快。如果是文字可以复制的PDF，使用默认的渲染模式，并勾选提取文字，同时以单词为级别提取。
 
-   ![PDF翻译](/album/pdf-translation/import-options-zh.jpg)
+   ![PDF翻译](/album/pdf-translation/import-options-zh.jpg){: width="603" height="497"}
 
 2. 如果PDF自带的文字信息提取出来效果不好或者没有自带文字，可以选择一个OCR引擎进行识别，比如日语可以用rapid或者oneocr。可以点菜单-编辑-自动识别文字，看看识别一张图片的效果。
 
    这里示例PDF的文字提取出来的效果不错。
 
-   ![导入后界面](/album/pdf-translation/imported.jpg)
+   ![导入后界面](/album/pdf-translation/imported.jpg){: width="1599" height="1140"}
 
 3. 通过菜单-项目-批处理-自定义工作流，打开工作流设置界面。需要针对当前PDF做些设置。比如这个PDF不需要检测文字、需要去除分镜外的区域、需要选择分镜检测引擎为效果较好的Deepseek-OCR。分镜这里指代各种布局，比如段落、图表等等。
 
-   ![工作流](/album/pdf-translation/workflow-zh.jpg)
+   ![工作流](/album/pdf-translation/workflow-zh.jpg){: width="903" height="947"}
 
    每个操作的说明：
 
@@ -44,16 +44,16 @@ tags: imagetrans
 
    下面是执行好自定义工作流，切换工具栏为排序模式时的界面：
    
-   ![检测结果](/album/pdf-translation/panel-detected.jpg)
+   ![检测结果](/album/pdf-translation/panel-detected.jpg){: width="1599" height="1140"}
 
 4. 点击左下角“查看翻译”，可以看到PDF论文页面的翻译版本。
 
-   ![翻译版本](/album/pdf-translation/translated-zh.jpg)
+   ![翻译版本](/album/pdf-translation/translated-zh.jpg){: width="1599" height="1140"}
  
 
 5. 点菜单-文件-导出-markdown，可以将结果导出为markdown文件，方便在手机上查看或者给AI进行分析。因为markdown不像PDF那样，文字有位置信息，所以导出时对文字顺序是否正确的要求较高。通过Deepseeek-OCR布局分析，阅读顺序一般都是正确的。如果有错误，也可以在ImageTrans中修正。
 
-   ![markdown](/album/pdf-translation/markdown-zh.jpg)
+   ![markdown](/album/pdf-translation/markdown-zh.jpg){: width="1599" height="1140"}
 
 
 除了导出为markdown，也支持导出为PDF、HTML等其它格式。

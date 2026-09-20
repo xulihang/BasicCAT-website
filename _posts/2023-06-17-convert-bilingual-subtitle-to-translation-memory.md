@@ -52,23 +52,23 @@ Detailed steps in Aligner:
 
 1. Create a new English-to-Chinese alignment project.
 
-   ![New project](/album/ass-aligning/new_project.jpg)
+   ![New project](/album/ass-aligning/new_project.jpg){: width="234" height="158"}
 
-   ![Language pair](/album/ass-aligning/language_pair.jpg)
+   ![Language pair](/album/ass-aligning/language_pair.jpg){: width="494" height="322"}
 
 2. Read the bilingual ASS files. Use the menu to call the ASS file picker and select the directory where the subtitle files are located. All ASS files in the directory and subdirectories can be listed.
 
-   ![Read ass files](/album/ass-aligning/read_ass_files.jpg)
+   ![Read ass files](/album/ass-aligning/read_ass_files.jpg){: width="488" height="308"}
 
-   ![Ass picker](/album/ass-aligning/ass-picker.jpg)
+   ![Ass picker](/album/ass-aligning/ass-picker.jpg){: width="770" height="403"}
 
 3. Click Okay to complete the import and return to the alignment operation interface to adjust the results.
 
-   ![Read ass files](/album/ass-aligning/home.jpg)
+   ![Read ass files](/album/ass-aligning/home.jpg){: width="760" height="549"}
 
 4. Export results. Through the menu, export the results as a translation memory file for further use.
 
-   ![Export](/album/ass-aligning/export.jpg)
+   ![Export](/album/ass-aligning/export.jpg){: width="323" height="382"}
 
 
 

@@ -7,7 +7,7 @@ lang: zh
 
 Silhouette是一款计算机辅助音视频翻译软件。
 
-![screenshot](/album/silhouette/screenshot_zh.webp)
+![screenshot](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## 功能
 
@@ -15,7 +15,7 @@ Silhouette是一款计算机辅助音视频翻译软件。
 2. AI驱动的机器翻译，充分考虑上下文。支持调用ChatGPT、DeepSeek。
 3. 易于使用的界面，支持显示波形图，有各种播放控制功能，可以便捷地调整字幕。
 
-   ![waveform](/album/silhouette/waveform_zh.webp)
+   ![waveform](/album/silhouette/waveform_zh.webp){: width="676" height="604"}
 4. 跨平台。支持Windows、macOS和Linux。
 5. 字幕文件导入导出（SRT、TXT或者XLIFF）。
 6. 支持将识别的时间轴和已有文稿进行对齐（[音文对齐](/zh/align-text-with-audio/)）。
@@ -49,7 +49,7 @@ Silhouette是一款计算机辅助音视频翻译软件。
 
 我老家海宁的皮影戏，英文名叫leather-silhouette show，可以看作电影的一种早期形式。这里取silhouette一词来命名软件。
 
-![皮影戏](/album/leather-sihouette-show.jpg)
+![皮影戏](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}
 

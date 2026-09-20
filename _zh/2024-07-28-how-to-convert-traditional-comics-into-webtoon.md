@@ -12,16 +12,16 @@ tags: imagetrans
 
 那我们作为读者，如果想转换传统漫画到条漫，方便在手机上阅读，又不想那么费力的话，可以使用[ImageTrans](/zh/imagetrans/)进行自动转换。这个软件可以检测分镜，并将分镜以条漫的形式导出到一张图片里。我们可以在软件里编辑分镜、调整分镜的顺序，确保结果正确后再导出。
 
-![分镜检测](/album/panel-detection/imagetrans-panel-detection.jpg)
+![分镜检测](/album/panel-detection/imagetrans-panel-detection.jpg){: width="1164" height="997"}
 
 原图：
 
-![原图](/album/panel-detection/original.jpg)
+![原图](/album/panel-detection/original.jpg){: width="800" height="1132"}
 
 图片来自《铁姬钢兵》。
 
 导出后的图：
 
-![导出后的图](/album/panel-detection/converted.jpg)
+![导出后的图](/album/panel-detection/converted.jpg){: width="800" height="2744"}
 
 

@@ -10,12 +10,12 @@ This week, Google released the Gemini 3-based Nano Banana Pro, which allows you 
 
 Original Manga ([男子高生×新人OLの話](https://www.dlsite.com/girls/work/=/product_id/RJ276847.html)):
 
-![Original](/album/dlsite/006-ja.webp)
+![Original](/album/dlsite/006-ja.webp){: width="1748" height="2480"}
 
 
 Translated Manga:
 
-![nano translated image](/album/nano-banana/nano.webp)
+![nano translated image](/album/nano-banana/nano.webp){: width="1748" height="2492"}
 
 
 We can see that it can remove the original text and reinject the translated text accurately. The translation quality is also good.
@@ -29,7 +29,7 @@ But it also has some issues:
 
 Let it output only the text-removed version, we can see that the screentones are restored well, but the image content and proportion have been changed.
 
-![nano text-removed](/album/nano-banana/text-removed-nano.webp)
+![nano text-removed](/album/nano-banana/text-removed-nano.webp){: width="1728" height="2464"}
 
 In many cases, it will also come up with image content not in the original image. Using API and specifying the mask like the following cannot help with this either:
 
@@ -54,15 +54,15 @@ Here are the results of using ImageTrans, a computer-aided image translation[ so
 
 Text mask:
 
-![Text mask](/album/nano-banana/mask.png)
+![Text mask](/album/nano-banana/mask.png){: width="1748" height="2480"}
 
 Text-removed:
 
-![text-removed](/album/nano-banana/text-removed.webp)
+![text-removed](/album/nano-banana/text-removed.webp){: width="1748" height="2480"}
 
 Translated:
 
-![Translated](/album/nano-banana/translated.webp)
+![Translated](/album/nano-banana/translated.webp){: width="1748" height="2480"}
 
 
 ## Attachments
@@ -75,4 +75,4 @@ After testing, as long as the input image size matches the output size, for exam
 
 Example:
 
-![example](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![example](/album/imagetrans-features/text-removal-and-reinjection.jpg){: width="1304" height="800"}

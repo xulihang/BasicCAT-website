@@ -16,7 +16,7 @@ DLsite是日本最大的同人漫画平台，在这上面，我们可以购买�
 
 选中一本漫画后，点击页面右方的Buy Now按钮，完成购买。
 
-![购买](/album/dlsite/purchase.jpg)
+![购买](/album/dlsite/purchase.jpg){: width="374" height="509"}
 
 购买完成后，就可以下载漫画了。一般是PDF和JPG格式的图片内容。
 
@@ -26,11 +26,11 @@ DLsite是日本最大的同人漫画平台，在这上面，我们可以购买�
 
 1. 基于日译中日漫模板新建一个项目。
 
-   ![new project](/album/dlsite/new_project_ja2zh.jpg)
+   ![new project](/album/dlsite/new_project_ja2zh.jpg){: width="572" height="485"}
    
 2. 菜单->项目->批处理->自定义工作流，打开自定义工作流页面。点确认开始批量翻译。
 
-   ![custom workflow](/album/dlsite/custom_workflow_zh.jpg)
+   ![custom workflow](/album/dlsite/custom_workflow_zh.jpg){: width="640" height="671"}
    
 3. 翻译完成后，通过菜单->项目->批处理->生成所有图片的成品图，可以在out目录里找到翻译好的图片。
 
@@ -40,11 +40,11 @@ DLsite是日本最大的同人漫画平台，在这上面，我们可以购买�
 
 原图：
 
-![原图](/album/dlsite/006-ja.webp)
+![原图](/album/dlsite/006-ja.webp){: width="1748" height="2480"}
 
 使用DeepSeek翻译的版本：
 
-![翻译的版本](/album/dlsite/006-zh.webp)
+![翻译的版本](/album/dlsite/006-zh.webp){: width="1748" height="2480"}
 
 ## 相关链接
 

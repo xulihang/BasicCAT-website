@@ -16,7 +16,7 @@ tags:
 
 截图:
 
-![](/album/basiccat_mtweb.png)
+![](/album/basiccat_mtweb.png){: width="1009" height="672"}
 
 用法:
 

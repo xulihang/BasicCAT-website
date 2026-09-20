@@ -15,17 +15,17 @@ tags: imagetrans
 
 1. 底片是透明的，需要透射光才能看出内容。我们可以准备一个白色的面光源，比如手机屏幕、吸顶灯。
 
-   ![屏幕上的底片](/album/negative/negative_on_screen.jpg)
+   ![屏幕上的底片](/album/negative/negative_on_screen.jpg){: width="640" height="857"}
    
 2. 使用微距镜头进行拍摄。如果用手机，可以通过外接的方式接入一个。
 
-    ![微距镜头](/album/negative/macro_lens.jpg)
+    ![微距镜头](/album/negative/macro_lens.jpg){: width="640" height="853"}
 
 3. 拍摄后，可以用Adobe Photoshop做进一步处理：反色、通过“自动颜色”去除色罩。
 
-   ![反色的](/album/negative/invert.jpg)
+   ![反色的](/album/negative/invert.jpg){: width="1600" height="1104"}
 
-   ![自动颜色结果](/album/negative/auto_color_result.jpg)
+   ![自动颜色结果](/album/negative/auto_color_result.jpg){: width="1600" height="1094"}
 
 
 这里因为是用的手机，所以存在清晰度不够、色彩不准、屏幕波纹等问题。如果用专业的相机，效果应该是不错的，可以比扫描仪有更好的锐度。另外专业相机可以保存文件为raw格式，更方便校色。
@@ -35,11 +35,11 @@ tags: imagetrans
 
 选择一款支持扫描底片的平板扫描仪，比如爱普生v850。我这里用的是爱普生v300，它具备透扫器和底片夹，支持扫描底片。
 
-![爱普生v300](/album/negative/epson-v300.jpg)
+![爱普生v300](/album/negative/epson-v300.jpg){: width="1024" height="1024"}
 
 可以使用厂家提供的Epson Scan进行扫描，它能自动裁剪底片，反色和去色罩。
 
-![Epson Scan](/album/negative/epson-scan.jpg)
+![Epson Scan](/album/negative/epson-scan.jpg){: width="823" height="673"}
 
 如果只想得到原始图像，可以使用[ImageTrans](/zh/imagetrans/)，通过TWAIN、ICA和SANE等接口进行扫描。
 
@@ -47,8 +47,8 @@ tags: imagetrans
 
 使用ImageTrans扫描：
 
-![ImageTrans扫描界面](/album/negative/imagetrans_transparency_unit.jpg)
+![ImageTrans扫描界面](/album/negative/imagetrans_transparency_unit.jpg){: width="903" height="947"}
 
 使用ImageTrans裁剪、反色和去色罩后的结果：
 
-![ImageTrans处理结果](/album/negative/imagetrans_processed_photo.jpg)
+![ImageTrans处理结果](/album/negative/imagetrans_processed_photo.jpg){: width="1591" height="1134"}

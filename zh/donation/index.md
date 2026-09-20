@@ -10,7 +10,7 @@ lang: zh
 
 1. 支付宝
 
-	![](/album/alipay.jpg)
+	![](/album/alipay.jpg){: width="300" height="295"}
 	
 2. Paypal
 

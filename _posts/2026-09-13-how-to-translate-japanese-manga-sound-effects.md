@@ -153,7 +153,7 @@ If there is no matching onomatopoeic word and a transliteration would only get i
 
 Now that we have seen the examples above, let's translate an actual image, taken from volume 18 of *Detective Conan*.
 
-![](/album/manga-sound-effect/18_094.jpg)
+![](/album/manga-sound-effect/18_094.jpg){: width="707" height="1100"}
 
 | Sound effect | Position | Chinese | English | Approach |
 |------|------|------|------|------|
@@ -169,15 +169,15 @@ Below we use the computer-aided comic translation software [ImageTrans](/imagetr
 
 The cleaned image with the text removed (using Lama Inpaint):
 
-![](/album/manga-sound-effect/18_094.jpg-text-removed.jpg)
+![](/album/manga-sound-effect/18_094.jpg-text-removed.jpg){: width="707" height="1100"}
 
 Our English version:
 
-![](/album/manga-sound-effect/target-en.jpg)
+![](/album/manga-sound-effect/target-en.jpg){: width="707" height="1100"}
 
 
 The official English translation:
 
-![](/album/manga-sound-effect/official-translation.png)
+![](/album/manga-sound-effect/official-translation.png){: width="1066" height="1600"}
 
 I've included the official translation here as well. As you can see, it translates the sound effects too, though the words it uses seem to be made up.

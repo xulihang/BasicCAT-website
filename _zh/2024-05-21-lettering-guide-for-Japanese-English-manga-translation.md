@@ -10,51 +10,51 @@ tags: imagetrans
 
 我们会以下面这个气泡的处理为例子进行演示。文字外围的框表示软件识别出来的文字区域的范围。
 
-![气泡](/album/ja2en-lettering/boxed.jpg)
+![气泡](/album/ja2en-lettering/boxed.jpg){: width="192" height="378"}
 
 根据文本框的大小自动调整字体大小后的排版效果如下：
 
-![默认翻译效果](/album/ja2en-lettering/en-default.jpg)
+![默认翻译效果](/album/ja2en-lettering/en-default.jpg){: width="175" height="377"}
 
 是否启用自动大小调整和字体大小的调整范围可以在项目设置里设置：
 
-![文字大小调节](/album/ja2en-lettering/auto-font-size-settings.jpg)
+![文字大小调节](/album/ja2en-lettering/auto-font-size-settings.jpg){: width="302" height="355"}
 
 
 我们可以看到，因为日文是竖排的，原本的气泡是高度较大，宽度较小的一个区域。排版英文时，存在字体过大以及单词被切分的问题。
 
 这时我们可以在项目设置里启用“渲染时避免切分单词”的选项（2.12.0版本后自动启用）。它会自动计算所需的最小宽度，调节文字区域的文字大小、宽度和横坐标。
 
-![避免切分单词设置](/album/ja2en-lettering/avoid-breaking-setting.jpg)
+![避免切分单词设置](/album/ja2en-lettering/avoid-breaking-setting.jpg){: width="405" height="122"}
 
 这时的排版效果就变成了下图这样：
 
-![单词不切分时的排版效果](/album/ja2en-lettering/en-nonbreaking.jpg)
+![单词不切分时的排版效果](/album/ja2en-lettering/en-nonbreaking.jpg){: width="182" height="381"}
 
 
 我们发现文字位于气泡的上方，没有处在中央。我们可以添加一个默认的字体样式，启用垂直居中。同时，我们还可以设置字体、描边、水平居中等样式。
 
-![字体样式设置](/album/ja2en-lettering/font-style-settings.jpg)
+![字体样式设置](/album/ja2en-lettering/font-style-settings.jpg){: width="590" height="740"}
 
 
 设置完成后，就可以得到比较好的排版效果了：
 
-![基本样式应用后](/album/ja2en-lettering/en-basic-font-style.jpg)
+![基本样式应用后](/album/ja2en-lettering/en-basic-font-style.jpg){: width="173" height="372"}
 
 原文有一个爱心，我们也可以给它加进去。输入♥后，再使用富文本功能，设置它的颜色和大小。
 
-![富文本](/album/ja2en-lettering/rich-text.jpg)
+![富文本](/album/ja2en-lettering/rich-text.jpg){: width="1064" height="553"}
 
 
 下面是最终的翻译效果。
 
 原图：
 
-![原图](/album/ja2en-lettering/source.jpg)
+![原图](/album/ja2en-lettering/source.jpg){: width="177" height="371"}
 
 翻译的图：
 
-![翻译的图](/album/ja2en-lettering/target.jpg)
+![翻译的图](/album/ja2en-lettering/target.jpg){: width="192" height="384"}
 
 
 ## 更高级的重排
@@ -63,7 +63,7 @@ tags: imagetrans
 
 下面是Lezhin上的韩漫的官方翻译的例子。
 
-![](/album/ja2en-lettering/brawling_go_jp.jpg)
+![](/album/ja2en-lettering/brawling_go_jp.jpg){: width="300" height="373"}
 
-![](/album/ja2en-lettering/brawling_go_en.jpg)
+![](/album/ja2en-lettering/brawling_go_en.jpg){: width="300" height="341"}
 

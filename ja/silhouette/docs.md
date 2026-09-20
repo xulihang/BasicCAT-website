@@ -38,7 +38,7 @@ Linuxの場合は、Windows版のzipパッケージ内のファイルを利用�
 
 Silhouetteのスクリーンショット：
 
-![スクリーンショット](/album/silhouette/screenshot_zh.webp)
+![スクリーンショット](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 左上には、各種コントロールを備えた動画プレーヤーがあります。
 

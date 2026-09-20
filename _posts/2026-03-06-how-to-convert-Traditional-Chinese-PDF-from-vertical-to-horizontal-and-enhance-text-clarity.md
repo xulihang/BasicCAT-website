@@ -12,7 +12,7 @@ I recently came across several older Taiwanese academic papers and found that th
 
 Original file ([PDF](https://kmweb.moa.gov.tw/redirect_files.php?id=98635)):
 
-![Original file](/album/vertical-text-PDF/original.png)
+![Original file](/album/vertical-text-PDF/original.png){: width="1440" height="2023"}
 
 Converted to horizontal markdown format:
 
@@ -82,7 +82,7 @@ F一五二是地力肥沃,灌溉水充沛蕉園的增產王牌,它的原料莖�
 
 A clear version preserving the original layout (Image + PDF):
 
-![Clear version](/album/vertical-text-PDF/reconstructed.png)
+![Clear version](/album/vertical-text-PDF/reconstructed.png){: width="1440" height="2023"}
 
 Text-based PDF with vector text, remains sharp even when zoomed in:
 
@@ -101,8 +101,8 @@ This requires using the OCR software [ImageTrans](/imagetrans/).
 
 Software main interface:
 
-![Software main interface](/album/vertical-text-PDF/imagetrans.jpg)
+![Software main interface](/album/vertical-text-PDF/imagetrans.jpg){: width="1599" height="1140"}
 
 Displaying panels and order:
 
-![Displaying panels and order](/album/vertical-text-PDF/imagetrans-order-mode.jpg)
+![Displaying panels and order](/album/vertical-text-PDF/imagetrans-order-mode.jpg){: width="1599" height="1140"}

@@ -10,7 +10,7 @@ lang: ar
 
 1. Alipay
 
-	![](/album/alipay.jpg)
+	![](/album/alipay.jpg){: width="300" height="295"}
 	
 2. Paypal
 

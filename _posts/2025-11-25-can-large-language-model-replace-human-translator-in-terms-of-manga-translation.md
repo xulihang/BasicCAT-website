@@ -15,7 +15,7 @@ tags: imagetrans
 
 Can large language models replace human translators in the field of manga translation? Let’s take the following *Ranma 1/2* manga as an example to compare translations by large language models and human translators. We compared online large language models such as ChatGPT, Claude, and Gemini, offline large language models like Sakura and Qwen, and traditional machine translation engines such as Google, Baidu and Caiyun.
 
-![original](/album/imagetrans-language-learning/Ranma1_012.jpg)
+![original](/album/imagetrans-language-learning/Ranma1_012.jpg){: width="1248" height="2028"}
 
 
 Comparison table (Japanese to Chinese):
@@ -106,7 +106,7 @@ Japanese to English:
 
 Of course, manga translation is multimodal. It involves other works like lettering and retouching. Here is the English version by Viz Media:
 
-![Vizmedia](/album/ranma-vizmedia.webp)
+![Vizmedia](/album/ranma-vizmedia.webp){: width="800" height="1200"}
 
 
 Check out [ImageTrans](/imagetrans/), a computer-aided image translation tool, to complete manga translation with the help of various large language models. It is an integrated app, which lets you do OCR, translation, lettering and retouching in one place.

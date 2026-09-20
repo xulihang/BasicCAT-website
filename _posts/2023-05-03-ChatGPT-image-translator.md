@@ -18,11 +18,11 @@ Register an OpenAI account and generate an API key.
 
 1. Fill in the API key in the preferences of ImageTrans.
 
-   ![Preferences](/album/chatGPT/preferences.jpg)
+   ![Preferences](/album/chatGPT/preferences.jpg){: width="615" height="260"}
 
 2. Call ChatGPT to translate.
 
-   ![ImageTrans](/album/chatGPT/imagetrans.jpg)
+   ![ImageTrans](/album/chatGPT/imagetrans.jpg){: width="1024" height="728"}
 
    It can be used as a reference during translation or for batch translation.
 

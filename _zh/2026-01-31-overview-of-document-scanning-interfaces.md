@@ -17,7 +17,7 @@ tags: imagetrans
 
 使用TWAIN调用Epson Scan进行扫描：
 
-![epson twain](/album/document-scanning-api/epson-scan.jpg)
+![epson twain](/album/document-scanning-api/epson-scan.jpg){: width="1024" height="768"}
 
 
 TWAIN主要用于Windows。
@@ -25,11 +25,11 @@ TWAIN主要用于Windows。
 ## WIA
 WIA是Windows官方支持的图像获取设备的接口。安装扫描仪驱动后，一般就可以通过Windows的传真和扫描应用进行扫描。
 
-![windows fax](/album/document-scanning-api/windows-fax.jpg)
+![windows fax](/album/document-scanning-api/windows-fax.jpg){: width="885" height="679"}
 
 也可以通过COM，使用程序语言去调用，支持显示UI或者不显示UI。UI的话，是统一的WIA专门的版本。
 
-![wia](/album/document-scanning-api/wia.jpg)
+![wia](/album/document-scanning-api/wia.jpg){: width="615" height="504"}
 
 使用WIA就不能使用厂商提供的专门的扫描程序了。
 
@@ -37,7 +37,7 @@ WIA是Windows官方支持的图像获取设备的接口。安装扫描仪驱动�
 
 ICA是苹果官方提供的接口。安装专门的ICA驱动后，就可以在图像捕获应用中看到定制化的扫描界面了。也支持通过接口不显示UI进行调用。
 
-![ica](/album/document-scanning-api/imagecapture.jpg)
+![ica](/album/document-scanning-api/imagecapture.jpg){: width="1824" height="1384"}
 
 
 ## SANE

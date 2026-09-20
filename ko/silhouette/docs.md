@@ -38,7 +38,7 @@ Linux의 경우 Windows용 zip 패키지에 있는 파일을 사용할 수 있�
 
 Silhouette의 스크린샷:
 
-![스크린샷](/album/silhouette/screenshot_zh.webp)
+![스크린샷](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 왼쪽 상단에는 다양한 컨트롤이 있는 동영상 플레이어가 있습니다.
 

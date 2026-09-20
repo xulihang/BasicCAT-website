@@ -12,15 +12,15 @@ Here is an example of processing video frames from the video clip of Soldier Sor
 
 Video frame with subtitles:
 
-[![frame](/album/subtitle-removal/frame52.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample.mp4)
+[![frame](/album/subtitle-removal/frame52.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample.mp4)
 
 Video frame with subtitles removed with AI:
 
-[![frame ai](/album/subtitle-removal/frame52-ai.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-AI.mp4)
+[![frame ai](/album/subtitle-removal/frame52-ai.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-AI.mp4)
 
 Video frame with subtitles blurred:
 
-[![frame blur](/album/subtitle-removal/frame52-blur.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-Blur.mp4)
+[![frame blur](/album/subtitle-removal/frame52-blur.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-Blur.mp4)
 
 We can see that the effect of AI algorithms on background restoration is fairly good. However, although the effect of a single image is OK, you can still see obvious traces of changes and fluctuations in the generated video. After all, normal videos have 25 frames per second, and the results of AI processing vary from frame to frame. At present, there is no particularly good solution. If we simply use blurring, there will be no obvious fluctuations.
 
@@ -31,19 +31,19 @@ Here's how to remove subtitles from a video using [ImageTrans](/imagetrans/) and
 
 1. Open the video with Silhouette and export the video frames as images. Save in PNG format to maintain picture quality.
 
-   ![Extract Frame](/album/subtitle-removal/extract-frames.jpg)
+   ![Extract Frame](/album/subtitle-removal/extract-frames.jpg){: width="502" height="282"}
 
 2. Use Silhouette to generate subtitles based on sound (another approach is to [detect hard subtitles](/how-to-extract-hardcoded-subtitle/)). This allows us to know which images contain captions, reducing the amount of data that needs to be processed.
 
-   ![Detect voice activity](/album/subtitle-removal/detect-voice-activity.jpg)
+   ![Detect voice activity](/album/subtitle-removal/detect-voice-activity.jpg){: width="786" height="584"}
 
 3. Open the exported images using ImageTrans. Open the video subtitle remover, import subtitles in SRT format, select the subtitle position, and generate text-removed images. If there are missing subtitled images (generally at the beginning and end of a speech line), you can use OCR and other technologies to detect the text and adjust the range of the images with text.
 
-   ![Subtitle Remover](/album/subtitle-removal/subtitle-remover.jpg)
+   ![Subtitle Remover](/album/subtitle-removal/subtitle-remover.jpg){: width="602" height="632"}
 
    The text removing method can be set in the project settings.
 
-   ![Text Removal Settings](/album/subtitle-removal/text-removal-settings.jpg)
+   ![Text Removal Settings](/album/subtitle-removal/text-removal-settings.jpg){: width="396" height="503"}
 
 4. Use Silhouette to generate the final video based on the text-removed images.
 

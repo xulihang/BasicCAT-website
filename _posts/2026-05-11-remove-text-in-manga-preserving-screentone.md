@@ -20,34 +20,34 @@ It integrates several methods for text masking and text removal. Below is a comp
 
 Original image:
 
-![Original](/album/screentones/capture001.jpg)
+![Original](/album/screentones/capture001.jpg){: width="371" height="406"}
 
 Text mask:
 
-![Mask](/album/screentones/capture001.jpg-mask.png)
+![Mask](/album/screentones/capture001.jpg-mask.png){: width="371" height="406"}
 
 PatchMatch (traditional image processing):
 
-![PatchMatch](/album/screentones/patchmatch.jpg)
+![PatchMatch](/album/screentones/patchmatch.jpg){: width="371" height="406"}
 
 Flux Klein 9B：
 
-![Flux](/album/screentones/flux.jpg)
+![Flux](/album/screentones/flux.jpg){: width="371" height="406"}
 
 Lama Inpaint (original):
 
-![Original Lama](/album/screentones/original.jpg)
+![Original Lama](/album/screentones/original.jpg){: width="371" height="406"}
 
 Lama Inpaint (fine-tuned for Japanese manga):
 
-![Fine-tuned Lama](/album/screentones/fine-tuned.jpg)
+![Fine-tuned Lama](/album/screentones/fine-tuned.jpg){: width="371" height="406"}
 
 Gemini 3.0 (Nano Banana):
 
-![Gemini](/album/screentones/nano-banana-2.jpg)
+![Gemini](/album/screentones/nano-banana-2.jpg){: width="371" height="406"}
 
 As you can see, the results are quite good, especially the fine-tuned Lama's, and even when there are minor flaws, only a small amount of correction is needed.
 
 These generative AI models have powerful repainting capabilities. Besides restoring screentones, they can also reconstruct various backgrounds covered by text, such as human figures, landscapes, and other content.
 
-![Example 2](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![Example 2](/album/imagetrans-features/text-removal-and-reinjection.jpg){: width="1304" height="800"}

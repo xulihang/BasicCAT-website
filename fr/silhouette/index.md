@@ -7,7 +7,7 @@ lang: fr
 
 Silhouette est un outil de traduction assistée par ordinateur pour les vidéos et les audios.
 
-![capture d'écran](/album/silhouette/screenshot_zh.webp)
+![capture d'écran](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## Fonctionnalités
 
@@ -15,7 +15,7 @@ Silhouette est un outil de traduction assistée par ordinateur pour les vidéos 
 2. Traduction automatique pilotée par l'IA, qui tient pleinement compte du contexte. Prend en charge ChatGPT et DeepSeek.
 3. Interface facile à utiliser, avec affichage de la forme d'onde et diverses fonctions de contrôle de la lecture, pour ajuster facilement les sous-titres.
 
-   ![forme d'onde](/album/silhouette/waveform_zh.webp)
+   ![forme d'onde](/album/silhouette/waveform_zh.webp){: width="676" height="604"}
 4. Multiplateforme. Compatible avec Windows, macOS et Linux.
 5. Import et export de fichiers de sous-titres (SRT, TXT ou XLIFF).
 6. Prise en charge de l'alignement de la chronologie reconnue avec un texte existant ([alignement texte-audio](/zh/align-text-with-audio/)).
@@ -48,6 +48,6 @@ Remarque : un essai de 7 jours est inclus par défaut. Après l'essai, les fonct
 
 Le théâtre d'ombres de ma ville natale, Haining, s'appelle en anglais « leather-silhouette show » ; on peut y voir une forme primitive de cinéma. C'est pourquoi j'ai choisi le mot silhouette pour nommer ce logiciel.
 
-![théâtre d'ombres](/album/leather-sihouette-show.jpg)
+![théâtre d'ombres](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}

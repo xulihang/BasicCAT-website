@@ -38,7 +38,7 @@ sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 
 Silhouette的屏幕截图：
 
-![屏幕截图](/album/silhouette/screenshot_zh.webp)
+![屏幕截图](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 在左上角，有一个带有各种控件的视频播放器。
 

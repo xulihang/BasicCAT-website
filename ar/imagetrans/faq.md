@@ -95,11 +95,11 @@ lang: ar
 		
     صورة مثال:
 	
-	![](/album/unmerged.jpg)
+	![](/album/unmerged.jpg){: width="287" height="350"}
 	
 	بعد الدمج:
 	
-    ![](/album/merged.jpg)
+    ![](/album/merged.jpg){: width="289" height="335"}
 
 
 

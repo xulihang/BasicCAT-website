@@ -14,11 +14,11 @@ tags: imagetrans
 
 **TypeR** 是一个 Photoshop 扩展（派生自 TyperTools），专门用于漫画排版。它为 Photoshop 增加了智能对齐、样式管理、多气泡处理等功能，旨在无需离开设计环境的前提下，加快手工排版的速度。
 
-![typer](/album/typer/typer.jpg)
+![typer](/album/typer/typer.jpg){: width="2048" height="1032"}
 
 **ImageTrans** 是一个独立的计算机辅助翻译工具，涵盖 OCR、翻译和文字回填。它可以自动检测文字区域、擦除原文并注入译文，同时也支持导出回 Photoshop 进行精细化调整。
 
-![imagetrans](/album/typer/imagetrans.png)
+![imagetrans](/album/typer/imagetrans.png){: width="960" height="723"}
 
 ## 工作流程对比
 

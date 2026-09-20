@@ -20,11 +20,11 @@ ImageTrans提供了ChatGPT的插件，让我们可以调用ChatGPT来帮助翻�
 
 1. 在ImageTrans的偏好设置里填入API密钥。
 
-   ![偏好设置](/album/chatGPT/preferences.jpg)
+   ![偏好设置](/album/chatGPT/preferences.jpg){: width="615" height="260"}
 
 2. 调用ChatGPT进行翻译。
 
-   ![ImageTrans](/album/chatGPT/imagetrans.jpg)
+   ![ImageTrans](/album/chatGPT/imagetrans.jpg){: width="1024" height="728"}
    
    可以在翻译时显示结果供参考或者用于批量翻译。
    

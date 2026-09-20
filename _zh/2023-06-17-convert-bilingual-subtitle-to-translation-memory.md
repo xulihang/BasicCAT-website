@@ -52,23 +52,23 @@ Dialogue: 0,0:00:51.17,0:00:53.04,*Default,NTP,0000,0000,0000,,他不过是我�
 
 1. 新建一个英到中的对齐项目。
 
-   ![New project](/album/ass-aligning/new_project.jpg)
+   ![New project](/album/ass-aligning/new_project.jpg){: width="234" height="158"}
 
-   ![Language pair](/album/ass-aligning/language_pair.jpg)
+   ![Language pair](/album/ass-aligning/language_pair.jpg){: width="494" height="322"}
    
 2. 读取双语ASS文件。通过菜单调出ASS文件读取器，选择字幕文件所在目录，可以列出该目录和子目录下的所有ASS文件。
 
-   ![Read ass files](/album/ass-aligning/read_ass_files.jpg)
+   ![Read ass files](/album/ass-aligning/read_ass_files.jpg){: width="488" height="308"}
    
-   ![Ass picker](/album/ass-aligning/ass-picker.jpg)
+   ![Ass picker](/album/ass-aligning/ass-picker.jpg){: width="770" height="403"}
    
 3. 点击Okay后完成导入，回到对齐操作界面，可以对结果进行调整。
 
-   ![Read ass files](/album/ass-aligning/home.jpg)
+   ![Read ass files](/album/ass-aligning/home.jpg){: width="760" height="549"}
 
 4. 导出结果。通过菜单，把结果导出为翻译记忆文件供后续使用。
 
-   ![Export](/album/ass-aligning/export.jpg)
+   ![Export](/album/ass-aligning/export.jpg){: width="323" height="382"}
 
    
    

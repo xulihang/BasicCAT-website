@@ -38,7 +38,7 @@ D'autres réglages sont également nécessaires.
 
 Une capture d'écran de Silhouette :
 
-![capture d'écran](/album/silhouette/screenshot_zh.webp)
+![capture d'écran](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 En haut à gauche se trouve un lecteur vidéo avec divers contrôles.
 

@@ -16,25 +16,25 @@ tags: imagetrans
 
 ImageTrans是一款计算机辅助图片翻译软件，它基于ONNXRuntime集成了百度的PaddleOCR、mangaOCR、YOLO等OCR和深度学习模型，支持识别图片中的文字，翻译并在原图位置回填译文。此外也支持文档扫描、可搜索PDF生成、屏幕翻译等日常办公操作。
 
-![imagetrans kylinos](/album/imagetrans-kylinos.jpg)
+![imagetrans kylinos](/album/imagetrans-kylinos.jpg){: width="1022" height="767"}
 
 ## BasicCAT
 
 BasicCAT是一款专业的计算机辅助翻译软件，可以处理Word、Excel、PowerPoint等文件的翻译。
 
-![BasicCAT](/album/main.png)
+![BasicCAT](/album/main.png){: width="1024" height="728"}
 
 ## Silhouette
 
 Silhouette是一款计算机辅助音视频翻译软件，可以基于Whisper识别语音，生成字幕并翻译。
 
-![Silhouette](/album/silhouette/screenshot_zh.webp)
+![Silhouette](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## Aligner
 
 Aligner是一个语料对齐软件，可以制作语料，为翻译提供参考。
 
-![Aligner](/album/ass-aligning/home.jpg)
+![Aligner](/album/ass-aligning/home.jpg){: width="760" height="549"}
 
 ## 在国产系统上的问题
 

@@ -12,11 +12,11 @@ The selected image is from the Avengers Disassembled series, where the story beg
 
 Original image:
 
-![Original image](/album/us-comics/avengers.jpg)
+![Original image](/album/us-comics/avengers.jpg){: width="1041" height="1600"}
 
 Translated version:
 
-![Chinese version](/album/us-comics/avengers-translated.jpg)
+![Chinese version](/album/us-comics/avengers-translated.jpg){: width="1041" height="1600"}
 
 
 ## Detailed Procedures
@@ -26,11 +26,11 @@ Translated version:
 
    Mask:
 
-   ![Mask:](/album/us-comics/avengers-mask.jpg)
+   ![Mask:](/album/us-comics/avengers-mask.jpg){: width="1041" height="1600"}
 
    Text-removed image:
 
-   ![Text-removed image:](/album/us-comics/avengers-text-removed.jpg)
+   ![Text-removed image:](/album/us-comics/avengers-text-removed.jpg){: width="1041" height="1600"}
 
 3. Select an OCR engine, such as Baidu, to recognize the text of text areas.
 4. Set the text style. Disable auto text size in the settings, and create a new default text style.
@@ -49,11 +49,11 @@ Translated version:
 
    Source:
 
-   ![Source](/album/us-comics/bold-italic-example.jpg)
+   ![Source](/album/us-comics/bold-italic-example.jpg){: width="227" height="136"}
 
    Target:
 
-   ![Target](/album/us-comics/bold-italic-transaltion-example.jpg)
+   ![Target](/album/us-comics/bold-italic-transaltion-example.jpg){: width="771" height="240"}
 
 
 7. Generate the translated image after translation. If you need to use Photoshop to generate translated images, you can use scripts to generate PSD files.

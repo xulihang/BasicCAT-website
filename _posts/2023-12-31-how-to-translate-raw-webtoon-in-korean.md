@@ -14,11 +14,11 @@ PS: Since I don't know Korean, I use machine translation without further editing
 
 Original image:
 
-![Original image](/album/webtoon/original.jpg)
+![Original image](/album/webtoon/original.jpg){: width="720" height="7700"}
 
 Translated version:
 
-![Translated version](/album/webtoon/english.jpg)
+![Translated version](/album/webtoon/english.jpg){: width="720" height="7700"}
 
 
 ##  Detailed Procedures

@@ -16,7 +16,7 @@ Download: <https://github.com/xulihang/BasicCAT/releases/download/plugins/all_pl
 
 Screenshot:
 
-![](/album/basiccat_mtweb.png)
+![](/album/basiccat_mtweb.png){: width="1009" height="672"}
 
 Usage:
 

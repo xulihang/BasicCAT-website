@@ -95,11 +95,11 @@ ImageTrans 자주 묻는 질문을 정리한 것으로, 더 많은 질문은 [�
 		
     예시 이미지:
 	
-	![](/album/unmerged.jpg)
+	![](/album/unmerged.jpg){: width="287" height="350"}
 	
 	병합 후:
 	
-    ![](/album/merged.jpg)
+    ![](/album/merged.jpg){: width="289" height="335"}
 
 
 

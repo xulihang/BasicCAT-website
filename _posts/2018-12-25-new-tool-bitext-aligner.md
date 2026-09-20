@@ -86,7 +86,7 @@ Crossplatform LF Aligner (unzip to Aligner's root): [LFAligner.zip](https://gith
     * Add keyboard shortcuts for "go to the next empty segment" and "go to the next segment with issues"
 	* New segment operations via context menu (right click on the empty area of the editor to call the menu)
 	
-	![](/album/aligner_listview_context_menu.jpg)
+	![](/album/aligner_listview_context_menu.jpg){: width="200" height="195"}
 
 	[Download](https://github.com/xulihang/Aligner/releases/download/v1.5.3/Aligner.zip)
 

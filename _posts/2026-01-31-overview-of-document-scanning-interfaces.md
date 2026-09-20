@@ -16,7 +16,7 @@ Because it directly calls the manufacturer-provided software, it offers extensiv
 
 Using TWAIN to call Epson Scan for scanning:
 
-![epson twain](/album/document-scanning-api/epson-scan.jpg)
+![epson twain](/album/document-scanning-api/epson-scan.jpg){: width="1024" height="768"}
 
 TWAIN is primarily used on Windows.
 
@@ -24,11 +24,11 @@ TWAIN is primarily used on Windows.
 
 WIA is the officially supported interface for image acquisition devices on Windows. After installing the scanner driver, scanning can be performed through the Windows Fax and Scan application.
 
-![windows fax](/album/document-scanning-api/windows-fax.jpg)
+![windows fax](/album/document-scanning-api/windows-fax.jpg){: width="885" height="679"}
 
 It can also be called programmatically via COM. You can show the UI or acquire the image silently. The UI, when shown, is a unified, specialized version of WIA.
 
-![wia](/album/document-scanning-api/wia.jpg)
+![wia](/album/document-scanning-api/wia.jpg){: width="615" height="504"}
 
 Using WIA cannot use the manufacturer's specialized scanning software.
 
@@ -36,7 +36,7 @@ Using WIA cannot use the manufacturer's specialized scanning software.
 
 ICA is the official interface provided by Apple. After installing the dedicated ICA driver, a customized scanning interface becomes available in the Image Capture application. It also supports calling via the interface without displaying the UI.
 
-![ica](/album/document-scanning-api/imagecapture.jpg)
+![ica](/album/document-scanning-api/imagecapture.jpg){: width="1824" height="1384"}
 
 ## SANE
 

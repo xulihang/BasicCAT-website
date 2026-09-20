@@ -153,7 +153,7 @@ tags: imagetrans
 
 看了以上示例，我们来实际翻译一张图。来自《柯南》第18卷。
 
-![](/album/manga-sound-effect/18_094.jpg)
+![](/album/manga-sound-effect/18_094.jpg){: width="707" height="1100"}
 
 | 拟声词 | 位置 | 中文 | 英文 | 处理方式 |
 |------|------|------|------|------|
@@ -169,15 +169,15 @@ tags: imagetrans
 
 清理干净的无文字图（使用Lama Inpaint）：
 
-![](/album/manga-sound-effect/18_094.jpg-text-removed.jpg)
+![](/album/manga-sound-effect/18_094.jpg-text-removed.jpg){: width="707" height="1100"}
 
 英文翻译版本：
 
-![](/album/manga-sound-effect/target-en.jpg)
+![](/album/manga-sound-effect/target-en.jpg){: width="707" height="1100"}
 
 
 官方英文翻译版本：
 
-![](/album/manga-sound-effect/official-translation.png)
+![](/album/manga-sound-effect/official-translation.png){: width="1066" height="1600"}
 
 这里我还附上了官方翻译，可以看到官方翻译也翻译了拟声词，不过用的词好像是自己造出来。

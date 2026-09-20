@@ -7,7 +7,7 @@ lang: ko
 
 Silhouette는 컴퓨터 지원 음성·영상 번역 소프트웨어입니다.
 
-![screenshot](/album/silhouette/screenshot_zh.webp)
+![screenshot](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 ## 기능
 
@@ -15,7 +15,7 @@ Silhouette는 컴퓨터 지원 음성·영상 번역 소프트웨어입니다.
 2. 맥락을 충분히 고려한 AI 기반 기계 번역. ChatGPT, DeepSeek 호출을 지원합니다.
 3. 사용하기 쉬운 인터페이스로 파형 표시를 지원하며, 다양한 재생 제어 기능이 있어 자막을 편리하게 조정할 수 있습니다.
 
-   ![waveform](/album/silhouette/waveform_zh.webp)
+   ![waveform](/album/silhouette/waveform_zh.webp){: width="676" height="604"}
 4. 크로스 플랫폼. Windows, macOS, Linux를 지원합니다.
 5. 자막 파일 가져오기 및 내보내기(SRT, TXT 또는 XLIFF).
 6. 인식된 타임라인과 기존 원고를 정렬하는 기능([음성-텍스트 정렬](/zh/align-text-with-audio/)).
@@ -46,7 +46,7 @@ Silhouette의 모든 기능을 사용하려면 구매하세요: [구매 링크](
 
 제 고향 하이닝의 그림자극은 영어로 leather-silhouette show라고 하며, 영화의 한 가지 초기 형태로 볼 수 있습니다. 여기서 silhouette이라는 단어를 따와 소프트웨어 이름으로 삼았습니다.
 
-![그림자극](/album/leather-sihouette-show.jpg)
+![그림자극](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}
 

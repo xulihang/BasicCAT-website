@@ -20,7 +20,7 @@ BasicCAT是一款开源免费的计算机辅助翻译软件，旨在为译员提
 
 BasicCAT的设计原则是尽量减少译者的视线转移，专注于译文编辑。机器翻译、划词取义还是拼写错误，都会以下拉列表的形式呈现在输入框下方。
 
-![demo](/album/demo.gif)
+![demo](/album/demo.gif){: width="1022" height="286"}
 
 BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 
@@ -53,7 +53,7 @@ BasicCAT具有以下功能，帮助译员从容完成翻译任务：
 
 更多产品请见[产品列表](/zh/products/)。
 
-![截图](/album/main.png)
+![截图](/album/main.png){: width="1024" height="728"}
 
 
 

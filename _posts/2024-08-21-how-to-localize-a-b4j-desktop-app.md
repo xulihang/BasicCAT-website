@@ -66,11 +66,11 @@ Next, let's talk about how to use BasicCAT to translate the exported xlsx file f
    We can prepare the xlsx file according to step 1, and later use BasicCAT's reimport feature to regenerate the project file based on the new file and the existing translations.
 
 
-   ![Reimport](/album/localization/reimport.jpg)
+   ![Reimport](/album/localization/reimport.jpg){: width="304" height="275"}
 
    Afterwards, use search and replace to find segments with empty translations. Click "Filter Segments" in the bottom left corner to display only these fragments in the editor, making it easier for us to translate new text.
 
-   ![Segments filtering](/album/localization/filter-segments.jpg)
+   ![Segments filtering](/album/localization/filter-segments.jpg){: width="798" height="414"}
 
 
 

@@ -15,15 +15,15 @@ Here are the steps to do this:
 1. Import images to ImageTrans.
 2. Recognize text lines in images. If there are errors or omissions, we can adjust them manually.
 
-   ![Home](/album/searchablePDF/home-en.jpg)
+   ![Home](/album/searchablePDF/home-en.jpg){: width="1024" height="728"}
    
 3. Export the images as a PDF. Use the original images and add a searchable text layer with the source text. Here, we need to specify a font. We can use Arial Unicode MS, which supports all languages.
 
-   ![export options](/album/searchablePDF/export-en.jpg)
+   ![export options](/album/searchablePDF/export-en.jpg){: width="398" height="381"}
 
 4. Use a PDF viewer to open the PDF, search some keywords, and we can see that the keywords can be searched and highlighted.
 
-   ![PDF Reader](/album/searchablePDF/pdf-viewer.jpg)
+   ![PDF Reader](/album/searchablePDF/pdf-viewer.jpg){: width="452" height="661"}
 
 
 [Download sample PDF](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/searchablePDF.pdf)

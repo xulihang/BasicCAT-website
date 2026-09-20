@@ -20,7 +20,7 @@ BasicCAT é um software de tradução assistida por computador de código aberto
 
 O princípio de design do BasicCAT é reduzir ao máximo a movimentação do olhar do tradutor e concentrar sua atenção na edição da tradução. Tradução automática, consulta de termos pela seleção do texto e erros de ortografia aparecem todos como listas suspensas abaixo da caixa de entrada.
 
-![demonstração](/album/demo.gif)
+![demonstração](/album/demo.gif){: width="1022" height="286"}
 
 O BasicCAT conta com os seguintes recursos, que ajudam o tradutor a concluir suas tarefas de tradução com tranquilidade:
 
@@ -53,4 +53,4 @@ Se você precisar traduzir áudio e vídeo, use o [Silhouette](/pt/silhouette/).
 
 Veja mais produtos na [lista de produtos](/pt/products/).
 
-![captura de tela](/album/main.png)
+![captura de tela](/album/main.png){: width="1024" height="728"}

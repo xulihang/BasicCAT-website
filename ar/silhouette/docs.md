@@ -38,7 +38,7 @@ sudo xattr -rd com.apple.quarantine /Applications/Silhouette.app
 
 لقطة شاشة لـ Silhouette:
 
-![لقطة شاشة](/album/silhouette/screenshot_zh.webp)
+![لقطة شاشة](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 في الزاوية العلوية اليسرى يوجد مشغّل فيديو مزوّد بمختلف عناصر التحكم.
 

@@ -10,11 +10,11 @@ Unlike other languages, Japanese and Chinese can be arranged both vertically and
 
 Japanese arranged both vertically and horizontally:
 
-![Vertical and Horizontal](/album/vertical-text/japanese-sample.jpg)
+![Vertical and Horizontal](/album/vertical-text/japanese-sample.jpg){: width="326" height="305"}
 
 Vertical Traditional Chinese:
 
-![Vertical Traditional Chinese](/album/vertical-text/chinese-sample.jpg)
+![Vertical Traditional Chinese](/album/vertical-text/chinese-sample.jpg){: width="110" height="117"}
 
 Here are several ways to recognize vertical text.
 
@@ -26,7 +26,7 @@ There are many OCRs that return single-word coordinates, such as [RapidOCR](http
 
 Recognition results:
 
-![Word Detection - Traditional Chinese](/album/vertical-text/chinese-sample-detected.jpg)
+![Word Detection - Traditional Chinese](/album/vertical-text/chinese-sample-detected.jpg){: width="146" height="153"}
 
 ## Text Line Detection
 
@@ -36,11 +36,11 @@ Currently, [manga-image-translator](https://github.com/xulihang/ImageTrans_plugi
 
 Recognition results:
 
-![Text Line Detection - Japanese](/album/vertical-text/japanese-sample-detected.jpg)
+![Text Line Detection - Japanese](/album/vertical-text/japanese-sample-detected.jpg){: width="372" height="348"}
 
 If the OCR only recognizes horizontal text, we can first do a processing on the image to convert the vertical text into horizontal text.
 
-![Vertical to Horizontal](/album/vertical-text/converted.jpg)
+![Vertical to Horizontal](/album/vertical-text/converted.jpg){: width="88" height="72"}
 
 ## Recognize Entire Image
 

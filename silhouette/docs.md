@@ -37,7 +37,7 @@ There are other things you need to setup.
 
 A screenshot of Silhouette:
 
-![screenshot](/album/silhouette/screenshot_en.webp)
+![screenshot](/album/silhouette/screenshot_en.webp){: width="1500" height="1129"}
 
 On the top left, there is a video player with various controls. 
 

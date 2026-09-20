@@ -91,7 +91,7 @@ ImageTrans在2.10.0中加入了对YOLOv8模型的支持，可以利用Java调用
 
 例子：
 
-![条漫](/gallery/projects/webtoon/out/SQ.webp)
+![条漫](/gallery/projects/webtoon/out/SQ.webp){: width="650" height="2481"}
 
 我们可以指定宽度、高度和子图片彼此重叠的比例对图片进行裁剪。
 

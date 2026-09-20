@@ -38,7 +38,7 @@ Além disso, há outras configurações a fazer.
 
 Uma captura de tela do Silhouette:
 
-![captura de tela](/album/silhouette/screenshot_zh.webp)
+![captura de tela](/album/silhouette/screenshot_zh.webp){: width="1500" height="1160"}
 
 No canto superior esquerdo, há um player de vídeo com vários controles.
 

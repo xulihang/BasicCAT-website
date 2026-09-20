@@ -16,7 +16,7 @@ We need to have a credit card (MasterCard or Visa)
 
 Pick a manga and click the purchase now button on the right,
 
-![purchase](/album/dlsite/purchase.jpg)
+![purchase](/album/dlsite/purchase.jpg){: width="374" height="509"}
 
 After the purchase is done, we can download the manga. Normally, we can get a zip file containing the JPG and PDF files.
 
@@ -26,11 +26,11 @@ Here, let's use [ImageTrans](/imagetrans/) for the translation.
 
 1. Create a new project based on the Japanese to English manga template.
 
-   ![new project](/album/dlsite/new_project_ja2en.jpg)
+   ![new project](/album/dlsite/new_project_ja2en.jpg){: width="921" height="485"}
    
 2. Open the custom workflow form through menu -> project -> batch -> custom workflow. Click "Okay" to start batch translation.
 
-   ![custom workflow](/album/dlsite/custom_workflow_en.jpg)
+   ![custom workflow](/album/dlsite/custom_workflow_en.jpg){: width="640" height="671"}
    
 3. After the workflow is done, use menu -> project -> batch -> generate translated images for all. Then, you can get the translated images in the out folder.
 
@@ -40,11 +40,11 @@ Translated sample ([男子高生×新人OLの話](https://www.dlsite.com/girls/w
 
 Source:
 
-![source](/album/dlsite/006-ja.webp)
+![source](/album/dlsite/006-ja.webp){: width="1748" height="2480"}
 
 Target:
 
-![target](/album/dlsite/006-en.webp)
+![target](/album/dlsite/006-en.webp){: width="1748" height="2480"}
 
 ## Related
 

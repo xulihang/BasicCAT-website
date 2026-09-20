@@ -8,7 +8,7 @@ tags: silhouette
 
 We may need to transcribe and translate some Japanese videos. The desktop tool [Silhouette](/silhouette/) has made it easy to be done.
 
-![screenshot](/album/silhouette/japanese_en.webp)
+![screenshot](/album/silhouette/japanese_en.webp){: width="1599" height="1140"}
 
 The processing can be done entirely offline on your own computer.
 

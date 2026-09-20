@@ -16,11 +16,11 @@ In the next part, we are going to illustrate how to use it to learn Japanese by 
 
 Raw image:
 
-![Raw image](/album/imagetrans-language-learning/Ranma1_012.jpg)
+![Raw image](/album/imagetrans-language-learning/Ranma1_012.jpg){: width="1248" height="2028"}
 
 Translated:
 
-![Translated](/album/imagetrans-language-learning/Ranma1_012_translated.jpg)
+![Translated](/album/imagetrans-language-learning/Ranma1_012_translated.jpg){: width="1248" height="2028"}
 
 ## OCR and Translation
 
@@ -54,13 +54,13 @@ Since we may have watched a lot of animes, our listening skill is better trained
 
 ImageTrans can perform morphological analysis for the sentences to get the segmented words and their details like pronunciation. Although some Mangas have furiganas, they may not look clear on a screen. We can use this function to learn about the pronunciation.
 
-![Analysis](/album/imagetrans-language-learning/zh/kuromoji.jpg)
+![Analysis](/album/imagetrans-language-learning/zh/kuromoji.jpg){: width="659" height="324"}
 
 ## Online Dictionary
 
 We can look up words we don't know in online dictionaries.
 
-![Online dictionary](/album/imagetrans-language-learning/online-dictionary.jpg)
+![Online dictionary](/album/imagetrans-language-learning/online-dictionary.jpg){: width="696" height="547"}
 
 ## Machine Translation and Term Management
 
@@ -68,7 +68,7 @@ ImageTrans can call several machine translation engines to help us understand th
 
 We can also use it to set unfamiliar words as terms to manage them.
 
-![Term](/album/imagetrans-language-learning/term.jpg)
+![Term](/album/imagetrans-language-learning/term.jpg){: width="505" height="514"}
 
 Terms can be exported to a table. We can later import them into note-taking apps like Notion and Obsidian or flashcard apps like Anki.
 

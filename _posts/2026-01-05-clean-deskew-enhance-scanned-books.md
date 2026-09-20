@@ -9,30 +9,30 @@ tags: imagetrans
 I downloaded several e-books from the Superstar e-library and planned to convert them to PDF to read on Dasung e-ink tablets. However, I found that the scanned books had low clarity, low contrast and other problems like deskew and text on the other side that can be seen. The readability on e-book readers is low.
 
 
-![Uncleaned on electronic ink screen](/album/clean-scanned-document/uncleaned-on-eink-tablet.jpg)
+![Uncleaned on electronic ink screen](/album/clean-scanned-document/uncleaned-on-eink-tablet.jpg){: width="1734" height="1734"}
 
 
 After some processing, I finally got a clear version of the PDF, and was able to read it on the e-ink device.
 
-![Cleaned on electronic ink screen](/album/clean-scanned-document/cleaned-on-eink-tablet.jpg)
+![Cleaned on electronic ink screen](/album/clean-scanned-document/cleaned-on-eink-tablet.jpg){: width="1734" height="1734"}
 
 Here are the processing steps that went through.
 
 Original image:
 
-![Original](/album/clean-scanned-document/original.jpg)
+![Original](/album/clean-scanned-document/original.jpg){: width="1566" height="2334"}
 
 Super-resolution operation on the image to improve clarity:
 
-![](/album/clean-scanned-document/superresolution.jpg)
+![](/album/clean-scanned-document/superresolution.jpg){: width="1566" height="2334"}
 
 Recognize the rotation of the text in the image and deskew the image accordingly:
 
-![deskewed](/album/clean-scanned-document/deskewed.jpg)
+![deskewed](/album/clean-scanned-document/deskewed.jpg){: width="1582" height="2345"}
 
 Recognize the text in the image and binarize the image by text area to get a version that is only black and white:
 
-![black and white](/album/clean-scanned-document/black-white.png)
+![black and white](/album/clean-scanned-document/black-white.png){: width="1582" height="2345"}
 
 The final PDF of this 203-page book is only 8MB in size, and it supports searching for the text in the PDF.
 

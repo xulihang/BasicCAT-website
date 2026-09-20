@@ -23,4 +23,4 @@ tags: imagetrans
 * 支持调用多种机器翻译和大语言模型
 * 支持利用术语词典、字符替换等方法改善翻译
 
-![界面截图](/album/imagetrans_zh.jpg)
+![界面截图](/album/imagetrans_zh.jpg){: width="1024" height="731"}

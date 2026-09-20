@@ -95,10 +95,10 @@ ImageTrans FAQ. Search more issues [here](https://github.com/xulihang/ImageTrans
 
     Example:
 
-    ![](/album/unmerged.jpg)
+    ![](/album/unmerged.jpg){: width="287" height="350"}
 
     Merged:
 
-    ![](/album/merged.jpg)
+    ![](/album/merged.jpg){: width="289" height="335"}
 
 {% include comments.html %}

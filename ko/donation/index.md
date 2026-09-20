@@ -10,7 +10,7 @@ lang: ko
 
 1. 알리페이(Alipay)
 
-	![](/album/alipay.jpg)
+	![](/album/alipay.jpg){: width="300" height="295"}
 	
 2. Paypal
 

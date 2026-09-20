@@ -20,7 +20,7 @@ OmegaT作为一款免费开源的替代方案，也支持跨平台，但我不�
 
 最终，我用B4J（一个 RAD 开发工具）创建了自己的CAT工具，命名为 [BasicCAT](/zh/)。
 
-![BasicCAT](/album/main.png)
+![BasicCAT](/album/main.png){: width="1024" height="728"}
 
 我从2018年开始开发BasicCAT，并用它完成了许多翻译任务。由于它可以直接翻译Trados的SDLXLIFF文件，即使我没有Trados，也能承接那些要求使用Trados的任务。
 

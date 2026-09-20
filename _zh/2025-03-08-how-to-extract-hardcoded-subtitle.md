@@ -22,11 +22,11 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 
 首先，我们看下美剧版《甄嬛传》中的字幕是什么样的。下面是几张截图：
 
-![frame16](/album/hardcoded-subtitle-extraction/frame16.jpg)
+![frame16](/album/hardcoded-subtitle-extraction/frame16.jpg){: width="1280" height="714"}
 
-![frame135](/album/hardcoded-subtitle-extraction/frame135.jpg)
+![frame135](/album/hardcoded-subtitle-extraction/frame135.jpg){: width="1280" height="714"}
 
-![frame135](/album/hardcoded-subtitle-extraction/frame137.jpg)
+![frame135](/album/hardcoded-subtitle-extraction/frame137.jpg){: width="1280" height="714"}
 
 可以看到字幕会有两行、三行等多种情况，译文可能分散在多条相同原文的字幕中。
 
@@ -34,7 +34,7 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 
 我们打开[Silhouette](/zh/silhouette/)软件，使用它的帧提取器，提取视频帧：
 
-![frame extraction](/album/hardcoded-subtitle-extraction/frame-extraction.jpg)
+![frame extraction](/album/hardcoded-subtitle-extraction/frame-extraction.jpg){: width="882" height="570"}
 
 
 这里我们可以设置FPS。FPS设置为3时，每秒就只提取3帧。如果希望提取的时间轴准确点，可以把FPS设大点，但处理所需的时间也会更多。如果我们只是需要文本，不需要时间很准确，FPS可以设小点。
@@ -45,19 +45,19 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 
 通过菜单栏-工具，打开硬字幕提取器。
 
-![subtitle detection form](/album/hardcoded-subtitle-extraction/subtitle-detection-form.jpg)
+![subtitle detection form](/album/hardcoded-subtitle-extraction/subtitle-detection-form.jpg){: width="816" height="783"}
 
 设置需要识别的边界，选择检测引擎为"detect only (PaddleOCR)"，设置线程数为4，点击“检测所有图片中的字幕”开始检测。这里，我们处理的54秒的视频，提取FPS设为3，有164张图像需要进行检测。
 
 操作完成后，我们可以看到图片中的字幕行被检测出来了。
 
-![detected text lines](/album/hardcoded-subtitle-extraction/detected-text-lines.jpg)
+![detected text lines](/album/hardcoded-subtitle-extraction/detected-text-lines.jpg){: width="1008" height="725"}
 
 之后，我们点击“OCR所有关键帧”，会识别所有字幕图像中的文字。因为我们这里只识别关键帧，需要处理的图片数变成了21。
 
 可以看到多了一个文本框，包含识别的文本。
 
-![subtitle recognized](/album/hardcoded-subtitle-extraction/subtitle-recognized.jpg)
+![subtitle recognized](/album/hardcoded-subtitle-extraction/subtitle-recognized.jpg){: width="1903" height="729"}
 
 之后，我们就可以导出字幕为SRT文件了。
 
@@ -65,7 +65,7 @@ OCR一般分为两个步骤，首先是定位文字区域，然后是识别文�
 
 然后再勾选合并双语字幕同一条字幕对应的多条译文，会把分散的译文都合并到一起。
 
-![bilingual settings](/album/hardcoded-subtitle-extraction/bilingual-settings.jpg)
+![bilingual settings](/album/hardcoded-subtitle-extraction/bilingual-settings.jpg){: width="959" height="228"}
 
 下面是提取出来的字幕：
 

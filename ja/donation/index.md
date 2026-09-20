@@ -10,7 +10,7 @@ lang: ja
 
 1. Alipay（アリペイ）
 
-	![](/album/alipay.jpg)
+	![](/album/alipay.jpg){: width="300" height="295"}
 	
 2. Paypal
 

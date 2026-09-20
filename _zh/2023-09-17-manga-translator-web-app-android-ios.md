@@ -16,16 +16,16 @@ tags: imagetrans
 
    1. 通过菜单栏打开服务器窗口
    
-      ![服务器](/album/web-app/zh/menu-server.jpg)
+      ![服务器](/album/web-app/zh/menu-server.jpg){: width="347" height="268"}
        
    2. 点击启动服务器，连接。这里可以设置需要使用的机器翻译、文字检测和区域合并方式。我们这里选择使用ChatGPT进行翻译，使用气泡检测模型检测文字。
    
-      ![服务器界面](/album/web-app/zh/server-form.jpg)
+      ![服务器界面](/album/web-app/zh/server-form.jpg){: width="499" height="278"}
    
    
 3. 启动服务器后，我们可以访问<https://local.basiccat.org:51043/>来调用我们电脑上运行的ImageTrans。在这个页面，可以上传需要翻译的图片进行翻译。
 
-   ![网页](/album/web-app/web-page.jpg)
+   ![网页](/album/web-app/web-page.jpg){: width="698" height="347"}
    
 
 4. 为了在外网也能使用这个网页，我们可以使用ngrok的内网穿透服务。
@@ -40,7 +40,7 @@ tags: imagetrans
       
       运行后会显示如下的界面：
       
-      ![ngrok](/album/web-app/ngrok-cli.jpg)
+      ![ngrok](/album/web-app/ngrok-cli.jpg){: width="820" height="416"}
       
       ngrok会提供一个类似`https://3751-101-71-39-138.ngrok-free.app`的网址，我们可以通过这个链接来访问ImageTrans的网页应用。
       

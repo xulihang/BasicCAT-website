@@ -21,11 +21,11 @@ tags: imagetrans
 
 原图：
 
-![日语原图](/album/manga-translator/japanese.jpg)
+![日语原图](/album/manga-translator/japanese.jpg){: width="830" height="1170"}
 
 翻译的版本：
 
-![中文翻译版本](/album/manga-translator/chinese.jpg)
+![中文翻译版本](/album/manga-translator/chinese.jpg){: width="830" height="1170"}
 
 图片来源：<https://github.com/mantra-inc/open-mantra-dataset>
 

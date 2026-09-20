@@ -14,47 +14,47 @@ On your computer:
 
 1. In ImageTrans, go to Preferences - Server and generate a self-signed certificate. Make sure to fill in the correct LAN address of your computer.
 
-   ![](/album/certificate/server-preference.png)
+   ![](/album/certificate/server-preference.png){: width="960" height="780"}
 
-   ![](/album/certificate/server-self-cert-creation.png)
+   ![](/album/certificate/server-self-cert-creation.png){: width="882" height="573"}
 
 2. Start the local server from the Server menu.
 
-   ![](/album/certificate/server.png)
+   ![](/album/certificate/server.png){: width="979" height="422"}
 
 3. Click the LAN link in the server window to show a QR code, then scan it with your phone to open the server. If the IP is wrong, find the correct LAN IP yourself and enter the address manually, for example https://192.168.0.169:51043.
 
-   ![](/album/certificate/qr.png)
+   ![](/album/certificate/qr.png){: width="557" height="706"}
 
 
 On your phone:
 
 1. Once the page is open, find the line that says `Install self-signed cert ` and click it to download the certificate.
 
-   ![](/album/certificate/install-certificate.jpg)
+   ![](/album/certificate/install-certificate.jpg){: width="750" height="1334"}
 
 2. Open Settings. You will see a "Profile Downloaded" option. Open it and install the downloaded certificate.
 
-   ![](/album/certificate/settings.PNG)
+   ![](/album/certificate/settings.PNG){: width="750" height="1334"}
 
-   ![](/album/certificate/install-profile.PNG)
+   ![](/album/certificate/install-profile.PNG){: width="750" height="1334"}
 
-   ![](/album/certificate/vpn-device-management.PNG)
+   ![](/album/certificate/vpn-device-management.PNG){: width="750" height="1334"}
 
    After that, the installed certificate will appear under VPN & Device Management.
 
 3. Next, go to Settings - General - About - Certificate Trust Settings and turn on trust for this certificate.
 
-   ![](/album/certificate/certificate-trust-settings.PNG)
+   ![](/album/certificate/certificate-trust-settings.PNG){: width="750" height="1334"}
 
 4. Open Orion Browser, go to the ImageTrans extension settings, and set the server address to the LAN IP address of your computer, for example https://192.168.0.169:51043. Replace 192.168.0.169 with your own IP. It is usually the address shown in the server's QR code; if it is wrong, find the correct IP yourself.
 
 
-   ![](/album/certificate/extension-server-settings.PNG)
+   ![](/album/certificate/extension-server-settings.PNG){: width="750" height="1334"}
 
 5. Choose ImageTrans as the translation method, and you can start translating.
 
-   ![](/album/certificate/extension-translation-settings.jpg)
+   ![](/album/certificate/extension-translation-settings.jpg){: width="750" height="1334"}
 
 
 ## External Network Sharing

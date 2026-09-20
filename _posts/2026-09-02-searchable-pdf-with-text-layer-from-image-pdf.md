@@ -25,11 +25,11 @@ After saving, we get a PDF like the one above. The software will automatically w
 
 Open it in Edge, and the text can be correctly selected, copied and searched.
 
-![](/album/edge-pdf-reading.jpg)
+![](/album/edge-pdf-reading.jpg){: width="1600" height="1128"}
 
 The ImageTrans interface:
 
-![](/album/vertical-japanese-pdf-imagetrans-ui.jpg)
+![](/album/vertical-japanese-pdf-imagetrans-ui.jpg){: width="1600" height="1128"}
 
 ImageTrans can also further translate the images, giving us the following Chinese searchable two-layer PDF.
 

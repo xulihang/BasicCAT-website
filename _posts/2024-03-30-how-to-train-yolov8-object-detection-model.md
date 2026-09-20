@@ -91,7 +91,7 @@ Sometimes, the images we need to process are very long. We can crop the images i
 
 Example:
 
-![webtoon](/gallery/projects/webtoon/out/SQ.webp)
+![webtoon](/gallery/projects/webtoon/out/SQ.webp){: width="650" height="2481"}
 
 We can crop images by specifying the width, height, and proportions of sub-images that overlap each other.
 

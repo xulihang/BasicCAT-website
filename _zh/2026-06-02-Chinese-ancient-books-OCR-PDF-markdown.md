@@ -16,7 +16,7 @@ tags: imagetrans
 
 下面我们介绍怎么使用看典古籍API识别《世说新语》的一张图片。
 
-![](/album/ancient-book/shi_shuo_xin_yu02.jpg)
+![](/album/ancient-book/shi_shuo_xin_yu02.jpg){: width="1000" height="1599"}
 
 ### API配置
 
@@ -31,7 +31,7 @@ tags: imagetrans
 2. 选择OCR引擎为kandianguji，然后点编辑-自动识别文字，可以识别单张图片。结果会在原图中高亮出来，识别的位置和文字都可以编辑。
 3. 如果要处理所有图片，可以点击菜单-项目-批处理-自动识别所有图片中的文字。
 
-![截图](/album/ancient-book/imagetrans.jpg)
+![截图](/album/ancient-book/imagetrans.jpg){: width="1098" height="729"}
 
 ### 导出
 

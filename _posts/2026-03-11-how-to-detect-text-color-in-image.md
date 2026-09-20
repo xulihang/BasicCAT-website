@@ -10,11 +10,11 @@ Detecting text colors in images, including background colors and stroke colors, 
 
 Original image:
 
-![Original image](/album/text-color-detection/source.jpg)
+![Original image](/album/text-color-detection/source.jpg){: width="708" height="82"}
 
 Translated image:
 
-![Translated image](/album/text-color-detection/translated.jpg)
+![Translated image](/album/text-color-detection/translated.jpg){: width="708" height="82"}
 
 ## Implementation Principle
 
@@ -22,7 +22,7 @@ For background colors, KMeans can be used to cluster colors and identify the dom
 
 For text colors, contour detection can be performed to calculate the average pixel value of the text contour and exclude pixels that are similar to the background color.
 
-![Plain color background](/album/text-color-detection/plain-color.jpg)
+![Plain color background](/album/text-color-detection/plain-color.jpg){: width="728" height="244"}
 
 However, if the background is complex and stroke colors or the color of each character need to be extracted, traditional image processing methods may not perform well. In such cases, convolutional neural networks can be used for extraction.
 
@@ -36,28 +36,28 @@ Below are some operational examples.
 
 In many CG images, different colors are often used to distinguish dialogues between different characters.
 
-![Example](/album/text-color-detection/example.jpg)
+![Example](/album/text-color-detection/example.jpg){: width="300" height="334"}
 
 ImageTrans can detect stroke colors and text colors. Below are the raw recognition results.
 
-![Detection results](/album/text-color-detection/detected.jpg)
+![Detection results](/album/text-color-detection/detected.jpg){: width="760" height="861"}
 
 As can be seen, the text colors and stroke colors have been detected, but they are not very accurate.
 
 In the project settings, we can predefine several styles and specify the colors used for each style.
 
-![Project settings](/album/text-color-detection/project-settings.jpg)
+![Project settings](/album/text-color-detection/project-settings.jpg){: width="977" height="1096"}
 
 Afterward, perform a color matching operation to match the styles based on the text colors.
 
-![Workflow](/album/text-color-detection/workflow.jpg)
+![Workflow](/album/text-color-detection/workflow.jpg){: width="1287" height="946"}
 
 This resolves the issue of inaccuracies in the detected colors.
 
-![Adjusted results](/album/text-color-detection/adjusted.jpg)
+![Adjusted results](/album/text-color-detection/adjusted.jpg){: width="822" height="966"}
 
 ### Example 2
 
 Some texts use rich text formatting, where a single line of text may contain multiple colors. ImageTrans supports recognizing the style of each character and outputting results with rich text tags.
 
-![Inline styles](/album/text-color-detection/inline-text.jpg)
+![Inline styles](/album/text-color-detection/inline-text.jpg){: width="1425" height="595"}

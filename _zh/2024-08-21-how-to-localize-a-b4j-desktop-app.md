@@ -66,11 +66,11 @@ ImageTrans集成了本地化功能，可以导出上述表格，并从上述这�
    我们可以按照步骤一准备好xlsx文件，之后利用BasicCAT的重新导入功能，基于新的文件和已有的翻译重新生成项目文件。
 
 
-   ![重新导入](/album/localization/reimport.jpg)
+   ![重新导入](/album/localization/reimport.jpg){: width="304" height="275"}
    
    之后使用搜索与替换，查找译文为空的片段，点左下方的"Filter Segments"，在编辑器中只显示这些片段，方便我们翻译新的文本。
    
-   ![片段过滤](/album/localization/filter-segments.jpg)
+   ![片段过滤](/album/localization/filter-segments.jpg){: width="798" height="414"}
 
 
 

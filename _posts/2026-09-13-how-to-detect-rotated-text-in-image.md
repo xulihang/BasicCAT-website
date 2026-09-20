@@ -14,11 +14,11 @@ The computer-aided image translation software [ImageTrans](/imagetrans/) support
 
 The interface:
 
-![](/album/rotated-text/rotated-text-with-imagetrans-ui.jpg)
+![](/album/rotated-text/rotated-text-with-imagetrans-ui.jpg){: width="1600" height="1128"}
 
 The binary image:
 
-![](/album/rotated-text/db-thresh.png)
+![](/album/rotated-text/db-thresh.png){: width="1056" height="1504"}
 
 Image source: <https://ac.qq.com/ComicView/index/id/547921/cid/1>
 

@@ -20,7 +20,7 @@ OmegaT stands out as a free and open-source alternative and is cross-platform. B
 
 In the end, I created my own CAT tool with B4J, a RAD development tool. It is named [BasicCAT](/).
 
-![BasicCAT](/album/main.png)
+![BasicCAT](/album/main.png){: width="1024" height="728"}
 
 I have been developing BasicCAT since 2018. I've completed many translation tasks with it. Since it can directly translate Trados's SDLXLIFF file, I can accept tasks requiring Trados even though I don't have Trados.
 

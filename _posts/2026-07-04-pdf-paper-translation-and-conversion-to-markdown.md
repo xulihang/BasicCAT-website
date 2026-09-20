@@ -22,17 +22,17 @@ This article will use [ImageTrans](/imagetrans/), an image OCR and translation s
 
 1. Create a new project based on the "Document" template and import the PDF. ImageTrans will convert the PDF to images for processing. There are some parameters to configure. For scanned PDFs, you can choose the image extraction mode, which is very fast. For PDFs with selectable text, use the default rendering mode, enable text extraction, and extract at the word level.
 
-   ![PDF Translation](/album/pdf-translation/import-options-en.jpg)
+   ![PDF Translation](/album/pdf-translation/import-options-en.jpg){: width="603" height="497"}
 
 2. If the built-in text information from the PDF is not extracted well or if the PDF has no embedded text, you can choose an OCR engine for recognition. For example, for Japanese, you can use rapid or oneocr. You can go to Menu - Edit - Detect text areas and recognize text to check the recognition result on a single image.
 
    The text extraction from this example PDF works well.
 
-   ![Imported Interface](/album/pdf-translation/imported.jpg)
+   ![Imported Interface](/album/pdf-translation/imported.jpg){: width="1599" height="1140"}
 
 3. Go to Menu - Project - Batch - Custom workflow to open the workflow settings. Some configuration specific to this PDF is needed. For example, this PDF does not need text detection, areas outside panels should be removed, and the panel detection engine should be set to Deepseek-OCR, which performs better. Here, "panels" refer to various layout components such as paragraphs, figures, and so on.
 
-   ![Workflow](/album/pdf-translation/workflow-en.jpg)
+   ![Workflow](/album/pdf-translation/workflow-en.jpg){: width="972" height="946"}
 
    Explanation of each operation:
 
@@ -44,15 +44,15 @@ This article will use [ImageTrans](/imagetrans/), an image OCR and translation s
 
    Below is the interface after executing the custom workflow, with the toolbar switched to sorting mode:
 
-   ![Detection Results](/album/pdf-translation/panel-detected.jpg)
+   ![Detection Results](/album/pdf-translation/panel-detected.jpg){: width="1599" height="1140"}
 
 4. Click "Translated" in the lower-left corner to see the translated version of the PDF paper pages.
 
-   ![Translated Version](/album/pdf-translation/translated-en.jpg)
+   ![Translated Version](/album/pdf-translation/translated-en.jpg){: width="1599" height="1140"}
 
 5. Go to Menu - File - Export - Markdown to export the result as a Markdown file, making it easy to read on a phone or to feed to AI for analysis. Since Markdown, unlike PDF, does not have positional information for text, correct text ordering is critical during export. With Deepseek-OCR layout analysis, the reading order is generally correct. If there are errors, they can also be corrected in ImageTrans.
 
-   ![Markdown](/album/pdf-translation/markdown-en.jpg)
+   ![Markdown](/album/pdf-translation/markdown-en.jpg){: width="1599" height="1140"}
 
 In addition to exporting as Markdown, export to PDF, HTML, and other formats is also supported.
 

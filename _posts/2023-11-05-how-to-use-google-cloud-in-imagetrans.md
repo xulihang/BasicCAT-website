@@ -16,40 +16,40 @@ You need to create a Google Cloud Platform account first. You can get a $300 cre
 
 Create a new project first.
 
-![New project](/album/googlecloud/new_project.jpg)
+![New project](/album/googlecloud/new_project.jpg){: width="548" height="453"}
 
 ## Enable Cloud Vision OCR
 
 Go to API&Services, search "OCR" and enable it.
 
-![api services sidemenu](/album/googlecloud/api_services_sidemenu.jpg)
+![api services sidemenu](/album/googlecloud/api_services_sidemenu.jpg){: width="460" height="314"}
 
-![cloud vision search](/album/googlecloud/cloud_vision_search.jpg)
+![cloud vision search](/album/googlecloud/cloud_vision_search.jpg){: width="789" height="393"}
 
 
 ## New API Key
 
 Create a new API key.
 
-![new api key](/album/googlecloud/cloud_vision_new_api_key.jpg)
+![new api key](/album/googlecloud/cloud_vision_new_api_key.jpg){: width="856" height="270"}
 
 Fill it in ImageTrans's preferences.
 
-![api preferences](/album/googlecloud/google_api_preferences.jpg)
+![api preferences](/album/googlecloud/google_api_preferences.jpg){: width="645" height="313"}
 
 Then we can select Google as the OCR engine to use it.
 
-![ocr combobox](/album/googlecloud/ocr_combobox.jpg)
+![ocr combobox](/album/googlecloud/ocr_combobox.jpg){: width="465" height="200"}
 
 ## Enable Cloud Translation
 
 Similarly, we can enable cloud translation.
 
-![cloud translate search](/album/googlecloud/cloud_translate_search.jpg)
+![cloud translate search](/album/googlecloud/cloud_translate_search.jpg){: width="781" height="349"}
 
 OCR and machine translation can share the same API key. After enabling it, we can use Google to translate texts in the translation assist tab.
 
-![cloud translate](/album/googlecloud/google_translate.jpg)
+![cloud translate](/album/googlecloud/google_translate.jpg){: width="769" height="416"}
 
 We can also pretranslate the areas using menu -> edit -> translate all areas.
 
@@ -63,7 +63,7 @@ We can upload an image file to Google Drive and get its text. Compared to the Vi
 
 Go to API&Services, search "Drive" and enable it.
 
-![Google Drive Search](/album/googlecloud/drive_search.jpg)
+![Google Drive Search](/album/googlecloud/drive_search.jpg){: width="777" height="359"}
 
 ### Enable OAuth
 
@@ -71,17 +71,17 @@ Enable OAuth so that we can login our gmail account.
 
 1. New OAuth screen. Choose External.
     
-   ![oauth](/album/googlecloud/oauth.jpg)
+   ![oauth](/album/googlecloud/oauth.jpg){: width="806" height="527"}
    
 2. Fill in required info and add your gmail account as the test account.
 
-   ![add test user](/album/googlecloud/test_user.jpg)
+   ![add test user](/album/googlecloud/test_user.jpg){: width="868" height="381"}
 
 3. Create a new OAuth client id. Select desktop application.
 
-   ![new credentials](/album/googlecloud/cloud_vision_new_api_key.jpg)
+   ![new credentials](/album/googlecloud/cloud_vision_new_api_key.jpg){: width="856" height="270"}
    
-   ![new oauth client](/album/googlecloud/new_oauth_client.jpg)
+   ![new oauth client](/album/googlecloud/new_oauth_client.jpg){: width="817" height="358"}
 
 4. Download the JSON file, renamed it as `credentials.json` and put it under ImageTrans's foler.
 
@@ -91,7 +91,7 @@ Enable OAuth so that we can login our gmail account.
 2. Download the plugin zip and unzip it in the plugins folder: [commandline_plugin.zip](https://github.com/xulihang/Google-Drive-OCR-Java/releases/download/builds/commandline_plugin.zip) (Remember to restart ImageTrans after this step)
 3. Select Google Drive as the OCR engine.
 
-   ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg)
+   ![ocr combobox google drive](/album/googlecloud/ocr_combobox_google_drive.jpg){: width="400" height="169"}
 
 You can learn more about Google Drive OCR [here](https://github.com/xulihang/ImageTrans_plugins/tree/master/googledriveOCR).
 

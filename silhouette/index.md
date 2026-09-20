@@ -6,7 +6,7 @@ description: Silhouette is a computer-aided translation tool for videos and audi
 
 Silhouette is a computer-aided translation tool for videos and audios.
 
-![screenshot](/album/silhouette/screenshot_en.webp)
+![screenshot](/album/silhouette/screenshot_en.webp){: width="1500" height="1129"}
 
 ## Features
 
@@ -14,7 +14,7 @@ Silhouette is a computer-aided translation tool for videos and audios.
 2. AI-powered translation which takes the context into consideration. ChatGPT and DeepSeek supported.
 3. Easy-to-use interface to adjust the subtitle lines with the help of the waveform and various playback controls.
 
-   ![waveform](/album/silhouette/waveform_en.webp)
+   ![waveform](/album/silhouette/waveform_en.webp){: width="834" height="586"}
 4. Cross-platform. It runs on Windows, macOS and Linux.
 5. Subtitle file export and import (SRT, TXT or XLIFF)
 6. Alignment of the recognized timelines and existing text ([forced alignment](/align-text-with-audio/))
@@ -42,7 +42,7 @@ PS: There is 7-day full-feature trial. After the trial, there are limitations on
 ## Why the Name
 
 An art form in my hometown (Haining, China) uses the sihouette of leather cut, which can be seen as an early form of film, so I pick Silhouette as the name.
-![leather-sihouette show](/album/leather-sihouette-show.jpg)
+![leather-sihouette show](/album/leather-sihouette-show.jpg){: width="512" height="287"}
 
 {% include comments.html %}
 

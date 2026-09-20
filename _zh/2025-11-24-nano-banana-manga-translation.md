@@ -10,12 +10,12 @@ tags: imagetrans
 
 原图（[男子高生×新人OLの話](https://www.dlsite.com/girls/work/=/product_id/RJ276847.html)）：
 
-![原图](/album/dlsite/006-ja.webp)
+![原图](/album/dlsite/006-ja.webp){: width="1748" height="2480"}
 
 
 翻译好的漫画图：
 
-![nano翻译图](/album/nano-banana/nano.webp)
+![nano翻译图](/album/nano-banana/nano.webp){: width="1748" height="2492"}
 
 
 可以看到，它可以比较准确地去除原文，回填译文，并且翻译质量不错。
@@ -29,7 +29,7 @@ tags: imagetrans
 
 改成让它只输出去文字的版本，可以看到日漫的网点还原得不错，但还是对图像内容和比例做了改变。
 
-![nano去文字图](/album/nano-banana/text-removed-nano.webp)
+![nano去文字图](/album/nano-banana/text-removed-nano.webp){: width="1728" height="2464"}
 
 很多时候，它还会自己想出一些图片内容。即使通过以下API基于掩膜编辑也无法避免。
 
@@ -54,15 +54,15 @@ curl "$OPENAI_BASE_URL/images/edits" \
 
 文字掩膜：
 
-![文字掩膜](/album/nano-banana/mask.png)
+![文字掩膜](/album/nano-banana/mask.png){: width="1748" height="2480"}
 
 去文字图：
 
-![去文字图](/album/nano-banana/text-removed.webp)
+![去文字图](/album/nano-banana/text-removed.webp){: width="1748" height="2480"}
 
 翻译的版本：
 
-![翻译的版本](/album/nano-banana/translated.webp)
+![翻译的版本](/album/nano-banana/translated.webp){: width="1748" height="2480"}
 
 
 ## 附件
@@ -75,4 +75,4 @@ curl "$OPENAI_BASE_URL/images/edits" \
 
 示例图：
 
-![示例图](/album/imagetrans-features/text-removal-and-reinjection.jpg)
+![示例图](/album/imagetrans-features/text-removal-and-reinjection.jpg){: width="1304" height="800"}

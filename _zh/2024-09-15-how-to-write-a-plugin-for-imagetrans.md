@@ -19,7 +19,7 @@ ImageTrans使用ABPlugin这个库提供插件功能。我们可以编写文字�
 
 在软件中配置类库地址和JDK的地址。
 
-![路径配置](/album/B4J/path.jpg)
+![路径配置](/album/B4J/path.jpg){: width="808" height="247"}
 
 
 ## 新建项目
@@ -204,7 +204,7 @@ Log(targetList)
 执行以下compile to library的操作，保存文件到ImageTrans的plugins目录即可。
 
 
-![编译](/album/B4J/compile-to-library.jpg)
+![编译](/album/B4J/compile-to-library.jpg){: width="656" height="422"}
 
 
 ## 更多插件示例

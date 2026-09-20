@@ -14,7 +14,7 @@ tags: imagetrans
 
 大模型在漫画翻译领域能取代人工译员吗？我们可以以下面这张《乱马1/2》漫画为例，比对一下大模型的翻译和人工翻译。比对了ChatGPT、Claude、Gemini等在线大模型，Sakura、Qwen等本地大模型和谷歌、百度、彩云等传统机器翻译。
 
-![原图](/album/imagetrans-language-learning/Ranma1_012.jpg)
+![原图](/album/imagetrans-language-learning/Ranma1_012.jpg){: width="1248" height="2028"}
 
 
 比对表格（日译中）：
@@ -105,7 +105,7 @@ tags: imagetrans
 
 当然，漫画翻译是种多模态翻译，实际翻译工作还有嵌字、重修等各种环节。以下是Viz Media的英文版：
 
-![Vizmedia](/album/ranma-vizmedia.webp)
+![Vizmedia](/album/ranma-vizmedia.webp){: width="800" height="1200"}
 
 欢迎使用计算机辅助漫画翻译软件[ImageTrans](/zh/imagetrans/)，可以在各种大模型的帮助下，一站式完成OCR、翻译、嵌字、修图等工作。
 

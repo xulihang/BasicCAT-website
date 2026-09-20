@@ -17,9 +17,9 @@ ImageTrans v5.22.1 introduces two new translation-related features that provide 
 
 Below are test results for Chinese-to-English translation of two images from the comic *A Dog*.
 
-![Example 1](/album/context-llm/1.jpg)
+![Example 1](/album/context-llm/1.jpg){: width="440" height="399"}
 
-![Example 2](/album/context-llm/2.jpg)
+![Example 2](/album/context-llm/2.jpg){: width="440" height="561"}
 
 ## Multimodal Translation Using Images
 

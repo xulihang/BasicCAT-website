@@ -12,16 +12,16 @@ Converting an existing traditional comics to webtoon usually involves rearrangin
 
 As readers, if we want to convert traditional comics to webtoon for easy reading on our mobile phones without too much effort, we can use [ImageTrans](/imagetrans/) for automatic conversion. This software can detect the panels and export them in a long image in the webtoon format. We can edit the panels and adjust the order of them in the software to ensure the results are correct before exporting.
 
-![Panel detection](/album/panel-detection/imagetrans-panel-detection.jpg)
+![Panel detection](/album/panel-detection/imagetrans-panel-detection.jpg){: width="1164" height="997"}
 
 Original image:
 
-![Original image](/album/panel-detection/original.jpg)
+![Original image](/album/panel-detection/original.jpg){: width="800" height="1132"}
 
 Image source: "Tie Ji Gang Bing".
 
 Exported image:
 
-![Exported image:](/album/panel-detection/converted.jpg)
+![Exported image:](/album/panel-detection/converted.jpg){: width="800" height="2744"}
 
 

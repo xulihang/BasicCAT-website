@@ -12,15 +12,15 @@ tags: silhouette imagetrans
 
 带字幕的原始视频帧：
 
-[![frame](/album/subtitle-removal/frame52.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample.mp4)
+[![frame](/album/subtitle-removal/frame52.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample.mp4)
 
 用AI算法去掉字幕的视频帧：
 
-[![frame ai](/album/subtitle-removal/frame52-ai.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-AI.mp4)
+[![frame ai](/album/subtitle-removal/frame52-ai.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-AI.mp4)
 
 对字幕进行模糊处理以进行遮盖的视频帧：
 
-[![frame blur](/album/subtitle-removal/frame52-blur.jpg)](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-Blur.mp4)
+[![frame blur](/album/subtitle-removal/frame52-blur.jpg){: width="848" height="478"}](https://github.com/xulihang/BasicCAT-website/releases/download/attachments/Subtitle-Removal-Sample-Blur.mp4)
 
 可以看到，AI算法对背景还原的效果还是可以的。不过虽然单张图片效果可以，放在视频里还是能看到明显的修改痕迹和画面波动。毕竟一般的视频一秒有25帧，每帧AI处理的结果都有所不同，这点目前没找到特别好的解决方法。而模糊处理则没有明显的画面波动。
 
@@ -31,19 +31,19 @@ tags: silhouette imagetrans
 
 1. 使用Silhouette打开视频，导出视频帧为图片。使用PNG格式保存来保持画面质量。
 
-   ![提取帧](/album/subtitle-removal/extract-frames-zh.jpg)
+   ![提取帧](/album/subtitle-removal/extract-frames-zh.jpg){: width="502" height="282"}
 
 2. 使用Silhouette根据声音生成字幕（也可以直接[检测硬字幕](/zh/how-to-extract-hardcoded-subtitle/)）。从而知道哪些图像包含字幕，减少需要处理的数据量。
 
-   ![检测语音活动](/album/subtitle-removal/detect-voice-activity-zh.jpg)
+   ![检测语音活动](/album/subtitle-removal/detect-voice-activity-zh.jpg){: width="786" height="632"}
    
 3. 使用ImageTrans打开导出的图像。打开视频字幕去除器，导入SRT格式的字幕，选择好字幕位置，生成去文字图。如果有漏抹除的图（一般在字幕的开头和结尾位置），可以用OCR等技术检测文字，调整有文字的图的范围。
 
-   ![字幕去除器](/album/subtitle-removal/subtitle-remover-zh.jpg)
+   ![字幕去除器](/album/subtitle-removal/subtitle-remover-zh.jpg){: width="602" height="632"}
    
    文字抹除方式可以在项目设置中进行设置。
    
-   ![文字去除设置](/album/subtitle-removal/text-removal-settings-zh.jpg)
+   ![文字去除设置](/album/subtitle-removal/text-removal-settings-zh.jpg){: width="448" height="502"}
 
 4. 使用Silhouette基于去文字图生成最终的视频。
 
