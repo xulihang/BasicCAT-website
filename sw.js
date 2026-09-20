@@ -1,6 +1,14 @@
 // Service Worker for CDN offloading
-// Intercepts requests to /album/* and /assets/* and fetches from CDN mirrors
-// Tries jsdmirror → jsdelivr → origin (first success wins)
+// Intercepts requests to /album/*, /assets/* and /gallery/* and fetches from
+// CDN mirrors. Tries jsdmirror → jsdelivr → origin (first success wins).
+//
+// JS and CSS deliberately do NOT go to the CDN. They block rendering and first
+// input, so a cross-origin round trip — or a CDN timeout before the origin
+// fallback — on every cold load is exactly what inflates INP. Same-origin:
+// fast, and no failure mode.
+//
+// No caching is done here. Every response is fetched live, so the served
+// content always matches the deployed commit. This worker only routes.
 
 const CDN_URLS = [
   'https://cdn.jsdmirror.com/gh/xulihang/BasicCAT-website@master',
@@ -10,8 +18,9 @@ const CDN_URLS = [
 // Paths to offload to CDN
 const CDN_PATHS = ['/album/', '/assets/','/gallery/'];
 
-// File extensions that benefit from CDN (static assets)
-const CDN_EXTENSIONS = /\.(png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|pdf|zip|json|js|css|woff2?|ttf|eot)$/i;
+// File extensions that benefit from CDN (static assets).
+// js/css are intentionally excluded: see the note at the top.
+const CDN_EXTENSIONS = /\.(png|jpg|jpeg|gif|svg|webp|avif|ico|mp4|webm|pdf|zip|json|woff2?|ttf|eot)$/i;
 
 function shouldUseCDN(url) {
   const urlObj = new URL(url);
