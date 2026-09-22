@@ -210,7 +210,7 @@
         if (lang.code === 'auto') return; // no auto in setup
         const opt = document.createElement('option');
         opt.value = lang.code;
-        opt.textContent = lang.name;
+        opt.textContent = langName(lang);
         sel.appendChild(opt);
       });
     });
@@ -1101,7 +1101,7 @@
       LANGUAGE_CODES.forEach(function(lang) {
         const opt = document.createElement('option');
         opt.value = lang.code;
-        opt.textContent = lang.name;
+        opt.textContent = langName(lang);
         sourceSelect.appendChild(opt);
       });
     }
@@ -1109,7 +1109,7 @@
       LANGUAGE_CODES.forEach(function(lang) {
         const opt = document.createElement('option');
         opt.value = lang.code;
-        opt.textContent = lang.name;
+        opt.textContent = langName(lang);
         targetSelect.appendChild(opt);
       });
     }

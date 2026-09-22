@@ -62,6 +62,16 @@ const OCR = (function() {
     ro: 'latin', bg: 'latin', el: 'latin', ms: 'latin'
   };
 
+  // Languages written right-to-left; their text boxes merge and sort the other
+  // way round so the reading order comes out correct.
+  const RTL_LANGUAGES = ['ar', 'fa', 'he', 'ur', 'ps', 'sd', 'ug', 'yi', 'dv', 'ckb', 'prs', 'skr', 'bal'];
+
+  function isRTLLanguage(lang) {
+    if (!lang) return false;
+    // Tolerate regional variants like "ar-EG".
+    return RTL_LANGUAGES.indexOf(String(lang).toLowerCase().split(/[-_]/)[0]) !== -1;
+  }
+
 
 
   // ==================== IndexedDB Model Cache ====================
@@ -482,7 +492,7 @@ const OCR = (function() {
       if (h > w) tallCount++;
     });
     const isVertical = tallCount > items.length / 2;
-    const isRTL = sourceLang === 'ar';
+    const isRTL = isRTLLanguage(sourceLang);
 
     // Phase 1: horizontal merge into lines
     const lines = [];

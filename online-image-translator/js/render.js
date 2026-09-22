@@ -302,21 +302,60 @@ const Render = (function() {
 
   // ==================== DOM Rendering ====================
 
-  // Detect text direction (RTL vs LTR) from the first strong directional character.
+  // Strong directional characters — the scripts that decide a line's direction.
+  // Digits, punctuation, spaces and emoji are direction-neutral and never vote.
+  function isRTLChar(cp) {
+    return (cp >= 0x0590 && cp <= 0x05FF) || // Hebrew
+           (cp >= 0x0600 && cp <= 0x08FF) || // Arabic + Arabic Supplement
+           (cp >= 0xFB50 && cp <= 0xFDFF) || // Arabic Presentation Forms-A
+           (cp >= 0xFE70 && cp <= 0xFEFF);   // Arabic Presentation Forms-B
+  }
+
+  function isLTRChar(ch) {
+    return /[a-zA-ZÀ-˿Ͱ-ӿऀ-࿿Ḁ-῿⺀-�]/.test(ch);
+  }
+
+  // Detect text direction (RTL vs LTR) by majority of the strong directional
+  // characters, so one Latin word at the start of an Arabic sentence (a brand
+  // name, a URL, an untranslated term) can't flip the whole line. Used when the
+  // language pair doesn't tell us the direction (see getRenderedTextDirection).
   function detectTextDirection(text) {
+    let rtl = 0;
+    let ltr = 0;
     for (const ch of text) {
       const cp = ch.codePointAt(0);
-      if ((cp >= 0x0590 && cp <= 0x05FF) || // Hebrew
-          (cp >= 0x0600 && cp <= 0x08FF) || // Arabic + Arabic Supplement
-          (cp >= 0xFB50 && cp <= 0xFDFF) || // Arabic Presentation Forms-A
-          (cp >= 0xFE70 && cp <= 0xFEFF)) { // Arabic Presentation Forms-B
-        return 'rtl';
-      }
-      if (/[a-zA-ZÀ-˿Ͱ-ӿऀ-࿿Ḁ-῿⺀-�]/.test(ch)) {
-        return 'ltr';
-      }
+      if (isRTLChar(cp)) rtl++;
+      else if (isLTRChar(ch)) ltr++;
     }
-    return 'ltr';
+    return rtl > ltr ? 'rtl' : 'ltr';
+  }
+
+  // Languages written right-to-left. Knowing the language lets a box be laid out
+  // RTL even when its text has no strong direction of its own (digits,
+  // punctuation, a Latin brand name inside an Arabic line).
+  const RTL_LANGUAGES = ['ar', 'fa', 'he', 'ur', 'ps', 'sd', 'ug', 'yi', 'dv', 'ckb', 'prs', 'skr', 'bal'];
+
+  function isRTLLanguage(lang) {
+    if (!lang) return false;
+    // Tolerate regional variants like "ar-EG".
+    return RTL_LANGUAGES.indexOf(String(lang).toLowerCase().split(/[-_]/)[0]) !== -1;
+  }
+
+  // Language of the text actually drawn in a box. The "original" preset fills
+  // target with the recognized source text, so an unchanged target means the
+  // source language is what gets rendered; otherwise it is the translation, i.e.
+  // the target language.
+  function getRenderedTextLang(box) {
+    const srcText = box.source || box.text || '';
+    if (srcText && box.target === srcText) return Settings.get('sourceLang');
+    return Settings.get('targetLang');
+  }
+
+  // Direction to lay out a box's text. A right-to-left rendered language wins
+  // over content sniffing; otherwise the strong characters decide.
+  function getRenderedTextDirection(box, text) {
+    if (isRTLLanguage(getRenderedTextLang(box))) return 'rtl';
+    return detectTextDirection(text);
   }
 
   // Binary-search the largest font-size that fits the box without overflowing.
@@ -449,7 +488,7 @@ const Render = (function() {
         'width:' + c.w + 'px;height:' + c.h + 'px;' +
         renderTextCSS;
       if (!userCssHasDirection) {
-        el.style.direction = detectTextDirection(targetText);
+        el.style.setProperty('direction', getRenderedTextDirection(box, targetText), 'important');
       }
       el.textContent = targetText;
       container.appendChild(el);
@@ -463,14 +502,14 @@ const Render = (function() {
         // background even after the move.
         const textW = Math.min(el.scrollWidth, natW);
         const textH = Math.min(el.scrollHeight, natH);
-        el.style.width = textW + 'px';
-        el.style.height = textH + 'px';
+        el.style.setProperty('width', textW + 'px', 'important');
+        el.style.setProperty('height', textH + 'px', 'important');
         let nx = c.x;
         let ny = c.y;
         if (nx + textW > natW) nx = Math.max(0, natW - textW);
         if (ny + textH > natH) ny = Math.max(0, natH - textH);
-        if (nx !== c.x) el.style.left = nx + 'px';
-        if (ny !== c.y) el.style.top = ny + 'px';
+        if (nx !== c.x) el.style.setProperty('left', nx + 'px', 'important');
+        if (ny !== c.y) el.style.setProperty('top', ny + 'px', 'important');
       }
     }
 
