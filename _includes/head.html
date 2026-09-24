@@ -42,7 +42,11 @@
   <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
+      // updateViaCache: 'none' — the default ('imports'/'all') lets the browser
+      // serve sw.js itself from the HTTP cache, so a fix here can take up to
+      // 24h to reach a returning visitor. This worker routes images, so a stale
+      // copy is exactly the thing that produces broken tiles.
+      navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
     }
   </script>
 </head>
