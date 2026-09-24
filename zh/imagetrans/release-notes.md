@@ -10,6 +10,12 @@ lang: zh
 }
 </style>
 
+## v6.5.1 (2026/09/24)
+
+* 支持调用大模型基于全图给现有区域添加原文、译文和排序（基于ChatGPTOCR插件通过用OCR给已有区域添加文本操作实现）
+* 按分镜排序时对分镜外的区域也进行排序
+* 修复XYCut排序数组越界的问题
+
 ## v6.5.0 (2026/09/11)
 
 * 更新JRE为[JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)

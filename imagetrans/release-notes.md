@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v6.5.1 (2026/09/24)
+
+* Support using a large language model to sort areas and add source text and target text to existing areas based on the full image (implemented through the ChatGPTOCR plugin's OCR operation for appending text to existing areas)
+* Sort areas outside panels when sorting by panels
+* Fix an array-out-of-bounds issue in XYCut sorting
+
+
 ## v6.5.0 (2026/09/11)
 
 * Update JRE to [JRE26](https://download.bell-sw.com/java/26.0.2.1+1/bellsoft-jre26.0.2.1+1-windows-amd64-full.zip)
