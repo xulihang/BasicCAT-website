@@ -13,6 +13,7 @@ layout: page
 
 * Support using a large language model to sort areas and add source text and target text to existing areas based on the full image (implemented through the ChatGPTOCR plugin's OCR operation for appending text to existing areas)
 * Optimize the text localization using LLM OCR and add support for adding extra info like target, text color
+* Add support for storing extra params for the "Append OCR result to existing areas" workflow item
 * Sort areas outside panels when sorting by panels
 * Fix an array-out-of-bounds issue in XYCut sorting
 
