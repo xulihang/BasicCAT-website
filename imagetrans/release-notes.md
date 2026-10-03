@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v6.5.2 (2026/10/03)
+
+* Use .NET Framework instead of .NET 8 to write the WIA scanning command line, eliminating the need to install the .NET 8 runtime separately.
+* macOS OCR uses the Livetext version of OCR by default, automatically detects the language, and supports vertical Japanese and Chinese.
+* Add "pre-render" custom workflow item.
+* Fix the issue where the font size is displayed incorrectly after calculation to avoid splitting English words.
+
 ## v6.5.1 (2026/09/24)
 
 * Support using a large language model to sort areas and add source text and target text to existing areas based on the full image (implemented through the ChatGPTOCR plugin's OCR operation for appending text to existing areas)
