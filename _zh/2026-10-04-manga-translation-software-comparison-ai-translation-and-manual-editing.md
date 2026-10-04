@@ -131,7 +131,7 @@ tags: imagetrans 计算机辅助翻译 译后编辑
 
 示例漫画官方英文版：
 
-![](/album/manga-sound-effect/target-en.jpg)
+![](/album/manga-sound-effect/official-translation.png)
 
 ### ImageTrans
 
