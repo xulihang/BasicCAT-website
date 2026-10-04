@@ -107,7 +107,7 @@ tags: imagetrans 计算机辅助翻译 译后编辑
 | BallonsTranslator | 2022年4月 | Python + PyTorch | 约32MB（模型约1.7GB需下载） | 免费 | ✅ GPL-3.0 | ❌ 首次运行联网下载 | https://github.com/dmMaze/BallonsTranslator |
 | Comic-Translate | 2024年1月 | Python + ONNXRuntime | 约95MB | 免费 | ✅ Apache-2.0 | ❌ 从Hugging Face下载 | https://github.com/ogkalu2/comic-translate |
 | Koharu | 2025年4月 | Rust + Tauri | 约166MB | 免费 | ✅ Apache-2.0 | ❌ 首次运行联网下载 | https://github.com/koharu-rs/koharu |
-| Manga-Image-Translator-UI | 2025年8月 | Python | 约1.3GB（含模型） | 免费 | ✅ GPL-3.0 | ✅ 自带（集成manga-image-translator模型） | https://github.com/hgmzhn/manga-translator-ui |
+| Manga-Translator-UI | 2025年8月 | Python | 约1.3GB（含模型） | 免费 | ✅ GPL-3.0 | ✅ 自带（集成manga-image-translator模型） | https://github.com/hgmzhn/manga-translator-ui |
 | Saber Translator | 2025年2月 | Python + TypeScript/Vue | 约3.5GB（另需约1.3GB模型） | 免费 | ✅ GPL-3.0 | ⚠️ 模型单独打包下载 | https://github.com/MashiroSaber03/Saber-Translator |
 | 猫译员 | 2026年7月 | Flutter | 约66MB | 免费（需自备翻译API） | 否 | ❌ 需联网下载 | https://nekonekone.com/translator |
 | ComiTrans | 2025年12月 | Python + ONNXRuntime | 约442MB（另需约463MB模型） | 免费 | ⚠️ 无开源许可证 | ⚠️ 模型单独打包下载 | https://github.com/Aaaaamadeus/ComiTrans |
@@ -195,19 +195,19 @@ Koharu是使用Rust+Tauri编写的开源漫画翻译软件，作者在开发过�
 
 ![](/album/imagetrans-comparison/koharu/translated-en.jpg)
 
-### Manga-Image-Translator-UI
+### Manga-Translator-UI
 
 使用manga-image-translator的主要模型和设计，开发的开源图形化程序。这个开发者的技术表达能力和理念还是很好的，开发也很勤快，有不少特色功能。但我不太喜欢它的换行，一定要手动加入换行符进行换行，不能自动换行，嵌字算是一般吧。它提供两种界面，一种是web界面，一种是Python的桌面界面。这里演示的默认的桌面界面。
 
-![](/album/imagetrans-comparison/manga-image-translator-ui/ui.jpg)
+![](/album/imagetrans-comparison/manga-translator-ui/ui.jpg)
 
 自动翻译的中文版本：
 
-![](/album/imagetrans-comparison/manga-image-translator-ui/translated.jpg)
+![](/album/imagetrans-comparison/manga-translator-ui/translated.jpg)
 
 自动翻译的英文版本：
 
-![](/album/imagetrans-comparison/manga-image-translator-ui/translated-en.jpg)
+![](/album/imagetrans-comparison/manga-translator-ui/translated-en.jpg)
 
 
 ### Saber Translator
