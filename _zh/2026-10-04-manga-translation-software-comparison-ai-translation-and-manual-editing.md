@@ -101,17 +101,17 @@ tags: imagetrans 计算机辅助翻译 译后编辑
 
 下表汇总了这9款软件的基础信息。需要说明的是，软件大小这里给出的是Windows版的安装包或压缩包体积，如果模型是单独下载或附带的，也会一并标注。此处的“是否收费”仅指软件本身，“是否自带模型”指的是安装包中是否已经包含了OCR和文字去除（图像修复）所需的模型。
 
-| 软件 | 发布时间 | 技术栈 | 软件大小 | 是否收费 | 是否开源 | OCR与修复模型是否自带 |
-| --- | --- | --- | --- | --- | --- | --- |
-| ImageTrans | 2020年 | Java + JavaFX | 约400MB（含模型） | 收费（个人版¥75起） | 否 | ✅ 自带（含OCR、Lama修复模型，可离线运行） |
-| BallonsTranslator | 2022年4月 | Python + PyTorch | 约32MB（模型约1.7GB需下载） | 免费 | ✅ GPL-3.0 | ❌ 首次运行联网下载 |
-| Comic-Translate | 2024年1月 | Python + ONNXRuntime | 约95MB | 免费 | ✅ Apache-2.0 | ❌ 从Hugging Face下载 |
-| Koharu | 2025年4月 | Rust + Tauri | 约166MB | 免费 | ✅ Apache-2.0 | ❌ 首次运行联网下载 |
-| Manga-Image-Translator-UI | 2025年8月 | Python | 约1.3GB（含模型） | 免费 | ✅ GPL-3.0 | ✅ 自带（集成manga-image-translator模型） |
-| Saber Translator | 2025年2月 | Python + TypeScript/Vue | 约3.5GB（另需约1.3GB模型） | 免费 | ✅ GPL-3.0 | ⚠️ 模型单独打包下载 |
-| 猫译员 | 2026年7月 | Flutter | 约66MB | 免费（需自备翻译API） | 否 | ❌ 需联网下载 |
-| ComiTrans | 2025年12月 | Python + ONNXRuntime | 约442MB（另需约463MB模型） | 免费 | ⚠️ 无开源许可证 | ⚠️ 模型单独打包下载 |
-| 团子翻译器 | 2020年2月 | Go | 约833MB | 漫画翻译服务收费 | 否 | ❌ 完全依赖云端，无本地模型 |
+| 软件 | 发布时间 | 技术栈 | 软件大小 | 是否收费 | 是否开源 | OCR与修复模型是否自带 | 地址 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ImageTrans | 2020年 | Java + JavaFX | 约400MB（含模型） | 收费（个人版¥75起） | 否 | ✅ 自带（含OCR、Lama修复模型，可离线运行） | https://www.basiccat.org/imagetrans/ |
+| BallonsTranslator | 2022年4月 | Python + PyTorch | 约32MB（模型约1.7GB需下载） | 免费 | ✅ GPL-3.0 | ❌ 首次运行联网下载 | https://github.com/dmMaze/BallonsTranslator |
+| Comic-Translate | 2024年1月 | Python + ONNXRuntime | 约95MB | 免费 | ✅ Apache-2.0 | ❌ 从Hugging Face下载 | https://github.com/ogkalu2/comic-translate |
+| Koharu | 2025年4月 | Rust + Tauri | 约166MB | 免费 | ✅ Apache-2.0 | ❌ 首次运行联网下载 | https://github.com/koharu-rs/koharu |
+| Manga-Image-Translator-UI | 2025年8月 | Python | 约1.3GB（含模型） | 免费 | ✅ GPL-3.0 | ✅ 自带（集成manga-image-translator模型） | https://github.com/hgmzhn/manga-translator-ui |
+| Saber Translator | 2025年2月 | Python + TypeScript/Vue | 约3.5GB（另需约1.3GB模型） | 免费 | ✅ GPL-3.0 | ⚠️ 模型单独打包下载 | https://github.com/MashiroSaber03/Saber-Translator |
+| 猫译员 | 2026年7月 | Flutter | 约66MB | 免费（需自备翻译API） | 否 | ❌ 需联网下载 | https://nekonekone.com/translator |
+| ComiTrans | 2025年12月 | Python + ONNXRuntime | 约442MB（另需约463MB模型） | 免费 | ⚠️ 无开源许可证 | ⚠️ 模型单独打包下载 | https://github.com/Aaaaamadeus/ComiTrans |
+| 团子翻译器 | 2020年2月 | Go | 约833MB | 漫画翻译服务收费 | 否 | ❌ 完全依赖云端，无本地模型 | https://github.com/PantsuDango/Dango-Translator |
 
 可以看出，绝大多数漫画翻译软件都选择了Python搭配PyTorch或ONNXRuntime的技术栈，走开源免费路线，并采用“程序与模型分离”的分发方式，首次运行时再下载模型。ImageTrans默认包含模型以提供开箱即用的体验，但也只有400MB。
 
