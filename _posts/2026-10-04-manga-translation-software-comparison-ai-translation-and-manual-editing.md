@@ -134,7 +134,7 @@ The official English edition of the sample page:
 
 ### ImageTrans
 
-ImageTrans is a cross-platform computer-aided image translation tool written in JavaFX. As paid software it genuinely delivers on usability, with rich features and deep customizability. At around 400MB it includes the runtime and all the basic OCR and text removal models, and it works well whether you are translating fully automatically or editing by hand — and it is fast. It supports a browser extension and PSD export, along with many other features such as searchable PDF generation, converting four-panel strips to webtoon format, and document scanning.
+ImageTrans is a cross-platform computer-aided image translation tool written in JavaFX. As paid software it genuinely delivers on usability, with rich features and deep customizability. At around 400MB it includes the runtime and all the basic OCR and text removal models, and it works well whether you are translating fully automatically or editing by hand — and it is fast. It supports a browser extension and PSD export, along with many other features such as searchable PDF generation, converting traditional comics to webtoon format, and document scanning.
 
 ![](/album/imagetrans-comparison/imagetrans/ui.jpg)
 
