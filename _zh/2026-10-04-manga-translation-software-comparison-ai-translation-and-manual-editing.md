@@ -113,7 +113,7 @@ tags: imagetrans 计算机辅助翻译 译后编辑
 | ComiTrans | 2025年12月 | Python + ONNXRuntime | 约442MB（另需约463MB模型） | 免费 | ⚠️ 无开源许可证 | ⚠️ 模型单独打包下载 | [链接](https://github.com/Aaaaamadeus/ComiTrans) |
 | 团子翻译器 | 2020年2月 | Go | 约833MB | 漫画翻译服务收费 | 否 | ❌ 完全依赖云端，无本地模型 | [链接](https://github.com/PantsuDango/Dango-Translator) |
 
-可以看出，绝大多数漫画翻译软件都选择了Python搭配PyTorch或ONNXRuntime的技术栈，走开源免费路线，并采用“程序与模型分离”的分发方式，首次运行时再下载模型。ImageTrans默认包含模型以提供开箱即用的体验，、而且只有400MB。
+可以看出，绝大多数漫画翻译软件都选择了Python搭配PyTorch或ONNXRuntime的技术栈，走开源免费路线，并采用“程序与模型分离”的分发方式，首次运行时再下载模型。ImageTrans默认包含模型以提供开箱即用的体验，而且只有400MB。
 
 因为技术细节太多，这里就不一一对这些细节进行对比了。上面提的翻译四个步骤的各个模型和算法，这些软件基本都是支持的。目前来看，ImageTrans额外支持分镜检测、BallonsTranslator额外支持字体检测。
 
