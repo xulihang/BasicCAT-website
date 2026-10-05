@@ -98,6 +98,8 @@ Plenty of tools use something different, though — Java, Rust, JavaScript, Flut
 
 ## Basic Information on the Nine Manga Translation Tools
 
+A note on versions: these tools are all under active development and release frequently, so the descriptions here may change over time. The versions compared in this article are: ImageTrans v6.5.2, BallonsTranslator v1.5.18, Comic-Translate v2.8.9, Koharu v0.83.5, Dango Translator v7.0, ComiTrans v2.3.0, Saber Translator v3.5.10, Manga-Translator-UI v3.0.4, and Nekotranslator v1.3.0.
+
 The table below summarizes the basics of these nine tools. Note that the size given is the Windows installer or archive, and where models are downloaded separately or bundled, that is noted. "Paid" here refers to the software itself, and "models bundled" means whether the installer already contains the OCR and text removal (inpainting) models.
 
 | Software | Released | Tech stack | Size | Paid | Open source | Models bundled | Link |
