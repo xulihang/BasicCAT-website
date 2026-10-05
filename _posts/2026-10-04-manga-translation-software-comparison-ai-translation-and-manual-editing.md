@@ -84,7 +84,7 @@ Inpainting requires a text mask first. The comic-text-detector mentioned above c
 
 Traditional neural machine translation generally translates sentence by sentence and can send several sentences in one request. Some of the more advanced options support custom terminology; DeepL and Caiyun both perform well.
 
-Large language models now substantially outperform traditional machine translation. They handle very long context, can read images with vision models, let you constrain the style through prompts, and support terminology as well.
+Large language models now substantially outperform traditional machine translation. They handle very long context, can read images with vision models, let you constrain the style through prompts, and support terminology as well — and they can still translate correctly even when the OCR result contains errors.
 
 ### Lettering
 
@@ -134,7 +134,7 @@ The official English edition of the sample page:
 
 ### ImageTrans
 
-ImageTrans is a cross-platform computer-aided image translation tool written in JavaFX. As paid software it genuinely delivers on usability, with rich features and deep customizability. At around 400MB it includes the runtime and all the basic OCR and text removal models, and it works well whether you are translating fully automatically or editing by hand — and it is fast. It supports a browser extension and PSD export, along with many other features such as searchable PDF generation, converting traditional comics to webtoon format, and document scanning.
+ImageTrans is a cross-platform computer-aided image translation tool written in JavaFX. As paid software it genuinely delivers on usability, with rich features and deep customizability. At around 400MB it includes the runtime and all the basic OCR and text removal models, and it works well whether you are translating fully automatically or editing by hand — and it is fast. It supports a browser extension and PSD export, along with many other features such as translation memory — the core of a traditional computer-aided translation tool — searchable PDF generation, converting traditional comics to webtoon format, and document scanning. The flip side of having so many features is that you may struggle to find your way around without reading the documentation.
 
 ![](/album/imagetrans-comparison/imagetrans/ui.jpg)
 
@@ -269,4 +269,4 @@ Dango Translator appeared back in 2020, mainly for translating games via screens
 
 ## Conclusion
 
-They are all manga translation tools, but each has its own features and interface design, some open source and some paid. Use this article as a reference. Pick the translation tool that suits you.
+They are all manga translation tools, but each has its own features and interface design, some open source and some paid. Use this article as a reference when choosing the translation tool that suits you. If, for example, I need to translate an image into several languages, I can use ImageTrans: it has a dedicated project file, so I can OCR and then translate, saving each language in its own project, and it even supports being driven by an AI agent. If I want to edit images on my phone, on the other hand, Nekotranslator is the only option.
