@@ -132,7 +132,7 @@ The official Chinese edition of the sample page:
 
 The official English edition of the sample page:
 
-![](/album/manga-sound-effect/target-en.jpg)
+![](/album/manga-sound-effect/official-translation.png)
 
 ### ImageTrans
 
