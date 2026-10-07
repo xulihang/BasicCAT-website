@@ -33,10 +33,7 @@ Image source: <https://github.com/mantra-inc/open-mantra-dataset>
 
 ## Video Tutorial
 
-* [Japanese to English](https://www.youtube.com/watch?v=S_6FF-5zTns)
-* [Japanese to Chinese](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
-* [Automated](https://www.youtube.com/watch?v=gidM4F7pBgY)
-* [Demo using balloon detection and mangaOCR](https://github.com/xulihang/ImageTrans-docs/issues/348#issuecomment-1383091204)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y7DyII0_zCk?si=QbFglebKXkB6od79" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Related
 

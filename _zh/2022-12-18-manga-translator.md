@@ -32,8 +32,7 @@ tags: imagetrans
 
 ## 视频教程
 
-* [使用ImageTrans翻译日语漫画](https://www.bilibili.com/video/BV1Uo4y1Z7Wo/)
-* [气泡检测+mangaOCR演示](https://github.com/xulihang/ImageTrans-docs/issues/348#issuecomment-1383091204)
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=117393586127962&bvid=BV1SJpw62EcL&cid=42512352274&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 相关链接
 
