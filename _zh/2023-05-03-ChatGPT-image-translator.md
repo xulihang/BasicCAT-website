@@ -27,7 +27,8 @@ ImageTrans提供了ChatGPT的插件，让我们可以调用ChatGPT来帮助翻�
    ![ImageTrans](/album/chatGPT/imagetrans.jpg){: width="1024" height="728"}
    
    可以在翻译时显示结果供参考或者用于批量翻译。
-   
+
+模型、host这些参数也可以在这里定义。
    
 ## 自定义提示词
 
@@ -76,6 +77,27 @@ ChatGPT插件默认会将一张图的所有句子一次性给ChatGPT翻译。对
 ## 使用术语改善翻译
 
 在项目中定义术语后，如果翻译的句子包含术语条目，ImageTrans也会发送给ChatGPT以改善翻译。例如定义Jenny的翻译为詹妮而不是珍妮。详见[这条issue](https://github.com/xulihang/ImageTrans-docs/issues/546#issuecomment-1873325038)。
+
+## 控制思考
+
+偏好设置中，使用extra_fields设置额外参数。比如我们可以控制是否思考、思考的强度。
+
+ChatGPT所需参数：
+
+```json
+{
+   "reasoning_effort": "high"
+}
+```
+
+DeepSeek所需参数（有单独的thinking开关）：
+
+```json
+{
+   "thinking": {"type": "disabled"},
+   "reasoning_effort": "high"
+}
+```
 
 ## 文字识别
 

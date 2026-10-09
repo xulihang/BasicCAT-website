@@ -76,6 +76,27 @@ Enable Use Image to Assist Translation in preferences to send the image to a vis
 
 You can define terms in the project. If the sentences to translate contain term entries, ImageTrans will send the terms to ChatGPT to improve the translation. For example, we can define the translation of Jenny to "詹妮" instead of "珍妮". Check out [this issue](https://github.com/xulihang/ImageTrans-docs/issues/546#issuecomment-1873325038) for details.
 
+## Control Thinking
+
+In prefrences, use `extra_fields` to set extra options. For example, we can control the thinking mode and reasoning effort.
+
+For ChatGPT:
+
+```json
+{
+   "reasoning_effort": "high"
+}
+```
+
+For DeepSeek (with separate thinking control):
+
+```json
+{
+   "thinking": {"type": "disabled"},
+   "reasoning_effort": "high"
+}
+```
+
 ## OCR
 
 ChatGPT can also be used to recognize text (use ChatGPTOCR plugin).
