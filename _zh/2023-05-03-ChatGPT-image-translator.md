@@ -6,13 +6,13 @@ categories: blog
 tags: imagetrans
 ---
 
-ChatGPT是一个大型语言模型驱动的聊天程序，我们可以使用它来完成语言翻译、校对等任务。
+ChatGPT是一个大型语言模型驱动的聊天程序，我们可以使用它来完成语言翻译、校对、汉字标音等任务。
 
 ImageTrans提供了ChatGPT的插件，让我们可以调用ChatGPT来帮助翻译图片。
 
 ## 使用需求
 
-注册OpenAI的账号并生成一个API密钥（或者使用第三方服务，比如国内的[API2D](https://api2d.com/)、字节跳动的火山引擎，只要兼容OpenAI接口就行）。
+注册OpenAI的账号并生成一个API密钥（或者使用第三方服务，比如国内的[API2D](https://api2d.com/)、字节跳动的火山引擎、DeepSeek，只要兼容OpenAI接口就行）。
 
 另外国内使用OpenAI的API服务需要科学上网。
 
@@ -29,9 +29,9 @@ ImageTrans提供了ChatGPT的插件，让我们可以调用ChatGPT来帮助翻�
    可以在翻译时显示结果供参考或者用于批量翻译。
    
    
-## 自定义诱导内容
+## 自定义提示词
 
-默认使用下面的英文用于诱导翻译：
+默认使用下面的英文提示词：
 
 ```
 Translate the following into {langcode}: {source}
@@ -39,19 +39,39 @@ Translate the following into {langcode}: {source}
 
 其中`{langcode}`会被替换为目标语言，比如Chinese，而`{source}`会被替换为要翻译的文本。
 
-你可以在偏好设置里自己定义诱导内容，比如改用中文进行诱导：
+你可以在偏好设置里自己定义提示词，比如改用中文进行诱导：
 
 ```
 翻译下述内容至中文：{source}
 ```
 
+总共有以下提示词可以定义：
+
+* `prompt`: 单句翻译提示词
+* `batch_prompt`: 多句翻译提示词
+* `vision_batch_prompt`：视觉翻译提示词
+* `prompt_with_term`: 单句翻译提示词（使用术语）
+* `batch_prompt_with_term`：多句翻译提示词（使用术语）
+* `vision_batch_prompt_with_term`：视觉翻译提示词（使用术语）
+* `spell_checking_prompt`：拼写检查
+* `transliteration_prompt`：注音
+
 ## 多句翻译
 
-ChatGPT插件默认会将一张图的所有句子一次性给ChatGPT翻译。对应的诱导内容也可以在偏好设置里设置。
+ChatGPT插件默认会将一张图的所有句子一次性给ChatGPT翻译。对应的提示词也可以在偏好设置里设置。
 
 如果不想启用多句翻译，可以在偏好设置里关闭在一个请求翻译多个句子的选项。
 
 此外，也可以将原文导出为供翻译的文档，用第三方工具翻译后再导回软件。
+
+## 多页翻译
+
+1. 偏好设置里启用跨页翻译，然后用批处理-预翻译时，会合并多页文本去翻译，提供更多上下文。
+2. 偏好设置里启用使用前几页作为上下文，翻译单张图片时，会使用前几页的原文提供更多上下文。
+
+## 视觉翻译
+
+偏好设置里启用图片来辅助翻译，可以给视觉大模型传送图片，改善翻译质量。
 
 ## 使用术语改善翻译
 
