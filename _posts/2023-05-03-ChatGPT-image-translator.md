@@ -12,7 +12,7 @@ ImageTrans provides a plugin for ChatGPT that allows us to call ChatGPT to help 
 
 ## Requirements
 
-Register an OpenAI account and generate an API key.
+Register an OpenAI account and generate an API key. You can also use other large language models (Gemini, DeepSeek, etc) as long as they provide an OpenAI-compatible API.
 
 ## Instructions
 
@@ -26,6 +26,7 @@ Register an OpenAI account and generate an API key.
 
    It can be used as a reference during translation or for batch translation.
 
+You can also customize the model to use and the host.
 
 ## Customize the Prompt
 
@@ -43,6 +44,17 @@ You can define your own prompt  in your preferences, such as the following Chine
 翻译下述内容至中文：{source}
 ```
 
+Here is the list of prompts you can customize:
+
+* `prompt`: single sentence translation prompt
+* `batch_prompt`: multiple-sentence translation prompt
+* `vision_batch_prompt`：multiple-sentence translation prompt with vision
+* `prompt_with_term`: single sentence translation prompt (with terms)
+* `batch_prompt_with_term`：multiple-sentence translation prompt (with terms)
+* `vision_batch_prompt_with_term`：multiple-sentence translation prompt with vision (with terms)
+* `spell_checking_prompt`: spellchecking
+* `transliteration_prompt`: transliteration
+
 ## Batch Translation
 
 The ChatGPT plugin will send all the sentences in one image to ChatGPT by defalut. You can customize the prompt in the Preferences as well. 
@@ -50,6 +62,15 @@ The ChatGPT plugin will send all the sentences in one image to ChatGPT by defalu
 You can disable this behavior in Preferences.
 
 In addition, you can export the source text, use a third-party tool to do the translation and then import the translation back.
+
+## Cross-Page Translation
+
+1. Enable Cross-Page Translation in preferences. Then when using Batch - Pre-translate, it will join the text of multiple pages for translation to provide more context.
+2. Enable Use Text of Previous Pages in preferences. Then when translating a single image, it will use the text of previous pages to provide more context.
+
+## Vision Model
+
+Enable Use Image to Assist Translation in preferences to send the image to a vision model to improve the translation quality.
 
 ## Use Terms to Improve the Translation
 
@@ -95,5 +116,5 @@ As long as the large language model provides an OpenAI compatible API, we can us
 
 Some LLMs:
 
-* [Ollama](https://ollama.com/)
+* [Qwen3.5](https://ollama.com/library/qwen3.5:9b)
 * [SakuraLLM](https://github.com/SakuraLLM/SakuraLLM)
