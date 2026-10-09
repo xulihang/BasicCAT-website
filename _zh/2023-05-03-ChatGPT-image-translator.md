@@ -111,6 +111,15 @@ ChatGPT也可以用于识别文字（需要使用ChatGPT OCR插件）。
 * Opus-CAT（离线，免费）
 * Sugoi Translator（离线，免费）
 
+## 其它兼容模型
+
+只有模型可以用OpenAI兼容API调用，就能用这个ChatGPT的插件去使用。
+
+一些模型：
+
+* [Qwen3.5](https://ollama.com/library/qwen3.5:9b)
+* [SakuraLLM](https://github.com/SakuraLLM/SakuraLLM)
+
 ## 相关issue
 
 [ChatGPT用Clash代理访问](https://github.com/xulihang/ImageTrans-docs/issues/421)
