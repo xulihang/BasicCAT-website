@@ -82,6 +82,8 @@ ChatGPT can also be used to recognize text (use ChatGPTOCR plugin).
 
 If using general OCR software to get the text, we can use ChatGPT to spell check the result.
 
+Although vision LLMs can locate text, the coordinates are not very accurate. We can detect the text first, mark the areas in the image and the pass the image for the model for recognition. In ImageTrans, use "Append text to existing areas with OCR" to do this. It can also detect text color, detect stroke color, correct reading order and translate at the same time.
+
 ## Text Cleaning
 
 With image-to-image model, we can get the translated picture in an end-to-end way. But the current result is not satisfying and is not easy to be integrated into a traditional workflow. It is more suitable for text cleaning (use OpenAI Inpaint plugin). Gemini has a better result than ChatGPT in this aspect.
