@@ -9,6 +9,14 @@ layout: page
 }
 </style>
 
+## v6.5.3 (2026/10/11)
+
+* Update ChatGPT and Deepseek plugins
+* Add reset button for API params filler
+* Add manga panel detection model
+* Update templates to use the manga panel detection model
+* Add … to vertical text engine's zero-space char list
+
 ## v6.5.2 (2026/10/03)
 
 * Use .NET Framework instead of .NET 8 to write the WIA scanning command line, eliminating the need to install the .NET 8 runtime separately.
