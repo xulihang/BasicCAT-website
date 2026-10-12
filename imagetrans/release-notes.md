@@ -16,6 +16,9 @@ layout: page
 * Add manga panel detection model
 * Update templates to use the manga panel detection model
 * Add … to vertical text engine's zero-space char list
+* On Linux, try to use `jre/bin/java` to start java programs
+* Fix the issue of self-starting ImageTrans on Linux
+* Fix the potential WebSocket issue for server (On Linux, it fails to send the message to the server)
 
 ## v6.5.2 (2026/10/03)
 
