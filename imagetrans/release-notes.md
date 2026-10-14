@@ -9,6 +9,12 @@ layout: page
 }
 </style>
 
+## v6.5.4 (2026/10/14)
+
+* New fit to width and fit to height menu items
+* Use built-in magic code detection to detect whether a file is WebP or not by default
+* Support for PDF/A export
+
 ## v6.5.3 (2026/10/11)
 
 * Update ChatGPT and Deepseek plugins
