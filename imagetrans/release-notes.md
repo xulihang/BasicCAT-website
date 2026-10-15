@@ -14,6 +14,7 @@ layout: page
 * New fit to width and fit to height menu items
 * Use built-in magic code detection to detect whether a file is WebP or not by default
 * Support for PDF/A export
+* Fix the scroll up issue on Linux
 
 ## v6.5.3 (2026/10/11)
 
