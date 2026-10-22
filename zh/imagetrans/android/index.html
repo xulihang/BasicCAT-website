@@ -1,0 +1,313 @@
+---
+title: ImageTrans Android — 在手机上翻译图片、截图和拍照内容
+layout: page
+lang: zh
+description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版本。可以翻译相册图片、拍照内容、整个文件夹中的图片，以及用截屏翻译悬浮窗翻译屏幕上任意位置的文字。既可以连接远程的 ImageTrans 服务器翻译，也可以完全在手机本地完成 OCR 再调用翻译 API。
+---
+
+<style>
+  :root {
+    --and-primary: #4a6cf7;
+    --and-primary-hover: #3b5de7;
+    --and-card-bg: #ffffff;
+    --and-border: #e2e8f0;
+    --and-radius: 12px;
+    --and-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .and-hero {
+    text-align: center;
+    padding: 24px 16px 32px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, rgba(74,108,247,0.08), rgba(74,108,247,0));
+    border-radius: var(--and-radius);
+  }
+  .and-hero-icon { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  .and-hero-title { font-size: 30px; font-weight: 800; margin: 0 0 8px 0; }
+  .and-hero p { font-size: 16px; line-height: 1.7; max-width: 680px; margin: 0 auto 12px; }
+  .and-hero-meta { font-size: 13px; color: #4a5568; margin-bottom: 20px; }
+  .and-hero-meta span { display: inline-block; margin: 0 8px; }
+  .and-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .and-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .and-btn-primary { background: var(--and-primary); color: #fff; }
+  .and-btn-primary:hover { background: var(--and-primary-hover); color: #fff; text-decoration: none; }
+  .and-btn-secondary { background: var(--and-card-bg); color: var(--and-primary); border: 1px solid var(--and-border); }
+  .and-btn-secondary:hover { border-color: var(--and-primary); text-decoration: none; }
+  .and-note { font-size: 12px; color: #718096; margin-top: 14px; }
+
+  /* ===== Sections ===== */
+  .and-section { margin-bottom: 36px; }
+  .and-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--and-border);
+  }
+  .and-section p { line-height: 1.7; margin: 0 0 12px 0; }
+
+  /* ===== Feature Cards ===== */
+  .and-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-feature-card {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-feature-card .and-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .and-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+
+  /* ===== Steps ===== */
+  .and-steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .and-steps li {
+    position: relative;
+    padding: 0 0 18px 44px;
+    line-height: 1.6;
+  }
+  .and-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--and-primary); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .and-steps li:last-child { padding-bottom: 0; }
+  .and-steps strong { display: block; margin-bottom: 2px; }
+  .and-steps span { font-size: 14px; }
+
+  /* ===== Translation methods ===== */
+  .and-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-method {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-method h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-method p { font-size: 13px; line-height: 1.6; margin: 0 0 8px 0; }
+  .and-method ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; }
+
+  /* ===== More links ===== */
+  .and-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .and-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .and-link-chip:hover { border-color: var(--and-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .and-features,
+    .and-methods { grid-template-columns: 1fr; }
+    .and-hero-title { font-size: 24px; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="and-hero">
+  <div class="and-hero-icon">📱</div>
+  <div class="and-hero-title">ImageTrans 安卓版</div>
+  <p>在手机上直接翻译图片、照片和屏幕上的文字。ImageTrans 安卓版自动识别文字、进行翻译，并把译文按原位置回填到图片上——不需要电脑。</p>
+  <div class="and-hero-meta">
+    <span>📦 v0.1.0</span>
+    <span>🤖 Android 10+</span>
+    <span>🆓 免费开源</span>
+  </div>
+  <div class="and-buttons">
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases/latest" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ 下载 APK</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">在 GitHub 上查看</a>
+  </div>
+  <div class="and-note">目前通过 GitHub Releases 发布 APK。需要 arm64 设备（绝大多数现代手机），不支持 x86 模拟器。</div>
+</div>
+
+<!-- ===== Intro ===== -->
+<div class="and-section">
+  <h2>这是什么？</h2>
+  <p>ImageTrans 安卓版是计算机辅助图片翻译软件 <a href="/zh/imagetrans/">ImageTrans</a> 的<strong>安卓版本</strong>。它适合“看到什么就想马上翻译什么”的场景——手机上的漫画页、街边的菜单和招牌、App 截图，或者一整个文件夹的商品图。</p>
+  <p>它<strong>不依赖桌面电脑</strong>。既可以连接远程的 ImageTrans 服务器，使用完整的 ImageTrans 处理流程；也可以完全在手机本地运行：OCR 在本地完成，只把识别出的文本发送给翻译 API。与普通的截图翻译不同，ImageTrans 安卓版会用译文替换原文，并尽量还原原有的排版。</p>
+</div>
+
+<!-- ===== Modes ===== -->
+<div class="and-section">
+  <h2>四种翻译方式</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🖼️</div>
+      <h4>图片翻译</h4>
+      <p>从相册或文件选择一张图片并翻译。点击任意文字框即可对照原文和译文，可以在原图与译文之间切换，然后把结果保存到相册或分享出去。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📷</div>
+      <h4>拍照翻译</h4>
+      <p>对准招牌、菜单、包装、文档等任何内容。相机预览上有一个可拖动、可缩放的选框，点“拍摄并翻译”即可截取预览画面、裁剪选框区域并翻译，不会保存照片。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📁</div>
+      <h4>文件夹翻译</h4>
+      <p>选择一个文件夹，一次性翻译其中的所有图片。译文以 PNG 格式保存到该文件夹下的 <em>out</em> 子文件夹，并保留原文件名。适合电商商品图、产品目录等批量场景。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🫧</div>
+      <h4>截屏翻译悬浮窗</h4>
+      <p>悬浮球和选框常驻在其他 App 之上。点“翻译”即可直接翻译选框内的内容，译文显示在选框里——框外屏幕不受影响，可以照常使用其他 App。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OCR & rendering ===== -->
+<div class="and-section">
+  <h2>为真实图片而设计</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">⚡</div>
+      <h4>本地 OCR</h4>
+      <p>借助 rapidocr4j（PaddleOCR）和 ONNX Runtime，文字检测与识别全部在手机上完成，并由 OpenCV 加速，仅做 OCR 时无需上传图片。中、英、日及拉丁系语言开箱即用，韩、阿、俄、泰模型首次使用时自动下载。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🎨</div>
+      <h4>还原排版的渲染</h4>
+      <p>译文使用与 ImageTrans 浏览器扩展相同的渲染引擎：自动调整字号、检测文字颜色、处理背景，支持圆角、描边、阴影，以及中日文竖排和从右到左的排版。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🧵</div>
+      <h4>长条漫</h4>
+      <p>超长竖版漫画会分块识别、分块渲染后再拼接，避免整张长图耗尽内存，也不会因为缩放而让文字糊成一片。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔎</div>
+      <h4>仅识别</h4>
+      <p>不翻译，只做 OCR，并把识别出的文字回填到原位置。适合调试模型、制作训练数据，或检查 App 对某张难图的实际识别效果。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Translation methods ===== -->
+<div class="and-section">
+  <h2>选择翻译引擎</h2>
+  <div class="and-methods">
+    <div class="and-method">
+      <h4>🖥️ 远程 ImageTrans 服务器</h4>
+      <p>连接运行在任何位置的 ImageTrans 服务器——自己电脑上或远程/云端主机——使用你的项目设置、OCR 引擎、翻译记忆和术语库。</p>
+      <ul>
+        <li>完整的 ImageTrans 流程：检测、抹字、翻译、排版</li>
+        <li>效果最好，支持的语言最多</li>
+        <li>手机上无需安装 ImageTrans</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🤖 本地 OCR + OpenAI 兼容接口</h4>
+      <p>OCR 在手机上完成，识别出的文本交给任意 OpenAI 兼容接口翻译。</p>
+      <ul>
+        <li>支持 ChatGPT、Gemini、DeepSeek 等兼容服务</li>
+        <li>使用你自己的 API Key 和模型</li>
+        <li>速度、质量与成本兼顾</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🆓 本地 OCR + MyMemory</h4>
+      <p>无需 API Key，使用免费的 MyMemory 翻译服务，长段落会自动切分以满足接口限制。</p>
+      <ul>
+        <li>完全免费，每天约 5 万字符</li>
+        <li>适合日常快速翻译</li>
+        <li>额度用完后会提示</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extension bridge ===== -->
+<div class="and-section">
+  <h2>与浏览器扩展配合使用</h2>
+  <p>如果你用手机浏览器看漫画，ImageTrans 安卓版可以作为<a href="/zh/imagetrans/extension/">ImageTrans 浏览器扩展</a>的<strong>翻译服务器</strong>：手机在后台完成 OCR，把文字框（以及译文）返回给扩展，由扩展渲染到页面上。</p>
+  <p>同一台手机上填 <code>http://127.0.0.1:51042</code> 即可，不依赖 Wi-Fi 或移动数据；也可以在同一网络中的电脑上使用手机的局域网 IP。</p>
+</div>
+
+<!-- ===== How to use ===== -->
+<div class="and-section">
+  <h2>如何开始</h2>
+  <ol class="and-steps">
+    <li>
+      <strong>下载并安装 APK</strong>
+      <span>从 <a href="https://github.com/xulihang/ImageTrans-Android/releases/latest" target="_blank" rel="noopener">GitHub Releases</a> 下载最新 APK 并安装。可能需要允许安装未知来源的应用。</span>
+    </li>
+    <li>
+      <strong>选择翻译方式</strong>
+      <span>在设置中选择翻译方式：连接远程 ImageTrans 服务器（填写服务器地址和项目密码），或在手机本地完成 OCR 后再用 OpenAI 兼容接口 / MyMemory 翻译。选择 MyMemory 时无需 API Key。</span>
+    </li>
+    <li>
+      <strong>设置语言对</strong>
+      <span>选择源语言和目标语言。源语言“自动”按日语处理，目标语言“自动”按英语处理，也可以明确指定。</span>
+    </li>
+    <li>
+      <strong>开始翻译</strong>
+      <span>从相册选图、拍照、选择文件夹，或开启截屏翻译悬浮窗。App 会识别文字、翻译，并把译文回填到图片上。</span>
+    </li>
+    <li>
+      <strong>保存或分享</strong>
+      <span>把译文保存到相册或分享出去；文件夹翻译完成后可以直接打开输出目录。</span>
+    </li>
+  </ol>
+</div>
+
+<!-- ===== Requirements ===== -->
+<div class="and-section">
+  <h2>系统要求与限制</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📱</div>
+      <h4>arm64 设备</h4>
+      <p>本地 OCR 库只提供 arm64-v8a 版本，现代 Android 手机基本都支持。x86_64 模拟器无法运行 OCR。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🌐</div>
+      <h4>网络</h4>
+      <p>本地模式下 OCR 完全在手机上完成，只把文本发送给翻译 API。服务器模式需要能访问你的 ImageTrans 服务器；韩、阿、俄、泰的 OCR 模型首次使用时需要下载。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔋</div>
+      <h4>后台运行</h4>
+      <p>截屏翻译悬浮窗和扩展用的翻译服务器依赖前台服务运行。部分国产 ROM 需要允许后台活动并关闭电池优化。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="and-section">
+  <h2>更多资源</h2>
+  <div class="and-links">
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-link-chip" target="_blank" rel="noopener">💻 GitHub 仓库</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-link-chip" target="_blank" rel="noopener">📦 版本发布</a>
+    <a href="/zh/imagetrans/" class="and-link-chip">🖥️ ImageTrans 桌面版</a>
+    <a href="/zh/imagetrans/extension/" class="and-link-chip">🧩 浏览器扩展</a>
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="and-link-chip" target="_blank" rel="noopener">📖 文档</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/issues" class="and-link-chip" target="_blank" rel="noopener">🐛 反馈问题</a>
+  </div>
+</div>
