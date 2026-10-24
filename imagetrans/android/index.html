@@ -1,7 +1,7 @@
 ---
 title: ImageTrans Android — Translate Images, Screenshots and Camera Photos on Your Phone
 layout: page
-description: ImageTrans Android is the Android version of the ImageTrans image translator. Translate images from your gallery, photos taken with the camera, whole folders of images, and on-screen text with a floating screenshot translation overlay. It can connect to a remote ImageTrans server, or run OCR fully on-device and translate with an OpenAI-compatible API or free MyMemory.
+description: ImageTrans Android is the Android version of the ImageTrans image translator. Translate images from your gallery, photos taken with the camera, whole folders of images, and on-screen text with a floating screenshot translation overlay. It can connect to a remote ImageTrans server, or run OCR fully on-device and translate with an OpenAI-compatible API or free MyMemory. Comic balloons are translated as blocks in reading order.
 ---
 
 <style>
@@ -134,14 +134,14 @@ description: ImageTrans Android is the Android version of the ImageTrans image t
 <div class="and-hero">
   <div class="and-hero-icon">📱</div>
   <div class="and-hero-title">ImageTrans for Android</div>
-  <p>Translate images, photos and on-screen text right on your phone — even inside games.</p> ImageTrans Android detects the text, translates it, and draws the translation back onto the image — no computer needed.</p>
+  <p>Translate images, photos and on-screen text right on your phone — even inside games. ImageTrans Android detects the text, translates it, and draws the translation back onto the image — no computer needed.</p>
   <div class="and-hero-meta">
-    <span>📦 v0.1.1</span>
+    <span>📦 v0.2.0</span>
     <span>🤖 Android 8+</span>
     <span>🆓 Free &amp; open source</span>
   </div>
   <div class="and-buttons">
-    <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.1.1/ImageTrans-Android-0.1.1.apk" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ Download APK v0.1.1</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.2.0/ImageTrans-Android-0.2.0.apk" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ Download APK v0.2.0</a>
     <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
   </div>
   <div class="and-note">Currently distributed as an APK via GitHub Releases. Requires Android 8.0 or later on an arm64 device (most modern phones); it does not run on x86 emulators.</div>
@@ -188,12 +188,17 @@ description: ImageTrans Android is the Android version of the ImageTrans image t
     <div class="and-feature-card">
       <div class="and-feature-icon">⚡</div>
       <h4>On-Device OCR</h4>
-      <p>Text detection and recognition run locally with PaddleOCR (via rapidocr4j) and ONNX Runtime, accelerated with OpenCV. No image ever needs to be uploaded just for OCR. Chinese, English, Japanese and Latin-script languages work out of the box; Korean, Arabic, Russian and Thai models download on first use.</p>
+      <p>Text detection and recognition run locally with PaddleOCR (via rapidocr4j) and ONNX Runtime, accelerated with OpenCV. No image ever needs to be uploaded just for OCR. Chinese, English, Japanese and Latin-script languages work out of the box; Korean, Arabic, Russian and Thai models download on first use. Japanese pages can be read with a YOLO text-line model built for vertical manga, which also finds the speech balloons.</p>
     </div>
     <div class="and-feature-card">
       <div class="and-feature-icon">🎨</div>
       <h4>Layout-Aware Rendering</h4>
       <p>Translations are typeset with the same rendering engine as the ImageTrans browser extension: automatic font sizing, text color detection, backgrounds, rounded corners, outlines and shadows, plus vertical writing for Japanese and Chinese and right-to-left layouts.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">💬</div>
+      <h4>Comic Balloons</h4>
+      <p>On a comic page the lines of one speech balloon are kept together and translated as one block, with the balloons then put in reading order — rows top to bottom, right to left for vertical manga. The balloons the YOLO model finds are used as the panels; otherwise they are worked out from the lines themselves.</p>
     </div>
     <div class="and-feature-card">
       <div class="and-feature-icon">🧵</div>
@@ -227,6 +232,7 @@ description: ImageTrans Android is the Android version of the ImageTrans image t
       <ul>
         <li>ChatGPT, Gemini, DeepSeek, or any compatible service</li>
         <li>Bring your own API key and model</li>
+        <li>Extra request fields as JSON (DeepSeek's thinking is turned off by default)</li>
         <li>Good balance of speed, quality and cost</li>
       </ul>
     </div>
@@ -255,7 +261,7 @@ description: ImageTrans Android is the Android version of the ImageTrans image t
   <ol class="and-steps">
     <li>
       <strong>Download and install the APK</strong>
-      <span>Download the APK from <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.1.1/ImageTrans-Android-0.1.1.apk" target="_blank" rel="noopener">GitHub Releases</a> (v0.1.1) and install it on your phone. You may need to allow installing apps from unknown sources.</span>
+      <span>Download the APK from <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.2.0/ImageTrans-Android-0.2.0.apk" target="_blank" rel="noopener">GitHub Releases</a> (v0.2.0) and install it on your phone. You may need to allow installing apps from unknown sources.</span>
     </li>
     <li>
       <strong>Choose a translation method</strong>

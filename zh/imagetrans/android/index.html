@@ -2,7 +2,7 @@
 title: ImageTrans Android — 在手机上翻译图片、截图和拍照内容
 layout: page
 lang: zh
-description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版本。可以翻译相册图片、拍照内容、整个文件夹中的图片，以及用截屏翻译悬浮窗翻译屏幕上任意位置的文字。既可以连接远程的 ImageTrans 服务器翻译，也可以完全在手机本地完成 OCR 再调用翻译 API。
+description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版本。可以翻译相册图片、拍照内容、整个文件夹中的图片，以及用截屏翻译悬浮窗翻译屏幕上任意位置的文字。既可以连接远程的 ImageTrans 服务器翻译，也可以完全在手机本地完成 OCR 再调用翻译 API。漫画气泡中的文字会合并成段并按阅读顺序翻译。
 ---
 
 <style>
@@ -135,14 +135,14 @@ description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版�
 <div class="and-hero">
   <div class="and-hero-icon">📱</div>
   <div class="and-hero-title">ImageTrans 安卓版</div>
-  <p>在手机上直接翻译图片、照片和屏幕上的文字——游戏里也可以。</p>ImageTrans 安卓版自动识别文字、进行翻译，并把译文按原位置回填到图片上——不需要电脑。</p>
+  <p>在手机上直接翻译图片、照片和屏幕上的文字——游戏里也可以。ImageTrans 安卓版自动识别文字、进行翻译，并把译文按原位置回填到图片上——不需要电脑。</p>
   <div class="and-hero-meta">
-    <span>📦 v0.1.1</span>
+    <span>📦 v0.2.0</span>
     <span>🤖 Android 8+</span>
     <span>🆓 免费开源</span>
   </div>
   <div class="and-buttons">
-    <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.1.1/ImageTrans-Android-0.1.1.apk" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ 下载 APK v0.1.1</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.2.0/ImageTrans-Android-0.2.0.apk" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ 下载 APK v0.2.0</a>
     <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">在 GitHub 上查看</a>
   </div>
   <div class="and-note">目前通过 GitHub Releases 发布 APK。需要 Android 8.0 及以上、arm64 设备（绝大多数现代手机），不支持 x86 模拟器。</div>
@@ -189,12 +189,17 @@ description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版�
     <div class="and-feature-card">
       <div class="and-feature-icon">⚡</div>
       <h4>本地 OCR</h4>
-      <p>借助 rapidocr4j（PaddleOCR）和 ONNX Runtime，文字检测与识别全部在手机上完成，并由 OpenCV 加速，仅做 OCR 时无需上传图片。中、英、日及拉丁系语言开箱即用，韩、阿、俄、泰模型首次使用时自动下载。</p>
+      <p>借助 rapidocr4j（PaddleOCR）和 ONNX Runtime，文字检测与识别全部在手机上完成，并由 OpenCV 加速，仅做 OCR 时无需上传图片。中、英、日及拉丁系语言开箱即用，韩、阿、俄、泰模型首次使用时自动下载。日文页面可选 YOLO 文字行模型，适合竖排的漫画，并能同时找出漫画气泡。</p>
     </div>
     <div class="and-feature-card">
       <div class="and-feature-icon">🎨</div>
       <h4>还原排版的渲染</h4>
       <p>译文使用与 ImageTrans 浏览器扩展相同的渲染引擎：自动调整字号、检测文字颜色、处理背景，支持圆角、描边、阴影，以及中日文竖排和从右到左的排版。</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">💬</div>
+      <h4>漫画气泡</h4>
+      <p>漫画页里同一个气泡中的文字行会合并成一段再翻译，气泡之间按阅读顺序排列：按行从上到下，竖排日漫同一行从右到左。有 YOLO 找到的气泡时直接用它作为 panel，没有时由文字行推算。</p>
     </div>
     <div class="and-feature-card">
       <div class="and-feature-icon">🧵</div>
@@ -228,6 +233,7 @@ description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版�
       <ul>
         <li>支持 ChatGPT、Gemini、DeepSeek 等兼容服务</li>
         <li>使用你自己的 API Key 和模型</li>
+        <li>可用 JSON 添加额外请求参数（默认关闭 DeepSeek 的思考）</li>
         <li>速度、质量与成本兼顾</li>
       </ul>
     </div>
@@ -256,7 +262,7 @@ description: ImageTrans 安卓版是 ImageTrans 图片翻译软件的安卓版�
   <ol class="and-steps">
     <li>
       <strong>下载并安装 APK</strong>
-      <span>从 <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.1.1/ImageTrans-Android-0.1.1.apk" target="_blank" rel="noopener">GitHub Releases</a> 下载 APK（v0.1.1）并安装。可能需要允许安装未知来源的应用。</span>
+      <span>从 <a href="https://github.com/xulihang/ImageTrans-Android/releases/download/v0.2.0/ImageTrans-Android-0.2.0.apk" target="_blank" rel="noopener">GitHub Releases</a> 下载 APK（v0.2.0）并安装。可能需要允许安装未知来源的应用。</span>
     </li>
     <li>
       <strong>选择翻译方式</strong>
