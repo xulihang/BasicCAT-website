@@ -1,7 +1,7 @@
 ---
 date: 2026-10-25 10:00:00+08:00
 layout: post
-title: "把手机变成翻译服务器：用 ImageTrans 安卓版看日漫、韩漫，啃生肉游戏"
+title: "安卓通过屏幕翻译看日漫、韩漫，啃生肉游戏"
 categories: blog
 tags: imagetrans
 ---
