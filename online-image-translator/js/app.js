@@ -24,6 +24,13 @@
   let translateBoxes = [];
   let translateScale = 1.0;
   let translateOriginalDataURL = null;
+  // Data needed to export a layered PSD from the last translation.
+  let translateWorkingDataURL = null;
+  let translateRenderedDataURL = null;
+  let translateCssText = null;
+  let translateTargetLang = null;
+  let translateFileName = '';
+  let exportBtn = null;
 
   // Scan tab
   let scanResults = null;
@@ -55,6 +62,7 @@
   let statusMask = null;
   let statusText = null;
   let textModal = null;
+  let exportModal = null;
 
   // ==================== Initialization ====================
 
@@ -71,6 +79,8 @@
     setupSettingsTab();
     // Set up text modal
     setupTextModal();
+    // Set up export format dialog
+    setupExportModal();
     // Set up status mask
     setupStatusMask();
     // Apply UI language
@@ -100,6 +110,7 @@
     translateFileInput = $('#translate-file-input');
     translateDropZone = $('#translate-drop-zone');
     translateBtn = $('#btn-translate');
+    exportBtn = $('#btn-export');
     translateShowChk = $('#chk-show-translated');
     translateContainer = $('#translate-image-container');
     translateOverlay = $('#translate-text-overlay');
@@ -120,6 +131,7 @@
     statusMask = $('#status-mask');
     statusText = $('#status-text');
     textModal = $('#text-modal');
+    exportModal = $('#export-modal');
   }
 
   // ==================== Tab Navigation ====================
@@ -448,6 +460,11 @@
       translateBtn.addEventListener('click', doTranslate);
     }
 
+    // Export button
+    if (exportBtn) {
+      exportBtn.addEventListener('click', openExportModal);
+    }
+
     // Show translated checkbox
     if (translateShowChk) {
       translateShowChk.addEventListener('change', function() {
@@ -468,6 +485,7 @@
   }
 
   function loadTranslateImage(file) {
+    translateFileName = (file && file.name) ? file.name : '';
     const reader = new FileReader();
     reader.onload = function(e) {
       translateOriginalDataURL = e.target.result;
@@ -485,6 +503,11 @@
       if (overlay) overlay.remove();
       translateBoxes = [];
       translateScale = 1.0;
+      translateWorkingDataURL = null;
+      translateRenderedDataURL = null;
+      translateCssText = null;
+      translateTargetLang = null;
+      updateExportButton();
       // Reset checkbox
       if (translateShowChk) translateShowChk.checked = false;
       // Hide drop zone
@@ -504,6 +527,10 @@
 
     showStatus(t('translating'));
     translateBtn.disabled = true;
+    translateBoxes = [];
+    translateWorkingDataURL = null;
+    translateRenderedDataURL = null;
+    updateExportButton();
 
     try {
       const img = translateImgSource;
@@ -516,6 +543,12 @@
         finalDataURL = compressed.dataURL;
         translateScale = 1500 / img.naturalWidth;
       }
+
+      // Remember the exact image the text boxes are positioned on, plus the
+      // styles used for rendering, so the PSD export matches the preview.
+      translateWorkingDataURL = finalDataURL;
+      translateCssText = Settings.get('renderTextCSS');
+      translateTargetLang = Settings.get('targetLang');
 
       // Validate language pair
       // Local PaddleOCR always needs explicit languages
@@ -553,6 +586,7 @@
 
       if (result.translatedImage && !result.renderTextInFrontend) {
         // Server returned a rendered image - wait for it to load + layout
+        translateRenderedDataURL = result.translatedImage;
         if (translateImgTarget) {
           translateImgTarget.src = result.translatedImage;
           translateImgTarget.style.display = '';
@@ -564,6 +598,7 @@
       } else if (result.boxes.length > 0) {
         // Render text on canvas, wait for image load + layout, then create overlay
         const renderedDataURL = await Render.renderTranslatedImage(finalDataURL, result.boxes);
+        translateRenderedDataURL = renderedDataURL;
         if (translateImgTarget) {
           translateImgTarget.src = renderedDataURL;
           translateImgTarget.style.display = '';
@@ -587,6 +622,114 @@
 
     hideStatus();
     translateBtn.disabled = false;
+    updateExportButton();
+  }
+
+  // ==================== Export (PSD / ImageTrans project) ====================
+
+  function updateExportButton() {
+    const hasText = translateBoxes && translateBoxes.some(function(box) {
+      return box && box.target;
+    });
+    if (exportBtn) exportBtn.disabled = !(hasText && translateWorkingDataURL);
+  }
+
+  function openExportModal() {
+    if (!exportModal) return;
+    exportModal.style.display = 'flex';
+    const first = exportModal.querySelector('.export-option');
+    if (first) first.focus();
+  }
+
+  function closeExportModal() {
+    if (exportModal) exportModal.style.display = 'none';
+  }
+
+  function setupExportModal() {
+    if (!exportModal) return;
+    const closeBtn = exportModal.querySelector('.modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeExportModal);
+    exportModal.addEventListener('click', function(e) {
+      if (e.target === exportModal) closeExportModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && exportModal.style.display === 'flex') closeExportModal();
+    });
+    const psdOption = $('#export-option-psd');
+    if (psdOption) {
+      psdOption.addEventListener('click', function() {
+        closeExportModal();
+        exportTranslatePSD();
+      });
+    }
+    const itpOption = $('#export-option-itp');
+    if (itpOption) {
+      itpOption.addEventListener('click', function() {
+        closeExportModal();
+        exportTranslateITP();
+      });
+    }
+  }
+
+  async function exportTranslatePSD() {
+    if (typeof PSD === 'undefined') {
+      alert('PSD export is not available.');
+      return;
+    }
+    if (!translateWorkingDataURL || !translateBoxes.length) return;
+
+    // Status switches between "loading" and "exporting" via the PSD callbacks.
+    exportBtn.disabled = true;
+    try {
+      const baseName = translateFileName
+        ? translateFileName.replace(/\.[^.]+$/, '')
+        : 'translated';
+      await PSD.export({
+        workingDataURL: translateWorkingDataURL,
+        renderedDataURL: translateRenderedDataURL,
+        boxes: translateBoxes,
+        cssText: translateCssText || Settings.get('renderTextCSS'),
+        filename: baseName + '.psd',
+        targetLang: translateTargetLang || Settings.get('targetLang'),
+        // ag-psd is fetched from a CDN on first use; report the load, then the export.
+        onLoadStart: function() { showStatus(t('loading_psd')); },
+        onLoaded: function() { showStatus(t('exporting_psd')); }
+      });
+    } catch (err) {
+      console.error('PSD export failed:', err);
+      alert(t('psd_export_failed') + ' ' + err.message);
+    } finally {
+      hideStatus();
+      updateExportButton();
+    }
+  }
+
+  async function exportTranslateITP() {
+    if (typeof ITP === 'undefined') {
+      alert('ImageTrans project export is not available.');
+      return;
+    }
+    if (!translateWorkingDataURL || !translateBoxes.length) return;
+
+    showStatus(t('exporting_itp'));
+    exportBtn.disabled = true;
+    try {
+      const baseName = translateFileName
+        ? translateFileName.replace(/\.[^.]+$/, '')
+        : 'translated';
+      ITP.export({
+        fileName: translateFileName || (baseName + '.jpg'),
+        boxes: translateBoxes,
+        targetLang: translateTargetLang || Settings.get('targetLang'),
+        filename: baseName + '.itp'
+      });
+    } catch (err) {
+      console.error('ImageTrans project export failed:', err);
+      alert(t('itp_export_failed') + ' ' + err.message);
+    } finally {
+      hideStatus();
+      updateExportButton();
+    }
   }
 
   function toggleTranslatedView(showTranslated) {

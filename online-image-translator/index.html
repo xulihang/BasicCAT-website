@@ -678,6 +678,46 @@
       margin-top: 16px;
       justify-content: flex-end;
     }
+    .export-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .export-option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+    }
+    .export-option:hover, .export-option:focus-visible {
+      border-color: var(--primary);
+      background: #f5f8ff;
+      outline: none;
+    }
+    .export-option-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    .export-option-desc {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .export-note {
+      margin: 14px 0 0;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .export-note a { color: var(--primary); }
 
     /* ===== Responsive ===== */
     @media (max-width: 600px) {
@@ -719,6 +759,7 @@
       <div class="translate-toolbar">
         <button class="btn-secondary" id="btn-select-image" data-i18n="select_image">Select Image</button>
         <button class="btn-primary" id="btn-translate" data-i18n="translate_btn">Translate</button>
+        <button class="btn-secondary" id="btn-export" data-i18n="export" disabled>Export</button>
         <label>
           <input type="checkbox" id="chk-show-translated" />
           <span data-i18n="show_translated">Translated</span>
@@ -1055,6 +1096,28 @@
     </div>
   </div>
 </div>
+<div class="text-modal" id="export-modal">
+  <div class="text-modal-content">
+    <div class="text-modal-header">
+      <h3 data-i18n="export_choose">Choose Export Format</h3>
+      <button class="modal-close">✕</button>
+    </div>
+    <div class="export-options">
+      <button class="export-option" id="export-option-psd">
+        <div class="export-option-title" data-i18n="export_psd">Export PSD</div>
+        <div class="export-option-desc" data-i18n="export_psd_desc"></div>
+      </button>
+      <button class="export-option" id="export-option-itp">
+        <div class="export-option-title" data-i18n="export_itp">Export ImageTrans Project</div>
+        <div class="export-option-desc" data-i18n="export_itp_desc"></div>
+      </button>
+    </div>
+    <p class="export-note">
+      <span data-i18n="export_itp_about"></span>
+      <a href="https://www.basiccat.org/zh/imagetrans/" target="_blank" rel="noopener">basiccat.org/imagetrans</a>
+    </p>
+  </div>
+</div>
 
 <noscript><div style="padding:20px;text-align:center;background:#fff3cd;border-bottom:1px solid #ffc107;font-size:14px;">This application requires JavaScript. Please enable JavaScript in your browser settings.</div></noscript>
 
@@ -1072,6 +1135,8 @@
 <script src="js/ocr.js"></script>
 <script src="lib/html-to-image/html-to-image.js"></script>
 <script src="js/render.js"></script>
+<script src="js/psd.js"></script>
+<script src="js/itp.js"></script>
 <script src="js/translate.js"></script>
 <script src="js/app.js"></script>
 

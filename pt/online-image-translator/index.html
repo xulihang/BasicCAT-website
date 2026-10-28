@@ -673,6 +673,46 @@
     .text-modal-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 4px; }
     .text-modal-source { font-size: 18px; color: #333; line-height: 1.5; word-break: break-word; }
     .text-modal-target { font-size: 16px; color: var(--primary); line-height: 1.5; word-break: break-word; }
+    .export-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .export-option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+    }
+    .export-option:hover, .export-option:focus-visible {
+      border-color: var(--primary);
+      background: #f5f8ff;
+      outline: none;
+    }
+    .export-option-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    .export-option-desc {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .export-note {
+      margin: 14px 0 0;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .export-note a { color: var(--primary); }
     .text-modal-actions {
       display: flex;
       gap: 8px;
@@ -720,6 +760,7 @@
       <div class="translate-toolbar">
         <button class="btn-secondary" id="btn-select-image" data-i18n="select_image">Selecionar imagem</button>
         <button class="btn-primary" id="btn-translate" data-i18n="translate_btn">Traduzir</button>
+        <button class="btn-secondary" id="btn-export" data-i18n="export" disabled>Exportar</button>
         <label>
           <input type="checkbox" id="chk-show-translated" />
           <span data-i18n="show_translated">Mostrar tradução</span>
@@ -1057,6 +1098,31 @@
   </div>
 </div>
 
+<!-- Export Modal -->
+<div class="text-modal" id="export-modal">
+  <div class="text-modal-content">
+    <div class="text-modal-header">
+      <h3 data-i18n="export_choose">Escolher formato de exportação</h3>
+      <button class="modal-close">✕</button>
+    </div>
+    <div class="export-options">
+      <button class="export-option" id="export-option-psd">
+        <div class="export-option-title" data-i18n="export_psd">Exportar PSD</div>
+        <div class="export-option-desc" data-i18n="export_psd_desc"></div>
+      </button>
+      <button class="export-option" id="export-option-itp">
+        <div class="export-option-title" data-i18n="export_itp">Exportar projeto ImageTrans</div>
+        <div class="export-option-desc" data-i18n="export_itp_desc"></div>
+      </button>
+    </div>
+    <p class="export-note">
+      <span data-i18n="export_itp_about"></span>
+      <a href="https://www.basiccat.org/zh/imagetrans/" target="_blank" rel="noopener">basiccat.org/imagetrans</a>
+    </p>
+  </div>
+</div>
+
+
 <noscript><div style="padding:20px;text-align:center;background:#fff3cd;border-bottom:1px solid #ffc107;font-size:14px;">Este aplicativo requer JavaScript ativado. Ative o JavaScript nas configurações do navegador.</div></noscript>
 
 <!-- Application Modules -->
@@ -1074,6 +1140,8 @@
 <script src="/online-image-translator/js/ocr.js"></script>
 <script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>
+<script src="/online-image-translator/js/psd.js"></script>
+<script src="/online-image-translator/js/itp.js"></script>
 <script src="/online-image-translator/js/translate.js"></script>
 <script src="/online-image-translator/js/app.js"></script>
 

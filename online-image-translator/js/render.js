@@ -399,20 +399,11 @@ const Render = (function() {
     });
   }
 
-  // Render translated text by building a real DOM overlay and rasterizing it with
-  // html-to-image (SVG foreignObject -> native browser layout). This makes Arabic
-  // RTL bidi and CSS like writing-mode behave exactly as in a browser, and lets the
-  // user's renderTextCSS apply verbatim instead of being converted to canvas props.
-  //
-  // The base image is NOT placed inside the DOM: Safari cannot rasterize an <img>
-  // inside SVG foreignObject (it comes out blank), so the image is drawn directly
-  // on the result canvas and the rasterized text overlay is composited on top.
-  async function renderTranslatedImageDOM(base64Image, boxes, cssText) {
-    const img = await loadImageElement(base64Image);
-    const natW = img.naturalWidth;
-    const natH = img.naturalHeight;
-    if (!natW || !natH) throw new Error('Invalid image dimensions');
-
+  // Build the off-screen DOM used for text layout/rasterization. Returns the
+  // wrapper/container (the caller must remove the wrapper when done) plus the
+  // geometry of every rendered text box, so the PSD exporter can place editable
+  // text layers where the rendered text actually sits.
+  function buildTextLayoutDOM(natW, natH, boxes, cssText) {
     // The wrapper is positioned off-screen; the container (the node passed to
     // html-to-image) must sit at 0,0 in its own coordinates. html-to-image clones
     // the captured node into an SVG foreignObject, and an off-screen offset on
@@ -439,6 +430,7 @@ const Render = (function() {
     };
 
     const renderTextCSS = cssText || Settings.get('renderTextCSS');
+    const textStyle = parseFontCSS(renderTextCSS);
     const minFontSize = 14;
     const userCssHasDirection = /(^|[;])\s*direction\s*:/.test(renderTextCSS);
 
@@ -464,6 +456,8 @@ const Render = (function() {
 
     wrapper.appendChild(container);
     (document.body || document.documentElement).appendChild(wrapper);
+
+    const items = [];
 
     for (let i = 0; i < boxes.length; i++) {
       const box = boxes[i];
@@ -511,7 +505,34 @@ const Render = (function() {
         if (nx !== c.x) el.style.setProperty('left', nx + 'px', 'important');
         if (ny !== c.y) el.style.setProperty('top', ny + 'px', 'important');
       }
+
+      items.push({
+        box: box,
+        text: targetText,
+        rect: {
+          x: parseFloat(el.style.left) || 0,
+          y: parseFloat(el.style.top) || 0,
+          w: parseFloat(el.style.width) || 0,
+          h: parseFloat(el.style.height) || 0
+        },
+        fontSize: parseFloat(el.style.fontSize) || minFontSize,
+        style: textStyle,
+        direction: el.style.getPropertyValue('direction') || 'ltr'
+      });
     }
+
+    return { wrapper: wrapper, container: container, items: items, style: textStyle };
+  }
+
+  // Render translated text by building a real DOM overlay and rasterizing it with
+  // html-to-image (SVG foreignObject -> native browser layout).
+  async function renderTranslatedImageDOM(base64Image, boxes, cssText) {
+    const img = await loadImageElement(base64Image);
+    const natW = img.naturalWidth;
+    const natH = img.naturalHeight;
+    if (!natW || !natH) throw new Error('Invalid image dimensions');
+    const layout = buildTextLayoutDOM(natW, natH, boxes, cssText);
+    const container = layout.container;
 
     try {
       // Rasterize just the text overlay (transparent background).
@@ -532,8 +553,85 @@ const Render = (function() {
       ctx.drawImage(overlayCanvas, 0, 0, natW, natH);
       return out.toDataURL('image/webp', 0.8);
     } finally {
-      wrapper.remove();
+      layout.wrapper.remove();
     }
+  }
+
+  // Compute the same text layout used by the DOM renderer without rasterizing.
+  async function layoutTranslatedText(base64Image, boxes, cssText) {
+    const img = await loadImageElement(base64Image);
+    const natW = img.naturalWidth;
+    const natH = img.naturalHeight;
+    if (!natW || !natH) throw new Error('Invalid image dimensions');
+    const layout = buildTextLayoutDOM(natW, natH, boxes, cssText);
+    layout.wrapper.remove();
+    return { width: natW, height: natH, items: layout.items, style: layout.style };
+  }
+
+  // Paint the text boxes over the original image to produce the "text removed"
+  // layer of the exported PSD (same background style as the rendered output).
+  async function renderCleanBackground(base64Image, items, cssText) {
+    const img = await loadImageElement(base64Image);
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const textStyle = parseFontCSS(cssText || Settings.get('renderTextCSS'));
+    ctx.fillStyle = textStyle.backgroundColor;
+    for (let i = 0; i < items.length; i++) {
+      const r = items[i].rect;
+      const x = Math.max(0, r.x);
+      const y = Math.max(0, r.y);
+      const w = Math.min(r.w, canvas.width - x);
+      const h = Math.min(r.h, canvas.height - y);
+      if (w <= 0 || h <= 0) continue;
+      fillRoundRect(ctx, x, y, w, h, textStyle.borderRadius);
+    }
+    return canvas;
+  }
+
+  // Rasterize one box's text on a transparent canvas, cropped to the box rect.
+  // Used as the bitmap preview of an editable PSD text layer.
+  function renderTextLayerCanvas(item, cssText) {
+    const style = item.style || parseFontCSS(cssText || Settings.get('renderTextCSS'));
+    const rect = item.rect;
+    const w = Math.max(1, Math.ceil(rect.w));
+    const h = Math.max(1, Math.ceil(rect.h));
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    const text = applyTextTransform(item.text, style.textTransform);
+    const fontSize = item.fontSize || 14;
+    ctx.font = buildFontString(fontSize, style);
+    ctx.fillStyle = style.color;
+    ctx.textBaseline = 'top';
+    const padding = 2;
+    const availWidth = Math.max(1, w - padding * 2);
+    const lines = wrapLines(ctx, text, availWidth);
+    const lineHeight = fontSize * 1.3;
+    // CSS text-align is physical; direction:rtl flips the default left/start.
+    let align = style.textAlign;
+    if (item.direction === 'rtl') {
+      if (align === 'left') align = 'right';
+      else if (align === 'right') align = 'left';
+    }
+    for (let i = 0; i < lines.length; i++) {
+      let lineX;
+      if (align === 'center') {
+        ctx.textAlign = 'center';
+        lineX = w / 2;
+      } else if (align === 'right') {
+        ctx.textAlign = 'right';
+        lineX = w - padding;
+      } else {
+        ctx.textAlign = 'left';
+        lineX = padding;
+      }
+      ctx.fillText(lines[i], lineX, padding + i * lineHeight);
+    }
+    return canvas;
   }
 
   // Render translated text onto an image. Prefers DOM rendering via html-to-image
@@ -716,6 +814,9 @@ const Render = (function() {
     buildFontString: buildFontString,
     applyTextTransform: applyTextTransform,
     renderTranslatedImage: renderTranslatedImage,
+    layoutTranslatedText: layoutTranslatedText,
+    renderCleanBackground: renderCleanBackground,
+    renderTextLayerCanvas: renderTextLayerCanvas,
     isSupportWebp: isSupportWebp,
     compressToWebP: compressToWebP,
     compressImage: compressImage,
