@@ -164,7 +164,8 @@ const OCR = (function() {
     });
   }
 
-  // Try primary CDN (jsdmirror, China), fall back to jsdelivr (global) after timeout.
+  // Try primary CDN (Fastly edge, more reliable in China), fall back to the
+  // default jsdelivr CDN after timeout.
   // Resolves with the URL that was actually used.
   function loadScriptCDN(primary, fallback, timeoutMs) {
     timeoutMs = timeoutMs || 15000;
@@ -280,7 +281,7 @@ const OCR = (function() {
     depsPromise = (async function() {
       const report = function(msg) { if (_onProgress) _onProgress(msg); };
 
-      // 1. ONNX Runtime (jsdmirror → jsdelivr fallback)
+      // 1. ONNX Runtime (fastly → jsdelivr fallback)
       // The ORT version is pinned by backend:
       //  - webgpu: a recent fixed release with WebGPU EP support (all modern
       //    non-iOS browsers; on iOS only when navigator.gpu is present).
@@ -289,11 +290,11 @@ const OCR = (function() {
       var backend = resolveBackend();
       var ORT_VERSION = backend === 'webgpu' ? ORT_VERSION_WEBGPU : ORT_VERSION_WASM;
 
-      var ortCDN = 'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION;
+      var ortCDN = 'https://fastly.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION;
       if (typeof window.ort === 'undefined') {
         report('Loading ONNX Runtime...');
         var used = await loadScriptCDN(
-          'https://cdn.jsdmirror.com/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js',
+          'https://fastly.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js',
           'https://cdn.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js'
         );
         // Derive base URL: strip '/dist/ort.min.js' suffix
@@ -304,11 +305,11 @@ const OCR = (function() {
         window.ort.env.wasm.wasmPaths = ortCDN + '/dist/';
       }
 
-      // 2. OpenCV.js (jsdmirror → jsdelivr fallback)
+      // 2. OpenCV.js (fastly → jsdelivr fallback)
       if (typeof window.cv === 'undefined') {
         report('Loading OpenCV...');
         await loadScriptCDN(
-          'https://cdn.jsdmirror.com/npm/paddleocr-browser@1.0.4/dist/opencv.js',
+          'https://fastly.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js',
           'https://cdn.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js'
         );
       }
