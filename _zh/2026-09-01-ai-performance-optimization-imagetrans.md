@@ -43,12 +43,12 @@ Windows设备上，如果有Nvidia的显卡，也可以使用Pytorch版本的OCR
 原图：
 
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manga/capture002.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manga/capture002.jpg)
 
 译图：
 
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manga/zh/capture002.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manga/zh/capture002.jpg)
 
 处理时间：
 
@@ -91,11 +91,11 @@ Windows设备上，如果有Nvidia的显卡，也可以使用Pytorch版本的OCR
 
 原图：
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/cg/003_0101.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/cg/003_0101.jpg)
 
 译图：
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/cg/zh/003_0101.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/cg/zh/003_0101.jpg)
 
 处理时间：
 
@@ -157,11 +157,11 @@ Windows设备上，如果有Nvidia的显卡，也可以使用Pytorch版本的OCR
 
 原图：
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manhua/capture001.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manhua/capture001.jpg)
 
 译图：
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manhua/en/capture001.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manhua/en/capture001.jpg)
 
 处理时间：
 

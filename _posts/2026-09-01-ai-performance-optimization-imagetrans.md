@@ -40,11 +40,11 @@ Below are the results of translating various images on a MinisForum 760 Plus (AM
 
 Original:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manga/capture002.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manga/capture002.jpg)
 
 Translated:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manga/en/capture002.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manga/en/capture002.jpg)
 
 Processing time:
 
@@ -87,11 +87,11 @@ Processing time:
 
 Original:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/cg/003_0101.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/cg/003_0101.jpg)
 
 Translated:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/cg/en/003_0101.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/cg/en/003_0101.jpg)
 
 Processing time:
 
@@ -153,11 +153,11 @@ Processing time:
 
 Original:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manhua/capture001.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manhua/capture001.jpg)
 
 Translated:
 
-![](https://cdn.jsdmirror.com/gh/xulihang/ImageTrans-Benchmark@master/manhua/en/capture001.jpg)
+![](https://cdn.jsdelivr.net/gh/xulihang/ImageTrans-Benchmark@master/manhua/en/capture001.jpg)
 
 Processing time:
 
