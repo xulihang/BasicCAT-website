@@ -41,14 +41,14 @@
   <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"Ken5041gmOJ8QXsT",ck:"Ken5041gmOJ8QXsT"})</script>
   <script>
-    // The CDN-offloading service worker has been removed: a slow mirror meant
-    // images returned late or not at all, which showed up as blank tiles. Delete
-    // this block once returning visitors have cycled through — until then it is
-    // what stops an already-installed worker from keeping control of the page.
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations()
-        .then((regs) => regs.forEach((reg) => reg.unregister()))
-        .catch(() => {});
+      // updateViaCache: 'none' — the default ('imports'/'all') lets the browser
+      // serve sw.js itself from the HTTP cache, so a fix here can take up to
+      // 24h to reach a returning visitor. This worker routes images, so a stale
+      // copy is exactly the thing that produces broken tiles.
+      // Bump the ?v= by hand whenever sw.js changes so a returning visitor
+      // picks up the new worker on the next page load.
+      navigator.serviceWorker.register('/sw.js?v=4', { updateViaCache: 'none' });
     }
   </script>
 </head>
