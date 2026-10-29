@@ -34,8 +34,10 @@ const RESPONSE_CACHE_TTL_S = 600;
 const CDN_PATHS = ['/album/', '/assets/','/gallery/'];
 
 // File extensions that benefit from CDN (static assets).
-// js/css are intentionally excluded: see the note at the top.
-const CDN_EXTENSIONS = /\.(png|jpg|jpeg|gif|svg|webp|avif|ico|mp4|webm|pdf|zip|json|woff2?|ttf|eot)$/i;
+// js/css are intentionally excluded: see the note at the top. Video is out as
+// well — it is served with Range requests, and the fetch handler below leaves
+// those to the network so the player keeps 206/Content-Range and can seek.
+const CDN_EXTENSIONS = /\.(png|jpg|jpeg|gif|svg|webp|avif|ico|pdf|zip|json|woff2?|ttf|eot)$/i;
 
 function shouldUseCDN(url) {
   const urlObj = new URL(url);
@@ -46,12 +48,17 @@ function shouldUseCDN(url) {
 }
 
 // Headers for a re-wrapped response whose body is passed through as a stream.
-// fetch() has already decoded the body, so the encoding headers would make the
-// browser decode it a second time — which fails, and shows up as a blank image.
+// fetch() hands back a decoded body but leaves Content-Encoding in place, so
+// both it and the now-wrong Content-Length have to go — otherwise the browser
+// decodes already-plain bytes a second time and shows a blank image. For
+// unencoded responses Content-Length is accurate and worth keeping: download
+// progress and media seeking both read it.
 function passthroughHeaders(res, ttlSeconds) {
   const headers = new Headers(res.headers);
-  headers.delete('Content-Encoding');
-  headers.delete('Content-Length');
+  if (headers.has('Content-Encoding')) {
+    headers.delete('Content-Encoding');
+    headers.delete('Content-Length');
+  }
   if (ttlSeconds != null) {
     headers.set('Cache-Control', `public, max-age=${ttlSeconds}`);
   }
@@ -155,9 +162,14 @@ self.addEventListener('fetch', (event) => {
 
   if (request.method !== 'GET') return;
 
-  // Range requests are media players streaming a video. Buffering the CDN
-  // response into a Blob below would drop the ranges and make the video wait
-  // for the entire file, so let those go straight to the network.
+  // Media needs to stay a native HTTP conversation: the player asks for byte
+  // ranges and expects 206 + Content-Range back so it can start before the
+  // whole file is down and seek inside it. Re-wrapping it through the CDN path
+  // would hand it one 200 and break both, so <video>/<audio> load directly.
+  if (request.destination === 'video' || request.destination === 'audio') return;
+
+  // Same reasoning for anything else that arrives with a Range header — the
+  // browser's PDF viewer being the one that shows up on this site.
   if (request.headers.has('range')) return;
 
   if (!shouldUseCDN(request.url)) return;
