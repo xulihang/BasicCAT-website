@@ -212,8 +212,21 @@ const OCR = (function() {
   //  - WEBGPU: recent fixed release with WebGPU EP support (WebGPU-capable browsers).
   //  - WASM: last release shipping non-SIMD WASM, works on browsers without
   //    WebGPU / SIMD (e.g. old iOS Safari).
-  const ORT_VERSION_WEBGPU = '@1.27.0';
-  const ORT_VERSION_WASM = '@1.18.0';
+  const ORT_VERSION_WEBGPU = '1.27.0';
+  const ORT_VERSION_WASM = '1.18.0';
+
+  // ONNX Runtime source: npmmirror's file CDN is by far the fastest in China
+  // for the multi-MB wasm binaries. It only mirrors packages on its unpkg
+  // whitelist; onnxruntime-web is on it, paddleocr-browser / ag-psd are not.
+  // jsdelivr is the global fallback.
+  function ortUrl(version, file) {
+    return 'https://registry.npmmirror.com/onnxruntime-web/' + version +
+      '/files/dist/' + file;
+  }
+  function ortFallbackUrl(version, file) {
+    return 'https://cdn.jsdelivr.net/npm/onnxruntime-web@' + version +
+      '/dist/' + file;
+  }
 
   // Detect iOS (incl. iPadOS 13+, which reports a Macintosh UA).
   // Apple only froze the OS version in the UA, not the device token, so
@@ -281,7 +294,7 @@ const OCR = (function() {
     depsPromise = (async function() {
       const report = function(msg) { if (_onProgress) _onProgress(msg); };
 
-      // 1. ONNX Runtime (fastly → jsdelivr fallback)
+      // 1. ONNX Runtime (npmmirror → jsdelivr fallback)
       // The ORT version is pinned by backend:
       //  - webgpu: a recent fixed release with WebGPU EP support (all modern
       //    non-iOS browsers; on iOS only when navigator.gpu is present).
@@ -290,12 +303,12 @@ const OCR = (function() {
       var backend = resolveBackend();
       var ORT_VERSION = backend === 'webgpu' ? ORT_VERSION_WEBGPU : ORT_VERSION_WASM;
 
-      var ortCDN = 'https://fastly.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION;
+      var ortCDN = 'https://registry.npmmirror.com/onnxruntime-web/' + ORT_VERSION + '/files';
       if (typeof window.ort === 'undefined') {
         report('Loading ONNX Runtime...');
         var used = await loadScriptCDN(
-          'https://fastly.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js',
-          'https://cdn.jsdelivr.net/npm/onnxruntime-web' + ORT_VERSION + '/dist/ort.min.js'
+          ortUrl(ORT_VERSION, 'ort.min.js'),
+          ortFallbackUrl(ORT_VERSION, 'ort.min.js')
         );
         // Derive base URL: strip '/dist/ort.min.js' suffix
         ortCDN = used.replace(/\/dist\/ort\.min\.js$/, '');
@@ -305,12 +318,13 @@ const OCR = (function() {
         window.ort.env.wasm.wasmPaths = ortCDN + '/dist/';
       }
 
-      // 2. OpenCV.js (fastly → jsdelivr fallback)
+      // 2. OpenCV.js (jsdelivr → Fastly edge fallback). npmmirror blocks this
+      //    package, so jsdelivr is the only option here.
       if (typeof window.cv === 'undefined') {
         report('Loading OpenCV...');
         await loadScriptCDN(
-          'https://fastly.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js',
-          'https://cdn.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js'
+          'https://cdn.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js',
+          'https://fastly.jsdelivr.net/npm/paddleocr-browser@1.0.4/dist/opencv.js'
         );
       }
 

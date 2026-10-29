@@ -11,8 +11,10 @@ const PSD = (function() {
   'use strict';
 
   // Pinned version so a CDN update can't change writePsd behavior.
-  const AG_PSD_PRIMARY = 'https://fastly.jsdelivr.net/npm/ag-psd@33.0.0/dist/bundle.min.js';
-  const AG_PSD_FALLBACK = 'https://cdn.jsdelivr.net/npm/ag-psd@33.0.0/dist/bundle.min.js';
+  // jsdelivr primary, Fastly edge fallback. npmmirror does not mirror this
+  // package.
+  const AG_PSD_PRIMARY = 'https://cdn.jsdelivr.net/npm/ag-psd@33.0.0/dist/bundle.min.js';
+  const AG_PSD_FALLBACK = 'https://fastly.jsdelivr.net/npm/ag-psd@33.0.0/dist/bundle.min.js';
   const AG_PSD_TIMEOUT_MS = 15000;
 
   let agPsd = null;
