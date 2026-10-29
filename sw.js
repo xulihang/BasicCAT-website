@@ -45,9 +45,21 @@ function shouldUseCDN(url) {
   return CDN_PATHS.some(prefix => path.startsWith(prefix)) && CDN_EXTENSIONS.test(path);
 }
 
-// One CDN attempt, with the deadline covering the body as well as the headers.
-// Returns null on timeout, network error, non-ok status, or a redirect, so the
-// caller can fall back to the origin.
+// Headers for a re-wrapped response whose body is passed through as a stream.
+// fetch() has already decoded the body, so the encoding headers would make the
+// browser decode it a second time — which fails, and shows up as a blank image.
+function passthroughHeaders(res, ttlSeconds) {
+  const headers = new Headers(res.headers);
+  headers.delete('Content-Encoding');
+  headers.delete('Content-Length');
+  if (ttlSeconds != null) {
+    headers.set('Cache-Control', `public, max-age=${ttlSeconds}`);
+  }
+  return headers;
+}
+
+// One CDN attempt. Returns null on timeout, network error, non-ok status, or a
+// redirect, so the caller can fall back to the origin.
 //
 // redirect: 'manual' — when the file isn't in jsdelivr's cache (the first hit
 // after every 12h s-maxage, and after any push) it answers with a 301 to
@@ -69,19 +81,22 @@ async function tryOneCDN(base, path) {
     });
     if (!res.ok) return null;
 
-    // The deadline is still armed here. Headers arriving is not the same as
-    // the image being deliverable — a throttled body can stall indefinitely
-    // and, without this, the fetch event would never resolve.
-    const body = await res.blob();
-
-    const headers = new Headers(res.headers);
-    // The body is already decoded by fetch(), so the original encoding headers
-    // would tell the browser to decode it a second time — which fails, and
-    // shows up as a blank image.
-    headers.delete('Content-Encoding');
-    headers.delete('Content-Length');
-    headers.set('Cache-Control', `public, max-age=${RESPONSE_CACHE_TTL_S}`);
-    return new Response(body, { status: 200, headers });
+    // Pass the body straight through. Reading it with res.blob() first holds
+    // every byte in the worker until the last one lands, so the page receives
+    // nothing until the download is complete — progressive JPEGs never show
+    // their early passes and a large image looks frozen at "loading". Streaming
+    // lets the browser decode as bytes arrive, which is what it would have done
+    // without a worker in the middle.
+    //
+    // The flip side: once bytes are handed back we can no longer switch to the
+    // origin, so the deadline above covers the headers only. A body that stalls
+    // after the headers is now the browser's own download stall, not a hang we
+    // can route around — acceptable, since redirect: 'manual' keeps the slow
+    // raw.githubusercontent.com hop out of the picture entirely.
+    return new Response(res.body, {
+      status: 200,
+      headers: passthroughHeaders(res, RESPONSE_CACHE_TTL_S),
+    });
   } catch (_) {
     return null;
   } finally {
@@ -108,11 +123,11 @@ async function fromOrigin(request) {
     return new Response(res.body, {
       status: res.status,
       statusText: res.statusText,
-      headers: new Headers(res.headers),
+      headers: passthroughHeaders(res),
     });
   }
 
-  const headers = new Headers(res.headers);
+  const headers = passthroughHeaders(res);
   const cc = headers.get('Cache-Control') || '';
   const ttl = /max-age=(\d+)/.exec(cc);
   // Leave the origin's own TTL alone when it is already short (GitHub Pages
@@ -120,8 +135,8 @@ async function fromOrigin(request) {
   if (!ttl || Number(ttl[1]) > RESPONSE_CACHE_TTL_S) {
     headers.set('Cache-Control', `public, max-age=${RESPONSE_CACHE_TTL_S}`);
   }
-  const body = await res.blob();
-  return new Response(body, { status: 200, headers });
+  // Streamed for the same reason as the CDN path above.
+  return new Response(res.body, { status: 200, headers });
 }
 
 // Install - activate immediately
