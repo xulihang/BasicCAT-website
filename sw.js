@@ -1,6 +1,7 @@
 // Service Worker for CDN offloading
 // Intercepts requests to /album/*, /assets/* and /gallery/* and fetches from
-// CDN mirrors. Tries jsdmirror → jsdelivr → origin (first success wins).
+// CDN mirrors. Tries jsdelivr (Fastly) → jsdelivr (auto) → origin (first
+// success wins).
 //
 // JS and CSS deliberately do NOT go to the CDN. They block rendering and first
 // input, so a cross-origin round trip — or a CDN timeout before the origin
@@ -13,16 +14,15 @@
 // can't stall the page and a broken image can't stick for a week.
 
 const CDN_URLS = [
-  'https://cdn.jsdmirror.com/gh/xulihang/BasicCAT-website@master',
+  'https://fastly.jsdelivr.net/gh/xulihang/BasicCAT-website@master',
   'https://cdn.jsdelivr.net/gh/xulihang/BasicCAT-website@master',
 ];
 
-// Per-CDN deadline. jsdmirror has been observed taking 60s and then answering
-// 554 under a dozen-image burst; without a cap that stall is paid on every
-// image before the origin fallback even gets a chance to run. Above a few
-// seconds a visitor has already seen the hole in the page, so give up and let
-// the origin serve it. Mirrors in the Pacific are slow but reachable, so this
-// is deliberately more generous than a same-continent timeout would be.
+// Per-CDN deadline. A mirror that hangs without a cap would stall every image
+// before the origin fallback even gets a chance to run. Above a few seconds a
+// visitor has already seen the hole in the page, so give up and let the origin
+// serve it. Mirrors in the Pacific are slow but reachable, so this is
+// deliberately more generous than a same-continent timeout would be.
 const CDN_TIMEOUT_MS = 5000;
 
 // How long a successful CDN response stays in the browser's HTTP cache. The
