@@ -945,6 +945,12 @@
         </div>
         <div class="form-row">
           <label class="checkbox-label">
+            <input type="checkbox" id="setting-layoutAnalysis" />
+            <span data-i18n="settings_layout_analysis">텍스트 병합 시 레이아웃 분석(말풍선/문단별 그룹화)</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
             <input type="checkbox" id="setting-useYOLODetection" />
             <span data-i18n="settings_use_yolo">YOLO로 텍스트 감지 사용</span>
           </label>
@@ -1063,6 +1069,26 @@
       </div>
     </div>
 
+    <div class="setup-section" id="setup-content-section" style="display:none;">
+      <div class="setup-label">이미지 유형</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-general">
+          <input type="radio" name="setup-content" value="general" checked />
+          <div class="setup-option-content">
+            <strong>일반 이미지</strong>
+            <span>사진, 스크린샷 등. 텍스트 줄을 거리 기준으로 병합합니다.</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-comic">
+          <input type="radio" name="setup-content" value="comic" />
+          <div class="setup-option-content">
+            <strong>만화(서양 만화·일본 만화)</strong>
+            <span>말풍선과 읽기 순서에 따라 텍스트를 병합하여 인접한 말풍선이 섞이지 않습니다.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
     <div class="setup-section" id="setup-server-section">
       <div class="setup-label">서버 URL(선택 사항)</div>
       <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
@@ -1137,6 +1163,7 @@
 <script src="/online-image-translator/js/settings.js"></script>
 <script src="/online-image-translator/js/fittext.js"></script>
 <script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/panelmerger.js"></script>
 <script src="/online-image-translator/js/ocr.js"></script>
 <script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>

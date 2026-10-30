@@ -945,6 +945,12 @@
         </div>
         <div class="form-row">
           <label class="checkbox-label">
+            <input type="checkbox" id="setting-layoutAnalysis" />
+            <span data-i18n="settings_layout_analysis">تحليل التخطيط عند دمج النص (التجميع حسب الفقاعة أو الفقرة)</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
             <input type="checkbox" id="setting-useYOLODetection" />
             <span data-i18n="settings_use_yolo">استخدام YOLO للكشف عن النص</span>
           </label>
@@ -1063,6 +1069,26 @@
       </div>
     </div>
 
+    <div class="setup-section" id="setup-content-section" style="display:none;">
+      <div class="setup-label">نوع الصورة</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-general">
+          <input type="radio" name="setup-content" value="general" checked />
+          <div class="setup-option-content">
+            <strong>صور عامة</strong>
+            <span>صور فوتوغرافية ولقطات شاشة وغيرها. تُدمج أسطر النص حسب القرب.</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-comic">
+          <input type="radio" name="setup-content" value="comic" />
+          <div class="setup-option-content">
+            <strong>القصص المصورة (الغربية والمانغا اليابانية)</strong>
+            <span>دمج النص حسب فقاعة الكلام وترتيب القراءة، مع إبقاء الفقاعات المتجاورة منفصلة.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
     <div class="setup-section" id="setup-server-section">
       <div class="setup-label">عنوان URL للخادم (اختياري)</div>
       <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
@@ -1136,6 +1162,7 @@
 <script src="/online-image-translator/js/settings.js"></script>
 <script src="/online-image-translator/js/fittext.js"></script>
 <script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/panelmerger.js"></script>
 <script src="/online-image-translator/js/ocr.js"></script>
 <script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>

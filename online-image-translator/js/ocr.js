@@ -611,6 +611,21 @@ const OCR = (function() {
     return merged;
   }
 
+  // Merge the recognized lines according to the user's setting: into panels
+  // (speech balloons or paragraphs) when layout analysis is on, otherwise by
+  // mergeTextBoxes() rules alone. When the YOLO detector supplied balloons
+  // (the manga model's class 5), those are the panels. Keeping neighbour
+  // balloons separate matters for Western comics, which have many small
+  // balloons per page.
+  function mergeRecognizedItems(items, sourceLang, balloons) {
+    const xSpacing = Settings.get('xSpacing');
+    const ySpacing = Settings.get('ySpacing');
+    if (Settings.get('layoutAnalysis') && typeof PanelMerger !== 'undefined') {
+      return PanelMerger.merge(items, sourceLang, xSpacing, ySpacing, balloons);
+    }
+    return mergeTextBoxes(items, sourceLang, xSpacing, ySpacing);
+  }
+
   // ==================== YOLO Detection (from page-ocr.js) ====================
 
   let yoloSession = null;
@@ -743,13 +758,21 @@ const OCR = (function() {
         if (score > maxScore) { maxScore = score; maxClass = c; }
       }
       if (maxScore < YOLO_CONF_THRESHOLD) continue;
-      if (maxClass === 5) continue;
       const x1 = x - w / 2, y1 = y - h / 2, x2 = x + w / 2, y2 = y + h / 2;
       if (x1 >= x2 || y1 >= y2) continue;
       detections.push({ classId: maxClass, confidence: maxScore, bbox: [x1, y1, x2, y2] });
     }
     const nmsResults = applyNMS(detections, YOLO_NMS_THRESHOLD);
-    return scaleYoloCoords(nmsResults, ratio, dw, dh, srcW, srcH);
+    const scaled = scaleYoloCoords(nmsResults, ratio, dw, dh, srcW, srcH);
+    // Class 5 is the manga model's balloon (not text). The lines inside a
+    // balloon form one panel for the merge, so keep the balloons separately.
+    const lines = [];
+    const balloons = [];
+    for (let i = 0; i < scaled.length; i++) {
+      if (scaled[i].classId === 5) balloons.push(scaled[i]);
+      else lines.push(scaled[i]);
+    }
+    return { lines: lines, balloons: balloons };
   }
 
   async function ensureYOLOModel(yoloUrl) {
@@ -803,9 +826,7 @@ const OCR = (function() {
       });
     });
     console.log(srcItems);
-    const xSpacing = Settings.get('xSpacing');
-    const ySpacing = Settings.get('ySpacing');
-    const mergedGroups = mergeTextBoxes(srcItems, sourceLang, xSpacing, ySpacing);
+    const mergedGroups = mergeRecognizedItems(srcItems, sourceLang);
 
     const boxes = [];
     mergedGroups.forEach(function(group) {
@@ -836,7 +857,8 @@ const OCR = (function() {
     const ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0, 0);
 
-    const detections = await runYOLO(canvas);
+    const detection = await runYOLO(canvas);
+    const detections = detection.lines;
     const srcItems = [];
     for (let i = 0; i < detections.length; i++) {
       try {
@@ -861,9 +883,16 @@ const OCR = (function() {
 
     if (srcItems.length === 0) return [];
 
-    const xSpacing = Settings.get('xSpacing');
-    const ySpacing = Settings.get('ySpacing');
-    const mergedGroups = mergeTextBoxes(srcItems, sourceLang, xSpacing, ySpacing);
+    // The manga model's balloons (class 5) become the panels the lines are
+    // grouped by, which is more accurate than estimating them from the lines.
+    const balloons = [];
+    for (let i = 0; i < detection.balloons.length; i++) {
+      const b = detection.balloons[i].bbox;
+      const w = b[2] - b[0], h = b[3] - b[1];
+      if (w < 10 || h < 10) continue;
+      balloons.push({ left: b[0], top: b[1], width: w, height: h });
+    }
+    const mergedGroups = mergeRecognizedItems(srcItems, sourceLang, balloons);
 
     const boxes = [];
     mergedGroups.forEach(function(group) {

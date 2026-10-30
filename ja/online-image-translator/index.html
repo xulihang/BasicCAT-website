@@ -945,6 +945,12 @@
         </div>
         <div class="form-row">
           <label class="checkbox-label">
+            <input type="checkbox" id="setting-layoutAnalysis" />
+            <span data-i18n="settings_layout_analysis">テキスト結合時にレイアウトを解析する（吹き出し・段落ごとにグループ化）</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
             <input type="checkbox" id="setting-useYOLODetection" />
             <span data-i18n="settings_use_yolo">YOLO でテキストを検出する</span>
           </label>
@@ -1063,6 +1069,26 @@
       </div>
     </div>
 
+    <div class="setup-section" id="setup-content-section" style="display:none;">
+      <div class="setup-label">画像の種類</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-general">
+          <input type="radio" name="setup-content" value="general" checked />
+          <div class="setup-option-content">
+            <strong>一般の画像</strong>
+            <span>写真やスクリーンショットなど。テキストの行は近さで結合されます。</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-comic">
+          <input type="radio" name="setup-content" value="comic" />
+          <div class="setup-option-content">
+            <strong>漫画（欧米コミック・日本の漫画）</strong>
+            <span>吹き出しと読み順でテキストを結合し、隣り合う吹き出しは分けたままにします。</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
     <div class="setup-section" id="setup-server-section">
       <div class="setup-label">サーバー URL（任意）</div>
       <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
@@ -1133,6 +1159,7 @@
 <script src="/online-image-translator/js/settings.js"></script>
 <script src="/online-image-translator/js/fittext.js"></script>
 <script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/panelmerger.js"></script>
 <script src="/online-image-translator/js/ocr.js"></script>
 <script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>

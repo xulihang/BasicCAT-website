@@ -944,6 +944,12 @@
         </div>
         <div class="form-row">
           <label class="checkbox-label">
+            <input type="checkbox" id="setting-layoutAnalysis" />
+            <span data-i18n="settings_layout_analysis">Analyze the layout when merging text (group by balloon or paragraph)</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
             <input type="checkbox" id="setting-useYOLODetection" />
             <span data-i18n="settings_use_yolo">Use YOLO for text detection</span>
           </label>
@@ -1062,6 +1068,26 @@
       </div>
     </div>
 
+    <div class="setup-section" id="setup-content-section" style="display:none;">
+      <div class="setup-label">Image Type</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-general">
+          <input type="radio" name="setup-content" value="general" checked />
+          <div class="setup-option-content">
+            <strong>General images</strong>
+            <span>Photos, screenshots and other images. Text lines are merged by proximity.</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-comic">
+          <input type="radio" name="setup-content" value="comic" />
+          <div class="setup-option-content">
+            <strong>Comics (Western comics &amp; Japanese manga)</strong>
+            <span>Merge text by speech balloon and reading order, so neighbouring balloons stay separate.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
     <div class="setup-section" id="setup-server-section">
       <div class="setup-label">Server URL (optional)</div>
       <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
@@ -1132,6 +1158,7 @@
 <script src="js/settings.js"></script>
 <script src="js/fittext.js"></script>
 <script src="js/tts.js"></script>
+<script src="js/panelmerger.js"></script>
 <script src="js/ocr.js"></script>
 <script src="lib/html-to-image/html-to-image.js"></script>
 <script src="js/render.js"></script>

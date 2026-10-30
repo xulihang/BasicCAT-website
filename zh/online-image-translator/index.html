@@ -944,6 +944,12 @@
         </div>
         <div class="form-row">
           <label class="checkbox-label">
+            <input type="checkbox" id="setting-layoutAnalysis" />
+            <span data-i18n="settings_layout_analysis">文字合并时进行版面分析（按气泡/段落分组）</span>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label">
             <input type="checkbox" id="setting-useYOLODetection" />
             <span data-i18n="settings_use_yolo">使用YOLO检测文字</span>
           </label>
@@ -1062,6 +1068,26 @@
       </div>
     </div>
 
+    <div class="setup-section" id="setup-content-section" style="display:none;">
+      <div class="setup-label">图片类型</div>
+      <div class="setup-options">
+        <label class="setup-option" id="setup-opt-general">
+          <input type="radio" name="setup-content" value="general" checked />
+          <div class="setup-option-content">
+            <strong>普通图片</strong>
+            <span>照片、截图等一般图片。文字行按距离合并。</span>
+          </div>
+        </label>
+        <label class="setup-option" id="setup-opt-comic">
+          <input type="radio" name="setup-content" value="comic" />
+          <div class="setup-option-content">
+            <strong>漫画（欧美漫画、日本漫画）</strong>
+            <span>按气泡和阅读顺序合并文字，相邻气泡不会混在一起。</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
     <div class="setup-section" id="setup-server-section">
       <div class="setup-label">服务器 URL（可选）</div>
       <input type="text" id="setup-serverURL" placeholder="https://service.basiccat.org:51043" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;" />
@@ -1135,6 +1161,7 @@
 <script src="/online-image-translator/js/settings.js"></script>
 <script src="/online-image-translator/js/fittext.js"></script>
 <script src="/online-image-translator/js/tts.js"></script>
+<script src="/online-image-translator/js/panelmerger.js"></script>
 <script src="/online-image-translator/js/ocr.js"></script>
 <script src="/online-image-translator/lib/html-to-image/html-to-image.js"></script>
 <script src="/online-image-translator/js/render.js"></script>

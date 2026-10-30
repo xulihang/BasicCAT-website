@@ -237,6 +237,15 @@
     const optServer = $('#setup-opt-server');
     const optLocal = $('#setup-opt-local');
     const serverSection = $('#setup-server-section');
+    const contentSection = $('#setup-content-section');
+    const contentRadios = document.querySelectorAll('input[name="setup-content"]');
+
+    function updateContentUI() {
+      for (let i = 0; i < contentRadios.length; i++) {
+        const label = contentRadios[i].closest('.setup-option');
+        if (label) label.classList.toggle('selected', contentRadios[i].checked);
+      }
+    }
 
     function updateModeUI() {
       const mode = document.querySelector('input[name="setup-mode"]:checked');
@@ -244,6 +253,13 @@
       if (optServer) optServer.classList.toggle('selected', mode.value === 'imagetrans');
       if (optLocal) optLocal.classList.toggle('selected', mode.value === 'local');
       if (serverSection) serverSection.style.display = mode.value === 'imagetrans' ? '' : 'none';
+      // Layout analysis only applies when OCR runs locally.
+      if (contentSection) contentSection.style.display = mode.value === 'local' ? '' : 'none';
+      updateContentUI();
+    }
+
+    for (let i = 0; i < contentRadios.length; i++) {
+      contentRadios[i].addEventListener('change', updateContentUI);
     }
 
     if (optServer) optServer.addEventListener('click', function() {
@@ -262,6 +278,10 @@
       startBtn.onclick = function() {
         const mode = document.querySelector('input[name="setup-mode"]:checked');
         Settings.set('translationMode', mode ? mode.value : 'imagetrans');
+        if (mode && mode.value === 'local') {
+          const content = document.querySelector('input[name="setup-content"]:checked');
+          Settings.set('layoutAnalysis', content ? content.value !== 'general' : false);
+        }
         //Settings.set('renderTextInFrontend', mode && mode.value === 'local');
         if (srcSelect) Settings.set('sourceLang', srcSelect.value);
         if (tgtSelect) Settings.set('targetLang', tgtSelect.value);
@@ -1322,7 +1342,7 @@
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt', 'openaiExtraParams',
       'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
-      'paddleExtraParams',
+      'paddleExtraParams', 'layoutAnalysis',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
@@ -1358,7 +1378,7 @@
       'sourceLang', 'targetLang', 'translationMode', 'defaultPresetTranslation',
       'useOpenAI', 'openaiURL', 'openaiKey', 'openaiModel', 'openaiPrompt', 'openaiExtraParams',
       'ocrMethod', 'ocrBackend', 'useYOLODetection', 'useYOLOForJapanese', 'paddleDetModel',
-      'paddleExtraParams',
+      'paddleExtraParams', 'layoutAnalysis',
       'xSpacing', 'ySpacing', 'renderTextCSS', 'renderTextInFrontend',
       'uiLanguage'
     ];
