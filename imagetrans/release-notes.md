@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v7.0.0 (2026/11/01)
+
+* Port ag-psd to Java for generating PSD. Support generating PSD with editable text without relying on Photoshop and it runs on Linux; remove the mandatory dependency on Krita for generating rasterized PSD
+* Rename balloon detection to custom model detection
+* Support full-featured custom models, where one model completes text localization, panel detection, balloon detection, and mask generation
+* Custom models support using RapidOCR's localization model
+* Change the built-in japanese-lines model to a PPOCR model trained for Japanese manga
+* Remove the Japanese manga panel detection model
+* Show operation suggestions when the recognize button is clicked with no text area selected
+* Ask by default which custom model to use (if there are multiple)
+* Update templates. The Japanese manga templates use XYCut sorting by default
+* Fix an issue where XYCut sorting may delete existing text areas
+* Fix inaccurately described menu items
+* Fix an issue where modifying the text-removed image of an area may result in unneeded regeneration of the mask image
+
 ## v6.5.4 (2026/10/14)
 
 * New fit to width and fit to height menu items
