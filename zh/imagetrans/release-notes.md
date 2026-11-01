@@ -30,6 +30,7 @@ lang: zh
 * 增加适应宽度和适应高度的菜单项
 * 默认使用内部的magic code检测方式判断文件是不是WebP
 * PDF导出支持以PDF/A格式保存
+* 新的图像修复插件Resynth，移植自GIMP的resynthesizer
 * 修复Linux上滚轮放大无效的问题
 
 ## v6.5.3 (2026/10/11)
