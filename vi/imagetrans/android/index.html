@@ -1,0 +1,318 @@
+---
+title: ImageTrans Android — Dịch ảnh, ảnh chụp màn hình và nội dung chụp ảnh trên điện thoại
+layout: page
+lang: vi
+description: ImageTrans cho Android là phiên bản Android của phần mềm dịch ảnh ImageTrans. Ứng dụng có thể dịch ảnh trong thư viện ảnh, nội dung chụp ảnh, toàn bộ ảnh trong một thư mục, và dùng cửa sổ nổi dịch ảnh chụp màn hình để dịch văn bản ở bất kỳ đâu trên màn hình. Có thể kết nối máy chủ ImageTrans từ xa để dịch, hoặc thực hiện OCR hoàn toàn cục bộ trên điện thoại rồi gọi API dịch. Văn bản trong bóng thoại truyện tranh được gộp thành đoạn và dịch theo thứ tự đọc.
+---
+
+<style>
+  :root {
+    --and-primary: #4a6cf7;
+    --and-primary-hover: #3b5de7;
+    --and-card-bg: #ffffff;
+    --and-border: #e2e8f0;
+    --and-radius: 12px;
+    --and-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .and-hero {
+    text-align: center;
+    padding: 24px 16px 32px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, rgba(74,108,247,0.08), rgba(74,108,247,0));
+    border-radius: var(--and-radius);
+  }
+  .and-hero-icon { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  .and-hero-title { font-size: 30px; font-weight: 800; margin: 0 0 8px 0; }
+  .and-hero p { font-size: 16px; line-height: 1.7; max-width: 680px; margin: 0 auto 12px; }
+  .and-hero-meta { font-size: 13px; color: #4a5568; margin-bottom: 20px; }
+  .and-hero-meta span { display: inline-block; margin: 0 8px; }
+  .and-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .and-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .and-btn-primary { background: var(--and-primary); color: #fff; }
+  .and-btn-primary:hover { background: var(--and-primary-hover); color: #fff; text-decoration: none; }
+  .and-btn-secondary { background: var(--and-card-bg); color: var(--and-primary); border: 1px solid var(--and-border); }
+  .and-btn-secondary:hover { border-color: var(--and-primary); text-decoration: none; }
+  .and-note { font-size: 12px; color: #718096; margin-top: 14px; }
+
+  /* ===== Sections ===== */
+  .and-section { margin-bottom: 36px; }
+  .and-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--and-border);
+  }
+  .and-section p { line-height: 1.7; margin: 0 0 12px 0; }
+
+  /* ===== Feature Cards ===== */
+  .and-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-feature-card {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-feature-card .and-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .and-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+
+  /* ===== Steps ===== */
+  .and-steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .and-steps li {
+    position: relative;
+    padding: 0 0 18px 44px;
+    line-height: 1.6;
+  }
+  .and-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--and-primary); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .and-steps li:last-child { padding-bottom: 0; }
+  .and-steps strong { display: block; margin-bottom: 2px; }
+  .and-steps span { font-size: 14px; }
+
+  /* ===== Translation methods ===== */
+  .and-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-method {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-method h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-method p { font-size: 13px; line-height: 1.6; margin: 0 0 8px 0; }
+  .and-method ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; }
+
+  /* ===== More links ===== */
+  .and-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .and-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .and-link-chip:hover { border-color: var(--and-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .and-features,
+    .and-methods { grid-template-columns: 1fr; }
+    .and-hero-title { font-size: 24px; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="and-hero">
+  <div class="and-hero-icon">📱</div>
+  <div class="and-hero-title">ImageTrans cho Android</div>
+  <p>Dịch ảnh, ảnh chụp và văn bản trên màn hình ngay trên điện thoại — kể cả trong trò chơi. ImageTrans cho Android tự động nhận dạng văn bản, dịch và đặt bản dịch trở lại đúng vị trí trên ảnh — không cần máy tính.</p>
+  <div class="and-hero-meta">
+    <span>🤖 Android 8+</span>
+    <span>🆓 Miễn phí, mã nguồn mở</span>
+  </div>
+  <div class="and-buttons">
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ Tải APK mới nhất</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">Xem trên GitHub</a>
+  </div>
+  <div class="and-note">Hiện APK được phát hành qua GitHub Releases. Cần Android 8.0 trở lên và thiết bị arm64 (hầu hết điện thoại hiện đại), không hỗ trợ trình giả lập x86.</div>
+</div>
+
+<!-- ===== Intro ===== -->
+<div class="and-section">
+  <h2>Đây là gì?</h2>
+  <p>ImageTrans cho Android là <strong>phiên bản Android</strong> của phần mềm dịch ảnh hỗ trợ máy tính <a href="/vi/imagetrans/">ImageTrans</a>. Nó phù hợp với những lúc “thấy gì là muốn dịch ngay” — trang truyện tranh trên điện thoại, thực đơn và biển hiệu ngoài đường, ảnh chụp màn hình ứng dụng, hay cả một thư mục ảnh sản phẩm.</p>
+  <p>Nó <strong>không phụ thuộc vào máy tính để bàn</strong>. Bạn có thể kết nối tới máy chủ ImageTrans từ xa để dùng toàn bộ quy trình xử lý của ImageTrans; hoặc chạy hoàn toàn cục bộ trên điện thoại: OCR được thực hiện trên máy, chỉ văn bản nhận dạng được mới gửi tới API dịch. Khác với dịch ảnh chụp màn hình thông thường, ImageTrans cho Android thay thế văn bản gốc bằng bản dịch và cố gắng giữ nguyên bố cục ban đầu.</p>
+</div>
+
+<!-- ===== Modes ===== -->
+<div class="and-section">
+  <h2>Bốn cách dịch</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🖼️</div>
+      <h4>Dịch ảnh</h4>
+      <p>Chọn một ảnh từ thư viện ảnh hoặc tệp và dịch. Chạm vào bất kỳ vùng chữ nào để đối chiếu bản gốc với bản dịch, chuyển đổi giữa ảnh gốc và ảnh đã dịch, rồi lưu kết quả vào thư viện ảnh hoặc chia sẻ.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📷</div>
+      <h4>Dịch bằng cách chụp ảnh</h4>
+      <p>Hướng máy ảnh vào bất cứ thứ gì: biển hiệu, thực đơn, bao bì, tài liệu… Khung xem trước của máy ảnh có một khung chọn kéo và phóng to được; nhấn “Chụp và dịch” để chụp lại màn hình xem trước, cắt vùng khung chọn và dịch, ảnh không được lưu lại.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📁</div>
+      <h4>Dịch thư mục</h4>
+      <p>Chọn một thư mục và dịch tất cả ảnh bên trong cùng lúc. Bản dịch được lưu dưới dạng PNG vào thư mục con <em>out</em> của thư mục đó, giữ nguyên tên tệp gốc. Phù hợp với ảnh sản phẩm thương mại điện tử, danh mục sản phẩm và các tác vụ hàng loạt khác.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🫧</div>
+      <h4>Cửa sổ nổi dịch ảnh chụp màn hình</h4>
+      <p>Bong bóng nổi và khung chọn luôn hiển thị trên các ứng dụng khác. Nhấn “Dịch” để dịch trực tiếp nội dung trong khung chọn — bản dịch hiện ngay trong khung, phần còn lại của màn hình không bị ảnh hưởng và bạn vẫn dùng các ứng dụng khác bình thường. Dùng được với mọi ứng dụng, kể cả <strong>trò chơi</strong>: dịch hội thoại, mô tả vật phẩm và thực đơn trong game mobile mà không cần thoát game.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OCR & rendering ===== -->
+<div class="and-section">
+  <h2>Thiết kế cho ảnh thực tế</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">⚡</div>
+      <h4>OCR cục bộ</h4>
+      <p>Nhờ rapidocr4j (PaddleOCR) và ONNX Runtime, việc phát hiện và nhận dạng văn bản diễn ra hoàn toàn trên điện thoại, được OpenCV tăng tốc, và khi chỉ làm OCR thì không cần tải ảnh lên. Tiếng Trung, tiếng Anh, tiếng Nhật và các ngôn ngữ hệ Latin dùng được ngay; mô hình tiếng Hàn, Ả Rập, Nga, Thái sẽ tự động tải về trong lần sử dụng đầu tiên. Với trang tiếng Nhật, có thể tùy chọn dùng mô hình dòng chữ YOLO, phù hợp với truyện tranh chữ dọc, đồng thời tìm được cả bóng thoại.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🎨</div>
+      <h4>Kết xuất giữ nguyên bố cục</h4>
+      <p>Bản dịch dùng cùng công cụ kết xuất với tiện ích mở rộng trình duyệt của ImageTrans: tự động điều chỉnh cỡ chữ, nhận dạng màu chữ, xử lý nền, hỗ trợ góc bo tròn, viền chữ, đổ bóng, cùng bố cục chữ dọc cho tiếng Trung và tiếng Nhật và bố cục từ phải sang trái.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">💬</div>
+      <h4>Bóng thoại truyện tranh</h4>
+      <p>Trên một trang truyện tranh, các dòng chữ trong cùng một bóng thoại được gộp thành một đoạn rồi mới dịch; các bóng thoại được sắp theo thứ tự đọc: theo dòng từ trên xuống dưới, với manga Nhật dọc thì trong cùng một dòng từ phải sang trái. Nếu YOLO tìm được bóng thoại thì dùng trực tiếp làm panel, nếu không thì suy ra từ các dòng chữ.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🧵</div>
+      <h4>Truyện tranh dải dài</h4>
+      <p>Truyện tranh dọc siêu dài được nhận dạng và kết xuất theo từng khối rồi ghép lại, tránh việc cả ảnh dài làm cạn bộ nhớ và tránh chữ bị nhòe do thu phóng.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔎</div>
+      <h4>Chỉ nhận dạng</h4>
+      <p>Không dịch, chỉ làm OCR và đặt văn bản nhận dạng được trở lại vị trí ban đầu. Phù hợp để gỡ lỗi mô hình, tạo dữ liệu huấn luyện, hoặc kiểm tra hiệu quả nhận dạng thực tế của ứng dụng với một ảnh khó.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Translation methods ===== -->
+<div class="and-section">
+  <h2>Chọn công cụ dịch</h2>
+  <div class="and-methods">
+    <div class="and-method">
+      <h4>🖥️ Máy chủ ImageTrans từ xa</h4>
+      <p>Kết nối tới máy chủ ImageTrans chạy ở bất kỳ đâu — trên máy tính của bạn hoặc máy chủ từ xa/đám mây — và dùng cài đặt dự án, công cụ OCR, bộ nhớ dịch và bảng thuật ngữ của bạn.</p>
+      <ul>
+        <li>Toàn bộ quy trình ImageTrans: phát hiện, xóa chữ, dịch, dàn chữ</li>
+        <li>Kết quả tốt nhất, hỗ trợ nhiều ngôn ngữ nhất</li>
+        <li>Không cần cài ImageTrans trên điện thoại</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🤖 OCR cục bộ + API tương thích OpenAI</h4>
+      <p>OCR được thực hiện trên điện thoại, văn bản nhận dạng được gửi tới bất kỳ API tương thích OpenAI nào để dịch.</p>
+      <ul>
+        <li>Hỗ trợ ChatGPT, Gemini, DeepSeek và các dịch vụ tương thích khác</li>
+        <li>Dùng API Key và mô hình của riêng bạn</li>
+        <li>Có thể thêm tham số yêu cầu bổ sung bằng JSON (mặc định tắt chế độ suy nghĩ của DeepSeek)</li>
+        <li>Cân bằng giữa tốc độ, chất lượng và chi phí</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🆓 OCR cục bộ + MyMemory</h4>
+      <p>Không cần API Key, dùng dịch vụ dịch miễn phí MyMemory; các đoạn dài sẽ tự động được chia nhỏ để đáp ứng giới hạn của API.</p>
+      <ul>
+        <li>Hoàn toàn miễn phí, khoảng 50.000 ký tự mỗi ngày</li>
+        <li>Phù hợp để dịch nhanh hằng ngày</li>
+        <li>Sẽ có thông báo khi hết hạn mức</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extension bridge ===== -->
+<div class="and-section">
+  <h2>Dùng cùng tiện ích mở rộng trình duyệt</h2>
+  <p>Nếu bạn đọc truyện tranh bằng trình duyệt trên điện thoại, ImageTrans cho Android có thể hoạt động như <strong>máy chủ dịch</strong> của <a href="/vi/imagetrans/extension/">tiện ích mở rộng trình duyệt ImageTrans</a>: điện thoại thực hiện OCR trong nền, trả các vùng chữ (và bản dịch) về cho tiện ích mở rộng, rồi tiện ích mở rộng kết xuất lên trang.</p>
+  <p>Trên cùng điện thoại, chỉ cần nhập <code>http://127.0.0.1:51042</code>, không phụ thuộc Wi-Fi hay dữ liệu di động; cũng có thể dùng địa chỉ IP mạng LAN của điện thoại từ máy tính trong cùng mạng.</p>
+</div>
+
+<!-- ===== How to use ===== -->
+<div class="and-section">
+  <h2>Bắt đầu như thế nào</h2>
+  <ol class="and-steps">
+    <li>
+      <strong>Tải và cài đặt APK</strong>
+      <span>Tải APK từ <a href="https://github.com/xulihang/ImageTrans-Android/releases" target="_blank" rel="noopener">GitHub Releases</a> và cài đặt. Có thể bạn cần cho phép cài ứng dụng từ nguồn không xác định.</span>
+    </li>
+    <li>
+      <strong>Chọn cách dịch</strong>
+      <span>Trong cài đặt, chọn cách dịch: kết nối máy chủ ImageTrans từ xa (nhập địa chỉ máy chủ và mật khẩu dự án), hoặc thực hiện OCR cục bộ trên điện thoại rồi dịch bằng API tương thích OpenAI / MyMemory. Khi chọn MyMemory không cần API Key.</span>
+    </li>
+    <li>
+      <strong>Thiết lập cặp ngôn ngữ</strong>
+      <span>Chọn ngôn ngữ nguồn và ngôn ngữ đích. Ngôn ngữ nguồn “Tự động” được xử lý như tiếng Nhật, ngôn ngữ đích “Tự động” được xử lý như tiếng Anh, hoặc bạn có thể chỉ định rõ ràng.</span>
+    </li>
+    <li>
+      <strong>Bắt đầu dịch</strong>
+      <span>Chọn ảnh từ thư viện ảnh, chụp ảnh, chọn thư mục, hoặc bật cửa sổ nổi dịch ảnh chụp màn hình. Ứng dụng sẽ nhận dạng văn bản, dịch và đặt bản dịch trở lại ảnh.</span>
+    </li>
+    <li>
+      <strong>Lưu hoặc chia sẻ</strong>
+      <span>Lưu bản dịch vào thư viện ảnh hoặc chia sẻ; sau khi dịch xong thư mục, có thể mở trực tiếp thư mục đầu ra.</span>
+    </li>
+  </ol>
+</div>
+
+<!-- ===== Requirements ===== -->
+<div class="and-section">
+  <h2>Yêu cầu hệ thống và giới hạn</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📱</div>
+      <h4>Thiết bị arm64</h4>
+      <p>Hỗ trợ Android 8.0 trở lên. Thư viện OCR cục bộ chỉ có bản arm64-v8a, hầu hết điện thoại Android hiện đại đều hỗ trợ. Trình giả lập x86_64 không chạy được OCR.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🌐</div>
+      <h4>Mạng</h4>
+      <p>Ở chế độ cục bộ, OCR diễn ra hoàn toàn trên điện thoại và chỉ văn bản được gửi tới API dịch. Chế độ máy chủ cần truy cập được máy chủ ImageTrans của bạn; mô hình OCR tiếng Hàn, Ả Rập, Nga, Thái cần tải về trong lần sử dụng đầu tiên.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔋</div>
+      <h4>Chạy nền</h4>
+      <p>Cửa sổ nổi dịch ảnh chụp màn hình và máy chủ dịch cho tiện ích mở rộng phụ thuộc vào một dịch vụ chạy thường trực ở phía trước (foreground service). Một số ROM nội địa cần cho phép hoạt động nền và tắt tối ưu hóa pin.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="and-section">
+  <h2>Thêm tài nguyên</h2>
+  <div class="and-links">
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-link-chip" target="_blank" rel="noopener">💻 Kho lưu trữ GitHub</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-link-chip" target="_blank" rel="noopener">📦 Bản phát hành</a>
+    <a href="/vi/imagetrans/" class="and-link-chip">🖥️ ImageTrans cho máy tính</a>
+    <a href="/vi/imagetrans/extension/" class="and-link-chip">🧩 Tiện ích mở rộng trình duyệt</a>
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="and-link-chip" target="_blank" rel="noopener">📖 Tài liệu</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/issues" class="and-link-chip" target="_blank" rel="noopener">🐛 Báo lỗi</a>
+  </div>
+</div>

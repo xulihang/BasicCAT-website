@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /vi
+    description: BasicCAT là công cụ dịch có hỗ trợ máy tính miễn phí và mã nguồn mở. Chúng ta có thể dùng nó để dịch tài liệu, trang web, bảng tính, bài trình chiếu và nhiều hơn nữa, với các tính năng như bộ nhớ dịch, dịch máy và quản lý thuật ngữ.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /vi/imagetrans
+    description: ImageTrans là công cụ dịch hình ảnh có hỗ trợ máy tính. Chúng ta có thể dùng nó để dịch truyện tranh, manga, poster, trang sản phẩm, v.v.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /vi/silhouette
+    description: Silhouette là công cụ dịch video và âm thanh có hỗ trợ máy tính.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner là công cụ căn chỉnh song ngữ. Nó trích xuất văn bản từ tài liệu, bảng tính và phụ đề rồi tự động căn chỉnh văn bản theo câu, có hỗ trợ chỉnh sửa thủ công. Bản song ngữ có thể xuất thành bộ nhớ dịch để dùng trong các công cụ khác.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /vi/TMXSearch/
+    description: TMXSearch là ứng dụng trực tuyến để tra cứu tệp bộ nhớ dịch định dạng TMX.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: Trình dịch hình ảnh trực tuyến
+    href: /vi/online-image-translator/
+    description: Trình dịch hình ảnh trực tuyến giúp dịch cả một hình hoặc dùng camera điện thoại để đọc và dịch một vùng trên hình.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: Trình dịch hình ảnh trực tuyến

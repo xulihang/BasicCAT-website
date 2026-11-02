@@ -96,6 +96,18 @@ languages:
     # Las páginas traducidas automáticamente muestran un aviso de traducción automática
     machine_translated: true
 
+  - code: vi
+    label: Tiếng Việt
+    url: /vi/
+    locale: vi_VN
+    hreflang: vi
+    title: "BasicCAT — Công cụ dịch có hỗ trợ máy tính (CAT)"
+    dateformat: "%d/%m/%Y"
+    # Chưa có trang tài liệu tiếng Việt nên liên kết đến bản tiếng Anh
+    doclang: en/latest/
+    # Các trang dịch tự động sẽ hiển thị thanh thông báo dịch máy
+    machine_translated: true
+
 # Build settings
 kramdown:
   input: GFM
@@ -154,6 +166,11 @@ defaults:
     values:
       locale: "es_ES"
       lang: "es"
+  - scope:
+      path: "vi"
+    values:
+      locale: "vi_VN"
+      lang: "vi"
 
 collections:
   zh:
@@ -189,6 +206,11 @@ collections:
   # está vacía. Añade artículos en _es para que aparezcan en /es/blog/ y
   # /es/tagged/.
   es:
+    output: true
+    permalink: /:collection/:title/
+  # Chưa có bài viết blog nào dịch sang tiếng Việt nên bộ sưu tập này đang trống.
+  # Thêm bài viết vào _vi để chúng hiển thị tại /vi/blog/ và /vi/tagged/.
+  vi:
     output: true
     permalink: /:collection/:title/
     

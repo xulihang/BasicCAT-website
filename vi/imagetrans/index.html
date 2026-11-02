@@ -1,0 +1,298 @@
+---
+title: ImageTrans - Phần mềm dịch hình ảnh và truyện tranh có hỗ trợ máy tính
+layout: page
+description: ImageTrans là phần mềm dịch hình ảnh và truyện tranh có hỗ trợ máy tính. Tự động phát hiện vùng chữ, nhận dạng OCR, xóa chữ gốc và điền bản dịch với dàn chữ chuyên nghiệp. Hỗ trợ nhiều công cụ OCR, dịch bằng AI (ChatGPT, Gemini, DeepSeek), chữ dọc, giữ lại điểm tram, xuất PSD và xử lý hàng loạt. Cũng phù hợp với hình ảnh thương mại điện tử, dịch tài liệu và trích xuất phụ đề. Phần mềm máy tính đa nền tảng, hỗ trợ API và gọi qua AI Agent.
+lang: vi
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+  }
+  .it-section p {
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+  .it-feature-card p + p { margin-top: 10px; }
+  .it-feature-card ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.8; }
+  .it-feature-card li { padding-left: 16px; position: relative; margin-bottom: 2px; }
+  .it-feature-card li::before { content: '•'; position: absolute; left: 0; color: var(--it-primary); }
+  .it-feature-card li a { color: var(--it-primary); }
+  .it-feature-card strong { font-size: 13px; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-features,
+    .it-testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Intro ===== -->
+<div class="it-intro">
+  <p>ImageTrans là công cụ chép lại và dịch chữ trong hình ảnh có hỗ trợ máy tính, có thể dùng công nghệ OCR để tự động định vị và nhận dạng chữ, tự động xóa chữ gốc và điền bản dịch, đồng thời có thuật toán hợp nhất và phát hiện vùng chữ được thiết kế riêng cho truyện tranh.</p>
+  <img src="/album/imagetrans_zh.jpg" alt="Ảnh chụp giao diện ImageTrans" width="1024" height="731" loading="lazy" />
+  <p>Ngoài việc dùng như một trình dịch hình ảnh để dịch áp phích, truyện tranh, ImageTrans còn có thể dùng để đọc hình ảnh, chép lại chữ, dịch ảnh chụp màn hình bằng OCR, chuyển PDF sang markdown và dịch, tạo PDF hai lớp có thể tìm kiếm từ tài liệu quét và gán nhãn học sâu, v.v.</p>
+  <p>ImageTrans là kết quả luận văn thạc sĩ của tôi: <a href="https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool" target="_blank">Thiết kế và triển khai một công cụ hỗ trợ dịch truyện tranh</a>.</p>
+  <p><a href="#get-a-copy">Mua ImageTrans</a></p>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>Tính năng chính</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>Định vị chính xác vùng chữ</h4>
+      <p>Hỗ trợ nhiều phương pháp như phát hiện chữ trong cảnh tự nhiên, phát hiện đối tượng và phương pháp heuristic, với thuật toán hợp nhất và phát hiện vùng chữ được thiết kế riêng cho bóng thoại trong truyện tranh.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>Nhận dạng OCR với nhiều công cụ</h4>
+      <p>Hỗ trợ nhiều công cụ OCR và <a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">plugin tùy chỉnh</a>, bao phủ các ngôn ngữ chính trên thế giới. Hỗ trợ <a href="/vi/vertical-japanese-chinese-OCR/">nhận dạng chữ tiếng Trung và tiếng Nhật viết dọc</a>, xác định thứ tự đọc thông qua phân tích bố cục. Có thể <a href="/vi/use-large-language-models-to-get-good-OCR-results/">dùng mô hình ngôn ngữ lớn để hiệu đính, cải thiện độ chính xác của OCR</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>Dịch</h4>
+      <p><strong>Dịch máy:</strong> hỗ trợ nhiều công cụ dịch máy và mô hình AI lớn (ChatGPT, Gemini, DeepSeek, v.v.). <a href="/vi/context-matters-for-image-translation/">Dùng thông tin ngữ cảnh để nâng cao chất lượng bản dịch</a>.</p>
+      <p><strong>Chức năng hỗ trợ:</strong> so sánh song song nhiều kết quả, bộ nhớ dịch, tra cứu ngữ liệu, quản lý thuật ngữ, <a href="/vi/how-to-add-pronunciation-annotation-furigana-to-Japanese-kanji/">chú thích kana và pinyin</a>, cùng hệ thống tra cứu từ tượng thanh cho truyện tranh.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🧹</div>
+      <h4>Xóa chữ</h4>
+      <p>Hỗ trợ các thuật toán và mô hình AI như nhị phân hóa, PatchMatch, Lama Inpaint, <a href="/vi/nano-banana-manga-translation/">Gemini Nano Banana</a> để tạo mặt nạ chữ và xóa chữ. <a href="/vi/remove-text-in-manga-preserving-screentone/">Giữ lại điểm tram của truyện tranh khi xóa chữ</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>Dàn chữ</h4>
+      <ul>
+        <li>Tự động điều chỉnh cỡ chữ</li>
+        <li><a href="/vi/lettering-guide-for-Japanese-English-manga-translation/">Tối ưu việc ngắt dòng cho các ngôn ngữ có dấu cách</a> (ví dụ khi dịch từ tiếng Nhật sang tiếng Anh)</li>
+        <li><a href="/vi/handling-of-punctuation-at-starting-or-ending-positionin-type-setting/">Xử lý dấu câu ở vị trí đầu hoặc cuối dòng</a></li>
+        <li>Văn bản phong phú và kiểu chữ (giống hệ thống kiểu của Word)</li>
+        <li><a href="/vi/how-to-detect-text-color-in-image/">Phát hiện màu chữ</a></li>
+        <li>Phát hiện góc xoay</li>
+        <li>Dàn chữ dọc</li>
+      </ul>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>Xuất PSD</h4>
+      <p>Lưu kết quả dưới dạng tệp Photoshop PSD, chữ được tách thành các lớp riêng biệt, thuận tiện cho nhà thiết kế xử lý hậu kỳ.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>Xử lý hàng loạt</h4>
+      <p>Xử lý hàng trăm hình ảnh cùng lúc. Hỗ trợ quy trình thao tác tùy chỉnh, gọi từ dòng lệnh, xử lý song song đa tiến trình, đạt tốc độ sản xuất hàng loạt cao.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>Giao diện trực quan và mạnh mẽ</h4>
+      <p>Trình biên tập trực quan, xem trước theo thời gian thực. Thực hiện từng bước các thao tác như OCR, dịch, chỉnh sửa ảnh, chèn chữ, tìm kiếm và thay thế, quy trình làm việc tùy chỉnh — giao diện thống nhất, mạnh mẽ và dễ sử dụng.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extra Features ===== -->
+<div class="it-section">
+  <h2>Tính năng bổ sung</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📄</div>
+      <h4>Dịch PDF và chuyển đổi Markdown</h4>
+      <p><a href="/vi/pdf-paper-translation-and-conversion-to-markdown/">Dịch PDF và chuyển sang Markdown</a>, có thể xuất bản gốc, bản dịch hoặc bản song ngữ đối chiếu, giữ nguyên cấu trúc như bài báo nhiều cột, công thức, bảng và chú thích cuối trang. <a href="/vi/how-to-create-searchable-pdf-from-scanned-documents/">Tạo PDF hai lớp có thể tìm kiếm</a>.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>Dịch màn hình theo thời gian thực</h4>
+      <p><a href="/vi/real-time-screen-translator/">Chụp và dịch theo thời gian thực mọi vùng trên màn hình</a>. Tự động phát hiện thay đổi nội dung, hỗ trợ khớp tức thời với bộ nhớ dịch.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎬</div>
+      <h4>Trích xuất phụ đề cứng trong video</h4>
+      <p><a href="/vi/how-to-extract-hardcoded-subtitle/">Trích xuất phụ đề cứng trong video</a>, sử dụng phát hiện chữ OCR nhanh, vừa nhanh vừa chính xác, xuất tệp phụ đề SRT.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📷</div>
+      <h4>Quét và nâng cao tài liệu</h4>
+      <p>Hỗ trợ quét tích hợp TWAIN / WIA / SANE / ICA / eSCL. <a href="/vi/clean-deskew-enhance-scanned-books/">Làm sạch, chỉnh thẳng và nâng cao sách quét</a>, đạt hiệu quả tiền xử lý hình ảnh tốt nhất.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Usability ===== -->
+<div class="it-section">
+  <h2>Dễ sử dụng</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⌨️</div>
+      <h4>Phím tắt bàn phím</h4>
+      <p>Hầu hết các thao tác đều hỗ trợ phím tắt bàn phím, không cần chuyển đổi chuột thường xuyên, quy trình làm việc nhanh và hiệu quả.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Gọi từ dòng lệnh và API</h4>
+      <p>Hỗ trợ gọi ImageTrans từ dòng lệnh để thực hiện các tác vụ tự động. Có thể chạy như <a href="/vi/self-hosted-manga-translation-api-server/" target="_blank" rel="noopener">máy chủ API</a>, cung cấp dịch vụ dịch qua HTTP, thuận tiện tích hợp với bất kỳ ứng dụng hoặc dịch vụ nào.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚙️</div>
+      <h4>Quy trình làm việc tùy chỉnh</h4>
+      <p>Tự do kết hợp các bước xử lý như phát hiện, OCR, dịch, kết xuất để xây dựng quy trình làm việc tự động phù hợp với nhu cầu của bạn.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🤖</div>
+      <h4>Tích hợp AI Agent</h4>
+      <p>Thông qua <a href="https://github.com/xulihang/ImageTrans-skills" target="_blank" rel="noopener">ImageTrans Skills</a>, cho phép AI Agent gọi ImageTrans — định nghĩa kỹ năng có cấu trúc giúp các tác nhân do LLM điều khiển thực hiện tác vụ dịch một cách có lập trình.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📐</div>
+      <h4>Căn chỉnh thông minh và tìm kiếm thay thế</h4>
+      <p>Hiển thị đường dóng căn chỉnh khi di chuyển khung chữ, căn chỉnh hàng loạt theo vị trí chữ gốc, tích hợp tính năng tìm kiếm và thay thế. Phù hợp với các trường hợp như <a href="/vi/e-commerce-image-translation/">dịch hình ảnh thương mại điện tử</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>Đa nền tảng · Yêu cầu phần cứng thấp</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>Hỗ trợ Windows 7+, macOS 10.11+ và Linux. Cũng có thể chạy như máy chủ, quét và dịch hình ảnh từ thiết bị di động.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>Nhẹ và hiệu quả</h4>
+      <p>Bao gồm môi trường chạy Java và các mô hình, khoảng 400 MB, có thể chạy trên thiết bị cũ hoặc cấu hình thấp. Hỗ trợ làm việc ngoại tuyến, không cần kết nối mạng.</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>Khả năng tương tác</h4>
+      <p>Xuất PSD, trao đổi dữ liệu Excel/Word/XLIFF, chuyển đổi dự án LabelPlus, kết hợp với <a href="./extension/" target="_blank">tiện ích mở rộng Chrome</a> để dịch hình ảnh trên trang web.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>Ví dụ dịch</h2>
+  <p>ImageTrans có thể tự do kết hợp các phương pháp định vị chữ, nhận dạng chữ và dịch máy khác nhau để xử lý nhiều loại hình ảnh. Thư viện có nhiều ví dụ phong phú như <a href="/vi/how-to-build-a-local-manga-translation-workshop/">dịch truyện tranh</a>, <a href="/vi/e-commerce-image-translation/">dịch hình ảnh thương mại điện tử</a>. Truy cập thư viện để xem kết quả thực tế:</p>
+  <p>
+    <a href="/vi/gallery/" class="it-btn-buy" style="display: inline-block;">Xem thư viện →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>Mua ImageTrans</h2>
+  <p>Vui lòng mua qua MbD: <a href="https://mbd.pub/o/bread/YpmUmJhs" target="_blank">liên kết</a>.</p>
+  <p>Người dùng ở nước ngoài vui lòng dùng FastSpring: <a href="https://basiccat.onfastspring.com/" target="_blank">liên kết</a>.</p>
+  <p>Giá:</p>
+  <ul>
+    <li>Sử dụng cá nhân: ¥75</li>
+    <li>Sử dụng thương mại: ¥1500</li>
+  </ul>
+  <p>Mua một lần, sử dụng trọn đời. Cập nhật miễn phí trong sáu tháng.</p>
+  <p>Nếu gặp vấn đề, bạn có thể <a href="mailto:admin@basiccat.org">liên hệ qua email</a> với tôi.</p>
+  <p>Các nhóm dịch truyện tranh hoặc giáo viên, sinh viên đại học cũng có thể gửi email liên hệ để xin ưu đãi.</p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>Đánh giá của người dùng</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>Tôi đã dùng phần mềm này được một tuần, nó thực sự giúp ích cho những người dịch nghiệp dư như chúng tôi. Trước đây dùng Photoshop phải mất 2 đến 3 giờ, giờ chỉ cần 1 giờ.</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>Phần mềm làm rất tốt việc tích hợp nhiều phần mềm khác nhau trên mạng lưới và kịp thời mang đến cho người dùng những phản hồi có giá trị.</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>Tài nguyên khác</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/zh_CN/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 Tài liệu phần mềm</a>
+    <a href="/vi/imagetrans/release-notes/" class="it-link-chip">📋 Nhật ký phát hành</a>
+    <a href="/vi/imagetrans/video/" class="it-link-chip">🎬 Hướng dẫn bằng video</a>
+    <a href="/vi/imagetrans/faq/" class="it-link-chip">❓ Câu hỏi thường gặp</a>
+    <a href="/vi/support/" class="it-link-chip">🛠️ Hỗ trợ kỹ thuật</a>
+    <a href="/vi/tagged/#imagetrans" class="it-link-chip">📝 Blog kỹ thuật</a>
+    <a href="/vi/imagetrans/how-to-contribute/" class="it-link-chip">🤝 Đóng góp</a>
+  </div>
+</div>

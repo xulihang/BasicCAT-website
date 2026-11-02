@@ -1,0 +1,9 @@
+# ImageTrans
+
+Phần mềm dịch hình ảnh có hỗ trợ máy tính.
+
+## Mục lục
+
+- [Trang chủ](https://www.basiccat.org/vi/imagetrans/)
+- [Blog](https://www.basiccat.org/vi/tagged/#imagetrans)
+- [Tài liệu](https://imagetrans.readthedocs.io/en/latest/)
