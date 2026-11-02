@@ -1,0 +1,318 @@
+---
+title: ImageTrans Android — Bilder, Screenshots und Fotos direkt auf dem Smartphone übersetzen
+layout: page
+lang: de
+description: ImageTrans für Android ist die Android-Version der Bildübersetzungssoftware ImageTrans. Sie kann Bilder aus der Galerie, Fotos aus der Kamera und alle Bilder eines Ordners übersetzen und mit dem schwebenden Screenshot-Übersetzungsfenster Text an beliebiger Stelle auf dem Bildschirm übersetzen. Die Übersetzung kann über einen entfernten ImageTrans-Server erfolgen oder vollständig lokal auf dem Smartphone per OCR mit anschließendem Aufruf einer Übersetzungs-API. Der Text in Comic-Sprechblasen wird zu Absätzen zusammengefasst und in Leserichtung übersetzt.
+---
+
+<style>
+  :root {
+    --and-primary: #4a6cf7;
+    --and-primary-hover: #3b5de7;
+    --and-card-bg: #ffffff;
+    --and-border: #e2e8f0;
+    --and-radius: 12px;
+    --and-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .and-hero {
+    text-align: center;
+    padding: 24px 16px 32px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, rgba(74,108,247,0.08), rgba(74,108,247,0));
+    border-radius: var(--and-radius);
+  }
+  .and-hero-icon { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  .and-hero-title { font-size: 30px; font-weight: 800; margin: 0 0 8px 0; }
+  .and-hero p { font-size: 16px; line-height: 1.7; max-width: 680px; margin: 0 auto 12px; }
+  .and-hero-meta { font-size: 13px; color: #4a5568; margin-bottom: 20px; }
+  .and-hero-meta span { display: inline-block; margin: 0 8px; }
+  .and-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .and-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .and-btn-primary { background: var(--and-primary); color: #fff; }
+  .and-btn-primary:hover { background: var(--and-primary-hover); color: #fff; text-decoration: none; }
+  .and-btn-secondary { background: var(--and-card-bg); color: var(--and-primary); border: 1px solid var(--and-border); }
+  .and-btn-secondary:hover { border-color: var(--and-primary); text-decoration: none; }
+  .and-note { font-size: 12px; color: #718096; margin-top: 14px; }
+
+  /* ===== Sections ===== */
+  .and-section { margin-bottom: 36px; }
+  .and-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--and-border);
+  }
+  .and-section p { line-height: 1.7; margin: 0 0 12px 0; }
+
+  /* ===== Feature Cards ===== */
+  .and-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-feature-card {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-feature-card .and-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .and-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+
+  /* ===== Steps ===== */
+  .and-steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .and-steps li {
+    position: relative;
+    padding: 0 0 18px 44px;
+    line-height: 1.6;
+  }
+  .and-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--and-primary); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .and-steps li:last-child { padding-bottom: 0; }
+  .and-steps strong { display: block; margin-bottom: 2px; }
+  .and-steps span { font-size: 14px; }
+
+  /* ===== Translation methods ===== */
+  .and-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-method {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-method h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-method p { font-size: 13px; line-height: 1.6; margin: 0 0 8px 0; }
+  .and-method ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; }
+
+  /* ===== More links ===== */
+  .and-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .and-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .and-link-chip:hover { border-color: var(--and-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .and-features,
+    .and-methods { grid-template-columns: 1fr; }
+    .and-hero-title { font-size: 24px; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="and-hero">
+  <div class="and-hero-icon">📱</div>
+  <div class="and-hero-title">ImageTrans für Android</div>
+  <p>Übersetzen Sie Bilder, Fotos und Text auf dem Bildschirm direkt auf Ihrem Smartphone – auch in Spielen. ImageTrans für Android erkennt den Text automatisch, übersetzt ihn und setzt die Übersetzung an der ursprünglichen Stelle im Bild wieder ein – ganz ohne Computer.</p>
+  <div class="and-hero-meta">
+    <span>🤖 Android 8+</span>
+    <span>🆓 Kostenlos und Open Source</span>
+  </div>
+  <div class="and-buttons">
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ Neueste APK herunterladen</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">Auf GitHub ansehen</a>
+  </div>
+  <div class="and-note">Die APK wird derzeit über GitHub Releases bereitgestellt. Erforderlich sind Android 8.0 oder höher und ein arm64-Gerät (die große Mehrheit moderner Smartphones); x86-Emulatoren werden nicht unterstützt.</div>
+</div>
+
+<!-- ===== Intro ===== -->
+<div class="and-section">
+  <h2>Was ist das?</h2>
+  <p>ImageTrans für Android ist die <strong>Android-Version</strong> der computergestützten Bildübersetzungssoftware <a href="/de/imagetrans/">ImageTrans</a>. Sie eignet sich für Situationen, in denen Sie etwas sehen und sofort übersetzen möchten – Comicseiten auf dem Smartphone, Speisekarten und Schilder auf der Straße, App-Screenshots oder alle Produktbilder eines ganzen Ordners.</p>
+  <p>Sie <strong>benötigt keinen Desktop-Computer</strong>. Sie können sich mit einem entfernten ImageTrans-Server verbinden und den vollständigen ImageTrans-Workflow nutzen, oder alles vollständig lokal auf dem Smartphone ausführen: Die OCR erfolgt auf dem Gerät, und nur der erkannte Text wird an die Übersetzungs-API gesendet. Anders als bei der üblichen Screenshot-Übersetzung ersetzt ImageTrans für Android den Originaltext durch die Übersetzung und versucht, das ursprüngliche Layout beizubehalten.</p>
+</div>
+
+<!-- ===== Modes ===== -->
+<div class="and-section">
+  <h2>Vier Übersetzungsmodi</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🖼️</div>
+      <h4>Bildübersetzung</h4>
+      <p>Wählen Sie ein Bild aus der Galerie oder aus den Dateien und übersetzen Sie es. Tippen Sie auf einen beliebigen Textbereich, um Original und Übersetzung zu vergleichen, wechseln Sie zwischen Originalbild und übersetztem Bild und speichern Sie das Ergebnis anschließend in der Galerie oder teilen Sie es.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📷</div>
+      <h4>Fotoübersetzung</h4>
+      <p>Richten Sie die Kamera auf Schilder, Speisekarten, Verpackungen, Dokumente oder beliebige andere Inhalte. In der Kameravorschau gibt es einen verschiebbaren und skalierbaren Auswahlrahmen; tippen Sie auf „Aufnehmen und übersetzen“, um die Vorschau zu erfassen, den Rahmenbereich zuzuschneiden und zu übersetzen – das Foto wird dabei nicht gespeichert.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📁</div>
+      <h4>Ordnerübersetzung</h4>
+      <p>Wählen Sie einen Ordner, um alle darin enthaltenen Bilder auf einmal zu übersetzen. Die Übersetzungen werden im PNG-Format im Unterordner <em>out</em> dieses Ordners gespeichert, wobei die ursprünglichen Dateinamen erhalten bleiben. Ideal für Produktbilder im E-Commerce, Produktkataloge und andere Stapelverarbeitungen.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🫧</div>
+      <h4>Schwebendes Screenshot-Übersetzungsfenster</h4>
+      <p>Die schwebende Kugel und der Auswahlrahmen bleiben dauerhaft über anderen Apps sichtbar. Tippen Sie auf „Übersetzen“, um den Inhalt innerhalb des Rahmens direkt zu übersetzen; die Übersetzung erscheint im Rahmen, der übrige Bildschirm bleibt unberührt und Sie können andere Apps wie gewohnt weiterverwenden. Funktioniert mit jeder App, auch mit <strong>Spielen</strong>: Dialoge, Gegenstandsbeschreibungen und Menüs von Mobile Games lassen sich übersetzen, ohne das Spiel zu verlassen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OCR & rendering ===== -->
+<div class="and-section">
+  <h2>Für echte Bilder entwickelt</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">⚡</div>
+      <h4>Lokale OCR</h4>
+      <p>Dank rapidocr4j (PaddleOCR) und ONNX Runtime erfolgen Textdetektion und -erkennung vollständig auf dem Smartphone, beschleunigt durch OpenCV; bei reiner OCR müssen keine Bilder hochgeladen werden. Chinesisch, Englisch, Japanisch und lateinische Sprachen funktionieren sofort, Modelle für Koreanisch, Arabisch, Russisch und Thailändisch werden bei der ersten Verwendung automatisch heruntergeladen. Für japanische Seiten kann optional das YOLO-Textzeilenmodell verwendet werden, das sich für vertikale Comics eignet und zugleich Sprechblasen erkennt.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🎨</div>
+      <h4>Layoutgetreues Rendering</h4>
+      <p>Die Übersetzung verwendet dieselbe Rendering-Engine wie die ImageTrans-Browsererweiterung: Sie passt die Schriftgröße automatisch an, erkennt die Textfarbe, behandelt den Hintergrund und unterstützt abgerundete Ecken, Konturen und Schatten sowie vertikalen Textsatz für Chinesisch und Japanisch und rechts-nach-links gesetzten Text.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">💬</div>
+      <h4>Comic-Sprechblasen</h4>
+      <p>Auf einer Comicseite werden die Textzeilen innerhalb derselben Sprechblase vor der Übersetzung zu einem Absatz zusammengefasst; die Sprechblasen werden in Leserichtung angeordnet: zeilenweise von oben nach unten, bei vertikalem japanischem Manga innerhalb einer Zeile von rechts nach links. Wenn YOLO Sprechblasen gefunden hat, werden diese direkt als Panel verwendet; andernfalls werden sie aus den Textzeilen berechnet.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🧵</div>
+      <h4>Lange Streifencomics</h4>
+      <p>Sehr lange vertikale Comics werden blockweise erkannt und gerendert und anschließend zusammengesetzt, damit ein einziges riesiges Bild nicht den Speicher erschöpft und der Text durch Skalierung nicht verschwommen wird.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔎</div>
+      <h4>Nur erkennen</h4>
+      <p>Übersetzt nicht, sondern führt nur OCR aus und setzt den erkannten Text an der ursprünglichen Stelle wieder ein. Geeignet zum Debuggen von Modellen, zum Erstellen von Trainingsdaten oder um zu prüfen, wie die App ein besonders schwieriges Bild tatsächlich erkennt.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Translation methods ===== -->
+<div class="and-section">
+  <h2>Übersetzungsengine auswählen</h2>
+  <div class="and-methods">
+    <div class="and-method">
+      <h4>🖥️ Entfernter ImageTrans-Server</h4>
+      <p>Verbinden Sie sich mit einem ImageTrans-Server an einem beliebigen Standort – auf Ihrem eigenen Computer oder einem entfernten bzw. Cloud-Host – und nutzen Sie Ihre Projekteinstellungen, OCR-Engines, Translation Memories und Terminologiedatenbanken.</p>
+      <ul>
+        <li>Vollständiger ImageTrans-Workflow: Erkennung, Textentfernung, Übersetzung und Textsatz</li>
+        <li>Beste Ergebnisse und die größte Sprachunterstützung</li>
+        <li>ImageTrans muss nicht auf dem Smartphone installiert werden</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🤖 Lokale OCR + OpenAI-kompatible Schnittstelle</h4>
+      <p>Die OCR erfolgt auf dem Smartphone, und der erkannte Text wird an eine beliebige OpenAI-kompatible Schnittstelle zur Übersetzung übergeben.</p>
+      <ul>
+        <li>Unterstützt ChatGPT, Gemini, DeepSeek und weitere kompatible Dienste</li>
+        <li>Verwendet Ihren eigenen API-Schlüssel und Ihr eigenes Modell</li>
+        <li>Zusätzliche Anfrageparameter können per JSON hinzugefügt werden (DeepSeeks Denkmodus ist standardmäßig deaktiviert)</li>
+        <li>Ausgewogen bei Geschwindigkeit, Qualität und Kosten</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🆓 Lokale OCR + MyMemory</h4>
+      <p>Kein API-Schlüssel erforderlich: Nutzen Sie den kostenlosen Übersetzungsdienst MyMemory, der lange Absätze automatisch aufteilt, um die Schnittstellenlimits einzuhalten.</p>
+      <ul>
+        <li>Völlig kostenlos, etwa 50.000 Zeichen pro Tag</li>
+        <li>Ideal für schnelle Übersetzungen im Alltag</li>
+        <li>Sie werden benachrichtigt, wenn das Kontingent aufgebraucht ist</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extension bridge ===== -->
+<div class="and-section">
+  <h2>Zusammen mit der Browsererweiterung verwenden</h2>
+  <p>Wenn Sie Comics im Smartphone-Browser lesen, kann ImageTrans für Android als <strong>Übersetzungsserver</strong> für die <a href="/de/imagetrans/extension/">ImageTrans-Browsererweiterung</a> dienen: Das Smartphone führt die OCR im Hintergrund aus und gibt die Textbereiche (samt Übersetzungen) an die Erweiterung zurück, die sie auf der Seite rendert.</p>
+  <p>Auf demselben Smartphone genügt die Eingabe von <code>http://127.0.0.1:51042</code>; Wi-Fi oder mobile Daten sind nicht erforderlich. Sie können auch die LAN-IP des Smartphones auf einem Computer im selben Netzwerk verwenden.</p>
+</div>
+
+<!-- ===== How to use ===== -->
+<div class="and-section">
+  <h2>Erste Schritte</h2>
+  <ol class="and-steps">
+    <li>
+      <strong>APK herunterladen und installieren</strong>
+      <span>Laden Sie die APK von <a href="https://github.com/xulihang/ImageTrans-Android/releases" target="_blank" rel="noopener">GitHub Releases</a> herunter und installieren Sie sie. Möglicherweise müssen Sie die Installation von Apps aus unbekannten Quellen erlauben.</span>
+    </li>
+    <li>
+      <strong>Übersetzungsmodus wählen</strong>
+      <span>Wählen Sie in den Einstellungen die Übersetzungsmethode: Verbindung mit einem entfernten ImageTrans-Server (geben Sie Serveradresse und Projektpasswort ein) oder lokale OCR auf dem Smartphone mit anschließender Übersetzung über eine OpenAI-kompatible Schnittstelle bzw. MyMemory. Bei MyMemory ist kein API-Schlüssel erforderlich.</span>
+    </li>
+    <li>
+      <strong>Sprachpaar festlegen</strong>
+      <span>Wählen Sie Ausgangs- und Zielsprache. Die Ausgangssprache „Automatisch“ wird als Japanisch behandelt, die Zielsprache „Automatisch“ als Englisch; Sie können beide auch explizit angeben.</span>
+    </li>
+    <li>
+      <strong>Mit der Übersetzung beginnen</strong>
+      <span>Wählen Sie ein Bild aus der Galerie, machen Sie ein Foto, wählen Sie einen Ordner aus oder aktivieren Sie das schwebende Screenshot-Übersetzungsfenster. Die App erkennt den Text, übersetzt ihn und setzt die Übersetzung wieder in das Bild ein.</span>
+    </li>
+    <li>
+      <strong>Speichern oder teilen</strong>
+      <span>Speichern Sie die Übersetzung in der Galerie oder teilen Sie sie; nach Abschluss einer Ordnerübersetzung können Sie das Ausgabeverzeichnis direkt öffnen.</span>
+    </li>
+  </ol>
+</div>
+
+<!-- ===== Requirements ===== -->
+<div class="and-section">
+  <h2>Systemanforderungen und Einschränkungen</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📱</div>
+      <h4>arm64-Geräte</h4>
+      <p>Unterstützt Android 8.0 oder höher. Die lokale OCR-Bibliothek ist nur für arm64-v8a verfügbar, was praktisch alle modernen Android-Smartphones unterstützen. x86_64-Emulatoren können die OCR nicht ausführen.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🌐</div>
+      <h4>Netzwerk</h4>
+      <p>Im lokalen Modus erfolgt die OCR vollständig auf dem Smartphone, und nur der Text wird an die Übersetzungs-API gesendet. Der Servermodus erfordert Zugriff auf Ihren ImageTrans-Server; die OCR-Modelle für Koreanisch, Arabisch, Russisch und Thailändisch müssen bei der ersten Verwendung heruntergeladen werden.</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔋</div>
+      <h4>Hintergrundausführung</h4>
+      <p>Das schwebende Screenshot-Übersetzungsfenster und der Übersetzungsserver für die Erweiterung hängen von einem Vordergrunddienst ab. Bei einigen chinesischen ROMs müssen Hintergrundaktivitäten erlaubt und die Akkuoptimierung deaktiviert werden.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="and-section">
+  <h2>Weitere Ressourcen</h2>
+  <div class="and-links">
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-link-chip" target="_blank" rel="noopener">💻 GitHub-Repository</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-link-chip" target="_blank" rel="noopener">📦 Versionsveröffentlichungen</a>
+    <a href="/de/imagetrans/" class="and-link-chip">🖥️ ImageTrans für Desktop</a>
+    <a href="/de/imagetrans/extension/" class="and-link-chip">🧩 Browsererweiterung</a>
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="and-link-chip" target="_blank" rel="noopener">📖 Dokumentation</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/issues" class="and-link-chip" target="_blank" rel="noopener">🐛 Problem melden</a>
+  </div>
+</div>

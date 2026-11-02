@@ -1,0 +1,42 @@
+-
+    title: US-amerikanischer Comic
+    href: /viewer/?project=/gallery/projects/scrooge/scrooge.itp
+    description: Die erste Geschichte der ersten Ausgabe der Zeitschrift „Onkel Dagobert“ von 1952
+    cover-src: /gallery/projects/scrooge/out/02.webp
+    cover-alt: US-amerikanischer Comic
+-
+    title: CG-Bild auf Japanisch
+    href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
+    description: 'CG-Bild, aus dem Japanischen ins Chinesische übersetzt. Ohne Sprechblasen – der Text liegt direkt auf dem Hintergrund und ist mit einer Kontur versehen. <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">Bildquelle</a>'
+    cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
+    cover-alt: Artistic CG
+-
+    title: Japanischer Manga
+    href: /viewer/?project=/gallery/projects/manga/ranma.itp
+    description: Manga mit Panels, aus dem Japanischen ins Englische übersetzt. Bilder aus dem ersten Band von Ranma ½.
+    cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
+    cover-alt: Japanischer Manga
+-
+    title: Webtoon
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
+    description: Webtoon, aus dem Chinesischen ins Englische übersetzt. Bild von <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>.
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
+    title: Infografik
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: Infografik aus einem <a href="https://www.semrush.com/blog/seo-copywriting/">Blogbeitrag</a> von SEMRush.
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: Infografik
+-
+    title: Kurzer Comic
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: Kurzer Comic aus vier Panels, aus dem Englischen ins Chinesische übersetzt. Bild von <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>.
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: Kurzer Comic
+-
+    title: E-Commerce-Bild
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: Übersetzung eines E-Commerce-Bildes, aus dem Chinesischen ins Englische.
+    cover-src: /gallery/projects/e-commerce/out/overview.webp
+    cover-alt: E-Commerce-Bild

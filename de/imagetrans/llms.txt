@@ -1,0 +1,9 @@
+# ImageTrans
+
+Werkzeug für computergestützte Bildübersetzung.
+
+## Inhalt
+
+- [Startseite](https://www.basiccat.org/de/imagetrans/)
+- [Blog](https://www.basiccat.org/de/tagged/#imagetrans)
+- [Dokumentation](https://imagetrans.readthedocs.io/en/latest/)

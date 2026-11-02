@@ -132,6 +132,18 @@ languages:
     # Страницы, переведённые машинно, показывают панель уведомления о машинном переводе
     machine_translated: true
 
+  - code: de
+    label: Deutsch
+    url: /de/
+    locale: de_DE
+    hreflang: de
+    title: "BasicCAT — Werkzeuge für computergestützte Übersetzung (CAT)"
+    dateformat: "%d.%m.%Y"
+    # Es gibt noch keine deutschsprachige Dokumentationsseite, daher wird auf die englische verwiesen
+    doclang: en/latest/
+    # Maschinell übersetzte Seiten zeigen einen Hinweisbalken zur maschinellen Übersetzung
+    machine_translated: true
+
 # Build settings
 kramdown:
   input: GFM
@@ -205,6 +217,11 @@ defaults:
     values:
       locale: "ru_RU"
       lang: "ru"
+  - scope:
+      path: "de"
+    values:
+      locale: "de_DE"
+      lang: "de"
 
 collections:
   zh:
@@ -255,6 +272,11 @@ collections:
   # Статей блога, переведённых на русский, пока нет, поэтому коллекция пуста.
   # Добавьте статьи в _ru, чтобы они отображались в /ru/blog/ и /ru/tagged/.
   ru:
+    output: true
+    permalink: /:collection/:title/
+  # Es gibt noch keine ins Deutsche übersetzten Blogbeiträge, die Sammlung ist daher leer.
+  # Fügen Sie Beiträge in _de hinzu, damit sie in /de/blog/ und /de/tagged/ erscheinen.
+  de:
     output: true
     permalink: /:collection/:title/
     

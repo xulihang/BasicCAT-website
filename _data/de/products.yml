@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /de
+    description: BasicCAT ist ein kostenloses Open-Source-Werkzeug für computergestützte Übersetzung. Damit lassen sich Dokumente, Webseiten, Tabellen, Präsentationen und vieles mehr übersetzen – mit Funktionen wie Translation Memory, maschineller Übersetzung und Terminologieverwaltung.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /de/imagetrans
+    description: ImageTrans ist ein Werkzeug für computergestützte Bildübersetzung. Damit lassen sich Comics, Manga, Poster, Produktseiten usw. übersetzen.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /de/silhouette
+    description: Silhouette ist ein Werkzeug für computergestützte Video- und Audioübersetzung.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner ist ein Werkzeug zur Ausrichtung zweisprachiger Texte. Es extrahiert Text aus Dokumenten, Tabellen und Untertiteln und richtet ihn automatisch satzweise aus; manuelle Korrekturen sind möglich. Der ausgerichtete zweisprachige Text kann als Translation Memory exportiert und in anderen Werkzeugen verwendet werden.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /de/TMXSearch/
+    description: TMXSearch ist eine Webanwendung zum Durchsuchen von Translation-Memory-Dateien im TMX-Format.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: Online-Bildübersetzer
+    href: /de/online-image-translator/
+    description: Online-Bildübersetzer zum Übersetzen eines ganzen Bildes oder zur Nutzung der Handykamera, um einen Bereich zu erkennen und zu übersetzen.
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: Online-Bildübersetzer
