@@ -19,10 +19,14 @@ layout: page
 * Remove the Japanese manga panel detection model
 * Show operation suggestions when the recognize button is clicked with no text area selected
 * Ask by default which custom model to use (if there are multiple)
-* Update templates. The Japanese manga templates use XYCut sorting by default. Set pixels to expand for inpainting to 20. The CG template now removes text based on the whole image; set pixel to 20 in the InsetRectMaskGen API settings of project settings
+* Update templates
+  * The Japanese manga templates use XYCut sorting by default. Set pixels to expand for inpainting to 20
+  * The CG template now removes text based on the whole image; set pixel to 20 in the InsetRectMaskGen API settings of project settings
+  * Add the operation to detect cells to the document template; fix an issue where the custom workflow for deleting areas inside chart/formula panels used an old English translation and therefore was not executed
 * Use "pixels to expand for inpainting" for mask generation as well
 * Add a project setting for the mask offset of pixels to expand for inpainting
 * Allow project settings to override the preferences of the mask generation and text removal plugins
+* Fix an issue in the code logic for deleting elements from lists that causes operations such as deleting areas inside panels to work incorrectly
 * Fix inaccurate localization when MIT48PX OCR recognizes a single area
 * Fix an issue where overriding preferences with project settings at call time may modify the default preferences
 * Fix a failure to load remote models due to read/write streams not being closed promptly after download
