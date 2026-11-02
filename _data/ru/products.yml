@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /ru
+    description: BasicCAT — это бесплатный открытый инструмент автоматизированного перевода. С его помощью можно переводить документы, веб-страницы, электронные таблицы, презентации и многое другое, используя память переводов, машинный перевод и управление терминологией.
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /ru/imagetrans
+    description: ImageTrans — это инструмент автоматизированного перевода изображений. С его помощью можно переводить комиксы, мангу, постеры, страницы товаров и т. д.
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /ru/silhouette
+    description: Silhouette — это инструмент автоматизированного перевода видео и аудио.
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner — это инструмент выравнивания двуязычных текстов. Он извлекает текст из документов, таблиц и субтитров и автоматически выравнивает его на уровне предложений, поддерживая ручную правку. Выровненный двуязычный текст можно экспортировать в память переводов для использования в других инструментах.
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /ru/TMXSearch/
+    description: TMXSearch — это онлайн-приложение для поиска по файлам памяти переводов в формате TMX.
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: Онлайн-переводчик изображений
+    href: /ru/online-image-translator/
+    description: 'Онлайн-переводчик изображений: переводите изображение целиком или используйте камеру телефона, чтобы распознать и перевести нужную область.'
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: Онлайн-переводчик изображений

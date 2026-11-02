@@ -1,0 +1,556 @@
+---
+title: Расширение ImageTrans для браузера — Перевод любых изображений на веб-страницах
+layout: page
+description: Используйте расширение ImageTrans для браузера, чтобы переводить любые изображения на веб-страницах. Мгновенно переводите комиксы, плакаты, скриншоты и фотографии по правому клику или сочетанием Ctrl+Shift+F. Поддерживаются Chrome и Firefox.
+lang: ru
+---
+
+<style>
+  :root {
+    --ext-primary: #4a6cf7;
+    --ext-primary-hover: #3b5de7;
+    --ext-text: #333;
+    --ext-text-secondary: #333;
+    --ext-bg: #f8fafc;
+    --ext-card-bg: #ffffff;
+    --ext-border: #e2e8f0;
+    --ext-radius: 12px;
+    --ext-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --ext-shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .ext-hero {
+    text-align: center;
+    padding: 48px 24px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--ext-radius);
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .ext-hero-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(10px);
+  }
+  .ext-hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #fff;
+  }
+  .ext-hero p {
+    font-size: 17px;
+    opacity: 0.9;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ext-hero-meta {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+  }
+  .ext-hero-meta span {
+    margin: 0 8px;
+  }
+
+  .ext-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .ext-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+  }
+  .ext-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+  .ext-btn-chrome {
+    background: #fff;
+    color: #333;
+  }
+  .ext-btn-firefox {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .ext-btn-firefox:hover {
+    background: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .ext-btn-edge {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .ext-btn-edge:hover {
+    background: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  .ext-btn img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Section titles */
+  .ext-section {
+    margin-bottom: 36px;
+  }
+  .ext-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ext-border);
+    color: var(--ext-text);
+  }
+  .ext-section h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-text);
+  }
+  .ext-section p {
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* Feature grid */
+  .ext-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .ext-feature-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-feature-card .ext-feature-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .ext-feature-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+  }
+  .ext-feature-card p {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Steps */
+  .ext-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .ext-steps li {
+    counter-increment: step;
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px 20px 20px 52px;
+    position: relative;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 26px;
+    height: 26px;
+    background: var(--ext-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ext-steps li strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .ext-steps li span {
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Shortcut badge */
+  .ext-kbd {
+    display: inline-block;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+  }
+
+  /* Info cards */
+  .ext-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .ext-info-card {
+    background: var(--ext-card-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 20px;
+    box-shadow: var(--ext-shadow);
+  }
+  .ext-info-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--ext-primary);
+  }
+  .ext-info-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: var(--ext-text-secondary);
+    line-height: 1.7;
+  }
+
+  /* CTA section */
+  .ext-cta {
+    background: var(--ext-bg);
+    border: 2px dashed var(--ext-border);
+    border-radius: var(--ext-radius);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .ext-cta h3 {
+    margin-top: 0;
+  }
+  .ext-cta .ext-buttons {
+    margin-top: 16px;
+  }
+  .ext-cta .ext-btn-chrome {
+    background: #4285f4;
+    color: #fff;
+    border: none;
+  }
+  .ext-cta .ext-btn-firefox {
+    background: #ff6611;
+    color: #fff;
+    border: none;
+  }
+  .ext-cta .ext-btn-edge {
+    background: #0aa0b6;
+    color: #fff;
+    border: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .ext-hero {
+      padding: 32px 16px 28px;
+    }
+    .ext-hero-title {
+      font-size: 24px;
+    }
+    .ext-hero p {
+      font-size: 15px;
+    }
+    .ext-hero-icon {
+      width: 64px;
+      height: 64px;
+      font-size: 32px;
+      border-radius: 16px;
+    }
+    .ext-features,
+    .ext-steps,
+    .ext-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Hero -->
+<div class="ext-hero">
+  <div class="ext-hero-icon">🖼️</div>
+  <div class="ext-hero-title">Расширение ImageTrans для браузера</div>
+  <p>Переводите любое изображение на веб-странице одним кликом; расширение создано для комиксов, плакатов, скриншотов и других подобных случаев. Щёлкните правой кнопкой мыши или используйте сочетание клавиш, чтобы сразу получить перевод.</p>
+  <div class="ext-hero-meta">
+    Бесплатно и с открытым исходным кодом (GPL v2.0)
+  </div>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      <span>🌐</span> Добавить в Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      <span>🦊</span> Добавить в Firefox
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" class="ext-btn ext-btn-edge" target="_blank" rel="noopener">
+      <span>🧊</span> Добавить в Edge
+    </a>
+  </div>
+</div>
+
+<!-- What is it -->
+<div class="ext-section">
+  <h2>Что такое расширение ImageTrans для браузера?</h2>
+  <p>
+    <strong>Расширение ImageTrans для браузера</strong> переносит возможности перевода изображений на основе ИИ прямо в ваш браузер. Оно обнаруживает текст на изображениях веб-страниц (комиксах, плакатах, скриншотах, брошюрах и т. п.) и автоматически заменяет его переведённой версией.
+  </p>
+  <p>
+    Основываясь на <strong>PaddleOCR</strong> и серверной части настольного приложения <strong>ImageTrans</strong>, расширение сочетает передовую технологию OCR с нейронным машинным переводом, обеспечивая точные переводы с учётом контекста.
+  </p>
+</div>
+
+<!-- Features -->
+<div class="ext-section">
+  <h2>Основные возможности</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🖱️</div>
+      <h4>Перевод по правому клику</h4>
+      <p>Щёлкните правой кнопкой мыши по любому изображению на веб-странице, выберите «Перевести изображение» — и сразу получите переведённую версию.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">⌨️</div>
+      <h4>Горячие клавиши</h4>
+      <p>Нажмите <span class="ext-kbd">Ctrl+Shift+F</span>, чтобы перевести изображение под курсором — быстро и эффективно.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🔄</div>
+      <h4>Автоматический перевод</h4>
+      <p>Если включить автоматический перевод, изображения будут переводиться при загрузке страницы. Идеально для чтения длинных комиксов.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📸</div>
+      <h4>Перевод скриншотов</h4>
+      <p>Захватите область экрана в браузере для перевода — подходит для изображений, которые нельзя скачать, или для перевода только части изображения.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🤖</div>
+      <h4>Гибкие варианты перевода</h4>
+      <p>Сочетайте любую серверную часть OCR (ImageTrans или PaddleOCR) с API, совместимым с OpenAI (ChatGPT, Gemini, DeepSeek), или со встроенными движками перевода для достижения наилучшего результата.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🀄</div>
+      <h4>Аннотации произношения</h4>
+      <p>Добавляйте фуригану к японскому тексту и пиньинь к китайскому — отличный помощник для изучающих языки.</p>
+    </div>
+  </div>
+</div>
+
+<!-- How to Use -->
+<div class="ext-section">
+  <h2>Как использовать</h2>
+  <ol class="ext-steps">
+    <li>
+      <strong>Установите расширение</strong>
+      <span>Добавьте его из <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" target="_blank" rel="noopener">Chrome Web Store</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" target="_blank" rel="noopener">дополнений Firefox</a> или <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" target="_blank" rel="noopener">магазина дополнений Microsoft Edge</a>.</span>
+      <span style="display:block;margin-top:6px;color:#4a5568;">📱 <strong>Мобильные устройства:</strong> на iOS можно запускать расширения Chrome или Firefox в браузере Orion. На Android можно использовать Firefox для Android, Edge или браузер Kiwi.</span>
+    </li>
+    <li>
+      <strong>Настройте серверную часть</strong>
+      <span>Подключитесь к серверу <a href="/ru/imagetrans/">ImageTrans</a>, используйте встроенный PaddleOCR или укажите собственный ключ API, совместимого с OpenAI.</span>
+    </li>
+    <li>
+      <strong>Начните переводить</strong>
+      <span>Щёлкните правой кнопкой по изображению → «Перевести изображение». Также можно включить <strong>автоматический перевод</strong>, чтобы все изображения переводились при загрузке страницы; использовать <strong>функцию скриншота</strong> для перевода части экрана или <strong>функцию камеры</strong>, чтобы сфотографировать и перевести в реальном времени. Готово!</span>
+    </li>
+  </ol>
+</div>
+
+<!-- Requirements & Integration -->
+<div class="ext-section">
+  <h2>Как это работает</h2>
+
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🔌 С настольной версией ImageTrans (рекомендуется)</h4>
+      <ul>
+        <li>ImageTrans выполняет весь процесс: обнаружение → OCR → удаление текста → перевод → рендеринг</li>
+        <li>Наилучшая точность, широчайшая языковая поддержка и богатые возможности редактирования</li>
+        <li>Расширение отправляет изображение в ImageTrans, а затем сразу показывает готовый результат</li>
+        <li>Требуется, чтобы <a href="/ru/imagetrans/">ImageTrans</a> работал локально или на сервере</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🧩 Без ImageTrans (полностью в браузере)</h4>
+      <ul>
+        <li>Расширение самостоятельно выполняет весь процесс во фронтенде: OCR (PaddleOCR) → перевод → рендеринг</li>
+        <li>Не требует сервера и установки какого-либо программного обеспечения — полностью автономно</li>
+        <li>Бесплатно и конфиденциально</li>
+        <li>Точность, скорость и выбор языков несколько ограничены</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Варианты перевода</h3>
+  <p>Следующие способы перевода доступны в обоих режимах. При использовании API, совместимого с OpenAI, вместе с ImageTrans, ImageTrans отвечает только за OCR, а перевод и рендеринг выполняет расширение во фронтенде.</p>
+  <div class="ext-info-grid">
+    <div class="ext-info-card">
+      <h4>🌐 Встроенный перевод ImageTrans</h4>
+      <ul>
+        <li>Доступен при подключении к ImageTrans</li>
+        <li>Поддерживает различные движки перевода (Google, DeepL, Baidu и др.)</li>
+        <li>Включает память переводов, управление терминологией и поиск по корпусу</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🤖 API, совместимый с OpenAI</h4>
+      <ul>
+        <li>Используйте ChatGPT, Gemini, DeepSeek или любой совместимый API</li>
+        <li>Работает с ImageTrans и без него — используйте собственный ключ API</li>
+        <li>Гибкие настраиваемые промпты для более точного перевода</li>
+        <li>Вместе с ImageTrans: ImageTrans выполняет только OCR, а расширение — перевод и рендеринг</li>
+      </ul>
+    </div>
+    <div class="ext-info-card">
+      <h4>🆓 MyMemory (бесплатно)</h4>
+      <ul>
+        <li>Бесплатный API машинного перевода без ключа</li>
+        <li>Подходит для быстрых разовых переводов</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- About ImageTrans Desktop -->
+<div class="ext-section">
+  <h2>О настольной версии ImageTrans</h2>
+  <p>
+    <a href="/ru/imagetrans/"><strong>ImageTrans</strong></a> — полнофункциональное настольное программное обеспечение для компьютерного перевода изображений. Расширение для браузера подходит для быстрого перевода на месте, а настольная версия ImageTrans даёт вам полный контроль над всем рабочим процессом перевода.
+  </p>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🎛️</div>
+      <h4>Мощные возможности настройки</h4>
+      <p>Точно настраивайте каждый этап: выбирайте из множества OCR-движков, настраивайте алгоритмы обнаружения и параметры рендеринга, чтобы точно соответствовать вашим требованиям.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">✏️</div>
+      <h4>Ручное редактирование</h4>
+      <p>Корректируйте области текста, исправляйте результаты OCR, редактируйте перевод, подстраивайте положение текста — когда автоматизации недостаточно, всё под вашим контролем.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">🎨</div>
+      <h4>Экспорт в PSD</h4>
+      <p>Экспортируйте переведённые изображения в файлы Photoshop (PSD) с отдельными слоями текста, чтобы легко передать их дизайнеру на последующую обработку.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📦</div>
+      <h4>Пакетная обработка</h4>
+      <p>Переводите сотни изображений за один раз. Поддерживает импорт и экспорт данных через Excel, Word или XLIFF, бесшовно интегрируясь с другими инструментами перевода.</p>
+    </div>
+  </div>
+  <p style="margin-top:12px;">
+    💡 <a href="/ru/imagetrans/">Подробнее о настольной версии ImageTrans →</a>
+  </p>
+</div>
+
+<!-- Applications -->
+<div class="ext-section">
+  <h2>Что можно переводить?</h2>
+  <div class="ext-features">
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📚</div>
+      <h4>Комиксы и вебтуны</h4>
+      <p>Читайте переведённые комиксы, вебтуны и фанатские работы на любом сайте. Расширение оптимизировано для речевых облачков и вёрстки текста в комиксах.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📋</div>
+      <h4>Плакаты и брошюры</h4>
+      <p>Быстро понимайте содержание иноязычных рекламных материалов, инфографики и объявлений.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📱</div>
+      <h4>Скриншоты и фотографии</h4>
+      <p>Используйте функцию скриншота, чтобы перевести часть изображения, или переводите изображения, которые нельзя скачать с веб-страницы — всё прямо в браузере.</p>
+    </div>
+    <div class="ext-feature-card">
+      <div class="ext-feature-icon">📝</div>
+      <h4>Извлечение текста из изображений</h4>
+      <p>Извлекайте текст из изображений без перевода. Подходит для задач OCR, ввода данных и сценариев обеспечения доступности.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Open Source -->
+<div class="ext-section">
+  <h2>Бесплатно и с открытым исходным кодом</h2>
+  <p>
+    Расширение ImageTrans для браузера полностью <strong>бесплатно</strong> и имеет открытый исходный код под лицензией <strong>GNU General Public License v2.0</strong>. Исходный код размещён на GitHub:
+  </p>
+  <p>
+    📦 <a href="https://github.com/xulihang/ImageTrans_chrome_extension" target="_blank" rel="noopener">Расширение для Chrome (GitHub)</a> &nbsp;·&nbsp; <a href="https://github.com/xulihang/ImageTrans_firefox_extension" target="_blank" rel="noopener">Расширение для Firefox (GitHub)</a> — изучайте код, сообщайте о проблемах или участвуйте в разработке.
+  </p>
+  <p>
+    <strong>Без сбора данных.</strong> Расширение не собирает и не отправляет ваши данные куда-либо. Ваши изображения и данные перевода остаются на вашем устройстве.
+  </p>
+  <p>
+    📄 <a href="/ru/imagetrans/extension/privacy/">Политика конфиденциальности</a> — узнайте больше о том, как расширение обрабатывает ваши данные.
+  </p>
+</div>
+
+<!-- Support -->
+<div class="ext-section">
+  <h2>Техническая поддержка</h2>
+  <p>
+    Возникли проблемы при использовании расширения? Нашли ошибку или есть предложение по функции? Создайте Issue на GitHub, чтобы другие тоже могли увидеть обсуждение и решения.
+  </p>
+  <p>
+    🐛 <a href="https://github.com/xulihang/ImageTrans_chrome_extension/issues" target="_blank" rel="noopener">Issues расширения для Chrome</a> &nbsp;·&nbsp; <a href="https://github.com/xulihang/ImageTrans_firefox_extension/issues" target="_blank" rel="noopener">Issues расширения для Firefox</a>
+  </p>
+</div>
+
+<!-- CTA -->
+<div class="ext-cta">
+  <h3>Готовы переводить изображения на любой веб-странице?</h3>
+  <p style="color: var(--ext-text-secondary);">Бесплатно · Открытый исходный код · Без сбора данных</p>
+  <div class="ext-buttons">
+    <a href="https://chromewebstore.google.com/detail/imagetrans/lkijcgjookpddgfacoankphnpbinmhia" class="ext-btn ext-btn-chrome" target="_blank" rel="noopener">
+      🌐 Добавить в Chrome
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/imagetrans/" class="ext-btn ext-btn-firefox" target="_blank" rel="noopener">
+      🦊 Добавить в Firefox
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/imagetrans/gjgjfkkdekcjonjddhfjdpnldpolkfmo" class="ext-btn ext-btn-edge" target="_blank" rel="noopener">
+      🧊 Добавить в Edge
+    </a>
+  </div>
+</div>

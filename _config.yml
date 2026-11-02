@@ -120,6 +120,18 @@ languages:
     # หน้าที่แปลด้วยเครื่องจะแสดงแถบแจ้งเตือนการแปลด้วยเครื่อง
     machine_translated: true
 
+  - code: ru
+    label: Русский
+    url: /ru/
+    locale: ru_RU
+    hreflang: ru
+    title: "BasicCAT — Инструменты автоматизированного перевода (CAT)"
+    dateformat: "%d.%m.%Y"
+    # Сайта документации на русском пока нет, поэтому ссылаемся на английскую версию
+    doclang: en/latest/
+    # Страницы, переведённые машинно, показывают панель уведомления о машинном переводе
+    machine_translated: true
+
 # Build settings
 kramdown:
   input: GFM
@@ -188,6 +200,11 @@ defaults:
     values:
       locale: "th_TH"
       lang: "th"
+  - scope:
+      path: "ru"
+    values:
+      locale: "ru_RU"
+      lang: "ru"
 
 collections:
   zh:
@@ -233,6 +250,11 @@ collections:
   # ยังไม่มีบทความบล็อกที่แปลเป็นภาษาไทย คอลเลกชันนี้จึงยังว่างอยู่
   # เพิ่มบทความใน _th เพื่อให้แสดงที่ /th/blog/ และ /th/tagged/
   th:
+    output: true
+    permalink: /:collection/:title/
+  # Статей блога, переведённых на русский, пока нет, поэтому коллекция пуста.
+  # Добавьте статьи в _ru, чтобы они отображались в /ru/blog/ и /ru/tagged/.
+  ru:
     output: true
     permalink: /:collection/:title/
     

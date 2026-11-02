@@ -1,0 +1,9 @@
+# ImageTrans
+
+Инструмент автоматизированного перевода изображений.
+
+## Содержание
+
+- [Главная](https://www.basiccat.org/ru/imagetrans/)
+- [Блог](https://www.basiccat.org/ru/tagged/#imagetrans)
+- [Документация](https://imagetrans.readthedocs.io/en/latest/)
