@@ -19,7 +19,8 @@ layout: page
 * Remove the Japanese manga panel detection model
 * Show operation suggestions when the recognize button is clicked with no text area selected
 * Ask by default which custom model to use (if there are multiple)
-* Update templates. The Japanese manga templates use XYCut sorting by default
+* Update templates. The Japanese manga templates use XYCut sorting by default. Set pixels to expand for inpainting to 20
+* Use "pixels to expand for inpainting" for mask generation as well
 * Fix an issue where XYCut sorting may delete existing text areas
 * Fix inaccurately described menu items
 * Fix an issue where modifying the text-removed image of an area may result in unneeded regeneration of the mask image
