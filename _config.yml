@@ -83,6 +83,19 @@ languages:
     # اللغة تُكتب من اليمين إلى اليسار، فيُضاف dir="rtl" إلى وسم <html>
     rtl: true
 
+  - code: es
+    label: Español
+    url: /es/
+    locale: es_ES
+    hreflang: es
+    title: "BasicCAT — Herramientas de traducción asistida por ordenador (TAO)"
+    dateformat: "%d/%m/%Y"
+    # Todavía no existe un sitio de documentación en español, así que
+    # enlazamos a la versión en inglés
+    doclang: en/latest/
+    # Las páginas traducidas automáticamente muestran un aviso de traducción automática
+    machine_translated: true
+
 # Build settings
 kramdown:
   input: GFM
@@ -136,6 +149,11 @@ defaults:
       locale: "ar"
       lang: "ar"
       rtl: true
+  - scope:
+      path: "es"
+    values:
+      locale: "es_ES"
+      lang: "es"
 
 collections:
   zh:
@@ -165,6 +183,12 @@ collections:
   # لا توجد بعد مقالات مدونة مترجمة إلى العربية، لذا المجموعة فارغة.
   # أضف مقالات في _ar لتظهر في /ar/blog/ و /ar/tagged/.
   ar:
+    output: true
+    permalink: /:collection/:title/
+  # Aún no hay artículos de blog traducidos al español, así que la colección
+  # está vacía. Añade artículos en _es para que aparezcan en /es/blog/ y
+  # /es/tagged/.
+  es:
     output: true
     permalink: /:collection/:title/
     

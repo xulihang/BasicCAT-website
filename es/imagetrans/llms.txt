@@ -1,0 +1,9 @@
+# ImageTrans
+
+Software de traducción de imágenes asistida por computador.
+
+## Índice
+
+- [Inicio](https://www.basiccat.org/es/imagetrans/)
+- [Blog](https://www.basiccat.org/es/tagged/#imagetrans)
+- [Documentación](https://imagetrans.readthedocs.io/en/latest/)
