@@ -1,0 +1,42 @@
+-
+    title: การ์ตูนอเมริกัน
+    href: /viewer/?project=/gallery/projects/scrooge/scrooge.itp
+    description: เรื่องแรกของนิตยสาร "Uncle Scrooge" ฉบับแรกเมื่อปี 1952
+    cover-src: /gallery/projects/scrooge/out/02.webp
+    cover-alt: การ์ตูนอเมริกัน
+-
+    title: ภาพ CG ภาษาญี่ปุ่น
+    href: /viewer/?project=/gallery/projects/artistic-cg/artistic-cg.itp
+    description: 'ภาพ CG แปลจากภาษาญี่ปุ่นเป็นภาษาจีน ไม่มีกล่องคำพูด ข้อความวางบนพื้นหลังโดยตรงและมีเส้นขอบ <a href="https://github.com/xulihang/ImageTrans-docs/issues/199">ที่มาของภาพ</a>'
+    cover-src: /gallery/projects/artistic-cg/out/003_0101.webp
+    cover-alt: Artistic CG
+-
+    title: มังงะญี่ปุ่น
+    href: /viewer/?project=/gallery/projects/manga/ranma.itp
+    description: มังงะแบบมีช่อง แปลจากภาษาญี่ปุ่นเป็นภาษาอังกฤษ ภาพจากเล่มที่ 1 ของ Ranma ½
+    cover-src: /gallery/projects/manga/out/mai_Ranma1_012.webp
+    cover-alt: มังงะญี่ปุ่น
+-
+    title: Webtoon
+    href: /viewer/?project=/gallery/projects/webtoon/SQ.itp&webtoon=true
+    description: Webtoon แปลจากภาษาจีนเป็นภาษาอังกฤษ ภาพจาก <a href="https://weibo.com/1300957955/I9e42fyja">SQ</a>
+    cover-src: /gallery/projects/webtoon/out/SQ.webp
+    cover-alt: Webtoon
+-
+    title: อินโฟกราฟิก
+    href: /viewer/?project=/gallery/projects/infographic/infographics.itp
+    description: อินโฟกราฟิกที่ใช้ใน<a href="https://www.semrush.com/blog/seo-copywriting/">บทความบล็อก</a>ของ SEMRush
+    cover-src: /gallery/projects/infographic/out/capture001.webp
+    cover-alt: อินโฟกราฟิก
+-
+    title: การ์ตูนสั้นสี่ช่อง
+    href: /viewer/?project=/gallery/projects/comic-strip/comic-strip.itp
+    description: การ์ตูนสั้นสี่ช่อง แปลจากภาษาอังกฤษเป็นภาษาจีน ภาพจาก <a href="https://twitter.com/Alzwards_Corner/status/1551539018269163521/photo/1">Alzward</a>
+    cover-src: /gallery/projects/comic-strip/out/alzward.webp
+    cover-alt: การ์ตูนสั้นสี่ช่อง
+-
+    title: ภาพสินค้าอีคอมเมิร์ซ
+    href: /viewer/?project=/gallery/projects/e-commerce/1.itp
+    description: แปลภาพสินค้าอีคอมเมิร์ซ จากภาษาจีนเป็นภาษาอังกฤษ
+    cover-src: /gallery/projects/e-commerce/out/overview.webp
+    cover-alt: ภาพสินค้าอีคอมเมิร์ซ

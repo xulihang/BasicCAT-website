@@ -1,0 +1,36 @@
+-
+    title: BasicCAT
+    href: /th
+    description: BasicCAT เป็นเครื่องมือแปลภาษาช่วยด้วยคอมพิวเตอร์ที่ฟรีและโอเพนซอร์ส ใช้แปลเอกสาร เว็บเพจ สเปรดชีต สไลด์ และอื่น ๆ อีกมากมาย ด้วยฟังก์ชันอย่างหน่วยความจำการแปล การแปลด้วยเครื่อง และการจัดการคำศัพท์
+    cover-src: /album/main.png
+    cover-alt: BasicCAT
+-
+    title: ImageTrans
+    href: /th/imagetrans
+    description: ImageTrans เป็นเครื่องมือแปลรูปภาพช่วยด้วยคอมพิวเตอร์ ใช้แปลการ์ตูน มังงะ โปสเตอร์ หน้าสินค้า ฯลฯ
+    cover-src: /album/imagetrans_zh.jpg
+    cover-alt: ImageTrans
+-
+    title: Silhouette
+    href: /th/silhouette
+    description: Silhouette เป็นเครื่องมือแปลวิดีโอและเสียงช่วยด้วยคอมพิวเตอร์
+    cover-src: /album/silhouette/screenshot_zh.webp
+    cover-alt: Silhouette
+-
+    title: Aligner
+    href: /zh/new-tool-bitext-aligner/
+    description: Aligner เป็นเครื่องมือจัดแนวข้อความสองภาษา ดึงข้อความจากเอกสาร สเปรดชีต และคำบรรยาย แล้วจัดแนวข้อความระดับประโยคโดยอัตโนมัติ พร้อมรองรับการปรับด้วยมือ ข้อความสองภาษาสามารถส่งออกเป็นหน่วยความจำการแปลเพื่อใช้ในเครื่องมืออื่นได้
+    cover-src: /album/ass-aligning/home.jpg
+    cover-alt: Aligner
+-
+    title: TMXSearch
+    href: /th/TMXSearch/
+    description: TMXSearch เป็นแอปออนไลน์สำหรับค้นหาไฟล์หน่วยความจำการแปลในรูปแบบ TMX
+    cover-src: /album/tmxsearch_zh.jpg
+    cover-alt: TMXSearch
+-
+    title: โปรแกรมแปลรูปภาพออนไลน์
+    href: /th/online-image-translator/
+    description: โปรแกรมแปลรูปภาพออนไลน์ที่ช่วยให้แปลทั้งภาพหรือใช้กล้องมือถืออ่านและแปลบริเวณหนึ่งของภาพ
+    cover-src: /album/online-image-translator-screenshot.jpg
+    cover-alt: โปรแกรมแปลรูปภาพออนไลน์

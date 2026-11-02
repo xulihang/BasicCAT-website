@@ -1,0 +1,318 @@
+---
+title: ImageTrans Android — แปลรูปภาพ ภาพหน้าจอ และเนื้อหาที่ถ่ายบนมือถือ
+layout: page
+lang: th
+description: ImageTrans Android คือเวอร์ชัน Android ของซอฟต์แวร์แปลรูปภาพ ImageTrans สามารถแปลรูปภาพในแกลเลอรี เนื้อหาที่ถ่าย รูปภาพทั้งโฟลเดอร์ และใช้หน้าต่างลอยแปลภาพหน้าจอเพื่อแปลข้อความในตำแหน่งใดก็ได้บนหน้าจอ เลือกเชื่อมต่อเซิร์ฟเวอร์ ImageTrans ระยะไกลเพื่อแปล หรือทำ OCR บนมือถือทั้งหมดแล้วเรียก API แปล ข้อความในบอลลูนคำพูดของมังงะจะถูกรวมเป็นย่อหน้าและแปลตามลำดับการอ่าน
+---
+
+<style>
+  :root {
+    --and-primary: #4a6cf7;
+    --and-primary-hover: #3b5de7;
+    --and-card-bg: #ffffff;
+    --and-border: #e2e8f0;
+    --and-radius: 12px;
+    --and-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Hero ===== */
+  .and-hero {
+    text-align: center;
+    padding: 24px 16px 32px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, rgba(74,108,247,0.08), rgba(74,108,247,0));
+    border-radius: var(--and-radius);
+  }
+  .and-hero-icon { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  .and-hero-title { font-size: 30px; font-weight: 800; margin: 0 0 8px 0; }
+  .and-hero p { font-size: 16px; line-height: 1.7; max-width: 680px; margin: 0 auto 12px; }
+  .and-hero-meta { font-size: 13px; color: #4a5568; margin-bottom: 20px; }
+  .and-hero-meta span { display: inline-block; margin: 0 8px; }
+  .and-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .and-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .and-btn-primary { background: var(--and-primary); color: #fff; }
+  .and-btn-primary:hover { background: var(--and-primary-hover); color: #fff; text-decoration: none; }
+  .and-btn-secondary { background: var(--and-card-bg); color: var(--and-primary); border: 1px solid var(--and-border); }
+  .and-btn-secondary:hover { border-color: var(--and-primary); text-decoration: none; }
+  .and-note { font-size: 12px; color: #718096; margin-top: 14px; }
+
+  /* ===== Sections ===== */
+  .and-section { margin-bottom: 36px; }
+  .and-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--and-border);
+  }
+  .and-section p { line-height: 1.7; margin: 0 0 12px 0; }
+
+  /* ===== Feature Cards ===== */
+  .and-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-feature-card {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-feature-card .and-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .and-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+
+  /* ===== Steps ===== */
+  .and-steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .and-steps li {
+    position: relative;
+    padding: 0 0 18px 44px;
+    line-height: 1.6;
+  }
+  .and-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--and-primary); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .and-steps li:last-child { padding-bottom: 0; }
+  .and-steps strong { display: block; margin-bottom: 2px; }
+  .and-steps span { font-size: 14px; }
+
+  /* ===== Translation methods ===== */
+  .and-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .and-method {
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: var(--and-radius);
+    padding: 20px;
+    box-shadow: var(--and-shadow);
+  }
+  .and-method h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .and-method p { font-size: 13px; line-height: 1.6; margin: 0 0 8px 0; }
+  .and-method ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; }
+
+  /* ===== More links ===== */
+  .and-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .and-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--and-card-bg);
+    border: 1px solid var(--and-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .and-link-chip:hover { border-color: var(--and-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .and-features,
+    .and-methods { grid-template-columns: 1fr; }
+    .and-hero-title { font-size: 24px; }
+  }
+</style>
+
+<!-- ===== Hero ===== -->
+<div class="and-hero">
+  <div class="and-hero-icon">📱</div>
+  <div class="and-hero-title">ImageTrans สำหรับ Android</div>
+  <p>แปลรูปภาพ ภาพถ่าย และข้อความบนหน้าจอได้โดยตรงบนมือถือ — แม้แต่ในเกม ImageTrans สำหรับ Android จะตรวจจับข้อความ แปล และวางคำแปลกลับในตำแหน่งเดิมบนรูปภาพโดยอัตโนมัติ — ไม่ต้องใช้คอมพิวเตอร์</p>
+  <div class="and-hero-meta">
+    <span>🤖 Android 8+</span>
+    <span>🆓 ฟรีและโอเพนซอร์ส</span>
+  </div>
+  <div class="and-buttons">
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-btn and-btn-primary" target="_blank" rel="noopener">⬇️ ดาวน์โหลด APK เวอร์ชันล่าสุด</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-btn and-btn-secondary" target="_blank" rel="noopener">ดูบน GitHub</a>
+  </div>
+  <div class="and-note">ขณะนี้เผยแพร่ APK ผ่าน GitHub Releases ต้องใช้ Android 8.0 ขึ้นไปและอุปกรณ์ arm64 (สมาร์ตโฟนรุ่นใหม่เกือบทั้งหมด) ไม่รองรับอีมูเลเตอร์ x86</div>
+</div>
+
+<!-- ===== Intro ===== -->
+<div class="and-section">
+  <h2>นี่คืออะไร?</h2>
+  <p>ImageTrans สำหรับ Android คือ<strong>เวอร์ชัน Android</strong>ของซอฟต์แวร์แปลรูปภาพโดยใช้คอมพิวเตอร์ช่วย <a href="/th/imagetrans/">ImageTrans</a> เหมาะกับสถานการณ์ “เห็นอะไรก็อยากแปลทันที” — หน้ามังงะบนมือถือ เมนูและป้ายข้างทาง ภาพหน้าจอแอป หรือรูปสินค้าทั้งโฟลเดอร์</p>
+  <p><strong>ไม่ต้องพึ่งคอมพิวเตอร์ตั้งโต๊ะ</strong> คุณสามารถเชื่อมต่อเซิร์ฟเวอร์ ImageTrans ระยะไกลเพื่อใช้กระบวนการทำงานเต็มรูปแบบของ ImageTrans หรือทำงานบนมือถือทั้งหมด: OCR ทำงานบนเครื่องและส่งเฉพาะข้อความที่ตรวจจับได้ไปยัง API แปล ต่างจากการแปลภาพหน้าจอทั่วไป ImageTrans สำหรับ Android จะแทนที่ข้อความต้นฉบับด้วยคำแปลและพยายามรักษาการจัดวางเดิมไว้</p>
+</div>
+
+<!-- ===== Modes ===== -->
+<div class="and-section">
+  <h2>สี่วิธีในการแปล</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🖼️</div>
+      <h4>แปลรูปภาพ</h4>
+      <p>เลือกรูปภาพหนึ่งรูปจากแกลเลอรีหรือไฟล์แล้วแปล แตะพื้นที่ข้อความใดก็ได้เพื่อเทียบต้นฉบับกับคำแปล สลับระหว่างรูปต้นฉบับกับรูปที่แปลแล้ว จากนั้นบันทึกผลลัพธ์ลงแกลเลอรีหรือแชร์</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📷</div>
+      <h4>แปลด้วยการถ่ายรูป</h4>
+      <p>เล็งไปที่ป้าย เมนู บรรจุภัณฑ์ เอกสาร หรือสิ่งใดก็ได้ บนตัวอย่างกล้องมีกรอบเลือกที่ลากและซูมได้ แตะ “ถ่ายและแปล” เพื่อจับภาพตัวอย่าง ครอปบริเวณกรอบแล้วแปล โดยไม่บันทึกภาพถ่าย</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📁</div>
+      <h4>แปลโฟลเดอร์</h4>
+      <p>เลือกโฟลเดอร์แล้วแปลรูปภาพทั้งหมดในครั้งเดียว คำแปลจะถูกบันทึกเป็น PNG ลงในโฟลเดอร์ย่อย <em>out</em> ภายใต้โฟลเดอร์นั้น โดยคงชื่อไฟล์เดิม เหมาะกับรูปสินค้าอีคอมเมิร์ซ แคตตาล็อกสินค้า และงานแบบกลุ่มอื่น ๆ</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🫧</div>
+      <h4>หน้าต่างลอยแปลภาพหน้าจอ</h4>
+      <p>ลูกบอลลอยและกรอบเลือกจะแสดงอยู่เหนือแอปอื่นตลอดเวลา แตะ “แปล” เพื่อแปลเนื้อหาภายในกรอบได้ทันที คำแปลจะแสดงในกรอบ — ส่วนอื่นของหน้าจอไม่ได้รับผลกระทบและยังใช้แอปอื่นได้ตามปกติ ใช้ได้กับทุกแอป รวมถึง<strong>เกม</strong>: แปลบทสนทนา คำอธิบายไอเทม และเมนูในเกมมือถือได้โดยไม่ต้องออกจากเกม</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== OCR & rendering ===== -->
+<div class="and-section">
+  <h2>ออกแบบสำหรับรูปภาพจริง</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">⚡</div>
+      <h4>OCR บนเครื่อง</h4>
+      <p>ด้วย rapidocr4j (PaddleOCR) และ ONNX Runtime การตรวจจับและจดจำข้อความทำบนมือถือทั้งหมด เร่งความเร็วด้วย OpenCV และไม่ต้องอัปโหลดรูปภาพเมื่อทำ OCR เท่านั้น ภาษาจีน อังกฤษ ญี่ปุ่น และภาษากลุ่มละตินพร้อมใช้ทันที ส่วนโมเดลภาษาเกาหลี อาหรับ รัสเซีย และไทยจะดาวน์โหลดอัตโนมัติเมื่อใช้งานครั้งแรก สำหรับหน้าภาษาญี่ปุ่นสามารถเลือกใช้โมเดลบรรทัดข้อความ YOLO ซึ่งเหมาะกับมังงะที่เขียนแนวตั้ง และยังตรวจหาบอลลูนคำพูดได้พร้อมกัน</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🎨</div>
+      <h4>การเรนเดอร์ที่รักษาการจัดวาง</h4>
+      <p>คำแปลใช้เอนจินเรนเดอร์เดียวกับส่วนขยายเบราว์เซอร์ของ ImageTrans: ปรับขนาดตัวอักษรอัตโนมัติ ตรวจจับสีข้อความ จัดการพื้นหลัง รองรับมุมโค้ง ขอบตัวอักษร เงา และการจัดวางข้อความแนวตั้งสำหรับภาษาจีนและญี่ปุ่นกับการจัดวางจากขวาไปซ้าย</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">💬</div>
+      <h4>บอลลูนคำพูดในมังงะ</h4>
+      <p>บนหน้ามังงะ บรรทัดข้อความในบอลลูนเดียวกันจะถูกรวมเป็นย่อหน้าก่อนแปล บอลลูนจะเรียงตามลำดับการอ่าน: ทีละบรรทัดจากบนลงล่าง สำหรับมังงะญี่ปุ่นแนวตั้งในบรรทัดเดียวกันจะเรียงจากขวาไปซ้าย หาก YOLO ตรวจพบบอลลูนจะใช้เป็น panel โดยตรง หากไม่พบจะคำนวณจากบรรทัดข้อความ</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🧵</div>
+      <h4>มังงะแนวยาว</h4>
+      <p>มังงะแนวตั้งที่ยาวมากจะถูกตรวจจับและเรนเดอร์เป็นบล็อกแล้วจึงต่อกลับเข้าด้วยกัน เพื่อหลีกเลี่ยงการใช้หน่วยความจำจนหมดกับรูปยาวทั้งภาพ และหลีกเลี่ยงข้อความเบลอจากการย่อขยาย</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔎</div>
+      <h4>ตรวจจับเท่านั้น</h4>
+      <p>ไม่แปล ทำเพียง OCR และวางข้อความที่ตรวจจับได้กลับในตำแหน่งเดิม เหมาะสำหรับดีบักโมเดล สร้างข้อมูลฝึก และตรวจสอบประสิทธิภาพการตรวจจับจริงของแอปกับรูปภาพที่ยาก</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Translation methods ===== -->
+<div class="and-section">
+  <h2>เลือกเอนจินการแปล</h2>
+  <div class="and-methods">
+    <div class="and-method">
+      <h4>🖥️ เซิร์ฟเวอร์ ImageTrans ระยะไกล</h4>
+      <p>เชื่อมต่อเซิร์ฟเวอร์ ImageTrans ที่ทำงานอยู่ที่ใดก็ได้ — บนคอมพิวเตอร์ของคุณหรือโฮสต์ระยะไกล/คลาวด์ — เพื่อใช้การตั้งค่าโปรเจกต์ เอนจิน OCR หน่วยความจำการแปล และคลังศัพท์ของคุณ</p>
+      <ul>
+        <li>กระบวนการ ImageTrans เต็มรูปแบบ: ตรวจจับ ลบข้อความ แปล จัดวางข้อความ</li>
+        <li>ผลลัพธ์ดีที่สุด รองรับภาษามากที่สุด</li>
+        <li>ไม่ต้องติดตั้ง ImageTrans บนมือถือ</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🤖 OCR บนเครื่อง + API ที่เข้ากันได้กับ OpenAI</h4>
+      <p>OCR ทำบนมือถือ ข้อความที่ตรวจจับได้จะถูกส่งไปยัง API ที่เข้ากันได้กับ OpenAI ใดก็ได้เพื่อแปล</p>
+      <ul>
+        <li>รองรับ ChatGPT, Gemini, DeepSeek และบริการที่เข้ากันได้อื่น ๆ</li>
+        <li>ใช้ API Key และโมเดลของคุณเอง</li>
+        <li>เพิ่มพารามิเตอร์คำขอเพิ่มเติมได้ด้วย JSON (ปิดโหมดคิดของ DeepSeek เป็นค่าเริ่มต้น)</li>
+        <li>สมดุลระหว่างความเร็ว คุณภาพ และค่าใช้จ่าย</li>
+      </ul>
+    </div>
+    <div class="and-method">
+      <h4>🆓 OCR บนเครื่อง + MyMemory</h4>
+      <p>ไม่ต้องใช้ API Key ใช้บริการแปลฟรี MyMemory ย่อหน้าที่ยาวจะถูกแบ่งอัตโนมัติเพื่อให้เป็นไปตามข้อจำกัดของ API</p>
+      <ul>
+        <li>ฟรีทั้งหมด ประมาณ 50,000 ตัวอักษรต่อวัน</li>
+        <li>เหมาะกับการแปลเร็วในชีวิตประจำวัน</li>
+        <li>จะแจ้งเตือนเมื่อใช้โควตาหมด</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extension bridge ===== -->
+<div class="and-section">
+  <h2>ใช้งานร่วมกับส่วนขยายเบราว์เซอร์</h2>
+  <p>หากคุณอ่านมังงะบนเบราว์เซอร์มือถือ ImageTrans สำหรับ Android สามารถทำหน้าที่เป็น<strong>เซิร์ฟเวอร์แปล</strong>ของ<a href="/th/imagetrans/extension/">ส่วนขยายเบราว์เซอร์ ImageTrans</a> ได้: มือถือทำ OCR ในเบื้องหลัง ส่งพื้นที่ข้อความ (และคำแปล) กลับไปยังส่วนขยาย แล้วส่วนขยายจึงเรนเดอร์ลงบนหน้าเว็บ</p>
+  <p>บนมือถือเครื่องเดียวกันเพียงกรอก <code>http://127.0.0.1:51042</code> ไม่ต้องพึ่ง Wi-Fi หรือข้อมูลมือถือ หรือจะใช้ IP ในวง LAN ของมือถือจากคอมพิวเตอร์ในเครือข่ายเดียวกันก็ได้</p>
+</div>
+
+<!-- ===== How to use ===== -->
+<div class="and-section">
+  <h2>เริ่มต้นอย่างไร</h2>
+  <ol class="and-steps">
+    <li>
+      <strong>ดาวน์โหลดและติดตั้ง APK</strong>
+      <span>ดาวน์โหลด APK จาก <a href="https://github.com/xulihang/ImageTrans-Android/releases" target="_blank" rel="noopener">GitHub Releases</a> และติดตั้ง อาจต้องอนุญาตให้ติดตั้งแอปจากแหล่งที่ไม่รู้จัก</span>
+    </li>
+    <li>
+      <strong>เลือกวิธีแปล</strong>
+      <span>ในการตั้งค่า ให้เลือกวิธีแปล: เชื่อมต่อเซิร์ฟเวอร์ ImageTrans ระยะไกล (กรอกที่อยู่เซิร์ฟเวอร์และรหัสผ่านโปรเจกต์) หรือทำ OCR บนมือถือแล้วแปลด้วย API ที่เข้ากันได้กับ OpenAI / MyMemory เมื่อเลือก MyMemory ไม่ต้องใช้ API Key</span>
+    </li>
+    <li>
+      <strong>ตั้งค่าคู่ภาษา</strong>
+      <span>เลือกภาษาต้นทางและปลายทาง ภาษาต้นทาง “อัตโนมัติ” จะถือเป็นภาษาญี่ปุ่น ภาษาปลายทาง “อัตโนมัติ” จะถือเป็นภาษาอังกฤษ หรือระบุให้ชัดเจนก็ได้</span>
+    </li>
+    <li>
+      <strong>เริ่มแปล</strong>
+      <span>เลือกรูปจากแกลเลอรี ถ่ายรูป เลือกโฟลเดอร์ หรือเปิดหน้าต่างลอยแปลภาพหน้าจอ แอปจะตรวจจับข้อความ แปล และวางคำแปลกลับลงบนรูปภาพ</span>
+    </li>
+    <li>
+      <strong>บันทึกหรือแชร์</strong>
+      <span>บันทึกคำแปลลงแกลเลอรีหรือแชร์ เมื่อแปลโฟลเดอร์เสร็จสามารถเปิดโฟลเดอร์เอาต์พุตได้โดยตรง</span>
+    </li>
+  </ol>
+</div>
+
+<!-- ===== Requirements ===== -->
+<div class="and-section">
+  <h2>ข้อกำหนดของระบบและข้อจำกัด</h2>
+  <div class="and-features">
+    <div class="and-feature-card">
+      <div class="and-feature-icon">📱</div>
+      <h4>อุปกรณ์ arm64</h4>
+      <p>รองรับ Android 8.0 ขึ้นไป ไลบรารี OCR บนเครื่องมีเฉพาะเวอร์ชัน arm64-v8a ซึ่งสมาร์ตโฟน Android รุ่นใหม่เกือบทั้งหมดรองรับ อีมูเลเตอร์ x86_64 ไม่สามารถรัน OCR ได้</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🌐</div>
+      <h4>เครือข่าย</h4>
+      <p>ในโหมดบนเครื่อง OCR ทำบนมือถือทั้งหมดและส่งเฉพาะข้อความไปยัง API แปล โหมดเซิร์ฟเวอร์ต้องเข้าถึงเซิร์ฟเวอร์ ImageTrans ของคุณได้ โมเดล OCR ภาษาเกาหลี อาหรับ รัสเซีย และไทยต้องดาวน์โหลดเมื่อใช้งานครั้งแรก</p>
+    </div>
+    <div class="and-feature-card">
+      <div class="and-feature-icon">🔋</div>
+      <h4>การทำงานเบื้องหลัง</h4>
+      <p>หน้าต่างลอยแปลภาพหน้าจอและเซิร์ฟเวอร์แปลสำหรับส่วนขยายต้องพึ่งพาบริการที่ทำงานเบื้องหน้า (foreground service) ROM บางรุ่นต้องอนุญาตกิจกรรมเบื้องหลังและปิดการเพิ่มประสิทธิภาพแบตเตอรี่</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="and-section">
+  <h2>แหล่งข้อมูลเพิ่มเติม</h2>
+  <div class="and-links">
+    <a href="https://github.com/xulihang/ImageTrans-Android" class="and-link-chip" target="_blank" rel="noopener">💻 ที่เก็บ GitHub</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/releases" class="and-link-chip" target="_blank" rel="noopener">📦 เวอร์ชันเผยแพร่</a>
+    <a href="/th/imagetrans/" class="and-link-chip">🖥️ ImageTrans สำหรับเดสก์ท็อป</a>
+    <a href="/th/imagetrans/extension/" class="and-link-chip">🧩 ส่วนขยายเบราว์เซอร์</a>
+    <a href="https://imagetrans.readthedocs.io/en/latest/" class="and-link-chip" target="_blank" rel="noopener">📖 เอกสาร</a>
+    <a href="https://github.com/xulihang/ImageTrans-Android/issues" class="and-link-chip" target="_blank" rel="noopener">🐛 รายงานปัญหา</a>
+  </div>
+</div>

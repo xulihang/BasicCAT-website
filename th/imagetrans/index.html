@@ -1,0 +1,298 @@
+---
+title: ImageTrans - ซอฟต์แวร์แปลรูปภาพและแปลมังงะด้วยคอมพิวเตอร์ช่วย
+layout: page
+description: ImageTrans เป็นซอฟต์แวร์แปลรูปภาพและแปลมังงะด้วยคอมพิวเตอร์ช่วย ตรวจจับข้อความอัตโนมัติ รู้จำด้วย OCR ลบต้นฉบับและเติมคำแปลด้วยการจัดวางข้อความระดับมืออาชีพ รองรับเอนจิน OCR หลายแบบ การแปลด้วย AI (ChatGPT, Gemini, DeepSeek) ข้อความแนวตั้ง การคงลายจุด การส่งออก PSD และการประมวลผลแบบกลุ่ม ยังเหมาะกับรูปภาพอีคอมเมิร์ซ การแปลเอกสาร และการดึงคำบรรยาย ซอฟต์แวร์เดสก์ท็อปข้ามแพลตฟอร์ม รองรับ API และการเรียกใช้จาก AI Agent
+lang: th
+---
+
+<style>
+  :root {
+    --it-primary: #4a6cf7;
+    --it-card-bg: #ffffff;
+    --it-border: #e2e8f0;
+    --it-radius: 12px;
+    --it-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  /* ===== Sections ===== */
+  .it-section { margin-bottom: 36px; }
+  .it-section h2 {
+    font-size: 22px; font-weight: 700;
+    margin: 0 0 16px 0; padding-bottom: 8px;
+    border-bottom: 2px solid var(--it-border);
+  }
+  .it-section p {
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+  }
+
+  /* ===== Feature Cards ===== */
+  .it-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .it-feature-card {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+  }
+  .it-feature-card .it-feature-icon { font-size: 28px; margin-bottom: 10px; }
+  .it-feature-card h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px 0; }
+  .it-feature-card p { font-size: 13px; line-height: 1.6; margin: 0; }
+  .it-feature-card p + p { margin-top: 10px; }
+  .it-feature-card ul { margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.8; }
+  .it-feature-card li { padding-left: 16px; position: relative; margin-bottom: 2px; }
+  .it-feature-card li::before { content: '•'; position: absolute; left: 0; color: var(--it-primary); }
+  .it-feature-card li a { color: var(--it-primary); }
+  .it-feature-card strong { font-size: 13px; }
+
+  /* ===== Testimonials ===== */
+  .it-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .it-testimonial {
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: var(--it-radius);
+    padding: 20px;
+    box-shadow: var(--it-shadow);
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+  }
+  .it-testimonial::before {
+    content: '"';
+    font-size: 40px; font-weight: 800; color: var(--it-primary);
+    position: absolute; top: 8px; left: 16px;
+    opacity: 0.3; line-height: 1;
+  }
+  .it-testimonial p { padding-left: 24px; margin: 0; font-size: 14px; }
+  .it-testimonial .it-author { font-style: normal; font-size: 12px; margin-top: 8px; padding-left: 24px; }
+
+  /* ===== More links ===== */
+  .it-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .it-link-chip {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--it-card-bg);
+    border: 1px solid var(--it-border);
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .it-link-chip:hover { border-color: var(--it-primary); background: rgba(74,108,247,0.04); text-decoration: none; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .it-features,
+    .it-testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ===== Intro ===== -->
+<div class="it-intro">
+  <p>ImageTrans เป็นเครื่องมือถอดความและแปลข้อความในรูปภาพด้วยคอมพิวเตอร์ช่วย สามารถใช้เทคโนโลยี OCR ระบุตำแหน่งและรู้จำข้อความอัตโนมัติ ลบต้นฉบับและเติมคำแปลโดยอัตโนมัติ พร้อมด้วยอัลกอริทึมรวมและตรวจจับพื้นที่ข้อความที่ออกแบบมาสำหรับมังงะ</p>
+  <img src="/album/imagetrans_zh.jpg" alt="ภาพหน้าจออินเทอร์เฟซ ImageTrans" width="1024" height="731" loading="lazy" />
+  <p>นอกจากใช้เป็นตัวแปลรูปภาพสำหรับแปลโปสเตอร์และมังงะแล้ว ImageTrans ยังใช้สำหรับการอ่านรูปภาพ การถอดความข้อความ การแปลภาพหน้าจอด้วย OCR การแปลง PDF เป็น markdown พร้อมแปล การสร้าง PDF สองชั้นที่ค้นหาได้จากเอกสารสแกน และการติดป้ายกำกับข้อมูลสำหรับการเรียนรู้เชิงลึก เป็นต้น</p>
+  <p>ImageTrans เป็นผลงานวิทยานิพนธ์ปริญญาโทของผม: <a href="https://www.researchgate.net/publication/342623300_Design_and_Implementation_of_a_Computer-Aided_Comics_Translation_Tool" target="_blank">การออกแบบและการพัฒนาของเครื่องมือช่วยแปลมังงะ</a></p>
+  <p><a href="#get-a-copy">รับ ImageTrans</a></p>
+</div>
+
+<!-- ===== Core Features ===== -->
+<div class="it-section">
+  <h2>ฟังก์ชันหลัก</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔍</div>
+      <h4>ระบุตำแหน่งพื้นที่ข้อความอย่างแม่นยำ</h4>
+      <p>รองรับวิธีการหลากหลาย เช่น การตรวจจับข้อความในฉากธรรมชาติ การตรวจจับวัตถุ และวิธีแบบฮิวริสติก พร้อมอัลกอริทึมรวมและตรวจจับพื้นที่ข้อความที่ออกแบบสำหรับบอลลูนคำพูดในมังงะ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📖</div>
+      <h4>การรู้จำ OCR หลายเอนจิน</h4>
+      <p>รองรับเอนจิน OCR หลายแบบและ<a href="https://github.com/xulihang/ImageTrans_plugins" target="_blank" rel="noopener">ปลั๊กอินกำหนดเอง</a> ครอบคลุมภาษาหลักของโลก รองรับ<a href="/th/vertical-japanese-chinese-OCR/">การรู้จำภาษาจีนและญี่ปุ่นแนวตั้ง</a> โดยกำหนดลำดับการอ่านผ่านการวิเคราะห์เลย์เอาต์ และสามารถ<a href="/th/use-large-language-models-to-get-good-OCR-results/">ใช้โมเดลภาษาขนาดใหญ่ตรวจแก้เพื่อปรับปรุงความแม่นยำของ OCR</a></p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🌐</div>
+      <h4>การแปล</h4>
+      <p><strong>การแปลด้วยเครื่อง:</strong> รองรับเอนจินแปลด้วยเครื่องหลายแบบและโมเดล AI ขนาดใหญ่ (ChatGPT, Gemini, DeepSeek ฯลฯ) <a href="/th/context-matters-for-image-translation/">ใช้ข้อมูลบริบทเพื่อยกระดับคุณภาพการแปล</a></p>
+      <p><strong>ฟังก์ชันช่วยเหลือ:</strong> เปรียบเทียบผลลัพธ์หลายรายการเคียงข้างกัน หน่วยความจำการแปล การค้นหาคลังข้อความ การจัดการศัพท์ <a href="/th/how-to-add-pronunciation-annotation-furigana-to-Japanese-kanji/">คำอ่านกำกับคานะและพินอิน</a> และระบบค้นหาเสียงเลียนแบบในมังงะ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🧹</div>
+      <h4>การลบข้อความ</h4>
+      <p>รองรับอัลกอริทึมและโมเดล AI เช่น การทำไบนารี PatchMatch, Lama Inpaint, <a href="/th/nano-banana-manga-translation/">Gemini Nano Banana</a> เพื่อสร้างมาสก์ข้อความและลบข้อความ <a href="/th/remove-text-in-manga-preserving-screentone/">คงลายจุดของมังงะไว้เมื่อลบข้อความ</a></p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎨</div>
+      <h4>การจัดวางข้อความ</h4>
+      <ul>
+        <li>ปรับขนาดฟอนต์อัตโนมัติ</li>
+        <li><a href="/th/lettering-guide-for-Japanese-English-manga-translation/">ปรับการตัดบรรทัดสำหรับภาษาที่มีช่องว่างให้เหมาะสม</a> (เช่น กรณีแปลญี่ปุ่นเป็นอังกฤษ)</li>
+        <li><a href="/th/handling-of-punctuation-at-starting-or-ending-positionin-type-setting/">การจัดการเครื่องหมายวรรคตอนที่ต้นหรือท้ายบรรทัด</a></li>
+        <li>ข้อความสมบูรณ์แบบและสไตล์ฟอนต์ (คล้ายระบบสไตล์ของ Word)</li>
+        <li><a href="/th/how-to-detect-text-color-in-image/">การตรวจจับสีข้อความ</a></li>
+        <li>การตรวจจับมุมการหมุน</li>
+        <li>การจัดวางข้อความแนวตั้ง</li>
+      </ul>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖌️</div>
+      <h4>ส่งออก PSD</h4>
+      <p>บันทึกผลลัพธ์เป็นไฟล์ Photoshop PSD โดยแยกข้อความเป็นเลเยอร์อิสระ สะดวกให้นักออกแบบนำไปปรับแต่งต่อ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📦</div>
+      <h4>การประมวลผลแบบกลุ่ม</h4>
+      <p>ประมวลผลรูปภาพหลายร้อยรูปในครั้งเดียว รองรับขั้นตอนการทำงานกำหนดเอง การเรียกใช้จากบรรทัดคำสั่ง และการประมวลผลแบบขนานหลายโปรเซส เพื่อผลลัพธ์แบบกลุ่มความเร็วสูง</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>อินเทอร์เฟซที่ใช้งานง่ายและทรงพลัง</h4>
+      <p>ตัวแก้ไขแบบภาพพร้อมแสดงตัวอย่างแบบเรียลไทม์ ดำเนินการทีละขั้น เช่น OCR การแปล การตกแต่งภาพ การใส่ข้อความ ค้นหาและแทนที่ และขั้นตอนการทำงานกำหนดเอง — อินเทอร์เฟซเดียว ทรงพลังและใช้งานง่าย</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Extra Features ===== -->
+<div class="it-section">
+  <h2>ฟังก์ชันเพิ่มเติม</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📄</div>
+      <h4>การแปล PDF และการแปลงเป็น Markdown</h4>
+      <p><a href="/th/pdf-paper-translation-and-conversion-to-markdown/">แปล PDF และแปลงเป็น Markdown</a> สามารถส่งออกต้นฉบับ คำแปล หรือฉบับสองภาษาคู่กัน โดยคงโครงสร้าง เช่น บทความหลายคอลัมน์ สูตร ตาราง และเชิงอรรถ <a href="/th/how-to-create-searchable-pdf-from-scanned-documents/">สร้าง PDF สองชั้นที่ค้นหาได้</a></p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🖥️</div>
+      <h4>การแปลหน้าจอแบบเรียลไทม์</h4>
+      <p><a href="/th/real-time-screen-translator/">จับภาพและแปลพื้นที่ใดก็ได้บนหน้าจอแบบเรียลไทม์</a> ตรวจจับการเปลี่ยนแปลงเนื้อหาอัตโนมัติ รองรับการจับคู่กับหน่วยความจำการแปลทันที</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🎬</div>
+      <h4>การดึงคำบรรยายฝังในวิดีโอ</h4>
+      <p><a href="/th/how-to-extract-hardcoded-subtitle/">ดึงคำบรรยายที่ฝังในวิดีโอ</a> ด้วยการตรวจจับข้อความ OCR ที่รวดเร็ว ทั้งเร็วและแม่นยำ ส่งออกไฟล์คำบรรยาย SRT</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📷</div>
+      <h4>การสแกนและปรับปรุงเอกสาร</h4>
+      <p>รองรับการสแกนแบบบูรณาการ TWAIN / WIA / SANE / ICA / eSCL <a href="/th/clean-deskew-enhance-scanned-books/">ทำความสะอาด ปรับให้ตรง และปรับปรุงหนังสือที่สแกน</a> เพื่อผลลัพธ์การประมวลผลภาพก่อนหน้าที่ดีที่สุด</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Usability ===== -->
+<div class="it-section">
+  <h2>ความง่ายในการใช้งาน</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⌨️</div>
+      <h4>ปุ่มลัดบนคีย์บอร์ด</h4>
+      <p>เกือบทุกการดำเนินการรองรับปุ่มลัดบนคีย์บอร์ด ไม่ต้องสลับไปที่เมาส์บ่อย ๆ ขั้นตอนการทำงานรวดเร็วและมีประสิทธิภาพ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>การเรียกใช้จากบรรทัดคำสั่งและ API</h4>
+      <p>รองรับการเรียกใช้ ImageTrans จากบรรทัดคำสั่งเพื่อทำงานอัตโนมัติ สามารถทำงานเป็น<a href="/th/self-hosted-manga-translation-api-server/" target="_blank" rel="noopener">เซิร์ฟเวอร์ API</a> ให้บริการแปลผ่าน HTTP สะดวกในการผสานรวมกับแอปหรือบริการใด ๆ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚙️</div>
+      <h4>ขั้นตอนการทำงานกำหนดเอง</h4>
+      <p>ผสมผสานขั้นตอนการประมวลผล เช่น การตรวจจับ OCR การแปล และการเรนเดอร์ได้อย่างอิสระ เพื่อสร้างขั้นตอนการทำงานอัตโนมัติที่ตรงกับความต้องการของคุณ</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🤖</div>
+      <h4>การผสานรวม AI Agent</h4>
+      <p>ผ่าน <a href="https://github.com/xulihang/ImageTrans-skills" target="_blank" rel="noopener">ImageTrans Skills</a> ให้ AI Agent เรียกใช้ ImageTrans — คำจำกัดความทักษะแบบมีโครงสร้างช่วยให้เอเจนต์ที่ขับเคลื่อนด้วย LLM ทำงานแปลได้อย่างเป็นโปรแกรม</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">📐</div>
+      <h4>การจัดแนวอัจฉริยะและการค้นหาแทนที่</h4>
+      <p>แสดงเส้นช่วยจัดแนวเมื่อย้ายกล่องข้อความ จัดแนวเป็นกลุ่มกับตำแหน่งข้อความต้นฉบับ มีฟังก์ชันค้นหาและแทนที่ในตัว เหมาะกับ<a href="/th/e-commerce-image-translation/">การแปลรูปภาพอีคอมเมิร์ซ</a>และสถานการณ์อื่น ๆ</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Platform & Requirements ===== -->
+<div class="it-section">
+  <h2>ข้ามแพลตฟอร์ม · ข้อกำหนดฮาร์ดแวร์ต่ำ</h2>
+  <div class="it-features">
+    <div class="it-feature-card">
+      <div class="it-feature-icon">💻</div>
+      <h4>Windows · macOS · Linux</h4>
+      <p>รองรับ Windows 7+, macOS 10.11+ และ Linux ยังสามารถทำงานเป็นเซิร์ฟเวอร์เพื่อสแกนและแปลรูปภาพผ่านอุปกรณ์พกพา</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">⚡</div>
+      <h4>เบาและมีประสิทธิภาพ</h4>
+      <p>รวมสภาพแวดล้อมรันไทม์ Java และโมเดลประมาณ 400 MB สามารถทำงานบนอุปกรณ์รุ่นเก่าหรือสเปกต่ำ รองรับการทำงานออฟไลน์ ไม่ต้องเชื่อมต่ออินเทอร์เน็ต</p>
+    </div>
+    <div class="it-feature-card">
+      <div class="it-feature-icon">🔌</div>
+      <h4>การทำงานร่วมกัน</h4>
+      <p>ส่งออก PSD แลกเปลี่ยนข้อมูล Excel/Word/XLIFF แปลงโปรเจกต์ LabelPlus พร้อม<a href="./extension/" target="_blank">ส่วนขยาย Chrome</a>สำหรับแปลรูปภาพในเว็บเพจ</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Examples ===== -->
+<div class="it-section">
+  <h2>ตัวอย่างการแปล</h2>
+  <p>ImageTrans สามารถผสมผสานวิธีระบุตำแหน่งข้อความ การรู้จำข้อความ และการแปลด้วยเครื่องที่แตกต่างกันได้อย่างอิสระเพื่อจัดการรูปภาพหลากหลายประเภท แกลเลอรีมีตัวอย่างมากมาย เช่น <a href="/th/how-to-build-a-local-manga-translation-workshop/">การแปลมังงะ</a> <a href="/th/e-commerce-image-translation/">การแปลรูปภาพอีคอมเมิร์ซ</a> เยี่ยมชมแกลเลอรีเพื่อดูผลลัพธ์จริง:</p>
+  <p>
+    <a href="/th/gallery/" class="it-btn-buy" style="display: inline-block;">เรียกดูแกลเลอรี →</a>
+  </p>
+</div>
+
+<!-- ===== Pricing ===== -->
+<div class="it-section" id="get-a-copy">
+  <h2>รับ ImageTrans</h2>
+  <p>กรุณาซื้อผ่าน MbD: <a href="https://mbd.pub/o/bread/YpmUmJhs" target="_blank">ลิงก์</a></p>
+  <p>ผู้ใช้ในต่างประเทศกรุณาใช้ FastSpring: <a href="https://basiccat.onfastspring.com/" target="_blank">ลิงก์</a></p>
+  <p>ราคา:</p>
+  <ul>
+    <li>ใช้ส่วนตัว: ¥75</li>
+    <li>ใช้เชิงพาณิชย์: ¥1500</li>
+  </ul>
+  <p>ซื้อครั้งเดียว ใช้ได้ตลอดชีพ อัปเดตฟรีภายในครึ่งปี</p>
+  <p>หากพบปัญหา สามารถ<a href="mailto:admin@basiccat.org">ติดต่อผมทางอีเมล</a>ได้</p>
+  <p>กลุ่มแปลการ์ตูนหรืออาจารย์และนักศึกษามหาวิทยาลัยสามารถส่งอีเมลมาขอส่วนลดได้</p>
+</div>
+
+<!-- ===== Testimonials ===== -->
+<div class="it-section">
+  <h2>รีวิวจากผู้ใช้</h2>
+  <div class="it-testimonials">
+    <div class="it-testimonial">
+      <p>ผมใช้ซอฟต์แวร์นี้มาหนึ่งสัปดาห์แล้ว มันช่วยนักแปลมือสมัครเล่นอย่างเราได้จริง ๆ แต่ก่อนใช้ Photoshop ต้องใช้เวลา 2 ถึง 3 ชั่วโมง ตอนนี้ใช้แค่ 1 ชั่วโมง</p>
+      <div class="it-author">— <a href="https://www.youtube.com/watch?v=S_6FF-5zTns&lc=UgwA0gCRyTpY8Ol4HEt4AaABAg" target="_blank" rel="noopener">xCryBaby</a></div>
+    </div>
+    <div class="it-testimonial">
+      <p>ซอฟต์แวร์ทำได้ยอดเยี่ยมในการผสานซอฟต์แวร์ต่าง ๆ ในเครือข่าย และให้คำตอบที่มีคุณค่าแก่ผู้ใช้อย่างทันท่วงที</p>
+      <div class="it-author">— <a href="https://github.com/xulihang/ImageTrans-docs/issues/432#issuecomment-1707464773" target="_blank" rel="noopener">ocrhell</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== More ===== -->
+<div class="it-section">
+  <h2>แหล่งข้อมูลเพิ่มเติม</h2>
+  <div class="it-links">
+    <a href="https://imagetrans.readthedocs.io/zh_CN/latest/" class="it-link-chip" target="_blank" rel="noopener">📖 เอกสารซอฟต์แวร์</a>
+    <a href="/th/imagetrans/release-notes/" class="it-link-chip">📋 บันทึกการออกรุ่น</a>
+    <a href="/th/imagetrans/video/" class="it-link-chip">🎬 วิดีโอสอน</a>
+    <a href="/th/imagetrans/faq/" class="it-link-chip">❓ คำถามที่พบบ่อย</a>
+    <a href="/th/support/" class="it-link-chip">🛠️ การสนับสนุนทางเทคนิค</a>
+    <a href="/th/tagged/#imagetrans" class="it-link-chip">📝 บล็อกเทคนิค</a>
+    <a href="/th/imagetrans/how-to-contribute/" class="it-link-chip">🤝 มีส่วนร่วม</a>
+  </div>
+</div>

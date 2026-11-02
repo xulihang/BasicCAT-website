@@ -108,6 +108,18 @@ languages:
     # Các trang dịch tự động sẽ hiển thị thanh thông báo dịch máy
     machine_translated: true
 
+  - code: th
+    label: ไทย
+    url: /th/
+    locale: th_TH
+    hreflang: th
+    title: "BasicCAT — เครื่องมือแปลภาษาช่วยด้วยคอมพิวเตอร์ (CAT)"
+    dateformat: "%d/%m/%Y"
+    # ยังไม่มีเว็บไซต์เอกสารภาษาไทย จึงลิงก์ไปยังฉบับภาษาอังกฤษ
+    doclang: en/latest/
+    # หน้าที่แปลด้วยเครื่องจะแสดงแถบแจ้งเตือนการแปลด้วยเครื่อง
+    machine_translated: true
+
 # Build settings
 kramdown:
   input: GFM
@@ -171,6 +183,11 @@ defaults:
     values:
       locale: "vi_VN"
       lang: "vi"
+  - scope:
+      path: "th"
+    values:
+      locale: "th_TH"
+      lang: "th"
 
 collections:
   zh:
@@ -211,6 +228,11 @@ collections:
   # Chưa có bài viết blog nào dịch sang tiếng Việt nên bộ sưu tập này đang trống.
   # Thêm bài viết vào _vi để chúng hiển thị tại /vi/blog/ và /vi/tagged/.
   vi:
+    output: true
+    permalink: /:collection/:title/
+  # ยังไม่มีบทความบล็อกที่แปลเป็นภาษาไทย คอลเลกชันนี้จึงยังว่างอยู่
+  # เพิ่มบทความใน _th เพื่อให้แสดงที่ /th/blog/ และ /th/tagged/
+  th:
     output: true
     permalink: /:collection/:title/
     
