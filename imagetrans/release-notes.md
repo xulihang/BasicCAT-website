@@ -9,6 +9,13 @@ layout: page
 }
 </style>
 
+## v7.1.0 (2026/11/04)
+
+* Add support for BaberuOCR
+* Add project settings to save balloon mask after detection with custom model
+* Add project settings to cover text with balloon mask
+* Fix an issue where the Java-based PSD generation does not use the suitable font size and the wrapped text
+
 ## v7.0.0 (2026/11/01)
 
 * Port ag-psd to Java for generating PSD. Support generating PSD with editable text without relying on Photoshop and it runs on Linux; remove the mandatory dependency on Krita for generating rasterized PSD
