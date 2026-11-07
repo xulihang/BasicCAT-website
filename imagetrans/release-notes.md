@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v7.2.0 (2026/11/08)
+
+* Add two operations "generate balloon mask" and "delete balloon mask image" to custom workflows, supporting generating masks with dedicated balloon segmentation models
+* Add a "Balloon Mask" page to project settings
+  * Pixels to shrink the edges of the balloon mask when it covers text
+  * How to handle text masks when the balloon mask covers text: remove the mask of areas overlapping with the balloon mask, merge the mask of areas overlapping with the balloon mask, or do nothing
+  * Whether to filter out the text areas inside balloons when the balloon mask covers text
+* When covering text with the balloon mask, text inside balloons does not generate text masks or participate in text removal by default
+* Add a box drawing mode to the text remover; drag the mouse to cover text with a solid color box or with the original image content inside the box
+* In the text remover and the mask editor, hold Ctrl and scroll the mouse wheel to zoom the image, centered on the mouse position after zooming
+* In the mask editor and the text remover, holding Ctrl only drags without drawing or selecting boxes
+* Fix an issue where saving the balloon mask required the text mask saving setting to be enabled at the same time
+* Fix an issue where balloon mask images were imported into projects as original images
+* Fix an issue where inpainting was still performed when the text removal area has no mask content
+
 ## v7.1.0 (2026/11/04)
 
 * Add support for BaberuOCR
