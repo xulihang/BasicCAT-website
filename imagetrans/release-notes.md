@@ -18,8 +18,16 @@ layout: page
   * Whether to filter out the text areas inside balloons when the balloon mask covers text
 * When covering text with the balloon mask, text inside balloons does not generate text masks or participate in text removal by default
 * Add a box drawing mode to the text remover; drag the mouse to cover text with a solid color box or with the original image content inside the box
+* The text remover supports displaying the original image for comparison
 * In the text remover and the mask editor, hold Ctrl and scroll the mouse wheel to zoom the image, centered on the mouse position after zooming
 * In the mask editor and the text remover, holding Ctrl only drags without drawing or selecting boxes
+* Add a new Japanese manga (accurate) template
+* Add a new custom workflow project for removing panels
+* The custom workflow operations related to custom models support storing params
+* When creating a project from a template, support choosing the appropriate custom workflow and project settings based on the language
+* Fix an issue where panels were not excluded from the result when removing areas with a custom model
+* Fix an issue where target text areas were still kept when merging areas
+* Fix an issue where the merge direction was wrong when merging selected areas, so line breaks were not preserved
 * Fix an issue where saving the balloon mask required the text mask saving setting to be enabled at the same time
 * Fix an issue where balloon mask images were imported into projects as original images
 * Fix an issue where inpainting was still performed when the text removal area has no mask content
