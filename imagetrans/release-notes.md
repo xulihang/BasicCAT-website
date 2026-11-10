@@ -9,6 +9,21 @@ layout: page
 }
 </style>
 
+## v7.3.0 (2026/11/10)
+
+* Add "remove rotation degress less than 5" to custom workflows
+* Add "unify text size by page" to custom workflows, which unifies the font size of all text areas on a page
+* Only add the font size to local styles instead of the full style when calculating font size, and support calculating font size when not in translation mode
+* Update the Japanese manga (accurate) template
+* Support setting params based on language pairs when creating a project from a template
+* Support loading UI params when creating a project from a template
+* All major batch processing operations now switch to the corresponding image first before processing; fix an issue where the image was switched incorrectly when removing and adding areas with a custom model in batch
+* Fix an issue where inpainting did not remove the text masks corresponding to the balloon mask when text is removed with merging balloon and text mask enabled
+* Fix an issue where vertical text was re-rendered when switching the zoom level with automatic wrapping disabled
+* Fix an issue where centering did not work when horizontal text overflows the box because words need to be kept unbroken
+* Fix an issue where the wrong font style was selected when multiple text areas are selected
+* Fix an issue where the text removal image and text boxes were not released when leaving translation mode or closing the project, so the image was always locked
+
 ## v7.2.0 (2026/11/08)
 
 * Add two operations "generate balloon mask" and "delete balloon mask image" to custom workflows, supporting generating masks with dedicated balloon segmentation models
