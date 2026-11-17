@@ -16,6 +16,7 @@ layout: page
 * Add JPEG2000 support for PDF import and export
 * New balloon mask generation method: using text areas
 * Sliding window also works for by-text-area image inpainting. It is mainly for deep learing methods which have max_size setting
+* Optimize the seams using sliding window for inpainting
 * Fix the overlapping not effective issue for inpainting with sliding window
 * Fix the mismatch of text area and the nearby balloon mask for "Fit areas to balloon mask" workflow 
 
