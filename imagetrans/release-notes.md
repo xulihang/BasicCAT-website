@@ -9,6 +9,16 @@ layout: page
 }
 </style>
 
+## v7.4.0 (2026/11/15)
+
+* Add support for text wrapping with the help of balloon mask for horizonal text
+* New project setting: shape-aware wrapping
+* Add JPEG2000 support for PDF import and export
+* New balloon mask generation method: using text areas
+* Sliding window also works for by-text-area image inpainting. It is mainly for deep learing methods which have max_size setting
+* Fix the overlapping not effective issue for inpainting with sliding window
+* Fix the mismatch of text area and the nearby balloon mask for "Fit areas to balloon mask" workflow 
+
 ## v7.3.0 (2026/11/10)
 
 * Add "remove rotation degress less than 5" to custom workflows
