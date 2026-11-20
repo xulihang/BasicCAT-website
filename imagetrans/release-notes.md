@@ -9,6 +9,11 @@ layout: page
 }
 </style>
 
+## v7.5.0 (2026/11/20)
+
+* Add support for PDF compression with MRC
+* New operation: remove areas outside balloon mask
+
 ## v7.4.0 (2026/11/15)
 
 * Add support for text wrapping with the help of balloon mask for horizonal text
