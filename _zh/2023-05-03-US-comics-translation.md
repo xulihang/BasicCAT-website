@@ -21,7 +21,7 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 
 ## 具体操作流程
 
-1. 使用[启发式文字区域检测方法](https://imagetrans.readthedocs.io/zh-cn/latest/textarea_detection_and_text_reinjection.html)或者[气泡检测](https://imagetrans.readthedocs.io/zh-cn/latest/settings.html#balloon-detection)去检测所有文字区域。如果有误识别的区域，则手动进行去除。
+1. 使用自带的PaddleOCR（rapid）或者启发式、自定义模型去检测所有文字区域。如果有误识别的区域，则手动进行去除。
 2. 生成文字掩膜，去除文字。文字去除有两种方式，一种是用背景颜色覆盖（涂白），一种是用图像修复方法，可以还原背景。这里因为文字多存在气泡里，文字和气泡边缘比较近，可以选择背景颜色覆盖法。生成下图这样的掩膜，之后就可以得到去文字图。
 
    掩膜：
@@ -59,3 +59,5 @@ ImageTrans是通用的计算机辅助图片翻译软件，并针对漫画做了�
 7. 翻译完成后导出成品图。如果需要使用Photoshop生成翻译版图片，可以使用脚本生成PSD文件。
 
 视频教程：<https://www.bilibili.com/video/BV18L411a749/>
+
+新版ImageTrans也可以直接基于欧美漫画模板创建项目，然后用自定义工作流一键翻译。

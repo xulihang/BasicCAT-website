@@ -21,7 +21,7 @@ Translated version:
 
 ## Detailed Procedures
 
-1. Detect all text areas using the [heuristic text area detection method](https://imagetrans.readthedocs.io/en/latest/textarea_detection_and_text_reinjection.html) or the [balloon detection method](https://imagetrans.readthedocs.io/en/latest/settings.html#balloon-detection). If there is a misidentified area, remove it manually.
+1. Detect all text areas using PaddleOCR (rapid), or heuristic method and custom model for detection. If there is a misidentified area, remove it manually.
 2. Generate the text mask and remove text. There are two ways to remove text: one is to cover it with the background color, and the other is to use an image inpainting method to restore the background. Here, because the text is mostly in the bubbles and the edges of the text and the bubble are relatively close, we can choose the covering method. Generate a mask like the following one, and then we can get an image with text removed.
 
    Mask:
@@ -59,3 +59,5 @@ Translated version:
 7. Generate the translated image after translation. If you need to use Photoshop to generate translated images, you can use scripts to generate PSD files.
 
 Video Tutorials: <https://www.bilibili.com/video/BV18L411a749/>
+
+In latest version, you can also create a new project based on the comics template, and then batch translate images with one click.
