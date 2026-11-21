@@ -11,13 +11,15 @@ tags: imagetrans
 Here are the steps to translate manga images.
 
 1. Put all the images in a folder.
-2. Open Imagetrans and create a new project. You can configure the language pair of the project, like Japanese to English.
+2. Open ImageTrans and create a new project. You can configure the language pair of the project, like Japanese to English.
 3. Import the images in the folder.
-4. Use balloon detection or heuristic text detection to detect all the text areas.
+4. Use custom model text detection to detect all the text lines.
 5. Select a Japanese OCR, like mangaOCR, to extract the text of all the text areas.
-6. Select a machine translation engine, like Baidu or Google, to translate all the text areas.
-7. Check the "Translated" checkbox and you can see the translated image with the original text removed and the translation injected.
-8. (Optional) Since the Japanese is in vertical layout, to improve the English typesetting, you can enable the option to convert vertically aligned text areas for horizontal text in the project.
+6. Merge the text lines to a semantic unit.
+7. Select a machine translation engine, like ChatGPT, DeepSeek, Gemini or Google, to translate all the text areas.
+8. Check the "Translated" checkbox and you can see the translated image with the original text removed and the translation injected.
+
+You can also do all the steps with one click. ImageTrans has a "template" concept. You can directly create a new project based on a Japanese Manga to English template, which has all the workflow and project settings. Then you can simply batch translate images with one click.
 
 ## Example
 
