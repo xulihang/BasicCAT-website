@@ -106,4 +106,6 @@ ImageTrans provides four text detection methods: detection provided by OCR servi
    Online OCR services now adopt natural scene text detection methods to detect text. ImageTrans allows users to choose the appropriate natural scene text detection method by themselves. Such methods have similar results of online OCR services. So I will not describe it in detail here.
 
 
+## Update in 2026
 
+The latest version of ImageTrans has integrated PaddleOCR (rapid), which can detect and recognize almost all languages. It can return the result at line, word or character level. Rotated and sound effects can also be detected. In additional, it has custom models for manga text detection. It is usable out of the box, and has good performance with only CPU.
