@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MRC 合成预览</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f3;
+    color: #242424;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px 20px 64px;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 1.65rem;
+    font-weight: 600;
+  }
+  .lead {
+    margin: 0 0 24px;
+    color: #555;
+    line-height: 1.65;
+  }
+  .upload-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .drop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 200px;
+    padding: 14px;
+    border: 2px dashed #cfcfcf;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: border-color .15s, background .15s;
+  }
+  .drop:hover { border-color: #8ab4f8; }
+  .drop.dragover {
+    border-color: #1a73e8;
+    background: #f0f6ff;
+  }
+  .drop-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .drop-hint {
+    font-size: .85rem;
+    color: #888;
+  }
+  .drop img {
+    display: none;
+    max-width: 100%;
+    max-height: 190px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: #fff;
+  }
+  .drop.loaded img { display: block; }
+  .drop.loaded .drop-hint { display: none; }
+  .meta {
+    width: 100%;
+    margin-top: 8px;
+    font-size: .78rem;
+    line-height: 1.4;
+    color: #777;
+    word-break: break-all;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 14px;
+    margin: 22px 0 10px;
+  }
+  .controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: .85rem;
+    color: #555;
+  }
+  select, button {
+    font: inherit;
+    font-size: .9rem;
+    padding: 7px 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 7px;
+    background: #fff;
+    color: #222;
+  }
+  button {
+    cursor: pointer;
+    background: #1a73e8;
+    border-color: #1a73e8;
+    color: #fff;
+    font-weight: 500;
+  }
+  button:hover:not(:disabled) { background: #1667cf; }
+  button:disabled {
+    background: #d5d5d5;
+    border-color: #d5d5d5;
+    color: #777;
+    cursor: not-allowed;
+  }
+  button.secondary {
+    background: #fff;
+    border-color: #c7c7c7;
+    color: #333;
+    font-weight: 400;
+  }
+  button.secondary:hover { background: #f2f2f2; }
+  .result {
+    margin-top: 22px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+  }
+  .result-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: .85rem;
+    color: #666;
+  }
+  .canvas-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    background-image:
+      linear-gradient(45deg, #ececec 25%, transparent 25%),
+      linear-gradient(-45deg, #ececec 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #ececec 75%),
+      linear-gradient(-45deg, transparent 75%, #ececec 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  }
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .notes {
+    margin-top: 28px;
+    font-size: .9rem;
+    line-height: 1.75;
+    color: #555;
+  }
+  .notes h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px;
+  }
+  .notes ul {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+  .notes code {
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: #eee;
+    font-size: .85em;
+  }
+  @media (max-width: 760px) {
+    .upload-grid { grid-template-columns: 1fr; }
+    .drop { min-height: 150px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>MRC 合成预览</h1>
+  <p class="lead">
+    分别载入<strong>背景层</strong>、<strong>前景层</strong>和<strong>掩膜</strong>，页面会在本地用
+    <code>背景 + 前景 × 掩膜</code> 渲染最终画面。图片不会上传到服务器。
+  </p>
+
+  <section class="upload-grid">
+    <label class="drop" id="drop-bg" for="file-bg">
+      <input id="file-bg" type="file" accept="image/*" hidden>
+      <div class="drop-title">背景层</div>
+      <div class="drop-hint">点击选择，或把图片拖到这里</div>
+      <img id="preview-bg" alt="背景层预览">
+      <div class="meta" id="meta-bg"></div>
+    </label>
+
+    <label class="drop" id="drop-fg" for="file-fg">
+      <input id="file-fg" type="file" accept="image/*" hidden>
+      <div class="drop-title">前景层</div>
+      <div class="drop-hint">点击选择，或把图片拖到这里</div>
+      <img id="preview-fg" alt="前景层预览">
+      <div class="meta" id="meta-fg"></div>
+    </label>
+
+    <label class="drop" id="drop-mask" for="file-mask">
+      <input id="file-mask" type="file" accept="image/*" hidden>
+      <div class="drop-title">掩膜</div>
+      <div class="drop-hint">黑白图或灰度图都可以</div>
+      <img id="preview-mask" alt="掩膜预览">
+      <div class="meta" id="meta-mask"></div>
+    </label>
+  </section>
+
+  <section class="controls">
+    <label>
+      掩膜极性
+      <select id="polarity">
+        <option value="auto">自动检测</option>
+        <option value="white">白色 = 墨迹（前景不透明）</option>
+        <option value="black">黑色 = 墨迹（前景不透明）</option>
+        <option value="alpha">使用透明度（PNG alpha）</option>
+      </select>
+    </label>
+    <label>
+      画布尺寸
+      <select id="canvas-size">
+        <option value="max">最大尺寸（推荐）</option>
+        <option value="bg">背景尺寸</option>
+        <option value="fg">前景尺寸</option>
+        <option value="mask">掩膜尺寸</option>
+      </select>
+    </label>
+    <button id="download" disabled>下载 PNG</button>
+    <button id="reset" class="secondary">清空</button>
+  </section>
+
+  <section class="result">
+    <div class="result-head">
+      <span id="status">请先载入三张图片</span>
+      <span id="dims"></span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="out" width="1" height="1"></canvas>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>说明</h2>
+    <ul>
+      <li>合成规则：整页先铺背景，再用掩膜把前景扣到背景上。白色（或按极性设置）表示该像素使用前景。</li>
+      <li>三张图尺寸不一致时，会按所选画布尺寸分别拉伸。MRC 里前景/背景可能被降采样，而掩膜通常是全分辨率，所以默认取三者中的最大尺寸。</li>
+      <li>掩膜可以是 1-bit 黑白图、灰度图，或带透明通道的 PNG。自动检测会按“少数颜色是墨迹”的规律判断黑白极性；如果判断错了，手动切换即可。</li>
+      <li>掩膜里的灰度会作为半透明处理，因此抗锯齿边缘会平滑过渡。</li>
+      <li>为控制内存占用，输出尺寸会被限制在 6000 像素以内、约 1600 万像素；超过时会等比缩小并在状态栏提示。</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  var ROLES = ["bg", "fg", "mask"];
+  var LABELS = { bg: "背景", fg: "前景", mask: "掩膜" };
+
+  var state = {
+    bg: null,
+    fg: null,
+    mask: null,
+    polarity: "auto",
+    sizeMode: "max"
+  };
+
+  var els = {
+    status: document.getElementById("status"),
+    dims: document.getElementById("dims"),
+    download: document.getElementById("download"),
+    reset: document.getElementById("reset"),
+    polarity: document.getElementById("polarity"),
+    sizeMode: document.getElementById("canvas-size"),
+    out: document.getElementById("out")
+  };
+  var ctx = els.out.getContext("2d");
+  var layer = document.createElement("canvas");
+  var lctx = layer.getContext("2d");
+  var maskCanvas = document.createElement("canvas");
+  var mctx = maskCanvas.getContext("2d", { willReadFrequently: true });
+
+  var inputs = {};
+  var drops = {};
+  var previews = {};
+  var metas = {};
+  ROLES.forEach(function (role) {
+    inputs[role] = document.getElementById("file-" + role);
+    drops[role] = document.getElementById("drop-" + role);
+    previews[role] = document.getElementById("preview-" + role);
+    metas[role] = document.getElementById("meta-" + role);
+  });
+
+  var renderToken = 0;
+
+  function ready() {
+    return state.bg && state.fg && state.mask;
+  }
+
+  function loadImage(file, role) {
+    if (!file.type || file.type.indexOf("image/") !== 0) {
+      els.status.textContent = "请选择图片文件（PNG、JPEG 等）";
+      return;
+    }
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () {
+      var old = state[role];
+      if (old && old.url) URL.revokeObjectURL(old.url);
+      state[role] = { file: file, img: img, url: url, name: file.name };
+
+      previews[role].src = url;
+      drops[role].classList.add("loaded");
+      metas[role].textContent = file.name + " · " + img.naturalWidth + "×" + img.naturalHeight;
+      requestRender();
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      els.status.textContent = "无法读取" + LABELS[role] + "图片";
+    };
+    img.src = url;
+  }
+
+  function bindRole(role) {
+    inputs[role].addEventListener("change", function (e) {
+      var file = e.target.files && e.target.files[0];
+      if (file) loadImage(file, role);
+      e.target.value = "";
+    });
+
+    var drop = drops[role];
+    drop.addEventListener("dragover", function (e) {
+      e.preventDefault();
+      drop.classList.add("dragover");
+    });
+    drop.addEventListener("dragleave", function () {
+      drop.classList.remove("dragover");
+    });
+    drop.addEventListener("drop", function (e) {
+      e.preventDefault();
+      drop.classList.remove("dragover");
+      var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+      if (file) loadImage(file, role);
+    });
+  }
+
+  ROLES.forEach(bindRole);
+
+  function maskStats(img) {
+    var w = 64;
+    var h = Math.max(1, Math.round(64 * img.naturalHeight / img.naturalWidth));
+    var c = document.createElement("canvas");
+    c.width = w;
+    c.height = h;
+    var g = c.getContext("2d", { willReadFrequently: true });
+    g.drawImage(img, 0, 0, w, h);
+    var d = g.getImageData(0, 0, w, h).data;
+    var sum = 0;
+    var opaque = 0;
+    var transparent = 0;
+    for (var i = 0; i < d.length; i += 4) {
+      var a = d[i + 3];
+      if (a < 16) {
+        transparent++;
+        continue;
+      }
+      sum += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+      opaque++;
+    }
+    var total = opaque + transparent;
+    return {
+      mean: opaque ? sum / opaque : 255,
+      transparentFrac: total ? transparent / total : 0
+    };
+  }
+
+  function autoPolarity() {
+    var s = maskStats(state.mask.img);
+    if (s.transparentFrac > 0.05) return "alpha";
+    return s.mean < 127 ? "white" : "black";
+  }
+
+  function polarityName(mode) {
+    if (mode === "white") return "白色 = 墨迹";
+    if (mode === "black") return "黑色 = 墨迹";
+    if (mode === "alpha") return "使用透明度";
+    return mode;
+  }
+
+  function targetSize() {
+    var sizes = {
+      bg: [state.bg.img.naturalWidth, state.bg.img.naturalHeight],
+      fg: [state.fg.img.naturalWidth, state.fg.img.naturalHeight],
+      mask: [state.mask.img.naturalWidth, state.mask.img.naturalHeight]
+    };
+    var w, h;
+    if (state.sizeMode !== "max" && sizes[state.sizeMode]) {
+      w = sizes[state.sizeMode][0];
+      h = sizes[state.sizeMode][1];
+    } else {
+      w = Math.max(sizes.bg[0], sizes.fg[0], sizes.mask[0]);
+      h = Math.max(sizes.bg[1], sizes.fg[1], sizes.mask[1]);
+    }
+    var MAX_DIM = 6000;
+    var MAX_PIXELS = 16e6;
+    var scale = Math.min(1, MAX_DIM / w, MAX_DIM / h, Math.sqrt(MAX_PIXELS / (w * h)));
+    if (scale < 1) {
+      w = Math.max(1, Math.round(w * scale));
+      h = Math.max(1, Math.round(h * scale));
+    }
+    return { w: w, h: h, scaled: scale < 1 };
+  }
+
+  function requestRender() {
+    var token = ++renderToken;
+    if (!ready()) {
+      els.status.textContent = "请先载入三张图片";
+      els.dims.textContent = "";
+      els.download.disabled = true;
+      return;
+    }
+    els.status.textContent = "正在生成…";
+    els.download.disabled = true;
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        if (token !== renderToken) return;
+        try {
+          renderNow();
+        } catch (err) {
+          els.status.textContent = "渲染失败：" + (err && err.message ? err.message : err);
+          els.download.disabled = true;
+        }
+      }, 0);
+    });
+  }
+
+  function renderNow() {
+    var size = targetSize();
+    var w = size.w;
+    var h = size.h;
+
+    els.out.width = w;
+    els.out.height = h;
+    ctx.clearRect(0, 0, w, h);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+
+    // 背景
+    ctx.drawImage(state.bg.img, 0, 0, w, h);
+
+    // 前景
+    layer.width = w;
+    layer.height = h;
+    lctx.clearRect(0, 0, w, h);
+    lctx.imageSmoothingEnabled = true;
+    lctx.imageSmoothingQuality = "high";
+    lctx.drawImage(state.fg.img, 0, 0, w, h);
+
+    // 掩膜 -> alpha
+    maskCanvas.width = w;
+    maskCanvas.height = h;
+    mctx.clearRect(0, 0, w, h);
+    mctx.imageSmoothingEnabled = true;
+    mctx.imageSmoothingQuality = "high";
+    mctx.drawImage(state.mask.img, 0, 0, w, h);
+
+    var mode = state.polarity === "auto" ? autoPolarity() : state.polarity;
+    var data = mctx.getImageData(0, 0, w, h);
+    var d = data.data;
+    var i;
+    for (i = 0; i < d.length; i += 4) {
+      var a;
+      if (mode === "alpha") {
+        a = d[i + 3];
+      } else {
+        var lum = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+        if (mode === "black") lum = 255 - lum;
+        a = Math.round(lum * (d[i + 3] / 255));
+      }
+      d[i] = 0;
+      d[i + 1] = 0;
+      d[i + 2] = 0;
+      d[i + 3] = a;
+    }
+    mctx.putImageData(data, 0, 0);
+
+    lctx.globalCompositeOperation = "destination-in";
+    lctx.drawImage(maskCanvas, 0, 0);
+    lctx.globalCompositeOperation = "source-over";
+
+    ctx.drawImage(layer, 0, 0);
+
+    els.status.textContent = "已生成 · 掩膜：" +
+      (state.polarity === "auto" ? "自动（" + polarityName(mode) + "）" : polarityName(mode)) +
+      (size.scaled ? " · 已等比缩小" : "");
+    els.dims.textContent = w + " × " + h + " px";
+    els.download.disabled = false;
+  }
+
+  els.polarity.addEventListener("change", function (e) {
+    state.polarity = e.target.value;
+    requestRender();
+  });
+  els.sizeMode.addEventListener("change", function (e) {
+    state.sizeMode = e.target.value;
+    requestRender();
+  });
+
+  els.download.addEventListener("click", function () {
+    if (!ready()) return;
+    els.out.toBlob(function (blob) {
+      if (!blob) return;
+      var a = document.createElement("a");
+      var url = URL.createObjectURL(blob);
+      a.href = url;
+      a.download = "mrc-composite-" + els.out.width + "x" + els.out.height + ".png";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+    }, "image/png");
+  });
+
+  els.reset.addEventListener("click", function () {
+    renderToken++;
+    ROLES.forEach(function (role) {
+      var item = state[role];
+      if (item && item.url) URL.revokeObjectURL(item.url);
+      state[role] = null;
+      inputs[role].value = "";
+      previews[role].removeAttribute("src");
+      drops[role].classList.remove("loaded");
+      metas[role].textContent = "";
+    });
+    els.out.width = 1;
+    els.out.height = 1;
+    els.status.textContent = "请先载入三张图片";
+    els.dims.textContent = "";
+    els.download.disabled = true;
+  });
+})();
+</script>
+</body>
+</html>

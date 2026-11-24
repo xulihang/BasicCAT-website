@@ -144,4 +144,6 @@ java -cp target/mrc4j-1.0-SNAPSHOT.jar com.xulihang.mrc4j.PdfCompressor \
 
 加 `--dump out/dump` 可以把掩膜、前景、背景导出来对照；`--preset small` 则是 1/3 分辨率的小体积档。代码在 [xulihang/mrc4j](https://github.com/xulihang/mrc4j)。
 
+也可以直接在浏览器里试：[MRC 合成预览工具](/tools/mrc-composite.html)。把背景、前景、掩膜三张图片分别拖进去，就能看到合成结果并下载 PNG，所有处理都在本地完成。
+
 MRC 不是什么新格式，但它把“哪里是线条、哪里是画面”这个信息显式地拆了出来，让每一种内容都用自己最合适的压缩方式。对漫画这种“线稿 + 平涂 + 文字”的页面，效果尤其明显。
