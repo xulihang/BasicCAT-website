@@ -1,5 +1,5 @@
 ---
-date: 2026-11-24 16:30:00+08:00
+date: 2026-11-24 15:30:00+08:00
 layout: post
 title: "把漫画PDF压到原来的1/8：MRC 三层分解实践"
 categories: blog
