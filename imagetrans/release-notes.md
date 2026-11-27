@@ -13,6 +13,7 @@ layout: page
 
 * Add support for PDF compression with MRC
 * New operation: remove areas outside balloon mask
+* Fix an issue where the TWAIN native scanner UI may not respond without switching window focus
 
 ## v7.4.0 (2026/11/15)
 
